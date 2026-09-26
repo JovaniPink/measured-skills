@@ -5,8 +5,8 @@ Choose the client you want to use: Codex, Claude Code, or Antigravity. You can p
 ## 1. Get the skills
 
 ```sh
-git clone https://github.com/JovaniPink/skills.git
-cd skills
+git clone https://github.com/JovaniPink/measured-skills.git
+cd measured-skills
 git status --short --branch
 ```
 

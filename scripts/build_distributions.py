@@ -217,7 +217,7 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
                 "description": spec["description"],
                 "author": {"name": "Measured Studios", "url": "https://measuredstudios.com"},
                 "homepage": "https://measuredstudios.com/skills",
-                "repository": "https://github.com/JovaniPink/skills",
+                "repository": "https://github.com/JovaniPink/measured-skills",
                 "license": "MIT",
                 "skills": "./skills/",
                 "interface": {
@@ -241,7 +241,7 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
                 "description": spec["description"],
                 "author": {"name": "Measured Studios", "url": "https://measuredstudios.com"},
                 "homepage": "https://measuredstudios.com/skills",
-                "repository": "https://github.com/JovaniPink/skills",
+                "repository": "https://github.com/JovaniPink/measured-skills",
                 "license": "MIT",
                 "keywords": spec["keywords"],
             },

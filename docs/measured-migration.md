@@ -1,6 +1,6 @@
 # Migrate to Measured Skills 0.17.0
 
-Measured Skills is maintained by Measured Studios. The homepage is https://measuredstudios.com/skills. The GitHub source remains https://github.com/JovaniPink/skills until an organization transfer is approved.
+Measured Skills is maintained by Measured Studios. The homepage is https://measuredstudios.com/skills. The GitHub source is https://github.com/JovaniPink/measured-skills. The September 26, 2026 source-location migration supersedes the earlier decision to retain `JovaniPink/skills`. Ownership remains JovaniPink; no organization transfer or installed-plugin upgrade is part of this rename.
 
 ## Identity mapping
 
@@ -38,3 +38,7 @@ Use a new staging directory for each export. Review its manifest before a separa
 ## Discovery size is an estimate
 
 The catalog reports description counts and native-layout estimates including skill names and relative paths. These are not captured client prompts. Codex's documented budget is model-dependent, with an 8,000-character fallback when context size is unavailable. Absolute installed paths, other plugins, client formatting, and model context affect the actual list. Do not infer omissions or behavior from counts alone.
+
+## Source-location migration
+
+Update current clone and marketplace source URLs to `JovaniPink/measured-skills`. Existing releases, plugin names, installed versions, and the immutable 0.16.0 rollback reference retain their identities. Local installations must update their checkout source paths after backing up client configuration; verify one copy of each previously enabled plugin in a fresh session. Do not reinstall the 0.17.0 candidate merely to change its source location. GitHub redirects the old source repository URL; do not recreate a repository at `JovaniPink/skills`. Historical evidence retains its observed URLs and dates.

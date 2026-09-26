@@ -18,7 +18,7 @@ A fresh Claude Code 2.1.220 check using the staged build plugin and two project 
 
 ## PR 44 disposition
 
-The [independent review](https://github.com/JovaniPink/skills/pull/44) proposes remediation; its documentation-only patch does not implement fixes.
+The [independent review](https://github.com/JovaniPink/measured-skills/pull/44) proposes remediation; its documentation-only patch does not implement fixes.
 
 | Finding | Disposition | Evidence |
 | --- | --- | --- |

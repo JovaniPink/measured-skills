@@ -463,7 +463,7 @@ Keep these states separate:
 
 ## Further reading
 
-- [Measured Skills repository](https://github.com/JovaniPink/skills)
+- [Measured Skills repository](https://github.com/JovaniPink/measured-skills)
 - [How to use the catalog](README.md)
 - [Architecture](architecture.md)
 - [Authoring guide](authoring.md)

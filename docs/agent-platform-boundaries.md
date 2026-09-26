@@ -5,7 +5,7 @@ This project separates skills used by people from skills loaded inside a product
 ```text
 Jovani and developers
     -> ChatGPT, Codex, Claude, or Antigravity CLI
-    -> JovaniPink/skills
+    -> JovaniPink/measured-skills
     -> Research, planning, engineering, and business workflows
 
 SaaS user
@@ -18,7 +18,7 @@ SaaS user
 
 ## User-assistant plane
 
-The public `JovaniPink/skills` catalog helps a person direct a general-purpose assistant. It contains portable instructions and focused references. It has no skill-level executables, hooks, MCP servers, bundled agents, dependencies, credentials, or broad grants.
+The public `JovaniPink/measured-skills` catalog helps a person direct a general-purpose assistant. It contains portable instructions and focused references. It has no skill-level executables, hooks, MCP servers, bundled agents, dependencies, credentials, or broad grants.
 
 Its skills can organize evidence and recommend a workflow. They cannot turn prose into enforcement. The assistant host, repository scripts, client permissions, and user authority remain controlling.
 
