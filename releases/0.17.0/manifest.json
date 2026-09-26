@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.17.0",
-  "source_commit": "f3834ac3ec502dd75d10de38fa28744f0f3277b9",
-  "created_on": "2026-09-23",
+  "source_commit": "46c381d4ec6e6a5fd5aaa05c08a3440a463b6a6d",
+  "created_on": "2026-09-26",
   "artifacts": [
     {
       "kind": "file",
@@ -522,92 +522,92 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-agent-platforms",
-      "sha256": "7ec5ce39165ae3bb5d7403cea995e3dae0383bfc129b18cfcc6ebcd4c427561d"
+      "sha256": "7e476466116992ba950b17da4f2225e003262f3f40c14051616111163e4e3455"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-ai-systems",
-      "sha256": "ac30e0557625f369c3f7cb9134572f1553dfa770c3d0f07f38596cc1ec5e7224"
+      "sha256": "394cfa5fff543c9927d2dd0391eb9ada46953ef9d1cf676616b59526b81eb201"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-build",
-      "sha256": "30fe5a4336c1e1768125210def45424c1fded41bfaf18e699debabf059494548"
+      "sha256": "2c07ce7330d00070cbbc2e20f705d3303234543005469352bd1ec68f66678e8e"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "7a3cfae28eb55afd174883dcf1cdf5b5af2f16a4e23297d72238c56a424716a4"
+      "sha256": "2ee2a0ac6e5318f4536980f59d06bde795e5f3fb8e54c2aa4ab5010623ed28bf"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "16919274148b4d05584bc4587da655ce7dedbb2b35499296b9d7f6681b69bfd4"
+      "sha256": "c99db7a940a8837b41699a845b81465f76ec0d9cc268a65935a5972fdb056061"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-operations",
-      "sha256": "906d28d971ff5dab3d94a4dc131469dde86c3335adf4b7ee5038319ec84b8c42"
+      "sha256": "9e673db6ac1f707207e52b6c2786600b5e231177081e2e01df21a461e2070f70"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "6cf3e0a4ef02105095194c98ff8f651ffef03cc4b1f5001874953798738ba94d"
+      "sha256": "0a477da085cb23902d67d7e0c3b43458d6dc6d3359db5dcac0ac4656e53dd00c"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "31bfac3907cb7659988d2fdc36b75fecc3d86f8d0c928aa531a2225e1a3fea1a"
+      "sha256": "e6c80aa847b47babbb5e1aa44f8e02f8acf738578959fd9ce7f936d924492ae6"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stack-profiles",
-      "sha256": "0c8a1d9c4efb1d880db3c95cc8d8862b63439e08e633c4c3d783150c23560cd3"
+      "sha256": "9557cee76fd8a474d2e9a4e9a88bc1fea76ff1040c82919c35a3fa016e2d39ae"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-agent-platforms",
-      "sha256": "3dca0fbc94eeca1d7ef391cd3fe460003969e5acedc97de51fec1aa29e658834"
+      "sha256": "05dd76b398d92dce7975ad62fe5d288dca45723c725bcd94ddf6646a9bc07c98"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-ai-systems",
-      "sha256": "cf97f64822a0ade6443afa59a475cde72deff4e8f2fe9a7ce534061f71a3f11e"
+      "sha256": "b985bdcb77ea2249422215e05977b3428ec21a781baefef6095c6cfa4257c0b3"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-build",
-      "sha256": "cea3997ffa478a9f90a275f820d7e14950c195216bb9fe5aff97b9897174bf38"
+      "sha256": "2ef766822c9cf0384337277ca1d78f8f9d1af0f6d611a46011f9df4d3fe9708b"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "96871964b0d906d3d707c5c1dd7f5c01494690e58518b9f5157d41af444ec7e4"
+      "sha256": "4f04e7990c73b9876e9ae2fbd4585c8c164c5afe5f8ed4fa96da3e6757b80b68"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "f46bfe60576305dad9c92eccb001f17f9214ff0c61c5049308a94f9667b05e41"
+      "sha256": "857d3d84cc02ba701efd8f7666608c18eda033c38dde770ba2a9fda67036f174"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-operations",
-      "sha256": "25f20043d3ab60f320117f4786cdea29da3557593732b605ffa6d623a612c713"
+      "sha256": "0b6042a3fcdce2d1dafdb194e47cd0a8aa48a9310052909602a1fa98c3bc40aa"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-reasoning",
-      "sha256": "de201f881999eb6d918cf93c495086c6dc77c8e8fbc5f945599b75fa771c869f"
+      "sha256": "72648fa9d8b6cde609bac982a0f0aee55508d67cb67e6595f9877050f7d7303f"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "48051aee11862f2d8cd507091171f36189479d14a74832362f329d4b820ebc5c"
+      "sha256": "c76507c8aede17b77cf3c6c3228c81fb2203c3624a2372eb736420154635c498"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stack-profiles",
-      "sha256": "024750dbd5d41437362809fa37311004175072e8097833d44e8eac32f91e035e"
+      "sha256": "5f2d8ae95f0a9b99015c521e2659377ac38ca60bb0638b5898dfe6a04aa71fa5"
     },
     {
       "kind": "file",
