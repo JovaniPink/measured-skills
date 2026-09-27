@@ -48,8 +48,8 @@ Installing every plugin at once increases the amount of skill description text l
 You can use the public GitHub repository directly or clone it for review.
 
 ```sh
-git clone https://github.com/JovaniPink/skills.git
-cd skills
+git clone https://github.com/JovaniPink/measured-skills.git
+cd measured-skills
 ```
 
 For higher risk work, review and check out a specific commit or release tag before installation. A mutable branch such as `main` can change after review.
@@ -65,7 +65,7 @@ The sections below keep the full Codex and Claude command reference.
 Add the GitHub repository as a marketplace:
 
 ```sh
-codex plugin marketplace add JovaniPink/skills
+codex plugin marketplace add JovaniPink/measured-skills
 ```
 
 If you cloned the repository, you can add the local repository path instead:
@@ -108,7 +108,7 @@ Official resources:
 Add the repository marketplace at user scope:
 
 ```sh
-claude plugin marketplace add JovaniPink/skills --scope user
+claude plugin marketplace add JovaniPink/measured-skills --scope user
 ```
 
 You can also use a reviewed local clone:

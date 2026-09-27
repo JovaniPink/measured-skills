@@ -271,7 +271,7 @@ class CatalogTests(unittest.TestCase):
     def test_repository_independence_keeps_narrow_repository_link_exceptions(
         self,
     ) -> None:
-        owned = "https://" + "github.com/" + "JovaniPink/skills"
+        owned = "https://" + "github.com/" + "JovaniPink/measured-skills"
         action = "https://" + "github.com/" + "actions/checkout"
         ci_tool = "https://" + "github.com/" + "python/mypy"
         workflow_parser = "https://" + "github.com/" + "yaml/pyyaml"

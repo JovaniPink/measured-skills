@@ -10,12 +10,12 @@ Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.17.
 
 ## Install one pack
 
-A pack is a group of related skills you install together. There are nine. Start with one. The commands below target the GitHub source repository (`JovaniPink/skills`); you can also provide a local reviewed checkout path, as described in each client setup guide and the [migration guide](docs/measured-migration.md).
+A pack is a group of related skills you install together. There are nine. Start with one. The commands below target the GitHub source repository (`JovaniPink/measured-skills`); you can also provide a local reviewed checkout path, as described in each client setup guide and the [migration guide](docs/measured-migration.md).
 
 For Claude Code:
 
 ```sh
-claude plugin marketplace add JovaniPink/skills --scope user
+claude plugin marketplace add JovaniPink/measured-skills --scope user
 claude plugin install measured-skills@measured-skills --scope user
 claude plugin list --json
 ```
@@ -23,7 +23,7 @@ claude plugin list --json
 For Codex:
 
 ```sh
-codex plugin marketplace add JovaniPink/skills
+codex plugin marketplace add JovaniPink/measured-skills
 codex plugin add measured-skills@measured-skills
 codex plugin list --json
 ```
@@ -31,7 +31,7 @@ codex plugin list --json
 For Antigravity:
 
 ```sh
-agy plugin install /absolute/path/to/skills/plugins/antigravity/measured-skills
+agy plugin install /absolute/path/to/measured-skills/plugins/antigravity/measured-skills
 agy plugin enable measured-skills
 agy plugin list
 ```
