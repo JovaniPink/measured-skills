@@ -1,6 +1,6 @@
 # Native CLI package smoke checks for 0.17.1
 
-Observed on 2026-09-30 in disposable client configurations. The current canonical package artifacts are bound by the [release manifest](../releases/0.17.1/manifest.json) to source commit `044c8fa`. No active global installation was replaced.
+Observed on 2026-09-30 in disposable client configurations using package artifacts from source commit `044c8fa`. After primary-source review, the [release manifest](../releases/0.17.1/manifest.json) binds the same 27 client trees and 79 skill archives to reviewed source commit `3769c5b`. Their hashes are unchanged; only three catalog data files changed in the manifest. No active global installation was replaced.
 
 | Client | Version | Installed packs | Installed skill entrypoints | File comparison |
 | --- | --- | --- | --- | --- |
