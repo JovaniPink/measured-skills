@@ -11,9 +11,9 @@
       "evidence_class": "manual",
       "lifecycle_status": "current",
       "precondition": "client-specific-install-and-control-checks",
-      "evidence_reference": "docs/clients/antigravity.md",
-      "historical_evidence_reference": null,
-      "claim": "Native 9-pack distributions generate with disable-model-invocation: true for explicit skills; CLI 1.2.0 testing confirmed install, menu discovery, and five-skill behavioral compliance."
+      "evidence_reference": "docs/native-cli-package-smoke-v0.17.1.md",
+      "historical_evidence_reference": "docs/client-candidate-v0.15.0.md",
+      "claim": "Version 0.17.1 excludes all 14 explicit-only workflows. CLI 1.2.9 disposable installation, listing, byte comparisons, disable, removal, and reinstall checks cover all nine implicit-only packs. These package observations do not qualify task behavior."
     },
     {
       "surface": "gemini-cli-enterprise",
@@ -93,11 +93,11 @@
       "question": "Can vendor skills and MCP tools support governed data work without becoming semantic authority?",
       "evidence_status": "blocked",
       "evidence_class": "documentation",
-      "lifecycle_status": "preview",
+      "lifecycle_status": "conditional",
       "precondition": "separate-reviewed-tool-compatibility-test",
       "evidence_reference": "docs/google-agent-surfaces.md",
       "historical_evidence_reference": null,
-      "claim": "Preview vendor tooling cannot define product semantics, registry authority, deployment approval, or evaluation truth."
+      "claim": "Vendor tooling cannot define product semantics, registry authority, deployment approval, or evaluation truth. The September 30 overview does not establish the exact feature's current launch stage; confirm it separately before runtime acceptance."
     },
     {
       "surface": "gemini-enterprise-agent-platform",

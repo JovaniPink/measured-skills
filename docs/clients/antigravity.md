@@ -1,6 +1,6 @@
 # Antigravity setup
 
-Antigravity setup and testing have equal priority with Codex and Claude. In version 0.17.1, the repository generates all nine modular packs under `plugins/antigravity/`. It also writes `.gemini/plugins/marketplace.json`, but Google documents no Antigravity marketplace command or format, so that file is unverified. An offline preview builder is also provided via `scripts/build_antigravity.py`.
+Antigravity setup and testing have equal priority with Codex and Claude. In version 0.17.1, the repository generates all nine modular packs under `plugins/antigravity/`. The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
 
 A one-skill package passed native install and skill-menu checks in CLI 1.1.26; package and menu checks were repeated on 1.1.27. The [0.12.0 candidate record](../client-candidate-v0.12.0.md) adds a two-skill check on CLI 1.1.27. The motion reference and fixture loaded, but the answer invented evidence. The [0.14.0 record](../client-candidate-v0.14.0.md) adds a four-skill check on CLI 1.1.28. Nine of ten cases met their expectation and no reply invented evidence. That is one partial run on a different version, so the expansion, then 64 skills, remained held. The [0.15.0 candidate record](../client-candidate-v0.15.0.md) adds a five-skill check on CLI 1.2.0 (`accessibility-review`, `code-change-review`, `functional-motion-review`, `performance-scalability-diagnosis`, and `finding-consolidation`). Near-miss case 3 was re-examined under diagnostic bypass flags (`--dangerously-skip-permissions`), confirming routing to `performance-scalability-diagnosis` when commands are permitted, while standard headless permission denial remains a documented non-interactive boundary. The 0.15.0 SARIF finding vocabulary was observed live on `code-change-review`, and `finding-consolidation` passed both multi-review merging and single-review refusal.
 
@@ -19,7 +19,7 @@ In the desktop app, open **Settings > Customizations** and inspect the skill lis
 
 ## Install modular packs
 
-Google documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It documents no `marketplace` subcommand. Clone and review the repository, then install one pack from its folder:
+Google's [combined plugin guide](https://www.antigravity.google/docs/plugins?tab=cli) documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It also describes an interactive marketplace and inline `/plugin` commands. Clone and review the repository, then install one pack from its folder:
 
 ```sh
 agy plugin install /absolute/path/to/skills/plugins/antigravity/measured-skills
@@ -94,10 +94,10 @@ Published guidance names several skill folders, and they are not read by the sam
 | `~/.gemini/antigravity-cli/skills/` | CLI and IDE |
 | `~/.gemini/config/plugins/<plugin>/skills/` | skills installed as part of a plugin |
 
-The CLI plugin guide documents `~/.gemini/antigravity-cli/plugins/` as the install location. The observed 1.1.28 install wrote to `~/.gemini/config/plugins/` instead, and that copy loaded correctly once enabled. That folder did not exist on the checked machine. Verify the path your own installer used before assuming either one.
+The September 30 combined plugin guide gives `~/.gemini/config/plugins/` for manual global installation and `~/.gemini/antigravity-cli/plugins/` in its CLI filesystem section. The disposable 1.2.9 native package check used the shared configuration path. Record your installer's actual path, enabled state, and file hashes; the two documented locations are not evidence that a second copy should be created.
 
 Keep repository rules in the existing `AGENTS.md` files and `.agents/rules/*.md`. The installed CLI guide says it reads `AGENTS.md` and `GEMINI.md` from the working directory up to the repository root, as well as modular markdown rules under `.agents/rules/`. Verify that loading in a fresh task before relying on it. Avoid a second copy that could drift.
 
 Use the app or IDE's own rules page for a reviewed personal preference. Confirm that it loaded. Do not infer CLI rule loading from an IDE result.
 
-Sources: [Antigravity skills](https://antigravity.google/docs/skills/), [CLI plugins](https://antigravity.google/docs/cli/plugins/), [IDE rules](https://antigravity.google/docs/ide/rules/). The folder table also draws on a community survey of skill locations, [Where does Antigravity look for Agent Skills?](https://atamel.dev/posts/2026/07-01_where_agy_agent_skills/), read 2026-09-10. That is not a vendor source; only the plugin row was checked here.
+Sources: [Antigravity skills](https://antigravity.google/docs/skills/), [plugins by surface](https://www.antigravity.google/docs/plugins?tab=cli), [IDE rules](https://antigravity.google/docs/ide/rules/). The folder table also draws on a community survey of skill locations, [Where does Antigravity look for Agent Skills?](https://atamel.dev/posts/2026/07-01_where_agy_agent_skills/), read 2026-09-10. That is not a vendor source; only the plugin row was checked here.
