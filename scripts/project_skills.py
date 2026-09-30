@@ -94,6 +94,8 @@ def render(source: Path, root: Path) -> tuple[dict[str, bytes], dict[str, Any]]:
     expected: dict[str, bytes] = {}
     records = []
     for skill in sorted(data["skills"]):
+        if skill in revoked:
+            continue
         files = source_files(source, revision, skill)
         text = files["SKILL.md"].decode()
         if skill in revoked or (revoked_plugins and scalar(text, "plugin") in revoked_plugins):
@@ -105,7 +107,7 @@ def render(source: Path, root: Path) -> tuple[dict[str, bytes], dict[str, Any]]:
         if len(alias) > 64:
             raise ValueError("project alias exceeds 64 characters")
         text = re.sub(r"(?m)^name: .+$", f"name: {alias}", text, count=1)
-        text += "\n## Project contract\n\nRead [the project contract](references/project-contract.md) before applying this workflow. Recheck repository settings; report stale contracts as Blocked. User instructions and repository authority remain controlling.\n"
+        text += "\n## Project contract\n\nRead [the project contract](references/project-contract.md) before applying this workflow. Recheck repository settings; report stale contracts as Blocked. User instructions and repository authority remain controlling. For Codex explicit execution, check codex --version: any version other than 0.154.0 blocks execution pending a fresh discovery qualification. Never move explicit workflows into shared discovery as a fallback.\n"
         paths = []
         for native in [".codex/skills" if invocation == "explicit" else ".agents/skills", ".claude/skills"]:
             base = f"{native}/{alias}"
@@ -153,6 +155,12 @@ def project(source: Path, root: Path, check: bool) -> list[str]:
     bases = {"/".join(PurePosixPath(p).parts[:3]) for p in expected.keys() | previous.keys()}
     for native in ROOTS:
         safe_path(root, native + "/.probe")
+    for record in receipt["skills"]:
+        for native in ROOTS:
+            base = native + "/" + record["alias"]
+            destination = safe_path(root, base + "/SKILL.md").parent
+            if destination.exists() and base not in record["paths"] and not any(p.startswith(base + "/") for p in previous):
+                raise ValueError("workflow present in an unowned or forbidden client directory")
     for base in bases:
         directory = safe_path(root, base + "/SKILL.md").parent
         if directory.exists():

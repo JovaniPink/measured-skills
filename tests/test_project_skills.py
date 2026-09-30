@@ -149,6 +149,25 @@ class ProjectSkillsTests(unittest.TestCase):
             if relative.as_posix() != "docs/skills/contract.md":
                 self.assertEqual(payload, (self.app / relative).read_bytes())
 
+    def test_explicit_copy_in_shared_discovery_is_rejected(self) -> None:
+        project(self.source, self.app, False)
+        path = self.app / ".agents/skills/fixture-deliver-check/SKILL.md"
+        path.parent.mkdir()
+        path.write_text("unowned explicit shared copy")
+        with self.assertRaises(ValueError):
+            project(self.source, self.app, True)
+
+    def test_revoked_deleted_canonical_directory_cleans_owned_output(self) -> None:
+        import shutil
+        project(self.source, self.app, False)
+        (self.source / "catalog/revocations.json").write_text('{"entries": [{"skill": "deliver-check"}]}')
+        shutil.rmtree(self.source / "skills/deliver-check")
+        self.commit()
+        self.manifest["source_commit"] = self.sha
+        self.save()
+        project(self.source, self.app, False)
+        self.assertFalse((self.app / ".codex/skills/fixture-deliver-check").exists())
+
 class PrimaryAuthorityTests(unittest.TestCase):
     def test_framework_publishers_allowed_without_skill_repository_exception(self) -> None:
         from check_repository_independence import PRIMARY_AUTHORITY_HOSTS, scan_text
