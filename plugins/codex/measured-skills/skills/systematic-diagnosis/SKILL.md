@@ -4,7 +4,7 @@ description: Diagnose a defect, failure, regression, or confusing behavior by re
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-skills"
   invocation: "implicit"
   provenance: "original"

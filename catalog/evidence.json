@@ -1,73 +1,7 @@
 {
   "$schema": "./evidence-schema.json",
-  "catalog_version": "0.17.1",
+  "catalog_version": "0.18.0",
   "skills": [
-    {
-      "skill": "agent-context-state-memory-design",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "agent-protocol-interoperability-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "agent-tool-action-boundary-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "agentic-system-security-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "google-adk-engineering-profile",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "retrieval-grounding-quality-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
     {
       "skill": "acceptance-evidence-ledger",
       "workflow_maturity": "candidate",
@@ -102,7 +36,51 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "agent-context-state-memory-design",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "agent-evaluation-design",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "agent-protocol-interoperability-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "agent-tool-action-boundary-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "agentic-system-security-review",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -344,6 +322,37 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "finding-consolidation",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable",
+      "historical_observations": [
+        {
+          "record_file": "docs/client-observations-v0.15.json",
+          "case_id": "V0150-ANTIGRAVITYCLI-FINDING-CONSOLIDATION-POSITIVE-1",
+          "client_version": "1.2.0",
+          "surface": "Antigravity CLI",
+          "observed_at": "2026-09-10",
+          "catalog_version": "0.15.0",
+          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
+        },
+        {
+          "record_file": "docs/client-observations-v0.15.json",
+          "case_id": "V0150-ANTIGRAVITYCLI-FINDING-CONSOLIDATION-NEAR-MISS-3",
+          "client_version": "1.2.0",
+          "surface": "Antigravity CLI",
+          "observed_at": "2026-09-10",
+          "catalog_version": "0.15.0",
+          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
+        }
+      ]
+    },
+    {
       "skill": "finish-development-branch",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
@@ -559,6 +568,17 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "google-adk-engineering-profile",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "guided-configuration",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
@@ -582,6 +602,17 @@
     },
     {
       "skill": "implementation-planning",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "ios-journey-verification",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -648,6 +679,28 @@
     },
     {
       "skill": "multi-agent-orchestration",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "nextjs-cache-auth-boundary-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "nextjs-feature-delivery",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -823,6 +876,17 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "react-rendering-performance-diagnosis",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "request-code-review",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
@@ -845,6 +909,17 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "research-to-publication-lifecycle",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "respond-to-code-review",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
@@ -856,7 +931,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "research-to-publication-lifecycle",
+      "skill": "retrieval-grounding-quality-review",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -933,6 +1008,28 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "swift-concurrency-diagnosis",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "swift-persistence-contract-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "swift-swiftui-engineering-profile",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
@@ -940,6 +1037,17 @@
         "status": "partial",
         "verified_against_version": "0.17.0",
         "observed_at": "2026-09-22T20:31:51Z"
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "swiftui-feature-delivery",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
       },
       "runtime_eligibility": "not_applicable"
     },
@@ -1063,37 +1171,6 @@
         "observed_at": null
       },
       "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "finding-consolidation",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable",
-      "historical_observations": [
-        {
-          "record_file": "docs/client-observations-v0.15.json",
-          "case_id": "V0150-ANTIGRAVITYCLI-FINDING-CONSOLIDATION-POSITIVE-1",
-          "client_version": "1.2.0",
-          "surface": "Antigravity CLI",
-          "observed_at": "2026-09-10",
-          "catalog_version": "0.15.0",
-          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
-        },
-        {
-          "record_file": "docs/client-observations-v0.15.json",
-          "case_id": "V0150-ANTIGRAVITYCLI-FINDING-CONSOLIDATION-NEAR-MISS-3",
-          "client_version": "1.2.0",
-          "surface": "Antigravity CLI",
-          "observed_at": "2026-09-10",
-          "catalog_version": "0.15.0",
-          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
-        }
-      ]
     }
   ]
 }

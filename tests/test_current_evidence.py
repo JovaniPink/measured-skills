@@ -159,7 +159,7 @@ class CurrentEvidenceTests(unittest.TestCase):
         initial = json.loads((ROOT / "docs/audits/source-review-2026-09-30.json").read_text())
         current = {item["source_url"]: item for item in pins["sources"]}
         records = {item["source_url"]: item for item in reviewed["records"]}
-        self.assertEqual(48, len(current))
+        self.assertEqual(55, len(current))
         self.assertEqual(36, len(records))
         self.assertEqual({item["source_url"] for item in initial["changed_sources"]}, set(records))
         self.assertEqual(historical["reviewed_on"], pins["reviewed_on"])
@@ -173,7 +173,9 @@ class CurrentEvidenceTests(unittest.TestCase):
                     f"{current[url]['marker_kind']}:{current[url]['marker_value']}",
                 )
         destination = reviewed["new_destination"]
-        self.assertEqual({destination["source_url"]}, set(current) - set(by_url))
+        new = json.loads((ROOT / "docs/audits/owned-workflow-primary-pins-2026-09-30.json").read_text())
+        self.assertEqual(7, len(new["sources"]))
+        self.assertEqual({destination["source_url"]} | {row["source_url"] for row in new["sources"]}, set(current) - set(by_url))
         for key in ("marker_kind", "marker_value"):
             self.assertEqual(destination[key], current[destination["source_url"]][key])
         closeout = json.loads(

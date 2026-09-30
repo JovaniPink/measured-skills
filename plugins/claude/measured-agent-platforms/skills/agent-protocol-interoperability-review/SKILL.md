@@ -4,7 +4,7 @@ description: Review interoperability across agent, tool, and service protocols u
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-agent-platforms"
   invocation: "implicit"
   provenance: "clean-room"

@@ -12,7 +12,7 @@
       "const": "./upstream-reviews-schema.json"
     },
     "catalog_version": {
-      "const": "0.17.1"
+      "const": "0.18.0"
     },
     "reviewed_on": {
       "type": "string",

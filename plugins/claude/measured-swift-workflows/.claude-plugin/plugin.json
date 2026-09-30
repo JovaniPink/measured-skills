@@ -1,0 +1,17 @@
+{
+  "name": "measured-swift-workflows",
+  "version": "0.18.0",
+  "description": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
+  "author": {
+    "name": "Measured Studios",
+    "url": "https://measuredstudios.com"
+  },
+  "homepage": "https://measuredstudios.com/skills",
+  "repository": "https://github.com/JovaniPink/measured-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "swift",
+    "verification"
+  ]
+}

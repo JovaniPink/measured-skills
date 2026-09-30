@@ -4,7 +4,7 @@ description: Review the reliability of context assertions supplied to an AI syst
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-ai-systems"
   invocation: "implicit"
   provenance: "original"

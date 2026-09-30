@@ -4,7 +4,7 @@ description: Review software dependencies and build supply-chain evidence for pr
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
   provenance: "clean-room"

@@ -4,7 +4,7 @@ description: Assess claimed value, benefit, savings, risk reduction, or outcome 
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-operations"
   invocation: "implicit"
   provenance: "original"

@@ -4,7 +4,7 @@ description: "Edit technical prose for clarity, evidence density, specificity, r
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-reasoning"
   invocation: "implicit"
   provenance: "clean-room"

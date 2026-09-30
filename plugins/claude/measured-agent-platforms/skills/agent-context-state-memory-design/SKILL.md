@@ -4,7 +4,7 @@ description: Design or review how an agent separates prompt context, session eve
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-agent-platforms"
   invocation: "implicit"
   provenance: "clean-room"

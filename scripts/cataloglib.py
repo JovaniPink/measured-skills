@@ -10,7 +10,7 @@ from typing import TypedDict
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.17.1"
+VERSION = "0.18.0"
 CATALOG_NAME = "measured-skills"
 PLUGIN_CATEGORY = "Developer Tools"
 
@@ -24,6 +24,18 @@ class PluginSpec(TypedDict):
 
 
 PLUGIN_SPECS: dict[str, PluginSpec] = {
+    "measured-nextjs-workflows": {
+        "display_name": "Measured Next.js Workflows",
+        "description": "Bounded Next.js delivery, cache and authorization review, and measured React performance diagnosis.",
+        "short_description": "Focused Next.js workflows",
+        "keywords": ["skills", "nextjs", "verification"],
+    },
+    "measured-swift-workflows": {
+        "display_name": "Measured Swift Workflows",
+        "description": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
+        "short_description": "Focused Swift workflows",
+        "keywords": ["skills", "swift", "verification"],
+    },
     "measured-skills": {
         "display_name": "Measured Skills",
         "description": "Portable evidence, diagnosis, quality, publication, and skill-security workflows.",

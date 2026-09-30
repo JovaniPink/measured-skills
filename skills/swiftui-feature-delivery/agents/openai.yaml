@@ -1,0 +1,6 @@
+interface:
+  display_name: "SwiftUI Feature Delivery"
+  short_description: "SwiftUI Feature Delivery"
+  default_prompt: "Use $swiftui-feature-delivery for the identified bounded task and report observed evidence."
+policy:
+  allow_implicit_invocation: false

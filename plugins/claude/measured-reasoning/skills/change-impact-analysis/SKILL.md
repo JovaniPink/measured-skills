@@ -4,7 +4,7 @@ description: "Analyze the blast radius of a proposed or completed change across 
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-reasoning"
   invocation: "implicit"
   provenance: "clean-room"

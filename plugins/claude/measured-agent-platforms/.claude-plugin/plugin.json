@@ -1,6 +1,6 @@
 {
   "name": "measured-agent-platforms",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "Human-facing agent architecture, security, tooling, context, protocol, retrieval, and Google ADK workflows.",
   "author": {
     "name": "Measured Studios",

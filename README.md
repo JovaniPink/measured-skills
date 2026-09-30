@@ -1,16 +1,16 @@
 # Measured Skills
 
-This repository holds 79 Agent Skills for AI coding assistants.
+This repository holds 86 Agent Skills for AI coding assistants.
 
 A skill is a short set of written instructions for one kind of task. Reviewing a code change is one kind of task. Checking whether a claim has evidence is another. Your assistant reads the matching skill and follows its steps.
 
 A skill is only text. It installs no programs and grants no new permissions. It changes how your assistant works through a task, not what it is allowed to do.
 
-Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.17.1 repair candidate; see the [migration guide](docs/measured-migration.md) before changing an existing install.
+Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.18.0 workflow candidate; see the [migration guide](docs/measured-migration.md) before changing an existing install.
 
 ## Install one pack
 
-A pack is a group of related skills you install together. There are nine. Start with one. The commands below target the GitHub source repository (`JovaniPink/measured-skills`); you can also provide a local reviewed checkout path, as described in each client setup guide and the [migration guide](docs/measured-migration.md).
+A pack is a group of related skills you install together. There are 11. Start with one. The commands below target the GitHub source repository (`JovaniPink/measured-skills`); you can also provide a local reviewed checkout path, as described in each client setup guide and the [migration guide](docs/measured-migration.md).
 
 For Claude Code:
 
@@ -65,7 +65,7 @@ A few examples:
 
 These are authored instructions, not measured benefits. We wrote the skills to produce those habits. We have not run a study that shows they improve your results.
 
-## The nine packs
+## The 11 packs
 
 Install the smallest pack that covers your work.
 
@@ -80,8 +80,10 @@ Install the smallest pack that covers your work.
 | `measured-stack-profiles` | Language and platform guidance, such as Python, Go, and Terraform |
 | `measured-ai-systems` | Evaluate AI behavior, context reliability, and source-to-output checks |
 | `measured-agent-platforms` | Review agent architecture, tools, protocols, and retrieval |
+| `measured-swift-workflows` | Bounded SwiftUI delivery, concurrency and persistence review, fixture journeys |
+| `measured-nextjs-workflows` | Bounded Next.js delivery, cache/auth review and measured React diagnosis |
 
-The [skill cheatsheet](docs/skill-cheatsheet.md) lists all 79 skills with one line each. [Choose Your Skills](docs/choose-your-skills.md) helps you pick. The [skill catalog reader guide](docs/skill-catalog-reader-guide.md) explains every skill in full.
+The [skill cheatsheet](docs/skill-cheatsheet.md) lists all 86 skills with one line each. [Choose Your Skills](docs/choose-your-skills.md) helps you pick. The [skill catalog reader guide](docs/skill-catalog-reader-guide.md) explains every skill in full.
 
 ## How a skill gets picked
 
@@ -99,9 +101,9 @@ Codex, Claude Code, and Antigravity get equal attention here. Equal attention do
 
 | Client | What we ship | Setup guide |
 | --- | --- | --- |
-| Codex CLI and ChatGPT desktop | Native packs with all 79 skills | [Codex setup](docs/clients/codex.md) |
-| Claude Code | Native packs with all 79 skills, plus separate ZIP files for account uploads | [Claude setup](docs/clients/claude.md) |
-| Antigravity CLI and IDE | Native packs with all 79 skills, plus an offline preview builder | [Antigravity setup](docs/clients/antigravity.md) |
+| Codex CLI and ChatGPT desktop | Native packs with all 86 skills | [Codex setup](docs/clients/codex.md) |
+| Claude Code | Native packs with all 86 skills, plus separate ZIP files for account uploads | [Claude setup](docs/clients/claude.md) |
+| Antigravity CLI and IDE | Native packs with 69 implicit skills; 17 explicit-only workflows held | [Antigravity setup](docs/clients/antigravity.md) |
 
 Claude Code packs and Claude account uploads are two separate installs. Updating your Code packs does not update the skill library that Chat uses. Check both.
 
@@ -119,9 +121,9 @@ Authored means we wrote it. It says what the instructions intend.
 
 Observed means we ran it and wrote down what happened, with the exact client, version, and date.
 
-The current candidate is 0.17.1: 79 skills in nine packs. The [candidate record](docs/client-candidate-v0.17.1.md) separates structural checks from behavior still requiring observation.
+The current candidate is 0.18.0: 86 skills in 11 packs. The [candidate record](docs/client-candidate-v0.18.0.md) separates structural checks from behavior still requiring observation.
 
-Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.17.1 installed-client benefit is claimed.
+Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.18.0 installed-client benefit is claimed.
 
 One limit is worth knowing before you test. Every result we have recorded was taken at the first turn of a fresh session. We have not measured whether a skill still shapes replies later in a long working session, and published research suggests instructions lose force as a conversation grows. The [study design](docs/turn-depth-study.md) says how we plan to find out.
 
@@ -155,6 +157,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before you open a pull request. [Reposit
 
 - [Five-minute quickstart](docs/quickstart.md): install and test one skill
 - [Glossary](docs/glossary.md): what the terms mean
-- [Skill cheatsheet](docs/skill-cheatsheet.md): all 79 skills at a glance
+- [Skill cheatsheet](docs/skill-cheatsheet.md): all 86 skills at a glance
 - [Client support checklist](docs/client-support.md): what to test in each app and CLI
 - [How to use Measured Skills](docs/README.md): the full guide

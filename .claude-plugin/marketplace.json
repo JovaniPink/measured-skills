@@ -10,55 +10,67 @@
       "name": "measured-agent-platforms",
       "source": "./plugins/claude/measured-agent-platforms",
       "description": "Human-facing agent architecture, security, tooling, context, protocol, retrieval, and Google ADK workflows.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-ai-systems",
       "source": "./plugins/claude/measured-ai-systems",
       "description": "Optional AI evaluation, context reliability, and source-to-output conformance workflows.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-engineering-build",
       "source": "./plugins/claude/measured-engineering-build",
       "description": "Frame outcomes, design interfaces, plan vertical slices, and test behavior.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-engineering-delivery",
       "source": "./plugins/claude/measured-engineering-delivery",
       "description": "Coordinate bounded execution, isolated work, review handoffs, and delivery evidence.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-engineering-review",
       "source": "./plugins/claude/measured-engineering-review",
       "description": "Review correctness, compatibility, security, operations, and test quality.",
-      "version": "0.17.1"
+      "version": "0.18.0"
+    },
+    {
+      "name": "measured-nextjs-workflows",
+      "source": "./plugins/claude/measured-nextjs-workflows",
+      "description": "Bounded Next.js delivery, cache and authorization review, and measured React performance diagnosis.",
+      "version": "0.18.0"
     },
     {
       "name": "measured-operations",
       "source": "./plugins/claude/measured-operations",
       "description": "Portable requirements, decision, measurement, adoption, and incident workflows.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-reasoning",
       "source": "./plugins/claude/measured-reasoning",
       "description": "Portable alignment, explanation, impact, writing, evidence, and skill-authoring workflows.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-skills",
       "source": "./plugins/claude/measured-skills",
       "description": "Portable evidence, diagnosis, quality, publication, and skill-security workflows.",
-      "version": "0.17.1"
+      "version": "0.18.0"
     },
     {
       "name": "measured-stack-profiles",
       "source": "./plugins/claude/measured-stack-profiles",
       "description": "Optional language and infrastructure engineering profiles.",
-      "version": "0.17.1"
+      "version": "0.18.0"
+    },
+    {
+      "name": "measured-swift-workflows",
+      "source": "./plugins/claude/measured-swift-workflows",
+      "description": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
+      "version": "0.18.0"
     }
   ]
 }

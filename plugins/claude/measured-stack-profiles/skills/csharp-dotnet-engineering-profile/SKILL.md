@@ -4,7 +4,7 @@ description: Apply focused C# and .NET engineering judgment after repository gat
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.1"
+  version: "0.18.0"
   plugin: "measured-stack-profiles"
   invocation: "implicit"
   provenance: "original"
