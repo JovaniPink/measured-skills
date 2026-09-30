@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.17.1",
-  "source_commit": "044c8fa80624d27df04ee9e8134931b88f45dbb3",
+  "source_commit": "3769c5b845fc55a17de4eb7f99d67c823bc7da05",
   "created_on": "2026-09-30",
   "artifacts": [
     {
@@ -37,7 +37,7 @@
     {
       "kind": "file",
       "path": "catalog/google-surfaces.json",
-      "sha256": "16ddfb00edcdeac6b13ee27fd68294a3cec85bae3c2cf56a2b1e5746dbd45f4f"
+      "sha256": "c1acc95efe35a6586e78a51558c288cd49f66f93cc0c2f6b8fbd6900b4da6483"
     },
     {
       "kind": "file",
@@ -67,12 +67,12 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "d4fef625cb0544e2d6316743976a73a5948b4350145369ac760b3e473a2e36b8"
+      "sha256": "9a36ba41e42b5d54028c8f63e878bb6206aa4ea82af150dd7079d58187bf3aaf"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "99985e3433d6e0db7b3f939189e5984acf651ae2d73313827d9f06845720c650"
+      "sha256": "d348cbb708420ee535ad95f7c30dd2788ab1b3d572a9a407c593db6d186e070f"
     },
     {
       "kind": "zip",
