@@ -133,12 +133,15 @@ class CurrentEvidenceTests(unittest.TestCase):
 
     def test_source_review_does_not_refresh_unreviewed_markers(self) -> None:
         audit = json.loads((ROOT / "docs/audits/source-review-2026-09-09.json").read_text())
+        historical = json.loads(
+            (ROOT / "tests/fixtures/upstream-pins-before-september30.json").read_text()
+        )["snapshot"]
         pins = json.loads((ROOT / "catalog/upstream-pins.json").read_text())
-        by_url = {item["source_url"]: item for item in pins["sources"]}
+        by_url = {item["source_url"]: item for item in historical["sources"]}
         self.assertEqual(43, len(audit["inventory"]))
         self.assertEqual(20, sum(item["fingerprint_changed"] for item in audit["inventory"]))
         self.assertEqual(47, len(by_url))
-        self.assertLess(pins["reviewed_on"], audit["reviewed_on"])
+        self.assertLess(historical["reviewed_on"], audit["reviewed_on"])
         for item in audit["inventory"]:
             if not item["fingerprint_changed"]:
                 self.assertIsNone(item["reviewed_on"])
@@ -149,6 +152,37 @@ class CurrentEvidenceTests(unittest.TestCase):
                 self.assertFalse(item["historical_content_available"])
                 for key in ("marker_kind", "marker_value"):
                     self.assertEqual(item["current_marker"][key], by_url[item["source_url"]][key])
+
+        reviewed = json.loads(
+            (ROOT / "docs/audits/source-review-2026-09-30-semantic.json").read_text()
+        )
+        initial = json.loads((ROOT / "docs/audits/source-review-2026-09-30.json").read_text())
+        current = {item["source_url"]: item for item in pins["sources"]}
+        records = {item["source_url"]: item for item in reviewed["records"]}
+        self.assertEqual(48, len(current))
+        self.assertEqual(36, len(records))
+        self.assertEqual({item["source_url"] for item in initial["changed_sources"]}, set(records))
+        self.assertEqual(historical["reviewed_on"], pins["reviewed_on"])
+        self.assertEqual(33, sum(item["pin_updated"] for item in records.values()))
+        for url, old_pin in by_url.items():
+            if url not in records or not records[url]["pin_updated"]:
+                self.assertEqual(old_pin, current[url])
+            else:
+                self.assertEqual(
+                    records[url]["reviewed_marker"],
+                    f"{current[url]['marker_kind']}:{current[url]['marker_value']}",
+                )
+        destination = reviewed["new_destination"]
+        self.assertEqual({destination["source_url"]}, set(current) - set(by_url))
+        for key in ("marker_kind", "marker_value"):
+            self.assertEqual(destination[key], current[destination["source_url"]][key])
+        closeout = json.loads(
+            (ROOT / "docs/audits/source-review-2026-09-30-closeout.json").read_text()
+        )
+        self.assertEqual("fail", closeout["result"])
+        self.assertEqual(42, sum(item["result"] == "pass" for item in closeout["records"]))
+        self.assertEqual(6, sum(item["result"] == "changed" for item in closeout["records"]))
+        self.assertEqual(6, len(closeout["errors"]))
 
     def test_shared_schema_accepts_all_historical_manifests(self) -> None:
         schema = json.loads((ROOT / "releases/manifest-schema.json").read_text())
