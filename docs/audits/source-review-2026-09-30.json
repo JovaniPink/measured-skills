@@ -1,0 +1,302 @@
+{
+  "reviewed_on": "2026-09-30",
+  "source_revision": "e6f121d52ea082deb68945ae9616db662f79ea94",
+  "scope": "Freshness evidence refresh only; semantic source review unfinished",
+  "upstream_job": "https://github.com/JovaniPink/measured-skills/actions/runs/36429562721",
+  "checked_sources": 47,
+  "unchanged_markers": 11,
+  "changed_markers": 36,
+  "unavailable_sources": 0,
+  "pins_changed": false,
+  "historical_source_bytes_available": false,
+  "changed_sources": [
+    {
+      "source_url": "https://a2a-protocol.org/v1.0.0/specification/",
+      "expected_marker": "etag:\"6a968c05-924e8\"",
+      "observed_marker": "etag:\"6abbe4a3-924e8\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/",
+      "expected_marker": "etag:\"6a98d98c-1f3ad\"",
+      "observed_marker": "etag:\"6abd19f6-1fabb\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "expected_marker": "etag:\"6a98d98c-3c78b\"",
+      "observed_marker": "etag:\"6abd19f6-3d317\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "expected_marker": "etag:\"6a98d98c-1d4e6\"",
+      "observed_marker": "etag:\"6abd19f6-1dbce\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://agent-plugins.org/specification",
+      "expected_marker": "etag:\"05a04a63bdecb4816cf2ee5bb19521ba\"",
+      "observed_marker": "etag:\"039ae40592d1ac679e5762817f7863e6\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "expected_marker": "content-sha256:2abeaa08393f217d136d4e1e95dc4e68299275409af2f1c56a75264daf238fc0",
+      "observed_marker": "content-sha256:ac6919a21c3bf6e24db31a0cf07c7d918612d48532fdeb05d7164eb7e61dc2f1",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/agents",
+      "expected_marker": "last-modified:Wed, 02 Sep 2026 15:04:03 GMT",
+      "observed_marker": "last-modified:Thu, 17 Sep 2026 17:06:46 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 14:07:13 GMT",
+      "observed_marker": "last-modified:Wed, 23 Sep 2026 17:59:42 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://airc.nist.gov/",
+      "expected_marker": "normalized-content-sha256:febb3b13a71e92d55d13ea12f428b1fb0d899b68812ad78e3ac985f4664d78ad",
+      "observed_marker": "normalized-content-sha256:5d03e8f262c541c86e25e65bb94e563ef7b2b62d03a43a0d0944aa5106498dc7",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://antigravity.google/docs/cli/headless/",
+      "expected_marker": "etag:\"vJ3VBw\"",
+      "observed_marker": "etag:\"_KFTNQ\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://antigravity.google/docs/skills/",
+      "expected_marker": "etag:\"vJ3VBw\"",
+      "observed_marker": "etag:\"_KFTNQ\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "expected_marker": "etag:\"16i5j9jqfuj4g2f\"",
+      "observed_marker": "etag:\"657a3f81171dc3f5d2095a618e22e249\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "expected_marker": "normalized-content-sha256:4fd5a7119dd871432ced44375d8155687c31c9190a542fbae0419346b3589209",
+      "observed_marker": "normalized-content-sha256:f5fdb09e2d3f1c53771a95966f87422dad0ab254f02370fc5dba13f4f8ad9c83",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "expected_marker": "normalized-content-sha256:42503dd6104e80db2a3debb1afbcb73ea47d08108d8242d1fc4a5ba0af947ce5",
+      "observed_marker": "normalized-content-sha256:5e67e7ad92119a4618d5d6d6e57bd4a63c99d78e1523d86d39ea1f830618eae4",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 22:21:54 GMT",
+      "observed_marker": "last-modified:Wed, 30 Sep 2026 13:12:58 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 22:21:54 GMT",
+      "observed_marker": "last-modified:Mon, 28 Sep 2026 17:55:09 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.python.org/3/",
+      "expected_marker": "etag:\"6a9fd467-4bea\"",
+      "observed_marker": "etag:\"6abd0444-4cb9\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.python.org/3/library/unittest.html",
+      "expected_marker": "etag:\"6a9fd467-51851\"",
+      "observed_marker": "etag:\"6abd0444-51995\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.spring.io/spring-boot/",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 17:45:33 GMT",
+      "observed_marker": "last-modified:Thu, 24 Sep 2026 10:30:44 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "expected_marker": "etag:\"f07-659e1dd4404c0\"",
+      "observed_marker": "etag:\"f63-65c3036923100\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "expected_marker": "normalized-content-sha256:4e9b6fd81b9ab34e2edacab3b9b4963bd402ba18290bafcca81ec5453c691301",
+      "observed_marker": "normalized-content-sha256:eadd798d2303bfeb87361f7da7058e2cac641f122e9026aa6e2166ed91be12e5",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "expected_marker": "normalized-content-sha256:44a36ed5f01b69261088a74ad8cab855ec4de28a1cc146d03a6f534f17808511",
+      "observed_marker": "normalized-content-sha256:6012a1c39ed82170a9beb080824393c4c375e93be3598b558091d2678e57cbd3",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "expected_marker": "last-modified:Mon, 31 Aug 2026 06:42:22 GMT",
+      "observed_marker": "last-modified:Mon, 28 Sep 2026 20:56:48 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "expected_marker": "last-modified:Mon, 31 Aug 2026 06:42:23 GMT",
+      "observed_marker": "last-modified:Mon, 28 Sep 2026 20:56:50 GMT",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "expected_marker": "normalized-content-sha256:e3909257c1bc82598b102605ef9b0057717507bec84166b6703ac775c409a46c",
+      "observed_marker": "normalized-content-sha256:5671e4fd2a3c146b16637fa6e6c8e581485ec5032887233d24b6265dbee2d702",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "expected_marker": "etag:\"+9Cy9ZEQhvz3Ak5iwW35JhC83pM=\"",
+      "observed_marker": "etag:\"Ybj7LFP8pWLhNFCRqO2dBS41g3E=\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "expected_marker": "etag:\"d244ea8afcd06e4537e7d41a38f4c683-ssl\"",
+      "observed_marker": "etag:\"764998d4afa1c066f6cd48720910d75d-ssl\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 16:00:59 GMT",
+      "observed_marker": "content-sha256:0a957ac8177ee15106bc040ed7c1e48d4c5a6d09bfb71e43d12005145387f8d4",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "expected_marker": "etag:\"3d549f2a1bc00c1de09cb51667236f3b-ssl\"",
+      "observed_marker": "etag:\"37cdaf7a2205c51c395640b3d51edc24-ssl\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "expected_marker": "normalized-content-sha256:8b203e9484a172f876b5de5e36a6e9f74cf7f1b3601ae3b341654da0ad59a7f8",
+      "observed_marker": "normalized-content-sha256:f31fcba3c8f43258f99133a1f74ae41bf1e7a78e96490018bed36177a2c6ee42",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/cli/plugins/",
+      "expected_marker": "etag:\"vJ3VBw\"",
+      "observed_marker": "etag:\"_KFTNQ\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/sdk/overview",
+      "expected_marker": "etag:\"vJ3VBw\"",
+      "observed_marker": "etag:\"_KFTNQ\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "expected_marker": "normalized-content-sha256:431f724b09d2bfa7d57fcc5c2c96ddc1c03dd20b3fa3097e6b0c33ac52ac29ca",
+      "observed_marker": "normalized-content-sha256:fdc9f2ef1e50265c481d91d0c0632eb006e49f5bfd1a0fb21221f3fa88efcaec",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/current/",
+      "expected_marker": "content-sha256:8ec5a1859e79a2554671192efde6ca54df6f432d18bdda49d716f0095b32daed",
+      "observed_marker": "content-sha256:e74170f3c11f64a72dbcf5504c14e33d4dcc94c1277e63d58f0a57ce48d9654f",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.swift.org/documentation/",
+      "expected_marker": "etag:\"209-65af18c8e0600\"",
+      "observed_marker": "etag:\"209-65cac4a2f2d40\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "expected_marker": "etag:\"6aa04fb2-29a5d\"",
+      "observed_marker": "etag:\"6aba6131-29a5d\"",
+      "result": "changed",
+      "disposition": "pending_semantic_review",
+      "reason": "A changed response marker does not identify which normative content changed. Preserve existing pin until relevant claims and provenance are reviewed."
+    }
+  ]
+}
