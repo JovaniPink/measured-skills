@@ -6,7 +6,7 @@ A skill is a short set of written instructions for one kind of task. Reviewing a
 
 A skill is only text. It installs no programs and grants no new permissions. It changes how your assistant works through a task, not what it is allowed to do.
 
-Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.17.0 release candidate; see the [migration guide](docs/measured-migration.md) before changing an existing install.
+Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.17.1 repair candidate; see the [migration guide](docs/measured-migration.md) before changing an existing install.
 
 ## Install one pack
 
@@ -119,9 +119,9 @@ Authored means we wrote it. It says what the instructions intend.
 
 Observed means we ran it and wrote down what happened, with the exact client, version, and date.
 
-The current candidate is 0.17.0: 79 skills in nine packs. The [candidate record](docs/client-candidate-v0.17.0.md) separates structural checks from behavior still requiring observation.
+The current candidate is 0.17.1: 79 skills in nine packs. The [candidate record](docs/client-candidate-v0.17.1.md) separates structural checks from behavior still requiring observation.
 
-Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.17.0 installed-client benefit is claimed.
+Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.17.1 installed-client benefit is claimed.
 
 One limit is worth knowing before you test. Every result we have recorded was taken at the first turn of a fresh session. We have not measured whether a skill still shapes replies later in a long working session, and published research suggests instructions lose force as a conversation grows. The [study design](docs/turn-depth-study.md) says how we plan to find out.
 

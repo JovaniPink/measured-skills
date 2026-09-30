@@ -14,15 +14,15 @@ from cataloglib import EXPLICIT_SKILLS, SKILLS, directory_hashes  # noqa: E402
 
 
 class AntigravityBundleTests(unittest.TestCase):
-    def test_bundle_keeps_source_and_references_and_includes_explicit_skills_with_control(self) -> None:
+    def test_bundle_keeps_references_and_excludes_held_explicit_skills(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "candidate"
             build(target)
             receipt = json.loads((target / "bundle.json").read_text())
             included = set(receipt["included_skills"])
-            self.assertEqual(set(SKILLS), included)
-            self.assertEqual([], receipt["excluded_skills"])
-            self.assertEqual(set(EXPLICIT_SKILLS), set(receipt["explicit_skills"]))
+            self.assertEqual(set(SKILLS) - EXPLICIT_SKILLS, included)
+            self.assertEqual(set(EXPLICIT_SKILLS), set(receipt["excluded_skills"]))
+            self.assertEqual([], receipt["explicit_skills"])
             self.assertEqual("not_observed", receipt["client_loading"])
             self.assertEqual("preview", receipt["status"])
             for skill in included:
@@ -56,12 +56,12 @@ class AntigravityBundleTests(unittest.TestCase):
                     build(target, selected)
                 self.assertFalse(target.exists())
 
-    def test_explicit_selection_succeeds_with_control(self) -> None:
+    def test_explicit_selection_fails_without_writes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "candidate"
-            build(target, ["publish-change-safely"])
-            skill_md = (target / "plugin" / "skills" / "publish-change-safely" / "SKILL.md").read_text(encoding="utf-8")
-            self.assertIn("disable-model-invocation: true", skill_md)
+            with self.assertRaisesRegex(ValueError, "explicit-only"):
+                build(target, ["publish-change-safely"])
+            self.assertFalse(target.exists())
 
     def test_existing_output_is_never_overwritten(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

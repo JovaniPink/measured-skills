@@ -4,7 +4,7 @@ description: Review a system or migration to identify authoritative stores, exac
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-skills"
   invocation: "implicit"
   provenance: "original"

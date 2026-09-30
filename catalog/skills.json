@@ -1,6 +1,6 @@
 {
   "$schema": "./skills-schema.json",
-  "catalog_version": "0.17.0",
+  "catalog_version": "0.17.1",
   "skills": [
     {
       "skill": "agent-context-state-memory-design",

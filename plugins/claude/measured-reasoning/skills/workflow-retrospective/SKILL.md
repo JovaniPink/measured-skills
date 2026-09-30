@@ -4,7 +4,7 @@ description: "Review a completed or paused workflow using supplied artifacts and
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-reasoning"
   invocation: "explicit"
   provenance: "clean-room"

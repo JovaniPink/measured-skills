@@ -4,7 +4,7 @@ description: Review the quality of a test suite or change-specific tests for mea
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-engineering-review"
   invocation: "implicit"
   provenance: "clean-room"

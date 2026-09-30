@@ -1,6 +1,6 @@
 {
   "name": "measured-engineering-delivery",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Coordinate bounded execution, isolated work, review handoffs, and delivery evidence.",
   "author": {
     "name": "Measured Studios",

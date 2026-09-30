@@ -4,7 +4,7 @@ description: Execute a named, approved implementation plan with checkpoints, val
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-engineering-delivery"
   invocation: "explicit"
   provenance: "original"

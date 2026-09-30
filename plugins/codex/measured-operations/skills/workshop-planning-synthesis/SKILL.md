@@ -4,7 +4,7 @@ description: Plan a workshop around a concrete decision or learning outcome, the
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-operations"
   invocation: "implicit"
   provenance: "original"

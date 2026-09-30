@@ -883,7 +883,7 @@ class CatalogTests(unittest.TestCase):
                 for plugin in antigravity_plugins.values()
                 for path in (plugin / "skills").iterdir()
             }
-            self.assertEqual(set(SKILLS), antigravity_generated)
+            self.assertEqual(set(SKILLS) - EXPLICIT_SKILLS, antigravity_generated)
             archives = package(temporary_root / "archives")
             self.assertEqual(len(SKILLS), len(archives))
 

@@ -4,7 +4,7 @@ description: Research a question using current primary sources, preserving publi
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-skills"
   invocation: "implicit"
   provenance: "original"

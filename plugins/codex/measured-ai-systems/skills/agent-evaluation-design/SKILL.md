@@ -4,7 +4,7 @@ description: Design an evaluation contract for an AI agent, model-assisted workf
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-ai-systems"
   invocation: "implicit"
   provenance: "original"

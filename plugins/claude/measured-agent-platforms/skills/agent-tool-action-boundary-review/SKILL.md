@@ -4,7 +4,7 @@ description: Review the boundary between an agent and its registered tools or ac
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-agent-platforms"
   invocation: "implicit"
   provenance: "clean-room"

@@ -4,7 +4,7 @@ description: "Coordinate an explicitly requested source-to-publication learning 
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-skills"
   invocation: "explicit"
   provenance: "original"

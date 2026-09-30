@@ -4,7 +4,7 @@ description: Apply focused PHP and Drupal engineering judgment after repository 
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-stack-profiles"
   invocation: "implicit"
   provenance: "original"

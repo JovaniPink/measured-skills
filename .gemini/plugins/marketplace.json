@@ -13,7 +13,7 @@
         "path": "./plugins/antigravity/measured-agent-platforms"
       },
       "description": "Human-facing agent architecture, security, tooling, context, protocol, retrieval, and Google ADK workflows.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-ai-systems",
@@ -22,7 +22,7 @@
         "path": "./plugins/antigravity/measured-ai-systems"
       },
       "description": "Optional AI evaluation, context reliability, and source-to-output conformance workflows.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-engineering-build",
@@ -31,7 +31,7 @@
         "path": "./plugins/antigravity/measured-engineering-build"
       },
       "description": "Frame outcomes, design interfaces, plan vertical slices, and test behavior.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-engineering-delivery",
@@ -40,7 +40,7 @@
         "path": "./plugins/antigravity/measured-engineering-delivery"
       },
       "description": "Coordinate bounded execution, isolated work, review handoffs, and delivery evidence.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-engineering-review",
@@ -49,7 +49,7 @@
         "path": "./plugins/antigravity/measured-engineering-review"
       },
       "description": "Review correctness, compatibility, security, operations, and test quality.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-operations",
@@ -58,7 +58,7 @@
         "path": "./plugins/antigravity/measured-operations"
       },
       "description": "Portable requirements, decision, measurement, adoption, and incident workflows.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-reasoning",
@@ -67,7 +67,7 @@
         "path": "./plugins/antigravity/measured-reasoning"
       },
       "description": "Portable alignment, explanation, impact, writing, evidence, and skill-authoring workflows.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-skills",
@@ -76,7 +76,7 @@
         "path": "./plugins/antigravity/measured-skills"
       },
       "description": "Portable evidence, diagnosis, quality, publication, and skill-security workflows.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     },
     {
       "name": "measured-stack-profiles",
@@ -85,7 +85,7 @@
         "path": "./plugins/antigravity/measured-stack-profiles"
       },
       "description": "Optional language and infrastructure engineering profiles.",
-      "version": "0.17.0"
+      "version": "0.17.1"
     }
   ]
 }

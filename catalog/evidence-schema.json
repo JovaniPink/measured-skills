@@ -11,7 +11,7 @@
       "const": "./evidence-schema.json"
     },
     "catalog_version": {
-      "const": "0.17.0"
+      "const": "0.17.1"
     },
     "skills": {
       "type": "array",
@@ -62,7 +62,7 @@
                   "string",
                   "null"
                 ],
-                "pattern": "^0\\.[1-9][0-9]*\\.0$"
+                "pattern": "^0\\.[1-9][0-9]*\\.[0-9]+$"
               },
               "observed_at": {
                 "type": [

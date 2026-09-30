@@ -10,7 +10,7 @@ from typing import TypedDict
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.17.0"
+VERSION = "0.17.1"
 CATALOG_NAME = "measured-skills"
 PLUGIN_CATEGORY = "Developer Tools"
 

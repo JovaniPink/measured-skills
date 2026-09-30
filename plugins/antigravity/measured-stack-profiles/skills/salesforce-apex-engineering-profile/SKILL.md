@@ -4,7 +4,7 @@ description: Apply focused Salesforce, Apex, and Lightning Web Components engine
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-stack-profiles"
   invocation: "implicit"
   provenance: "original"

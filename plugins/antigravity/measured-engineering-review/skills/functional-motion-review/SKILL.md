@@ -4,7 +4,7 @@ description: Review motion in editorial and data interfaces for clarity, accessi
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.17.1"
   plugin: "measured-engineering-review"
   invocation: "implicit"
   provenance: "original"

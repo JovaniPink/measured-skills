@@ -1,6 +1,6 @@
 {
   "$schema": "./google-surfaces-schema.json",
-  "catalog_version": "0.17.0",
+  "catalog_version": "0.17.1",
   "cross_lane_aggregation": "forbidden",
   "records": [
     {

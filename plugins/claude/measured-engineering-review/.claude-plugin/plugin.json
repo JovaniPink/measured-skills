@@ -1,6 +1,6 @@
 {
   "name": "measured-engineering-review",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Review correctness, compatibility, security, operations, and test quality.",
   "author": {
     "name": "Measured Studios",

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Frozen skill qualification case v1",
+  "type": "object",
+  "required": [
+    "format_version",
+    "skill",
+    "case_id",
+    "prompt",
+    "fixture_references",
+    "obligations"
+  ],
+  "properties": {
+    "format_version": {
+      "const": 1
+    },
+    "skill": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fixture_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "mandatory",
+          "assertion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "routing",
+              "semantic",
+              "safety",
+              "outcome",
+              "provenance",
+              "presentation",
+              "lifecycle"
+            ]
+          },
+          "mandatory": {
+            "type": "boolean"
+          },
+          "assertion": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

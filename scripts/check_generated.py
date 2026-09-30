@@ -7,7 +7,7 @@ import json
 import tempfile
 from pathlib import Path
 
-from build_distributions import build, marketplace_documents
+from build_distributions import antigravity_groups, build, marketplace_documents
 from cataloglib import ROOT, directory_hashes, skills_by_plugin
 
 
@@ -22,9 +22,10 @@ def check() -> list[str]:
                 errors.append(f"{client}: missing client plugins directory")
                 continue
             actual_plugins = {path.name for path in client_root.iterdir() if path.is_dir()}
-            if actual_plugins != set(skills_by_plugin()):
+            expected_plugins = antigravity_groups() if client == "antigravity" else skills_by_plugin()
+            if actual_plugins != set(expected_plugins):
                 errors.append(f"{client}: unexpected or missing plugin directories")
-            for plugin in skills_by_plugin():
+            for plugin in expected_plugins:
                 expected_hashes = directory_hashes(output_root / client / plugin)
                 actual_hashes = directory_hashes(ROOT / "plugins" / client / plugin)
                 missing = sorted(set(expected_hashes) - set(actual_hashes))
