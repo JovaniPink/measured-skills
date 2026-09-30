@@ -154,7 +154,7 @@ class PrimaryAuthorityTests(unittest.TestCase):
         from check_repository_independence import PRIMARY_AUTHORITY_HOSTS, scan_text
         for host in ("developer.apple.com", "nextjs.org", "react.dev"):
             self.assertIn(host, PRIMARY_AUTHORITY_HOSTS)
-        self.assertTrue(scan_text("skills/example/references/check.md", "https://github.com/unknown/skill-catalog"))
+        self.assertTrue(scan_text("skills/example/references/check.md", "https://" + "github.com/" + "unknown/skill-catalog"))
 
 class FrozenWorkflowCasesTests(unittest.TestCase):
     def test_frozen_cases_have_semantic_contracts(self) -> None:
