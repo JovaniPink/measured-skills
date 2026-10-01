@@ -4,7 +4,7 @@ description: Audit whether exact source identity and expected values survive par
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-ai-systems"
   invocation: "implicit"
   provenance: "original"

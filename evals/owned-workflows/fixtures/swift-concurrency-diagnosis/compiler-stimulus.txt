@@ -1,0 +1,3 @@
+SYNTHETIC diagnostic stimulus, not captured compiler execution.
+Ownership.swift: sending 'box' risks causing data races across actor isolation; sender accesses it after transfer.
+Reentrant.swift: no compiler diagnostic supplied. Absence of a diagnostic does not prove the check-await-write sequence correct.

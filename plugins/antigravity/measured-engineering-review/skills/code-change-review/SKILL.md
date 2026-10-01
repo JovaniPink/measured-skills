@@ -4,7 +4,7 @@ description: "Review an exact code change for correctness, regressions, security
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
   provenance: "clean-room"

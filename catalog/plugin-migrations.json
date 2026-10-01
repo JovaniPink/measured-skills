@@ -1,15 +1,34 @@
 {
   "from_version": "0.16.0",
   "to_version": "0.17.0",
-  "marketplace": {"from": "jovanipink-skills", "to": "measured-skills"},
+  "marketplace": {
+    "from": "jovanipink-skills",
+    "to": "measured-skills"
+  },
   "compatibility_aliases": false,
   "plugins": {
-    "jovanipink-skills": ["measured-skills"],
-    "jovanipink-engineering": ["measured-engineering-build", "measured-engineering-review", "measured-engineering-delivery"],
-    "jovanipink-stack-profiles": ["measured-stack-profiles"],
-    "jovanipink-operations": ["measured-operations"],
-    "jovanipink-reasoning": ["measured-reasoning"],
-    "jovanipink-ai-systems": ["measured-ai-systems"],
-    "jovanipink-agent-platforms": ["measured-agent-platforms"]
+    "jovanipink-skills": [
+      "measured-skills"
+    ],
+    "jovanipink-engineering": [
+      "measured-engineering-build",
+      "measured-engineering-review",
+      "measured-engineering-delivery"
+    ],
+    "jovanipink-stack-profiles": [
+      "measured-stack-profiles"
+    ],
+    "jovanipink-operations": [
+      "measured-operations"
+    ],
+    "jovanipink-reasoning": [
+      "measured-reasoning"
+    ],
+    "jovanipink-ai-systems": [
+      "measured-ai-systems"
+    ],
+    "jovanipink-agent-platforms": [
+      "measured-agent-platforms"
+    ]
   }
 }

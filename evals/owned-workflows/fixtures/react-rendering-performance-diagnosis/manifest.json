@@ -1,0 +1,12 @@
+{
+  "classification": "synthetic",
+  "review": "pending independent review",
+  "execution": "not_run",
+  "files": {
+    "CONTRACT.md": "b324d3d053aa6a8d8f0837d1ad4bd18b8d660355135ccae63a7fb9581be05cff",
+    "Unrelated/OwnerDraft.md": "113144524c0c8e12bbb2058d70cc561169e5c9bf3a07c3315f498448be605b4a",
+    "src/app/example/results.tsx": "6943ea332553a7e8a5631aa5aa58cbca6331f48a82094ac8113ffbc880373567",
+    "trace-contract.md": "b36e3a6b2f13b596addcb7941e9e7344e57f43bf297b561923c5ae11fba8ad69",
+    "trace.json": "78ca5afc17de179a4dc122ca8014ef3c976eafade00b8413e90d027ff31d9a78"
+  }
+}

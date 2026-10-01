@@ -11,7 +11,7 @@
       "const": "./skills-schema.json"
     },
     "catalog_version": {
-      "const": "0.17.0"
+      "const": "0.18.0"
     },
     "skills": {
       "type": "array",

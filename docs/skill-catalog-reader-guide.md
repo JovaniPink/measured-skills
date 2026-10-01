@@ -1,12 +1,12 @@
 # Measured Skills Catalog: A Reader Guide
 
-The Measured Skills catalog contains 79 portable agent skills organized into nine focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
+The Measured Skills catalog contains 86 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
 
 This guide explains what each plugin is for, what every skill does, and how explicit-only invocation works. It is intended for readers who want to understand the catalog before installing or using it.
 
 ## How the catalog is organized
 
-The nine plugins separate broad workflow categories so you can install only what you need:
+The 11 plugins separate broad workflow categories so you can install only what you need:
 
 1. `measured-skills` contains the core verification, research, diagnosis, security, and publication workflows.
 2. `measured-engineering-build` contains problem framing, module and interface design, implementation planning, test strategy, and test-driven change workflows.
@@ -17,6 +17,8 @@ The nine plugins separate broad workflow categories so you can install only what
 7. `measured-reasoning` contains alignment, explanation, writing, decision, configuration, and continuity workflows.
 8. `measured-ai-systems` contains optional AI evaluation, context reliability, and source-to-output conformance workflows.
 9. `measured-agent-platforms` contains human-facing Google ADK, agent architecture, tool, protocol, security, and retrieval workflows.
+10. `measured-swift-workflows` contains bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture-backed journey verification.
+11. `measured-nextjs-workflows` contains bounded Next.js delivery, cache and authorization review, and measured React rendering diagnosis.
 
 The counts, groupings, and invocation policies below are reconciled against the [canonical skill sources](../skills/) and the catalog's [metadata parser](../scripts/cataloglib.py). Generated plugin trees are projections, not the inventory authority.
 
@@ -31,13 +33,15 @@ The counts, groupings, and invocation policies below are reconciled against the 
 | `measured-reasoning` | 11 | `decision-evidence-trace`, `guided-configuration`, `task-handoff`, `workflow-retrospective` |
 | `measured-ai-systems` | 3 | None |
 | `measured-agent-platforms` | 6 | None |
-| **Total** | **79** | **14 skills** |
+| `measured-nextjs-workflows` | 3 | `nextjs-feature-delivery` |
+| `measured-swift-workflows` | 4 | `ios-journey-verification`, `swiftui-feature-delivery` |
+| **Total** | **86** | **17 skills** |
 
 Most skills can activate implicitly when a request clearly matches their routing description. Skills marked `explicit-only` must be selected directly.
 
 ## What explicit-only means
 
-An explicit-only skill does not activate automatically from ordinary conversation. You must select it or name it directly on a surface that supports direct selection.
+An explicit-only skill requires direct selection. Verify the receiving client's invocation controls before enabling it; unverified surfaces must keep it unavailable. A metadata field or discovery check alone does not establish enforcement.
 
 | Client surface | Verified selection form |
 | --- | --- |
@@ -474,3 +478,41 @@ Keep these states separate:
 - [OpenAI skill-building documentation](https://learn.chatgpt.com/docs/build-skills)
 - [OpenAI plugin documentation](https://developers.openai.com/plugins/build/plugins)
 - [Claude Code skills documentation](https://code.claude.com/docs/en/slash-commands)
+
+## Next.js workflows: measured-nextjs-workflows
+
+### nextjs-cache-auth-boundary-review
+
+Review Next.js authorization and cache boundaries across reads, server mutations, cookies, invalidation, and user-specific data. Read-only; do not trigger for unrelated UI, installing authentication, or enabling Cache Components without a requirement.
+
+### nextjs-feature-delivery
+
+Invocation: `explicit-only`.
+
+Deliver an explicitly requested Next.js App Router feature within approved routes and files using installed-version documentation. Use for bounded implementation and repository gates; do not trigger for read-only audits or adding infrastructure without a product requirement.
+
+### react-rendering-performance-diagnosis
+
+Diagnose React rendering or request-waterfall costs using an observed interaction, profiler evidence, and actual server/client boundaries. Read-only; do not trigger for speculative blanket memoization, styling, or unmeasured speed claims.
+
+## Swift workflows: measured-swift-workflows
+
+### ios-journey-verification
+
+Invocation: `explicit-only`.
+
+Verify an explicitly named iOS user journey with deterministic fixtures, selected schemes, and observable acceptance steps. Use for bounded test execution; do not trigger for inferred live-data journeys, broad simulator resets, or claims of physical-device inference.
+
+### swift-concurrency-diagnosis
+
+Diagnose Swift actor isolation, Sendable diagnostics, task lifetime, cancellation, or reentrancy using actual compiler settings. Read-only; do not trigger for formatting, ordinary synchronous logic, or implementation without a concurrency question.
+
+### swift-persistence-contract-review
+
+Review Swift persistence mutation authority, SwiftData model identity, deletion, migration compatibility, or synchronization contracts. Read-only; do not trigger for visual styling, generic database advice, or executing a migration.
+
+### swiftui-feature-delivery
+
+Invocation: `explicit-only`.
+
+Deliver an explicitly requested SwiftUI feature within approved files and targets. Use for bounded implementation with state ownership, availability, accessibility, and test evidence; do not trigger for read-only review or generic Swift questions.

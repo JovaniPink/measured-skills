@@ -1,6 +1,6 @@
 {
   "$schema": "./packs-schema.json",
-  "catalog_version": "0.17.0",
+  "catalog_version": "0.18.0",
   "budget_warning_characters": 6000,
   "budget_limit_characters": 8000,
   "plugin_packs": [
@@ -189,6 +189,37 @@
       "discovery_estimates": {
         "codex": 4116,
         "claude": 4127
+      }
+    },
+    {
+      "plugin": "measured-swift-workflows",
+      "purpose": "Focused swift workflows with project contracts and bounded evidence.",
+      "skills": [
+        "ios-journey-verification",
+        "swift-concurrency-diagnosis",
+        "swift-persistence-contract-review",
+        "swiftui-feature-delivery"
+      ],
+      "description_characters": 994,
+      "budget_status": "within-budget",
+      "discovery_estimates": {
+        "codex": 1442,
+        "claude": 1446
+      }
+    },
+    {
+      "plugin": "measured-nextjs-workflows",
+      "purpose": "Focused nextjs workflows with project contracts and bounded evidence.",
+      "skills": [
+        "nextjs-cache-auth-boundary-review",
+        "nextjs-feature-delivery",
+        "react-rendering-performance-diagnosis"
+      ],
+      "description_characters": 764,
+      "budget_status": "within-budget",
+      "discovery_estimates": {
+        "codex": 1127,
+        "claude": 1130
       }
     }
   ],

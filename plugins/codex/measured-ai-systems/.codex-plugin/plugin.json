@@ -1,6 +1,6 @@
 {
   "name": "measured-ai-systems",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "Optional AI evaluation, context reliability, and source-to-output conformance workflows.",
   "author": {
     "name": "Measured Studios",

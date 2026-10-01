@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorView({ reset }: { reset: () => void }) { return <button onClick={reset}>Retry example</button>; }

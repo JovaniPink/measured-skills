@@ -4,7 +4,7 @@ description: Review provenance before transferring owned original skill material
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-skills"
   invocation: "explicit"
   provenance: "clean-room"

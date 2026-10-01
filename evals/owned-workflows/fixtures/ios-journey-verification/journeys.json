@@ -1,0 +1,38 @@
+{
+  "classification": "synthetic",
+  "fixture_mode_required": true,
+  "selected_destination": "runner must resolve available simulator UUID; no destination receipt yet",
+  "physical_device": "not_run",
+  "journeys": [
+    {
+      "name": "save",
+      "steps": [
+        "launch fixture",
+        "edit draft",
+        "explicit Save",
+        "reopen stored item",
+        "verify same identity and value"
+      ]
+    },
+    {
+      "name": "send-stop",
+      "steps": [
+        "launch mock",
+        "send request A",
+        "stop",
+        "send B",
+        "assert no A token appears in B"
+      ]
+    },
+    {
+      "name": "retry",
+      "steps": [
+        "launch offline fixture",
+        "assert unavailable",
+        "retry fixed fixture",
+        "verify received index and provenance unchanged"
+      ]
+    }
+  ],
+  "execution": "not_run"
+}

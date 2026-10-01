@@ -4,7 +4,7 @@ description: Design risk-proportionate test coverage across unit, integration, c
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-build"
   invocation: "implicit"
   provenance: "original"

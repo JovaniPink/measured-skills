@@ -6,7 +6,7 @@ A **Code plugin** is a package installed for Claude Code. An **account upload** 
 
 See the [September account repair check](../claude-account-repair-2026-09-08.md) for dated results and remaining app checks.
 
-Read the [current candidate record](../client-candidate-v0.17.0.md) before enabling an update. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps the 0.16.0 packages and the lifted Code hold on the former engineering pack. That history does not carry over to the three packs that replaced it. The 0.13.0 command-line observation keeps its own record. The 0.12.0 account replacements and the older checks below keep their original dates and versions.
+Read the [current candidate record](../client-candidate-v0.18.0.md) before enabling an update. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps the 0.16.0 packages and the lifted Code hold on the former engineering pack. That history does not carry over to the three packs that replaced it. The 0.13.0 command-line observation keeps its own record. The 0.12.0 account replacements and the older checks below keep their original dates and versions.
 
 ## Check what is there
 
@@ -27,7 +27,7 @@ claude plugin install measured-skills@measured-skills --scope user
 claude plugin list --json
 ```
 
-The install argument is `plugin@marketplace`. The marketplace here is named `measured-skills`, and one of its nine packs carries that same name, so `measured-skills@measured-skills` is correct rather than a typo. Every other pack reads as `measured-engineering-build@measured-skills` and follows the same shape.
+The install argument is `plugin@marketplace`. The marketplace here is named `measured-skills`, and one of its 11 packs carries that same name, so `measured-skills@measured-skills` is correct rather than a typo. Every other pack reads as `measured-engineering-build@measured-skills` and follows the same shape.
 
 For an existing install, refresh the marketplace before updating the plugin. Use `claude plugin marketplace update --help` and `claude plugin update --help` to check the current command form. Save the old version and file hashes first. Check every installed file after the update. In the observed 2.1.220 update, all seven packs moved to 0.11.0 and their files matched the generated source. The desktop plugin pages also showed the new version; that did not establish behavior in an existing task. In 2.1.280, `claude plugin uninstall` and `claude plugin marketplace remove` removed a pack from the inventory but left its files in `plugins/cache/`. Check removal with a fresh task, not only the file tree. For a local directory marketplace, a 2.1.281 session loaded each plugin from the marketplace folder when the folder still contained it, not from that cached copy. A session whose marketplace folder no longer contained its installed plugins loaded them from `plugins/cache/` instead.
 
@@ -43,7 +43,7 @@ Generated Claude packages omit Codex's `agents/` files. Skills that require dire
 
 Claude desktop Code mode, Claude.ai, and Cowork each need their own record. Note whether the task runs locally or remotely. Check loading, linked files, result files, and resume behavior in each mode you use.
 
-For an account upload, build the separate one-skill ZIP with `python3 scripts/package_claude_ai.py`. Review it before uploading. The command prepares all 79 skills; it does not approve every ZIP for every app. Keep a separate upload checklist. The current staged target is 65 skills that allow automatic selection, with 14 explicit-only workflows held. Do not upload an explicit-only skill until the receiving mode has a verified control that prevents automatic selection. A metadata field or working slash command alone does not prove that control.
+For an account upload, build the separate one-skill ZIP with `python3 scripts/package_claude_ai.py`. Review it before uploading. The command prepares all 86 skills; it does not approve every ZIP for every app. Keep a separate upload checklist. The current candidate target is 69 skills that allow automatic selection, with 17 explicit-only workflows held. Do not upload an explicit-only skill until the receiving mode has a verified control that prevents automatic selection. A metadata field or working slash command alone does not prove that control.
 
 To update an existing account skill:
 

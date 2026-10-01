@@ -231,6 +231,8 @@ def _validate_target_fd(repo_fd: int, relative: str) -> None:
 def _render_from(source: Path, output: Path) -> tuple[Path, Path]:
     codex = output / ".agents" / "skills"
     claude = output / ".claude" / "skills"
+    codex.mkdir(parents=True, exist_ok=True)
+    claude.mkdir(parents=True, exist_ok=True)
     for skill_dir in sorted(path for path in source.iterdir() if path.is_dir()):
         metadata = read_skill_metadata(skill_dir)
         name = metadata["name"]

@@ -1,10 +1,10 @@
 # Validation Evidence
 
-See the [current 0.17.0 candidate checks](client-candidate-v0.17.0.md). Older observations below retain their original package versions.
+See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 109 regression tests.
+Current test suite: 133 regression tests.
 
 ## Equal client setup candidate
 

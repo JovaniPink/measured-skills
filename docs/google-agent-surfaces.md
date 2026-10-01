@@ -1,6 +1,6 @@
 # Google Agent Surfaces
 
-Setup policy updated: 2026-09-08. Older runtime research remains separate.
+Setup policy updated: 2026-09-30. Older runtime research remains separate.
 
 Check each Google app or tool on its own. A skill that works in Antigravity CLI may still need changes for the desktop app or IDE. Record the results separately in [`catalog/google-surfaces.json`](../catalog/google-surfaces.json). Start with [Antigravity setup](clients/antigravity.md).
 
@@ -16,7 +16,7 @@ Check each Google app or tool on its own. A skill that works in Antigravity CLI 
 | Gemini Managed Agent | Can a mounted skill improve a hosted sandboxed agent? | Separate synthetic/public hosted lane with a preregistered cost ceiling and retention policy. |
 | Google ADK | Can an immutable bundle load without granting authority? | Separate runtime-compatibility lane owned by `jovanipink-adk`. |
 | Agents CLI | Can a coding agent safely evaluate or prepare Google deployments? | Lifecycle-tool lane. Provider actions require explicit RELEASE authority and readback. |
-| Data Agent Kit | Can vendor skills and MCP tools support governed data work? | Preview tool/plugin lane; never product-semantic or evaluation authority. |
+| Data Agent Kit | Can vendor skills and MCP tools support governed data work? | Conditional tool/plugin lane; confirm the exact feature's launch stage and compatibility before use. |
 | Gemini Enterprise Agent Platform | Can an application meet production identity, governance, runtime, memory, evaluation, and observability requirements? | Product/runtime evidence, never blended with skill behavior. |
 
 ## Setup and study checks
@@ -25,7 +25,7 @@ Antigravity setup, packaging, and manual checks have equal priority with Codex a
 
 Each paired run must use fresh pinned worktrees, a natural empty configuration home, fixed model and effort, sandboxed scoped permissions, a fixed network policy, and headless JSON or stream-JSON evidence. The grader must parse terminal result status and tool events; process exit code zero is not sufficient evidence of success.
 
-The Delivery TypeScript profile includes the explicit-only `publish-change-safely` skill. In version 0.17.0, Antigravity packs include it with `disable-model-invocation: true`. That control is unverified on Antigravity: Google's skill docs list only `name` and `description`, and no agy run has shown that the field stops automatic selection. Full catalog behavioral verification remains pending live test evidence.
+The Delivery TypeScript profile includes the explicit-only `publish-change-safely` skill. Version 0.17.1 excludes it and every other explicit-only workflow from Antigravity packs. Google's documented skill fields do not establish an automatic-selection control. The disposable CLI 1.2.9 package checks cover all nine implicit-only packs; full catalog behavioral qualification remains pending.
 
 ## Packaging boundary
 
@@ -45,7 +45,7 @@ Do not install, authenticate, deploy, publish, or enable provider actions as par
 
 - Google, [Gemini CLI to Antigravity CLI transition](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/)
 - Google, [Antigravity Agent Skills](https://antigravity.google/docs/skills/)
-- Google, [Antigravity plugins](https://www.antigravity.google/docs/cli/plugins/)
+- Google, [Antigravity plugins by surface](https://www.antigravity.google/docs/plugins?tab=cli)
 - Agent Plugins, [Agent Plugins 1.0 specification](https://agent-plugins.org/specification)
 - Google, [Antigravity headless mode](https://antigravity.google/docs/cli/headless/)
 - Google, [Antigravity SDK](https://www.antigravity.google/docs/sdk/overview)

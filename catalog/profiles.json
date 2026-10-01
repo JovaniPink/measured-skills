@@ -1,6 +1,6 @@
 {
   "$schema": "./profiles-schema.json",
-  "catalog_version": "0.17.0",
+  "catalog_version": "0.18.0",
   "profiles": [
     {
       "id": "delivery-typescript-experimental",
@@ -42,7 +42,7 @@
           "observed_listing_state": "not_observed"
         }
       },
-      "source_catalog_version": "0.17.0",
+      "source_catalog_version": "0.18.0",
       "behavioral_evidence": {
         "status": "none",
         "observed_against_version": null,
@@ -108,7 +108,7 @@
           "observed_listing_state": "not_observed"
         }
       },
-      "source_catalog_version": "0.17.0",
+      "source_catalog_version": "0.18.0",
       "behavioral_evidence": {
         "status": "none",
         "observed_against_version": null,

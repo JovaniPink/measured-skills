@@ -41,6 +41,9 @@ CAPABILITY_MAPPING_KEY = "public_" + "mapping"
 PRIMARY_AUTHORITY_HOSTS = frozenset(
     {
         "agentskills.io",
+        "developer.apple.com",
+        "nextjs.org",
+        "react.dev",
         "a2a-protocol.org",
         "adk-labs.github.io",
         "airc.nist.gov",

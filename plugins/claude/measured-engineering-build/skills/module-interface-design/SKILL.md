@@ -4,7 +4,7 @@ description: "Design or review a module boundary, vocabulary, interface, and hid
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-build"
   invocation: "implicit"
   provenance: "clean-room"

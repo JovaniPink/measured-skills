@@ -1,6 +1,6 @@
 # Measured Skills Cheatsheet
 
-Use this page to find a skill fast. The catalog contains 79 skills in nine packs. Each row names one skill, says what it does, and says how it gets picked.
+Use this page to find a skill fast. The catalog contains 86 skills in nine packs. Each row names one skill, says what it does, and says how it gets picked.
 
 The [glossary](glossary.md) defines the words on this page. To install a pack, read [How to Use Measured Skills](README.md). For a longer write-up of each skill, read the [Skill Catalog Reader Guide](skill-catalog-reader-guide.md).
 
@@ -191,3 +191,20 @@ Use this pack when you are designing or reviewing an agent system. It is not a r
 ## Safety reminder
 
 A skill guides workflow and judgment. It does not replace repository protections, host permissions, tests, access controls, or human approval. Keep local, committed, pushed, reviewed, merged, deployed, and live states separate.
+
+## Next.js workflows: measured-nextjs-workflows
+
+| Skill | Purpose | Invocation |
+| --- | --- | --- |
+| `nextjs-cache-auth-boundary-review` | Review Next.js authorization and cache boundaries across reads, server mutations, cookies, invalidation, and user-specific data. Read-only; do not trigger for unrelated UI, installing authentication, or enabling Cache Components without a requirement. | Implicit |
+| `nextjs-feature-delivery` | Deliver an explicitly requested Next.js App Router feature within approved routes and files using installed-version documentation. Use for bounded implementation and repository gates; do not trigger for read-only audits or adding infrastructure without a product requirement. | Explicit-only |
+| `react-rendering-performance-diagnosis` | Diagnose React rendering or request-waterfall costs using an observed interaction, profiler evidence, and actual server/client boundaries. Read-only; do not trigger for speculative blanket memoization, styling, or unmeasured speed claims. | Implicit |
+
+## Swift workflows: measured-swift-workflows
+
+| Skill | Purpose | Invocation |
+| --- | --- | --- |
+| `ios-journey-verification` | Verify an explicitly named iOS user journey with deterministic fixtures, selected schemes, and observable acceptance steps. Use for bounded test execution; do not trigger for inferred live-data journeys, broad simulator resets, or claims of physical-device inference. | Explicit-only |
+| `swift-concurrency-diagnosis` | Diagnose Swift actor isolation, Sendable diagnostics, task lifetime, cancellation, or reentrancy using actual compiler settings. Read-only; do not trigger for formatting, ordinary synchronous logic, or implementation without a concurrency question. | Implicit |
+| `swift-persistence-contract-review` | Review Swift persistence mutation authority, SwiftData model identity, deletion, migration compatibility, or synchronization contracts. Read-only; do not trigger for visual styling, generic database advice, or executing a migration. | Implicit |
+| `swiftui-feature-delivery` | Deliver an explicitly requested SwiftUI feature within approved files and targets. Use for bounded implementation with state ownership, availability, accessibility, and test evidence; do not trigger for read-only review or generic Swift questions. | Explicit-only |

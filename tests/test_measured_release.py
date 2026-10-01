@@ -17,7 +17,7 @@ class MeasuredReleaseTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         mappings = json.loads((root / "catalog" / "plugin-migrations.json").read_text())
         targets = [target for values in mappings["plugins"].values() for target in values]
-        self.assertEqual(set(skills_by_plugin()), set(targets))
+        self.assertEqual(set(skills_by_plugin()) - {"measured-swift-workflows", "measured-nextjs-workflows"}, set(targets))
         self.assertEqual(len(targets), len(set(targets)))
         for source in (root / "skills").glob("*/SKILL.md"):
             self.assertNotIn('author: "Jovani', source.read_text())
@@ -46,9 +46,9 @@ class MeasuredReleaseTests(unittest.TestCase):
     def test_pack_partition(self) -> None:
         packs = skills_by_plugin()
         self.assertEqual("measured-skills", CATALOG_NAME)
-        self.assertEqual(9, len(packs))
-        self.assertEqual(79, len(SKILLS))
-        self.assertEqual(79, len({s for skills in packs.values() for s in skills}))
+        self.assertEqual(11, len(packs))
+        self.assertEqual(86, len(SKILLS))
+        self.assertEqual(86, len({s for skills in packs.values() for s in skills}))
         self.assertEqual(5, len(packs["measured-engineering-build"]))
         self.assertEqual(11, len(packs["measured-engineering-review"]))
         self.assertEqual(9, len(packs["measured-engineering-delivery"]))

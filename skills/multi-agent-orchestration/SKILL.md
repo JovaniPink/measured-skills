@@ -4,7 +4,7 @@ description: Coordinate authorized parallel agents on independent bounded tasks 
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-delivery"
   invocation: "explicit"
   provenance: "clean-room"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Swift Persistence Contract Review"
+  short_description: "Swift Persistence Contract Review"
+  default_prompt: "Use $measured-swift-workflows:swift-persistence-contract-review for the identified bounded task and report observed evidence."
+policy:
+  allow_implicit_invocation: true

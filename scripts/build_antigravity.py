@@ -13,11 +13,13 @@ from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, add_claude_explic
 
 def build(output: Path, selected: list[str] | None = None) -> Path:
     """Copy skills into a new Antigravity bundle with explicit controls applied."""
-    included = sorted(SKILLS) if selected is None else sorted(selected)
+    included = sorted(set(SKILLS) - EXPLICIT_SKILLS) if selected is None else sorted(selected)
     if not included or len(included) != len(set(included)):
         raise ValueError("choose at least one skill without duplicate names")
     if set(included) - set(SKILLS):
         raise ValueError("selection contains an unknown skill")
+    if set(included) & EXPLICIT_SKILLS:
+        raise ValueError("explicit-only skills are held on Antigravity until invocation controls are verified")
     # Refuse existing paths, including dangling symlinks. Never reset evidence or settings.
     if output.exists() or output.is_symlink():
         raise FileExistsError(f"output already exists: {output}")
@@ -53,7 +55,7 @@ def build(output: Path, selected: list[str] | None = None) -> Path:
         "included_skills": included,
         "explicit_skills": sorted(set(included) & EXPLICIT_SKILLS),
         "excluded_skills": sorted(set(SKILLS) - set(included)),
-        "exclusion_reason": "Not selected in this bundle." if set(SKILLS) - set(included) else "none",
+        "exclusion_reason": "Explicit-only skills are held; other skills may be unselected.",
         "plugin_sha256": directory_hashes(plugin),
     }
     (output / "bundle.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")

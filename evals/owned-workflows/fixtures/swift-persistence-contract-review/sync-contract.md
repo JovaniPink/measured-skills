@@ -1,0 +1,1 @@
+RecordOwner owns all writes. IDs persist across edits. Sync emits changed rows by modifiedAt and retains deletedAt tombstones; hard deletion drops evidence before peers can receive it. Unknown payload bytes must survive read/sync/export; assistant access is read-only. No migration authority is granted.

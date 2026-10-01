@@ -1,0 +1,6 @@
+{
+  "swift_language_mode": "6",
+  "default_isolation": "nonisolated",
+  "strict_concurrency": "complete",
+  "upcoming_features": []
+}

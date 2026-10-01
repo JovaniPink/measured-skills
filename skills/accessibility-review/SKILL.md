@@ -4,7 +4,7 @@ description: Review web or application accessibility using WCAG 2.2 success crit
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
   provenance: "clean-room"

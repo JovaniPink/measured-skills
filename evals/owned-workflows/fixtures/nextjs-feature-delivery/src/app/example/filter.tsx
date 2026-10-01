@@ -1,0 +1,4 @@
+"use client";
+export function Filter({ entries }: { entries: { id: string; title: string }[] }) {
+    return <ul>{entries.map(entry => <li key={entry.id}>{entry.title}</li>)}</ul>;
+}

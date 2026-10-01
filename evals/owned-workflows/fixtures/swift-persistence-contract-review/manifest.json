@@ -1,0 +1,12 @@
+{
+  "classification": "synthetic",
+  "review": "pending independent review",
+  "execution": "not_run",
+  "files": {
+    "CONTRACT.md": "b324d3d053aa6a8d8f0837d1ad4bd18b8d660355135ccae63a7fb9581be05cff",
+    "Sources/Feature/Persistence.swift": "a15aa17763b77db3d84794a5f3e19ac28e5e8f063b7d8cf608ba96af96f8dc62",
+    "Unrelated/OwnerDraft.md": "113144524c0c8e12bbb2058d70cc561169e5c9bf3a07c3315f498448be605b4a",
+    "identity-change.diff": "c048ba6278d90201cefd2a59ef187a437facd4c8d49cf790027853951ba0455e",
+    "sync-contract.md": "b6c435bd296e00f728ded60c4b53a7f77537c817863fcf738fe96768fb68cb92"
+  }
+}

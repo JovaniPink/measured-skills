@@ -133,13 +133,20 @@ def marketplace_documents() -> tuple[CodexMarketplace, ClaudeMarketplace, Antigr
                 "description": PLUGIN_SPECS[plugin]["description"],
                 "version": VERSION,
             }
-            for plugin in skills_by_plugin()
+            for plugin in antigravity_groups()
         ],
     }
     return codex, claude, antigravity
 
 
+def antigravity_groups() -> dict[str, list[str]]:
+    groups = {plugin: [skill for skill in skills if read_skill_metadata(ROOT / "skills" / skill)["invocation"] != "explicit"] for plugin, skills in skills_by_plugin().items()}
+    return {plugin: skills for plugin, skills in groups.items() if skills}
+
+
 def _reset_directory(path: Path, allowed_parent: Path, allowed_names: set[str]) -> None:
+    if path.is_symlink() or allowed_parent.is_symlink():
+        raise ValueError(f"refusing symlinked distribution path: {path}")
     path = path.resolve()
     allowed_parent = allowed_parent.resolve()
     if path.parent != allowed_parent or path.name not in allowed_names:
@@ -147,6 +154,24 @@ def _reset_directory(path: Path, allowed_parent: Path, allowed_names: set[str]) 
     if path.exists():
         shutil.rmtree(path)
     path.mkdir(parents=True)
+
+
+def _validate_generated_parent(parent: Path) -> None:
+    if parent.is_symlink() or (parent.exists() and not parent.is_dir()):
+        raise ValueError(f"unsafe distribution parent: {parent}")
+    if parent.exists():
+        for child in parent.iterdir():
+            if child.name not in PLUGIN_SPECS or child.is_symlink() or not child.is_dir():
+                raise ValueError(f"unowned or unsafe distribution entry: {child}")
+
+
+def _remove_obsolete(parent: Path, expected: set[str]) -> None:
+    for child in parent.iterdir():
+        if child.name not in expected:
+            # The complete set of parents and children was validated before any reset.
+            if child.is_symlink() or not child.is_dir() or child.name not in PLUGIN_SPECS:
+                raise ValueError(f"unsafe obsolete distribution: {child}")
+            shutil.rmtree(child)
 
 
 def _copy_codex_skill(source: Path, target: Path, skill: str, plugin: str) -> None:
@@ -177,10 +202,17 @@ def _copy_claude_skill(source: Path, target: Path, explicit: bool) -> None:
 
 
 def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str, Path], dict[str, Path], dict[str, Path]]:
+    for path in (output_root.absolute(), *output_root.absolute().parents):
+        if path in (Path("/tmp"), Path("/var")) and path.resolve() == Path("/private") / path.name:
+            continue
+        if path.is_symlink():
+            raise ValueError(f"refusing symlinked distribution root or ancestor: {path}")
     output_root = output_root.resolve()
     codex_parent = output_root / "codex"
     claude_parent = output_root / "claude"
     antigravity_parent = output_root / "antigravity"
+    for parent in (codex_parent, claude_parent, antigravity_parent):
+        _validate_generated_parent(parent)
     codex_parent.mkdir(parents=True, exist_ok=True)
     claude_parent.mkdir(parents=True, exist_ok=True)
     antigravity_parent.mkdir(parents=True, exist_ok=True)
@@ -188,7 +220,11 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
     allowed_names = set(grouped)
     codex_plugins = {plugin: codex_parent / plugin for plugin in grouped}
     claude_plugins = {plugin: claude_parent / plugin for plugin in grouped}
-    antigravity_plugins = {plugin: antigravity_parent / plugin for plugin in grouped}
+    agy_grouped = antigravity_groups()
+    antigravity_plugins = {plugin: antigravity_parent / plugin for plugin in agy_grouped}
+    _remove_obsolete(codex_parent, allowed_names)
+    _remove_obsolete(claude_parent, allowed_names)
+    _remove_obsolete(antigravity_parent, set(agy_grouped))
     for path in codex_plugins.values():
         _reset_directory(path, codex_parent, allowed_names)
     for path in claude_plugins.values():
@@ -199,14 +235,15 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
     for plugin, skills in grouped.items():
         codex_plugin = codex_plugins[plugin]
         claude_plugin = claude_plugins[plugin]
-        antigravity_plugin = antigravity_plugins[plugin]
+        antigravity_plugin = antigravity_plugins.get(plugin)
         for skill in skills:
             source = ROOT / "skills" / skill
             metadata = read_skill_metadata(source)
             is_explicit = metadata["invocation"] == "explicit"
             _copy_codex_skill(source, codex_plugin / "skills" / skill, skill, plugin)
             _copy_claude_skill(source, claude_plugin / "skills" / skill, is_explicit)
-            _copy_claude_skill(source, antigravity_plugin / "skills" / skill, is_explicit)
+            if not is_explicit and antigravity_plugin is not None:
+                _copy_claude_skill(source, antigravity_plugin / "skills" / skill, False)
 
         spec = PLUGIN_SPECS[plugin]
         _write_json(
@@ -246,11 +283,11 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
                 "keywords": spec["keywords"],
             },
         )
-        _write_json(
-            antigravity_plugin / "plugin.json",
-            # Antigravity's documented plugin.json schema allows only these fields.
-            {"name": plugin, "description": spec["description"]},
-        )
+        if antigravity_plugin is not None:
+            _write_json(
+                antigravity_plugin / "plugin.json",
+                {"name": plugin, "description": spec["description"]},
+            )
 
     if write_marketplaces:
         codex_marketplace, claude_marketplace, antigravity_marketplace = marketplace_documents()
@@ -291,7 +328,8 @@ def main() -> int:
         print("Generated distributions and marketplaces match canonical sources.")
         return 0
     build(args.output_root, write_marketplaces=args.write_marketplaces)
-    print(f"Generated {len(SKILLS)} Codex skills, {len(SKILLS)} Claude skills, and {len(SKILLS)} Antigravity skills.")
+    agy_count = sum(len(skills) for skills in antigravity_groups().values())
+    print(f"Generated {len(SKILLS)} Codex skills, {len(SKILLS)} Claude skills, and {agy_count} Antigravity skills.")
     return 0
 
 

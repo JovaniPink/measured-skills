@@ -1,0 +1,26 @@
+{
+  "name": "measured-swift-workflows",
+  "version": "0.18.0",
+  "description": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
+  "author": {
+    "name": "Measured Studios",
+    "url": "https://measuredstudios.com"
+  },
+  "homepage": "https://measuredstudios.com/skills",
+  "repository": "https://github.com/JovaniPink/measured-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Measured Swift Workflows",
+    "shortDescription": "Focused Swift workflows",
+    "longDescription": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
+    "developerName": "Measured Studios",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Help me choose and use a Measured Swift Workflows workflow skill."
+    ]
+  }
+}

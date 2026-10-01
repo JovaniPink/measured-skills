@@ -1,0 +1,6 @@
+interface:
+  display_name: "Swift Concurrency Diagnosis"
+  short_description: "Swift Concurrency Diagnosis"
+  default_prompt: "Use $swift-concurrency-diagnosis for the identified bounded task and report observed evidence."
+policy:
+  allow_implicit_invocation: true

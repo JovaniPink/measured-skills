@@ -11,7 +11,7 @@
       "const": "./profiles-schema.json"
     },
     "catalog_version": {
-      "const": "0.17.0"
+      "const": "0.18.0"
     },
     "profiles": {
       "type": "array",
@@ -107,7 +107,7 @@
             "additionalProperties": false
           },
           "source_catalog_version": {
-            "const": "0.17.0"
+            "const": "0.18.0"
           },
           "behavioral_evidence": {
             "type": "object",

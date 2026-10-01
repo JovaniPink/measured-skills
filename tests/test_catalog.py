@@ -100,6 +100,8 @@ class CatalogTests(unittest.TestCase):
         )
         canonical = skills_by_plugin()
         section_plugins = {
+            "## Next.js workflows: measured-nextjs-workflows": "measured-nextjs-workflows",
+            "## Swift workflows: measured-swift-workflows": "measured-swift-workflows",
             "## Core skills: measured-skills": "measured-skills",
             "## Engineering build: measured-engineering-build": "measured-engineering-build",
             "## Engineering review: measured-engineering-review": "measured-engineering-review",
@@ -148,6 +150,8 @@ class CatalogTests(unittest.TestCase):
         cheatsheet = (ROOT / "docs" / "skill-cheatsheet.md").read_text(encoding="utf-8")
         canonical = skills_by_plugin()
         section_plugins = {
+            "## Next.js workflows: measured-nextjs-workflows": "measured-nextjs-workflows",
+            "## Swift workflows: measured-swift-workflows": "measured-swift-workflows",
             "## Core: measured-skills": "measured-skills",
             "## Engineering build: measured-engineering-build": "measured-engineering-build",
             "## Engineering review: measured-engineering-review": "measured-engineering-review",
@@ -534,7 +538,12 @@ class CatalogTests(unittest.TestCase):
             "conditional-enterprise-compatibility",
             records["gemini-cli-enterprise"]["lane"],
         )
-        self.assertEqual("preview", records["data-agent-kit"]["lifecycle_status"])
+        self.assertEqual("conditional", records["data-agent-kit"]["lifecycle_status"])
+        self.assertEqual("blocked", records["data-agent-kit"]["evidence_status"])
+        self.assertEqual(
+            "separate-reviewed-tool-compatibility-test", records["data-agent-kit"]["precondition"]
+        )
+        self.assertIn("confirm it separately", records["data-agent-kit"]["claim"])
         self.assertEqual("forbidden", catalog["cross_lane_aggregation"])
         self.assertNotIn("success_rate", catalog)
         self.assertNotIn("aggregate", catalog)
@@ -721,6 +730,14 @@ class CatalogTests(unittest.TestCase):
             "https://docs.swift.org/latest/documentation/",
             "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
             "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+            "https://adk-labs.github.io/adk-docs/",
+            "https://adk-labs.github.io/adk-docs/safety/",
+            "https://adk-labs.github.io/adk-docs/sessions/",
+            "https://docs.spring.io/spring-boot/",
+            "https://owasp.org/www-project-application-security-verification-standard/",
+            "https://slsa.dev/spec/v1.2/provenance",
+            "https://www.postgresql.org/docs/current/",
+            "https://www.antigravity.google/docs/plugins?tab=cli",
         })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
@@ -883,7 +900,7 @@ class CatalogTests(unittest.TestCase):
                 for plugin in antigravity_plugins.values()
                 for path in (plugin / "skills").iterdir()
             }
-            self.assertEqual(set(SKILLS), antigravity_generated)
+            self.assertEqual(set(SKILLS) - EXPLICIT_SKILLS, antigravity_generated)
             archives = package(temporary_root / "archives")
             self.assertEqual(len(SKILLS), len(archives))
 
@@ -1053,7 +1070,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(
             set(new_skills), set(skills_by_plugin()["measured-ai-systems"])
         )
-        self.assertEqual(14, len(EXPLICIT_SKILLS))
+        self.assertEqual(17, len(EXPLICIT_SKILLS))
 
         references = {
             "agent-evaluation-design": "evaluation-contract.md",
@@ -1097,12 +1114,12 @@ class CatalogTests(unittest.TestCase):
             "google-adk-engineering-profile": "adk-version-boundaries.md",
             "retrieval-grounding-quality-review": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(79, len(SKILLS))
-        self.assertEqual(9, len(skills_by_plugin()))
+        self.assertEqual(86, len(SKILLS))
+        self.assertEqual(11, len(skills_by_plugin()))
         self.assertEqual(
             set(new_skills), set(skills_by_plugin()["measured-agent-platforms"])
         )
-        self.assertEqual(14, len(EXPLICIT_SKILLS))
+        self.assertEqual(17, len(EXPLICIT_SKILLS))
 
         for skill, reference in new_skills.items():
             root = ROOT / "skills" / skill

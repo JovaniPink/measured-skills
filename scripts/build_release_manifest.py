@@ -12,6 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from cataloglib import ROOT, SKILLS, VERSION, directory_hashes, skills_by_plugin
+from build_distributions import antigravity_groups
 
 
 def _file_hash(path: Path) -> str:
@@ -55,7 +56,8 @@ def build(source_commit: str, output: Path | None = None) -> Path:
     _require_clean_source_checkout(source_commit)
     artifacts: list[dict[str, str]] = []
     for client in ("codex", "claude", "antigravity"):
-        for plugin in skills_by_plugin():
+        groups = antigravity_groups() if client == "antigravity" else skills_by_plugin()
+        for plugin in groups:
             path = ROOT / "plugins" / client / plugin
             artifacts.append({"kind": "tree", "path": path.relative_to(ROOT).as_posix(), "sha256": _tree_hash(path)})
     for path in (

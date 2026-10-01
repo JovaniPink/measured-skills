@@ -4,7 +4,7 @@ description: Evaluate code review feedback against current code, tests, contract
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.17.0"
+  version: "0.18.0"
   plugin: "measured-engineering-delivery"
   invocation: "implicit"
   provenance: "clean-room"

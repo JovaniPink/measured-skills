@@ -1,0 +1,11 @@
+{
+  "classification": "synthetic",
+  "review": "pending independent review",
+  "execution": "not_run",
+  "files": {
+    "CONTRACT.md": "b324d3d053aa6a8d8f0837d1ad4bd18b8d660355135ccae63a7fb9581be05cff",
+    "Tests/Feature/JourneyContract.md": "6ea1894e3fb3cccf134d582f0ec7e51c0506febe2acb9e963ad1798ac1817aac",
+    "Unrelated/OwnerDraft.md": "113144524c0c8e12bbb2058d70cc561169e5c9bf3a07c3315f498448be605b4a",
+    "journeys.json": "0f8b5a387bcdcce88c4fba6eb1602a92fde47e8944f9755cbaff056a11c6bd4e"
+  }
+}
