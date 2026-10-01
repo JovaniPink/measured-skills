@@ -4,7 +4,13 @@
   "case_id": "nextjs-cache-auth-boundary-review-positive-2",
   "prompt": "Audit personalized response caching for cross-user data reuse.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/CONTRACT.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/boundary-contract.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/manifest.json",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/src/app/example/actions.ts",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/src/app/example/cache.ts"
   ],
   "obligations": [
     {
@@ -26,10 +32,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Trace the cache key and cache lifetime for the personalized response."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Check whether two different authorized users can receive another user's cached content."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Use installed-version caching semantics and do not assume every server component response is private."
     }
   ]
 }

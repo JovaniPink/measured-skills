@@ -4,7 +4,13 @@
   "case_id": "react-rendering-performance-diagnosis-positive-1",
   "prompt": "Diagnose this interaction using the React profiler trace and production-build timing.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/CONTRACT.md",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/manifest.json",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/src/app/example/results.tsx",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/trace-contract.md",
+    "evals/owned-workflows/fixtures/react-rendering-performance-diagnosis/trace.json"
   ],
   "obligations": [
     {
@@ -26,10 +32,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Read the supplied trace's build mode, interaction, render/commit counts and timing scope."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Distinguish repeated work from measured user-visible cost; do not recommend memoization from render count alone."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Report proposed changes as hypotheses until matched measurements exist."
     }
   ]
 }

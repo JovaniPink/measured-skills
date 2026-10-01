@@ -36,7 +36,7 @@ agy plugin enable measured-skills
 agy plugin list
 ```
 
-Antigravity installs a pack from a local folder in a reviewed checkout; Google documents no `agy` marketplace command. Explicit-only skill controls are unverified on Antigravity. See its setup guide before installing `measured-skills`, `measured-engineering-delivery`, or `measured-reasoning`, the packs that carry explicit-only skills.
+Antigravity installs a pack from a local folder in a reviewed checkout; Google documents no `agy` marketplace command. Explicit-only skill controls are unverified on Antigravity. See its setup guide for the generated pack contents and explicit-only exclusions.
 
 For Claude and Codex, the install name has the form `plugin@marketplace`. A marketplace is a place your client looks for packs. This repository is the marketplace, and it is named `measured-skills`. One pack carries that same name. So `measured-skills@measured-skills` is correct, not a repeated word. Every other pack reads like `measured-engineering-build@measured-skills`.
 
@@ -89,9 +89,9 @@ The [skill cheatsheet](docs/skill-cheatsheet.md) lists all 86 skills with one li
 
 Every skill is marked implicit or explicit-only.
 
-Implicit means your client may pick the skill on its own when your request matches it. You can still name it directly. 65 skills are implicit.
+Implicit means your client may pick the skill on its own when your request matches it. You can still name it directly. 69 skills are implicit.
 
-Explicit-only means the skill stays off until you name it. Naming it does not authorize a push, merge, deletion, release, or deployment. You still approve those yourself. 14 skills are explicit-only.
+Explicit-only means you must name the skill before using it. Naming it does not authorize a push, merge, deletion, release, or deployment. You still approve those yourself. 17 skills are explicit-only.
 
 The cheatsheet shows the marking for each skill. The [glossary](docs/glossary.md) defines the other terms used here.
 
@@ -109,7 +109,7 @@ Claude Code packs and Claude account uploads are two separate installs. Updating
 
 For Claude.ai, build one-skill ZIP files from a local clone with `python3 scripts/package_claude_ai.py`. Upload them one at a time from `dist/claude-ai/`.
 
-The 14 explicit-only skills are on hold for Claude.ai uploads. A hold means the files are ready, but we decided not to ship them yet, because a check we named has not passed. The missing check here is a control that stops Claude.ai from picking the skill on its own. A metadata field does not prove that control. Neither does a working slash command.
+The 17 explicit-only skills are on hold for Claude.ai uploads. A hold means the files are ready, but we decided not to ship them yet, because a check we named has not passed. The missing check here is a control that stops Claude.ai from picking the skill on its own. A metadata field does not prove that control. Neither does a working slash command.
 
 Client behavior changes on its own schedule. The [client support checklist](docs/client-support.md) lists what to test in each app and CLI. A result in one app does not carry to another.
 

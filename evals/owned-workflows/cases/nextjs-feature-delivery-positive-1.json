@@ -2,9 +2,17 @@
   "format_version": 1,
   "skill": "nextjs-feature-delivery",
   "case_id": "nextjs-feature-delivery-positive-1",
-  "prompt": "Use $nextjs-feature-delivery. Implement the approved accessible filter route in src/app using the installed Next.js docs.",
+  "prompt": "Use $nextjs-feature-delivery. Implement the approved accessible filter route in src/app/example using the installed Next.js docs.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/CONTRACT.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/manifest.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/error.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/filter.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/loading.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/page.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/toolchain.json"
   ],
   "obligations": [
     {
@@ -26,10 +34,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Resolve the installed Next/React versions and use the repository's version-matched documentation index."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Keep the filter interaction's client boundary narrow and preserve server-rendered content."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Verify keyboard operation and meaningful labels using existing gates; do not introduce authentication or caching."
     }
   ]
 }

@@ -4,7 +4,15 @@
   "case_id": "nextjs-feature-delivery-near-miss-1",
   "prompt": "Audit authorization without modifying code.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/CONTRACT.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/manifest.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/error.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/filter.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/loading.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/page.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/toolchain.json"
   ],
   "obligations": [
     {

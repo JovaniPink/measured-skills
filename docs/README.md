@@ -4,7 +4,7 @@ Codex, Claude Code, and Antigravity have equal priority for setup, documentation
 
 This guide explains how to choose, install, invoke, verify, update, and remove the skills safely.
 
-Use the [five-minute quickstart](quickstart.md) for a local start. Use [Choose Your Skills](choose-your-skills.md) and the [skill cheatsheet](skill-cheatsheet.md) for selection. Read the [skill catalog reader guide](skill-catalog-reader-guide.md) for the complete 79-skill inventory, verified plugin grouping, explicit-only map, and client-specific selection boundaries.
+Use the [five-minute quickstart](quickstart.md) for a local start. Use [Choose Your Skills](choose-your-skills.md) and the [skill cheatsheet](skill-cheatsheet.md) for selection. Read the [skill catalog reader guide](skill-catalog-reader-guide.md) for the complete 86-skill inventory, verified plugin grouping, explicit-only map, and client-specific selection boundaries.
 
 ## Start with the security boundary
 

@@ -4,7 +4,12 @@
   "case_id": "ios-journey-verification-positive-1",
   "prompt": "Use $ios-journey-verification. Verify the named fixture-backed save journey on the selected simulator and record each step.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/ios-journey-verification/CONTRACT.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/Tests/Feature/JourneyContract.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/journeys.json",
+    "evals/owned-workflows/fixtures/ios-journey-verification/manifest.json"
   ],
   "obligations": [
     {
@@ -26,10 +31,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Select the fixture scheme and named simulator before launching; no live data or signing is authorized."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Observe each named save step and the persisted record identity, rather than just matching a screenshot heading."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Report failed, blocked and unrun steps explicitly; do not claim a physical-device result."
     }
   ]
 }

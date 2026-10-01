@@ -4,7 +4,13 @@
   "case_id": "swift-persistence-contract-review-positive-3",
   "prompt": "Trace deletion through the custom synchronization tombstone contract.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/CONTRACT.md",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/Sources/Feature/Persistence.swift",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/identity-change.diff",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/manifest.json",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/sync-contract.md"
   ],
   "obligations": [
     {
@@ -26,10 +32,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Trace a deletion through its tombstone, modification time, synchronization and export paths."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Verify an older live record cannot resurrect a newer tombstone, including timestamp ties."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Do not replace a soft deletion with a hard delete or infer two-device qualification from local fixtures."
     }
   ]
 }

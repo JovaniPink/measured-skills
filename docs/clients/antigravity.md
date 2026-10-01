@@ -1,10 +1,10 @@
 # Antigravity setup
 
-Antigravity setup and testing have equal priority with Codex and Claude. In version 0.17.1, the repository generates all nine modular packs under `plugins/antigravity/`. The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
+Antigravity setup and testing have equal priority with Codex and Claude. Candidate 0.18.0 generates 11 modular packs under `plugins/antigravity/`. Its installed-client behavior remains unqualified; see the [candidate record](../client-candidate-v0.18.0.md). The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked for the nine 0.17.1 packs on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
 
 A one-skill package passed native install and skill-menu checks in CLI 1.1.26; package and menu checks were repeated on 1.1.27. The [0.12.0 candidate record](../client-candidate-v0.12.0.md) adds a two-skill check on CLI 1.1.27. The motion reference and fixture loaded, but the answer invented evidence. The [0.14.0 record](../client-candidate-v0.14.0.md) adds a four-skill check on CLI 1.1.28. Nine of ten cases met their expectation and no reply invented evidence. That is one partial run on a different version, so the expansion, then 64 skills, remained held. The [0.15.0 candidate record](../client-candidate-v0.15.0.md) adds a five-skill check on CLI 1.2.0 (`accessibility-review`, `code-change-review`, `functional-motion-review`, `performance-scalability-diagnosis`, and `finding-consolidation`). Near-miss case 3 was re-examined under diagnostic bypass flags (`--dangerously-skip-permissions`), confirming routing to `performance-scalability-diagnosis` when commands are permitted, while standard headless permission denial remains a documented non-interactive boundary. The 0.15.0 SARIF finding vocabulary was observed live on `code-change-review`, and `finding-consolidation` passed both multi-review merging and single-review refusal.
 
-The normal packs and preview builder include 65 implicit skills. All 14 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
+The normal packs and preview builder include 69 implicit skills. All 17 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
 
 ## Check what is there
 
@@ -44,7 +44,7 @@ To prepare a self-contained preview directory for inspection or offline testing:
 python3 scripts/build_antigravity.py --skill claim-verification --output dist/antigravity-check
 ```
 
-The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 65 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
+The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 69 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
 
 The preview keeps `skills/<name>/SKILL.md` and linked notes. It omits Codex's `agents/` folder and excludes explicit-only skills. The directory layout loaded correctly on CLI 1.1.28; recheck it on a version you have not tested. Do not flatten files by hand or lose their links.
 

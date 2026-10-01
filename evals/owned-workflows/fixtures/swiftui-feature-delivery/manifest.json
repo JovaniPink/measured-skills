@@ -1,0 +1,13 @@
+{
+  "classification": "synthetic",
+  "review": "pending independent review",
+  "execution": "not_run",
+  "files": {
+    "CONTRACT.md": "b324d3d053aa6a8d8f0837d1ad4bd18b8d660355135ccae63a7fb9581be05cff",
+    "Sources/Feature/EmptyScreen.swift": "3d2129bf2405c1b6d326deb8cee3388b7e7f26041af01972439ca648c1e33eb9",
+    "Sources/Feature/LoadingModel.swift": "94cdf241890638eeabb39ac203fa3ae97cd40a505ae6d752eab4ce2c2fa49a66",
+    "Sources/Feature/SearchScreen.swift": "5c1ef0ae8a64bd2927a6711b51203e0e9000a393cb34eb8b3d78d693aaa9bc44",
+    "Unrelated/OwnerDraft.md": "113144524c0c8e12bbb2058d70cc561169e5c9bf3a07c3315f498448be605b4a",
+    "toolchain.json": "1660215e9818c8f65c4f74828adb62b60deb2669ec286d29a186ed165fcc8a98"
+  }
+}

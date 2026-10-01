@@ -16,7 +16,7 @@ The Linux CI requirements file pins the workflow parser, its type information, a
 
 ## Antigravity preview checks
 
-The unit suite also checks the offline preview builder: selected source and reference files survive unchanged, explicit-only skills receive frontmatter controls, unknown skills are rejected, repeated builds match, and old output cannot be overwritten. Build a review copy with `python3 scripts/build_antigravity.py --output dist/antigravity-review`. Use a new folder for each build. This does not install a plugin or prove client loading.
+The unit suite also checks the offline preview builder: selected source and reference files survive unchanged, explicit-only skills are rejected before output is written, unknown skills are rejected, repeated builds match, and old output cannot be overwritten. Build a review copy with `python3 scripts/build_antigravity.py --output dist/antigravity-review`. Use a new folder for each build. This does not install a plugin or prove client loading.
 
 ## External validators
 

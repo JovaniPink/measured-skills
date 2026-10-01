@@ -4,7 +4,15 @@
   "case_id": "nextjs-feature-delivery-positive-3",
   "prompt": "Use $nextjs-feature-delivery. Add the named client interaction without broadening the server/client boundary or changing the toolchain.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/CONTRACT.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/manifest.json",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/error.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/filter.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/loading.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/src/app/example/page.tsx",
+    "evals/owned-workflows/fixtures/nextjs-feature-delivery/toolchain.json"
   ],
   "obligations": [
     {
@@ -26,10 +34,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Add a client boundary only where the requested browser interaction requires it."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Avoid pulling server-only code or private values into the client bundle."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Preserve toolchain floors, installed-version documentation and unrelated edits."
     }
   ]
 }

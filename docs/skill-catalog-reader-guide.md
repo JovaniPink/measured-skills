@@ -17,6 +17,8 @@ The 11 plugins separate broad workflow categories so you can install only what y
 7. `measured-reasoning` contains alignment, explanation, writing, decision, configuration, and continuity workflows.
 8. `measured-ai-systems` contains optional AI evaluation, context reliability, and source-to-output conformance workflows.
 9. `measured-agent-platforms` contains human-facing Google ADK, agent architecture, tool, protocol, security, and retrieval workflows.
+10. `measured-swift-workflows` contains bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture-backed journey verification.
+11. `measured-nextjs-workflows` contains bounded Next.js delivery, cache and authorization review, and measured React rendering diagnosis.
 
 The counts, groupings, and invocation policies below are reconciled against the [canonical skill sources](../skills/) and the catalog's [metadata parser](../scripts/cataloglib.py). Generated plugin trees are projections, not the inventory authority.
 
@@ -39,7 +41,7 @@ Most skills can activate implicitly when a request clearly matches their routing
 
 ## What explicit-only means
 
-An explicit-only skill does not activate automatically from ordinary conversation. You must select it or name it directly on a surface that supports direct selection.
+An explicit-only skill requires direct selection. Verify the receiving client's invocation controls before enabling it; unverified surfaces must keep it unavailable. A metadata field or discovery check alone does not establish enforcement.
 
 | Client surface | Verified selection form |
 | --- | --- |

@@ -4,7 +4,12 @@
   "case_id": "ios-journey-verification-near-miss-2",
   "prompt": "Diagnose this isolated actor compiler error.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/ios-journey-verification/CONTRACT.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/Tests/Feature/JourneyContract.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/ios-journey-verification/journeys.json",
+    "evals/owned-workflows/fixtures/ios-journey-verification/manifest.json"
   ],
   "obligations": [
     {

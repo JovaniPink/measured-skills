@@ -1,0 +1,14 @@
+{
+  "classification": "synthetic",
+  "review": "pending independent review",
+  "execution": "not_run",
+  "files": {
+    "CONTRACT.md": "b324d3d053aa6a8d8f0837d1ad4bd18b8d660355135ccae63a7fb9581be05cff",
+    "Sources/Feature/Ownership.swift": "ce6667303e6440091a98505225200a026701e0944bb2619f047e237ea5ed4a8f",
+    "Sources/Feature/Reentrant.swift": "c7506612080192e350fcd47f32cbb7ea5d4b7c17f693bc4582b6e855de4442c5",
+    "Sources/Feature/Streaming.swift": "7d87e11cb5457d958aebf1e536fae9712fda605a82bbbf97500128f9671066de",
+    "Unrelated/OwnerDraft.md": "113144524c0c8e12bbb2058d70cc561169e5c9bf3a07c3315f498448be605b4a",
+    "compiler-stimulus.txt": "47bf604f266459ac7a4c7e59063dfe16f9bce8318c1f9070ec23ec9055653aa0",
+    "toolchain.json": "bdd0b848575afd76894682e2bd46f2d9f02cfdb34101be3c5e923e39e3c45a36"
+  }
+}

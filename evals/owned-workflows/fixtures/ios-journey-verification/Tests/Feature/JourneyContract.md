@@ -1,0 +1,1 @@
+Required assertions: stored identity/value after reopen; obsolete request tokens absent after replacement; unchanged received value and provenance after retry. Failed steps are failures, not omissions. Fixture evidence cannot qualify physical inference, live provider data or VoiceOver.

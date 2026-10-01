@@ -4,7 +4,13 @@
   "case_id": "nextjs-cache-auth-boundary-review-near-miss-3",
   "prompt": "Diagnose React render timing without cache or auth concerns.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/CONTRACT.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/boundary-contract.md",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/manifest.json",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/src/app/example/actions.ts",
+    "evals/owned-workflows/fixtures/nextjs-cache-auth-boundary-review/src/app/example/cache.ts"
   ],
   "obligations": [
     {

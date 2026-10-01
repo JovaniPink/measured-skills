@@ -4,7 +4,15 @@
   "case_id": "swift-concurrency-diagnosis-near-miss-1",
   "prompt": "Format the Swift imports.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/CONTRACT.md",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/Sources/Feature/Ownership.swift",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/Sources/Feature/Reentrant.swift",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/Sources/Feature/Streaming.swift",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/compiler-stimulus.txt",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/manifest.json",
+    "evals/owned-workflows/fixtures/swift-concurrency-diagnosis/toolchain.json"
   ],
   "obligations": [
     {

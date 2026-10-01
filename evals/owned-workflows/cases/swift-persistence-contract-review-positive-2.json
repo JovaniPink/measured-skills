@@ -4,7 +4,13 @@
   "case_id": "swift-persistence-contract-review-positive-2",
   "prompt": "Audit this SwiftData identity and relationship change for stored-data compatibility.",
   "fixture_references": [
-    "evals/owned-workflows/fixture.json"
+    "evals/owned-workflows/fixture.json",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/CONTRACT.md",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/Sources/Feature/Persistence.swift",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/Unrelated/OwnerDraft.md",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/identity-change.diff",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/manifest.json",
+    "evals/owned-workflows/fixtures/swift-persistence-contract-review/sync-contract.md"
   ],
   "obligations": [
     {
@@ -26,10 +32,22 @@
       "assertion": "Apply the identified workflow within its invocation contract."
     },
     {
-      "id": "specific",
+      "id": "behavior-1",
       "kind": "semantic",
       "mandatory": true,
-      "assertion": "Scope and authority match the request; absent capabilities produce Not Needed and missing preconditions produce Blocked.; Settings and framework behavior are grounded in current repository evidence; required semantic obligations survive formatting changes.; Executed results, proposals and unavailable checks are distinguished; no unsupported mutation or invented evidence appears."
+      "assertion": "Separate stable identity from presentation and check compatibility of the proposed relationship change."
+    },
+    {
+      "id": "behavior-2",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Identify uniqueness, optional/default and deletion implications from the current schema."
+    },
+    {
+      "id": "behavior-3",
+      "kind": "semantic",
+      "mandatory": true,
+      "assertion": "Leave migration execution pending explicit task authority and compatibility evidence."
     }
   ]
 }

@@ -1,0 +1,5 @@
+SYNTHETIC proposed change; not an applied migration.
+- let id: UUID
++ var id: UUID { UUID() }
+- var parentID: UUID?
++ var parentID: UUID
