@@ -25,6 +25,10 @@ Use executable evidence to prove that a change addresses the intended behavior.
 6. Refactor only while the tests remain green, then rerun the appropriate gate set.
 7. Report any behavior not covered by executable tests and the required manual or platform observation.
 
+## Done when
+
+The change is done when the target test failed for the expected reason, now passes, and the relevant regression gates pass. Stop and ask only when the intended behavior is ambiguous, test-first is unsuitable and the replacement evidence needs agreement, or the fix would need changes outside the requested scope.
+
 ## Exception path
 
 If test-first is unsuitable, state why before changing code. Valid reasons can include inaccessible hardware, nondeterministic external systems, a missing safe harness, or a purely investigative spike. Define the replacement evidence and a follow-up test obligation where practical.

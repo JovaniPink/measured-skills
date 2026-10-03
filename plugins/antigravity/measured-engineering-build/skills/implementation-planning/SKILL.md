@@ -32,6 +32,7 @@ Read [specification synthesis](references/specification-synthesis.md) when multi
 
 - Resolve discoverable facts from the repository instead of delegating discovery to the implementer.
 - Distinguish proposed changes from ratified decisions.
+- Walk the slices in order and confirm that each slice's prerequisites exist by that point. Move any slice that depends on later work.
 - Name uncertainty directly; do not hide it inside vague steps.
 - Keep one short outcome-and-architecture brief: capability, observable completion, module owner, state transitions, invariants, smallest end-to-end slice, and failure checkpoints. Match its depth to the change.
 - For unfamiliar designs, explain the state model, failure modes, and a rejected alternative so the user can challenge the design before implementation.

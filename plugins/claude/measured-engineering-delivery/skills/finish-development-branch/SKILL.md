@@ -27,6 +27,10 @@ Make the branch state and available integration choices explicit before any irre
 7. Read back remote and merge state after any authorized external action.
 8. Remove worktrees or branches only after verifying integration, ownership, and absence of uncommitted work.
 
+## Done when
+
+The workflow is done when the branch state and options are reported, any selected action has been performed and read back, and cleanup happened only where it was authorized and verified. Stop and ask before any option the user has not selected or already authorized.
+
 ## Boundaries
 
 - Explicit invocation does not automatically authorize push, PR creation, merge, deletion, or deployment.
