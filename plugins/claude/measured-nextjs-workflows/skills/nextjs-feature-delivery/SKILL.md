@@ -24,10 +24,14 @@ Read [version-matched delivery](references/delivery.md) only when its checks app
 4. Implement the smallest slice with server components by default and explicit interactive client boundaries. Reuse existing product capabilities; do not scaffold auth, persistence, analytics, or providers absent a concrete requirement.
 5. Test observable behavior, accessibility, error/empty states, and server/client data flow. Run existing type, lint, test, build, and dependency gates, then inspect the final allowlisted diff.
 
+## Done when
+
+The slice is done when the requested behavior works within the allowlist, the applicable gates pass or are reported as unavailable, and the final allowlisted diff has been inspected. Stop and ask only when the slice needs a path outside the allowlist, an unsupported API, an action listed under Boundaries, or a product decision the repository cannot answer.
+
 ## Boundaries
 
 Do not run broad mutating formatters, framework upgrades, codemods, deployments, package installation, or provider mutations as an incidental step. Unsupported APIs require a compatibility decision.
 
 ## Evidence and output
 
-Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+Lead with the result and anything that needs the user's decision. Then report the authorized scope, applicable settings, observed evidence, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.

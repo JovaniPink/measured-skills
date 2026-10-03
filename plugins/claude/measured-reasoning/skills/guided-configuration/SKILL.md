@@ -18,7 +18,7 @@ Help a person complete protected configuration without pretending the agent perf
 
 ## Workflow
 
-1. Confirm the desired outcome, authoritative product documentation, current state, target account or environment, and actions the user permits.
+1. Confirm the desired outcome, authoritative product documentation, current state, target account or environment, and actions the user permits. Confirm the target by its identifier, not only its display name, because similar names can point to different accounts or environments.
 2. Separate steps the agent can verify from steps only the user can perform or observe.
 3. Present one material step at a time with its purpose, expected visible result, and safe recovery path.
 4. Ask the user to perform protected authentication, approval, credential, billing, device, or administrative actions themselves.
@@ -35,7 +35,7 @@ Help a person complete protected configuration without pretending the agent perf
 
 ## Output
 
-During a step, return `Current step`, `Expected result`, and relevant `Recovery` or `Security boundary`. At a checkpoint or completion, reconcile `Goal`, `Authoritative source`, `Observed result`, and `Remaining steps`, preserving failed and unverified work.
+During a step, return `Current step`, `Expected result`, and relevant `Recovery` or `Security boundary`. At a checkpoint or completion, lead with the observed result and anything the user must do next. Then reconcile `Goal`, `Authoritative source`, `Observed result`, `Changes applied`, and `Remaining steps`, preserving failed and unverified work. `Changes applied` lists every configuration change made, including reversed ones.
 
 ## Continuity and evidence
 

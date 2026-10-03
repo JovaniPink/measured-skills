@@ -26,6 +26,10 @@ Turn an ambiguous request into a bounded problem statement before choosing an im
 7. Define success criteria, failure signals, exclusions, and stopping conditions.
 8. Recommend whether to research, diagnose, plan, prototype, implement, or defer next.
 
+## Done when
+
+Framing is done when the user can choose the next step from the recommendation without needing new facts. Stop and ask when a material unknown can only be answered by the user or a decision owner.
+
 ## Boundaries
 
 - Do not treat a requested solution as proof of the underlying problem.

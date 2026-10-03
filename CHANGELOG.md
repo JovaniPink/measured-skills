@@ -4,6 +4,16 @@ All notable changes use this file. The project follows semantic versioning after
 
 ## [Unreleased]
 
+### 0.18.0 candidate: run endings and target authority
+
+- Limit execution authority to the exact targets named, list every external state change, and confirm identity by identifier rather than by a similar name.
+- Add `Done when` sections with explicit stop-and-ask conditions to execution skills, and decision-ready completion to problem framing and design rationale work.
+- Bound waits on workers, commands, and hooks; agree on worker count and expected cost before fan-out; keep long-run task lists in an approved file.
+- Lead execution reports with the result and what needs the user, and list a decision as unresolved only when it blocks remaining work.
+- Ask research to name the sources checked for unconfirmed claims, code review to mark merge-blocking findings at every severity, plans to check prerequisites across slices, candidate comparisons to remove authorship labels, and interface designs to justify each component.
+- Require qualification records to name the model that served every turn and to rerun any run with a model-switch notice.
+- These are authored instruction changes. No model run has measured their effect.
+
 ### 0.17.0 candidate
 
 - Rename the offering to Measured Skills by Measured Studios; retain source ownership and historical attribution.
