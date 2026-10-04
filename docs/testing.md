@@ -6,13 +6,13 @@ Run these from the repository root.
 
 Use Python 3.12, the version CI runs. Other versions may work, but CI does not check them. Install the tool versions pinned in `requirements-ci-linux.txt`.
 
-On Linux, install from the hash-locked file:
+On the platform CI runs on (Linux on x86-64 with Python 3.12), install from the hash-locked file:
 
 ```sh
 python3 -m pip install --require-hashes --only-binary=:all: -r requirements-ci-linux.txt
 ```
 
-On other systems, install the same versions without the hashes:
+On any other system, including other Linux CPU types, install the same versions without the hashes:
 
 ```sh
 python3 -m pip install PyYAML==6.0.3 mypy==1.20.2 ruff==0.15.12 types-PyYAML==6.0.12.20260815

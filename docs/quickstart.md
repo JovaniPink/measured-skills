@@ -13,11 +13,11 @@ git status --short --branch
 Check out a commit you have reviewed, so your copy cannot move under you:
 
 ```sh
-git log --oneline -5
+git log -5 --format='%H %s'
 git checkout <full-commit-hash>
 ```
 
-Replace `<full-commit-hash>` with the 40-character hash of a commit you read. Git then reports a detached HEAD at that commit. This catalog has no release tag for 0.18.0 yet. The older `v0.16.0` tag predates the Measured Skills names, so do not use it with these guides. Try not to test from the default branch, because it changes.
+Replace `<full-commit-hash>` with the 40-character hash from the first column of a commit you read. Git then reports a detached HEAD at that commit. This catalog has no release tag for 0.18.0 yet. The older `v0.16.0` tag predates the Measured Skills names, so do not use it with these guides. Try not to test from the default branch, because it changes.
 
 ## 2. Check the files
 
