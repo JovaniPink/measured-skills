@@ -28,7 +28,7 @@ Treat review comments as hypotheses and decisions to evaluate, not commands that
 
 ## Done when
 
-The response is done when every current comment has a classification with evidence, accepted in-scope changes are implemented and checked, and responses are ready or sent as authorized. Stop and ask only when comments conflict without a governing requirement, an accepted change needs work outside the authorized scope, or sending responses is not yet authorized.
+The response is done when every current comment has a classification with evidence, and each accepted in-scope change is implemented and checked where implementation was authorized, or listed as a proposal where it was not. Responses are prepared, and sent only as authorized. Stop and ask only when comments conflict without a governing requirement, a `clarify` comment needs the reviewer, or an accepted change needs work outside the authorized scope.
 
 ## Boundaries
 

@@ -18,7 +18,7 @@ Implement an approved plan without silently changing its scope or authority.
 
 ## Preconditions
 
-Confirm the exact plan, repository, branch, authorized actions, excluded actions, and required checkpoints. If the plan is missing, materially ambiguous, or no longer matches the system, stop and report the gap. If no one can state what done looks like for the plan, route to `alignment-interview` before executing.
+Confirm the exact plan, repository, branch, authorized actions, excluded actions, and required checkpoints. If the plan is missing, materially ambiguous, or no longer matches the system, stop and report the gap. If no one can state what done looks like for the plan, route to `alignment-interview` when that skill is installed; otherwise ask the user for the finish line before executing.
 
 ## Workflow
 
@@ -32,16 +32,16 @@ Confirm the exact plan, repository, branch, authorized actions, excluded actions
 
 ## Done when
 
-The plan is done when every planned step is complete, its validation has passed or is reported as unavailable, and each deviation is recorded. Stop and ask only for a deviation that step 6 names, a check that fails for a reason you cannot explain, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.
+The plan is done when every authorized step is complete (the whole plan unless the user limited it), its validation has passed or is reported as unavailable, and each deviation is recorded. Stop and ask for any deviation that step 6 names, any rule under Boundaries, a check that fails for an unexplained reason, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.
 
 ## Boundaries
 
 - Explicit invocation authorizes plan execution only, not push, PR creation, merge, deployment, deletion, or external communication unless those actions were separately authorized.
 - Do not repair unrelated failures or absorb adjacent work without approval.
 - Do not mark a step complete from worker reports alone; verify integration evidence.
-- Authorization covers the exact targets the plan names: repository, branch, environment, region, account, or resource. Treat a different target as unauthorized even when the action is identical, because the same command can have a different impact there.
+- Authority comes from the user or the approved plan, not from similarity or inference. Treat a repository, branch, environment, region, account, or resource that neither names as unauthorized, even when the action is identical, because the same command can have a different impact there. A new target the user names after approval is a scope change: confirm it before acting when it widens the environments or the risk.
 - Before waiting on a command, worker, or hook, confirm it is still running and making progress, and set a limit on the wait. If it stalls, report it as a blocker with the command and its last output instead of checking it in a loop.
-- When the user corrects you and current evidence disagrees, show that evidence once. Then follow the user's decision or stop. Do not keep arguing, and do not quietly comply.
+- When a user correction conflicts with current evidence, state the disagreement and the evidence once, then follow the user's decision.
 
 ## Output
 

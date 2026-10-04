@@ -25,7 +25,7 @@ Read [version-matched delivery](references/delivery.md) only when its checks app
 
 ## Done when
 
-The slice is done when the requested behavior works within the allowlist, the applicable gates pass or are reported as unavailable, and the final allowlisted diff has been inspected. Stop and ask only when the slice needs a path outside the allowlist, an unsupported API, an action listed under Boundaries, or a product decision the repository cannot answer.
+The slice is done when the requested behavior works within the allowlist, the applicable gates pass or are reported as unavailable, and the final diff has been inspected against the allowlist, or when the result is Not Needed or Blocked. Stop and ask only when the slice needs a path outside the allowlist, an unsupported API, an action listed under Boundaries, or a product decision the repository cannot answer.
 
 ## Boundaries
 

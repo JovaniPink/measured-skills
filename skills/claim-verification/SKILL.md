@@ -36,7 +36,7 @@ Turn each material claim into a falsifiable statement, then verify it against th
 - Say what could not be checked and why. Never convert missing access into a passing verdict.
 - Re-read drift-prone evidence immediately before a conclusion that depends on it.
 - Similar names do not prove that two resources, branches, or environments are the same. Confirm identity by identifier, URL, or direct inspection.
-- When the user disputes a verdict and current evidence still supports it, show the evidence once. Record the disagreement and follow the user's direction for the next action. Do not change the verdict without new evidence, and do not keep arguing.
+- When the user disputes a verdict and current evidence still supports it, state the evidence once and record the disagreement. The verdict changes only with new evidence, while the user's direction still decides the next action.
 
 ## Output
 

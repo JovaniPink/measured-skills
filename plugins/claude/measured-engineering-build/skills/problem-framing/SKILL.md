@@ -28,7 +28,7 @@ Turn an ambiguous request into a bounded problem statement before choosing an im
 
 ## Done when
 
-Framing is done when the user can choose the next step from the recommendation without needing new facts. Stop and ask when a material unknown can only be answered by the user or a decision owner.
+Framing is done when the recommendation names the next step and the evidence that step needs, so the user can approve it or choose another option. Stop and ask when a material unknown can only be answered by the user or a decision owner.
 
 ## Boundaries
 

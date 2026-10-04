@@ -34,7 +34,7 @@ Help a person complete protected configuration without pretending the agent perf
 
 ## Output
 
-During a step, return `Current step`, `Expected result`, and relevant `Recovery` or `Security boundary`. At a checkpoint or completion, lead with the observed result and anything the user must do next. Then reconcile `Goal`, `Authoritative source`, `Observed result`, `Changes applied`, and `Remaining steps`, preserving failed and unverified work. `Changes applied` lists every configuration change made, including reversed ones.
+During a step, return `Current step`, `Expected result`, and relevant `Recovery` or `Security boundary`. At a checkpoint or completion, lead with the observed result and anything the user must do next. Then reconcile `Goal`, `Authoritative source`, `Observed result`, `Changes applied`, and `Remaining steps`, preserving failed and unverified work. `Changes applied` lists every configuration change the user reported or the agent observed, including reversed ones, and marks which were observed.
 
 ## Continuity and evidence
 

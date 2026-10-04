@@ -27,7 +27,7 @@ Use executable evidence to prove that a change addresses the intended behavior.
 
 ## Done when
 
-The change is done when the target test failed for the expected reason, now passes, and the relevant regression gates pass. Stop and ask only when the intended behavior is ambiguous, test-first is unsuitable and the replacement evidence needs agreement, or the fix would need changes outside the requested scope.
+The change is done when the target test failed for the expected reason and now passes, or, on the exception path, the replacement evidence passes and the follow-up test obligation is recorded. In both cases the relevant regression gates must pass. Stop and ask only when the intended behavior is ambiguous, no replacement evidence can be defined, or the fix needs changes outside the requested scope.
 
 ## Exception path
 

@@ -32,7 +32,9 @@ Perform only the publication actions the user authorized while keeping neighbori
 
 Stop before mutation when identity, target repository, branch, staged scope, secret exposure, history divergence, or requested authority is unclear. A rejected push is not permission to rebase, merge, or force. A remote, repository, or branch with a similar name is a different target until its URL or identifier matches the authorized one.
 
-The work is done when the authorized boundary is reached and the remote readback matches the intended revision.
+## Done when
+
+The work is done when the authorized boundary is reached and, if that boundary includes a push, the remote readback matches the intended revision.
 
 ## Continuity and evidence
 

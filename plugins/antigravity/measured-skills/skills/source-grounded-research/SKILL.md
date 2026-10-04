@@ -38,7 +38,7 @@ The source record is a handoff, not a publication decision. Catalog inclusion do
 - Keep quotations short; prefer faithful paraphrase.
 - Preserve original publisher URLs rather than search-result or repost links.
 - State when access limitations required an alternative readback method.
-- For a claim you could not confirm, say so and name the sources you checked.
+- For a claim that could not be confirmed, say so and name the sources checked.
 - Do not manufacture precision from incomplete, stale, or differently defined data.
 
 ## Output

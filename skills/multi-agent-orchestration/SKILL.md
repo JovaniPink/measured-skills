@@ -20,7 +20,7 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 ## Workflow
 
 1. Confirm delegation authority, supported host behavior, budget or cost constraints, and the integration owner. State the planned worker count and expected cost or time before launching, and get agreement when they exceed what the user implied.
-2. Decompose the work into bounded tasks with clear inputs, outputs, owned files or read-only scope, stopping conditions, and required evidence. Match each worker's capability and effort setting to its task, and brief each worker completely the first time.
+2. Decompose the work into bounded tasks with clear inputs, outputs, owned files or read-only scope, stopping conditions, and required evidence. Match each worker's capability and cost to its task, and brief each worker completely the first time.
 3. Identify dependencies. Keep tightly sequential work with one owner.
 4. Prevent overlapping write ownership and state which worker may modify each shared artifact.
 5. Launch only useful independent tasks and retain meaningful local integration work.
