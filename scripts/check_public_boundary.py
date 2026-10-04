@@ -32,6 +32,11 @@ def _patterns(denylist_path: Path | None = None) -> list[tuple[str, re.Pattern[s
         ("GitHub token", re.compile("gh" + r"[pousr]_[A-Za-z0-9]{20,}")),
         ("OpenAI-style secret", re.compile("s" + r"k-[A-Za-z0-9]{20,}")),
         ("AWS access key", re.compile("AK" + r"IA[0-9A-Z]{16}")),
+        ("Anthropic API key", re.compile("(?<![A-Za-z0-9])s" + r"k-ant-[A-Za-z0-9_-]{20,}")),
+        ("prefixed OpenAI-style key", re.compile("(?<![A-Za-z0-9])s" + r"k-(?:proj|svcacct|admin)-[A-Za-z0-9_-]{20,}")),
+        ("GitHub fine-grained token", re.compile("github" + r"_pat_[A-Za-z0-9_]{22,}")),
+        ("Slack token", re.compile("xo" + r"x[abeoprs]-[A-Za-z0-9-]{10,}")),
+        ("Google API key", re.compile("AI" + r"za[0-9A-Za-z_-]{35}")),
         ("private key block", re.compile("BEGIN " + r"(?:RSA |EC |OPENSSH )?PRIVATE KEY")),
         ("unsupported universal validation claim", re.compile(r"all (?:clients|validators|surfaces) (?:pass|passed|are supported)", re.IGNORECASE)),
         ("ASCII control character", re.compile(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]")),
@@ -192,11 +197,19 @@ def _mask_exact_tokens(text: str) -> str:
     return masked
 
 
+# Archives are scanned member by member in _scan_archives.
+BINARY_SUFFIXES = {".zip"}
+
+
 def _scan_file(path: Path, label: str, patterns: list[tuple[str, re.Pattern[str]]]) -> list[str]:
     try:
         text = path.read_text(encoding="utf-8")
-    except (OSError, UnicodeDecodeError):
+    except OSError:
         return []
+    except UnicodeDecodeError:
+        if path.suffix.lower() in BINARY_SUFFIXES:
+            return []
+        return [f"{label}: not valid UTF-8 text, so the boundary scan cannot read it"]
     return _scan_text(label, text, patterns)
 
 
@@ -209,11 +222,14 @@ def _scan_archives(patterns: list[tuple[str, re.Pattern[str]]]) -> list[str]:
         try:
             with zipfile.ZipFile(archive_path) as archive:
                 for member in sorted(archive.namelist()):
+                    label = f"{archive_path.relative_to(ROOT)}!{member}"
                     try:
                         text = archive.read(member).decode("utf-8")
-                    except (KeyError, UnicodeDecodeError):
+                    except KeyError:
                         continue
-                    label = f"{archive_path.relative_to(ROOT)}!{member}"
+                    except UnicodeDecodeError:
+                        errors.append(f"{label}: not valid UTF-8 text, so the boundary scan cannot read it")
+                        continue
                     errors.extend(_scan_text(label, text, patterns))
         except (OSError, zipfile.BadZipFile) as error:
             errors.append(f"{archive_path.relative_to(ROOT)}: invalid ZIP: {error}")

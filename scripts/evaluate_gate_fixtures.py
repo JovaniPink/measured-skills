@@ -4,11 +4,28 @@
 from __future__ import annotations
 
 import json
+import re
 
 from cataloglib import ROOT
 
 
 MUTATING_TOKENS = (" apply", " update", " -u", "--fix", "snapshot -u")
+# Flag-aware patterns: a formatter only counts as mutating without its check or list flag.
+MUTATING_PATTERNS = (
+    re.compile(r"(?:^|\s)(?:--write|-w)(?:\s|$)"),
+    re.compile(r"\bgo (?:generate|fmt|get|mod tidy)\b"),
+    re.compile(r"\b(?:npm|pnpm|yarn|pip3?|uv|poetry|cargo) (?:install|add|upgrade|remove)\b"),
+    re.compile(r"\bfmt\b(?!.*\s(?:-check|--check|-l|-d)(?:\s|$))"),
+)
+
+
+def is_mutating_command(command: str) -> bool:
+    """Return True when a candidate gate command would change files or dependencies."""
+
+    lowered = f" {command.lower()}"
+    return any(token in lowered for token in MUTATING_TOKENS) or any(
+        pattern.search(lowered) for pattern in MUTATING_PATTERNS
+    )
 
 
 def evaluate() -> list[str]:
@@ -28,8 +45,7 @@ def evaluate() -> list[str]:
         candidates = fixture.get("safe_candidates", [])
         command_sets.add(tuple(candidates))
         for command in candidates:
-            lowered = f" {command.lower()}"
-            if any(token in lowered for token in MUTATING_TOKENS):
+            if is_mutating_command(command):
                 errors.append(f"{fixture['stack']}: mutating candidate is not a validation gate: {command}")
         if not candidates and fixture.get("expected_status") != "INCOMPLETE":
             errors.append(f"{fixture['stack']}: no candidates must produce INCOMPLETE")
