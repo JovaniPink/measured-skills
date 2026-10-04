@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "60ead2776c70609bb38bbb82f5325cff8cc9bb09",
-  "created_on": "2026-10-03",
+  "source_commit": "fb1471a6c5357507ab61b0136efdf65be882af7a",
+  "created_on": "2026-10-04",
   "artifacts": [
     {
       "kind": "file",
@@ -62,7 +62,7 @@
     {
       "kind": "file",
       "path": "catalog/skills.json",
-      "sha256": "0b594da63f6981ee9cc97bb739f21b8851ba1c652dc9bf6f8d8c671d2e922bff"
+      "sha256": "50060c4fd8c716dea0e5caaa4108cb7ad99847909c518f7510da7073125f1667"
     },
     {
       "kind": "file",
@@ -147,12 +147,12 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/claim-verification-0.18.0.zip",
-      "sha256": "eefb53194e56ecf01867a0496a9dbc32f380a65b3ccae2d245fadf42d994715b"
+      "sha256": "5d171903df5c857aeae89c93195459fb37f8e867f98fd1bee2e7e850dc027662"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/code-change-review-0.18.0.zip",
-      "sha256": "0bccde44b2d52bf5ce2b002a5aff82aacff091ca676ef6934bd8b8556f89d892"
+      "sha256": "12df19869d7b7d8318abd2272675e630b7d40543dbe79f86d4ef4824b9ef31b8"
     },
     {
       "kind": "zip",
@@ -172,7 +172,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/cross-stack-quality-gates-0.18.0.zip",
-      "sha256": "cd718df252a545bf330b6410e23ad0dad3a337d0f205e937b4b3ad3ddaae8136"
+      "sha256": "64fdbb116c00610999e1eea4065cc39e2c88b58e7ac8704bea553fc574857ff5"
     },
     {
       "kind": "zip",
@@ -242,7 +242,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/guided-configuration-0.18.0.zip",
-      "sha256": "a1c15e1f84312a4ab91461d236efcdffbb1596f10df9451f5f2cac3a0dc33713"
+      "sha256": "c8af1cd1f7e6ebadd89fb27ce2ff1845ae8aede456a6b3647f2a732791c2cf86"
     },
     {
       "kind": "zip",
@@ -287,7 +287,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/multi-agent-orchestration-0.18.0.zip",
-      "sha256": "2e129cbcac28c3fea445ed37578166ce35cfd39fea9f76911b1d0f6d24cb2841"
+      "sha256": "0004ab2021bb933bb62f1206e955da7c19eac5d2f1bea713db17ee8a660a8438"
     },
     {
       "kind": "zip",
@@ -297,7 +297,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/nextjs-feature-delivery-0.18.0.zip",
-      "sha256": "deb81e946c41d27a3901e0f98dfb7b60783fca76d597c9d449ef39b22c474aa3"
+      "sha256": "1cd6cc9409248f6e37b6a4e40cb7b940eb63c98981386c100208dac10279862d"
     },
     {
       "kind": "zip",
@@ -322,7 +322,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-execution-0.18.0.zip",
-      "sha256": "ab8d06ed8c1ff4926924bb0f1458ff8e51ae21787061c68678ec97874e0535af"
+      "sha256": "0779033009f760eee7e0d60a39045fe943e07698a225d96885c3b656ff112dbe"
     },
     {
       "kind": "zip",
@@ -342,7 +342,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/problem-framing-0.18.0.zip",
-      "sha256": "ae3f9543c3974a843fd91770a34e59403d250410d644caadc3fff42bcbf0c489"
+      "sha256": "1342f4c246fafdab7cf152c7bfd5edd24c0077a451f901f67936cd6157ceb841"
     },
     {
       "kind": "zip",
@@ -362,7 +362,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/publish-change-safely-0.18.0.zip",
-      "sha256": "030395db928fbbbaf95e747e2956794aa353d6ee5bc36f7443f67379566bc407"
+      "sha256": "494224778a576c4cc671b0eda654aa1aff53af66e9b5703973e0713f263dc363"
     },
     {
       "kind": "zip",
@@ -392,7 +392,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/respond-to-code-review-0.18.0.zip",
-      "sha256": "ac1b25c541bc98205c0a628f7100861e7c96982dc444508725e11cffb20e3298"
+      "sha256": "213b73098340ab0ca3e41d7d1e86388807110003edc9a2927940653e5eca4325"
     },
     {
       "kind": "zip",
@@ -417,7 +417,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/source-grounded-research-0.18.0.zip",
-      "sha256": "a860ecb6c81ef4c5ec7ee8a666e9b99f46991a1b0b61c039a314790112bd591e"
+      "sha256": "8a9098ed291544cbd4cce7061426631f650f80dfbc147f71647e15711dbce131"
     },
     {
       "kind": "zip",
@@ -447,7 +447,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swiftui-feature-delivery-0.18.0.zip",
-      "sha256": "37fc7561810351771392b0968f97192cd7ff9c5beb2abf02fd3602b6ab7d5f85"
+      "sha256": "2346b79eba42046c8d3b35e3c8ac9882c4970f40fdac5f3370b6e840b474a940"
     },
     {
       "kind": "zip",
@@ -467,7 +467,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/test-driven-change-0.18.0.zip",
-      "sha256": "258460e9ab33e9bba526488dad5d42fcfc190608f0f9cd80483d15eda6d950e5"
+      "sha256": "f90a9e75f0999e540fa36333f1bab78150b045c8d32551719303f2c7e73fce17"
     },
     {
       "kind": "zip",
@@ -507,7 +507,7 @@
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "98376282b9d7c1908ae4fd02ef77fd185fecbbbe2844154569985758e0fd345e"
+      "sha256": "6c54e5dc7434a33476729eeea0d2c21bbd1a5628f7f0fde20cdeecc58d518cd4"
     },
     {
       "kind": "tree",
@@ -522,17 +522,17 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-build",
-      "sha256": "3a5a3c419c2cb9b6eacd57fe96978c8e882cfa7e24facc59721f8bc263f22eb2"
+      "sha256": "f75acb51246741bddc42c062710f5144feb160107461274f5ae550a6879a8492"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-delivery",
-      "sha256": "8c305d2c69a900162a9e40dd4b44040b63f615c33df7a69bcb2cc5cbb8a7698f"
+      "sha256": "3535a194ebda16a0179f153263e7c92f9a53defe94e93b70f0d426a85dc3cff3"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "3b613cd6878f0dc5e1fa071c2fad180862a890ecbac4e7da571c34e24dbe4f70"
+      "sha256": "f9f15374e3aa3904a92eeb318bec4e968a7b3e1da174452f2ae3deaa29c8c402"
     },
     {
       "kind": "tree",
@@ -552,7 +552,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-skills",
-      "sha256": "373a95706bb10a23bd12634d596c82ac9870787d3fe12b4c98e19160bd89c43d"
+      "sha256": "67c975b80b22eb19be35a48a2adf8fa21537970006c8fb4e2d546be9dea1989d"
     },
     {
       "kind": "tree",
@@ -577,22 +577,22 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-build",
-      "sha256": "54d49c615bbc950221301ff022ee3afa79e6e66f0ccd419a291dccf6b4d3cd4c"
+      "sha256": "256c30d724819037a5162238a5f0d58cce006851d92977ac583b0c6daa15b0c3"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "94a108e0ce7bc9f84e2d81cd259e2e0ee6fc83c93d0c311a9002fefdc4f876c2"
+      "sha256": "7d1b98d2bec8d549bac8e52865c2634d7bdc8b0945146561d238f21576335dcf"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "514dc22b7ca300b9b62724b41476f57375c8858b42975a2712eb0377c4f1d843"
+      "sha256": "5cc05ba44c6c38ef7fc06065972d0806275c129f801004ffd5cd219929262913"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-nextjs-workflows",
-      "sha256": "e708880c2f88e1c1d0f1cad2602b34b905775cecfdaa80ad03e4392ddccc2932"
+      "sha256": "e2a33194632bc25a0ed23ea224a180a023787629bbbc29861c5a8ee3cd7e3f78"
     },
     {
       "kind": "tree",
@@ -602,12 +602,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "8dd6f5c8f3105c53cd4366c64b8ee6cf47e1b583b4fda90b0a652d1ace435a64"
+      "sha256": "7602ea8a62cce9fa7e6e666f33bb12c8e7244939a800e625af86c923de81c2e3"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "cb2e8e9a1a0e5a9f286ced665501759f7e6404d56e7cadf29b167299c6024329"
+      "sha256": "432ba5d753e4bc267bcd1df57230940bfc3107ecc591d2fd0540749fd15c2a9e"
     },
     {
       "kind": "tree",
@@ -617,7 +617,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-swift-workflows",
-      "sha256": "fda42d24821cc936ac3ad7dfde8a8f4217cc4c19c246cfa9cb14fb1e85687807"
+      "sha256": "cf751aa94620bec726a53d6e36890fbe698c7754fb9747bba0db0a81f21b9b02"
     },
     {
       "kind": "tree",
@@ -632,22 +632,22 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-build",
-      "sha256": "3f0b3934b07d81b08466e2f966060f9fa5d261b3441f2e0229e049fbab96f701"
+      "sha256": "a2891e888af54649d03440023031a8f385832cb1a1cd23da8837a42f4946604c"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "86568e4cb26a40c11c732382c5676dd83acb14db3bdea65034965f16df0bd3a4"
+      "sha256": "3383297af5123d46c6d92edee5fc5c5ee641629afa097670f30a4fccd7c1f0bb"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "966b7e6e96ee543af960d6de80572c68a5c9f97e9b0d210750e8274812098250"
+      "sha256": "797762c11679da8d867d37da0401fb4f6c74be925770bb9345e7ee7ccdf268d0"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-nextjs-workflows",
-      "sha256": "4c9c9e7881087025b4be38916f634cca96f5817dc76440c8f798ce6d5419f85a"
+      "sha256": "3684f70e59ede9b560a28a7ce01c0cdbfb3c758819608142b69b5d7ddf91e3c7"
     },
     {
       "kind": "tree",
@@ -657,12 +657,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-reasoning",
-      "sha256": "4af4d3034b4e558188cb6d284449c62c2db050c4e5a93b755c96ee7d86f94156"
+      "sha256": "767ca3cba2678db0f4285ee5c091545884f09bb4b2db2948fde21113e7d8f06b"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "33aa5666ba6214148938c695688f709809b5e9692f2ea19eef0efa4fb412b65b"
+      "sha256": "883d616e2ab0a1a659c0c5bc05c724f8a6896a3c05438e15bc4dd5442752c90b"
     },
     {
       "kind": "tree",
@@ -672,7 +672,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-swift-workflows",
-      "sha256": "5cd44f97db183045a9247825f002e1ebf0b832579c95d163e17bb6b63469ffc0"
+      "sha256": "b5f7ec9fac2a75abc70cd166e1ae70565d5003138d78be4f652321f96cb34406"
     },
     {
       "kind": "file",
