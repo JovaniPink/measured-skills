@@ -43,14 +43,14 @@ Most skills can activate implicitly when a request clearly matches their routing
 
 An explicit-only skill requires direct selection. Verify the receiving client's invocation controls before enabling it; unverified surfaces must keep it unavailable. A metadata field or discovery check alone does not establish enforcement.
 
-| Client surface | Verified selection form |
+| Client surface | Documented selection form |
 | --- | --- |
 | ChatGPT web, desktop, and mobile | Type `@` and select the installed skill. The displayed selector entry can vary by installation and client version. |
 | Codex CLI and IDE extension | `$measured-engineering-delivery:plan-execution Execute the approved plan. Stop if its scope or authority changes.` |
 | Claude Code CLI and the Code area in Claude Desktop | `/measured-engineering-delivery:plan-execution Execute the approved plan. Stop if its scope or authority changes.` |
 | Claude.ai | No direct command is claimed. Anthropic documents enabling an uploaded custom skill and automatic selection from a matching request; current catalog evidence does not establish explicit-only behavior on this surface. |
 
-OpenAI documents `@` selection in ChatGPT and `$` skill mentions in Codex. Anthropic documents `/plugin-name:skill-name` for Claude Code plugin skills. The exact catalog namespaces above are also present in the generated Codex and Claude distributions. See [OpenAI Build skills](https://learn.chatgpt.com/docs/build-skills), [Anthropic Extend Claude with skills](https://code.claude.com/docs/en/slash-commands), and [Anthropic Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+These forms come from client documentation, not from observations of this catalog. The current candidate record says what was actually observed. OpenAI documents `@` selection in ChatGPT and `$` skill mentions in Codex. Anthropic documents `/plugin-name:skill-name` for Claude Code plugin skills. The exact catalog namespaces above are also present in the generated Codex and Claude distributions. See [OpenAI Build skills](https://learn.chatgpt.com/docs/build-skills), [Anthropic Extend Claude with skills](https://code.claude.com/docs/en/slash-commands), and [Anthropic Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
 Explicit-only skills coordinate work that may become consequential, such as executing a plan, publishing a repository change, creating a review request, resolving conflicts, guiding protected configuration, or delegating work to other agents.
 

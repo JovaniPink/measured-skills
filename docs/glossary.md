@@ -2,13 +2,13 @@
 
 Plain definitions for the words this catalog uses. They are in alphabetical order. The states at the end are the ones we never blend.
 
-**Antigravity.** Google's agent client. It has a command line named `agy`, a desktop app, and an IDE. This repository ships an offline preview for it rather than a pack. See [Antigravity setup](clients/antigravity.md).
+**Antigravity.** Google's agent client. It has a command line named `agy`, a desktop app, and an IDE. This repository ships generated packs under `plugins/antigravity/` and an offline preview builder. Loading in the client still needs a check. See [Antigravity setup](clients/antigravity.md).
 
 **Authored.** Something we wrote. An authored claim says what the instructions intend. It does not say what any client did.
 
-**Candidate.** A dated record for one catalog version. It lists what is prepared, installed, enabled, loaded, and behavior-tested in each app and CLI. See the [current candidate record](client-candidate-v0.17.0.md).
+**Candidate.** A dated record for one catalog version. It lists what is prepared, installed, enabled, loaded, and behavior-tested in each app and CLI. See the [current candidate record](client-candidate-v0.18.0.md).
 
-**Catalog.** All 79 skills in this repository, plus the records that describe them.
+**Catalog.** All 86 skills in this repository, plus the records that describe them.
 
 **Claude Code.** Anthropic's command-line client, and the Code mode in the Claude desktop app. It loads skills as packs.
 
@@ -20,13 +20,13 @@ Plain definitions for the words this catalog uses. They are in alphabetical orde
 
 **Codex.** OpenAI's coding client. It has a command line and a desktop app, and it signs in with your ChatGPT account. ChatGPT web and ChatGPT Work keep their own skill libraries and need their own checks.
 
-**Explicit-only.** A marking that means the skill stays off until you name it. Naming it does not authorize a push, merge, deletion, release, or deployment. 14 of the 79 skills are explicit-only.
+**Explicit-only.** A marking that means the skill stays off until you name it. Naming it does not authorize a push, merge, deletion, release, or deployment. 17 of the 86 skills are explicit-only.
 
 **File hash.** A short fingerprint made from a file's bytes. Two files with the same hash hold the same contents. A matching version number does not prove that.
 
-**Hold.** A decision not to ship or enable something yet, even though the files are ready, because a named check has not passed. A hold always names the evidence that would lift it. For example, the 14 explicit-only skills are held for Claude.ai uploads. The check they wait on is a control that stops the app from picking them on its own.
+**Hold.** A decision not to ship or enable something yet, even though the files are ready, because a named check has not passed. A hold always names the evidence that would lift it. For example, the 17 explicit-only skills are held for Claude.ai uploads. The check they wait on is a control that stops the app from picking them on its own.
 
-**Implicit.** A marking that means your client may pick the skill on its own when your request matches its description. You can still name it directly. 65 of the 79 skills are implicit.
+**Implicit.** A marking that means your client may pick the skill on its own when your request matches its description. You can still name it directly. 69 of the 86 skills are implicit.
 
 **Marketplace.** A place your client looks for packs. This repository is its own marketplace, and it is named `measured-skills`.
 
@@ -36,7 +36,7 @@ Plain definitions for the words this catalog uses. They are in alphabetical orde
 
 **Output style.** A client setting that changes tone and format for every reply. A skill is different: it loads instructions for one kind of task. Anthropic draws the same line, and its built-in Concise style needs Claude Code v2.1.237 or later. Every observation in this repository was taken on 2.1.220, before that existed. This catalog ships no output styles.
 
-**Pack.** A group of related skills you install together. Clients also call this a plugin. There are nine packs.
+**Pack.** A group of related skills you install together. Clients also call this a plugin. There are 11 packs.
 
 **Plugin.** The client's word for a pack. Installing a pack and enabling each of its skills are separate choices.
 

@@ -40,6 +40,8 @@ Install the smallest plugin that covers the work.
 | `measured-reasoning` | Alignment, domain vocabulary, code explanation, design rationale, change impact, technical writing, decision traces, portable skill authoring, guided configuration, task handoff, and workflow retrospectives |
 | `measured-ai-systems` | AI evaluation contracts, context reliability, and exact source-to-output conformance. Written from the author's own practice, with NIST test, evaluation, verification, and validation (TEVV) resources and the W3C PROV provenance standard used only as correctness authorities |
 | `measured-agent-platforms` | Google ADK architecture, agent context, tool boundaries, protocols, agentic security, and retrieval grounding |
+| `measured-swift-workflows` | Bounded SwiftUI delivery, Swift concurrency and persistence review, and fixture-based iOS journey verification |
+| `measured-nextjs-workflows` | Bounded Next.js delivery, cache and authorization boundary review, and measured React rendering diagnosis |
 
 Installing every plugin at once increases the amount of skill description text loaded by a client. It can also increase trigger collisions. Start with one plugin and add another only when the work needs it.
 
@@ -86,6 +88,8 @@ codex plugin add measured-operations@measured-skills
 codex plugin add measured-reasoning@measured-skills
 codex plugin add measured-ai-systems@measured-skills
 codex plugin add measured-agent-platforms@measured-skills
+codex plugin add measured-swift-workflows@measured-skills
+codex plugin add measured-nextjs-workflows@measured-skills
 ```
 
 Verify the installed version and enabled state:
@@ -129,6 +133,8 @@ claude plugin install measured-operations@measured-skills --scope user
 claude plugin install measured-reasoning@measured-skills --scope user
 claude plugin install measured-ai-systems@measured-skills --scope user
 claude plugin install measured-agent-platforms@measured-skills --scope user
+claude plugin install measured-swift-workflows@measured-skills --scope user
+claude plugin install measured-nextjs-workflows@measured-skills --scope user
 ```
 
 Verify the installed version and enabled state:
@@ -213,6 +219,9 @@ The explicit-only skills are:
 - `guided-configuration`
 - `task-handoff`
 - `workflow-retrospective`
+- `nextjs-feature-delivery`
+- `swiftui-feature-delivery`
+- `ios-journey-verification`
 
 Natural language alone should not activate these workflows implicitly. Direct invocation still does not authorize a push, publication, merge, deletion, deployment, or other external action unless the user separately authorizes that action.
 
@@ -273,6 +282,8 @@ claude plugin uninstall measured-skills@measured-skills --scope user
 Replace `measured-skills` before the `@` character with the plugin you installed. Verify removal with the client plugin listing. Removing a marketplace advertisement cannot force deletion of copies that another user or client already installed.
 
 ## Validate a local clone
+
+The [testing guide](testing.md) lists every check in the order CI runs them. The short form follows.
 
 Run the deterministic catalog validation and unit tests:
 

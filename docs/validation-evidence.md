@@ -6,6 +6,10 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 133 regression tests.
 
+## 0.18.0 candidate baseline
+
+Observed on 2026-10-04 at commit `70182b2`, the `main` head before this change, on Python 3.11.15 with PyYAML 6.0.3, mypy 1.20.2, and ruff 0.15.12 at the versions in `requirements-ci-linux.txt`: the public-boundary scan, workflow-syntax check, strict typing, lint, generated-distribution drift check, full deterministic validation, and all 133 unit tests passed. CI runs Python 3.12, so this was not a CI run. The run used a clean checkout. It records no installed-client behavior and no model run.
+
 ## Equal client setup candidate
 
 The setup candidate had 73 regression tests.

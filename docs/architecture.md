@@ -19,13 +19,13 @@ skills/ --> plugins/codex/<metadata.plugin>/skills/
         --> plugins/antigravity/<metadata.plugin>/skills/
 ```
 
-The Codex copy retains `agents/openai.yaml` and rewrites its direct-invocation prompt to the installed plugin namespace. The Claude and Antigravity copies omit that client-specific directory and add `disable-model-invocation: true` to explicit-only skill frontmatter. No client adapter changes the workflow body.
+The Codex copy retains `agents/openai.yaml` and rewrites its direct-invocation prompt to the installed plugin namespace. The Claude copy omits that client-specific directory and adds `disable-model-invocation: true` to explicit-only skill frontmatter. The Antigravity copy omits the directory too, and leaves explicit-only skills out until a selection control is verified. No client adapter changes the workflow body.
 
 Plugins are packaging routes, not the complete taxonomy. `catalog/skills.json` adds capability, lifecycle, target, risk, invocation, maturity, companion, and routing-conflict facets. `catalog/packs.json` measures plugin and recipe discovery-description sizes.
 
 ## Antigravity distribution and preview
 
-In addition to tracked distributions under `plugins/antigravity/` and `.gemini/plugins/marketplace.json`, `scripts/build_antigravity.py` prepares a self-contained review folder from the same source. It keeps skill text and references, omits Codex metadata, and applies explicit-only frontmatter controls. A separate `bundle.json` records file hashes and the unverified loading state. It adds no runner and changes no installed client. See [Antigravity setup](clients/antigravity.md).
+In addition to tracked distributions under `plugins/antigravity/` and `.gemini/plugins/marketplace.json`, `scripts/build_antigravity.py` prepares a self-contained review folder from the same source. It keeps skill text and references, omits Codex metadata, and rejects explicit-only skills before it writes anything. A separate `bundle.json` records file hashes and the unverified loading state. It adds no runner and changes no installed client. See [Antigravity setup](clients/antigravity.md).
 
 ## Invocation classes
 

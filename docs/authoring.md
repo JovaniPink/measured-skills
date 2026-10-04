@@ -17,7 +17,7 @@ description: What the skill does and the concrete situations that should activat
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.9.0"
+  version: "0.18.0"
   plugin: "measured-skills"
   invocation: "implicit"
   provenance: "original"

@@ -21,8 +21,10 @@ Pack sizes live in [`catalog/packs.json`](../catalog/packs.json). Profiles and t
 | Improve alignment, explanation, writing, continuity, or skill authoring | `measured-reasoning` |
 | Evaluate AI behavior, context reliability, or source conformance | `measured-ai-systems` |
 | Review an agent architecture, Google ADK design, tool boundary, protocol, security model, or retrieval system | `measured-agent-platforms` |
+| Deliver or review bounded SwiftUI and iOS work | `measured-swift-workflows` |
+| Deliver or review bounded Next.js and React work | `measured-nextjs-workflows` |
 
-Read the [current candidate checks](client-candidate-v0.17.0.md) before relying on a renamed pack. Historical checks are not current installation or behavior proof.
+Read the [current candidate checks](client-candidate-v0.18.0.md) before relying on a renamed pack. Historical checks are not current installation or behavior proof.
 
 Each of the three engineering packs is under the 6,000-character warning line. That line is our own guardrail. No client publishes it as a limit. Installed together, the three packs' descriptions total 6,466 characters, which is over it. Counting skill names and paths too, the catalog estimates all three at 9,126 characters for Codex, above the 8,000 Codex uses when the context size is unknown. Install only the engineering packs your task needs. For a narrow task, pick the one skill you need and leave the other packs off.
 
@@ -47,10 +49,10 @@ A recipe is a suggested set of skills. It is not something you install. Do not a
 | Review a Google ADK system | `google-adk-engineering-profile`, `agent-evaluation-design`, `agentic-system-security-review` |
 | Review a service release | `application-security-review`, `operational-readiness-review`, `observability-design` |
 | Write a decision brief | `source-grounded-research`, `decision-governance-records`, `stakeholder-technical-communication` |
-| Connect research to evaluated public findings | `research-to-publication-lifecycle`, `source-grounded-research`, `workflow-retrospective` |
+| Connect research to evaluated public findings (not measured) | `research-to-publication-lifecycle`, `source-grounded-research`, `workflow-retrospective` |
 | Learn after launch | `iteration-postlaunch-learning`, `kpi-outcome-measurement`, `production-incident-analysis` |
 
-We measure every recipe on this page. Each one has to stay under 8,000 characters of description text. The validator fails if a measurement is out of date or a recipe runs over.
+We measure ten of the eleven recipes on this page. Each measured recipe has to stay under 8,000 characters of description text, and the validator fails if a measurement is out of date or a recipe runs over. The recipe marked "not measured" has no recorded size yet.
 
 ## Add a stack profile only when the repository needs it
 

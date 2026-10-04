@@ -4,9 +4,9 @@ Use this vocabulary when a skill reports findings. It gives every review the sam
 
 ## Why this exists
 
-The catalog has 26 skills in the `review` capability family, and they do not all return the same shape of output. Fourteen skills return a list of findings: nine in the review family and five outside it. Thirteen return a gate or a verdict instead, including all 11 stack profiles. Four return an assessment or a record. This vocabulary applies to the 14 that return findings.
+The catalog has 31 skills in the `review` capability family, and they do not all return the same shape of output. Fourteen skills return a list of findings: nine in the review family and five outside it. Thirteen return a gate or a verdict instead, including all 11 stack profiles. Four return an assessment or a record. This vocabulary applies to the 14 that return findings.
 
-Overlap among them is deliberate: every skill declares `composes_with`, 19 declare `conflicts_with`, and 11 route to a named sibling in their own instructions. A motion review can hand work to accessibility, performance, and authority reviews in one pass.
+Overlap among them is deliberate: every skill declares `composes_with`, 27 declare `conflicts_with`, and 11 route to a named sibling in their own instructions. A motion review can hand work to accessibility, performance, and authority reviews in one pass.
 
 Four skill bodies use the word `severity` for their own findings, and none of them defines a scale: `code-change-review`, `agentic-system-security-review`, `skill-security-review`, and `retrieval-grounding-quality-review`. Nine more use `blocking` or `blocker`, and the 11 stack profiles use `hazards` for a different idea entirely. So `code-change-review` asks for findings "ordered by severity" against a scale that does not exist, and two skills reviewing the same code produce findings a reader cannot rank against each other.
 
