@@ -2,7 +2,7 @@
 
 All 27 primary sources whose fingerprints changed since their last review now have a current-content decision. Every one still supports the canonical instructions that cite it, so no skill text changes. Twenty-four reviewed fingerprints were updated. Three OWASP fingerprints remain held because repeated requests returned different bytes, as in the [September 30 review](source-review-2026-09-30-semantic.md). The global review date in `catalog/upstream-pins.json` advances to 2026-10-05.
 
-The [initial freshness receipt](source-review-2026-10-05.json) records all 55 pinned URLs at source revision `60a6b3b`: 28 markers matched and 27 had changed, with none unavailable. The [decision ledger](source-review-2026-10-05-semantic.json) keeps the expected and observed markers, the resampled markers, body hashes, affected skills, and each finding. Response bodies were not retained.
+The [initial freshness receipt](source-review-2026-10-05.json) records all 55 pinned URLs at source revision `60a6b3b`: 28 markers matched, 26 had changed, and the request for `agentskills.io/specification` timed out, so the receipt records it as blocked. A retry minutes later read that page, and its marker had changed too, which makes 27 changed sources. The [decision ledger](source-review-2026-10-05-semantic.json) keeps the expected and observed markers, the resampled markers, body hashes, affected skills, and each finding. Response bodies were not retained.
 
 ## Method
 
