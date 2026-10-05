@@ -1,7 +1,7 @@
 {
   "$schema": "./upstream-reviews-schema.json",
   "catalog_version": "0.18.0",
-  "reviewed_on": "2026-09-04",
+  "reviewed_on": "2026-10-05",
   "reviews": [
     {
       "url": "https://a2a-protocol.org/v1.0.0/specification/",
@@ -59,8 +59,8 @@
         "value-attribution-evidence-maturity",
         "workshop-planning-synthesis"
       ],
-      "finding": "Reviewed 2026-09-30: Agent Skills requires matching bounded names, descriptions that state purpose and activation, string-valued metadata, and progressive resource loading. allowed-tools remains experimental.",
-      "action": "Retain precise routing, focused references, portable validation, and exclusion of experimental grants. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: Agent Skills still requires a name of 1 to 64 lowercase characters that matches the parent directory, a non-empty description of at most 1024 characters that states what the skill does and when to use it, string-valued metadata, and progressive disclosure. allowed-tools remains experimental.",
+      "action": "Retain precise routing, focused references, portable validation, and exclusion of experimental grants. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://developer.hashicorp.com/terraform/language",
@@ -69,8 +69,8 @@
       "affected_skills": [
         "terraform-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: Terraform describes declarative configurations, resources, providers, dependencies, and versioned language documentation. Reading a newer language index does not authorize infrastructure creation or select a project upgrade.",
-      "action": "Retain repository toolchain discovery and the no-apply boundary. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The Terraform language index still describes a declarative language, resources, providers, expressions, and dependency relations. Reading a newer language index does not authorize infrastructure creation or select a project upgrade.",
+      "action": "Retain repository toolchain discovery and the no-apply boundary. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -91,8 +91,8 @@
       "affected_skills": [
         "python-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The Python index identifies stable 3.14.7 and separate prerelease and development documentation. It links installation, packaging, typing, language, and library guidance.",
-      "action": "Retain discovery of the project interpreter, constraints, and configured gates; do not select the newest interpreter by default. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The Python index now identifies stable 3.14.8, with 3.15 as a prerelease and 3.16 in development. It still links installation, packaging, typing, language, and library guidance.",
+      "action": "Retain discovery of the project interpreter, constraints, and configured gates; do not select the newest interpreter by default. No skill names a Python patch version. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://docs.python.org/3/library/unittest.html",
@@ -101,8 +101,8 @@
       "affected_skills": [
         "test-quality-review"
       ],
-      "finding": "Reviewed 2026-09-30: unittest retains distinct fixtures, cases, suites, runners, assertion failures, discovery, skips, and expected failures. Passing test counts do not establish application outcomes outside their observed assertions.",
-      "action": "Retain behavior-focused assertions, isolation, and explicit incomplete or skipped evidence. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: unittest still documents fixtures, test cases, suites, runners, discovery, skips, and expected failures. Passing test counts do not establish application outcomes outside their observed assertions.",
+      "action": "Retain behavior-focused assertions, isolation, and explicit incomplete or skipped evidence. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://git-scm.com/docs/git-merge",
@@ -122,8 +122,8 @@
         "finish-development-branch",
         "worktree-isolation"
       ],
-      "finding": "Reviewed 2026-09-30: Git worktree documents shared refs and repository state, worktree-specific files, locked entries, bounded removal, and incomplete submodule support.",
-      "action": "Retain isolation decisions, peer-worktree preservation, and exact ownership before removal. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: git worktree still documents shared refs and repository state, per-worktree files such as HEAD and index, locking to prevent pruning, bounded removal, and incomplete submodule support.",
+      "action": "Retain isolation decisions, peer-worktree preservation, and exact ownership before removal. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
@@ -132,8 +132,8 @@
       "affected_skills": [
         "multi-agent-orchestration"
       ],
-      "finding": "Reviewed 2026-09-30: Current OpenAI subagent guidance distinguishes local Codex delegation triggers from ChatGPT Work intelligence-level behavior. Custom-agent model, sandbox, MCP, skill, and concurrency settings are part of effective configuration, and each worker consumes tokens.",
-      "action": "Retain host and user delegation authority, exact client configuration, bounded fanout, and independent integration verification. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: OpenAI subagent guidance still treats custom-agent model, sandbox, MCP, skill, and concurrency settings as effective configuration, and each worker consumes tokens. The concurrency key is now agents.max_concurrent_threads_per_session, with agents.max_threads kept as a legacy alias.",
+      "action": "Retain host and user delegation authority, exact client configuration, bounded fanout, and independent integration verification. No skill names either concurrency key. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
@@ -142,8 +142,8 @@
       "affected_skills": [
         "agentic-system-security-review"
       ],
-      "finding": "Reviewed 2026-09-30: OWASP's agentic initiative lists the 2026 agentic threat framework, Agent Control Standard, MCP security, and governance resources. Their availability does not certify an agent package.",
-      "action": "Retain the system-wide identity, tool, instruction, memory, supply-chain, and stop-boundary review. Preserve the prior pin while the response fingerprint is unstable; no broader normalization is introduced."
+      "finding": "Reviewed 2026-10-05: The agentic initiative page still lists the OWASP Top 10 for Agentic Applications for 2026, the Agent Control Standard, MCP security, and governance resources. Their availability does not certify an agent package.",
+      "action": "Retain the system-wide identity, tool, instruction, memory, supply-chain, and stop-boundary review. Three fetches matched, but the closing readback returned different normalized content, so the prior pin stays held and the online gate keeps reporting this URL."
     },
     {
       "url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
@@ -152,8 +152,8 @@
       "affected_skills": [
         "retrieval-grounding-quality-review"
       ],
-      "finding": "Reviewed 2026-09-30: OWASP retrieval guidance addresses embedding confidentiality, poisoning, cross-tenant leakage, and changes to intended model behavior after retrieval augmentation.",
-      "action": "Retain permission-aware retrieval, source provenance, untrusted-content boundaries, and behavior checks. Preserve the prior pin while the response fingerprint is unstable; no broader normalization is introduced."
+      "finding": "Reviewed 2026-10-05: OWASP LLM08 still addresses embedding confidentiality, data poisoning, cross-context leakage in multi-tenant vector stores, and changes to model behavior after retrieval augmentation.",
+      "action": "Retain permission-aware retrieval, source provenance, untrusted-content boundaries, and behavior checks. Repeated responses changed the fingerprint, so the prior pin stays held and the online gate keeps reporting this URL."
     },
     {
       "url": "https://opentelemetry.io/docs/concepts/signals/",
@@ -162,8 +162,8 @@
       "affected_skills": [
         "observability-design"
       ],
-      "finding": "Reviewed 2026-09-30: OpenTelemetry lists traces, metrics, logs, and baggage, with events and profiles described as developing. Signal collection is separate from operational readiness and observed instrument coverage.",
-      "action": "Retain signal-specific contracts, provenance, correlation, and observed coverage limits. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: OpenTelemetry still lists traces, metrics, logs, and baggage, with events and profiles under development or at the proposal stage. Signal collection is separate from operational readiness and observed instrument coverage.",
+      "action": "Retain signal-specific contracts, provenance, correlation, and observed coverage limits. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
@@ -184,8 +184,8 @@
         "portable-skill-authoring",
         "skill-security-review"
       ],
-      "finding": "Reviewed 2026-09-30: Antigravity describes automatic selection from skill names and descriptions, progressive disclosure, and .agents/skills with .agent/skills compatibility. The documented skill fields do not establish explicit-only selection controls.",
-      "action": "Retain exclusion of all explicit-only workflows from installable Antigravity output. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: Antigravity still selects skills automatically from names and descriptions, uses progressive disclosure, defaults to .agents/skills, and keeps .agent/skills compatibility. Antigravity 2.0 adds a manual /<skill-name> slash command and a global CLI skill folder, but autonomous invocation remains on and no documented field makes a skill explicit-only.",
+      "action": "Retain exclusion of all explicit-only workflows from installable Antigravity output. Manual slash invocation is not an explicit-only control. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://www.antigravity.google/docs/cli/plugins/",
@@ -195,8 +195,8 @@
         "portable-skill-authoring",
         "skill-security-review"
       ],
-      "finding": "Reviewed 2026-09-30: The legacy Antigravity CLI plugin URL is now an HTML redirect to /docs/plugins?tab=cli. The combined guide documents native plugin components, manual and CLI installation, cross-surface synchronization, and two different filesystem locations.",
-      "action": "Use the current combined guide, preserve observed installer paths, and correct stale catalog and installation claims. Do not infer explicit-only enforcement. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The legacy Antigravity CLI plugin URL is still an HTML redirect to /docs/plugins?tab=cli.",
+      "action": "Use the current combined guide, preserve observed installer paths, and correct stale catalog and installation claims. Do not infer explicit-only enforcement. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://agent-plugins.org/specification",
@@ -217,8 +217,8 @@
         "agent-evaluation-design",
         "claim-verification"
       ],
-      "finding": "Reviewed 2026-09-30: Antigravity headless mode separates response output from diagnostics and offers JSON and event streams. Stream initialization records effective permissions; tool events expose execution and denial independently of terminal status.",
-      "action": "Retain terminal, tool-event, actual-loading, and semantic checks as separate evidence. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: Antigravity headless mode still sends the response to stdout and diagnostics to stderr, offers JSON and stream-json output, and begins a stream with an init event. A tool that cannot obtain approval is soft-denied: the run continues and exits 0, so terminal status alone does not show a denial.",
+      "action": "Retain terminal, tool-event, actual-loading, and semantic checks as separate evidence. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://ai.google.dev/gemini-api/docs/agents",
@@ -239,8 +239,8 @@
         "agent-tool-action-boundary-review",
         "retrieval-grounding-quality-review"
       ],
-      "finding": "Reviewed 2026-09-30: The overview changed during review: AlloyDB supports IAM database authentication only; Cloud SQL supports IAM and built-in database authentication. The IDE extension and coding-agent plugin remain separate interfaces, and automated orchestration deployment is limited to GitHub Actions. The overview does not establish an exact feature launch stage.",
-      "action": "Retain the conditional tool-compatibility and authority lane. Record the newly reviewed authentication limits without assuming GA or executing database operations."
+      "finding": "Reviewed 2026-10-05: The Data Agent Kit overview still limits AlloyDB to IAM database authentication, allows IAM and built-in authentication for Cloud SQL, keeps the IDE extension and coding-agent plugin as separate interfaces, and limits automated orchestration deployment to GitHub Actions. It names supported coding agents but does not establish a launch stage.",
+      "action": "Retain the conditional tool-compatibility and authority lane. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://ai.google.dev/gemini-api/docs/latest-model",
@@ -261,8 +261,8 @@
         "agent-evaluation-design",
         "google-adk-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The Antigravity Python SDK manages tool execution, context, policy, and session lifecycles, and distinguishes the local SDK from the managed cloud API. Local-model and provider integrations remain separate configurations.",
-      "action": "Retain separate SDK, CLI, managed API, authentication, and deployment evidence. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The Antigravity Python SDK still provides a stateful runtime for tool execution, context management, safety policies, and subagent delegation, and points to a separate managed cloud API. Gemini Enterprise routing is a separate configuration.",
+      "action": "Retain separate SDK, CLI, managed API, authentication, and deployment evidence. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
@@ -284,8 +284,8 @@
         "agentic-system-security-review",
         "google-adk-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: Agent Platform separates build, scale, govern, and optimize. Sessions, Memory Bank, identity, gateway controls, and managed runtime are distinct components rather than proof of one interchangeable client behavior.",
-      "action": "Retain product-specific authority and runtime evidence separately from local skill qualification. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: Agent Platform still separates build, deploy, govern, and optimize. Sessions, Memory Bank, code execution, identity, gateway controls, and managed runtime remain distinct components rather than proof of one interchangeable client behavior.",
+      "action": "Retain product-specific authority and runtime evidence separately from local skill qualification. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://airc.nist.gov/",
@@ -295,8 +295,8 @@
         "agent-evaluation-design",
         "source-output-conformance-audit"
       ],
-      "finding": "Reviewed 2026-09-30: NIST AIRC provides voluntary AI risk and TEVV resources. AI RMF 1.0 is being revised; the playbook will follow. These resources do not certify an evaluation or establish behavioral success.",
-      "action": "Retain semantic evaluation contracts and explicit claim limits. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: NIST AIRC still offers voluntary AI RMF and TEVV resources. AI RMF 1.0 is still being revised, and the playbook will follow the revision. These resources do not certify an evaluation or establish behavioral success.",
+      "action": "Retain semantic evaluation contracts and explicit claim limits. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://learn.microsoft.com/en-us/dotnet/",
@@ -315,8 +315,8 @@
       "affected_skills": [
         "salesforce-apex-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: Salesforce Apex remains hosted, strongly typed, multitenant-aware, database-integrated, and constrained by platform governor limits. Local checks cannot establish an authorized live-org operation.",
-      "action": "Retain API-version discovery, bulk and transaction hazards, and separate live-org authority. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: Salesforce still describes Apex as hosted, object-oriented, strongly typed, and multitenant-aware, with enforced limits that keep code from monopolizing shared resources. Local checks cannot establish an authorized live-org operation.",
+      "action": "Retain API-version discovery, bulk and transaction hazards, and separate live-org authority. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://www.drupal.org/docs/develop",
@@ -325,8 +325,8 @@
       "affected_skills": [
         "php-drupal-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The Drupal development index provides Composer, Drush, PHPStan, testing, security, and performance guidance across project versions. A broad index is not one universal project gate.",
-      "action": "Retain project PHP and Drupal discovery, Composer locks, configured commands, and current versioned authorities. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The Drupal development index still links Composer, Drush, PHPStan, testing, security, and performance guidance. A broad index is not one universal project gate.",
+      "action": "Retain project PHP and Drupal discovery, Composer locks, configured commands, and current versioned authorities. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://www.swift.org/documentation/",
@@ -335,8 +335,8 @@
       "affected_skills": [
         "swift-swiftui-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The old Swift documentation URL still uses an HTML redirect to docs.swift.org/latest/documentation/. The destination was read rendered in the browser; its application shell alone cannot verify semantic content.",
-      "action": "Retain the direct destination authority and rendered review requirement without changing a project's Swift mode or deployment target. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The old Swift documentation URL still redirects to docs.swift.org/latest/documentation/. The destination's documentation data names The Swift Programming Language (6.4) and links Testing, Swift Package Manager, compiler diagnostics, and Migrating to Swift 6.",
+      "action": "Retain the direct destination authority and rendered review requirement without changing a project's Swift mode or deployment target. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://www.typescriptlang.org/docs/",
@@ -345,8 +345,8 @@
       "affected_skills": [
         "typescript-javascript-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The TypeScript index covers modules, JSX, declaration files, compiler configuration, and release guidance. The newest release links do not establish compatibility with the project compiler or runtime.",
-      "action": "Retain compiler and runtime discovery, module-format checks, lockfiles, and repository-defined gates. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The TypeScript index still covers the handbook, modules, JSX, declaration files, and compiler configuration, and its release notes now lead with 7.0. The newest release does not establish compatibility with a project compiler or runtime.",
+      "action": "Retain compiler and runtime discovery, module-format checks, lockfiles, and repository-defined gates. No skill names a TypeScript version. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://docs.swift.org/latest/documentation/",
@@ -415,8 +415,8 @@
       "affected_skills": [
         "java-spring-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The Spring Boot index distinguishes multiple stable generations from preview and snapshot releases. Framework features do not establish a project's dependency, JVM, startup, or deployment compatibility.",
-      "action": "Retain repository wrappers, pinned JVM and dependency discovery, and separate runtime gates. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The Spring Boot index now lists 4.1.1 first among several stable generations, with 4.2.0-M2 as a preview and separate snapshots. Framework features do not establish a project's dependency, JVM, startup, or deployment compatibility.",
+      "action": "Retain repository wrappers, pinned JVM and dependency discovery, and separate runtime gates. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://owasp.org/www-project-application-security-verification-standard/",
@@ -425,8 +425,8 @@
       "affected_skills": [
         "application-security-review"
       ],
-      "finding": "Reviewed 2026-09-30: The OWASP ASVS URL now redirects to the official ASVS project page. It still describes verifiable application-security requirements and links versioned project material; landing-page metadata is insufficient for exact requirement mapping.",
-      "action": "Retain exact-version ASVS mapping. Repeated responses moved the page title while retaining the reviewed requirements overview; preserve the prior pin and expose the unstable raw-byte fingerprint without broadening normalization."
+      "finding": "Reviewed 2026-10-05: The ASVS project page still describes verifiable application-security requirements, names 5.0.0 as the latest stable version, and recommends version-qualified requirement identifiers. Landing-page metadata is insufficient for exact requirement mapping.",
+      "action": "Retain exact-version ASVS mapping. Repeated responses changed the fingerprint, so the prior pin stays held and the online gate keeps reporting this URL."
     },
     {
       "url": "https://slsa.dev/spec/v1.2/provenance",
@@ -445,8 +445,8 @@
       "affected_skills": [
         "postgresql-sql-engineering-profile"
       ],
-      "finding": "Reviewed 2026-09-30: The PostgreSQL current index identifies 18.6 and separately lists supported, development, and unsupported versions. It covers SQL, concurrency, administration, authentication, extensions, and backup; mutable current documentation does not identify an installed server.",
-      "action": "Retain server-version and extension discovery, authorized disposable tests, and shared-data mutation boundaries. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-05: The PostgreSQL current index still identifies 18.6, lists 18 through 14 as supported, and lists 19 as a development version. Mutable current documentation does not identify an installed server.",
+      "action": "Retain server-version and extension discovery, authorized disposable tests, and shared-data mutation boundaries. Refresh this reviewed fingerprint."
     },
     {
       "url": "https://www.antigravity.google/docs/plugins?tab=cli",
@@ -456,8 +456,38 @@
         "portable-skill-authoring",
         "skill-security-review"
       ],
-      "finding": "Reviewed 2026-09-30: The combined guide documents plugin.json, component directories, local plugin management, interactive marketplaces, cross-surface synchronization, and two filesystem locations. It does not establish an explicit-only skill-selection control.",
-      "action": "Use the combined guide in current setup documentation, retain native exact-version path readback and explicit-only exclusion, and pin this newly reviewed destination."
+      "finding": "Reviewed 2026-10-05: The combined plugin guide still documents plugin.json, component directories, workspace and global plugin folders, the interactive plugin manager, marketplaces, and a separate CLI staging folder. It does not establish an explicit-only skill-selection control.",
+      "action": "Use the combined guide in current setup documentation, and retain native exact-version path readback and the explicit-only exclusion. Refresh this reviewed fingerprint."
+    },
+    {
+      "url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "status": "reviewed",
+      "ownership_check": "Vercel's Next.js documentation remains the official authority for Next.js App Router behavior.",
+      "affected_skills": [
+        "nextjs-feature-delivery"
+      ],
+      "finding": "Reviewed 2026-10-05: Next.js still bundles version-matched documentation at node_modules/next/dist/docs/ and directs agents to it through a root AGENTS.md. Upgrading Next.js also upgrades the bundled docs, which is why delivery reads the installed version rather than the website.",
+      "action": "Retain installed-version documentation routing in nextjs-feature-delivery. Refresh this reviewed fingerprint."
+    },
+    {
+      "url": "https://nextjs.org/docs/app/guides/authentication",
+      "status": "reviewed",
+      "ownership_check": "Vercel's Next.js documentation remains the official authority for Next.js App Router behavior.",
+      "affected_skills": [
+        "nextjs-cache-auth-boundary-review"
+      ],
+      "finding": "Reviewed 2026-10-05: The Next.js authentication guide still recommends centralizing authorization in a Data Access Layer, returning Data Transfer Objects, and treating Proxy checks as optional and optimistic. It also covers auth checks in Server Components, Server Actions, and Route Handlers.",
+      "action": "Retain the server-side authorization boundary in nextjs-cache-auth-boundary-review. Refresh this reviewed fingerprint."
+    },
+    {
+      "url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "status": "reviewed",
+      "ownership_check": "react.dev remains the official React documentation maintained by the React team.",
+      "affected_skills": [
+        "react-rendering-performance-diagnosis"
+      ],
+      "finding": "Reviewed 2026-10-05: React still advises removing Effects that only derive data or handle user events, caching expensive calculations with useMemo or React Compiler, and measuring with a production build because development rendering and Strict Mode change timings.",
+      "action": "Retain the measured, effect-first diagnosis in react-rendering-performance-diagnosis. Refresh this reviewed fingerprint."
     }
   ]
 }
