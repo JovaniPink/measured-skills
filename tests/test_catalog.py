@@ -1717,7 +1717,17 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual("one", (snapshot / "original" / "SKILL.md").read_text(encoding="utf-8"))
 
     def test_upstream_review_freshness_is_current_offline(self) -> None:
-        errors, report = check_upstream_freshness(online=False)
+        # Judge the committed pins on the day they were reviewed. The overdue
+        # boundary is covered in test_tooling_hardening.py, and validate.py
+        # applies the real date.
+        from datetime import date
+
+        pins = json.loads(
+            (ROOT / "catalog" / "upstream-pins.json").read_text(encoding="utf-8")
+        )
+        errors, report = check_upstream_freshness(
+            online=False, today=date.fromisoformat(pins["reviewed_on"])
+        )
         self.assertEqual([], errors)
         self.assertEqual("pass", report["result"])
 

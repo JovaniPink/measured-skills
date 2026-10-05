@@ -50,7 +50,7 @@ def _require_tracked_source_artifact(relative: str) -> None:
     _git_text(["cat-file", "-e", f"HEAD:{relative}"])
 
 
-def build(source_commit: str, output: Path | None = None) -> Path:
+def build(source_commit: str, output: Path | None = None, created_on: date | None = None) -> Path:
     if re.fullmatch(r"[0-9a-f]{40}", source_commit) is None:
         raise ValueError("source commit must be a full 40-character lowercase Git SHA")
     _require_clean_source_checkout(source_commit)
@@ -90,7 +90,7 @@ def build(source_commit: str, output: Path | None = None) -> Path:
         "$schema": "../manifest-schema.json",
         "catalog_version": VERSION,
         "source_commit": source_commit,
-        "created_on": date.today().isoformat(),
+        "created_on": (created_on or date.today()).isoformat(),
         "artifacts": sorted(artifacts, key=lambda item: item["path"]),
     }
     target = (output or ROOT / "releases" / VERSION / "manifest.json").resolve()

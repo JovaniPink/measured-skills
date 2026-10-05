@@ -29,7 +29,11 @@ from schema_validation import validate_instance
 REFERENCE_LINK = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 ALLOWED_CANONICAL_TOP_KEYS = {"name", "description", "license", "metadata"}
 ALLOWED_RISK_CLASSES = {"read-only", "bounded-execution", "network-read", "external-write", "trust-decision"}
-ACTION_USE = re.compile(r"(?m)^\s*-\s*uses:\s*([^#\s]+)")
+ACTION_USE = re.compile(r"""(?m)^\s*(?:-\s*)?uses:\s*['"]?([^#\s'"]+)""")
+# A block-scalar header such as `run: |` or `- script: >-`. Its content is text, not workflow keys.
+BLOCK_SCALAR_HEADER = re.compile(
+    r"^(?P<indent>\s*)(?P<dash>(?:-\s+)*)[^\s#:][^#:]*:\s+[|>][-+0-9]*\s*(?:#.*)?$"
+)
 IMMUTABLE_REVISION = re.compile(r"[0-9a-fA-F]{40}")
 HASHED_REQUIREMENT = re.compile(
     r"^([A-Za-z0-9_.-]+)==([0-9][A-Za-z0-9.+-]*) --hash=sha256:([0-9a-f]{64})$"
@@ -187,11 +191,31 @@ def observation_record_errors(
             errors.append(f"{label}: a date without a clock time is allowed only on historical evidence")
     return errors
 
+def _action_references(text: str) -> list[str]:
+    """Return `uses:` values from workflow text, skipping block-scalar content line by line."""
+
+    references: list[str] = []
+    skip_deeper_than: int | None = None
+    for line in text.splitlines():
+        if skip_deeper_than is not None:
+            if not line.strip() or len(line) - len(line.lstrip()) > skip_deeper_than:
+                continue
+            skip_deeper_than = None
+        header = BLOCK_SCALAR_HEADER.match(line)
+        if header is not None:
+            skip_deeper_than = len(header.group("indent")) + len(header.group("dash"))
+            continue
+        match = ACTION_USE.match(line)
+        if match is not None:
+            references.append(match.group(1))
+    return references
+
+
 def immutable_action_reference_errors(text: str, label: str) -> list[str]:
     """Reject mutable third-party GitHub Action references without parsing YAML."""
 
     errors: list[str] = []
-    for reference in ACTION_USE.findall(text):
+    for reference in _action_references(text):
         if reference.startswith(("./", "docker://")):
             continue
         if "@" not in reference:
@@ -280,66 +304,76 @@ def validate_canonical(errors: list[str]) -> None:
     if actual != list(ALL_SKILLS):
         errors.append(f"skills/: expected {list(ALL_SKILLS)}, found {actual}")
     for skill in ALL_SKILLS:
-        skill_dir = skills_root / skill
-        skill_file = skill_dir / "SKILL.md"
-        if not skill_file.is_file():
-            errors.append(f"skills/{skill}/SKILL.md: missing")
-            continue
-        text = skill_file.read_text(encoding="utf-8")
-        try:
-            frontmatter, body = split_frontmatter(text)
-            metadata = read_skill_metadata(skill_dir)
-        except ValueError as metadata_error:
-            errors.append(f"skills/{skill}/SKILL.md: {metadata_error}")
-            continue
-        for name_error in skill_name_errors(metadata["name"]):
-            errors.append(f"skills/{skill}/SKILL.md: {name_error}")
-        top_keys = {match.group(1) for match in re.finditer(r"(?m)^([A-Za-z][A-Za-z0-9_.-]*):", frontmatter)}
-        unexpected = sorted(top_keys - ALLOWED_CANONICAL_TOP_KEYS)
-        if unexpected:
-            errors.append(f"skills/{skill}/SKILL.md: nonportable canonical keys: {unexpected}")
-        expected_invocation = metadata["invocation"]
-        expected = {
-            "name": skill,
-            "license": "MIT",
-            "author": "Measured Studios",
-            "version": VERSION,
-            "invocation": expected_invocation,
-        }
-        for key, value in expected.items():
-            if metadata[key] != value:
-                errors.append(f"skills/{skill}/SKILL.md: {key} must be {value!r}, found {metadata[key]!r}")
-        if metadata["plugin"] not in PLUGIN_SPECS:
-            errors.append(f"skills/{skill}/SKILL.md: unsupported plugin {metadata['plugin']!r}")
-        if metadata["invocation"] not in {"implicit", "explicit"}:
-            errors.append(f"skills/{skill}/SKILL.md: invocation must be implicit or explicit")
-        if not 1 <= len(metadata["description"]) <= 1024:
-            errors.append(f"skills/{skill}/SKILL.md: description must be 1 to 1024 characters")
-        if metadata["claude_explicit"] != "false":
-            errors.append(f"skills/{skill}/SKILL.md: Claude controls belong only in generated output")
-        if metadata["risk_class"] not in ALLOWED_RISK_CLASSES:
-            errors.append(
-                f"skills/{skill}/SKILL.md: risk_class must be one of {sorted(ALLOWED_RISK_CLASSES)}, "
-                f"found {metadata['risk_class']!r}"
-            )
-        if "TODO" in text or "TBD" in text:
-            errors.append(f"skills/{skill}/SKILL.md: unresolved placeholder")
-        if not body.lstrip().startswith("# "):
-            errors.append(f"skills/{skill}/SKILL.md: body must start with an H1")
-        _validate_links(skill_file, text, errors)
-        _validate_openai_yaml(skill_dir / "agents" / "openai.yaml", expected_invocation == "explicit", skill, errors)
+        validate_skill_directory(skill, skills_root / skill, errors)
 
-        for item in skill_dir.rglob("*"):
-            if item.is_dir() or item == skill_file or item == skill_dir / "agents" / "openai.yaml":
-                continue
-            if "references" not in item.parts or item.suffix.lower() not in {".md", ".json", ".txt"}:
-                errors.append(f"{item.relative_to(ROOT)}: catalog permits only focused reference resources")
-            elif item.is_file():
-                _validate_links(item, item.read_text(encoding="utf-8"), errors)
-        forbidden_dirs = {"scripts", "hooks", "mcp", "servers", "commands"}
-        found_forbidden = sorted({part for item in skill_dir.rglob("*") for part in item.parts if part in forbidden_dirs})
-        if found_forbidden:
-            errors.append(f"skills/{skill}: forbidden skill directories: {found_forbidden}")
+
+def validate_skill_directory(skill: str, skill_dir: Path, errors: list[str]) -> None:
+    """Check one canonical skill directory. Tests call this on a temporary copy."""
+
+    skill_file = skill_dir / "SKILL.md"
+    for entry in (skill_dir, *skill_dir.rglob("*")):
+        if entry.is_symlink():
+            errors.append(f"{entry.relative_to(ROOT)}: symlinks are not allowed in canonical skills")
+    if not skill_file.is_file():
+        errors.append(f"skills/{skill}/SKILL.md: missing")
+        return
+    text = skill_file.read_text(encoding="utf-8")
+    try:
+        frontmatter, body = split_frontmatter(text)
+        metadata = read_skill_metadata(skill_dir)
+    except ValueError as metadata_error:
+        errors.append(f"skills/{skill}/SKILL.md: {metadata_error}")
+        return
+    for name_error in skill_name_errors(metadata["name"]):
+        errors.append(f"skills/{skill}/SKILL.md: {name_error}")
+    top_keys = {match.group(1) for match in re.finditer(r"(?m)^([A-Za-z][A-Za-z0-9_.-]*):", frontmatter)}
+    unexpected = sorted(top_keys - ALLOWED_CANONICAL_TOP_KEYS)
+    if unexpected:
+        errors.append(f"skills/{skill}/SKILL.md: nonportable canonical keys: {unexpected}")
+    expected_invocation = metadata["invocation"]
+    expected = {
+        "name": skill,
+        "license": "MIT",
+        "author": "Measured Studios",
+        "version": VERSION,
+        "invocation": expected_invocation,
+    }
+    for key, value in expected.items():
+        if metadata[key] != value:
+            errors.append(f"skills/{skill}/SKILL.md: {key} must be {value!r}, found {metadata[key]!r}")
+    if metadata["plugin"] not in PLUGIN_SPECS:
+        errors.append(f"skills/{skill}/SKILL.md: unsupported plugin {metadata['plugin']!r}")
+    if metadata["invocation"] not in {"implicit", "explicit"}:
+        errors.append(f"skills/{skill}/SKILL.md: invocation must be implicit or explicit")
+    if not 1 <= len(metadata["description"]) <= 1024:
+        errors.append(f"skills/{skill}/SKILL.md: description must be 1 to 1024 characters")
+    if metadata["claude_explicit"] != "false":
+        errors.append(f"skills/{skill}/SKILL.md: Claude controls belong only in generated output")
+    if metadata["risk_class"] not in ALLOWED_RISK_CLASSES:
+        errors.append(
+            f"skills/{skill}/SKILL.md: risk_class must be one of {sorted(ALLOWED_RISK_CLASSES)}, "
+            f"found {metadata['risk_class']!r}"
+        )
+    if "TODO" in text or "TBD" in text:
+        errors.append(f"skills/{skill}/SKILL.md: unresolved placeholder")
+    if not body.lstrip().startswith("# "):
+        errors.append(f"skills/{skill}/SKILL.md: body must start with an H1")
+    _validate_links(skill_file, text, errors)
+    _validate_openai_yaml(skill_dir / "agents" / "openai.yaml", expected_invocation == "explicit", skill, errors)
+
+    for item in skill_dir.rglob("*"):
+        if item.is_dir() or item == skill_file or item == skill_dir / "agents" / "openai.yaml":
+            continue
+        if "references" not in item.parts or item.suffix.lower() not in {".md", ".json", ".txt"}:
+            errors.append(f"{item.relative_to(ROOT)}: catalog permits only focused reference resources")
+        elif item.is_file():
+            _validate_links(item, item.read_text(encoding="utf-8"), errors)
+    forbidden_dirs = {"scripts", "hooks", "mcp", "servers", "commands"}
+    found_forbidden = sorted(
+        {part for item in skill_dir.rglob("*") for part in item.relative_to(skill_dir).parts if part in forbidden_dirs}
+    )
+    if found_forbidden:
+        errors.append(f"skills/{skill}: forbidden skill directories: {found_forbidden}")
 
 
 def validate_evals(errors: list[str]) -> None:
