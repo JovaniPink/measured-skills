@@ -1,4 +1,4 @@
-# Migrate to Measured Skills 0.17.0
+# Migrate to Measured Skills
 
 Measured Skills is maintained by Measured Studios. The homepage is https://measuredstudios.com/skills. The GitHub source is https://github.com/JovaniPink/measured-skills. The September 26, 2026 source-location migration supersedes the earlier decision to retain `JovaniPink/skills`. Ownership remains JovaniPink; no organization transfer or installed-plugin upgrade is part of this rename.
 
@@ -19,10 +19,14 @@ This is a breaking pre-1.0 identity change. Skill names remain stable; plugin-qu
 ## Upgrade and rollback
 
 1. Record exact installed versions, enabled packs, client versions, and current configuration. Preserve a recoverable local configuration backup without publishing it.
-2. Prepare 0.17.0 in an isolated client configuration or pilot workspace. Disable old catalog plugins there before enabling new ones; never discover both identities for the same skill.
+2. Prepare the current version (the 0.18.0 candidate) in an isolated client configuration or pilot workspace. Disable old catalog plugins there before enabling new ones; never discover both identities for the same skill.
 3. Install only the chosen pack through the tested client's native plugin flow. Check its inventory and generated file hashes in a fresh session. Recheck explicit-only behavior before enabling delivery workflows.
 4. Promote only after the pilot criteria pass. Until then the normal configuration remains unchanged.
 5. To roll back, disable new identities, restore the previous configuration and the immutable 0.16.0 distribution, then verify one copy of each intended skill in a fresh session. Do not rebuild an old release from new source or relabel new bytes 0.16.0.
+
+## Moving from 0.17.x to 0.18.0
+
+The 0.18.0 candidate keeps every pack name and skill name from 0.17.x, so there is no identity mapping to apply. It adds two packs, `measured-swift-workflows` and `measured-nextjs-workflows`, and seven skills. That brings the catalog to 86 skills in 11 packs. Install a new pack only if your work needs it, and check its skills in a fresh task first. Three of the new skills are explicit-only: `ios-journey-verification`, `nextjs-feature-delivery`, and `swiftui-feature-delivery`. The Antigravity packs hold the implicit skills only. See the [0.18.0 candidate record](client-candidate-v0.18.0.md) for what was and was not checked.
 
 ## Focused build selection
 

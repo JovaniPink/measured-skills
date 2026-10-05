@@ -1,16 +1,47 @@
 # Testing and Validation
 
-Run from the repository root:
+Run these from the repository root.
+
+## Set up
+
+Use Python 3.12, the version CI runs. Other versions may work, but CI does not check them. Install the tool versions pinned in `requirements-ci-linux.txt`.
+
+On the platform CI runs on (Linux on x86-64 with Python 3.12), install from the hash-locked file:
+
+```sh
+python3 -m pip install --require-hashes --only-binary=:all: -r requirements-ci-linux.txt
+```
+
+On any other system, including other Linux CPU types, install the same versions without the hashes:
+
+```sh
+python3 -m pip install PyYAML==6.0.3 mypy==1.20.2 ruff==0.15.12 types-PyYAML==6.0.12.20260815
+```
+
+## After you change a skill
+
+Regenerate the client packages and the Claude.ai archives:
 
 ```sh
 python3 scripts/build_distributions.py
 python3 scripts/package_claude_ai.py
+```
+
+## Run the checks
+
+These run in the order CI runs them:
+
+```sh
 python3 scripts/check_workflows.py
 python3 -m mypy --strict scripts tests
 python3 -m ruff check scripts tests
+python3 scripts/build_distributions.py --check
+python3 scripts/package_claude_ai.py
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 ```
+
+Each command should exit with status 0. `scripts/validate.py` ends with `All deterministic catalog validations passed.` It already runs the public-boundary scan. To run only that scan, use `python3 scripts/check_public_boundary.py`. If a change affects generated files, also refresh the release manifest as described in [Contributing](../CONTRIBUTING.md).
 
 The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, originality, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
 

@@ -10,13 +10,14 @@ cd measured-skills
 git status --short --branch
 ```
 
-Check out the reviewed tag so your copy cannot move under you:
+Check out a commit you have reviewed, so your copy cannot move under you:
 
 ```sh
-git checkout v0.16.0
+git log -5 --format='%H %s'
+git checkout <full-commit-hash>
 ```
 
-A full commit works too. Try not to test from the default branch, because it changes.
+Replace `<full-commit-hash>` with the 40-character hash from the first column of a commit you read. Git then reports a detached HEAD at that commit. This catalog has no release tag for 0.18.0 yet. The older `v0.16.0` tag predates the Measured Skills names, so do not use it with these guides. Try not to test from the default branch, because it changes.
 
 ## 2. Check the files
 
@@ -39,10 +40,16 @@ Start with the skills your task needs. A pack is a group of skills you install t
 - `measured-engineering-review`: review correctness and risk.
 - `measured-engineering-delivery`: coordinate bounded execution and delivery.
 - `measured-reasoning`: explain code, improve writing, and hand off work.
+- `measured-operations`: handle requirements, decisions, measurement, adoption, and incidents.
+- `measured-stack-profiles`: apply language and platform guidance, such as Python, Go, and Terraform.
+- `measured-ai-systems`: evaluate AI behavior, context reliability, and source-to-output checks.
+- `measured-agent-platforms`: review agent architecture, tools, protocols, and retrieval.
+- `measured-swift-workflows`: deliver bounded SwiftUI work, review Swift concurrency and persistence, and run fixture journeys.
+- `measured-nextjs-workflows`: deliver bounded Next.js work, review cache and authorization boundaries, and diagnose React rendering.
 
-Read the [current candidate checks](client-candidate-v0.17.0.md) before you rely on a renamed pack. Before 0.17.0, one engineering pack held all of this work. It was held after a live motion-review failure, and both command lines cleared it on 2026-09-10. That result stays in the [0.16.0 record](client-candidate-v0.16.0.md). It does not carry over to the three new engineering packs.
+Read the [current candidate checks](client-candidate-v0.18.0.md) before you rely on a renamed pack. Before 0.17.0, one engineering pack held all of this work. It was held after a live motion-review failure, and both command lines cleared it on 2026-09-10. That result stays in the [0.16.0 record](client-candidate-v0.16.0.md). It does not carry over to the three new engineering packs.
 
-The [selection guide](choose-your-skills.md) lists the other packs.
+The [selection guide](choose-your-skills.md) helps you choose among all 11 packs.
 
 ## 4. Follow your client's setup guide
 
@@ -50,7 +57,7 @@ The [selection guide](choose-your-skills.md) lists the other packs.
 | --- | --- | --- |
 | Codex | [Setup and checks](clients/codex.md) | Native plugins |
 | Claude Code | [Setup and checks](clients/claude.md) | Native plugins; separate account ZIPs |
-| Antigravity | [Setup and checks](clients/antigravity.md) | Offline preview; loading check still needed |
+| Antigravity | [Setup and checks](clients/antigravity.md) | Generated packs and an offline preview; loading check still needed |
 
 First list existing skills and look for old copies. Then review the package before installing it. Use a fresh task for the check.
 

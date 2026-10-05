@@ -14,7 +14,7 @@ Equal priority does not mean every feature already works everywhere. We record w
 
 A plugin is a group of skills. A skill is a set of instructions for a kind of task. A CLI is an app you use by typing commands in a terminal.
 
-The [current candidate record](client-candidate-v0.17.1.md) lists install results and active holds. A prepared package is not a recommendation to enable it before its checks pass.
+The [current candidate record](client-candidate-v0.18.0.md) lists install results and active holds. A prepared package is not a recommendation to enable it before its checks pass.
 
 ## What each client must pass
 

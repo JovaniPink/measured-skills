@@ -25,7 +25,7 @@ Antigravity setup, packaging, and manual checks have equal priority with Codex a
 
 Each paired run must use fresh pinned worktrees, a natural empty configuration home, fixed model and effort, sandboxed scoped permissions, a fixed network policy, and headless JSON or stream-JSON evidence. The grader must parse terminal result status and tool events; process exit code zero is not sufficient evidence of success.
 
-The Delivery TypeScript profile includes the explicit-only `publish-change-safely` skill. Version 0.17.1 excludes it and every other explicit-only workflow from Antigravity packs. Google's documented skill fields do not establish an automatic-selection control. The disposable CLI 1.2.9 package checks cover all nine implicit-only packs; full catalog behavioral qualification remains pending.
+The Delivery TypeScript profile includes the explicit-only `publish-change-safely` skill. Versions 0.17.1 and 0.18.0 exclude it and every other explicit-only workflow from Antigravity packs. Google's documented skill fields do not establish an automatic-selection control. The disposable CLI 1.2.9 package checks cover all nine implicit-only packs; full catalog behavioral qualification remains pending.
 
 ## Packaging boundary
 

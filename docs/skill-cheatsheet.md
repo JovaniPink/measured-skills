@@ -1,6 +1,6 @@
 # Measured Skills Cheatsheet
 
-Use this page to find a skill fast. The catalog contains 86 skills in nine packs. Each row names one skill, says what it does, and says how it gets picked.
+Use this page to find a skill fast. The catalog contains 86 skills in 11 packs. Each row names one skill, says what it does, and says how it gets picked.
 
 The [glossary](glossary.md) defines the words on this page. To install a pack, read [How to Use Measured Skills](README.md). For a longer write-up of each skill, read the [Skill Catalog Reader Guide](skill-catalog-reader-guide.md).
 
@@ -188,10 +188,6 @@ Use this pack when you are designing or reviewing an agent system. It is not a r
 | Improve technical documentation | `high-signal-technical-writing` |
 | Continue work in another session or client | `task-handoff` |
 
-## Safety reminder
-
-A skill guides workflow and judgment. It does not replace repository protections, host permissions, tests, access controls, or human approval. Keep local, committed, pushed, reviewed, merged, deployed, and live states separate.
-
 ## Next.js workflows: measured-nextjs-workflows
 
 | Skill | Purpose | Invocation |
@@ -208,3 +204,7 @@ A skill guides workflow and judgment. It does not replace repository protections
 | `swift-concurrency-diagnosis` | Diagnose Swift actor isolation, Sendable diagnostics, task lifetime, cancellation, or reentrancy using actual compiler settings. Read-only; do not trigger for formatting, ordinary synchronous logic, or implementation without a concurrency question. | Implicit |
 | `swift-persistence-contract-review` | Review Swift persistence mutation authority, SwiftData model identity, deletion, migration compatibility, or synchronization contracts. Read-only; do not trigger for visual styling, generic database advice, or executing a migration. | Implicit |
 | `swiftui-feature-delivery` | Deliver an explicitly requested SwiftUI feature within approved files and targets. Use for bounded implementation with state ownership, availability, accessibility, and test evidence; do not trigger for read-only review or generic Swift questions. | Explicit-only |
+
+## Safety reminder
+
+A skill guides workflow and judgment. It does not replace repository protections, host permissions, tests, access controls, or human approval. Keep local, committed, pushed, reviewed, merged, deployed, and live states separate.
