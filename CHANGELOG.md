@@ -16,6 +16,13 @@ This entry lists instruction changes made after the 0.18.0 content recorded in `
 - Document that qualification records name the model that served every turn and that a run with a model-switch notice is rerun. The schema and grader do not check this yet.
 - These are authored instruction changes. No model run has measured their effect.
 
+### 0.18.0 candidate: October source review
+
+- Review all 27 primary sources whose fingerprints changed since their last review. Every one still supports the instructions that cite it, so no skill text changes.
+- Update 24 reviewed fingerprints and advance the global review date to 2026-10-05. Three OWASP fingerprints stay held because repeated requests return different bytes, so the online freshness gate keeps failing for those URLs only.
+- Add review records for the three Next.js and React sources that back the owned workflows.
+- Record the receipt, decision ledger, and summary under `docs/audits/source-review-2026-10-05*`, and check the September review against a snapshot of the pins it left behind.
+
 ### 0.18.0 candidate: owned Swift and Next.js workflows
 
 - Add seven original workflows in two new packs, bringing the catalog to 86 skills in 11 packs. `measured-swift-workflows` holds `swiftui-feature-delivery`, `swift-concurrency-diagnosis`, `swift-persistence-contract-review`, and `ios-journey-verification`. `measured-nextjs-workflows` holds `nextjs-feature-delivery`, `nextjs-cache-auth-boundary-review`, and `react-rendering-performance-diagnosis`.

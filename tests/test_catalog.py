@@ -739,6 +739,11 @@ class CatalogTests(unittest.TestCase):
             "https://www.postgresql.org/docs/current/",
             "https://www.antigravity.google/docs/plugins?tab=cli",
         })
+        expected.update({
+            "https://nextjs.org/docs/app/guides/ai-agents",
+            "https://nextjs.org/docs/app/guides/authentication",
+            "https://react.dev/learn/you-might-not-need-an-effect",
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():
