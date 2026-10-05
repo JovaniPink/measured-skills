@@ -1,7 +1,7 @@
 {
   "$schema": "./roadmap-schema.json",
   "roadmap_version": 1,
-  "updated_on": "2026-08-25",
+  "updated_on": "2026-10-05",
   "tracks": [
     {
       "id": "engineering-lifecycle",
@@ -246,6 +246,7 @@
       "entry_criteria": [
         "the workflow is independently authored from current primary CI platform documentation pinned in provenance",
         "routing separates this skill from dependency-supply-chain-review for pins, credentials, and artifacts and from operational-readiness-review for deployment and rollback",
+        "the skill is read-only and does not edit workflows, trigger or re-run CI, change repository settings, or perform deployment or provider actions, which stay separately authorized",
         "an acceptance fixture contains a deliberately broken job dependency or unsafe trigger that the review must find, and a clean workflow produces no invented finding",
         "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
         "generated artifacts pass originality, repository-independence, security, determinism, and package-boundary checks"
