@@ -27,7 +27,10 @@ NORMALIZED_HTML_HOSTS = frozenset(
     }
 )
 TRAILING_WHITESPACE_NORMALIZED_URLS = frozenset(
-    {"https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/"}
+    {
+        "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+        "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+    }
 )
 # Streamed pages whose markup changes per request while their readable text does not.
 # Each entry is a reviewed exception; the marker hashes visible text only.

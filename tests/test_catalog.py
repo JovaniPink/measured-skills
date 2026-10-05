@@ -31,6 +31,7 @@ from cataloglib import (  # noqa: E402
 )
 from check_upstream_freshness import (  # noqa: E402
     NORMALIZED_HTML_HOSTS,
+    TRAILING_WHITESPACE_NORMALIZED_URLS,
     VISIBLE_TEXT_URLS,
     _normalized_content_sha256,
     _visible_text_sha256,
@@ -1835,6 +1836,20 @@ class CatalogTests(unittest.TestCase):
         self.assertNotEqual(
             _normalized_content_sha256(cached),
             _normalized_content_sha256(cached.replace(b"Official", b"Changed")),
+        )
+        # Real page endings: no comment and CRLF, or LF plus a fresh batcache comment.
+        plain = b"<main>Official authority content</main>\r\n</html>\r\n"
+        commented = (
+            b"<main>Official authority content</main>\r\n</html>\n"
+            b"<!--\n\tgenerated in 5.722 seconds\n\t1493019 bytes batcached for 300 seconds\n-->\n"
+        )
+        self.assertEqual(
+            _normalized_content_sha256(plain, strip_trailing=True),
+            _normalized_content_sha256(commented, strip_trailing=True),
+        )
+        self.assertIn(
+            "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+            TRAILING_WHITESPACE_NORMALIZED_URLS,
         )
         other_comment = body + b"<!-- generated in 3 seconds by an editor note -->"
         self.assertNotEqual(
