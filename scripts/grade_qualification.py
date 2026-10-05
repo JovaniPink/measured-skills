@@ -23,6 +23,8 @@ def grade(record: dict[str, Any], frozen_case: bytes) -> dict[str, str]:
         raise ValueError("frozen case bytes do not match the record hash")
     if (record["case_id"], record["skill"]) != (case["case_id"], case["skill"]):
         raise ValueError("record does not identify the frozen case and skill")
+    if record["model_switch_notices"] or set(record["models_served"]) != {record["model"]}:
+        raise ValueError("invalid run: model switch or fallback observed; rerun instead of grading")
     obligations = record["obligations"]
     ids = [item["id"] for item in obligations]
     if len(ids) != len(set(ids)):
