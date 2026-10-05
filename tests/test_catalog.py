@@ -31,7 +31,9 @@ from cataloglib import (  # noqa: E402
 )
 from check_upstream_freshness import (  # noqa: E402
     NORMALIZED_HTML_HOSTS,
+    VISIBLE_TEXT_URLS,
     _normalized_content_sha256,
+    _visible_text_sha256,
     check as check_upstream_freshness,
 )
 from check_workflows import (  # noqa: E402
@@ -1818,6 +1820,87 @@ class CatalogTests(unittest.TestCase):
         self.assertNotEqual(
             _normalized_content_sha256(first), _normalized_content_sha256(changed)
         )
+
+    def test_freshness_normalization_ignores_only_batcache_timing_comments(self) -> None:
+        body = b"<main>Official authority content</main>\n"
+        cached = body + (
+            b"<!--\n\tgenerated 158 seconds ago\n\tgenerated in 3.968 seconds\n"
+            b"\tserved from batcache in 0.004 seconds\n\texpires in 142 seconds\n-->"
+        )
+        fresh = body + (
+            b"<!--\n\tgenerated in 3.598 seconds\n\t81234 bytes batcached for 300 seconds\n-->"
+        )
+        self.assertEqual(_normalized_content_sha256(body), _normalized_content_sha256(cached))
+        self.assertEqual(_normalized_content_sha256(body), _normalized_content_sha256(fresh))
+        self.assertNotEqual(
+            _normalized_content_sha256(cached),
+            _normalized_content_sha256(cached.replace(b"Official", b"Changed")),
+        )
+        other_comment = body + b"<!-- generated in 3 seconds by an editor note -->"
+        self.assertNotEqual(
+            _normalized_content_sha256(body), _normalized_content_sha256(other_comment)
+        )
+
+    def test_visible_text_marker_ignores_markup_and_script_order_only(self) -> None:
+        first = (
+            b'<html data-dpl-id="a"><head><style>.x{}</style></head><body>'
+            b"<h1>ASVS</h1><p>Verifiable   requirements.</p>"
+            b'<script>$RC("B:1","S:1")</script><script>self.__next_f.push([1,"a"])</script>'
+            b"</body></html>"
+        )
+        second = (
+            b'<html data-dpl-id="a"><head></head><body><h1 class="t">ASVS</h1>\n'
+            b'<script>self.__next_f.push([1,"b"])</script><p>Verifiable requirements.</p>'
+            b"<template>hidden</template><noscript>enable js</noscript></body></html>"
+        )
+        changed = second.replace(b"Verifiable", b"Optional")
+        self.assertEqual(_visible_text_sha256(first), _visible_text_sha256(second))
+        self.assertNotEqual(_visible_text_sha256(first), _visible_text_sha256(changed))
+
+    def test_visible_text_marker_is_limited_to_reviewed_urls(self) -> None:
+        from check_upstream_freshness import _fetch_marker
+
+        schema = json.loads(
+            (ROOT / "catalog" / "upstream-pins-schema.json").read_text(encoding="utf-8")
+        )
+        kinds = schema["properties"]["sources"]["items"]["properties"]["marker_kind"]["enum"]
+        self.assertIn("visible-text-sha256", kinds)
+        self.assertEqual(
+            {"https://owasp.org/www-project-application-security-verification-standard/"},
+            set(VISIBLE_TEXT_URLS),
+        )
+
+        class Response:
+            headers: ClassVar[dict[str, str]] = {"Last-Modified": "Sun, 23 Aug 2026 18:16:51 GMT"}
+
+            def __enter__(self) -> Response:
+                return self
+
+            def __exit__(
+                self,
+                exc_type: type[BaseException] | None,
+                exc_value: BaseException | None,
+                traceback: TracebackType | None,
+            ) -> Literal[False]:
+                return False
+
+            def read(self) -> bytes:
+                return b"<p>Readable text</p><script>x()</script>"
+
+        with patch(
+            "check_upstream_freshness.urllib.request.urlopen", return_value=Response()
+        ):
+            with self.assertRaises(ValueError):
+                _fetch_marker("https://example.com/page", preferred_kind="visible-text-sha256")
+            url = next(iter(VISIBLE_TEXT_URLS))
+            self.assertEqual(
+                ("visible-text-sha256", _visible_text_sha256(b"<p>Readable text</p>")),
+                _fetch_marker(url),
+            )
+            self.assertEqual(
+                ("visible-text-sha256", _visible_text_sha256(b"<p>Readable text</p>")),
+                _fetch_marker(url, preferred_kind="visible-text-sha256"),
+            )
 
     def test_dynamic_official_document_hosts_use_normalized_markers(self) -> None:
         self.assertTrue(

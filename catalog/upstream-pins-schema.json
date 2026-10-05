@@ -43,7 +43,8 @@
               "etag",
               "last-modified",
               "content-sha256",
-              "normalized-content-sha256"
+              "normalized-content-sha256",
+              "visible-text-sha256"
             ]
           },
           "marker_value": {

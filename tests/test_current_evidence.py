@@ -194,7 +194,10 @@ class CurrentEvidenceTests(unittest.TestCase):
             (ROOT / "tests/fixtures/upstream-pins-before-october5.json").read_text()
         )
         before = {item["source_url"]: item for item in fixture["snapshot"]["sources"]}
-        pins = json.loads((ROOT / "catalog/upstream-pins.json").read_text())
+        # The OWASP stabilization later repinned the three held pages, so check October against the pins it left behind.
+        pins = json.loads(
+            (ROOT / "tests/fixtures/upstream-pins-before-owasp-stabilization.json").read_text()
+        )["snapshot"]
         current = {item["source_url"]: item for item in pins["sources"]}
         initial = json.loads((ROOT / "docs/audits/source-review-2026-10-05.json").read_text())
         reviewed = json.loads(
@@ -226,6 +229,41 @@ class CurrentEvidenceTests(unittest.TestCase):
             if not record["pin_updated"]:
                 self.assertIsNone(record["reviewed_marker"])
                 self.assertGreater(len(set(record["resampled_markers"])), 1)
+
+    def test_owasp_stabilization_repins_only_the_held_owasp_pages(self) -> None:
+        fixture = json.loads(
+            (ROOT / "tests/fixtures/upstream-pins-before-owasp-stabilization.json").read_text()
+        )
+        before = {item["source_url"]: item for item in fixture["snapshot"]["sources"]}
+        pins = json.loads((ROOT / "catalog/upstream-pins.json").read_text())
+        current = {item["source_url"]: item for item in pins["sources"]}
+        audit = json.loads(
+            (ROOT / "docs/audits/owasp-pin-stabilization-2026-10-05.json").read_text()
+        )
+        records = {item["source_url"]: item for item in audit["records"]}
+        self.assertEqual(fixture["source_commit"], audit["source_revision"])
+        self.assertEqual(fixture["snapshot"]["reviewed_on"], pins["reviewed_on"])
+        self.assertEqual(set(before), set(current))
+        self.assertEqual(
+            {
+                "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+                "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+                "https://owasp.org/www-project-application-security-verification-standard/",
+            },
+            set(records),
+        )
+        for url, old_pin in before.items():
+            record = records.get(url)
+            if record is None or not record["pin_updated"]:
+                self.assertEqual(old_pin, current[url])
+                continue
+            markers = {sample["marker"] for sample in record["samples"]}
+            self.assertGreaterEqual(len(record["samples"]), 10)
+            self.assertEqual({record["reviewed_marker"]}, markers)
+            self.assertEqual(
+                record["reviewed_marker"],
+                f"{current[url]['marker_kind']}:{current[url]['marker_value']}",
+            )
 
     def test_shared_schema_accepts_all_historical_manifests(self) -> None:
         schema = json.loads((ROOT / "releases/manifest-schema.json").read_text())

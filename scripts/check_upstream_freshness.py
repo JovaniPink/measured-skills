@@ -9,6 +9,7 @@ import json
 import re
 import urllib.request
 from datetime import date
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -28,6 +29,43 @@ NORMALIZED_HTML_HOSTS = frozenset(
 TRAILING_WHITESPACE_NORMALIZED_URLS = frozenset(
     {"https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/"}
 )
+# Streamed pages whose markup changes per request while their readable text does not.
+# Each entry is a reviewed exception; the marker hashes visible text only.
+VISIBLE_TEXT_URLS = frozenset(
+    {"https://owasp.org/www-project-application-security-verification-standard/"}
+)
+NON_VISIBLE_TAGS = frozenset({"noscript", "script", "style", "svg", "template"})
+
+
+class _VisibleText(HTMLParser):
+    """Collect text that a reader would see, skipping scripts, styles, and templates."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in NON_VISIBLE_TAGS:
+            self.depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in NON_VISIBLE_TAGS and self.depth:
+            self.depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if not self.depth:
+            self.parts.append(data)
+
+
+def _visible_text_sha256(payload: bytes) -> str:
+    """Hash the readable text of a page, ignoring markup and script chunk order."""
+
+    parser = _VisibleText()
+    parser.feed(payload.decode("utf-8"))
+    parser.close()
+    text = " ".join(" ".join(parser.parts).split())
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def _normalized_content(payload: bytes) -> str:
@@ -71,6 +109,13 @@ def _normalized_content(payload: bytes) -> str:
             r'<script[^>]*src="https://static\.cloudflareinsights\.com/beacon\.min\.js/[^"]+"[^>]*></script>',
             "",
         ),
+        (
+            # WordPress batcache timing comment, in its freshly generated or cached form.
+            r"<!--\s*(?:generated \d+ seconds ago\s+)?generated in [\d.]+ seconds\s+"
+            r"(?:served from batcache in [\d.]+ seconds\s+expires in \d+ seconds"
+            r"|\d+ bytes batcached for \d+ seconds)\s*-->",
+            "",
+        ),
     )
     for pattern, replacement in substitutions:
         text = re.sub(pattern, replacement, text)
@@ -99,6 +144,10 @@ def _fetch_marker(url: str, preferred_kind: str | None = None) -> tuple[str, str
         etag = response.headers.get("ETag")
         last_modified = response.headers.get("Last-Modified")
         host = (urlparse(url).hostname or "").casefold()
+        if url in VISIBLE_TEXT_URLS and preferred_kind in (None, "visible-text-sha256"):
+            return "visible-text-sha256", _visible_text_sha256(response.read())
+        if preferred_kind == "visible-text-sha256":
+            raise ValueError(f"visible-text-sha256 is not allowed for {url}")
         if preferred_kind == "normalized-content-sha256":
             return "normalized-content-sha256", _normalized_content_sha256(
                 response.read(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
