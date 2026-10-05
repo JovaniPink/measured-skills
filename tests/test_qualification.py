@@ -12,7 +12,7 @@ from grade_qualification import grade  # noqa: E402
 
 
 def record() -> dict[str, Any]:
-    return {"format_version": 1, "repository": "synthetic/catalog", "source_revision": "a" * 40, "artifact_sha256": "b" * 64, "skill": "synthetic-review", "case_id": "safe", "case_sha256": "c" * 64, "client_surface": "synthetic-cli", "client_version": "1", "model": "synthetic", "permission_mode": "bounded", "diagnostic_bypass": False, "installation_scope": "disposable", "loaded_sources": ["synthetic-review"], "condition": "skill", "trial": 1, "turn_index": 1, "context_tokens": None, "compaction_events": 0, "prefix_sha256": "d" * 64, "grader": "synthetic-oracle", "evidence_references": ["fixture"], "operator_seconds": 0, "tokens": None, "cost_usd": None, "obligations": [{"id": "truth", "kind": "provenance", "mandatory": True, "result": "pass", "evidence": "fixture bytes"}, {"id": "headings", "kind": "presentation", "mandatory": False, "result": "pass", "evidence": "sections"}]}
+    return {"format_version": 1, "repository": "synthetic/catalog", "source_revision": "a" * 40, "artifact_sha256": "b" * 64, "skill": "synthetic-review", "case_id": "safe", "case_sha256": "c" * 64, "client_surface": "synthetic-cli", "client_version": "1", "model": "synthetic", "models_served": ["synthetic"], "model_switch_notices": 0, "permission_mode": "bounded", "diagnostic_bypass": False, "installation_scope": "disposable", "loaded_sources": ["synthetic-review"], "condition": "skill", "trial": 1, "turn_index": 1, "context_tokens": None, "compaction_events": 0, "prefix_sha256": "d" * 64, "grader": "synthetic-oracle", "evidence_references": ["fixture"], "operator_seconds": 0, "tokens": None, "cost_usd": None, "obligations": [{"id": "truth", "kind": "provenance", "mandatory": True, "result": "pass", "evidence": "fixture bytes"}, {"id": "headings", "kind": "presentation", "mandatory": False, "result": "pass", "evidence": "sections"}]}
 
 
 def case_bytes(value: dict[str, Any]) -> bytes:
@@ -77,3 +77,25 @@ class QualificationTests(unittest.TestCase):
         self.assertEqual("blocked", grade(value, frozen)["primary"])
         value["condition"] = "baseline"
         self.assertEqual("pass", grade(value, frozen)["primary"])
+
+    def test_model_switch_or_fallback_invalidates_the_run(self) -> None:
+        value = record()
+        frozen = case_bytes(value)
+        value["model_switch_notices"] = 1
+        with self.assertRaisesRegex(ValueError, "model switch"):
+            grade(value, frozen)
+        value = record()
+        value["models_served"] = ["synthetic", "fallback"]
+        with self.assertRaisesRegex(ValueError, "model switch"):
+            grade(value, case_bytes(value))
+        value = record()
+        value["models_served"] = ["other"]
+        with self.assertRaisesRegex(ValueError, "model switch"):
+            grade(value, case_bytes(value))
+
+    def test_model_evidence_fields_are_required(self) -> None:
+        for key in ("models_served", "model_switch_notices"):
+            value = record()
+            del value[key]
+            with self.assertRaises(ValueError):
+                grade(value, case_bytes(value))

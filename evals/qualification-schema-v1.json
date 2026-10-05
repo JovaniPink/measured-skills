@@ -13,6 +13,8 @@
     "client_surface",
     "client_version",
     "model",
+    "models_served",
+    "model_switch_notices",
     "permission_mode",
     "diagnostic_bypass",
     "installation_scope",
@@ -69,6 +71,18 @@
     "model": {
       "type": "string",
       "minLength": 1
+    },
+    "models_served": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "model_switch_notices": {
+      "type": "integer",
+      "minimum": 0
     },
     "permission_mode": {
       "type": "string",
