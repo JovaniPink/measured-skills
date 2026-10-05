@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "fb1471a6c5357507ab61b0136efdf65be882af7a",
-  "created_on": "2026-10-04",
+  "source_commit": "e3ed495f41fbf4b6dcbae3a880ce7a3801c6d209",
+  "created_on": "2026-10-05",
   "artifacts": [
     {
       "kind": "file",
@@ -112,7 +112,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/agentic-system-security-review-0.18.0.zip",
-      "sha256": "f76ea3d1aaccf5d90ed60f3a80c3870c69f2113f5a7ecdcdc7d997aadb0b1893"
+      "sha256": "368fbe96b16dd2d051508f05a8d86ff196636e7799792af90c7aef2387ed08bb"
     },
     {
       "kind": "zip",
@@ -512,7 +512,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-agent-platforms",
-      "sha256": "bb6cab89bd771e8e3ae3fd9624ae77e4282ac9fd0aba6d69799a59c9ad658e68"
+      "sha256": "cfe15aa35de889f0698b4a0d5918862dae7f5f140d2d4acaf7be0473f8170866"
     },
     {
       "kind": "tree",
@@ -567,7 +567,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-agent-platforms",
-      "sha256": "f5ff77f8e41428b7839b38974e12dd9fb8d3d87f0b6e1b1e0acde7e0a735a0ad"
+      "sha256": "3f9ef8acc4ecaeae6245cff6e986880e206a4ea986e8e2b72c01b110a96f2a0b"
     },
     {
       "kind": "tree",
@@ -622,7 +622,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-agent-platforms",
-      "sha256": "ed915a1c874a54019e9fa7e9dcb779461e3e8d378a59a5a690961a71e44144d8"
+      "sha256": "630a96258543cdfbec7db692c8af4c039efb3806b2d40e020b097b456f03b708"
     },
     {
       "kind": "tree",
