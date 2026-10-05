@@ -13,7 +13,7 @@ metadata:
 
 # Agentic System Security Review
 
-Review the security of a complete model-mediated system while keeping specialized scopes clear. `application-security-review` evaluates conventional application controls. `skill-security-review` evaluates a skill or plugin package. This workflow evaluates the interactions among agents, models, instructions, identity, tools, memory, retrieval, delegation, protocols, and outputs.
+Review the security of a complete model-mediated system while keeping specialized scopes clear. `application-security-review` evaluates conventional application controls. `skill-security-review` evaluates a skill or plugin package. This workflow evaluates the interactions among agents, models, instructions, identity, tools, memory, retrieval, delegation, protocols, and outputs. Read [the agentic threat domains reference](references/agentic-threat-domains.md) when building the abuse cases and the tests that would show each one.
 
 ## Preconditions
 
