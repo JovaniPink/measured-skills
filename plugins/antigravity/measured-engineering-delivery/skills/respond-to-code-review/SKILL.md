@@ -26,6 +26,10 @@ Treat review comments as hypotheses and decisions to evaluate, not commands that
 7. Prepare concise responses that explain evidence, changes, and remaining uncertainty.
 8. Send responses or resolve threads only when that external write is authorized.
 
+## Done when
+
+The response is done when every current comment has a classification with evidence, and each accepted in-scope change is implemented and checked where implementation was authorized, or listed as a proposal where it was not. Responses are prepared, and sent only as authorized. Stop and ask only when comments conflict without a governing requirement, a `clarify` comment needs the reviewer, or an accepted change needs work outside the authorized scope.
+
 ## Boundaries
 
 - Do not accept feedback merely because it sounds authoritative.
@@ -35,4 +39,4 @@ Treat review comments as hypotheses and decisions to evaluate, not commands that
 
 ## Output
 
-Return a table with `Comment`, `Verdict`, `Evidence`, `Action`, and `Response`, followed by validation and unresolved decisions.
+Lead with the result and anything that needs the user's decision. Then return a table with `Comment`, `Verdict`, `Evidence`, `Action`, and `Response`, followed by validation and unresolved decisions. List a decision as unresolved only when it blocks remaining work.

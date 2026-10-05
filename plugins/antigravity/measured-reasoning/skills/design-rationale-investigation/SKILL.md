@@ -25,6 +25,10 @@ Establish what is known about a design decision and what remains inference.
 6. Classify every conclusion as `Direct evidence`, `Strong inference`, `Weak hypothesis`, `Contradiction`, or `Unknown`.
 7. Recheck the current system before recommending action because historical reasons may no longer apply.
 
+## Done when
+
+The investigation is done when each conclusion is classified and its implication for the current decision is stated. Stop and ask before widening the search beyond the authorized sources.
+
 ## Boundaries
 
 - Do not treat commit order, code comments, or repeated claims as proof of intent by themselves.

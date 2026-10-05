@@ -26,6 +26,10 @@ Read [linked worktree model](references/linked-worktree-model.md) when the decis
 5. Require explicit authority before creating, moving, locking, repairing, pruning, or removing a worktree.
 6. Recheck the shared repository state before cleanup. Preserve worktrees with uncommitted or unintegrated work.
 
+## Done when
+
+The assessment is done when the isolation decision and proposed layout are stated with the authority each step needs. Stop and ask before any worktree change that is not already authorized.
+
 ## Boundaries
 
 - Linked worktrees share repository-level state, including refs and some configuration; they are not independent clones.

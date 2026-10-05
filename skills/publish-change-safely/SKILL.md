@@ -26,11 +26,15 @@ Perform only the publication actions the user authorized while keeping neighbori
 7. Re-read the remote before pushing when concurrent changes are plausible. Never force-push, rewrite shared history, change visibility, or alter branch protection without explicit authorization.
 8. Push only the intended branch and verify the resulting remote revision.
 9. If authorized, open or update a PR with evidence-bounded claims. Do not merge unless the user separately authorized merge.
-10. Report the verified result, exact commit, remote branch, PR/check state, requested actions left unfinished, and consequential lifecycle limits.
+10. Report the verified result first, then anything that needs the user's decision. Include the exact commit, remote branch, PR/check state, every remote state change made, requested actions left unfinished, and consequential lifecycle limits.
 
 ## Stop conditions
 
-Stop before mutation when identity, target repository, branch, staged scope, secret exposure, history divergence, or requested authority is unclear. A rejected push is not permission to rebase, merge, or force.
+Stop before mutation when identity, target repository, branch, staged scope, secret exposure, history divergence, or requested authority is unclear. A rejected push is not permission to rebase, merge, or force. A remote, repository, or branch with a similar name is a different target until its URL or identifier matches the authorized one.
+
+## Done when
+
+The work is done when the authorized boundary is reached and, if that boundary includes a push, the remote readback matches the intended revision.
 
 ## Continuity and evidence
 

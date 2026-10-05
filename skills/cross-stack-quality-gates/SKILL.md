@@ -26,6 +26,10 @@ Discover the project's contract before running validation. Read [gate discovery]
 7. Distinguish a missing gate from a passing gate. Do not skip an unavailable command and report the suite green.
 8. Report environment restrictions separately from product failures.
 
+## Done when
+
+The run is done when every required gate for the changed components has a recorded result or is reported as unavailable, and the verdict is PASS, FAIL, or INCOMPLETE as the output rule defines. An unavailable gate makes the verdict INCOMPLETE; it is not a reason to stop. Stop and ask only when a gate needs a mutating step or credentials the task did not authorize.
+
 ## Scope rules
 
 - A monorepo may require multiple component-specific gates; do not run every workspace blindly.

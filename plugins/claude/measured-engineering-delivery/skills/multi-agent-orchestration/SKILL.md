@@ -20,14 +20,15 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 
 ## Workflow
 
-1. Confirm delegation authority, supported host behavior, budget or cost constraints, and the integration owner.
-2. Decompose the work into bounded tasks with clear inputs, outputs, owned files or read-only scope, stopping conditions, and required evidence.
+1. Confirm delegation authority, supported host behavior, budget or cost constraints, and the integration owner. State the planned worker count and expected cost or time before launching, and get agreement when they exceed what the user implied.
+2. Decompose the work into bounded tasks with clear inputs, outputs, owned files or read-only scope, stopping conditions, and required evidence. Match each worker's capability and cost to its task, and brief each worker completely the first time.
 3. Identify dependencies. Keep tightly sequential work with one owner.
 4. Prevent overlapping write ownership and state which worker may modify each shared artifact.
 5. Launch only useful independent tasks and retain meaningful local integration work.
 6. Require workers to report evidence, limitations, changed files, validation, and unresolved risks.
-7. Reconcile results against the shared objective. Independently inspect diffs and rerun integration gates.
-8. Stop when tasks conflict, authority changes, costs exceed the agreed bound, or external decisions are required.
+7. Before waiting on a worker, command, or hook, confirm it is still running and making progress, and set a limit on the wait. If it stalls, report it as a blocker with its last output instead of checking it in a loop.
+8. Reconcile results against the shared objective. Independently inspect diffs and rerun integration gates.
+9. Stop when tasks conflict, authority changes, costs exceed the agreed bound, or external decisions are required.
 
 ## Forbidden delegation
 
@@ -39,4 +40,4 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 
 ## Output
 
-Return `Delegation authority`, `Task map`, `Ownership`, `Evidence contract`, `Cost boundary`, `Worker results`, `Integration verification`, and `Unresolved decisions`.
+Lead with the integrated result and anything that needs the user's decision. Then return `Delegation authority`, `Task map`, `Ownership`, `Evidence contract`, `Cost boundary`, `Worker results`, `Integration verification`, and `Unresolved decisions`. List a decision as unresolved only when it blocks remaining work; otherwise make the routine call, record it, and continue.

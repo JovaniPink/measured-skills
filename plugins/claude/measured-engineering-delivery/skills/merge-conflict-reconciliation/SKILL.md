@@ -30,6 +30,10 @@ Confirm the exact worktree, current operation, revisions, uncommitted changes, c
 6. Reinspect the diff and Git state. Report resolved files, unresolved files, validation, and the exact next Git action.
 7. Stage, continue, commit, push, or open a pull request only when that specific action is authorized.
 
+## Done when
+
+Reconciliation is done when no conflict markers remain in the authorized files, focused checks pass, and the next Git action is named. Stop and ask when repository evidence cannot establish the intended behavior or the next step would advance Git state without authorization.
+
 ## Boundaries
 
 - Keep abort visible until the user authorizes an irreversible or state-advancing step.
@@ -39,4 +43,4 @@ Confirm the exact worktree, current operation, revisions, uncommitted changes, c
 
 ## Output
 
-Return `Git state`, `Conflict map`, `Side A intent`, `Side B intent`, `Resolution`, `Validation`, `Remaining conflicts`, `Abort option`, and `Next authorized action`.
+Lead with the result and any decision that needs the user. List a decision as unresolved only when it blocks the reconciliation. Then return `Git state`, `Conflict map`, `Side A intent`, `Side B intent`, `Resolution`, `Validation`, `Remaining conflicts`, `Abort option`, and `Next authorized action`.
