@@ -16,6 +16,25 @@ This entry lists instruction changes made after the 0.18.0 content recorded in `
 - Document that qualification records name the model that served every turn and that a run with a model-switch notice is rerun. The schema and grader do not check this yet.
 - These are authored instruction changes. No model run has measured their effect.
 
+### 0.18.0 candidate: owned Swift and Next.js workflows
+
+- Add seven original workflows in two new packs, bringing the catalog to 86 skills in 11 packs. `measured-swift-workflows` holds `swiftui-feature-delivery`, `swift-concurrency-diagnosis`, `swift-persistence-contract-review`, and `ios-journey-verification`. `measured-nextjs-workflows` holds `nextjs-feature-delivery`, `nextjs-cache-auth-boundary-review`, and `react-rendering-performance-diagnosis`.
+- Codex and Claude contain all 86 skills. Antigravity contains the 69 implicit skills. The 17 explicit-only workflows remain held.
+- Add bounded project projections with full source pins and exact byte comparisons (`scripts/project_skills.py`). Codex 0.154.0 discovery support for project-specific `.codex/skills` is a version constraint, not proof of invocation enforcement.
+- Block an explicit workflow copy found in shared discovery, skip revoked workflows when rendering projections, and tell explicit Codex projections to stop unless `codex --version` reports 0.154.0.
+- Add 49 authored, synthetic qualification cases for the new workflows: positive, near-miss, safety, and semantic.
+- Bind the 0.18.0 release manifest to the exact committed source and artifact checksums.
+- Keep installed-versus-baseline runs, independent case review, and benefit evidence blocked. No additional paid evaluation spend is authorized. The six unresolved online freshness changes and the historical originality-corpus gate remain unresolved.
+
+### 0.17.1 candidate: repairs
+
+- Repair removal of an empty private projection, revoked pack cleanup, Antigravity explicit-only exclusion, and semantic turn-depth grading.
+- Antigravity packs now hold the 65 implicit skills. The 14 explicit-only workflows remain held. Codex and Claude contain all 79 skills.
+- Record disposable native CLI package observations for install, list, removal, reinstall, and version selection.
+- Review changed primary sources. The September 30 refresh checked 47 URLs: 11 markers matched and 36 had changed. A semantic review decided all 36, updated 33 fingerprints, and added the current Antigravity plugin-guide destination. Three unstable OWASP fingerprints remain held. The closing online readback matched 42 of 48 fingerprints and found six changed sources, including new drift in Terraform and both Python pages. The online gate still fails, and the new drift is not repinned.
+- Local checks passed: 122 repository tests, strict typing, lint, workflow syntax, generated-file checks, 79 Codex skill validations, and nine strict Claude plugin validations. A synthetic Swift package passed both compiler-backed tests. These results do not qualify task behavior.
+- No repair authorizes tagging, publication, or global client promotion.
+
 ### 0.17.0 candidate
 
 - Rename the offering to Measured Skills by Measured Studios; retain source ownership and historical attribution.
