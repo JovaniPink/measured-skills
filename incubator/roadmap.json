@@ -1,7 +1,7 @@
 {
   "$schema": "./roadmap-schema.json",
   "roadmap_version": 1,
-  "updated_on": "2026-08-25",
+  "updated_on": "2026-10-05",
   "tracks": [
     {
       "id": "engineering-lifecycle",
@@ -216,6 +216,40 @@
         "routing separates application security, skill security, agentic-system security, general evaluation, and framework-specific composition",
         "every skill has taxonomy, provenance, positive, near-miss, safety, output-quality, baseline, and focused-reference evidence",
         "generated artifacts and small recipes pass discovery-budget, security, originality, repository-independence, and deterministic checks"
+      ]
+    },
+    {
+      "id": "web-journey-verification",
+      "target_release": "v0.19",
+      "plugin": "measured-nextjs-workflows",
+      "status": "planned",
+      "skills": [
+        "web-journey-verification"
+      ],
+      "entry_criteria": [
+        "the workflow is independently authored from current primary browser-automation and web-platform documentation pinned in provenance",
+        "routing separates test-strategy, test-quality-review, accessibility-review, and ios-journey-verification",
+        "the skill ships no scripts and requires no named tool, and a run with no available browser reports Blocked",
+        "an acceptance fixture fails when the application never reaches the expected state, and a passing run whose assertions never reach the success state is rejected",
+        "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
+        "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks"
+      ]
+    },
+    {
+      "id": "ci-workflow-review",
+      "target_release": "v0.19",
+      "plugin": "measured-engineering-review",
+      "status": "planned",
+      "skills": [
+        "ci-workflow-review"
+      ],
+      "entry_criteria": [
+        "the workflow is independently authored from current primary CI platform documentation pinned in provenance",
+        "routing separates this skill from dependency-supply-chain-review for pins, credentials, and artifacts and from operational-readiness-review for deployment and rollback",
+        "the skill is read-only and does not edit workflows, trigger or re-run CI, change repository settings, or perform deployment or provider actions, which stay separately authorized",
+        "an acceptance fixture contains a deliberately broken job dependency or unsafe trigger that the review must find, and a clean workflow produces no invented finding",
+        "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
+        "generated artifacts pass originality, repository-independence, security, determinism, and package-boundary checks"
       ]
     }
   ]
