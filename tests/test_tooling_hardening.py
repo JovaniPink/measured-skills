@@ -52,6 +52,43 @@ class ActionPinTests(unittest.TestCase):
         )
         self.assertEqual([], validate_catalog.immutable_action_reference_errors(text, "w.yml"))
 
+    def check(self, text: str) -> list[str]:
+        return validate_catalog.immutable_action_reference_errors(text, "w.yml")
+
+    def test_uses_text_inside_a_literal_block_is_not_a_step(self) -> None:
+        text = (
+            "steps:\n"
+            "  - run: |\n"
+            "      cat > generated.yml <<'EOF'\n"
+            "      jobs:\n"
+            "        build:\n"
+            "          uses: owner/action@v4\n"
+            "      - uses: owner/other@v1\n"
+            "      EOF\n"
+        )
+        self.assertEqual([], self.check(text))
+
+    def test_uses_text_inside_folded_and_nested_blocks_is_ignored(self) -> None:
+        folded = "steps:\n  - name: note\n    run: >-\n      uses: owner/action@v4\n"
+        nested = (
+            f"steps:\n  - uses: actions/github-script@{SHA}\n    with:\n"
+            "      script: |  # inline comment\n        uses: owner/action@v4\n\n        uses: owner/more@v2\n"
+        )
+        self.assertEqual([], self.check(folded))
+        self.assertEqual([], self.check(nested))
+
+    def test_a_mutable_reference_after_a_block_is_still_flagged(self) -> None:
+        text = "steps:\n  - run: |\n      echo hi\n\n  - uses: actions/checkout@v4\n"
+        self.assertEqual(1, len(self.check(text)))
+
+    def test_a_pinned_reference_after_a_block_still_passes(self) -> None:
+        text = f"steps:\n  - run: |\n      echo hi\n  - uses: actions/checkout@{SHA}\n"
+        self.assertEqual([], self.check(text))
+
+    def test_a_single_line_run_is_not_a_block(self) -> None:
+        text = "steps:\n  - name: a\n    run: echo hi\n    uses: actions/checkout@v4\n"
+        self.assertEqual(1, len(self.check(text)))
+
 
 class SecretPatternTests(unittest.TestCase):
     @staticmethod

@@ -30,6 +30,10 @@ REFERENCE_LINK = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 ALLOWED_CANONICAL_TOP_KEYS = {"name", "description", "license", "metadata"}
 ALLOWED_RISK_CLASSES = {"read-only", "bounded-execution", "network-read", "external-write", "trust-decision"}
 ACTION_USE = re.compile(r"""(?m)^\s*(?:-\s*)?uses:\s*['"]?([^#\s'"]+)""")
+# A block-scalar header such as `run: |` or `- script: >-`. Its content is text, not workflow keys.
+BLOCK_SCALAR_HEADER = re.compile(
+    r"^(?P<indent>\s*)(?P<dash>(?:-\s+)*)[^\s#:][^#:]*:\s+[|>][-+0-9]*\s*(?:#.*)?$"
+)
 IMMUTABLE_REVISION = re.compile(r"[0-9a-fA-F]{40}")
 HASHED_REQUIREMENT = re.compile(
     r"^([A-Za-z0-9_.-]+)==([0-9][A-Za-z0-9.+-]*) --hash=sha256:([0-9a-f]{64})$"
@@ -161,11 +165,31 @@ def observation_record_errors(
             errors.append(f"{label}: a date without a clock time is allowed only on historical evidence")
     return errors
 
+def _action_references(text: str) -> list[str]:
+    """Return `uses:` values from workflow text, skipping block-scalar content line by line."""
+
+    references: list[str] = []
+    skip_deeper_than: int | None = None
+    for line in text.splitlines():
+        if skip_deeper_than is not None:
+            if not line.strip() or len(line) - len(line.lstrip()) > skip_deeper_than:
+                continue
+            skip_deeper_than = None
+        header = BLOCK_SCALAR_HEADER.match(line)
+        if header is not None:
+            skip_deeper_than = len(header.group("indent")) + len(header.group("dash"))
+            continue
+        match = ACTION_USE.match(line)
+        if match is not None:
+            references.append(match.group(1))
+    return references
+
+
 def immutable_action_reference_errors(text: str, label: str) -> list[str]:
     """Reject mutable third-party GitHub Action references without parsing YAML."""
 
     errors: list[str] = []
-    for reference in ACTION_USE.findall(text):
+    for reference in _action_references(text):
         if reference.startswith(("./", "docker://")):
             continue
         if "@" not in reference:
