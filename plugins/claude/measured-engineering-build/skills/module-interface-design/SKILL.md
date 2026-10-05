@@ -19,7 +19,7 @@ Propose a coherent boundary that reduces caller knowledge without hiding importa
 
 1. Establish the user outcome, current modules, callers, dependencies, vocabulary, invariants, and change pressure.
 2. Identify knowledge duplicated across callers, unstable details that leak through interfaces, and state or authority that lacks a clear owner.
-3. Define the smallest useful contract: inputs, outputs, errors, state transitions, compatibility promises, and operational signals.
+3. Define the smallest useful contract: inputs, outputs, errors, state transitions, compatibility promises, and operational signals. Name the requirement each component or layer serves, and drop any that serve none.
 4. Compare at least two viable boundaries when the tradeoff is material. Include the cost of keeping the current design.
 5. Test each option against common use, difficult use, invalid use, migration, partial rollout, and future change.
 6. Recommend a boundary with explicit reasons, rejected alternatives, and unresolved decisions.

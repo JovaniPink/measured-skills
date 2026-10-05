@@ -23,10 +23,14 @@ Read [state, availability and acceptance](references/delivery.md) only when its 
 4. Implement the smallest coherent slice. Keep one state owner, stable identifiers, cancellable effects, explicit error recovery, and supported APIs. Check Dynamic Type, semantic control labels, Reduce Motion, and compact/regular layouts where applicable.
 5. Run the narrow behavior check, then applicable existing gates. Inspect the final diff against the allowlist. Report edits, observed checks, missing journey evidence, and remaining risks separately.
 
+## Done when
+
+The slice is done when the requested behavior works within the allowlist, the narrow behavior check and applicable gates pass or are reported as unavailable, and the final diff has been inspected against the allowlist, or when the result is Not Needed or Blocked. Stop and ask only when the slice needs a path outside the allowlist, an action listed under Boundaries, or a product decision the repository cannot answer.
+
 ## Boundaries
 
 Never run repository-wide mutating formatters or add dependencies, raise targets, alter signing/entitlements, migrate persistence, or perform external writes without explicit task authority.
 
 ## Evidence and output
 
-Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+Lead with the result and anything that needs the user's decision. Then report the authorized scope, applicable settings, observed evidence, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.

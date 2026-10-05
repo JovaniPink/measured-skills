@@ -4,6 +4,18 @@ All notable changes use this file. The project follows semantic versioning after
 
 ## [Unreleased]
 
+### 0.18.0 candidate: run endings and target authority
+
+This entry lists instruction changes made after the 0.18.0 content recorded in `docs/client-candidate-v0.18.0.md`.
+
+- Limit execution authority to the exact targets named, list every external state change, and confirm identity by identifier rather than by a similar name.
+- Add `Done when` sections with explicit stop-and-ask conditions to execution skills, including the exception, Not Needed, Blocked, and review-only paths, and decision-ready completion to problem framing and design rationale work.
+- Bound waits on workers, commands, and hooks; agree on worker count and expected cost before fan-out; keep long-run task lists in an approved file.
+- Lead execution reports with the result and what needs the user, and list a decision as unresolved only when it blocks remaining work.
+- Research names the sources checked for unconfirmed claims, code review states that `error` means merge-blocking while still reporting every severity, plans check prerequisites across slices, candidate comparisons remove authorship labels, and interface designs justify each component.
+- Document that qualification records name the model that served every turn and that a run with a model-switch notice is rerun. The schema and grader do not check this yet.
+- These are authored instruction changes. No model run has measured their effect.
+
 ### 0.17.0 candidate
 
 - Rename the offering to Measured Skills by Measured Studios; retain source ownership and historical attribution.

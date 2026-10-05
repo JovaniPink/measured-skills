@@ -105,6 +105,32 @@ def _validate_links(path: Path, text: str, errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)}: broken local link: {target}")
 
 
+def unlinked_reference_errors(skill: str, skill_dir: Path) -> list[str]:
+    """Return one error for each reference file that SKILL.md does not link directly."""
+
+    references = skill_dir / "references"
+    skill_file = skill_dir / "SKILL.md"
+    if not references.is_dir() or not skill_file.is_file():
+        return []
+    linked: set[Path] = set()
+    for raw_target in REFERENCE_LINK.findall(skill_file.read_text(encoding="utf-8")):
+        target = raw_target.strip().strip("<>").split("#", 1)[0]
+        if target and "://" not in target and not target.startswith(("/", "mailto:")):
+            linked.add((skill_dir / target).resolve())
+    return [
+        f"skills/{skill}/{path.relative_to(skill_dir).as_posix()}: reference is not linked from SKILL.md"
+        for path in sorted(references.rglob("*"))
+        if path.is_file() and path.resolve() not in linked
+    ]
+
+
+def validate_reference_links(errors: list[str]) -> None:
+    """Every reference file must be linked directly from its SKILL.md (skills/AGENTS.md)."""
+
+    for skill in ALL_SKILLS:
+        errors.extend(unlinked_reference_errors(skill, ROOT / "skills" / skill))
+
+
 SESSION_DEPTH_REQUIRED_FROM = (0, 10, 0)
 CONTINUED_SESSION_DEPTHS = {"fresh_multi_turn", "continued_session"}
 
@@ -1110,6 +1136,7 @@ def validate_all(require_packages: bool = True) -> list[str]:
     validate_workflows(errors)
     validate_ci_tools(errors)
     validate_canonical(errors)
+    validate_reference_links(errors)
     validate_evals(errors)
     validate_provenance(errors)
     validate_auxiliary_records(errors)
