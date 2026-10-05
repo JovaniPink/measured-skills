@@ -34,11 +34,11 @@ TRAILING_WHITESPACE_NORMALIZED_URLS = frozenset(
 VISIBLE_TEXT_URLS = frozenset(
     {"https://owasp.org/www-project-application-security-verification-standard/"}
 )
-NON_VISIBLE_TAGS = frozenset({"noscript", "script", "style", "svg", "template"})
+NON_VISIBLE_TAGS = frozenset({"noscript", "script", "style", "svg", "template", "title"})
 
 
 class _VisibleText(HTMLParser):
-    """Collect text that a reader would see, skipping scripts, styles, and templates."""
+    """Collect body text a reader would see, skipping scripts, styles, templates, and the page title."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)

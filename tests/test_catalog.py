@@ -1843,7 +1843,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_visible_text_marker_ignores_markup_and_script_order_only(self) -> None:
         first = (
-            b'<html data-dpl-id="a"><head><style>.x{}</style></head><body>'
+            b'<html data-dpl-id="a"><head><title>ASVS | OWASP</title><style>.x{}</style></head><body>'
             b"<h1>ASVS</h1><p>Verifiable   requirements.</p>"
             b'<script>$RC("B:1","S:1")</script><script>self.__next_f.push([1,"a"])</script>'
             b"</body></html>"
@@ -1851,7 +1851,8 @@ class CatalogTests(unittest.TestCase):
         second = (
             b'<html data-dpl-id="a"><head></head><body><h1 class="t">ASVS</h1>\n'
             b'<script>self.__next_f.push([1,"b"])</script><p>Verifiable requirements.</p>'
-            b"<template>hidden</template><noscript>enable js</noscript></body></html>"
+            b"<template>hidden</template><noscript>enable js</noscript>"
+            b"<title>ASVS | OWASP</title></body></html>"
         )
         changed = second.replace(b"Verifiable", b"Optional")
         self.assertEqual(_visible_text_sha256(first), _visible_text_sha256(second))
