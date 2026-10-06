@@ -13,5 +13,6 @@
     "skills",
     "swift",
     "verification"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

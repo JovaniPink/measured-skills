@@ -14,5 +14,6 @@
     "operations",
     "decisions",
     "measurement"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

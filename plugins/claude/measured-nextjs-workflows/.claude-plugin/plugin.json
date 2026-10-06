@@ -13,5 +13,6 @@
     "skills",
     "nextjs",
     "verification"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

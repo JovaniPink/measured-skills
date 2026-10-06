@@ -15,5 +15,6 @@
     "writing",
     "architecture",
     "evidence"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }
