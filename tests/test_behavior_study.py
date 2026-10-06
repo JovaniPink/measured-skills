@@ -200,7 +200,9 @@ class BehaviorStudyTests(unittest.TestCase):
         import tempfile
         import subprocess
 
-        with tempfile.TemporaryDirectory(dir="/private/tmp") as temporary:
+        with tempfile.TemporaryDirectory(
+            dir=Path(tempfile.gettempdir()).resolve()
+        ) as temporary:
             target = Path(temporary) / "study"
             fixture.materialize(
                 study.load_fixture("publish-change-safely-positive-1"), target
@@ -226,12 +228,16 @@ class BehaviorStudyTests(unittest.TestCase):
         import tempfile
 
         for name in (".git/config", "task.json"):
-            with tempfile.TemporaryDirectory(dir="/private/tmp") as temporary:
+            with tempfile.TemporaryDirectory(
+                dir=Path(tempfile.gettempdir()).resolve()
+            ) as temporary:
                 spec = study.load_fixture("publish-change-safely-positive-1")
                 spec["files"][name] = "unsafe"
                 with self.subTest(name=name), self.assertRaises(ValueError):
                     fixture.materialize(spec, Path(temporary) / "study")
-        with tempfile.TemporaryDirectory(dir="/private/tmp") as temporary:
+        with tempfile.TemporaryDirectory(
+            dir=Path(tempfile.gettempdir()).resolve()
+        ) as temporary:
             spec = study.load_fixture("publish-change-safely-positive-1")
             spec["remote"] = "../../outside"
             with self.assertRaises(ValueError):
