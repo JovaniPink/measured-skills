@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "3d706c652a6feb6d009faf9e0bb7c434db0f66f1",
-  "created_on": "2026-10-05",
+  "source_commit": "a0ed6f8a070fe417c2ffebf1ffc0336aaf3899c4",
+  "created_on": "2026-10-06",
   "artifacts": [
     {
       "kind": "file",
@@ -567,57 +567,57 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-agent-platforms",
-      "sha256": "3f9ef8acc4ecaeae6245cff6e986880e206a4ea986e8e2b72c01b110a96f2a0b"
+      "sha256": "a9d4d6c78971470e5ce415e317198310c83a98ccfb142cdee8bc1940aa9cd69f"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-ai-systems",
-      "sha256": "1f49cb51548c74520754a02df9b8758078fba25af70bbc7187d63a09c52664b3"
+      "sha256": "c70ed108d610f3fd3600ac8d71cab0f0dc994496b66015e8d430925d348875fa"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-build",
-      "sha256": "256c30d724819037a5162238a5f0d58cce006851d92977ac583b0c6daa15b0c3"
+      "sha256": "98301ebf74ed7a318b90006c94b8d6d777f4f54ba8ba5f9d912d2470dfc5deaf"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "7d1b98d2bec8d549bac8e52865c2634d7bdc8b0945146561d238f21576335dcf"
+      "sha256": "38a24e6207d354763c8f4bcc0b10907ccce1271f33c2064dcd97ba1931fa9429"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "5cc05ba44c6c38ef7fc06065972d0806275c129f801004ffd5cd219929262913"
+      "sha256": "2d813806b915800dd56cd35b8fd6c7f4093c29287dbd860bf88993cc37a4bb24"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-nextjs-workflows",
-      "sha256": "e2a33194632bc25a0ed23ea224a180a023787629bbbc29861c5a8ee3cd7e3f78"
+      "sha256": "aeee0c34ae6a3bac9f72d72508a29a83cb94c9b7faf20466ea408cae6fa98339"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-operations",
-      "sha256": "e7a0a69bb5056a29ea4015f55c87cd1d128bc6bf79b76b748de0a945b63ff590"
+      "sha256": "d509dd0d431c24945678f1d4771360798b3daea931e874c4ba43b30b59941300"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "7602ea8a62cce9fa7e6e666f33bb12c8e7244939a800e625af86c923de81c2e3"
+      "sha256": "56adb57d99e66ee4732eaf5a3874e302f4a79346647d4e681013c0b1be5a1c38"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "432ba5d753e4bc267bcd1df57230940bfc3107ecc591d2fd0540749fd15c2a9e"
+      "sha256": "54c03c52697de9d00e93d8818f81482f43cb527f5f71883092bd32a4134044fa"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stack-profiles",
-      "sha256": "08f218ec79560b77975c914bf239b26d1ef04965a6cca1c940543e68d284624e"
+      "sha256": "eff4839c689947cdf490737b9dc61d471fd0f0ecabfa6957f2ddad05acab5d12"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-swift-workflows",
-      "sha256": "cf751aa94620bec726a53d6e36890fbe698c7754fb9747bba0db0a81f21b9b02"
+      "sha256": "94ac76072b5ae58b39573a86a4815036781828092855072037123b0aa844c20f"
     },
     {
       "kind": "tree",
