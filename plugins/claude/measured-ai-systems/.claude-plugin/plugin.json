@@ -15,5 +15,6 @@
     "evaluation",
     "context",
     "conformance"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

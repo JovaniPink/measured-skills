@@ -15,5 +15,6 @@
     "diagnosis",
     "quality",
     "security"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

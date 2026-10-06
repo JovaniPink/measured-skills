@@ -15,5 +15,6 @@
     "adk",
     "security",
     "retrieval"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

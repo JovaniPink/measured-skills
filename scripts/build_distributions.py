@@ -21,6 +21,8 @@ from cataloglib import (
     skills_by_plugin,
 )
 
+PLUGIN_ICON = ROOT / ".claude-plugin" / "icon.svg"
+
 
 class CodexMarketplaceSource(TypedDict):
     source: str
@@ -202,6 +204,9 @@ def _copy_claude_skill(source: Path, target: Path, explicit: bool) -> None:
 
 
 def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str, Path], dict[str, Path], dict[str, Path]]:
+    if PLUGIN_ICON.is_symlink() or not PLUGIN_ICON.is_file():
+        raise ValueError("shared plugin icon must be a regular source file")
+    icon = PLUGIN_ICON.read_bytes()
     for path in (output_root.absolute(), *output_root.absolute().parents):
         if path in (Path("/tmp"), Path("/var")) and path.resolve() == Path("/private") / path.name:
             continue
@@ -281,8 +286,10 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
                 "repository": "https://github.com/JovaniPink/measured-skills",
                 "license": "MIT",
                 "keywords": spec["keywords"],
+                "icon": "./.claude-plugin/icon.svg",
             },
         )
+        (claude_plugin / ".claude-plugin" / "icon.svg").write_bytes(icon)
         if antigravity_plugin is not None:
             _write_json(
                 antigravity_plugin / "plugin.json",

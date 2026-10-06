@@ -14,5 +14,6 @@
     "engineering",
     "languages",
     "infrastructure"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

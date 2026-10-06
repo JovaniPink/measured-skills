@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title description">
+  <title id="title">Measured Skills</title>
+  <desc id="description">A rising path beside measurement marks, representing progress supported by evidence.</desc>
+  <rect width="128" height="128" rx="28" fill="#102e38"/>
+  <path d="M28 28v72h72" fill="none" stroke="#d5e3df" stroke-width="6" stroke-linecap="round"/>
+  <path d="M28 46h10m-10 18h10m-10 18h10m8 18V90m18 10V90m18 10V90" fill="none" stroke="#d5e3df" stroke-width="3"/>
+  <path d="M46 78l18-18 18 6 18-30" fill="none" stroke="#f6bd60" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#f6bd60"><circle cx="46" cy="78" r="5"/><circle cx="64" cy="60" r="5"/><circle cx="82" cy="66" r="5"/><circle cx="100" cy="36" r="5"/></g>
+</svg>

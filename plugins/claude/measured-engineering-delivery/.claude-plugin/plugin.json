@@ -14,5 +14,6 @@
     "delivery",
     "git",
     "execution"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }

@@ -14,5 +14,6 @@
     "review",
     "security",
     "quality"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.svg"
 }
