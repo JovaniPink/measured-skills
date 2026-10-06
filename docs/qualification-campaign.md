@@ -25,3 +25,10 @@ Antigravity explicit-only skills are held and absent from installable output. Te
 Run deterministic repairs and lifecycle smoke checks first. Estimate token use and operator time from a small bounded calibration batch. Calculate the remaining campaign estimate, then obtain a numeric ceiling before paid expansion. Stop at the ceiling and retain unrun cells. Never infer all-catalog benefit from installation or a few successful prompts.
 
 Keep raw traces and private inventories out of this public repository. Commit synthetic fixtures and reviewed redacted receipts only. Recheck affected cases when workflow semantics, client adapters, models, permissions, or client versions change. Qualification does not authorize publication or global promotion.
+
+## Bounded workflow pilot
+
+The [three-condition preparation kit](../evals/behavior-study/README.md) keeps
+24 selected cases, three repetitions, and both CLI lanes separate. Its 432 core
+cells are not full-catalog qualification. The 324 later-context cells remain a
+separate stage. Every cell is not run; the kit has no model execution option.
