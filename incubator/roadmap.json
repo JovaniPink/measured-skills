@@ -1,7 +1,7 @@
 {
   "$schema": "./roadmap-schema.json",
   "roadmap_version": 1,
-  "updated_on": "2026-10-05",
+  "updated_on": "2026-10-07",
   "tracks": [
     {
       "id": "engineering-lifecycle",
@@ -46,7 +46,8 @@
       "entry_criteria": [
         "primary standards are pinned in provenance",
         "review output avoids unsupported compliance claims",
-        "positive, near-miss, safety, and output-quality evaluations pass"
+        "positive, near-miss, safety, and output-quality evaluations pass",
+        "review asynchronous delivery overlap in docs/reusable-enhancement-proposals-2026-10-07.md before proposing a separate workflow"
       ]
     },
     {
@@ -194,7 +195,8 @@
         "context review uses assertion-level provenance and lifecycle without embedding private facts",
         "conformance execution is limited to repository-defined checks and authorized disposable fixtures or test stores",
         "routing cases distinguish generic testing, evidence ledgers, authority architecture, and product-specific model reviews",
-        "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks"
+        "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks",
+        "review rendering/publication, observation conservation, independent source accuracy and current artifact identity proposals; enhancements have no assigned release"
       ]
     },
     {
@@ -215,7 +217,8 @@
         "the plugin remains human-facing and does not contain runtime bundles, tools, credentials, hooks, scripts, agents, or deployment behavior",
         "routing separates application security, skill security, agentic-system security, general evaluation, and framework-specific composition",
         "every skill has taxonomy, provenance, positive, near-miss, safety, output-quality, baseline, and focused-reference evidence",
-        "generated artifacts and small recipes pass discovery-budget, security, originality, repository-independence, and deterministic checks"
+        "generated artifacts and small recipes pass discovery-budget, security, originality, repository-independence, and deterministic checks",
+        "defer proposed trajectory, grounding and environmental-outcome evaluation refinements until independent grader and native evidence review; no release is assigned"
       ]
     },
     {
@@ -232,7 +235,8 @@
         "the skill ships no scripts and requires no named tool, and a run with no available browser reports Blocked",
         "an acceptance fixture fails when the application never reaches the expected state, and a passing run whose assertions never reach the success state is rejected",
         "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
-        "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks"
+        "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks",
+        "include authenticated role/record context, durable refusal, reload recovery and current artifact identity without treating API-only checks as rendered-browser evidence"
       ]
     },
     {
@@ -249,7 +253,37 @@
         "the skill is read-only and does not edit workflows, trigger or re-run CI, change repository settings, or perform deployment or provider actions, which stay separately authorized",
         "an acceptance fixture contains a deliberately broken job dependency or unsafe trigger that the review must find, and a clean workflow produces no invented finding",
         "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
-        "generated artifacts pass originality, repository-independence, security, determinism, and package-boundary checks"
+        "generated artifacts pass originality, repository-independence, security, determinism, and package-boundary checks",
+        "review permissions, fork/trusted triggers, reusable inputs, caches and combined release compatibility; green component jobs alone cannot establish release readiness"
+      ]
+    },
+    {
+      "id": "firestore-engineering-profile",
+      "target_release": "unassigned",
+      "plugin": "measured-stack-profiles",
+      "status": "planned",
+      "skills": [
+        "firestore-engineering-profile"
+      ],
+      "entry_criteria": [
+        "review the independent proposal in docs/reusable-enhancement-proposals-2026-10-07.md and resolve overlap before authoring",
+        "pin current public primary authorities and retain their license and scope limits",
+        "author fictional cases with independent oracles and hidden-answer separation",
+        "observe client loading and isolation before registering a bounded comparison; no benefit or release is promised"
+      ]
+    },
+    {
+      "id": "selected-engineering-learning",
+      "target_release": "unassigned",
+      "plugin": "measured-reasoning",
+      "status": "deferred",
+      "skills": [
+        "engineering-learning-workflow"
+      ],
+      "entry_criteria": [
+        "review the explicitly selected learning proposal and overlap with explanation, planning, handoff and evaluation",
+        "use independently authored fictional cases and distinguish completion from demonstrated understanding",
+        "preserve autonomous delivery outside the selected workflow and require independent learner transfer evidence before adoption"
       ]
     }
   ]
