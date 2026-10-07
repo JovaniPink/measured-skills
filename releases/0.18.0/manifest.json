@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "a0ed6f8a070fe417c2ffebf1ffc0336aaf3899c4",
-  "created_on": "2026-10-06",
+  "source_commit": "1e535f90b3b60dc81b24093f358c68557b831ac1",
+  "created_on": "2026-10-07",
   "artifacts": [
     {
       "kind": "file",
@@ -297,7 +297,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/nextjs-feature-delivery-0.18.0.zip",
-      "sha256": "1cd6cc9409248f6e37b6a4e40cb7b940eb63c98981386c100208dac10279862d"
+      "sha256": "c62a10428ba391599ce744f2532800c1ab9132e3ead4afbd14df180acb27861b"
     },
     {
       "kind": "zip",
@@ -322,7 +322,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-execution-0.18.0.zip",
-      "sha256": "0779033009f760eee7e0d60a39045fe943e07698a225d96885c3b656ff112dbe"
+      "sha256": "8edcc27d19176a5573de417bf84dbd7af0a627196b6c99f9148acd96c7e6de07"
     },
     {
       "kind": "zip",
@@ -447,7 +447,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swiftui-feature-delivery-0.18.0.zip",
-      "sha256": "2346b79eba42046c8d3b35e3c8ac9882c4970f40fdac5f3370b6e840b474a940"
+      "sha256": "3ab6e1943af0c2ded9560b852550fbf795b1520df65e3d5dd188933d22eed97e"
     },
     {
       "kind": "zip",
@@ -582,7 +582,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "38a24e6207d354763c8f4bcc0b10907ccce1271f33c2064dcd97ba1931fa9429"
+      "sha256": "97cb73c2591e6ace5444996872d2065f4501ea9497d7669dd79815f0c9074723"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-nextjs-workflows",
-      "sha256": "aeee0c34ae6a3bac9f72d72508a29a83cb94c9b7faf20466ea408cae6fa98339"
+      "sha256": "76324934056fcb00e5bb256f800579153eff00c524c6c6eabd54c5efd9179978"
     },
     {
       "kind": "tree",
@@ -617,7 +617,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-swift-workflows",
-      "sha256": "94ac76072b5ae58b39573a86a4815036781828092855072037123b0aa844c20f"
+      "sha256": "436c06d2a2809bf33c168a538a8300f68588a6d8a526bd5d1a6e712e60b3eeab"
     },
     {
       "kind": "tree",
@@ -637,7 +637,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "3383297af5123d46c6d92edee5fc5c5ee641629afa097670f30a4fccd7c1f0bb"
+      "sha256": "ee3fb6d88c719cde85ce4096eb3415770e5c0eb04fb7ebb1d66bc098b89761bf"
     },
     {
       "kind": "tree",
@@ -647,7 +647,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-nextjs-workflows",
-      "sha256": "3684f70e59ede9b560a28a7ce01c0cdbfb3c758819608142b69b5d7ddf91e3c7"
+      "sha256": "57d24020bbd978b68f6929777ee7ea22372fdf503f8e71722288d1225e000f5d"
     },
     {
       "kind": "tree",
@@ -672,7 +672,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-swift-workflows",
-      "sha256": "b5f7ec9fac2a75abc70cd166e1ae70565d5003138d78be4f652321f96cb34406"
+      "sha256": "02b55d40261d90ffc72907de8b99413e28eb0b4ba8e6d050905d1b4acf3fbc0f"
     },
     {
       "kind": "file",
