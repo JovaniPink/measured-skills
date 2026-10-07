@@ -42,12 +42,12 @@ b2dd9f642f1d71abf287d065289d2d239dfd1473780fcc506b9f690b626adcd0  merge-conflict
 2b9e684b8b6aa33b97f2d86d9efc21829f815c141611d7bbaf2931163df7025f  module-interface-design-0.18.0.zip
 0004ab2021bb933bb62f1206e955da7c19eac5d2f1bea713db17ee8a660a8438  multi-agent-orchestration-0.18.0.zip
 e3c94d3936ea45ef2ba1b74c73c42c3a944aaa20cbd594d88ddd09660378e77b  nextjs-cache-auth-boundary-review-0.18.0.zip
-1cd6cc9409248f6e37b6a4e40cb7b940eb63c98981386c100208dac10279862d  nextjs-feature-delivery-0.18.0.zip
+c62a10428ba391599ce744f2532800c1ab9132e3ead4afbd14df180acb27861b  nextjs-feature-delivery-0.18.0.zip
 a0e760a3a573870a118e809ce8195d4dc3888fc0d3d7d8578d8e8507e1b93419  observability-design-0.18.0.zip
 ecf10b8d5c1ccab397f9304a9319f1301843c2e6c822b7637fe285264c33398a  operational-readiness-review-0.18.0.zip
 56457d54c699af714afbb15776b538195e67b7f9c46271f2d2800d61e9791993  performance-scalability-diagnosis-0.18.0.zip
 6e530693c2ebcddd8ad351296381c7d6606171af34fd427db49d1751acf0523d  php-drupal-engineering-profile-0.18.0.zip
-0779033009f760eee7e0d60a39045fe943e07698a225d96885c3b656ff112dbe  plan-execution-0.18.0.zip
+8edcc27d19176a5573de417bf84dbd7af0a627196b6c99f9148acd96c7e6de07  plan-execution-0.18.0.zip
 9b611fcda9457aebcc5a63fc318248cf1c5d4a360ab7a705ae51a6cd0c0c1b52  portable-skill-authoring-0.18.0.zip
 284fe790dd2844e398b43c414d528202611105d4c859b1a6444f966d2461fca7  postgresql-sql-engineering-profile-0.18.0.zip
 39e8ef66f48e769bfc0782c054dd9b292737a8a43228fa01fa6cf36d64f2bb16  prelaunch-readiness-0.18.0.zip
@@ -72,7 +72,7 @@ e833b1a1215b3b8f27936d8c495946ecd1a68e73efed7e81a76536869d709131  skill-security
 3996f93a595c45c4a7b5c5e713383308341ba9431108d7deafec145d06efe6cb  swift-concurrency-diagnosis-0.18.0.zip
 a78f13e9f59a957f0be3f5a0fa0f94185eb58bb2605e34fde850306648328280  swift-persistence-contract-review-0.18.0.zip
 1045d7db110f0633427e4394b1c054a09d4c4c89ebb4bc3948681967daba80f7  swift-swiftui-engineering-profile-0.18.0.zip
-2346b79eba42046c8d3b35e3c8ac9882c4970f40fdac5f3370b6e840b474a940  swiftui-feature-delivery-0.18.0.zip
+3ab6e1943af0c2ded9560b852550fbf795b1520df65e3d5dd188933d22eed97e  swiftui-feature-delivery-0.18.0.zip
 5e19b49f2b80db254bb74dd1fc6beafd6e7bb03e75ef3e06f1b43ce9d7c44bca  systematic-diagnosis-0.18.0.zip
 5f5a9df1e13fdbdc03235e00de505c13c47d182c0aff61d5d9f3f28e20dff65f  task-handoff-0.18.0.zip
 37693aa61436da37ff646b8e40e5db13491ce7efa3107383a298d8c048652a0d  terraform-engineering-profile-0.18.0.zip

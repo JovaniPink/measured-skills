@@ -67,6 +67,9 @@ class GateSegmentTests(unittest.TestCase):
 
     def test_unsupported_constructs_are_rejected(self) -> None:
         for command in (
+            "apply migration",
+            "update dependencies",
+            "python3 -c 'print(1)'",
             "echo $(terraform fmt)",
             "echo `cargo fmt`",
             'sh -c "terraform fmt -check"',

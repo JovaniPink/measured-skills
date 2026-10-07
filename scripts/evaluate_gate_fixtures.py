@@ -82,6 +82,8 @@ def _segments(command: str) -> list[list[str]]:
 def _mutating_segment(argv: list[str]) -> bool:
     tool = argv[0].rsplit("/", 1)[-1]
     args = argv[1:]
+    if tool in {"apply", "update"}:
+        return True
     if (
         tool
         in {

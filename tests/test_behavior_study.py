@@ -295,5 +295,61 @@ class BehaviorStudyTests(unittest.TestCase):
                 )
 
 
+class FrozenStudySelectionTests(unittest.TestCase):
+    def test_v1_preserved_and_v2_sources_are_distinct(self) -> None:
+        import hashlib
+        import json
+        import subprocess
+
+        root = Path(__file__).resolve().parents[1]
+        receipt = json.loads(
+            (root / "docs/audits/workflow-v1-preserved-2026-10-07.json").read_text()
+        )
+        self.assertEqual(
+            set(receipt["files"]),
+            {
+                str(path.relative_to(study.KIT))
+                for path in study.KIT.rglob("*")
+                if path.is_file()
+            },
+        )
+        for relative, expected in receipt["files"].items():
+            current = (study.KIT / relative).read_bytes()
+            original = subprocess.run(
+                [
+                    "git",
+                    "show",
+                    f"{receipt['source_commit']}:evals/behavior-study/{relative}",
+                ],
+                cwd=root,
+                check=True,
+                capture_output=True,
+            ).stdout
+            self.assertEqual(original, current)
+            self.assertEqual(expected, hashlib.sha256(current).hexdigest())
+        first = study.load_manifest()
+        second = study.load_manifest(root / "evals/behavior-study-v2/study.json")
+        self.assertEqual([], study.check_manifest(second))
+        self.assertNotEqual(first["study_id"], second["study_id"])
+        self.assertNotEqual(
+            first["bundle_hashes"]["current"]["plan-execution"],
+            second["bundle_hashes"]["current"]["plan-execution"],
+        )
+        self.assertEqual(432, len(study.schedule(second)))
+        self.assertEqual(324, len(study.schedule(second, expansion=True)))
+
+    def test_receipts_cannot_cross_studies(self) -> None:
+        first = study.load_manifest()
+        second = study.load_manifest(study.ROOT / "evals/behavior-study-v2/study.json")
+        for source, other in ((first, second), (second, first)):
+            receipt = study.synthetic_receipt(source, study.schedule(source)[0])
+            self.assertEqual(1, study.report(source, [receipt])["received"])
+            with self.assertRaisesRegex(ValueError, "outside frozen study"):
+                study.report(other, [receipt])
+        changed = copy.deepcopy(second)
+        changed["source_revisions"]["current"] = first["source_revisions"]["current"]
+        self.assertTrue(study.check_manifest(changed))
+
+
 if __name__ == "__main__":
     unittest.main()

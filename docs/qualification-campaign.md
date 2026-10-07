@@ -32,3 +32,10 @@ The [three-condition preparation kit](../evals/behavior-study/README.md) keeps
 24 selected cases, three repetitions, and both CLI lanes separate. Its 432 core
 cells are not full-catalog qualification. The 324 later-context cells remain a
 separate stage. Every cell is not run; the kit has no model execution option.
+
+## October 7 repaired draft
+
+The [v2 workflow kit](../evals/behavior-study-v2/README.md) binds the repaired
+canonical source while preserving v1 bytes. Both remain unregistered and unrun.
+Use the [current client packet](client-qualification-preparation-2026-10-07.md)
+for help/version observations and unresolved native prerequisites.

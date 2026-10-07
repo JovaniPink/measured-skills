@@ -25,6 +25,25 @@ SOURCES = {
     "current": "a155250d65112a18e3d633403c4c99be881be433",
 }
 
+STUDY_SOURCES = {
+    "workflow-behavior-2026-10": SOURCES,
+    "workflow-behavior-2026-10-v2": {
+        "historical": SOURCES["historical"],
+        "current": "5ff97f764760ec865ca4fe7ffe37aa31c01d770f",
+    },
+}
+STUDY_KITS = {
+    "workflow-behavior-2026-10": KIT,
+    "workflow-behavior-2026-10-v2": ROOT / "evals" / "behavior-study-v2",
+}
+
+
+def kit_for(manifest: dict[str, Any]) -> Path:
+    identity = manifest.get("study_id")
+    if not isinstance(identity, str) or identity not in STUDY_KITS:
+        raise ValueError("unknown frozen study identity")
+    return STUDY_KITS[identity]
+
 
 def digest(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
@@ -57,19 +76,24 @@ def bundle_hash(revision: str, skill: str) -> str:
     return digest(encoded(files))
 
 
-def load_manifest() -> dict[str, Any]:
-    return json.loads((KIT / "study.json").read_text())  # type: ignore[no-any-return]
+def load_manifest(path: Path | None = None) -> dict[str, Any]:
+    return json.loads((path or KIT / "study.json").read_text())  # type: ignore[no-any-return]
 
 
-def load_fixture(case_id: str) -> dict[str, Any]:
-    if case_id not in {entry["id"] for entry in load_manifest()["cases"]}:
+def load_fixture(
+    case_id: str, manifest: dict[str, Any] | None = None
+) -> dict[str, Any]:
+    manifest = manifest or load_manifest()
+    if case_id not in {entry["id"] for entry in manifest["cases"]}:
         raise ValueError("unknown fixture")
-    return json.loads((KIT / "fixtures" / f"{case_id}.json").read_text())  # type: ignore[no-any-return]
+    return json.loads((kit_for(manifest) / "fixtures" / f"{case_id}.json").read_text())  # type: ignore[no-any-return]
 
 
 def check_manifest(manifest: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     try:
+        kit = kit_for(manifest)
+        sources = STUDY_SOURCES[manifest["study_id"]]
         expected = {
             "format_version",
             "study_id",
@@ -88,10 +112,7 @@ def check_manifest(manifest: dict[str, Any]) -> list[str]:
             or manifest["execution_authorized"] is not False
         ):
             return ["manifest shape or preparation authority changed"]
-        if (
-            manifest["study_id"] != "workflow-behavior-2026-10"
-            or manifest["source_revisions"] != SOURCES
-        ):
+        if manifest["source_revisions"] != sources:
             errors.append("study or source identity changed")
         if (
             manifest["clients"] != list(CLIENTS)
@@ -100,7 +121,15 @@ def check_manifest(manifest: dict[str, Any]) -> list[str]:
             or manifest["repetitions"] != 3
         ):
             errors.append("coverage axes changed")
-        canonical = json.loads((ROOT / "evals/cases.json").read_text())["skills"]
+        canonical = json.loads(
+            subprocess.run(
+                ["git", "show", f"{sources['current']}:evals/cases.json"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout
+        )["skills"]
         expected_ids = {
             case["id"]
             for group in canonical
@@ -126,8 +155,8 @@ def check_manifest(manifest: dict[str, Any]) -> list[str]:
             ):
                 errors.append("case identity or shape mismatch")
                 continue
-            case_bytes = (KIT / "cases" / f"{entry['id']}.json").read_bytes()
-            fixture_bytes = (KIT / "fixtures" / f"{entry['id']}.json").read_bytes()
+            case_bytes = (kit / "cases" / f"{entry['id']}.json").read_bytes()
+            fixture_bytes = (kit / "fixtures" / f"{entry['id']}.json").read_bytes()
             case = json.loads(case_bytes)
             schema = json.loads(
                 (ROOT / "evals/qualification-case-schema-v1.json").read_text()
@@ -148,11 +177,11 @@ def check_manifest(manifest: dict[str, Any]) -> list[str]:
         for arm in ("historical", "current"):
             for skill in SKILLS:
                 if manifest["bundle_hashes"][arm][skill] != bundle_hash(
-                    SOURCES[arm], skill
+                    sources[arm], skill
                 ):
                     errors.append("source bundle hash changed")
         expected_prefixes = {
-            str(turn): digest((KIT / "prefixes" / f"turn-{turn}.txt").read_bytes())
+            str(turn): digest((kit / "prefixes" / f"turn-{turn}.txt").read_bytes())
             for turn in (1, 8, 20)
         }
         if manifest["prefixes"] != expected_prefixes:
@@ -204,9 +233,13 @@ def schedule(manifest: dict[str, Any], expansion: bool = False) -> list[dict[str
 def synthetic_receipt(manifest: dict[str, Any], cell: dict[str, Any]) -> dict[str, Any]:
     """Test-only declarations. A synthetic receipt cannot become client evidence."""
     entry = next(item for item in manifest["cases"] if item["id"] == cell["case"])
-    case = json.loads((KIT / "cases" / f"{cell['case']}.json").read_text())
+    case = json.loads(
+        (kit_for(manifest) / "cases" / f"{cell['case']}.json").read_text()
+    )
     arm = cell["arm"]
-    source = SOURCES["historical" if arm == "historical" else "current"]
+    source = manifest["source_revisions"][
+        "historical" if arm == "historical" else "current"
+    ]
     bundle = (
         digest(b"absent")
         if arm == "none"
@@ -259,7 +292,7 @@ def synthetic_receipt(manifest: dict[str, Any], cell: dict[str, Any]) -> dict[st
             "permission": "bounded",
         },
         "trajectory": {
-            "actions": solution_actions(load_fixture(cell["case"])),
+            "actions": solution_actions(load_fixture(cell["case"], manifest)),
             "final_report": "synthetic-only",
         },
         "inventory": {
@@ -341,7 +374,9 @@ def report(
         entry = next(item for item in manifest["cases"] if item["id"] == cell["case"])
         record = receipt["record"]
         arm = cell["arm"]
-        source = SOURCES["historical" if arm == "historical" else "current"]
+        source = manifest["source_revisions"][
+            "historical" if arm == "historical" else "current"
+        ]
         bundle = (
             digest(b"absent")
             if arm == "none"
@@ -393,7 +428,7 @@ def report(
         ):
             raise ValueError("configuration drift within client lane")
         configurations[cell["client"]] = config
-        frozen = (KIT / "cases" / f"{cell['case']}.json").read_bytes()
+        frozen = (kit_for(manifest) / "cases" / f"{cell['case']}.json").read_bytes()
         result = grade(record, frozen)
         trajectory = receipt["trajectory"]
         if (
@@ -405,7 +440,9 @@ def report(
             or not trajectory["final_report"].strip()
         ):
             raise ValueError("invalid trajectory evidence")
-        observed = replay(load_fixture(cell["case"]), trajectory["actions"])["checks"]
+        observed = replay(load_fixture(cell["case"], manifest), trajectory["actions"])[
+            "checks"
+        ]
         checks = {
             "authority": observed["authority"] and observed["preservation"],
             "outcome": observed["outcome"],
@@ -544,11 +581,17 @@ def main() -> int:
         action="store_true",
         help="report only the separate later-context stage",
     )
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=ROOT / "evals/behavior-study-v2/study.json",
+        help="explicit frozen v1 or v2 study manifest",
+    )
     args = parser.parse_args()
     if args.expansion and not args.report:
         parser.error("--expansion requires --report")
     try:
-        manifest = load_manifest()
+        manifest = load_manifest(args.manifest)
         errors = check_manifest(manifest)
         if errors:
             raise ValueError("; ".join(errors))
