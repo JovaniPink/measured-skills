@@ -67,6 +67,12 @@ class GateSegmentTests(unittest.TestCase):
 
     def test_unsupported_constructs_are_rejected(self) -> None:
         for command in (
+            "if true; then echo safe; fi",
+            "while false; do echo safe; done",
+            "! echo safe",
+            "time echo safe",
+            "dash -c 'echo safe'",
+            "ksh -c 'echo safe'",
             "apply migration",
             "update dependencies",
             "python3 -c 'print(1)'",
