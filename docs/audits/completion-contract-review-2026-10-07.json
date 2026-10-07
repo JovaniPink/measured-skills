@@ -1,0 +1,66 @@
+{
+  "observed_on": "2026-10-07",
+  "review_scope": "All 12 explicit Done when clauses; instruction-contract review, no model observations.",
+  "decisions": [
+    {
+      "skill": "cross-stack-quality-gates",
+      "disposition": "retain",
+      "reason": "Retain: the completed object is a gate report; unavailable gates produce INCOMPLETE, not delivery acceptance."
+    },
+    {
+      "skill": "design-rationale-investigation",
+      "disposition": "retain",
+      "reason": "Retain: completed investigation classifies supported conclusions and their limits."
+    },
+    {
+      "skill": "finish-development-branch",
+      "disposition": "retain",
+      "reason": "Retain: selected actions require readback; unselected actions are not implied."
+    },
+    {
+      "skill": "merge-conflict-reconciliation",
+      "disposition": "retain",
+      "reason": "Retain: focused checks must pass and the next authorized Git action remains separate."
+    },
+    {
+      "skill": "nextjs-feature-delivery",
+      "disposition": "change",
+      "reason": "Repair: blocked, partial, and unavailable required validation cannot establish requested completion."
+    },
+    {
+      "skill": "plan-execution",
+      "disposition": "change",
+      "reason": "Repair: blocked, partial, and unavailable required validation cannot establish requested completion."
+    },
+    {
+      "skill": "problem-framing",
+      "disposition": "retain",
+      "reason": "Retain: framing ends with the proposed next step and its evidence requirements."
+    },
+    {
+      "skill": "publish-change-safely",
+      "disposition": "retain",
+      "reason": "Retain: completion is bounded by requested publication authority and remote readback."
+    },
+    {
+      "skill": "respond-to-code-review",
+      "disposition": "retain",
+      "reason": "Retain: implementation and proposal routes depend on existing implementation authority."
+    },
+    {
+      "skill": "swiftui-feature-delivery",
+      "disposition": "change",
+      "reason": "Repair: blocked, partial, and unavailable required validation cannot establish requested completion."
+    },
+    {
+      "skill": "test-driven-change",
+      "disposition": "retain",
+      "reason": "Retain: both ordinary and exception paths require passing evidence and regression gates."
+    },
+    {
+      "skill": "worktree-isolation",
+      "disposition": "retain",
+      "reason": "Retain: assessment completion does not grant worktree mutation authority."
+    }
+  ]
+}

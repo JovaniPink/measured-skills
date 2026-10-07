@@ -31,7 +31,7 @@ Confirm the exact plan, repository, branch, authorized actions, excluded actions
 
 ## Done when
 
-The plan is done when every authorized step is complete (the whole plan unless the user limited it), its validation has passed or is reported as unavailable, and each deviation is recorded. Stop and ask for any deviation that step 6 names, any rule under Boundaries, a check that fails for an unexplained reason, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.
+The plan is complete only when every authorized step and its acceptance criteria are satisfied, required checks pass, and deviations are recorded. Blocked and partial work remain unfinished. Unavailable required validation must be reported with its limitation and the next authorized check; it cannot establish completion. Stop and ask for any deviation that step 6 names, any rule under Boundaries, a check that fails for an unexplained reason, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.
 
 ## Boundaries
 
