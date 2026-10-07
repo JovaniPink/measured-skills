@@ -22,6 +22,11 @@ class GateSegmentTests(unittest.TestCase):
 
     def test_flags_belong_to_their_tool(self) -> None:
         for command in (
+            "terraform fmt -- -check",
+            "rustfmt -- --check",
+            "cargo fmt -- -- --check",
+            "gofmt -- -l",
+            "gofmt -l -w=true",
             "cargo fmt -l",
             "cargo fmt -d",
             "terraform fmt --check",

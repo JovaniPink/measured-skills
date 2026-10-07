@@ -79,6 +79,11 @@ def _segments(command: str) -> list[list[str]]:
     return segments
 
 
+def _option_tokens(args: list[str]) -> list[str]:
+    """Stop interpreting options at the executable's end-of-options marker."""
+    return args[: args.index("--")] if "--" in args else args
+
+
 def _mutating_segment(argv: list[str]) -> bool:
     tool = argv[0].rsplit("/", 1)[-1]
     args = argv[1:]
@@ -127,14 +132,24 @@ def _mutating_segment(argv: list[str]) -> bool:
     if tool in {"echo", "printf"}:
         return False
     if tool == "terraform" and args[:1] == ["fmt"]:
-        flags = args[1:]
+        flags = _option_tokens(args[1:])
         return any(
             flag.startswith("-write=") and flag != "-write=false" for flag in flags
         ) or not ("-check" in flags or "-write=false" in flags)
-    if (tool == "cargo" and args[:1] == ["fmt"]) or tool == "rustfmt":
-        return "--check" not in args
+    if tool == "cargo" and args[:1] == ["fmt"]:
+        flags = args[1:]
+        # Cargo forwards options after its first separator to rustfmt.
+        if "--" in flags:
+            split = flags.index("--")
+            flags = flags[:split] + _option_tokens(flags[split + 1 :])
+        return "--check" not in flags
+    if tool == "rustfmt":
+        return "--check" not in _option_tokens(args)
     if tool == "gofmt":
-        return "-w" in args or not any(flag in args for flag in ("-l", "-d"))
+        flags = _option_tokens(args)
+        return any(flag == "-w" or flag.startswith("-w=") for flag in flags) or not any(
+            flag in flags for flag in ("-l", "-d")
+        )
     if tool == "go" and (
         args[:1] in (["generate"], ["fmt"], ["get"]) or args[:2] == ["mod", "tidy"]
     ):
