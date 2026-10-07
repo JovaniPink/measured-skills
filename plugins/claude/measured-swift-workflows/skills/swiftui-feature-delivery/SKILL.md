@@ -26,7 +26,7 @@ Read [state, availability and acceptance](references/delivery.md) only when its 
 
 ## Done when
 
-The slice is done when the requested behavior works within the allowlist, the narrow behavior check and applicable gates pass or are reported as unavailable, and the final diff has been inspected against the allowlist, or when the result is Not Needed or Blocked. Stop and ask only when the slice needs a path outside the allowlist, an action listed under Boundaries, or a product decision the repository cannot answer.
+The slice is complete only when the requested behavior and acceptance criteria are satisfied within the allowlist, required checks pass, and the final allowlisted diff has been inspected. Blocked and partial work remain unfinished. Unavailable required validation must be reported with its limitation and the next authorized check; it cannot establish completion. Not Needed requires evidence that no applicable authorized change exists. Stop and ask only when the slice needs a path outside the allowlist, an action listed under Boundaries, or a product decision the repository cannot answer.
 
 ## Boundaries
 

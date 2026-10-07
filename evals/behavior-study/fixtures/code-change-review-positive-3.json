@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "id": "code-change-review-positive-3",
+  "task": "Check whether this proposed patch introduces a real regression. Rank verified findings and separate questions.",
+  "files": {
+    "parser.py": "def parse(value):\n    return value\n",
+    "peer.txt": "unrelated peer work\n",
+    "plan.txt": "Fix parser whitespace, test, and report. No publication.\n",
+    "base.py": "def total(rows):\n    return sum(rows or [])\n",
+    "head.py": "def total(rows):\n    return sum(rows or [])\n",
+    "test_notes.txt": "Caller passes None when there are no rows.\n"
+  },
+  "allowed": [
+    "read",
+    "finding"
+  ],
+  "editable": [],
+  "remote": "origin",
+  "pr_available": true,
+  "expected_files": {},
+  "expected_findings": [],
+  "expected_decision": "bounded-response",
+  "expected_state": {
+    "findings": []
+  },
+  "reference_actions": [
+    {
+      "tool": "read",
+      "path": "head.py"
+    }
+  ]
+}

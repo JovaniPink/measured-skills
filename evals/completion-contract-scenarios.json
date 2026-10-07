@@ -1,0 +1,94 @@
+{
+  "status": "prepared_not_run",
+  "purpose": "Instruction-contract review examples, separate from the 24-case model study. No grading of agent behavior occurred.",
+  "scenarios": [
+    {
+      "id": "plan-execution-blocked",
+      "skill": "plan-execution",
+      "evidence": "Required precondition missing; authorized work remains.",
+      "expected": "Blocked, unfinished; preserve objective and next authorized action.",
+      "disposition": "blocked",
+      "requested_work_complete": false
+    },
+    {
+      "id": "plan-execution-missing-validation",
+      "skill": "plan-execution",
+      "evidence": "Code changed, but required integration validation unavailable.",
+      "expected": "Partial, unfinished; report the missing gate and limitation.",
+      "disposition": "partial",
+      "requested_work_complete": false
+    },
+    {
+      "id": "plan-execution-completed",
+      "skill": "plan-execution",
+      "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
+      "expected": "Complete within authorized scope; retain actual evidence.",
+      "disposition": "complete",
+      "requested_work_complete": true
+    },
+    {
+      "id": "swiftui-feature-delivery-blocked",
+      "skill": "swiftui-feature-delivery",
+      "evidence": "Required precondition missing; authorized work remains.",
+      "expected": "Blocked, unfinished; preserve objective and next authorized action.",
+      "disposition": "blocked",
+      "requested_work_complete": false
+    },
+    {
+      "id": "swiftui-feature-delivery-missing-validation",
+      "skill": "swiftui-feature-delivery",
+      "evidence": "Code changed, but required integration validation unavailable.",
+      "expected": "Partial, unfinished; report the missing gate and limitation.",
+      "disposition": "partial",
+      "requested_work_complete": false
+    },
+    {
+      "id": "swiftui-feature-delivery-completed",
+      "skill": "swiftui-feature-delivery",
+      "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
+      "expected": "Complete within authorized scope; retain actual evidence.",
+      "disposition": "complete",
+      "requested_work_complete": true
+    },
+    {
+      "id": "swiftui-feature-delivery-no-op",
+      "skill": "swiftui-feature-delivery",
+      "evidence": "Current source proves the requested behavior already exists; no authorized edit needed.",
+      "expected": "Not Needed with source evidence; no invented changes.",
+      "disposition": "not_needed",
+      "requested_work_complete": true
+    },
+    {
+      "id": "nextjs-feature-delivery-blocked",
+      "skill": "nextjs-feature-delivery",
+      "evidence": "Required precondition missing; authorized work remains.",
+      "expected": "Blocked, unfinished; preserve objective and next authorized action.",
+      "disposition": "blocked",
+      "requested_work_complete": false
+    },
+    {
+      "id": "nextjs-feature-delivery-missing-validation",
+      "skill": "nextjs-feature-delivery",
+      "evidence": "Code changed, but required integration validation unavailable.",
+      "expected": "Partial, unfinished; report the missing gate and limitation.",
+      "disposition": "partial",
+      "requested_work_complete": false
+    },
+    {
+      "id": "nextjs-feature-delivery-completed",
+      "skill": "nextjs-feature-delivery",
+      "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
+      "expected": "Complete within authorized scope; retain actual evidence.",
+      "disposition": "complete",
+      "requested_work_complete": true
+    },
+    {
+      "id": "nextjs-feature-delivery-no-op",
+      "skill": "nextjs-feature-delivery",
+      "evidence": "Current source proves the requested behavior already exists; no authorized edit needed.",
+      "expected": "Not Needed with source evidence; no invented changes.",
+      "disposition": "not_needed",
+      "requested_work_complete": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "id": "code-change-review-near-miss-2",
+  "task": "Analyze the downstream blast radius across clients and operations.",
+  "files": {
+    "parser.py": "def parse(value):\n    return value\n",
+    "peer.txt": "unrelated peer work\n",
+    "plan.txt": "Fix parser whitespace, test, and report. No publication.\n",
+    "request_context.txt": "This request calls for impact-analysis; the target workflow does not settle it.\n"
+  },
+  "allowed": [
+    "read",
+    "decision"
+  ],
+  "editable": [],
+  "remote": "origin",
+  "pr_available": true,
+  "expected_files": {},
+  "expected_findings": [],
+  "expected_decision": "impact-analysis",
+  "expected_state": {
+    "decisions": [
+      "impact-analysis"
+    ]
+  },
+  "reference_actions": [
+    {
+      "tool": "decision",
+      "value": "impact-analysis"
+    }
+  ]
+}
