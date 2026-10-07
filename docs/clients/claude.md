@@ -15,7 +15,7 @@ claude --version
 claude plugin list --json
 ```
 
-Check personal skills, project skills, and plugins for copies with the same name. Keep a list of old copies before changing anything. In the app, also check **Customize > Skills > Yours**. A personal upload and a plugin can both appear there.
+Check personal, project, plugin, managed, account-synced and bundled skills for overlapping names and instructions. Keep a list of old copies before changing anything. In the app, also check **Customize > Skills > Yours**. A personal upload and a plugin can both appear there.
 
 ## Install one reviewed pack
 
@@ -69,3 +69,11 @@ If a live check reports expired sign-in, leave it blocked until sign-in is refre
 Follow the [shared client checks](../client-support.md). Remove duplicate copies only after reviewing their source and saving what is needed to restore them.
 
 Sources: [Claude skills](https://code.claude.com/docs/en/skills), [plugin management](https://code.claude.com/docs/en/discover-plugins), [Claude memory](https://code.claude.com/docs/en/memory).
+
+## Account-sync qualification amendment, October 7, 2026
+
+Current [Claude skill documentation](https://code.claude.com/docs/en/skills#skills-synced-from-claudeai) describes account skills loading into signed-in terminal sessions, with terminal sync documented from version 2.1.273. A short print run may finish before a download; a later sync may change the running inventory. This is a source readback, not an observation of this machine's loaded catalog.
+
+Project-only settings do not prove account, managed or bundled skills are absent. Record all six source classes, full command names, collisions and effective precedence. Capture inventory before and after a trial and the exact entrypoint/reference bytes actually loaded. If the relevant inventory changes, classify the comparison as unavailable rather than silently retrying.
+
+A future isolation recipe must be supported at the installed version and observed in calibration. Do not infer per-session support for a user or managed setting, delete cached skills, change account entries or rewrite global settings to qualify this preparation. Keep each app's results separate. The [dated launch amendment](../client-isolation-amendment-2026-10-07.md) supplements the frozen client packets without changing them.

@@ -84,6 +84,40 @@ def _option_tokens(args: list[str]) -> list[str]:
     return args[: args.index("--")] if "--" in args else args
 
 
+def _terraform_fmt_mutates(args: list[str]) -> bool:
+    """Inspect supported Go-style Boolean options without evaluating the shell."""
+    values = {"check": False, "write": True}
+    supported = {"check", "write", "list", "diff", "recursive", "no-color"}
+    true_values = {"1", "t", "T", "true", "TRUE", "True"}
+    false_values = {"0", "f", "F", "false", "FALSE", "False"}
+    for index, arg in enumerate(args):
+        if arg == "--":
+            break
+        if not arg.startswith("-") or arg == "-":
+            # Go stops parsing at the first operand. Reject later flag-looking
+            # operands so they cannot be mistaken for effective check options.
+            if any(item.startswith("-") for item in args[index + 1 :]):
+                return True
+            break
+        option = arg[2:] if arg.startswith("--") else arg[1:]
+        name, separator, raw = option.partition("=")
+        if name not in supported:
+            return True
+        if not separator:
+            if index + 1 < len(args) and args[index + 1] in true_values | false_values:
+                return True  # Separate Boolean values are outside this subset.
+            value = True
+        elif raw in true_values:
+            value = True
+        elif raw in false_values:
+            value = False
+        else:
+            return True
+        if name in values:
+            values[name] = value  # Repeated options use the final effective value.
+    return values["write"] and not values["check"]
+
+
 def _mutating_segment(argv: list[str]) -> bool:
     tool = argv[0].rsplit("/", 1)[-1]
     args = argv[1:]
@@ -132,10 +166,7 @@ def _mutating_segment(argv: list[str]) -> bool:
     if tool in {"echo", "printf"}:
         return False
     if tool == "terraform" and args[:1] == ["fmt"]:
-        flags = _option_tokens(args[1:])
-        return any(
-            flag.startswith("-write=") and flag != "-write=false" for flag in flags
-        ) or not ("-check" in flags or "-write=false" in flags)
+        return _terraform_fmt_mutates(args[1:])
     if tool == "cargo" and args[:1] == ["fmt"]:
         flags = args[1:]
         # Cargo forwards options after its first separator to rustfmt.

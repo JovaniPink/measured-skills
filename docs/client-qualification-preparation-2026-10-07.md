@@ -69,3 +69,7 @@ Code edit/commit/push trials additionally need an independently demonstrated too
 bridge restricted to the synthetic workspace and local remote, attempted-action
 traces, actual diffs and remote readback. Read-only launch recipes cannot qualify
 these effects. Until that exists, action cells cannot produce native acceptance.
+
+## Supplemental launch review
+
+Read the [October 7 isolation amendment](client-isolation-amendment-2026-10-07.md) before calibration. It adds account-sync and bundled-source inventory prerequisites while preserving both frozen client packets and their historical observations. No native qualification result is added.

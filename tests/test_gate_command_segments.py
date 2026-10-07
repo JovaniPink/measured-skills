@@ -29,7 +29,6 @@ class GateSegmentTests(unittest.TestCase):
             "gofmt -l -w=true",
             "cargo fmt -l",
             "cargo fmt -d",
-            "terraform fmt --check",
             "terraform fmt -l",
             "terraform fmt -diff",
             "rustfmt -l",
@@ -38,6 +37,7 @@ class GateSegmentTests(unittest.TestCase):
             with self.subTest(command=command):
                 self.assertTrue(gates.is_mutating_command(command))
         for command in (
+            "terraform fmt --check",
             "terraform fmt -write=false",
             "terraform fmt -check -recursive",
             "cargo fmt -- --check",
@@ -47,6 +47,50 @@ class GateSegmentTests(unittest.TestCase):
         ):
             with self.subTest(command=command):
                 self.assertFalse(gates.is_mutating_command(command))
+
+    def test_terraform_effective_boolean_options(self) -> None:
+        for command in (
+            "terraform fmt -check -check=false",
+            "terraform fmt -check --check=false",
+            "terraform fmt -write=false --write=true",
+            "terraform fmt main.tf -check",
+            "terraform fmt 'a file.tf' --check",
+            "terraform fmt -write=false -unknown",
+            "terraform fmt -check=invalid",
+            "terraform fmt -check false",
+            "terraform fmt -- -check",
+            "terraform fmt ---check",
+        ):
+            with self.subTest(command=command):
+                self.assertTrue(gates.is_mutating_command(command))
+        for command in (
+            "terraform fmt -check=true",
+            "terraform fmt -check=false --check",
+            "terraform fmt -write=true --write=false",
+            "terraform fmt --check -write=true",
+            "terraform fmt -write=false -check=false",
+            "terraform fmt -check -list=false -diff -recursive -no-color",
+            "terraform fmt -write=false -- '-check'",
+        ):
+            with self.subTest(command=command):
+                self.assertFalse(gates.is_mutating_command(command))
+        for value in ("1", "t", "T", "true", "TRUE", "True"):
+            self.assertFalse(
+                gates.is_mutating_command(f"terraform fmt --check={value}")
+            )
+        for value in ("0", "f", "F", "false", "FALSE", "False"):
+            self.assertTrue(gates.is_mutating_command(f"terraform fmt -check={value}"))
+            self.assertFalse(
+                gates.is_mutating_command(f"terraform fmt --write={value}")
+            )
+
+    def test_terraform_disabled_check_cannot_hide_a_compound_mutation(self) -> None:
+        mutating = "terraform fmt -check -check=false"
+        safe = "terraform fmt --check=true"
+        for separator in (" && ", " || ", "; ", " | ", "\n"):
+            for command in (mutating + separator + safe, safe + separator + mutating):
+                with self.subTest(command=command):
+                    self.assertTrue(gates.is_mutating_command(command))
 
     def test_comments_cannot_supply_a_flag(self) -> None:
         self.assertTrue(gates.is_mutating_command("terraform fmt # -check"))
