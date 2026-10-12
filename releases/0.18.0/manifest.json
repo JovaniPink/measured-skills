@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "26a9987d422d58cb27330a59202ce97ec0e4da3c",
+  "source_commit": "17b174884727aeee469b570b9c29fb2a14a9814a",
   "created_on": "2026-10-12",
   "artifacts": [
     {
@@ -407,7 +407,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/skill-import-provenance-0.18.0.zip",
-      "sha256": "16bb3fbbfa06686d6231c8cb27b28312afcfb31491a3a8407a3918ca9ca28fbe"
+      "sha256": "e65d7e4b3097939b73879aab6b3ad7253c68081079707b1fca3bc5cd60ed924f"
     },
     {
       "kind": "zip",
@@ -442,7 +442,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swift-swiftui-engineering-profile-0.18.0.zip",
-      "sha256": "7a8a92acb8a7dc2ed12764c25c115c6133ed45da16d59ac43da1bbf1a2e59bce"
+      "sha256": "f95041db74bc323b6545431526e969c3dcc33c7dc0c7b6b7a4e331f1e5af1108"
     },
     {
       "kind": "zip",
@@ -557,7 +557,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stack-profiles",
-      "sha256": "682c0d982bfb53ee69a3e0098854f89336087fbc0e73545739e3eb50546022b7"
+      "sha256": "40fbdfafc7e196de6e8e4275bfcf63e64b37c03aef57c508742d8290ccfd58a0"
     },
     {
       "kind": "tree",
@@ -607,12 +607,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "54c03c52697de9d00e93d8818f81482f43cb527f5f71883092bd32a4134044fa"
+      "sha256": "fe241f4e25fe5ef056032f4256f2116f0186f29c6c609574e3c1ac1a555b5e0c"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stack-profiles",
-      "sha256": "7fad57e965f7597f96680dd73b73799fc61d6271f5a15a6b25240969e0089cca"
+      "sha256": "d21f941658278c0b4c44266115fdbceaad304a0fa8019fc285c64be0f4da8932"
     },
     {
       "kind": "tree",
@@ -662,12 +662,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "883d616e2ab0a1a659c0c5bc05c724f8a6896a3c05438e15bc4dd5442752c90b"
+      "sha256": "1d4d616baacfcb327237391508d148a1cc947aaaddb4e4926cc63ad5f7c99adf"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stack-profiles",
-      "sha256": "1e2a1b26620f18e0df8f0bf574d5de53c025c6c48ac5ecec79040535d17ec39d"
+      "sha256": "dbca99ac85d75686eb10d126881638d6717d2658947ea98a77dcbcb1e5104334"
     },
     {
       "kind": "tree",
@@ -677,7 +677,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "ca248ec39e58c4e789896b8fcccdb7722d5a7fcc2a50414c9bf15b0dc899d4f1"
+      "sha256": "cc406c2821fc7bbc1719685e19cffa5b9b2a7c28afdee663a15d544fcaab50d9"
     }
   ]
 }
