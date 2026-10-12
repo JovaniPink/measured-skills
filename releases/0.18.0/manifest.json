@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "ec03fb8fd14531519b096222add3dbd99105fd06",
+  "source_commit": "d4b185c798d2fd2a211b572d5358fc6354c59924",
   "created_on": "2026-10-12",
   "artifacts": [
     {
@@ -667,7 +667,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stack-profiles",
-      "sha256": "8c0be8240b72a48dfe2a5423cd6d06f81baf18353658d4ad970cc115e56c568c"
+      "sha256": "1e2a1b26620f18e0df8f0bf574d5de53c025c6c48ac5ecec79040535d17ec39d"
     },
     {
       "kind": "tree",
