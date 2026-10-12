@@ -10,3 +10,24 @@ Authorities: [ForEach](https://developer.apple.com/documentation/swiftui/foreach
 - Apply move intent in the draft or authoritative mutation owner, never in a second unsynchronized copy. Preserve record IDs, draft fields, focus, and selection. Commit order only at the product's save boundary. [unverified: application contract]
 - Define behavior for first/last moves, empty input, invalid IDs, stale snapshots, duplicate IDs, multi-section moves, no-ops, and canceled drags. Reject ambiguous identity rather than moving the wrong item. [unverified: application contract]
 - Provide operable move actions for users who cannot drag. Verify accessibility order after the move and persistence after reopening. [documented]
+
+## Review a move as a transaction
+
+1. Locate source and destination by stable ID in the current draft snapshot.
+2. Reject missing or duplicate IDs. Treat a same-position move as a no-op.
+3. Move the complete draft, including incomplete numeric strings, without
+   regenerating IDs. A duplicated record instead needs a new ID.
+4. Keep focus and selection attached to identity; explicitly define deletion
+   fallback when that identity disappears.
+5. Save through the current mutation owner; on failure preserve the draft, and
+   on Cancel leave the durable snapshot unchanged.
+
+This is an application contract, not a claim about ReorderDifference semantics.
+Native differences need separate stale-snapshot and cross-section tests before
+using them as persistence commands. [unverified: per-application behavior]
+
+A row wrapper stabilizes cardinality only at the lazy container boundary where
+it is inserted. Compare `ForEach(items) { Row(item: $0) }` with conditional output
+at that boundary; putting a Group around branches does not necessarily create a
+layout node. Verify row construction and accessibility instead of mechanically
+adding stacks. [documented: performance authority; runtime cost unverified]

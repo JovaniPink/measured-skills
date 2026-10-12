@@ -12,3 +12,22 @@ Authorities: [State](https://developer.apple.com/documentation/swiftui/state), [
 ## Preserve binding behavior
 
 A setter may intentionally validate, normalize, or clear an optional presentation. Replacing it with onChange can change equal-value writes, timing, and programmatic changes. Keep numeric text drafts intact until the explicit commit action. Tests must cover invalid and incomplete text, equal assignments, cancellation, and failed saves. [unverified: verify each application contract]
+
+## Choose the owner and event boundary
+
+| Value | Owner | Lifetime check |
+| --- | --- | --- |
+| Unsaved editor text | stable editor/root state | resizing and sheet changes preserve text; Cancel discards it |
+| Per-window selection | scene state, if scenes are supported | opening another window does not change this selection |
+| Durable record | existing store/context | Save failure leaves the draft available for retry |
+| Reusable expensive object | explicit retained owner | count construction across redraw and identity replacement |
+
+A custom setter executes on an equal assignment even when an `onChange` observer
+has no changed value to observe. A direct model mutation bypasses that setter.
+The original simulator fixture exercises both boundaries; choose based on the
+required event, not a blanket ban on custom bindings. [verified: simulator,
+Xcode 27.0 / iOS 27.0; fixture scope only]
+
+When an initializer supplies State, omit an inline default and initialize ordinary
+stored properties first. A compiling second assignment is not evidence that the
+second value becomes retained state. [documented: TN3211]

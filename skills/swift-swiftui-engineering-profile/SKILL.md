@@ -26,16 +26,16 @@ Read only the reference that matches the code under review:
 - [iOS accessibility](references/ios-accessibility.md): Dynamic Type, VoiceOver labels on custom controls, Reduce Motion, Differentiate Without Color, and touch targets.
 - [HealthKit](references/healthkit.md): just-in-time authorization, private read status, limited history, and denied states.
 
-- [API currency](references/api-currency.md).
-- [State and environment](references/state-and-environment.md).
-- [Identity and collections](references/identity-and-collections.md).
-- [Animations](references/animations.md).
-- [Toolbars and presentation](references/toolbars-and-presentation.md).
-- [Adaptive layout](references/adaptive-layout.md).
-- [Localization](references/localization.md).
-- [SwiftUI performance](references/swiftui-performance.md).
-- [Release readiness](references/release-readiness.md).
-- [Folding displays](references/folding-displays.md).
+- [API currency](references/api-currency.md): replacement table, minimum OS, SDK availability, and concrete builder diagnostics.
+- [State and environment](references/state-and-environment.md): initialization, retained objects, dependency reads, and Binding setter semantics.
+- [Identity and collections](references/identity-and-collections.md): stable record IDs, lazy row shape, draft reordering, and accessible movement.
+- [Animations](references/animations.md): synthesized versus custom interpolation, interruption, completion, and Reduce Motion.
+- [Toolbars and presentation](references/toolbars-and-presentation.md): overflow, semantic action placement, keyboard access, and stable sheet ownership.
+- [Adaptive layout](references/adaptive-layout.md): container sizing, optional size classes, safe areas, and scene continuity.
+- [Localization](references/localization.md): extraction, generated keys, plurals, bundle lookup, and accessible copy.
+- [SwiftUI performance](references/swiftui-performance.md): causal profiling, observation granularity, list construction, and image workloads.
+- [Release readiness](references/release-readiness.md): built metadata, privacy, purchase qualification, and separate provider gates.
+- [Folding displays](references/folding-displays.md): new-SDK qualification, reserved geometry, transition journeys, and device gaps.
 
 Each rule carries a label. `[verified]` rules identify SDK inspection, compile, simulator, or device evidence and its toolchain; `[documented]` rules come from Apple documentation or Swift Evolution; `[unverified]` rules are review judgment. Recheck `[verified]` rules against the repository's own toolchain and deployment targets before reporting them as current.
 

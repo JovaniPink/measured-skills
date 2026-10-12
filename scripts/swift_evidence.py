@@ -52,7 +52,7 @@ def load_cases(path: Path) -> list[dict[str, Any]]:
     seen: set[str] = set()
     required = {"id", "source", "expect", "diagnostics", "target", "language", "minimum_sdk", "authority"}
     for row in rows:
-        if not isinstance(row, dict) or set(row) != required:
+        if not isinstance(row, dict) or not required <= set(row) or set(row) - required - {"phase"}:
             raise ValueError("unsupported case fields")
         if not isinstance(row["id"], str) or not re.fullmatch(r"[a-z][a-z0-9-]+", row["id"]) or row["id"] in seen:
             raise ValueError("invalid or duplicate case ID")
@@ -61,6 +61,8 @@ def load_cases(path: Path) -> list[dict[str, Any]]:
             raise ValueError("invalid expectation or language")
         if any(not isinstance(row[k], str) or not re.fullmatch(r"\d+\.\d+(?:\.\d+)?", row[k]) for k in ("target", "minimum_sdk")):
             raise ValueError("invalid OS version")
+        if row.get("phase", "typecheck") not in {"typecheck", "object"}:
+            raise ValueError("invalid compiler phase")
         source = row["source"]
         if not isinstance(source, str) or not re.fullmatch(r"[A-Za-z0-9_-]+\.swift", source):
             raise ValueError("source must be a local Swift filename")
@@ -177,8 +179,11 @@ def execute(args: argparse.Namespace) -> int:
                 if tuple(map(int, sdk_version.split("."))) < tuple(map(int, row["minimum_sdk"].split("."))):
                     result.update(status="blocked", limitation="Installed SDK is older than this case requires.")
                 else:
-                    command = ["xcrun", "swiftc", "-typecheck", "-sdk", sdk, "-target", f"arm64-apple-ios{row['target']}-simulator",
+                    phase = row.get("phase", "typecheck")
+                    options = ["-typecheck"] if phase == "typecheck" else ["-c", "-parse-as-library", "-o", str(output / (row["id"] + ".o"))]
+                    command = ["xcrun", "swiftc", *options, "-sdk", sdk, "-target", f"arm64-apple-ios{row['target']}-simulator",
                                "-swift-version", row["language"], "-module-cache-path", str(output / "module-cache"), str(source)]
+                    result["phase"] = phase
                     result["command"] = command
                     try:
                         completed = run(command, env)

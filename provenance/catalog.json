@@ -766,14 +766,11 @@
       "reviewed_material": [
         "Primary framework documentation",
         "Owned bounded workflow and synthetic evaluation contract",
+        "Owned compatibility and stage-specific evidence preflight in references/currency.md; original synthetic journey cases in evals/swift-adoption-v1",
         "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
-        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
-        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
-        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
-        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
-        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements"
       ],
-      "local_changes": "Original ios journey verification with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
+      "local_changes": "Original ios journey verification with project-specific contract projection. 2026-10-12: adds a self-contained compatibility and evidence preflight covering edit continuity, accessibility and layout test selection, unavailable checks, built launch metadata, and separate simulator/device/provider acceptance. It does not supply implementations of those platform capabilities.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",
@@ -1380,15 +1377,15 @@
     {
       "skill": "skill-import-provenance",
       "disposition": "covered",
-      "implementation_method": "clean-room",
+      "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
       "upstream_license": "No source text imported; public specification used as format authority.",
       "pinned_revision": "retrieved-2026-08-20",
-      "reviewed_on": "2026-08-20",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored ownership, revision-pinning, Jovani-owned transfer, external-source rejection, and revocation workflow.",
+      "local_changes": "Independently authored ownership, revision-pinning, Jovani-owned transfer, external-source rejection, and revocation workflow. 2026-10-12: clarifies the repository-scoped exclusion and separately governed private research custody; no external material is admitted as implementation authority. New policy wording is original; prior provenance remains in history.",
       "security_review": "APPROVE: explicit-only trust decision; third-party skill catalogs are rejected and reviewed material is never installed or executed.",
       "rereview_triggers": [
         "owned-transfer behavior change",
@@ -1492,14 +1489,9 @@
       "reviewed_material": [
         "Primary framework documentation",
         "Owned bounded workflow and synthetic evaluation contract",
-        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
-        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
-        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
-        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
-        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
-        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
+        "Owned synthetic cancellation, task lifetime, and stale-result review cases in evals/swift-adoption-v1"
       ],
-      "local_changes": "Original swift concurrency diagnosis with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
+      "local_changes": "Original swift concurrency diagnosis with project-specific contract projection. 2026-10-12: adds review of cancellation before and after suspension, stale results, actor reentrancy, and work before the first suspension; requires module-specific isolation evidence. No layout, localization, or release API implementation is claimed.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",
@@ -1518,14 +1510,9 @@
       "reviewed_material": [
         "Primary framework documentation",
         "Owned bounded workflow and synthetic evaluation contract",
-        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
-        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
-        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
-        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
-        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
-        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
+        "Owned synthetic draft-ordering and mutation-authority cases in evals/swift-adoption-v1"
       ],
-      "local_changes": "Original swift persistence contract review with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
+      "local_changes": "Original swift persistence contract review with project-specific contract projection. 2026-10-12: adds stable-ID draft ordering, Save/Cancel boundaries, incomplete numeric drafts, duplicate-ID rejection, and save/reopen and sync test requirements. No launch-screen or localization implementation is claimed.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",

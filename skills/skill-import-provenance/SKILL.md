@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-skills"
   invocation: "explicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "trust-decision"
 ---
 
@@ -18,7 +18,7 @@ Keep owned original work and primary authorities separate from external rejectio
 ## Workflow
 
 1. Resolve the exact owned source, revision, artifact, author, license, destination, and authority for the proposed transfer.
-2. If the source is a third-party skill catalog, stop. Do not track, cite, mirror, adapt, vendor, or use it as an implementation source. Any authorized investigation stays outside Git and can influence rejection boundaries only.
+2. If the source is a third-party skill catalog, stop. Do not track, cite, mirror, adapt, vendor, or use it as an implementation source. Keep authorized investigation outside this repository and its distributions. Separately governed private research may retain original assessments, permalinks, and hashes under its own policy; it cannot supply imported prose, structure, or implementation authority here. Public behavior still requires owned work, primary authorities, and original evidence.
 3. Confirm ownership, or separately documented authority, for every transferred file, and confirm that the license permits the destination use.
 4. Inventory the exact files proposed for transfer and their dependencies, scripts, assets, hooks, and network behavior.
 5. Run or obtain a security review appropriate to the package's influence and execution surface.

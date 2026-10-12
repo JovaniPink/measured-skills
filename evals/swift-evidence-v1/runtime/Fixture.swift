@@ -36,6 +36,28 @@ struct EnvironmentReader: View {
     }
 }
 
+extension EnvironmentValues {
+    @Entry var probePosition = 0
+}
+
+struct ScalarEnvironmentReader: View {
+    @Environment(\.probePosition) private var position
+    let counter: UpdateCounter
+    var body: some View {
+        counter.increment()
+        return Text("Position: \(position)")
+    }
+}
+
+struct InitializationView: View {
+    let recorder: Recorder
+    @State private var initial = 7
+    init(recorder: Recorder) { self.recorder = recorder; self.initial = 19 }
+    var body: some View {
+        Text("Initial: \(initial)").task { recorder.initializedValue = initial }
+    }
+}
+
 struct SheetSelection: Identifiable { let id = UUID() }
 
 struct ResultRow: Codable {
@@ -49,6 +71,7 @@ final class Recorder {
     var identities: [Int: UUID] = [:]
     var sizes: [Int: CGSize] = [:]
     var rows: [ResultRow] = []
+    var initializedValue: Int?
     var finished = false
     var presentedSelection: UUID?
     var dismissedSelection = false
@@ -108,6 +131,11 @@ struct EvidenceView: View {
     @State private var observation = ObservationFixture()
     @State private var environmentUpdates = UpdateCounter()
     @State private var sheetSelection: SheetSelection?
+    @State private var scalarPosition = 0
+    @State private var scalarUpdates = UpdateCounter()
+    @State private var interrupted = false
+    @State private var completionEvents: [String] = []
+    @State private var motionEnvironmentObserved = false
 
     var body: some View {
         ScrollView {
@@ -116,6 +144,11 @@ struct EvidenceView: View {
                 Text("No product data, purchases, network, or live services.")
                 TokenView(step: step, recorder: recorder).id(identity)
                 EnvironmentReader(counter: environmentUpdates).environment(observation)
+                ScalarEnvironmentReader(counter: scalarUpdates).environment(\.probePosition, scalarPosition)
+                InitializationView(recorder: recorder)
+                MotionPreferenceView(observed: $motionEnvironmentObserved)
+                    .environment(\.accessibilityReduceMotion, true)
+                Text("Interrupted fixture").opacity(interrupted ? 0.2 : 1)
                 RoundedRectangle(cornerRadius: 12)
                     .fill(.blue.opacity(0.2))
                     .frame(width: width, height: height)
@@ -208,6 +241,32 @@ struct EvidenceView: View {
         sheetSelection = nil
         let dismissed = await recorder.waitFor { recorder.dismissedSelection }
         recorder.check("presentation-dismissal-retains-draft", dismissed && saved == "committed" && draft == "committed", "Programmatic item dismissal delivered onDismiss and retained the parent draft. Keyboard and user-driven dismissal remain separate journeys.")
+        let initializationReady = await recorder.waitFor { recorder.initializedValue != nil }
+        recorder.check("state-inline-default-precedence", initializationReady && recorder.initializedValue == 7,
+                       "Inline 7 with init assignment 19 displayed \(String(describing: recorder.initializedValue)); this iOS 27 fixture only.")
+        let scalarBefore = scalarUpdates.value
+        scalarPosition = 1
+        let scalarChanged = await recorder.waitFor { scalarUpdates.value > scalarBefore }
+        recorder.check("environment-scalar-reader-updates", scalarChanged,
+                       "Replacing the injected scalar updated its reader: \(scalarBefore) -> \(scalarUpdates.value). No subtree-wide count is asserted.")
+        recorder.check("reduce-motion-environment-read", motionEnvironmentObserved,
+                       "The fixture read an explicitly injected Reduce Motion preference; this is not a device-setting or animation-accessibility pass.")
+        withAnimation(.linear(duration: 1), completionCriteria: .removed) {
+            interrupted = true
+        } completion: { completionEvents.append("first") }
+        try? await Task.sleep(for: .milliseconds(100))
+        withAnimation(.linear(duration: 0.1), completionCriteria: .removed) {
+            interrupted = false
+        } completion: { completionEvents.append("replacement") }
+        let bothCompleted = await recorder.waitFor { completionEvents.contains("first") && completionEvents.contains("replacement") }
+        recorder.check("animation-interrupted-completions", bothCompleted && !interrupted,
+                       "An interrupted animation and its replacement delivered callbacks: \(completionEvents). A callback alone does not identify the current intent.")
         recorder.save()
     }
+}
+
+struct MotionPreferenceView: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Binding var observed: Bool
+    var body: some View { Text("Motion preference").task { observed = reduceMotion } }
 }

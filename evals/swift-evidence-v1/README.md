@@ -55,3 +55,18 @@ receipt does not qualify iOS framework packaging or String Catalog extraction.
 The [String Catalog fixture](string-catalog/README.md) checks installed lightweight
 extraction, manual-key retention, symbol generation/typechecking and localized
 build products. Its limitations differ from both the compile and package runs.
+
+## Compiler phase matters
+
+The default case phase is typecheck. Cases declaring `phase: object` also emit an
+object file, without linking or executing it. In the 2026-10-12 investigation,
+back-deployed EnumeratedSequence conformance emitted no typecheck diagnostic but
+warned during Swift 5 object compilation and failed in Swift 6. Both cases and
+the Array fallback are retained. Expected compiler diagnostics cannot be inferred
+from language mode or a typecheck alone.
+
+The original initializer-order example compiled in the installed 27.0 compiler,
+even though TN3211 documents that pattern as an incompatibility. The corpus records
+this observed disagreement; it does not rewrite the result to match documentation.
+Empty MapKit-adjacent Group produced a non-View EmptyMapContent diagnostic here,
+rather than the documented ambiguous-overload spelling. Explicit EmptyView passes.

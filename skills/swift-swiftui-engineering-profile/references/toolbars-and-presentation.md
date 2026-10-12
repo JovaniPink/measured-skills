@@ -16,3 +16,17 @@ Choose semantic placements based on the action's purpose. Test which actions ove
 Attach presentation to a stable owner. Test optional-item dismissal, selection changes while a sheet is open, keyboard obstruction, restoration, and cancellation. An inspector, trailing presentation, and modal sheet have different navigation and accessibility consequences. [unverified: runtime]
 
 Use system status-bar visibility only when the product benefits, and verify that required context and dismissal remain available. Keep future SDK experiments out of the supported build until positive and negative availability probes pass. [unverified: application decision]
+
+## Test actions where they are used
+
+Keep destructive confirmation and editor Save attached to the edited record,
+not to an unrelated global toolbar owner. A selected-item sheet should clear or
+retain selection according to the product contract when dismissed. Move focus
+intentionally before a keyboard-dependent action disappears. [unverified:
+application semantics]
+
+Verify each essential action in a narrow layout, with long translated labels,
+with the keyboard open, and at accessibility text sizes. Inspect overflow and
+VoiceOver order; an item existing in the hierarchy does not establish that it is
+reachable. A keyboard toolbar and a top-bar action have different lifetimes, so
+switching placement requires an end-to-end editing check. [unverified: runtime]

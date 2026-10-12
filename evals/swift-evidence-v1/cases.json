@@ -251,6 +251,135 @@
       "language": "6",
       "minimum_sdk": "27.0",
       "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "api-replacements",
+      "source": "api-replacements.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/view/foregroundstyle(_:)"
+    },
+    {
+      "id": "initializer-order-current",
+      "source": "initializer-order-current.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+      "phase": "object"
+    },
+    {
+      "id": "initializer-order-valid",
+      "source": "initializer-order-valid.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder"
+    },
+    {
+      "id": "empty-map-builder-invalid",
+      "source": "empty-map-builder-invalid.swift",
+      "expect": "error",
+      "diagnostics": [
+        "EmptyMapContent.*conform to.*View|ambiguous"
+      ],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder"
+    },
+    {
+      "id": "empty-map-builder-valid",
+      "source": "empty-map-builder-valid.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder"
+    },
+    {
+      "id": "overlay-builder-valid",
+      "source": "overlay-builder-valid.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder"
+    },
+    {
+      "id": "chart-extracted-branches",
+      "source": "chart-extracted-branches.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder"
+    },
+    {
+      "id": "dynamic-type-labels",
+      "source": "dynamic-type-labels.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "foundation-formatting",
+      "source": "foundation-formatting.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "old-target-enumerated-rejected",
+      "source": "old-target-enumerated-rejected.swift",
+      "expect": "error",
+      "diagnostics": [
+        "only available in iOS 26"
+      ],
+      "target": "17.6",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/",
+      "phase": "object"
+    },
+    {
+      "id": "old-target-enumerated-fallback",
+      "source": "old-target-enumerated-fallback.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "old-target-enumerated-warning",
+      "source": "old-target-enumerated-rejected.swift",
+      "expect": "warning",
+      "diagnostics": [
+        "only available in iOS 26"
+      ],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/",
+      "phase": "object"
     }
   ]
 }

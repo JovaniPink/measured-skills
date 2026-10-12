@@ -92,7 +92,8 @@ def main() -> int:
                     "binding-programmatic-change-bypasses-setter", "draft-edit-does-not-save", "draft-cancel", "draft-explicit-save",
                     "geometry-short-wide", "animation-completion-delivered", "observation-unread-property",
                     "observation-read-property", "observation-nested-value", "environment-injected-model-unread-property",
-                    "presentation-selected-item", "presentation-dismissal-retains-draft"}
+                    "presentation-selected-item", "presentation-dismissal-retains-draft", "state-inline-default-precedence",
+                    "environment-scalar-reader-updates", "reduce-motion-environment-read", "animation-interrupted-completions"}
         if not isinstance(rows, list) or len(rows) != len(expected) or {r["id"] for r in rows} != expected:
             raise RuntimeError("Fixture result inventory is incomplete")
         shutil.copyfile(result_file, output / "runtime-results.json")

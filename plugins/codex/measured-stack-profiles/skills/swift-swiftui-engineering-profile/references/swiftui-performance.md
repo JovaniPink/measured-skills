@@ -10,3 +10,17 @@ Authority: [Understanding SwiftUI performance](https://developer.apple.com/docum
 - asyncImageURLSession compiles on iOS 27. Test HTTP headers, request policies, cold/warm loads, failures, cancellation, and cache eviction before claiming image caching works for the app. [verified: compile; caching unverified]
 - Compare the same workload before and after, with three repeated cold/warm runs. Repetition is stability evidence, not a large statistical sample. Report raw measurements and uncertainty. [unverified: measurement protocol]
 - At 120 Hz a nominal frame is 8.33 ms; at 60 Hz it is 16.67 ms. These are whole-frame intervals, not universal body budgets or guarantees that a device maintains that rate. [documented]
+
+## Decide from a trace
+
+| Observation | Next discriminating check | Avoid concluding |
+| --- | --- | --- |
+| Many body evaluations | which changed property each body reads | every environment-injected model broadcasts all changes |
+| One slow update | sampled stack, allocation and synchronous work | a new state framework is necessary |
+| List hitch on insertion | row cardinality, identity, image decode | every conditional is slow |
+| Warm image still loads | request headers, cache policy and server request count | URLCache alone proves AsyncImage caching |
+
+A small simulator experiment found that mutating an unread observed property did
+not reevaluate the measured child, whereas a read property did. Preserve this
+bounded result: it is not an Instruments trace or a claim about a whole app.
+[verified: simulator, Xcode 27.0 / iOS 27.0]

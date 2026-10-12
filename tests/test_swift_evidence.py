@@ -12,6 +12,21 @@ from swift_evidence import classify, load_cases, scan_interface
 
 
 class SwiftEvidenceTests(unittest.TestCase):
+    def test_manifest_explicitly_selects_codegen_for_conformance_diagnostics(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "probe.swift").write_text("import SwiftUI\n")
+            row = {"id": "compile-probe", "source": "probe.swift", "expect": "success",
+                   "diagnostics": [], "target": "17.6", "language": "5", "minimum_sdk": "27.0",
+                   "authority": "https://developer.apple.com/documentation/swiftui/", "phase": "object"}
+            manifest = root / "cases.json"
+            manifest.write_text(json.dumps({"format_version": 1, "cases": [row]}))
+            self.assertEqual("object", load_cases(manifest)[0]["phase"])
+            row["phase"] = "execute"
+            manifest.write_text(json.dumps({"format_version": 1, "cases": [row]}))
+            with self.assertRaisesRegex(ValueError, "phase"):
+                load_cases(manifest)
+
     def test_expected_error_requires_the_named_diagnostic(self) -> None:
         self.assertEqual("passed", classify("error", ["only available in iOS 18"], 1,
                                           "error: 'Tab' is only available in iOS 18.0 or newer"))
