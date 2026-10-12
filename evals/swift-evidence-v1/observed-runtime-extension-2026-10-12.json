@@ -1,0 +1,99 @@
+{
+  "evidence_kind": "simulator",
+  "source_sha256": "bfb85ceac2b9a570769c9ea34fa5126861335b942e7115551cfb2ceab31554a5",
+  "source_revision": "bb7539c0c34b618f5884f6fab59b99c0b2fa2261",
+  "source_dirty": true,
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "sdk_version": "27.0",
+  "deployment_target": "27.0",
+  "language_mode": "6",
+  "results": [
+    {
+      "id": "state-styling-retains-reference",
+      "observed": "Identity recorded before and after conditional foreground style.",
+      "status": "passed"
+    },
+    {
+      "id": "state-explicit-identity-recreates",
+      "observed": "Changing explicit identity created a different retained reference.",
+      "status": "passed"
+    },
+    {
+      "id": "binding-equal-writes-call-setter",
+      "observed": "Setter count after two equal writes: 2.",
+      "status": "passed"
+    },
+    {
+      "id": "binding-programmatic-change-bypasses-setter",
+      "observed": "Setter calls 3; onChange calls 2; values [2, 3].",
+      "status": "passed"
+    },
+    {
+      "id": "draft-edit-does-not-save",
+      "observed": "Draft mutation kept the saved value intact.",
+      "status": "passed"
+    },
+    {
+      "id": "draft-cancel",
+      "observed": "Cancel restored the draft from saved state.",
+      "status": "passed"
+    },
+    {
+      "id": "draft-explicit-save",
+      "observed": "Only the explicit Save operation copied the draft.",
+      "status": "passed"
+    },
+    {
+      "id": "geometry-short-wide",
+      "observed": "Observed constrained fixture geometry, not a physical folding display.",
+      "status": "passed"
+    },
+    {
+      "id": "animation-completion-delivered",
+      "observed": "One uninterrupted animation delivered its completion; interruption and Reduce Motion remain separate cases.",
+      "status": "passed"
+    },
+    {
+      "id": "observation-unread-property",
+      "observed": "Twenty writes to a different stored property did not invalidate the tracked title read.",
+      "status": "passed"
+    },
+    {
+      "id": "observation-read-property",
+      "observed": "Changing the tracked title invalidated its one-shot observation.",
+      "status": "passed"
+    },
+    {
+      "id": "observation-nested-value",
+      "observed": "Mutating the other field in the same stored struct invalidated the tracked nested title read.",
+      "status": "passed"
+    },
+    {
+      "id": "environment-injected-model-unread-property",
+      "observed": "Injected model child read only title; body count before 5, after 5, across twenty unread-property writes. Synthetic dependency observation, not a performance benchmark.",
+      "status": "passed"
+    },
+    {
+      "id": "presentation-selected-item",
+      "observed": "The presented sheet observed the selected item's identity.",
+      "status": "passed"
+    },
+    {
+      "id": "presentation-dismissal-retains-draft",
+      "observed": "Programmatic item dismissal delivered onDismiss and retained the parent draft. Keyboard and user-driven dismissal remain separate journeys.",
+      "status": "passed"
+    }
+  ],
+  "status": "passed",
+  "limitations": [
+    "Synthetic fixture; no app, accessibility, device, performance, or provider qualification."
+  ],
+  "destination": "iPad Air 11-inch (M4), iOS 27.0 simulator",
+  "reviewed_on": "2026-10-12",
+  "authorities": [
+    "https://developer.apple.com/documentation/observation/withobservationtracking(_:onchange:)",
+    "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
+    "https://developer.apple.com/documentation/swiftui/view/sheet(item:ondismiss:content:)"
+  ]
+}

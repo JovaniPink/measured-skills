@@ -1,0 +1,35 @@
+{
+  "claim_id": "package-resource-lookup-v1",
+  "status": "passed",
+  "evidence_kind": "macOS package runtime",
+  "reviewed_on": "2026-10-12",
+  "authorities": [
+    "https://developer.apple.com/documentation/foundation/bundle()",
+    "https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package"
+  ],
+  "source_revision": "bb7539c0c34b618f5884f6fab59b99c0b2fa2261",
+  "source_dirty": true,
+  "source_sha256": {
+    "evals/swift-evidence-v1/resource-package/Package.swift": "e5b019a641b809119f486ff8b5a5adc3d697d6e61df45e041a2c5262b02e82f1",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Lookup.swift": "11b7069987c08c5b1b2fd4e53a33c8e54cd88a5f1f6e074fb91b46c05fdb32fb",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Resources/en.lproj/Localizable.strings": "2244c68670fd4bfbaecafea19681d2abbfc48a83cccdffde4e4533151cf04781",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Resources/en.lproj/Localizable.stringsdict": "522814b4383cfd046daa4dd6ee1bbb01ddf00d30641a91a5106946956ba2cce8",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Resources/fr.lproj/Localizable.strings": "6ab986c444d914870df83add5e6b7ec7ff2d1e6439ea6adc48394227067ce719",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Resources/fr.lproj/Localizable.stringsdict": "22eb0ddd46e01086036e526ae56ef2cbb4fc20b320cbf2e0d90e841e032c2e0f",
+    "evals/swift-evidence-v1/resource-package/Sources/ResourceFixture/Resources/payload.json": "2a4a5198255e48a4ded8e338182f1089f32b838501dd9f1311180cd547a1b33b",
+    "evals/swift-evidence-v1/resource-package/Tests/ResourceFixtureTests/ResourceTests.swift": "7943481d685bd72c3ac8a1b7471a8385951959bcc0252138401b984c793781cc"
+  },
+  "toolchain": "Xcode 27.0 (27A266a), Swift 6.4",
+  "language_mode": "6",
+  "deployment_target": "macOS 14",
+  "destination": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434",
+  "command": "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun swift test --package-path evals/swift-evidence-v1/resource-package --scratch-path <new-temporary-build-directory>",
+  "expected": "Same resource bundle and bytes; localized interpolation/plurals; explicit missing-resource behavior.",
+  "observed": "4 Swift Testing tests passed, including 2 interpolation cases and 4 pluralization cases.",
+  "raw_log_sha256": "20a273f6d1b72fac6ef9a54273453ca90f7a288f053c84046c79e54a4dbf1754",
+  "limitations": [
+    "macOS package execution only; not an iOS framework, extension or application journey.",
+    "Synthetic explicit lproj/stringdict files, not automatic extraction or String Catalog symbol generation.",
+    "Chosen English/French fixture values do not establish complete translation or plural-rule coverage."
+  ]
+}

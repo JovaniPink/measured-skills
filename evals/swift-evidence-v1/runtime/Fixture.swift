@@ -1,5 +1,6 @@
 import SwiftUI
 import Observation
+import Synchronization
 
 // Synthetic fixtures only. Results describe this simulator run, not an app release.
 @main
@@ -9,6 +10,33 @@ struct EvidenceApp: App {
 
 @MainActor @Observable
 final class RetainedToken { let value = UUID() }
+
+final class UpdateCounter: Sendable {
+    private let storage = Mutex(0)
+    var value: Int { storage.withLock { $0 } }
+    func increment() { storage.withLock { $0 += 1 } }
+}
+
+struct NestedValues { var title = "Initial"; var position = 0 }
+
+@MainActor @Observable
+final class ObservationFixture {
+    var title = "Initial"
+    var position = 0
+    var nested = NestedValues()
+}
+
+struct EnvironmentReader: View {
+    @Environment(ObservationFixture.self) private var model
+    let counter: UpdateCounter
+    var body: some View {
+        // Deliberate fixture instrumentation; the counter cannot invalidate a view.
+        counter.increment()
+        return Text(model.title)
+    }
+}
+
+struct SheetSelection: Identifiable { let id = UUID() }
 
 struct ResultRow: Codable {
     let id: String
@@ -22,6 +50,8 @@ final class Recorder {
     var sizes: [Int: CGSize] = [:]
     var rows: [ResultRow] = []
     var finished = false
+    var presentedSelection: UUID?
+    var dismissedSelection = false
 
     func check(_ id: String, _ condition: Bool, _ observed: String) {
         rows.append(ResultRow(id: id, status: condition ? "passed" : "failed", observed: observed))
@@ -75,6 +105,9 @@ struct EvidenceView: View {
     @State private var changedValues: [Int] = []
     @State private var draft = ""
     @State private var saved = "original"
+    @State private var observation = ObservationFixture()
+    @State private var environmentUpdates = UpdateCounter()
+    @State private var sheetSelection: SheetSelection?
 
     var body: some View {
         ScrollView {
@@ -82,6 +115,7 @@ struct EvidenceView: View {
                 Text("Synthetic SwiftUI evidence").font(.title)
                 Text("No product data, purchases, network, or live services.")
                 TokenView(step: step, recorder: recorder).id(identity)
+                EnvironmentReader(counter: environmentUpdates).environment(observation)
                 RoundedRectangle(cornerRadius: 12)
                     .fill(.blue.opacity(0.2))
                     .frame(width: width, height: height)
@@ -98,6 +132,10 @@ struct EvidenceView: View {
         .onChange(of: bindingValue) { _, value in
             changeCalls += 1
             changedValues.append(value)
+        }
+        .sheet(item: $sheetSelection, onDismiss: { recorder.dismissedSelection = true }) { selection in
+            Text("Synthetic selection sheet")
+                .task { recorder.presentedSelection = selection.id }
         }
         .task { await run() }
     }
@@ -144,6 +182,32 @@ struct EvidenceView: View {
         }
         let completed = await recorder.waitFor { animationCompleted }
         recorder.check("animation-completion-delivered", completed, "One uninterrupted animation delivered its completion; interruption and Reduce Motion remain separate cases.")
+
+        let fieldUpdates = UpdateCounter()
+        withObservationTracking { _ = observation.title } onChange: { fieldUpdates.increment() }
+        for position in 1...20 { observation.position = position }
+        recorder.check("observation-unread-property", fieldUpdates.value == 0, "Twenty writes to a different stored property did not invalidate the tracked title read.")
+        observation.title = "Changed"
+        recorder.check("observation-read-property", fieldUpdates.value == 1, "Changing the tracked title invalidated its one-shot observation.")
+        let nestedUpdates = UpdateCounter()
+        withObservationTracking { _ = observation.nested.title } onChange: { nestedUpdates.increment() }
+        observation.nested.position = 1
+        recorder.check("observation-nested-value", nestedUpdates.value == 1, "Mutating the other field in the same stored struct invalidated the tracked nested title read.")
+
+        // Let the title and result-list changes settle before counting the child.
+        try? await Task.sleep(for: .milliseconds(200))
+        let before = environmentUpdates.value
+        for position in 21...40 { observation.position = position }
+        try? await Task.sleep(for: .milliseconds(200))
+        recorder.check("environment-injected-model-unread-property", before > 0 && environmentUpdates.value == before, "Injected model child read only title; body count before \(before), after \(environmentUpdates.value), across twenty unread-property writes. Synthetic dependency observation, not a performance benchmark.")
+
+        let selection = SheetSelection()
+        sheetSelection = selection
+        let presented = await recorder.waitFor { recorder.presentedSelection == selection.id }
+        recorder.check("presentation-selected-item", presented, "The presented sheet observed the selected item's identity.")
+        sheetSelection = nil
+        let dismissed = await recorder.waitFor { recorder.dismissedSelection }
+        recorder.check("presentation-dismissal-retains-draft", dismissed && saved == "committed" && draft == "committed", "Programmatic item dismissal delivered onDismiss and retained the parent draft. Keyboard and user-driven dismissal remain separate journeys.")
         recorder.save()
     }
 }
