@@ -762,12 +762,18 @@
       "source_url": "https://developer.apple.com/documentation/testing/migratingfromxctest",
       "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
       "pinned_revision": "retrieved-2026-09-30",
-      "reviewed_on": "2026-09-30",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "Primary framework documentation",
-        "Owned bounded workflow and synthetic evaluation contract"
+        "Owned bounded workflow and synthetic evaluation contract",
+        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
+        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
+        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
+        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
+        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Original ios journey verification with project-specific contract projection and explicit evidence limits.",
+      "local_changes": "Original ios journey verification with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",
@@ -1482,12 +1488,18 @@
       "source_url": "https://www.swift.org/swift-evolution/",
       "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
       "pinned_revision": "retrieved-2026-09-30",
-      "reviewed_on": "2026-09-30",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "Primary framework documentation",
-        "Owned bounded workflow and synthetic evaluation contract"
+        "Owned bounded workflow and synthetic evaluation contract",
+        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
+        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
+        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
+        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
+        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Original swift concurrency diagnosis with project-specific contract projection and explicit evidence limits.",
+      "local_changes": "Original swift concurrency diagnosis with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",
@@ -1502,12 +1514,18 @@
       "source_url": "https://developer.apple.com/documentation/swiftdata/modelactor",
       "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
       "pinned_revision": "retrieved-2026-09-30",
-      "reviewed_on": "2026-09-30",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "Primary framework documentation",
-        "Owned bounded workflow and synthetic evaluation contract"
+        "Owned bounded workflow and synthetic evaluation contract",
+        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
+        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
+        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
+        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
+        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Original swift persistence contract review with project-specific contract projection and explicit evidence limits.",
+      "local_changes": "Original swift persistence contract review with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",
@@ -1518,11 +1536,11 @@
     {
       "skill": "swift-swiftui-engineering-profile",
       "disposition": "covered",
-      "implementation_method": "clean-room",
+      "implementation_method": "original",
       "source_url": "https://www.swift.org/documentation/",
       "upstream_license": "No source text imported; public primary documentation was used as authority for independently authored guidance.",
       "pinned_revision": "retrieved-2026-09-22; verified against Xcode 27.0 (27A266a), Swift 6.4, iOS 27.0 and macOS 27.0 SDKs",
-      "reviewed_on": "2026-09-22",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "official primary documentation linked by the skill",
         "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
@@ -1547,9 +1565,15 @@
         "Swift Evolution proposals SE-0304, SE-0306, SE-0461, SE-0466, SE-0470, and SE-0472",
         "SwiftUI, SwiftData, HealthKit, and XCUIAutomation interfaces and headers shipped in the Xcode 27.0 SDKs",
         "Xcode 27.0 project templates and Swift build-setting specifications",
-        "local compile and run probes with the Xcode 27.0 toolchain; probe sources kept outside Git"
+        "local compile and run probes with the Xcode 27.0 toolchain; probe sources kept outside Git",
+        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
+        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
+        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
+        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
+        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. 2026-09-22: added clean-room focused references for SwiftUI data flow, SwiftData and CloudKit, Swift concurrency, Swift Testing, iOS accessibility, and HealthKit. Written only from Apple documentation, Swift Evolution proposals, SDK interfaces, and local toolchain probes; each rule is labeled verified, documented, or unverified. No third-party skill catalog was consulted, copied, or adapted. Same day: audited each documented claim against its primary page; corrected one unsupported claim about XCTest-only UI and performance tests, and added XCTest interoperability, detached-task, cancellation-handler, background-delivery, and Large Content Viewer rules from Apple documentation and local probes. Later the same day: removed twelve generic judgment lines that restated widely known practice, keeping rules backed by local probes or named documentation.",
+      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. 2026-09-22: added clean-room focused references for SwiftUI data flow, SwiftData and CloudKit, Swift concurrency, Swift Testing, iOS accessibility, and HealthKit. Written only from Apple documentation, Swift Evolution proposals, SDK interfaces, and local toolchain probes; each rule is labeled verified, documented, or unverified. No third-party skill catalog was consulted, copied, or adapted. Same day: audited each documented claim against its primary page; corrected one unsupported claim about XCTest-only UI and performance tests, and added XCTest interoperability, detached-task, cancellation-handler, background-delivery, and Large Content Viewer rules from Apple documentation and local probes. Later the same day: removed twelve generic judgment lines that restated widely known practice, keeping rules backed by local probes or named documentation. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
       "security_review": "APPROVE: instruction-and-reference-only workflow with no hooks, executables, broad tool grants, dependency installation, external writes, or state application.",
       "rereview_triggers": [
         "upstream standard or toolchain revision changes",
@@ -1567,12 +1591,18 @@
       "source_url": "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
       "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
       "pinned_revision": "retrieved-2026-09-30",
-      "reviewed_on": "2026-09-30",
+      "reviewed_on": "2026-10-12",
       "reviewed_material": [
         "Primary framework documentation",
-        "Owned bounded workflow and synthetic evaluation contract"
+        "Owned bounded workflow and synthetic evaluation contract",
+        "https://developer.apple.com/documentation/technotes/tn3211-resolving-swiftui-source-incompatibilities-for-state-and-contentbuilder",
+        "https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements",
+        "https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key",
+        "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance",
+        "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
+        "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Original swiftui feature delivery with project-specific contract projection and explicit evidence limits.",
+      "local_changes": "Original swiftui feature delivery with project-specific contract projection and explicit evidence limits. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately.",
       "security_review": "Instruction-only candidate. No skill executables, hooks, credentials or tool grants. Deterministic checks do not prove behavioral qualification.",
       "rereview_triggers": [
         "Framework or client discovery changes",

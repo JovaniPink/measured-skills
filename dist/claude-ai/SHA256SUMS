@@ -34,7 +34,7 @@ aa57d0c204aa85fd4b5e4b007fcb8c1ace30d0057251393465efb01ea3994f60  google-adk-eng
 c8af1cd1f7e6ebadd89fb27ce2ff1845ae8aede456a6b3647f2a732791c2cf86  guided-configuration-0.18.0.zip
 413757af8f5903086ebc8b0b62506d1e765ee8ab2dd5136d1044392d474f279e  high-signal-technical-writing-0.18.0.zip
 c968c11376662f37be2c13b478a07a1292cb71b12e996544512afd6c06ae42d8  implementation-planning-0.18.0.zip
-cdcab2b3d73ab5a18213b289f47c51cd41e82237b35800200b0f92bd02a68410  ios-journey-verification-0.18.0.zip
+abf52b6e0347150dddc0a0a3dbfa0c9df5d933981c17154185941855bf41e0c6  ios-journey-verification-0.18.0.zip
 20a746949f67bcb5fb56c5bc86909fced44bb11849ab328877086856c9f4b54f  iteration-postlaunch-learning-0.18.0.zip
 687d644e76b7c074d64d02199becb7c6b62451217688e6c28a8dd7133acf7749  java-spring-engineering-profile-0.18.0.zip
 6bb80059a1ab424cfa12f1b5fbb6491626822b8025c61898366f1c92ef93905b  kpi-outcome-measurement-0.18.0.zip
@@ -69,10 +69,10 @@ e833b1a1215b3b8f27936d8c495946ecd1a68e73efed7e81a76536869d709131  skill-security
 8a9098ed291544cbd4cce7061426631f650f80dfbc147f71647e15711dbce131  source-grounded-research-0.18.0.zip
 078391b8d0751a016d1483624b6651891226be7de39975e6271fbaea893ce476  source-output-conformance-audit-0.18.0.zip
 0f88d99b279fe6bb4df1e5ade4dd4767c9862484cbc35bd7307c88c3551d48c0  stakeholder-technical-communication-0.18.0.zip
-3996f93a595c45c4a7b5c5e713383308341ba9431108d7deafec145d06efe6cb  swift-concurrency-diagnosis-0.18.0.zip
-a78f13e9f59a957f0be3f5a0fa0f94185eb58bb2605e34fde850306648328280  swift-persistence-contract-review-0.18.0.zip
-1045d7db110f0633427e4394b1c054a09d4c4c89ebb4bc3948681967daba80f7  swift-swiftui-engineering-profile-0.18.0.zip
-3ab6e1943af0c2ded9560b852550fbf795b1520df65e3d5dd188933d22eed97e  swiftui-feature-delivery-0.18.0.zip
+40ec306ee712105568bc1df8f38ecdef9dcef7c02f6a469e420723456c532ff3  swift-concurrency-diagnosis-0.18.0.zip
+dae7c9622504ccb397cf7ae42b998d968faad711966743696e3a8c2c86499c55  swift-persistence-contract-review-0.18.0.zip
+7a8a92acb8a7dc2ed12764c25c115c6133ed45da16d59ac43da1bbf1a2e59bce  swift-swiftui-engineering-profile-0.18.0.zip
+04024aaaffdec04320acbb15b3cc0c8d90aefb09ecec4a3a13825142c43f5508  swiftui-feature-delivery-0.18.0.zip
 5e19b49f2b80db254bb74dd1fc6beafd6e7bb03e75ef3e06f1b43ce9d7c44bca  systematic-diagnosis-0.18.0.zip
 5f5a9df1e13fdbdc03235e00de505c13c47d182c0aff61d5d9f3f28e20dff65f  task-handoff-0.18.0.zip
 37693aa61436da37ff646b8e40e5db13491ce7efa3107383a298d8c048652a0d  terraform-engineering-profile-0.18.0.zip

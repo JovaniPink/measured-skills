@@ -1,0 +1,279 @@
+{
+  "reviewed_on": "2026-10-12",
+  "toolchain": "Xcode 27.0 (27A266a), Swift 6.4, iOS Simulator SDK 27.0",
+  "source_state": "working tree before source commit; individual probe hashes recorded",
+  "compile": [
+    {
+      "id": "state-initializer",
+      "status": "passed",
+      "source_sha256": "589cb03b2612c535baddcfb6f70348760d46cb7bf882564d4c838e7b899e4972",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "content-builder",
+      "status": "passed",
+      "source_sha256": "20183956391974457763c43878efdfaf02ccea27b8be077504b11eae67da2090",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "state-double-initialization",
+      "status": "passed",
+      "source_sha256": "d9eb7b81b15a3bfc85996381577ea81c13090c5ad364994431da806b43c54bbf",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "entry-object-default",
+      "status": "passed",
+      "source_sha256": "581b01615279698dacc6e7b8bb8058defc4b7b5381436d8c36592373a0a99590",
+      "expect": "warning",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "entry-closure-default",
+      "status": "passed",
+      "source_sha256": "d29f3f08571ac12bd1b82dd73c29c352f196551db7a960f0225531a3a12ed67c",
+      "expect": "warning",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "entry-value-default",
+      "status": "passed",
+      "source_sha256": "c5f0630655468007d24aa9798b998db97afe091efc4966f3e6a200ef5e78dfba",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "soft-deprecation",
+      "status": "passed",
+      "source_sha256": "94adfede98f440e8cc6b4c8c6ad7d9b40bc85996b5169f564b8c375ac886a04c",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "old-target-tab-rejected",
+      "status": "passed",
+      "source_sha256": "2f9bb550bf099538b5da8a5cc0488e15dd1216a8f00366cbed62f31074188f0d",
+      "expect": "error",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "old-target-tab-fallback",
+      "status": "passed",
+      "source_sha256": "45ddef6feed548fa89de9f5ca6ed6fbbf107b091681d8b6d4a0950b726d805c5",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "reorder-and-swipe",
+      "status": "passed",
+      "source_sha256": "5d0d2d76190692981a5bc24c309a317fadf56324f315c4603c3f85b1cde8615a",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "old-target-reorder-rejected",
+      "status": "passed",
+      "source_sha256": "2d264b27db22b4cf39e1b847863652261dfd67f8c450e465bad4b53c90f5f0b6",
+      "expect": "error",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "toolbar-overflow",
+      "status": "passed",
+      "source_sha256": "4fa83778fce869ec3b288112bcc558c45749b4ff04e13950eec9a43e9d3712e8",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "toolbar-hidden-rejected",
+      "status": "passed",
+      "source_sha256": "8b456f91ecaa00b80c531f77f12d14a0f51266d1b0480d2c74d2e0493d9f5a86",
+      "expect": "error",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "safe-area-fallback",
+      "status": "passed",
+      "source_sha256": "04a5021e9404dbf628c5c5e65889c152c2a4bf7d03a8ddd7062772f24796464c",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "presentation-placement",
+      "status": "passed",
+      "source_sha256": "21212de392fed2d14401524437a7d9840430e73ec8717b6ea752a9daa7415f21",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "animatable-exclusion",
+      "status": "passed",
+      "source_sha256": "9ef589bafbb40217251390ddb3e14de65125baef94a967522a53c2a062309de5",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "manual-interpolation",
+      "status": "passed",
+      "source_sha256": "574cd07e3dce298a76bcffafb8aea17131a4b9de521def92fc992fecb52d408e",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "bundle-macro",
+      "status": "passed",
+      "source_sha256": "a9aeda4c62aa316b21713fa3dcd989ce056818ac92b24d5e5dc8b6cf8bf77988",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "identity-style",
+      "status": "passed",
+      "source_sha256": "e08ac2259c2abcea6864aeff3f1b9deb3df9c5a537e392eb1dd0bf9f1c8ac271",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "size-class-optional",
+      "status": "passed",
+      "source_sha256": "7c8b403d5f87a300063f0872b680b3228482d4f11ad513d54744f5fec0cb19b3",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "completion-animation",
+      "status": "passed",
+      "source_sha256": "6c75360e7019f1b99cb4e44cd00b9c7d891014a25e0fe91ae8b90b0217f582db",
+      "expect": "success",
+      "language": "5",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "binding-setter",
+      "status": "passed",
+      "source_sha256": "2b4244fd4cb22112912e912f913b521f71706f9c016eac4a884c78c4afa4323e",
+      "expect": "success",
+      "language": "6",
+      "target": "17.6",
+      "minimum_sdk": "27.0"
+    },
+    {
+      "id": "duo-arrangement",
+      "status": "blocked",
+      "source_sha256": "28419f365dddc85bc50d51cfccd26e172d0ad064208c2e16d7c4bcc00a6ebf23",
+      "expect": "success",
+      "language": "6",
+      "target": "27.1",
+      "minimum_sdk": "27.1"
+    },
+    {
+      "id": "async-image-session",
+      "status": "passed",
+      "source_sha256": "f75cbf14312da292650b92113df3c8e3044bba2a100fc592305b71a0f5223408",
+      "expect": "success",
+      "language": "6",
+      "target": "27.0",
+      "minimum_sdk": "27.0"
+    }
+  ],
+  "runtime": {
+    "destination": "iPad Air 11-inch (M4), iOS 27.0 simulator",
+    "source_sha256": "8522a450fbc900bc0d08ba2f0477c07c7a4c83fbf0f56009d33a79720e52d4e7",
+    "results": [
+      {
+        "id": "state-styling-retains-reference",
+        "observed": "Identity recorded before and after conditional foreground style.",
+        "status": "passed"
+      },
+      {
+        "id": "state-explicit-identity-recreates",
+        "observed": "Changing explicit identity created a different retained reference.",
+        "status": "passed"
+      },
+      {
+        "id": "binding-equal-writes-call-setter",
+        "observed": "Setter count after two equal writes: 2.",
+        "status": "passed"
+      },
+      {
+        "id": "binding-programmatic-change-bypasses-setter",
+        "observed": "Setter calls 3; onChange calls 2; values [2, 3].",
+        "status": "passed"
+      },
+      {
+        "id": "draft-edit-does-not-save",
+        "observed": "Draft mutation kept the saved value intact.",
+        "status": "passed"
+      },
+      {
+        "id": "draft-cancel",
+        "observed": "Cancel restored the draft from saved state.",
+        "status": "passed"
+      },
+      {
+        "id": "draft-explicit-save",
+        "observed": "Only the explicit Save operation copied the draft.",
+        "status": "passed"
+      },
+      {
+        "id": "geometry-short-wide",
+        "observed": "Observed constrained fixture geometry, not a physical folding display.",
+        "status": "passed"
+      },
+      {
+        "id": "animation-completion-delivered",
+        "observed": "One uninterrupted animation delivered its completion; interruption and Reduce Motion remain separate cases.",
+        "status": "passed"
+      }
+    ]
+  },
+  "limitations": [
+    "No physical-device, accessibility, performance, oldest-OS, signed archive, upload, review, or revenue acceptance.",
+    "Compiler receipts and synthetic runtime results qualify only the named fixtures.",
+    "Absolute host paths and private execution traces are retained outside this public repository."
+  ]
+}

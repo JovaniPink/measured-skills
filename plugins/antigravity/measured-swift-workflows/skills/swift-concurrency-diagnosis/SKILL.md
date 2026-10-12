@@ -30,3 +30,7 @@ Async does not imply background execution. Do not prescribe blanket MainActor.ru
 ## Evidence and output
 
 Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Repeated and canceled work
+
+Trace what happens when a request is superseded before and after suspension, when a canceled dependency returns success or a non-cancellation error, and when an old callback arrives after a new request. Request identity and Task cancellation solve different parts of the problem. Record both. Measure work before the first suspension rather than assuming async moves it off the main actor.

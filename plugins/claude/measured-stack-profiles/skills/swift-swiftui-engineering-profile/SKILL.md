@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-stack-profiles"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
@@ -26,7 +26,18 @@ Read only the reference that matches the code under review:
 - [iOS accessibility](references/ios-accessibility.md): Dynamic Type, VoiceOver labels on custom controls, Reduce Motion, Differentiate Without Color, and touch targets.
 - [HealthKit](references/healthkit.md): just-in-time authorization, private read status, limited history, and denied states.
 
-Each rule carries a label. `[verified]` rules were compiled or run with one Xcode 27.0 toolchain; `[documented]` rules come from Apple documentation or Swift Evolution; `[unverified]` rules are review judgment. Recheck `[verified]` rules against the repository's own toolchain and deployment targets before reporting them as current.
+- [API currency](references/api-currency.md).
+- [State and environment](references/state-and-environment.md).
+- [Identity and collections](references/identity-and-collections.md).
+- [Animations](references/animations.md).
+- [Toolbars and presentation](references/toolbars-and-presentation.md).
+- [Adaptive layout](references/adaptive-layout.md).
+- [Localization](references/localization.md).
+- [SwiftUI performance](references/swiftui-performance.md).
+- [Release readiness](references/release-readiness.md).
+- [Folding displays](references/folding-displays.md).
+
+Each rule carries a label. `[verified]` rules identify SDK inspection, compile, simulator, or device evidence and its toolchain; `[documented]` rules come from Apple documentation or Swift Evolution; `[unverified]` rules are review judgment. Recheck `[verified]` rules against the repository's own toolchain and deployment targets before reporting them as current.
 
 ## Workflow
 

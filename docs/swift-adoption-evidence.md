@@ -1,0 +1,65 @@
+# Swift guidance and client evidence - 2026-10-12
+
+This update is original primary-source work informed by Apple/Swift documentation
+and the experiments in [the corpus](../evals/swift-evidence-v1/README.md). It makes
+no claim of no prior exposure to related public material. Historical authorship
+and qualification records retain their original dates and meanings.
+
+## Compiler and simulator observations
+
+On Xcode 27.0 (27A266a), Swift 6.4 and iOS Simulator SDK 27.0, 23 compiler cases
+passed their declared success/warning/error expectations. The 27.1 arrangement
+case is blocked. The lexical SDK scan inspected 14 architecture-specific interface
+files across eight requested modules; its 10,364 annotated declaration rows and
+292 soft-deprecation rows are not counts of unique APIs.
+
+Nine synthetic runtime assertions passed on an iPad Air 11-inch (M4), iOS 27.0
+simulator. See the sanitized, source-hashed [receipt](../evals/swift-evidence-v1/observed-2026-10-12.json).
+A compile result does not verify runtime semantics. No device, Instruments,
+VoiceOver, App Store, or commercial acceptance is recorded here.
+
+## Codex 0.161.0 projection support
+
+Native app-server `skills/list` discovered a read-only profile in `.agents/skills`
+and an explicit delivery skill in `.codex/skills` in a disposable synthetic project.
+The canonical explicit policy remained `allow_implicit_invocation: false`. References
+were packaged inside each selected skill tree; no cross-skill lookup was assumed.
+No global configuration or installation was changed. App-server discovery reads the
+existing client environment; these are task-isolated projects, not hermetic machines.
+
+Using the existing ChatGPT subscription, twelve read-only CLI trials completed:
+three baseline tasks without the target profile, three candidate profile tasks,
+three explicitly named delivery preflight tasks, and three read-only near misses.
+All candidate profile and explicit delivery tasks read their distinct local
+reference receipts. No baseline reported those receipts. Near misses loaded the
+read-only profile and did not report the explicit delivery receipt. Trajectories
+were inspected for file reads and boundary adherence; tokens alone are not grades.
+
+This supports exact-version project discovery and a bounded loading smoke result.
+It does not establish general semantic quality, a speedup, later-context adherence,
+or execution-policy enforcement under every prompt. The CLI JSON did not attest
+the serving model per turn, so these runs are not promoted into the stricter matched
+behavior study. No model switch was inferred away. Historical 0.154.0 records remain
+valid historical observations; manifests may select either qualified discovery
+version, and emitted instructions still require the exact selected version.
+
+Claude Code 2.1.281 is installed but signed out. Its runtime qualification is blocked.
+No authentication flow, paid API campaign, or marketplace installation was started.
+The [versioned extension](../evals/swift-adoption-v1/README.md) preserves all 49 older
+workflow cases and adds coverage without filling unexecuted cells.
+
+## Platform and exported guidance boundary
+
+Only SDK 27.0 is installed. Duo/27.1 and toolbar hidden/27.2 cases remain versioned
+future checks. Apple agent export syntax was read from local help; ten skill trees
+were exported into a new temporary directory outside Git. No standalone license
+file was found in that export. It was read as primary-source guidance, not copied
+or redistributed. SDK declarations and original probes resolve conflicting spellings.
+
+## Reproduction and rollback
+
+Run the repository canonical generators, workflow checker, strict typing, Ruff,
+output checks, validation and unit suite. Refresh the release manifest only after
+the clean source/generated commit; validate the manifest commit too. Project
+projections must pin that exact reviewed source commit. Roll back with reviewed
+reverts and the prior project source/client pins, retaining historical receipts.

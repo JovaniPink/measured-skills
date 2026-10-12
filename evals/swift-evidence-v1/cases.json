@@ -1,0 +1,256 @@
+{
+  "format_version": 1,
+  "cases": [
+    {
+      "id": "state-initializer",
+      "source": "state-initializer.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "content-builder",
+      "source": "content-builder.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "state-double-initialization",
+      "source": "state-double-initialization.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "entry-object-default",
+      "source": "entry-object-default.swift",
+      "expect": "warning",
+      "diagnostics": [
+        "default value is reallocated"
+      ],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "entry-closure-default",
+      "source": "entry-closure-default.swift",
+      "expect": "warning",
+      "diagnostics": [
+        "closure",
+        "invalidate"
+      ],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "entry-value-default",
+      "source": "entry-value-default.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "soft-deprecation",
+      "source": "soft-deprecation.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "old-target-tab-rejected",
+      "source": "old-target-tab-rejected.swift",
+      "expect": "error",
+      "diagnostics": [
+        "only available in iOS 18"
+      ],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "old-target-tab-fallback",
+      "source": "old-target-tab-fallback.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "reorder-and-swipe",
+      "source": "reorder-and-swipe.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "old-target-reorder-rejected",
+      "source": "old-target-reorder-rejected.swift",
+      "expect": "error",
+      "diagnostics": [
+        "only available in iOS 27"
+      ],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "toolbar-overflow",
+      "source": "toolbar-overflow.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "toolbar-hidden-rejected",
+      "source": "toolbar-hidden-rejected.swift",
+      "expect": "error",
+      "diagnostics": [
+        "'hidden' is unavailable in iOS"
+      ],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "safe-area-fallback",
+      "source": "safe-area-fallback.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "presentation-placement",
+      "source": "presentation-placement.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "animatable-exclusion",
+      "source": "animatable-exclusion.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "manual-interpolation",
+      "source": "manual-interpolation.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "bundle-macro",
+      "source": "bundle-macro.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "identity-style",
+      "source": "identity-style.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "size-class-optional",
+      "source": "size-class-optional.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "completion-animation",
+      "source": "completion-animation.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "5",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "binding-setter",
+      "source": "binding-setter.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "17.6",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "duo-arrangement",
+      "source": "duo-arrangement.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.1",
+      "language": "6",
+      "minimum_sdk": "27.1",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    },
+    {
+      "id": "async-image-session",
+      "source": "async-image-session.swift",
+      "expect": "success",
+      "diagnostics": [],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/"
+    }
+  ]
+}

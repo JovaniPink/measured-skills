@@ -14,6 +14,9 @@ from typing import Any
 MANIFEST = "docs/skills/project.json"
 RECEIPT = "docs/skills/generated.json"
 ROOTS = (".agents/skills", ".codex/skills", ".claude/skills")
+# Discovery and read-only boundary smoke evidence, not general model qualification.
+# Historical 0.154.0 evidence remains intact; see docs/swift-adoption-evidence.md.
+QUALIFIED_CODEX_VERSIONS = {"0.154.0", "0.161.0"}
 
 
 def sha(payload: bytes) -> str:
@@ -54,8 +57,8 @@ def manifest(root: Path) -> tuple[dict[str, Any], bytes, bytes]:
     for key, pattern in (("source_commit", r"[0-9a-f]{40}"), ("prefix", r"[a-z0-9]+(?:-[a-z0-9]+)*")):
         if not isinstance(data[key], str) or not re.fullmatch(pattern, data[key]):
             raise ValueError(f"invalid {key}")
-    if data["codex_version"] != "0.154.0":
-        raise ValueError("Codex discovery requires qualified version 0.154.0")
+    if not isinstance(data["codex_version"], str) or data["codex_version"] not in QUALIFIED_CODEX_VERSIONS:
+        raise ValueError("Codex discovery requires an explicitly qualified version: " + ", ".join(sorted(QUALIFIED_CODEX_VERSIONS)))
     skills = data["skills"]
     if not isinstance(skills, list) or any(not isinstance(s, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", s) for s in skills) or len(skills) != len(set(skills)):
         raise ValueError("invalid or duplicate selected skills")
@@ -107,7 +110,7 @@ def render(source: Path, root: Path) -> tuple[dict[str, bytes], dict[str, Any]]:
         if len(alias) > 64:
             raise ValueError("project alias exceeds 64 characters")
         text = re.sub(r"(?m)^name: .+$", f"name: {alias}", text, count=1)
-        text += "\n## Project contract\n\nRead [the project contract](references/project-contract.md) before applying this workflow. Recheck repository settings; report stale contracts as Blocked. User instructions and repository authority remain controlling. For Codex explicit execution, check codex --version: any version other than 0.154.0 blocks execution pending a fresh discovery qualification. Never move explicit workflows into shared discovery as a fallback.\n"
+        text += f"\n## Project contract\n\nRead [the project contract](references/project-contract.md) before applying this workflow. Recheck repository settings; report stale contracts as Blocked. User instructions and repository authority remain controlling. For Codex explicit execution, check codex --version: any version other than {data['codex_version']} blocks execution pending a fresh discovery qualification. Never move explicit workflows into shared discovery as a fallback.\n"
         paths = []
         for native in [".codex/skills" if invocation == "explicit" else ".agents/skills", ".claude/skills"]:
             base = f"{native}/{alias}"
