@@ -15,6 +15,8 @@ metadata:
 
 Read [state, availability and acceptance](references/delivery.md) only when its checks apply to the task. Project-local copies include a project contract; compare it with current repository settings before relying on it.
 
+Read [compatibility and evidence preflight](references/currency.md) before selecting targets or reporting acceptance.
+
 ## Workflow
 
 1. Establish the requested behavior, acceptance journey, targets, existing edits, and repository instructions before selecting an implementation.

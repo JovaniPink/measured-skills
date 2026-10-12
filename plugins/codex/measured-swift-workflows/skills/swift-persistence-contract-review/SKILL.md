@@ -30,3 +30,7 @@ Do not enable cloud synchronization, delete durable data, migrate schemas, or tr
 ## Evidence and output
 
 Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Editable ordering
+
+Separate draft order from durable order. Moving an item must preserve its ID and any unsaved fields keyed by that ID. Review no-op, boundary, invalid/stale-ID, deletion, cancellation, failed-save, reopen, and synchronization cases. Order-only changes must not accidentally create domain events. Preserve the existing conflict protocol; adding a drag gesture does not authorize a schema migration.

@@ -32,20 +32,9 @@ Authorities: [Managing model data in your app](https://developer.apple.com/docum
 
 - Declare custom values with `@Entry` in an `EnvironmentValues` extension instead of a hand-written key type. [verified]
 
-## Deprecations the compiler does not report
+## API currency
 
-Some replaced APIs carry `deprecated: 100000.0` in the SDK interface. That marks them for a future deprecation, so a clean build shows no warning. [verified]
-
-| Replaced | Use instead | Compiler warning |
-| --- | --- | --- |
-| `onChange(of:perform:)` with one parameter | two-parameter or zero-parameter closure, `initial:` | yes, iOS 17 [verified] |
-| `animation(_:)` without `value:` | `animation(_:value:)` or `withAnimation` | yes, iOS 15 [verified] |
-| `NavigationView` | `NavigationStack` or `NavigationSplitView` | no [verified] |
-| `foregroundColor(_:)` | `foregroundStyle(_:)` | no [verified] |
-| `cornerRadius(_:)` | `clipShape` or `fill` | no [verified] |
-| `accessibility(label:)` | `accessibilityLabel(_:)` | no [verified] |
-
-A warning-free build does not prove current API use. Search the source for these names.
+Use the API currency reference linked from the skill entrypoint for silent deprecations, compiler/SDK versus runtime availability, and builder compatibility. A warning-free build does not establish current API use.
 
 ## Navigation and empty states
 

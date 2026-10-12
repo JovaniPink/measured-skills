@@ -273,3 +273,10 @@ The Codex reference test prevented web, network, GitHub, and project-checkout ac
 - Claude.ai had a signed-in new-chat surface and advertised slash skills, but natural, refusal, and explicit messages were not submitted at the external-message confirmation boundary.
 
 These rows are terminal `blocked` observations, not silent omissions. Clearing them requires new observed evidence on the named surface and an update to the matrix; it does not permit copying a result from another client.
+
+## Swift adoption discovery smoke - October 12, 2026
+
+See [the dated evidence and limits](swift-adoption-evidence.md). Codex 0.161.0
+discovery and read-only loading were observed in isolated synthetic projects.
+The stricter behavioral extension remains unqualified; Claude runtime checks are
+blocked by sign-in. Historical client matrices above are unchanged.
