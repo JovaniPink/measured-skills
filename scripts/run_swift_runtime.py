@@ -17,7 +17,7 @@ import subprocess
 import time
 from typing import Any
 
-from swift_evidence import ROOT, digest
+from swift_evidence import ROOT, classify, digest
 
 IDENTIFIER = "org.measured.synthetic.swift-evidence"
 SOURCE = ROOT / "evals/swift-evidence-v1/runtime/Fixture.swift"
@@ -48,6 +48,8 @@ def main() -> int:
         (output / name).write_text(result.stdout + result.stderr)
         receipt["commands"].append({"command": command, "exit_code": result.returncode, "log": name})
         if result.returncode:
+            if command[:2] == ["xcrun", "swiftc"]:
+                receipt["status"] = classify("success", [], result.returncode, result.stdout + result.stderr)
             raise RuntimeError(f"Command {index} failed; inspect {name}")
         return result.stdout.strip()
 
@@ -93,7 +95,7 @@ def main() -> int:
                     "geometry-short-wide", "animation-completion-delivered", "observation-unread-property",
                     "observation-read-property", "observation-nested-value", "environment-injected-model-unread-property",
                     "presentation-selected-item", "presentation-dismissal-retains-draft", "state-inline-default-precedence",
-                    "environment-scalar-reader-updates", "reduce-motion-environment-read", "animation-interrupted-completions"}
+                    "environment-scalar-reader-updates", "animation-interrupted-completions"}
         if not isinstance(rows, list) or len(rows) != len(expected) or {r["id"] for r in rows} != expected:
             raise RuntimeError("Fixture result inventory is incomplete")
         shutil.copyfile(result_file, output / "runtime-results.json")

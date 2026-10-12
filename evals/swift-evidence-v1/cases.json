@@ -380,6 +380,18 @@
       "minimum_sdk": "27.0",
       "authority": "https://developer.apple.com/documentation/swiftui/",
       "phase": "object"
+    },
+    {
+      "id": "reduce-motion-readonly",
+      "source": "reduce-motion-readonly.swift",
+      "expect": "error",
+      "diagnostics": [
+        "WritableKeyPath"
+      ],
+      "target": "27.0",
+      "language": "6",
+      "minimum_sdk": "27.0",
+      "authority": "https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityreducemotion"
     }
   ]
 }

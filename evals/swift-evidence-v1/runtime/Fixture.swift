@@ -135,7 +135,6 @@ struct EvidenceView: View {
     @State private var scalarUpdates = UpdateCounter()
     @State private var interrupted = false
     @State private var completionEvents: [String] = []
-    @State private var motionEnvironmentObserved = false
 
     var body: some View {
         ScrollView {
@@ -146,8 +145,6 @@ struct EvidenceView: View {
                 EnvironmentReader(counter: environmentUpdates).environment(observation)
                 ScalarEnvironmentReader(counter: scalarUpdates).environment(\.probePosition, scalarPosition)
                 InitializationView(recorder: recorder)
-                MotionPreferenceView(observed: $motionEnvironmentObserved)
-                    .environment(\.accessibilityReduceMotion, true)
                 Text("Interrupted fixture").opacity(interrupted ? 0.2 : 1)
                 RoundedRectangle(cornerRadius: 12)
                     .fill(.blue.opacity(0.2))
@@ -249,8 +246,6 @@ struct EvidenceView: View {
         let scalarChanged = await recorder.waitFor { scalarUpdates.value > scalarBefore }
         recorder.check("environment-scalar-reader-updates", scalarChanged,
                        "Replacing the injected scalar updated its reader: \(scalarBefore) -> \(scalarUpdates.value). No subtree-wide count is asserted.")
-        recorder.check("reduce-motion-environment-read", motionEnvironmentObserved,
-                       "The fixture read an explicitly injected Reduce Motion preference; this is not a device-setting or animation-accessibility pass.")
         withAnimation(.linear(duration: 1), completionCriteria: .removed) {
             interrupted = true
         } completion: { completionEvents.append("first") }
@@ -263,10 +258,4 @@ struct EvidenceView: View {
                        "An interrupted animation and its replacement delivered callbacks: \(completionEvents). A callback alone does not identify the current intent.")
         recorder.save()
     }
-}
-
-struct MotionPreferenceView: View {
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @Binding var observed: Bool
-    var body: some View { Text("Motion preference").task { observed = reduceMotion } }
 }
