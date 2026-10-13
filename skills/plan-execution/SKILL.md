@@ -15,6 +15,8 @@ metadata:
 
 Implement an approved plan without silently changing its scope or authority.
 
+Read [document reconciliation](references/document-reconciliation.md) when executing a document-backed plan or resuming from a saved progress record.
+
 ## Preconditions
 
 Confirm the exact plan, repository, branch, authorized actions, excluded actions, and required checkpoints. If the plan is missing, materially ambiguous, or no longer matches the system, stop and report the gap. If no one can state what done looks like for the plan, route to `alignment-interview` when that skill is installed; otherwise ask the user for the finish line before executing.

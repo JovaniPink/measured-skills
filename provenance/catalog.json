@@ -742,11 +742,11 @@
       "source_url": "https://agentskills.io/specification",
       "upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
       "pinned_revision": "retrieved-2026-08-21",
-      "reviewed_on": "2026-08-21",
+      "reviewed_on": "2026-10-13",
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries.",
+      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported.",
       "security_review": "APPROVE: instruction-only workflow with no hooks, bundled agents, executables, tool grants, or automatic external actions.",
       "rereview_triggers": [
         "source revision changes",
@@ -1028,11 +1028,11 @@
       "source_url": "https://agentskills.io/specification",
       "upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
       "pinned_revision": "retrieved-2026-08-21",
-      "reviewed_on": "2026-08-21",
+      "reviewed_on": "2026-10-13",
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries.",
+      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported.",
       "security_review": "APPROVE: instruction-only workflow with no hooks, bundled agents, executables, tool grants, or automatic external actions.",
       "rereview_triggers": [
         "source revision changes",
@@ -1048,14 +1048,15 @@
       "source_url": "https://agentskills.io/specification",
       "upstream_license": "The open specification and official client documentation were used only as format and adapter authorities; workflow language and behavior are Jovani-authored.",
       "pinned_revision": "retrieved-2026-08-21",
-      "reviewed_on": "2026-08-21",
+      "reviewed_on": "2026-10-13",
       "reviewed_material": [
         "Open Agent Skills specification",
         "OpenAI Build skills documentation",
         "Claude Code skill documentation",
-        "Jovani-owned portable authoring practice"
+        "Jovani-owned portable authoring practice",
+        "Official Google Antigravity skills documentation, read 2026-10-13; explicit-only enforcement remains unverified."
       ],
-      "local_changes": "Independently authored portable catalog workflow covering routing, progressive disclosure, invocation controls, provenance, security, evals, generation, packaging, and observed client evidence.",
+      "local_changes": "Independently authored portable catalog workflow covering routing, progressive disclosure, invocation controls, provenance, security, evals, generation, packaging, and observed client evidence. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported.",
       "security_review": "APPROVE: no bundled executables, hooks, agents, MCP servers, broad permissions, dependencies, or automatic import behavior.",
       "rereview_triggers": [
         "open specification changes",

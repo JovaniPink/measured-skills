@@ -15,7 +15,7 @@ metadata:
 
 Create one canonical workflow source and validate its client projections.
 
-Read [client adapters](references/client-adapters.md) when invocation controls, packaging, or generated Codex and Claude output are in scope.
+Read [client adapters](references/client-adapters.md) when invocation controls, packaging, or generated Codex, Claude, and Antigravity output are in scope.
 
 ## Workflow
 

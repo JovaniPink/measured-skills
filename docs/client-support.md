@@ -75,3 +75,5 @@ Keep personal writing preferences outside the catalogs. This short preference ca
 Check that the preference loaded before calling it active. Keep the same wording when comparing clients.
 
 The study that measures whether revised skills help is separate from these setup checks. A study needs complete runs and human review. An install check cannot prove that the skills improve task results.
+
+For document-backed changes, use the [document-driven workflow](document-driven-workflow.md). Its current source changes require fresh behavior checks.
