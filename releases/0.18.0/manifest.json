@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "45a8931fd9976102c68be7e43d9f63b28cfca97b",
-  "created_on": "2026-10-07",
+  "source_commit": "77b32b2f38a05fe564385416de00571a9a879b59",
+  "created_on": "2026-10-13",
   "artifacts": [
     {
       "kind": "file",
@@ -252,7 +252,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/implementation-planning-0.18.0.zip",
-      "sha256": "c968c11376662f37be2c13b478a07a1292cb71b12e996544512afd6c06ae42d8"
+      "sha256": "c023b160f6217020384a317a7c0f07fb83e350f0d7f5e16d81a98138f8c76cbf"
     },
     {
       "kind": "zip",
@@ -322,12 +322,12 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-execution-0.18.0.zip",
-      "sha256": "8edcc27d19176a5573de417bf84dbd7af0a627196b6c99f9148acd96c7e6de07"
+      "sha256": "2f3350a05dda966faffac322b638bc1fcf2dc29b47414eb3bb57fb8581f12b99"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/portable-skill-authoring-0.18.0.zip",
-      "sha256": "9b611fcda9457aebcc5a63fc318248cf1c5d4a360ab7a705ae51a6cd0c0c1b52"
+      "sha256": "e670b0be3fb9184409841fb2a7fc744c03573d3ae9a99681d74d3fd7a5630af3"
     },
     {
       "kind": "zip",
@@ -507,7 +507,7 @@
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "6c54e5dc7434a33476729eeea0d2c21bbd1a5628f7f0fde20cdeecc58d518cd4"
+      "sha256": "6902b1a8bd9f40c66a6b254c86f4bc721280e32026063132ebbf2a013896b451"
     },
     {
       "kind": "tree",
@@ -522,7 +522,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-build",
-      "sha256": "f75acb51246741bddc42c062710f5144feb160107461274f5ae550a6879a8492"
+      "sha256": "c1609eb8fb0d86b13d513c7bffe09e94d9f0c1d9f012c30b7c79e1ed8f1d71dc"
     },
     {
       "kind": "tree",
@@ -547,7 +547,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-reasoning",
-      "sha256": "5b8c033fd962f81748eb4394115f8aa6a5c1bf3779a2e68f76f8e16b269a3e1c"
+      "sha256": "4ebb0b81d53e5b4875fb7cdfc68e9a2dab0fac011fe5a1c179013168844c1423"
     },
     {
       "kind": "tree",
@@ -577,12 +577,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-build",
-      "sha256": "98301ebf74ed7a318b90006c94b8d6d777f4f54ba8ba5f9d912d2470dfc5deaf"
+      "sha256": "bb41dacfdd23842d5da32786960da39414ee49107f6b139fcd3f7cf2f1e116f0"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "97cb73c2591e6ace5444996872d2065f4501ea9497d7669dd79815f0c9074723"
+      "sha256": "671a9b5288bac3d892e9980342d4e3dba4e947b613432ab6084513b88bb29a4d"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "56adb57d99e66ee4732eaf5a3874e302f4a79346647d4e681013c0b1be5a1c38"
+      "sha256": "670b31dda4d39fc19043b49f2f2f5ed36ec361d01f72b13ad8161bbe6a04a117"
     },
     {
       "kind": "tree",
@@ -632,12 +632,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-build",
-      "sha256": "a2891e888af54649d03440023031a8f385832cb1a1cd23da8837a42f4946604c"
+      "sha256": "a333421bae02d00ca901982186d5a63be2eb177357634277a02c6fa8a043dd47"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "ee3fb6d88c719cde85ce4096eb3415770e5c0eb04fb7ebb1d66bc098b89761bf"
+      "sha256": "34b264ca7e358ed55015937adc70882d84565fff7fbacf9b73230be1331cc60b"
     },
     {
       "kind": "tree",
@@ -657,7 +657,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-reasoning",
-      "sha256": "767ca3cba2678db0f4285ee5c091545884f09bb4b2db2948fde21113e7d8f06b"
+      "sha256": "de7a1a4773a1c900a8c59e47d33e72533dc8cef19558d2f519f77505512bad07"
     },
     {
       "kind": "tree",
@@ -677,7 +677,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "14dc7a36343cca25a9d6839e404aa8999a33df10985a833faeed0a14c68b7d5f"
+      "sha256": "72d75ec572cb4edc474ed9979d913a1bec8e68e2f5b921a705711728beb65cbd"
     }
   ]
 }
