@@ -8,7 +8,7 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 238 regression tests.
+Current test suite: 241 regression tests.
 
 ## October 20 release-readiness repairs
 
@@ -273,3 +273,7 @@ See `client-observations-v0.5.json`. Every supported surface has a terminal `blo
 ## Client evidence boundary
 
 See `manual-smoke-tests.md` and `client-observations-v0.1.json`. Codex CLI and the required manual Claude Code CLI behaviors passed. Codex Desktop, Claude Code Desktop, and Claude.ai invocation remain blocked, and Claude Code's built-in plugin-eval ablation remains blocked by client availability. No validation, CLI result, or package inspection is substituted for those observations.
+
+## PR review follow-up, October 20
+
+Additional failure-first archive mutations reject executable and symlink member flags even when bytes and recomputed archive checksums agree. The official Swift data hostname has a focused allowlist regression that rejects lookalike hosts. Source-decision regressions account for every changed or retired pin while preserving the earlier snapshot and global review date. An owned-history audit binds all 87 entrypoint hashes and verifies unchanged procedural bodies at the four disputed relabel transitions. These checks do not establish independent originality or client behavior.

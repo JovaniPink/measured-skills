@@ -57,7 +57,7 @@
     {
       "source_url": "https://antigravity.google/docs/cli/headless/",
       "marker_kind": "etag",
-      "marker_value": "\"tAIKDw\""
+      "marker_value": "\"wE2o6g\""
     },
     {
       "source_url": "https://antigravity.google/docs/skills/",
@@ -65,19 +65,19 @@
       "marker_value": "\"wE2o6g\""
     },
     {
-      "source_url": "https://developer.apple.com/documentation/swiftdata/modelactor",
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
       "marker_kind": "content-sha256",
-      "marker_value": "22eb6b9dad5ea17f7bd75d4dce787222e81943067d62e24666c083287cef5406"
+      "marker_value": "c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f"
     },
     {
-      "source_url": "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftui/managing-model-data-in-your-app.json",
       "marker_kind": "content-sha256",
-      "marker_value": "4b230d88255754f2f9a19aecc5fc11c14c80cd619da637071c8b9a95a2dde960"
+      "marker_value": "68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc"
     },
     {
-      "source_url": "https://developer.apple.com/documentation/testing/migratingfromxctest",
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/testing/migratingfromxctest.json",
       "marker_kind": "content-sha256",
-      "marker_value": "cd6282a9f54246eeb2c2033ecd0ff647e6d4c454cdd686727ed0ac3a2d5ed0db"
+      "marker_value": "f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347"
     },
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
@@ -160,6 +160,11 @@
       "marker_value": "Tue, 20 Oct 2026 16:09:11 GMT"
     },
     {
+      "source_url": "https://docs.swift.org/latest/data/documentation.json",
+      "marker_kind": "content-sha256",
+      "marker_value": "9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055"
+    },
+    {
       "source_url": "https://docs.swift.org/latest/documentation/",
       "marker_kind": "etag",
       "marker_value": "\"f63-65c3036923100\""
@@ -172,12 +177,12 @@
     {
       "source_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "4e9b6fd81b9ab34e2edacab3b9b4963bd402ba18290bafcca81ec5453c691301"
+      "marker_value": "87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928"
     },
     {
       "source_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "44a36ed5f01b69261088a74ad8cab855ec4de28a1cc146d03a6f534f17808511"
+      "marker_value": "d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5"
     },
     {
       "source_url": "https://git-scm.com/docs/git-merge",
@@ -197,7 +202,7 @@
     {
       "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a"
+      "marker_value": "4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a"
     },
     {
       "source_url": "https://learn.microsoft.com/en-us/dotnet/",
@@ -255,11 +260,6 @@
       "marker_value": "d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417"
     },
     {
-      "source_url": "https://www.antigravity.google/docs/cli/plugins/",
-      "marker_kind": "etag",
-      "marker_value": "\"tAIKDw\""
-    },
-    {
       "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
       "marker_kind": "etag",
       "marker_value": "\"wE2o6g\""
@@ -267,7 +267,7 @@
     {
       "source_url": "https://www.antigravity.google/docs/sdk/overview",
       "marker_kind": "etag",
-      "marker_value": "\"tAIKDw\""
+      "marker_value": "\"wE2o6g\""
     },
     {
       "source_url": "https://www.drupal.org/docs/develop",
@@ -283,11 +283,6 @@
       "source_url": "https://www.rfc-editor.org/rfc/rfc9110.txt",
       "marker_kind": "content-sha256",
       "marker_value": "21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a"
-    },
-    {
-      "source_url": "https://www.swift.org/documentation/",
-      "marker_kind": "etag",
-      "marker_value": "\"209-65cef4d3c4ac0\""
     },
     {
       "source_url": "https://www.swift.org/swift-evolution/",

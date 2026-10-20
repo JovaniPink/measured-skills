@@ -188,17 +188,6 @@
       "action": "Retain exclusion of all explicit-only workflows from installable Antigravity output. Manual slash invocation is not an explicit-only control. Refresh this reviewed fingerprint."
     },
     {
-      "url": "https://www.antigravity.google/docs/cli/plugins/",
-      "status": "reviewed",
-      "ownership_check": "Google Antigravity documentation is the official authority for its native CLI plugin manifest.",
-      "affected_skills": [
-        "portable-skill-authoring",
-        "skill-security-review"
-      ],
-      "finding": "Reviewed 2026-10-05: The legacy Antigravity CLI plugin URL is still an HTML redirect to /docs/plugins?tab=cli.",
-      "action": "Use the current combined guide, preserve observed installer paths, and correct stale catalog and installation claims. Do not infer explicit-only enforcement. Refresh this reviewed fingerprint."
-    },
-    {
       "url": "https://agent-plugins.org/specification",
       "status": "reviewed",
       "ownership_check": "The Agent Plugins specification site is the named authority for the portable Agent Plugins 1.0 package format.",
@@ -329,14 +318,14 @@
       "action": "Retain project PHP and Drupal discovery, Composer locks, configured commands, and current versioned authorities. Refresh this reviewed fingerprint."
     },
     {
-      "url": "https://www.swift.org/documentation/",
+      "url": "https://docs.swift.org/latest/data/documentation.json",
       "status": "reviewed",
       "ownership_check": "The named official publisher remains the authority for this documentation.",
       "affected_skills": [
         "swift-swiftui-engineering-profile"
       ],
-      "finding": "Reviewed 2026-10-05: The old Swift documentation URL still redirects to docs.swift.org/latest/documentation/. The destination's documentation data names The Swift Programming Language (6.4) and links Testing, Swift Package Manager, compiler diagnostics, and Migrating to Swift 6.",
-      "action": "Retain the direct destination authority and rendered review requirement without changing a project's Swift mode or deployment target. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: official documentation data supplies substantive content for the same topic; the former renderer shell is not a content freshness signal.",
+      "action": "Pin the full official data response. Keep historical HTML observations and exact-version discovery requirements."
     },
     {
       "url": "https://www.typescriptlang.org/docs/",
@@ -457,7 +446,7 @@
         "skill-security-review"
       ],
       "finding": "Reviewed 2026-10-05: The combined plugin guide still documents plugin.json, component directories, workspace and global plugin folders, the interactive plugin manager, marketplaces, and a separate CLI staging folder. It does not establish an explicit-only skill-selection control.",
-      "action": "Use the combined guide in current setup documentation, and retain native exact-version path readback and the explicit-only exclusion. Refresh this reviewed fingerprint."
+      "action": "Use the combined guide in current setup documentation, and retain native exact-version path readback and the explicit-only exclusion. Refresh this reviewed fingerprint. Retire the obsolete CLI redirect URL from active source coverage; keep this combined authority and historical receipts."
     },
     {
       "url": "https://nextjs.org/docs/app/guides/ai-agents",

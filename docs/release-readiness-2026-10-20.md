@@ -8,7 +8,11 @@ Merged baseline `7aff034` passed 233 unit tests and deterministic gates. All 87 
 
 The new archive regression mutates bytes and recomputes the archive checksum; content must still match the generated source. Missing, extra, and duplicate archive members are rejected. The current manifest must contain each required artifact path and kind exactly once. Historical manifests keep their own schemas and evidence.
 
-[Source review](audits/source-review-2026-10-20.md) reviewed the 43 changed fingerprints individually and retains nine holds. The first closeout matched 53 of 63 sources and found new dbt drift. Its separate current-content review then refreshed one additional stable fingerprint, retaining the nine earlier holds. Final online closeout matched 54 of 63 sources and still failed for those nine URLs. [Originality disposition](audits/originality-disposition-2026-10-20.md) records the requirement's history and missing acceptance evidence; it does not clear the hold.
+The [initial source review](audits/source-review-2026-10-20.md) retains its historical nine holds. The [PR follow-up decisions](audits/pr72-source-hold-repairs-2026-10-20.json) address all nine: four renderer-shell bindings were replaced with substantive official documentation data, one obsolete duplicate URL was retired in favor of the existing official guide, and four current-content sources had three agreeing planned samples. Newly observed OpenAI subagent drift was also reviewed and repinned. There are now 62 active sources.
+
+The [follow-up closeout](audits/pr72-source-closeout-2026-10-20.json) matched 61 of 62 sources. It found new ASVS drift, whose three planned body samples subsequently disagreed. Its pin remains unchanged, so the online gate still fails for that one source. No global review clock, normalization rule, or fail-closed policy was relaxed. The initial nine holds are addressed; the new hold is not concealed by that progress.
+
+The [originality disposition](audits/originality-disposition-2026-10-20.md) now traces all 87 histories and locates the owned MIT source license for four historical adaptations. Their later clean-room relabel changed no procedural body. Current provenance qualifies those labels; no independent process or comprehensive originality qualification was found. The release hold remains until a scoped review and maintainer disposition are accepted.
 
 ## Limited-evidence target
 

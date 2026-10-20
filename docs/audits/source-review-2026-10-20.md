@@ -23,3 +23,7 @@ The [online closeout](source-closeout-2026-10-20.json) matched 53 of 63 sources.
 The newly changed dbt page was then reviewed separately. It retains incremental filters, grain/key behavior, schema-change limits, and full-refresh consequences, with adapter-specific compatibility guidance. The existing GCP profile requires exact adapter/version discovery and contract review, so no instruction change was needed. Two preferred-kind marker samples agreed and that one pin was refreshed. Total individual repins are now 35; the nine earlier holds remain. The first closeout receipt is preserved as the observation that triggered this additional review.
 
 The [final closeout](source-final-closeout-2026-10-20.json) matched 54 of 63 sources and retained exactly those nine held URLs. This remains a failing online gate. No repeated sampling was used to erase an earlier unstable observation.
+
+## PR review follow-up
+
+The observations above remain historical. The [follow-up decision ledger](pr72-source-hold-repairs-2026-10-20.json) records the later repair of all nine original holds, the newly reviewed subagent page, and a new retained ASVS hold. The [follow-up closeout](pr72-source-closeout-2026-10-20.json) is the current online result: 61 matching sources of 62 active sources, with a failing gate for ASVS. Three planned ASVS samples disagree; no further repin is accepted from those observations.

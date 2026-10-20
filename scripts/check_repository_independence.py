@@ -75,6 +75,7 @@ PRIMARY_AUTHORITY_HOSTS = frozenset(
         "slsa.dev",
         "sre.google",
         "swift.org",
+        "docs.swift.org",
         "trailhead.salesforce.com",
         "typescriptlang.org",
         "w3.org",

@@ -999,6 +999,9 @@ def validate_packages(errors: list[str]) -> None:
             if set(names) != set(expected):
                 errors.append(f"{archive_path.name}: archive members differ from generated Claude source")
             for info in archive.infolist():
+                mode = info.external_attr >> 16
+                if mode & 0o170000 not in (0, 0o100000) or mode & 0o111:
+                    errors.append(f"{archive_path.name}: non-regular or executable archive member: {info.filename}")
                 if info.filename in expected and archive.read(info) != expected[info.filename]:
                     errors.append(f"{archive_path.name}: noncanonical archive content: {info.filename}")
             if f"{skill}/SKILL.md" not in names:
