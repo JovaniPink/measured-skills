@@ -245,7 +245,10 @@ def main() -> int:
     if errors:
         print("\n".join(f"ERROR: {error}" for error in errors))
         return 1
-    print("Upstream provenance freshness passed.")
+    if args.online:
+        print("Online upstream provenance freshness passed.")
+    else:
+        print("Offline upstream provenance checks passed (pin coverage and review age; no sources fetched).")
     return 0
 
 

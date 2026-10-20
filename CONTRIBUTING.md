@@ -26,6 +26,12 @@ Expected result: `python3 scripts/validate.py` ends with `All deterministic cata
 
 Merge the pull request with a merge commit. The check needs the source commit to stay in history, and a squash or rebase merge removes it.
 
+Repository settings must keep merge commits enabled and disable squash and rebase
+merges. The validator accepts ancestry through any parent; a source commit does
+not need to appear on the first-parent chain. Settings enforce the permitted
+merge method, while the manifest check verifies source ancestry and artifact
+bytes. Neither grants approval to merge a particular pull request.
+
 ## What a contribution must not contain
 
 - secrets or credentials
