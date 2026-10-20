@@ -30,3 +30,7 @@ No third-party skill collection was downloaded, compared, installed, or imported
 ## Reviewable qualification contract
 
 The [proposed review contract](originality-review-contract-2026-10-20.md) makes the remaining evidence and decision fields explicit. Its status is proposed, not accepted. Correcting a historical process label is distinct from accepting a release. No paid evaluation, corpus download, or automated judge is needed to inspect the retained records, but a scan cannot supply missing process evidence.
+
+## Concrete scoped proposal
+
+The [14-skill expression and licensing disposition](scoped-expression-disposition-2026-10-20.md) now identifies an exact reviewed revision, full file inventory, per-skill findings, supported owned reuse, a missing-license-notice repair, AI-assistance limits, proposed decision text, and the 73 skills outside its scope. Its maintainer decision remains pending. This is a finite review proposal, not an accepted replacement for the historical gate or a release approval.

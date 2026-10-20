@@ -48,6 +48,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
         for mutation in ('valid', 'modified', 'missing', 'extra', 'duplicate', 'unsafe', 'executable', 'symlink'):
             with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as temporary:
                 root = Path(temporary)
+                shutil.copyfile(ROOT / 'LICENSE', root / 'LICENSE')
                 shutil.copytree(ROOT / 'skills' / skill, root / 'skills' / skill)
                 target = root / 'plugins' / 'claude' / source.parents[1].name / 'skills' / skill
                 shutil.copytree(source, target)
@@ -235,7 +236,8 @@ class ReleaseIntegrityTests(unittest.TestCase):
         revision = audit['reviewed_source']
         before = {r['skill']: r for r in json.loads(subprocess.check_output(
             ['git', 'show', revision + ':provenance/catalog.json'], cwd=ROOT))['entries']}
-        after = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        after = {r['skill']: r for r in json.loads(subprocess.check_output(
+            ['git', 'show', '82d3ab5f1de27a32aa1bb698b72fe29d66e75c18:provenance/catalog.json'], cwd=ROOT))['entries']}
         expected = {name for name, entry in before.items() if entry['implementation_method'] == 'clean-room'}
         self.assertEqual(40, len(expected))
         self.assertEqual(expected, {r['skill'] for r in audit['changes']})

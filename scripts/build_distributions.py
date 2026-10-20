@@ -18,6 +18,7 @@ from cataloglib import (
     VERSION,
     add_claude_explicit_control,
     read_skill_metadata,
+    license_notice,
     skills_by_plugin,
 )
 
@@ -177,7 +178,9 @@ def _remove_obsolete(parent: Path, expected: set[str]) -> None:
 
 
 def _copy_codex_skill(source: Path, target: Path, skill: str, plugin: str) -> None:
+    notice = license_notice(ROOT)
     shutil.copytree(source, target)
+    (target / "LICENSE").write_bytes(notice)
     interface_path = target / "agents" / "openai.yaml"
     interface = interface_path.read_text(encoding="utf-8")
     interface_path.write_text(
@@ -187,7 +190,9 @@ def _copy_codex_skill(source: Path, target: Path, skill: str, plugin: str) -> No
 
 
 def _copy_claude_skill(source: Path, target: Path, explicit: bool) -> None:
+    notice = license_notice(ROOT)
     target.mkdir(parents=True)
+    (target / "LICENSE").write_bytes(notice)
     for item in sorted(source.iterdir()):
         if item.name == "agents":
             continue
@@ -207,6 +212,7 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
     if PLUGIN_ICON.is_symlink() or not PLUGIN_ICON.is_file():
         raise ValueError("shared plugin icon must be a regular source file")
     icon = PLUGIN_ICON.read_bytes()
+    notice = license_notice(ROOT)
     for path in (output_root.absolute(), *output_root.absolute().parents):
         if path in (Path("/tmp"), Path("/var")) and path.resolve() == Path("/private") / path.name:
             continue
@@ -250,6 +256,9 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
             if not is_explicit and antigravity_plugin is not None:
                 _copy_claude_skill(source, antigravity_plugin / "skills" / skill, False)
 
+        for pack in (codex_plugin, claude_plugin, antigravity_plugin):
+            if pack is not None:
+                (pack / "LICENSE").write_bytes(notice)
         spec = PLUGIN_SPECS[plugin]
         _write_json(
             codex_plugin / ".codex-plugin" / "plugin.json",

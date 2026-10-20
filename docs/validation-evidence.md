@@ -8,7 +8,7 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 250 regression tests.
+Current test suite: 254 regression tests.
 
 ## October 20 release-readiness repairs
 
@@ -289,3 +289,7 @@ The continued online source checkpoint matches all 62 active authorities. Eight 
 ## Retained authoring label corrections, October 20
 
 The [40-skill review](audits/clean-room-declaration-review-2026-10-20.md) binds six owned creation batches and private retained-write identities. New regressions check complete scope against the reviewed baseline, creation and focused-file hashes, metadata-only canonical changes, preserved authority fields, exposure chronology, and explicitly unaccepted qualification. The earlier four-adaptation audit remains a frozen checkpoint. Current declarations are 83 original and four adapted; those counts do not establish independent expression, licensing clearance, or release acceptance.
+
+## Scoped expression review and notice retention, October 20
+
+The [decision packet](audits/scoped-expression-disposition-2026-10-20.md) binds fourteen skills and forty canonical files at its reviewed source. A regression checks the inventory hash, exact Git bytes, the 73 excluded skills, and pending acceptance. Failure-first notice checks demonstrated omission in generated packs and independent exports, and coordinated notice loss in generated Claude source plus a rehashed ZIP. Generators and package validation now preserve the root LICENSE across distributions, exports, and project projections. Offline evaluation receipts include the committed notice, with no client execution. These checks establish notice retention, not universal originality or legally sufficient human contribution.

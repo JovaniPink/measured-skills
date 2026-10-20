@@ -10,6 +10,8 @@ Four unsupported clean-room labels are now corrected to owned adaptation, with a
 
 No bounded model pilot, paid evaluation, billing change, merge, tag, release, or installed-skill promotion was performed. Required client behavior and effective isolation/billing prerequisites remain unverified. The final manifest binds the submitted artifact scope and retains historical ancestry.
 
+The [scoped expression/licensing packet](audits/scoped-expression-disposition-2026-10-20.md) reviews fourteen distinct skills and explicitly excludes 73. It proposes a bounded decision, identifies and repairs missing standalone MIT notices, and retains AI-assistance and external-comparison limits. Its maintainer decision is pending; the originality and release holds remain.
+
 ## Retained earlier checkpoints
 
 Merged baseline `7aff034` passed 233 unit tests and deterministic gates. All 87 archives matched generated Claude source bytes. Its manifest bound 137 artifacts to ancestor `81c6701`, preserving both feature and main histories. These are baseline receipts, not results for later edits.

@@ -1,0 +1,526 @@
+{
+  "decision_id": "originality-scoped-daily-018-20261020",
+  "reviewed_source": "82d3ab5f1de27a32aa1bb698b72fe29d66e75c18",
+  "reviewed_on": "2026-10-20",
+  "reviewer": "Codex-assisted technical evidence review; no counsel opinion or independent human acceptance recorded",
+  "status": "proposed",
+  "maintainer_decision": {
+    "status": "pending",
+    "accepted_by": null,
+    "accepted_on": null,
+    "accepted_revision": null
+  },
+  "recommendation": "Accept the scoped owned-history, expression-review, and MIT-notice evidence for these 14 skills, with stated limits. Do not accept full-catalog originality, a clean-room process, universal non-infringement, or release readiness.",
+  "selection": "daily-engineering-experimental union the four owned adaptations",
+  "skills": [
+    {
+      "skill": "api-contract-compatibility-review",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/api-contract-compatibility-review/SKILL.md": "5f080aeefa0beb17ecad63aa07cb4df6d62f10efc8a9232f8c9a067e87d5d999",
+        "skills/api-contract-compatibility-review/agents/openai.yaml": "8c6e59384ac8cbb8c6acba02bca2ff495ac45df04af43577f36badfa1f7a96b1"
+      },
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Producer/consumer review sequence and synthetic integer-to-string response example; no RFC prose, ABNF, or code component identified in reviewed files.",
+      "expression_limit": "HTTP vocabulary and API field names are distinguished from copied standards expression.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "retained_authoring_review": "docs/audits/clean-room-declaration-review-2026-10-20.json#api-contract-compatibility-review"
+    },
+    {
+      "skill": "application-security-review",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/application-security-review/SKILL.md": "48ed0ee28e65ca36601e028e1c7bd6c049fe1f67ec85e48e62d9a0aa2d18eb03",
+        "skills/application-security-review/agents/openai.yaml": "9090cc21665fe1489f176180641741c18165ea5beb3553b929386404562ba25a"
+      },
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Workflow requests version-qualified ASVS mappings without embedding ASVS requirement text. The synthetic tenant-handler example has its own supplied-evidence constraints.",
+      "expression_limit": "OWASP titles and links identify authorities; no ASVS control catalog or certification claim is embedded.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "retained_authoring_review": "docs/audits/clean-room-declaration-review-2026-10-20.json#application-security-review"
+    },
+    {
+      "skill": "change-impact-analysis",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/change-impact-analysis/SKILL.md": "94c31e102bf2baa6be8189e3a2f110eed1bd77d11469a0a12b7cd65ab0ff8d24",
+        "skills/change-impact-analysis/agents/openai.yaml": "c116c631bcddfb01df9e1d0f32572fef58b9a3f0b456bd8f04b7c83f8a8e5631"
+      },
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned workflow traces callers, mixed-version states, and evidence classes. Synthetic event-consumer example contains no source implementation.",
+      "expression_limit": "Common dependency and rollout methods do not establish distinctiveness or copying; expressive presentation was reviewed separately.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "retained_authoring_review": "docs/audits/clean-room-declaration-review-2026-10-20.json#change-impact-analysis"
+    },
+    {
+      "skill": "claim-verification",
+      "declared_method": "adapted",
+      "reviewed_files": {
+        "skills/claim-verification/SKILL.md": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+        "skills/claim-verification/agents/openai.yaml": "00e9d44e63c82e173678a3e49227e54f3f69ba92560624b37fa9404d07bc0337",
+        "skills/claim-verification/references/continuity-example.md": "f0fb4b0b33e2a16835597c6d1b719c536a9f7c7765e1f3abdbf86f2b0995fb60"
+      },
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Current workflow retains owned foundation prose and expands authority, continuity, and synthetic evidence handling.",
+      "expression_limit": "Four verdict words and generic evidence classes alone are not treated as an originality proof.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/claim-verification/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "7af532ccdd1936dbbbf5efca6328e35b8576afda2e6c6ca9ead5883d1d6cda0e",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "retained_expression": {
+        "matching_body_lines": 30,
+        "current_body_lines": 53,
+        "meaning": "Owned reuse trace only; not a similarity score, corpus comparison, clearance threshold, or proof of independent expression."
+      }
+    },
+    {
+      "skill": "code-change-review",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/code-change-review/SKILL.md": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+        "skills/code-change-review/agents/openai.yaml": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5"
+      },
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned finding contract, pinned scope, and synthetic tenant-predicate review. No third-party review template was obtained or compared.",
+      "expression_limit": "Originality conclusions remain bounded by the owned corpus and documented prior exposure.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "retained_authoring_review": "docs/audits/clean-room-declaration-review-2026-10-20.json#code-change-review"
+    },
+    {
+      "skill": "cross-stack-quality-gates",
+      "declared_method": "adapted",
+      "reviewed_files": {
+        "skills/cross-stack-quality-gates/SKILL.md": "8bc687666e1c2cbf3aa92bdd7032c81b41a91d211549a696e6dad3f5fe2cdf97",
+        "skills/cross-stack-quality-gates/agents/openai.yaml": "157059284e8adbaf9239f77a5f4a47bff566f611b3eed70cd327faeaf0e068e1",
+        "skills/cross-stack-quality-gates/references/continuity-example.md": "dc12b7560918cf66dd9ba95b6407eee5732799eb7911c4818173d5928a1327c4",
+        "skills/cross-stack-quality-gates/references/gate-discovery.md": "c72988ed26b3ac9e288e8e2ef104c9f4008b9a1458cc902271f5092c04bfc968"
+      },
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned gate-discovery workflow, focused stack table, and incomplete-integration fixture remain traceable to the catalog history.",
+      "expression_limit": "Command names and manifest filenames are factual interface identifiers; no external executable implementation is included.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/cross-stack-quality-gates/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "92cab23ce4df6ef4703c39db73554d70a7ba17b5e2f3adbdb1c776fbc8241dc1",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "retained_expression": {
+        "matching_body_lines": 20,
+        "current_body_lines": 52,
+        "meaning": "Owned reuse trace only; not a similarity score, corpus comparison, clearance threshold, or proof of independent expression."
+      }
+    },
+    {
+      "skill": "gcp-data-engineering-profile",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/gcp-data-engineering-profile/SKILL.md": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+        "skills/gcp-data-engineering-profile/agents/openai.yaml": "58324f3e8a0dc45f675859ad1daf37de66d67a93c19acf1d1f84ba04dc98ac5d",
+        "skills/gcp-data-engineering-profile/references/pipelines.md": "559b9a9bc6f6740f99c65d36014b51199635eefb4e97e8a69cf57711d8b87468",
+        "skills/gcp-data-engineering-profile/references/warehouse.md": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2"
+      },
+      "creation_revision": "3e1fce2583832cd4df65183f91292ea31715933f",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Reviewed both references and workflow: independently phrased review questions, source identity, late-data/retry examples, and provider authority limits.",
+      "expression_limit": "Platform behavior and identifiers are separated from source prose; no provider code samples, SQL model, or tutorial diagram is bundled.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending"
+    },
+    {
+      "skill": "implementation-planning",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/implementation-planning/SKILL.md": "98e9474b7d8c88b76742d9e3b1c683ef49edc7722029ca8100374406141ed450",
+        "skills/implementation-planning/agents/openai.yaml": "19a65e715db4bd67a95fbfb90c86e9168503f37ab5ce0551f2cdec6cf8f210aa",
+        "skills/implementation-planning/references/decision-map.md": "eea42f5949e0effa22404cfa1361f4e9c2a5ea8fae593126e892a79e8490831d",
+        "skills/implementation-planning/references/document-lifecycle.md": "a31f2b59083154c8c98403a1a0acaf6ee0bc53c6f090f397bcaff87ff6068f92",
+        "skills/implementation-planning/references/specification-synthesis.md": "b3ccd03fcc0b5db3afffb75698618ee3c9c979e748cfd71f0c192e4a8f1ad9fe",
+        "skills/implementation-planning/references/work-packages.md": "ece872b6d64f3848e07132c94a8ef9e69a88fca87bce5870396d97ebd15cf336"
+      },
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned planning workflow and all four focused references separate requirements, decision ownership, state, and evidence. Synthetic empty-parser example is explicitly unobserved.",
+      "expression_limit": "Common planning methods and table fields are not a basis for either a copying finding or universal clearance.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending"
+    },
+    {
+      "skill": "prelaunch-readiness",
+      "declared_method": "adapted",
+      "reviewed_files": {
+        "skills/prelaunch-readiness/SKILL.md": "beda909aecf900a729b7ebc476227f73c950839af075eb751e2d72c2630588d0",
+        "skills/prelaunch-readiness/agents/openai.yaml": "111c010353345d678e1935aebf964d787b163b26c3d2567b418519ca62eeaefb",
+        "skills/prelaunch-readiness/references/surface-checks.md": "02c5fae5efd29d634bacb584bd77d4465667692f360dc9305cbbd06dcaadf9fe"
+      },
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned foundation checklist and surface reference retain supported adaptation lineage; later synthetic hosted-sign-in example adds a bounded evidence gap.",
+      "expression_limit": "PASS/FAIL labels and ordinary launch topics are distinguished from authored explanations.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/prelaunch-readiness/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "e7566287cf0f8ed63d5cd12599d2f7be0bba083ad61481c1ef35777d75a43531",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "retained_expression": {
+        "matching_body_lines": 22,
+        "current_body_lines": 30,
+        "meaning": "Owned reuse trace only; not a similarity score, corpus comparison, clearance threshold, or proof of independent expression."
+      }
+    },
+    {
+      "skill": "problem-framing",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/problem-framing/SKILL.md": "472e3e88e9cb67b7cc53830a2be4dde37789aee96879df1dec2b67c059056602",
+        "skills/problem-framing/agents/openai.yaml": "a76028c50c49c33e83444ee894d7fd76a397ba0c8eb72b8d1b7a0fa450a23ced"
+      },
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned workflow, evidence-status vocabulary, and synthetic dashboard request reviewed against owned creation history.",
+      "expression_limit": "Generic framing concepts are not confused with a license to reuse an outside template.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending"
+    },
+    {
+      "skill": "publish-change-safely",
+      "declared_method": "adapted",
+      "reviewed_files": {
+        "skills/publish-change-safely/SKILL.md": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+        "skills/publish-change-safely/agents/openai.yaml": "d3a9211fb3cb0417de5dc111b5f8d346ce2e2caa182f5f6d5b9d388ed4bfcb5d",
+        "skills/publish-change-safely/references/continuity-example.md": "b2ad0c61550f54e32ee6f9d5cdf6f753829e2c10a6169a3ca1e5f2dc46c5920d"
+      },
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned identity, transport, scoped staging, remote readback, and continuity instructions retain foundation expression.",
+      "expression_limit": "Licensed adaptation is the declared method; no clean-room conclusion follows from later edits.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/publish-change-safely/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "a2b69a9c9bf976a76132e8cd789c530ca53c6e374e83d3bd01348378ae2fc33d",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "retained_expression": {
+        "matching_body_lines": 19,
+        "current_body_lines": 44,
+        "meaning": "Owned reuse trace only; not a similarity score, corpus comparison, clearance threshold, or proof of independent expression."
+      }
+    },
+    {
+      "skill": "python-engineering-profile",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/python-engineering-profile/SKILL.md": "723aec98fb655f95a1c3c93ad13322ae4abab2d3ffeaa7b83678249c2940462c",
+        "skills/python-engineering-profile/agents/openai.yaml": "b50be7119527fa5505c172611949c31d1d3f5b5e3e93f8ea00dc449da1af5d75",
+        "skills/python-engineering-profile/references/checks.md": "fa61c67752fb84bd02c20f2f28b880ef17d911760421390aad3c0add201a4ed3"
+      },
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Version discovery, hazard list, focused reference, and synthetic async/synchronous-client example reviewed. No Python manual excerpt or code sample identified.",
+      "expression_limit": "Package names, API terms, and hazard categories are treated as technical identifiers, not independent authorship evidence.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending",
+      "retained_authoring_review": "docs/audits/clean-room-declaration-review-2026-10-20.json#python-engineering-profile"
+    },
+    {
+      "skill": "systematic-diagnosis",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/systematic-diagnosis/SKILL.md": "bff3243eb73e62a4c155ccd975348707c27ab03c1d7e7e1f0684f5a6d90c7513",
+        "skills/systematic-diagnosis/agents/openai.yaml": "dca74e88584b54be0b5fd24b9d617cb8aa0ea66922a94234272ba962a467865f"
+      },
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned reproduction/hypothesis workflow and synthetic missing-build-evidence example reviewed against foundation history.",
+      "expression_limit": "Diagnostic methods and ordinary technical vocabulary do not themselves establish exclusive expression rights.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending"
+    },
+    {
+      "skill": "test-strategy",
+      "declared_method": "original",
+      "reviewed_files": {
+        "skills/test-strategy/SKILL.md": "3ab4e93e913c481c55ed676de751da5fd36ba231b9b1257db8489505fda7b092",
+        "skills/test-strategy/agents/openai.yaml": "edd403fefc1dc890c2ec6e4fd6f6fddb587b0c880cb89d51258382301965e466"
+      },
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_decision": "no_actionable_issue_identified_in_owned_scope",
+      "expression_finding": "Owned risk-to-test matrix and synthetic retry/cancellation example reviewed; no third-party fixture, test source, or tutorial is bundled.",
+      "expression_limit": "Test-layer names and functional retry ideas are distinguished from expressive reuse.",
+      "license_decision": "owned_MIT_basis_supported_with_notice_retention",
+      "license_limit": "The owned notice and declaration support the recorded offer and lineage; they do not prove rights in every expression, human authorship, or universal non-infringement.",
+      "qualification": "scoped_review_complete_maintainer_decision_pending"
+    }
+  ],
+  "inventory": {
+    "LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "provenance/catalog.json": "c97b90dec92864dc8a84efd5e4d7efe43a0ef3d32171a718875f2058bfb60500",
+    "skills/api-contract-compatibility-review/SKILL.md": "5f080aeefa0beb17ecad63aa07cb4df6d62f10efc8a9232f8c9a067e87d5d999",
+    "skills/api-contract-compatibility-review/agents/openai.yaml": "8c6e59384ac8cbb8c6acba02bca2ff495ac45df04af43577f36badfa1f7a96b1",
+    "skills/application-security-review/SKILL.md": "48ed0ee28e65ca36601e028e1c7bd6c049fe1f67ec85e48e62d9a0aa2d18eb03",
+    "skills/application-security-review/agents/openai.yaml": "9090cc21665fe1489f176180641741c18165ea5beb3553b929386404562ba25a",
+    "skills/change-impact-analysis/SKILL.md": "94c31e102bf2baa6be8189e3a2f110eed1bd77d11469a0a12b7cd65ab0ff8d24",
+    "skills/change-impact-analysis/agents/openai.yaml": "c116c631bcddfb01df9e1d0f32572fef58b9a3f0b456bd8f04b7c83f8a8e5631",
+    "skills/claim-verification/SKILL.md": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+    "skills/claim-verification/agents/openai.yaml": "00e9d44e63c82e173678a3e49227e54f3f69ba92560624b37fa9404d07bc0337",
+    "skills/claim-verification/references/continuity-example.md": "f0fb4b0b33e2a16835597c6d1b719c536a9f7c7765e1f3abdbf86f2b0995fb60",
+    "skills/code-change-review/SKILL.md": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+    "skills/code-change-review/agents/openai.yaml": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5",
+    "skills/cross-stack-quality-gates/SKILL.md": "8bc687666e1c2cbf3aa92bdd7032c81b41a91d211549a696e6dad3f5fe2cdf97",
+    "skills/cross-stack-quality-gates/agents/openai.yaml": "157059284e8adbaf9239f77a5f4a47bff566f611b3eed70cd327faeaf0e068e1",
+    "skills/cross-stack-quality-gates/references/continuity-example.md": "dc12b7560918cf66dd9ba95b6407eee5732799eb7911c4818173d5928a1327c4",
+    "skills/cross-stack-quality-gates/references/gate-discovery.md": "c72988ed26b3ac9e288e8e2ef104c9f4008b9a1458cc902271f5092c04bfc968",
+    "skills/gcp-data-engineering-profile/SKILL.md": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+    "skills/gcp-data-engineering-profile/agents/openai.yaml": "58324f3e8a0dc45f675859ad1daf37de66d67a93c19acf1d1f84ba04dc98ac5d",
+    "skills/gcp-data-engineering-profile/references/pipelines.md": "559b9a9bc6f6740f99c65d36014b51199635eefb4e97e8a69cf57711d8b87468",
+    "skills/gcp-data-engineering-profile/references/warehouse.md": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+    "skills/implementation-planning/SKILL.md": "98e9474b7d8c88b76742d9e3b1c683ef49edc7722029ca8100374406141ed450",
+    "skills/implementation-planning/agents/openai.yaml": "19a65e715db4bd67a95fbfb90c86e9168503f37ab5ce0551f2cdec6cf8f210aa",
+    "skills/implementation-planning/references/decision-map.md": "eea42f5949e0effa22404cfa1361f4e9c2a5ea8fae593126e892a79e8490831d",
+    "skills/implementation-planning/references/document-lifecycle.md": "a31f2b59083154c8c98403a1a0acaf6ee0bc53c6f090f397bcaff87ff6068f92",
+    "skills/implementation-planning/references/specification-synthesis.md": "b3ccd03fcc0b5db3afffb75698618ee3c9c979e748cfd71f0c192e4a8f1ad9fe",
+    "skills/implementation-planning/references/work-packages.md": "ece872b6d64f3848e07132c94a8ef9e69a88fca87bce5870396d97ebd15cf336",
+    "skills/prelaunch-readiness/SKILL.md": "beda909aecf900a729b7ebc476227f73c950839af075eb751e2d72c2630588d0",
+    "skills/prelaunch-readiness/agents/openai.yaml": "111c010353345d678e1935aebf964d787b163b26c3d2567b418519ca62eeaefb",
+    "skills/prelaunch-readiness/references/surface-checks.md": "02c5fae5efd29d634bacb584bd77d4465667692f360dc9305cbbd06dcaadf9fe",
+    "skills/problem-framing/SKILL.md": "472e3e88e9cb67b7cc53830a2be4dde37789aee96879df1dec2b67c059056602",
+    "skills/problem-framing/agents/openai.yaml": "a76028c50c49c33e83444ee894d7fd76a397ba0c8eb72b8d1b7a0fa450a23ced",
+    "skills/publish-change-safely/SKILL.md": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+    "skills/publish-change-safely/agents/openai.yaml": "d3a9211fb3cb0417de5dc111b5f8d346ce2e2caa182f5f6d5b9d388ed4bfcb5d",
+    "skills/publish-change-safely/references/continuity-example.md": "b2ad0c61550f54e32ee6f9d5cdf6f753829e2c10a6169a3ca1e5f2dc46c5920d",
+    "skills/python-engineering-profile/SKILL.md": "723aec98fb655f95a1c3c93ad13322ae4abab2d3ffeaa7b83678249c2940462c",
+    "skills/python-engineering-profile/agents/openai.yaml": "b50be7119527fa5505c172611949c31d1d3f5b5e3e93f8ea00dc449da1af5d75",
+    "skills/python-engineering-profile/references/checks.md": "fa61c67752fb84bd02c20f2f28b880ef17d911760421390aad3c0add201a4ed3",
+    "skills/systematic-diagnosis/SKILL.md": "bff3243eb73e62a4c155ccd975348707c27ab03c1d7e7e1f0684f5a6d90c7513",
+    "skills/systematic-diagnosis/agents/openai.yaml": "dca74e88584b54be0b5fd24b9d617cb8aa0ea66922a94234272ba962a467865f",
+    "skills/test-strategy/SKILL.md": "3ab4e93e913c481c55ed676de751da5fd36ba231b9b1257db8489505fda7b092",
+    "skills/test-strategy/agents/openai.yaml": "edd403fefc1dc890c2ec6e4fd6f6fddb587b0c880cb89d51258382301965e466"
+  },
+  "inventory_sha256": "61442e9015cd4f3e94655eab28ba2ed2c3cba2474237e82fb43d6e8c98609821",
+  "outside_scope": [
+    "acceptance-evidence-ledger",
+    "accessibility-review",
+    "adobe-aem-engineering-profile",
+    "agent-context-state-memory-design",
+    "agent-evaluation-design",
+    "agent-protocol-interoperability-review",
+    "agent-tool-action-boundary-review",
+    "agentic-system-security-review",
+    "alignment-interview",
+    "authority-boundary-review",
+    "change-adoption-planning",
+    "codebase-explanation",
+    "context-reliability-review",
+    "cross-capability-dependency-mapping",
+    "csharp-dotnet-engineering-profile",
+    "data-authority-migration-ratification",
+    "data-migration-readiness",
+    "decision-evidence-trace",
+    "decision-governance-records",
+    "dependency-supply-chain-review",
+    "design-rationale-investigation",
+    "domain-vocabulary-modeling",
+    "finding-consolidation",
+    "finish-development-branch",
+    "functional-motion-review",
+    "go-engineering-profile",
+    "google-adk-engineering-profile",
+    "guided-configuration",
+    "high-signal-technical-writing",
+    "ios-journey-verification",
+    "iteration-postlaunch-learning",
+    "java-spring-engineering-profile",
+    "kpi-outcome-measurement",
+    "merge-conflict-reconciliation",
+    "module-interface-design",
+    "multi-agent-orchestration",
+    "nextjs-cache-auth-boundary-review",
+    "nextjs-feature-delivery",
+    "observability-design",
+    "operational-readiness-review",
+    "performance-scalability-diagnosis",
+    "php-drupal-engineering-profile",
+    "plan-execution",
+    "portable-skill-authoring",
+    "postgresql-sql-engineering-profile",
+    "production-incident-analysis",
+    "prototype-spike",
+    "public-private-boundary-review",
+    "react-rendering-performance-diagnosis",
+    "request-code-review",
+    "requirements-synthesis",
+    "research-to-publication-lifecycle",
+    "respond-to-code-review",
+    "retrieval-grounding-quality-review",
+    "salesforce-apex-engineering-profile",
+    "skill-import-provenance",
+    "skill-security-review",
+    "source-grounded-research",
+    "source-output-conformance-audit",
+    "stakeholder-technical-communication",
+    "swift-concurrency-diagnosis",
+    "swift-persistence-contract-review",
+    "swift-swiftui-engineering-profile",
+    "swiftui-feature-delivery",
+    "task-handoff",
+    "terraform-engineering-profile",
+    "test-driven-change",
+    "test-quality-review",
+    "typescript-javascript-engineering-profile",
+    "value-attribution-evidence-maturity",
+    "workflow-retrospective",
+    "workshop-planning-synthesis",
+    "worktree-isolation"
+  ],
+  "summary": {
+    "reviewed_skills": 14,
+    "reviewed_canonical_files": 40,
+    "original_declarations": 10,
+    "owned_adaptations": 4,
+    "unreviewed_skills": 73,
+    "accepted_decisions": 0
+  },
+  "controls": [
+    {
+      "id": "notice-retention",
+      "finding": "Standalone generated skills, plugins, selected/project exports, evaluation exports, and upload archives lacked the full owned MIT notice. Generators and receipts are repaired with failure-first notice-loss regressions.",
+      "status": "implemented_with_failure_first_regressions"
+    },
+    {
+      "id": "expression-review",
+      "status": "complete_in_owned_scope",
+      "finding": "Current entrypoints, references, and adapters in the inventory were read, and owned creation/lineage records were inspected. No actionable external-expression issue identified within this scope. No third-party skill corpus obtained or compared."
+    },
+    {
+      "id": "human-contribution",
+      "status": "not_established",
+      "finding": "AI-assisted literal writes and maintainer-directed selection/edit history do not alone establish legally sufficient human creative contribution to every passage. No exclusive copyrightability or registration conclusion is made."
+    },
+    {
+      "id": "broader-corpus-gate",
+      "status": "not_accepted",
+      "finding": "The old undefined originality-corpus gate remains unclosed. Narrowing it requires an explicit maintainer decision identifying the exact inventory and residual risks; this proposal does not silently replace it."
+    }
+  ],
+  "authorities": [
+    {
+      "url": "https://opensource.org/license/mit",
+      "purpose": "Canonical MIT notice-retention condition, compared with the owned LICENSE."
+    },
+    {
+      "url": "https://www.copyright.gov/circs/circ33.pdf",
+      "purpose": "Distinguish methods and technical identifiers from their expressive presentation; no per-passage legal conclusion inferred."
+    },
+    {
+      "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf",
+      "purpose": "Human contribution and AI assistance must be distinguished; no ownership conclusion from prompting or Git identity alone."
+    }
+  ],
+  "excluded_claims": [
+    "third-party corpus clearance",
+    "clean-room separation",
+    "universal non-infringement",
+    "exclusive human authorship or copyrightability",
+    "client behavior or comparative benefit",
+    "release approval",
+    "expression or licensing clearance of pack icons, tooling, and other assets outside the canonical inventory"
+  ],
+  "reopen_on": [
+    "Any change to the reviewed canonical text, references, adapter prompts, declared method, owned origin, or license; record a delta against this frozen inventory.",
+    "New evidence of third-party expression or incompatible licensing.",
+    "A broader skill selection or a different source/notice inventory."
+  ],
+  "provenance_note_corrections": [
+    {
+      "skill": "gcp-data-engineering-profile",
+      "previous_upstream_license": "Official documentation used only as technical authority; no external text or examples imported.",
+      "corrected_upstream_license": "Owned catalog text is offered under MIT. Primary documentation is a correctness or format authority, not an implementation reuse grant. The scoped current-text review found no actionable external-expression issue; it does not independently establish categorical no-import assertions, human authorship, or comprehensive licensing clearance.",
+      "previous_local_changes": "Independently authored generic data-contract review, conditional stack checks, authorization boundaries, and synthetic cases. No private workflow or infrastructure contract imported. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract. Apache Beam SDK discovery and late-data trigger checks are explicit under the already reviewed Dataflow authority.",
+      "corrected_local_changes": "Independently authored generic data-contract review, conditional stack checks, authorization boundaries, and synthetic cases. The scoped review identified no private workflow or infrastructure contract in the reviewed files; no categorical historical absence claim is inferred. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract. Apache Beam SDK discovery and late-data trigger checks are explicit under the already reviewed Dataflow authority.",
+      "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
+    },
+    {
+      "skill": "implementation-planning",
+      "previous_upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "corrected_upstream_license": "Owned catalog text is offered under MIT. Primary documentation is a correctness or format authority, not an implementation reuse grant. The scoped current-text review found no actionable external-expression issue; it does not independently establish categorical no-import assertions, human authorship, or comprehensive licensing clearance.",
+      "previous_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "corrected_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Extended owned document lifecycle and client-adapter contracts. Current reviewed files bundle no executable payload; independent external-expression clearance remains limited to the scoped review. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
+    },
+    {
+      "skill": "problem-framing",
+      "previous_upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "corrected_upstream_license": "Owned catalog text is offered under MIT. Primary documentation is a correctness or format authority, not an implementation reuse grant. The scoped current-text review found no actionable external-expression issue; it does not independently establish categorical no-import assertions, human authorship, or comprehensive licensing clearance.",
+      "previous_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "corrected_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
+    },
+    {
+      "skill": "systematic-diagnosis",
+      "previous_upstream_license": "No source text imported; public specification used as format authority.",
+      "corrected_upstream_license": "Owned catalog text is offered under MIT. Primary documentation is a correctness or format authority, not an implementation reuse grant. The scoped current-text review found no actionable external-expression issue; it does not independently establish categorical no-import assertions, human authorship, or comprehensive licensing clearance.",
+      "previous_local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "corrected_local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
+    },
+    {
+      "skill": "test-strategy",
+      "previous_upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "corrected_upstream_license": "Owned catalog text is offered under MIT. Primary documentation is a correctness or format authority, not an implementation reuse grant. The scoped current-text review found no actionable external-expression issue; it does not independently establish categorical no-import assertions, human authorship, or comprehensive licensing clearance.",
+      "previous_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "corrected_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
+      "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
+    }
+  ]
+}

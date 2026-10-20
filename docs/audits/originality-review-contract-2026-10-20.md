@@ -20,3 +20,7 @@ The reviewer records identity, review date, exact revision and paths, evidence i
 The maintainer then records `accepted`, `rejected`, or `needs_evidence` for the scoped disposition, with the remaining risk and re-review triggers. An independent review must be distinct from the original authoring assertion and identify conflicts or limits. If a corpus comparison is still required, specify its lawful and permitted corpus, method, thresholds, and known blind spots before execution; no such comparison is authorized here.
 
 Acceptance cannot certify universal non-infringement, all possible prior exposure, or behavioral benefit. It can support only the stated evidence and scope. Safety, source freshness, receiving-client acceptance, merge, and release decisions remain separate.
+
+## Prepared decision packet
+
+The [scoped packet](scoped-expression-disposition-2026-10-20.md) applies this contract to fourteen selected skills and records a proposed decision with an explicit inventory. Notice retention is now a deterministic distribution requirement. Human contribution and outside-expression limits remain explicit; neither universal non-infringement nor an impossible proof of no exposure is a proposed completion predicate. Scope narrowing and maintainer acceptance remain separate decisions.

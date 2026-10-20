@@ -43,3 +43,7 @@ A capability belongs in the public core only when it is reusable across independ
 ## Revocation
 
 Remove an item from generated distributions and marketplaces through ordinary reviewed commits when its license, authorship, security behavior, or provenance cannot be supported. Preserve Git history and a migration notice in `deprecated/` when users need a safe replacement path.
+
+## Standalone notice retention and scoped decisions
+
+The root LICENSE is the notice source for generated plugins, individual skills, selected and project exports, offline evaluation exports, and upload archives. Carry its full bytes; `license: MIT` alone does not replace the copyright and permission notice. Receipts bind the notice without certifying rights in every passage. The [scoped expression/licensing proposal](audits/scoped-expression-disposition-2026-10-20.md) records fourteen reviewed skills and 73 outside its scope. Its pending decision is not automatic release or originality acceptance.

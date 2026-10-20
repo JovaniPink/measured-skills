@@ -1023,12 +1023,20 @@ def validate_packages(errors: list[str]) -> None:
             errors.append(f"dist/claude-ai/SHA256SUMS: digest mismatch for {archive_path.name}")
         plugin = read_skill_metadata(ROOT / "skills" / skill)["plugin"]
         source = ROOT / "plugins" / "claude" / plugin / "skills" / skill
+        notice_path = ROOT / "LICENSE"
+        notice = notice_path.read_bytes() if notice_path.is_file() and not notice_path.is_symlink() else b""
+        generated_notice = source / "LICENSE"
+        if not notice or generated_notice.is_symlink() or not generated_notice.is_file() or generated_notice.read_bytes() != notice:
+            errors.append(f"{skill}: generated license notice differs from canonical LICENSE")
         expected = {f"{skill}/{item.relative_to(source).as_posix()}": item.read_bytes()
                     for item in source.rglob("*") if item.is_file()}
         if not expected:
             errors.append(f"{archive_path.name}: generated Claude source is missing")
         with zipfile.ZipFile(archive_path) as archive:
             names = archive.namelist()
+            notice_name = f"{skill}/LICENSE"
+            if notice_name not in names or archive.read(notice_name) != notice:
+                errors.append(f"{archive_path.name}: license notice differs from canonical LICENSE")
             if len(names) != len(set(names)):
                 errors.append(f"{archive_path.name}: duplicate archive members")
             if set(names) != set(expected):
