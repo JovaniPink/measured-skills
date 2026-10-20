@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "7dfd6f05eafa7a67d16c15af8c8a6666c189e1e0",
+  "source_commit": "28456b65f4464ab7aba49b04af23d562514757c9",
   "created_on": "2026-10-20",
   "artifacts": [
     {
@@ -67,12 +67,12 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "5e5b27f8c67c23145ba005b72e64ccb4948bdc037e69bd6520d30a47532b6a8d"
+      "sha256": "572795c6addd9ce974b1742d5d7b02697930ba7330186497faa8e87b2173eb64"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "c2e69ef7249719bf6abb58f57513e01942f1a3750cf4e58afb81729457f245d8"
+      "sha256": "a3901c66d19965b331cfea8ae7848a24f1d952fd196173f9d9332f635f4aad12"
     },
     {
       "kind": "zip",
@@ -262,7 +262,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/ios-journey-verification-0.18.0.zip",
-      "sha256": "7546985eb67a9fdaacd3de48e918af6e3d97bdc3b09cffb08875ae516dcd6565"
+      "sha256": "c88a1a12967cdfc5ed38a52997a7e0d944bbc8dad62e87143d02143b92173dd2"
     },
     {
       "kind": "zip",
@@ -442,7 +442,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swift-persistence-contract-review-0.18.0.zip",
-      "sha256": "50fb7a985e0d66d79a28baa17bcf3d374b1f4be38c2b6728689f089e0c9e83cd"
+      "sha256": "b703103981d413963aeaed6991aedadc1ef025edb47924b8c605021b29091576"
     },
     {
       "kind": "zip",
@@ -452,7 +452,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swiftui-feature-delivery-0.18.0.zip",
-      "sha256": "8e5e691d1f6f33867a0b7e8c0f5d424628d714c3906e33dfb957d0997b7258df"
+      "sha256": "e6e5ba3d1babce169baad85d78129258e737b920626e0d5809e90e8121038986"
     },
     {
       "kind": "zip",
@@ -577,7 +577,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-swift-workflows",
-      "sha256": "e66cee655debd6d744eb5771ecc1fa00be477465927e361a417535a64b92bd7b"
+      "sha256": "5204424682add29a017240a02195851ccd6e9ad41cc59a058889a1c7e8d4bc1d"
     },
     {
       "kind": "tree",
@@ -632,7 +632,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-swift-workflows",
-      "sha256": "d05b527778a3b3847ae39cd02f644b8b3def4d628c535a9f1d60508e326f9057"
+      "sha256": "13261c02c878c52b7897ec793ddf0675b66d9fe632eb9711b68c6aeb8b7de6c4"
     },
     {
       "kind": "tree",
@@ -687,12 +687,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-swift-workflows",
-      "sha256": "30af1d88354a070be99824bba0ff2e753c98681ed96e144aeaec89bf434ec736"
+      "sha256": "9384ed37697b9ac0f0f43089ece4e529f1c23ce9bcc2beec0a8e2bce28124db1"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "1d072b8b2e0846f7a678922c99c032c70fcaa4d6983dff44db290a3262c9a1ad"
+      "sha256": "bd53de559490c5d1a460b23572e7826245ba20827e0218cff3b2ee22a353e5e0"
     }
   ]
 }
