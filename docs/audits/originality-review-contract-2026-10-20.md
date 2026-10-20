@@ -24,3 +24,7 @@ Acceptance cannot certify universal non-infringement, all possible prior exposur
 ## Prepared decision packet
 
 The [scoped packet](scoped-expression-disposition-2026-10-20.md) applies this contract to fourteen selected skills and records a proposed decision with an explicit inventory. Notice retention is now a deterministic distribution requirement. Human contribution and outside-expression limits remain explicit; neither universal non-infringement nor an impossible proof of no exposure is a proposed completion predicate. Scope narrowing and maintainer acceptance remain separate decisions.
+
+## Full canonical follow-up
+
+The [catalog packet](catalog-expression-disposition-2026-10-20.md) extends the preserved fourteen-skill checkpoint to all 87 canonical skills. It binds input and corrected output inventories, per-skill owned creation/license evidence, expression findings, and the exact corrections. The review is Codex-assisted technical analysis; no independent human acceptance or counsel opinion is recorded. The maintainer decision and the separate policy decision about the historical undefined gate remain pending. No canonical skills remain outside this packet, but noncanonical assets and outside-expression corpora are excluded.

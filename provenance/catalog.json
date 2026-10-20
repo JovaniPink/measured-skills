@@ -8,14 +8,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No external workflow text imported; the open specification is used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Open Agent Skills specification",
         "Jovani-owned acceptance and authority workflows"
       ],
-      "local_changes": "Workflow language and behavior are wholly Jovani-authored, including gate states, result calculation, re-verification, abandonment visibility, path authority, and routing boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored workflow (exclusive human authorship is not established), including gate states, result calculation, re-verification, abandonment visibility, path authority, and routing boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: explicit-only, instruction-and-reference-only workflow with no hooks, scripts, dependencies, bundled agents, command runner, background process, network grant, or automatic external action; ledger content is always untrusted data.",
       "rereview_triggers": [
         "invocation or persistence behavior changes",
@@ -50,14 +50,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
-      "upstream_license": "No platform workflow text imported; official Adobe documentation was used only as a primary correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Official Adobe Experience Manager documentation",
         "Jovani-owned stack-profile contract"
       ],
-      "local_changes": "Wholly Jovani-authored profile covering product-generation discovery, Sling and OSGi hazards, content packages, Dispatcher and cache boundaries, repository gates, and Cloud Manager authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): profile covering product-generation discovery, Sling and OSGi hazards, content packages, Dispatcher and cache boundaries, repository gates, and Cloud Manager authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only profile with no hooks, scripts, dependencies, agents, credentials, automatic package upload, activation, pipeline execution, deployment, or environment mutation.",
       "rereview_triggers": [
         "AEM product or Cloud Manager contract changes",
@@ -93,7 +93,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://airc.nist.gov/",
-      "upstream_license": "No external evaluation workflow, prompt, rubric, case set, grader, threshold, script, or implementation imported; NIST resources were used only as primary correctness guidance for evaluation discipline.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-24",
       "reviewed_on": "2026-08-24",
       "reviewed_material": [
@@ -101,7 +101,7 @@
         "Open Agent Skills specification",
         "Jovani-owned AI evaluation practice"
       ],
-      "local_changes": "Wholly Jovani-authored evaluation-contract workflow covering populations, cases, baselines, configurations, oracles, graders, error classes, thresholds, cost, latency, human review, authority, and limitations. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): evaluation-contract workflow covering populations, cases, baselines, configurations, oracles, graders, error classes, thresholds, cost, latency, human review, authority, and limitations. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only design workflow with no scripts, hooks, dependencies, agents, tool grants, private data transfer, model calls, provider use, billing, or external execution.",
       "rereview_triggers": [
         "NIST evaluation guidance changes",
@@ -245,7 +245,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public specification used as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-20",
       "reviewed_on": "2026-08-20",
       "reviewed_material": [
@@ -265,7 +265,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -377,7 +377,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://www.w3.org/TR/prov-n/",
-      "upstream_license": "No external context workflow, assertion model, status vocabulary, matrix, example, or implementation imported; W3C PROV was used only as a primary provenance authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
@@ -385,7 +385,7 @@
         "Open Agent Skills specification",
         "Jovani-owned context reliability practice"
       ],
-      "local_changes": "Wholly Jovani-authored assertion-level context review covering source, authority, effective and recorded time, observation, freshness, permissions, conflict, supersession, revocation, impact, and correction. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): assertion-level context review covering source, authority, effective and recorded time, observation, freshness, permissions, conflict, supersession, revocation, impact, and correction. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only review with no scripts, hooks, dependencies, agents, tool grants, private-fact embedding, context mutation, connector access, credentials, or external writes.",
       "rereview_triggers": [
         "W3C provenance recommendation changes",
@@ -399,7 +399,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -447,14 +447,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://learn.microsoft.com/en-us/dotnet/",
-      "upstream_license": "No platform workflow text imported; official Microsoft documentation was used only as a primary correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Official .NET documentation",
         "Jovani-owned stack-profile contract"
       ],
-      "local_changes": "Wholly Jovani-authored profile covering SDK and project discovery, async and lifetime hazards, Entity Framework boundaries, repository gates, compatibility, and migration authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): profile covering SDK and project discovery, async and lifetime hazards, Entity Framework boundaries, repository gates, compatibility, and migration authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only profile with no hooks, scripts, dependencies, agents, tool installation, feed access, package update, database migration, publication, deployment, or external write.",
       "rereview_triggers": [
         ".NET SDK, language, or framework contract changes",
@@ -468,7 +468,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -529,7 +529,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -611,7 +611,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
-      "upstream_license": "No source text imported; the OASIS specification is a correctness authority for severity and finding-state vocabulary only.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-10",
       "reviewed_on": "2026-09-10",
       "reviewed_material": [
@@ -631,7 +631,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://git-scm.com/docs/git-worktree",
-      "upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-24",
       "reviewed_on": "2026-08-24",
       "reviewed_material": [
@@ -651,7 +651,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://www.w3.org/TR/WCAG22/",
-      "upstream_license": "No external workflow text imported; W3C guidance is a primary correctness authority only.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-09",
       "reviewed_on": "2026-09-09",
       "reviewed_material": [
@@ -801,7 +801,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://developer.apple.com/tutorials/data/documentation/testing/migratingfromxctest.json",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -824,7 +824,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -844,14 +844,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://docs.spring.io/spring-boot/",
-      "upstream_license": "No platform workflow text imported; official Spring documentation was used only as a primary correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Official Spring Boot documentation",
         "Jovani-owned stack-profile contract"
       ],
-      "local_changes": "Wholly Jovani-authored profile covering wrapper and toolchain discovery, JVM and Spring hazards, repository gates, compatibility, and service or deployment authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): profile covering wrapper and toolchain discovery, JVM and Spring hazards, repository gates, compatibility, and service or deployment authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only profile with no hooks, scripts, dependencies, agents, JDK installation, service startup, package publication, deployment, or external write.",
       "rereview_triggers": [
         "Java, Spring, or build-tool contract changes",
@@ -865,7 +865,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -949,7 +949,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://nextjs.org/docs/app/guides/authentication.md",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-09-30",
       "reviewed_material": [
@@ -969,7 +969,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://nextjs.org/docs/app/guides/ai-agents.md",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-09-30",
       "reviewed_material": [
@@ -1049,14 +1049,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://www.drupal.org/docs/develop",
-      "upstream_license": "No platform workflow text imported; official Drupal documentation was used only as a primary correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Official Drupal developer documentation",
         "Jovani-owned stack-profile contract"
       ],
-      "local_changes": "Wholly Jovani-authored profile covering Composer and extension discovery, PHP and Drupal hazards, caching and configuration boundaries, repository gates, and content or deployment authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): profile covering Composer and extension discovery, PHP and Drupal hazards, caching and configuration boundaries, repository gates, and content or deployment authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only profile with no hooks, scripts, dependencies, agents, module installation, lockfile update, configuration import, content write, database update, deployment, or external write.",
       "rereview_triggers": [
         "PHP, Drupal, or Composer contract changes",
@@ -1070,7 +1070,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-10-13",
       "reviewed_material": [
@@ -1183,7 +1183,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -1224,7 +1224,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public specification used as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-20",
       "reviewed_on": "2026-08-20",
       "reviewed_material": [
@@ -1292,7 +1292,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-09-30",
       "reviewed_material": [
@@ -1332,7 +1332,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -1352,7 +1352,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No external research workflow, schema text, template, routing policy, model, dataset, or publication system was imported; the open specification is used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-30",
       "reviewed_on": "2026-08-30",
       "reviewed_material": [
@@ -1416,14 +1416,14 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
-      "upstream_license": "No platform workflow text imported; official Salesforce documentation was used only as a primary correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-23",
       "reviewed_on": "2026-08-23",
       "reviewed_material": [
         "Official Apex Developer Guide",
         "Jovani-owned stack-profile contract"
       ],
-      "local_changes": "Wholly Jovani-authored profile covering metadata and package discovery, Apex and Lightning hazards, local gates, compatibility, and exact live-org authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): profile covering metadata and package discovery, Apex and Lightning hazards, local gates, compatibility, and exact live-org authority separation. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE: instruction-and-reference-only read-only profile with no hooks, scripts, dependencies, agents, credential access, org creation, package installation, org-backed test, deployment, permission assignment, destructive change, or external write.",
       "rereview_triggers": [
         "Salesforce API, Apex, LWC, or metadata contract changes",
@@ -1437,7 +1437,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public specification used as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-20",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -1479,7 +1479,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public specification used as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-20",
       "reviewed_on": "2026-08-20",
       "reviewed_material": [
@@ -1499,7 +1499,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://airc.nist.gov/",
-      "upstream_license": "No external extraction workflow, corpus mapping, oracle, fixture, script, test, report, or implementation imported; NIST resources were used only as primary correctness guidance for conformance evidence.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-24",
       "reviewed_on": "2026-08-24",
       "reviewed_material": [
@@ -1507,7 +1507,7 @@
         "Open Agent Skills specification",
         "Jovani-owned source-conformance practice"
       ],
-      "local_changes": "Wholly Jovani-authored source-to-readback audit covering byte identity, source-cited expected values, stage evidence, mutation sensitivity, isolated fixtures, and separate correctness, completeness, storage, reproducibility, and unresolved-evidence results. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Catalog-authored (exclusive human authorship is not established): source-to-readback audit covering byte identity, source-cited expected values, stage evidence, mutation sensitivity, isolated fixtures, and separate correctness, completeness, storage, reproducibility, and unresolved-evidence results. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
       "security_review": "APPROVE WITH CONDITIONS: repository-defined local checks may run against authorized disposable fixtures; no skill scripts, hooks, dependencies, agents, broad tool grants, customer data, provider calls, credentials, uploads, production writes, migrations, deployments, or external actions are included.",
       "rereview_triggers": [
         "NIST conformance guidance changes",
@@ -1521,7 +1521,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -1541,7 +1541,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://www.swift.org/swift-evolution/",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -1562,7 +1562,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -1583,7 +1583,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://docs.swift.org/latest/data/documentation.json",
-      "upstream_license": "No source text imported; public primary documentation was used as authority for independently authored guidance.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-22; verified against Xcode 27.0 (27A266a), Swift 6.4, iOS 27.0 and macOS 27.0 SDKs",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -1618,7 +1618,7 @@
         "https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog",
         "original compile fixtures under evals/swift-evidence-v1; runtime claims remain separately qualified"
       ],
-      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. 2026-09-22: added clean-room focused references for SwiftUI data flow, SwiftData and CloudKit, Swift concurrency, Swift Testing, iOS accessibility, and HealthKit. Written only from Apple documentation, Swift Evolution proposals, SDK interfaces, and local toolchain probes; each rule is labeled verified, documented, or unverified. No third-party skill catalog was consulted, copied, or adapted. Same day: audited each documented claim against its primary page; corrected one unsupported claim about XCTest-only UI and performance tests, and added XCTest interoperability, detached-task, cancellation-handler, background-delivery, and Large Content Viewer rules from Apple documentation and local probes. Later the same day: removed twelve generic judgment lines that restated widely known practice, keeping rules backed by local probes or named documentation. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Source-binding correction, 2026-10-20: freshness uses the official substantive documentation data instead of the renderer shell; workflow authority and historical authorship claims are unchanged.",
+      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. 2026-09-22: added focused references for SwiftUI data flow, SwiftData and CloudKit, Swift concurrency, Swift Testing, iOS accessibility, and HealthKit. The historical record asserted clean-room and exclusive primary-source use; those process and absence-of-exposure claims are not established by the retained evidence. Current references include SDK identifiers, short diagnostics, small API-usage examples, and local-probe explanations with verified, documented, or unverified labels. The current expression review is bounded to the owned inventory and does not establish outside-corpus clearance. Same day: audited each documented claim against its primary page; corrected one unsupported claim about XCTest-only UI and performance tests, and added XCTest interoperability, detached-task, cancellation-handler, background-delivery, and Large Content Viewer rules from Apple documentation and local probes. Later the same day: removed twelve generic judgment lines that restated widely known practice, keeping rules backed by local probes or named documentation. 2026-10-12: original primary-authority guidance adds compatibility, identity, binding, adaptive-layout, motion, localization, performance, ordering, cancellation, and stage-specific evidence boundaries. Historical provenance remains dated; new experiments and their limitations are recorded separately. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Source-binding correction, 2026-10-20: freshness uses the official substantive documentation data instead of the renderer shell; workflow authority and historical authorship claims are unchanged.",
       "security_review": "APPROVE: instruction-and-reference-only workflow with no hooks, executables, broad tool grants, dependency installation, external writes, or state application.",
       "rereview_triggers": [
         "upstream standard or toolchain revision changes",
@@ -1634,7 +1634,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftui/managing-model-data-in-your-app.json",
-      "upstream_license": "No third-party skill text imported. Primary framework documentation used as a correctness authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-09-30",
       "reviewed_on": "2026-10-12",
       "reviewed_material": [
@@ -1721,7 +1721,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No source text imported; public documentation was used as an authority for independently authored workflow boundaries.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -1801,7 +1801,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [
@@ -1843,7 +1843,7 @@
       "disposition": "covered",
       "implementation_method": "original",
       "source_url": "https://agentskills.io/specification",
-      "upstream_license": "No workflow text imported; the public specification was used only as format authority.",
+      "upstream_license": "Owned catalog text is offered under MIT with its full notice. Current canonical expression and retained owned-history evidence were reviewed; no additional bundled-source notice requirement was identified in that scope. Primary references identify correctness or format authorities, not a blanket prose-reuse grant. Categorical no-import, clean-room, exclusive human-authorship, and comprehensive clearance claims are not established. See docs/audits/catalog-expression-disposition-2026-10-20.json.",
       "pinned_revision": "retrieved-2026-08-21",
       "reviewed_on": "2026-08-21",
       "reviewed_material": [

@@ -34,3 +34,9 @@ The [proposed review contract](originality-review-contract-2026-10-20.md) makes 
 ## Concrete scoped proposal
 
 The [14-skill expression and licensing disposition](scoped-expression-disposition-2026-10-20.md) now identifies an exact reviewed revision, full file inventory, per-skill findings, supported owned reuse, a missing-license-notice repair, AI-assistance limits, proposed decision text, and the 73 skills outside its scope. Its maintainer decision remains pending. This is a finite review proposal, not an accepted replacement for the historical gate or a release approval.
+
+## Full canonical follow-up
+
+The [catalog-wide technical expression and licensing packet](catalog-expression-disposition-2026-10-20.md) adds direct review of the remaining 73 skills and revalidates the first fourteen against unchanged canonical bytes. All 87 skills now have per-skill findings and file hashes. The earlier fourteen-skill packet and historical process audits remain unchanged. Thirty-eight categorical no-import notes, nine wholly-human authorship assertions, one surviving historical clean-room assertion, and six overbroad source attributions are qualified or repaired. No additional actionable expression-reuse defect was identified within the owned inventory; no outside corpus comparison or independent human clearance occurred.
+
+The technical review scope is complete for canonical skills. The decision still needs a maintainer: accept, reject, or request concrete evidence for the exact inventory, and explicitly decide whether this finite review with its exclusions replaces the undefined historical corpus gate. Model-assisted writing does not establish exclusive human contribution; an owned MIT notice does not prove every passage is free of outside rights. Icons, repository tooling, and other noncanonical assets remain outside this expression disposition. Receiving-client behavior and release approval remain separate.

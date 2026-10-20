@@ -20,10 +20,10 @@ ccb59a6442d01d540f0fdbb156343215b4a3d3492215bc30e8a97b59086ec965  cross-capabili
 be6d377396d6e185b802dcf26e37235145032af9c2f5feb340c5237d4226306a  cross-stack-quality-gates-0.18.0.zip
 2faebfe040c7d68e68a032a9f6d734613229a5c9675e88205389df2ddba5a06c  csharp-dotnet-engineering-profile-0.18.0.zip
 0694fefc21b335bd8069a0c66e729176c11260c74a423eb846c9f85d384076b0  data-authority-migration-ratification-0.18.0.zip
-95758bbecd68478ad80ba117605bdda36dc89c9e43d3fa892d62a84d706140e5  data-migration-readiness-0.18.0.zip
+8e47d7ecbf0df91e60d89829d0ff4d6e779e8b94d057bd4b2be56e5c93ceed26  data-migration-readiness-0.18.0.zip
 1841e9df7606810f41e52340c75f8bbb34d95e7036ce7f648c366ab8fac38354  decision-evidence-trace-0.18.0.zip
 0f0b28017c025ed925cec76ed6a151e5d114a39585027237bf50cea0acf50b97  decision-governance-records-0.18.0.zip
-45572dc1cf9a82df0b44eb6d9350397e5da558e5861f4f4c9f50c34251d833f3  dependency-supply-chain-review-0.18.0.zip
+b1118f0df7b1469124b2d617cff955b4612dc8ebc0563f950377b48db847df36  dependency-supply-chain-review-0.18.0.zip
 714cfd07c562b26ec5a23d61b6da26acc76219f76747e9cdbfb53b3b9dc33e42  design-rationale-investigation-0.18.0.zip
 0f52e3dda0685c780dbedfc6babd29d9e8fd5f43c36656bfb5a1a4925cf708af  domain-vocabulary-modeling-0.18.0.zip
 3395457803de6a610237f2ffcaffc10353fb4adeaa5f33c1eb97f87514213a69  finding-consolidation-0.18.0.zip
@@ -44,9 +44,9 @@ dcf4b060929c88f9325bf0e8255cb1122fdb33cebc1755d2348bce5e25a8913f  kpi-outcome-me
 e83c6187b349625cb430fcbb7cd92f010825022dff825b686e31bf7bd50e0a37  multi-agent-orchestration-0.18.0.zip
 c0a15e706a5ce5651f27e413cc6850d20acfa7cf16c26760420b6eae8eee0e61  nextjs-cache-auth-boundary-review-0.18.0.zip
 c314bdf71e52d9b947b82a93ce76907a861d8c3af73e24b00eae37bf2511b8f0  nextjs-feature-delivery-0.18.0.zip
-3b87686b29adae878c40a8404f3743c51afa2d2bd6bab68625976f4151693922  observability-design-0.18.0.zip
-5c365356db7426f036170167dfdb2fea0dc1a246a7f6827fb9526a9cde6e1af8  operational-readiness-review-0.18.0.zip
-43d24c6ebaf88061747a7e20733fb300701d5ced878ba47bf421aef6d01cfe27  performance-scalability-diagnosis-0.18.0.zip
+827ecdf4d755c003eb885dced103175a1fe02da59fd25006d00f4f13bc546618  observability-design-0.18.0.zip
+f9b4293c9b6582f9e8f6d22b27d4472344fe2ca2f97626b5483041e2ec59c88c  operational-readiness-review-0.18.0.zip
+a41fae3f2e14ffd1424a6c54fb1781bd7dae1daf5ba60308a2803bb953807e58  performance-scalability-diagnosis-0.18.0.zip
 09165b8f8c813aa624d8b15123b4b843fb51e0bb3ccc19e9456afdb02b05c226  php-drupal-engineering-profile-0.18.0.zip
 a7d4437c0e6f579d77355bdbccb77fae1ca53edf1efaa8dd1fdc488b2b7288c7  plan-execution-0.18.0.zip
 9cdd7554eee90ca2f9fbe70081b458ae919bdfd3be0beeef4f88e67c50ecf66c  portable-skill-authoring-0.18.0.zip
@@ -78,7 +78,7 @@ df2c6dedec7ce2f096a363e16fd6da06a01ae4e99712eab12ec55faadf0bb6cf  systematic-dia
 8ad0a5f69b4432f979a58d3ec51b53ea7e80c01cedf21511c2387d65fdf73cd8  task-handoff-0.18.0.zip
 8b60304a85104eff15b18e66703f7b6b108e45fae8e58bbcb96eb9c2f3f443f5  terraform-engineering-profile-0.18.0.zip
 e19e200806619bbb0398fd05b845b2d3d5b89c3e5fe7dba17088c8ff3e3b3833  test-driven-change-0.18.0.zip
-cffe05d009903951202deeea40d923496e83497008afca6f8c7d569e8316707e  test-quality-review-0.18.0.zip
+b3a2c5c6f9f8ad10a7662beb342a0d1ebc00a57e00ef114b75346485abe4499a  test-quality-review-0.18.0.zip
 0ba1945bd5bf4db4ace489aee2f596005a2aede600c227f8def963445c2d7f91  test-strategy-0.18.0.zip
 dcaa3789f7c6e8379232de4ea4e5e84e568fcd6edd575f7b3a5b52e8b34ef400  typescript-javascript-engineering-profile-0.18.0.zip
 5203ae03553c1066b79962ed10331845be9411cda23ab8e2017f9c3baf76d411  value-attribution-evidence-maturity-0.18.0.zip

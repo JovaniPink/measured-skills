@@ -10,7 +10,7 @@ Four unsupported clean-room labels are now corrected to owned adaptation, with a
 
 No bounded model pilot, paid evaluation, billing change, merge, tag, release, or installed-skill promotion was performed. Required client behavior and effective isolation/billing prerequisites remain unverified. The final manifest binds the submitted artifact scope and retains historical ancestry.
 
-The [scoped expression/licensing packet](audits/scoped-expression-disposition-2026-10-20.md) reviews fourteen distinct skills and explicitly excludes 73. It proposes a bounded decision, identifies and repairs missing standalone MIT notices, and retains AI-assistance and external-comparison limits. Its maintainer decision is pending; the originality and release holds remain.
+The [initial scoped expression/licensing packet](audits/scoped-expression-disposition-2026-10-20.md) is preserved as the fourteen-skill checkpoint and notice-retention repair. The [full canonical follow-up](audits/catalog-expression-disposition-2026-10-20.md) reviews the remaining 73 skills and revalidates those fourteen unchanged. All 87 canonical skill sets are now covered. Provenance overclaims and source-scope defects are repaired; AI-assistance, outside-comparison, and noncanonical-asset limits remain. Technical review completion does not accept its proposed disposition. The retained independent-review requirement and maintainer acceptance remain open, alongside receiving-client and release gates. This Codex-assisted technical review does not waive either requirement.
 
 ## Retained earlier checkpoints
 
