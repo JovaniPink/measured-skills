@@ -194,7 +194,7 @@ class CurrentEvidenceTests(unittest.TestCase):
             (ROOT / "tests/fixtures/upstream-pins-before-october5.json").read_text()
         )
         before = {item["source_url"]: item for item in fixture["snapshot"]["sources"]}
-        pins = json.loads((ROOT / "catalog/upstream-pins.json").read_text())
+        pins = json.loads((ROOT / "tests/fixtures/upstream-pins-before-october20.json").read_text())["snapshot"]
         current = {item["source_url"]: item for item in pins["sources"]}
         initial = json.loads((ROOT / "docs/audits/source-review-2026-10-05.json").read_text())
         reviewed = json.loads(

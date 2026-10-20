@@ -101,6 +101,29 @@ class ReleaseIntegrityTests(unittest.TestCase):
             encoded = (json.dumps(case, sort_keys=True, separators=(',', ':')) + '\n').encode()
             self.assertEqual(hashlib.sha256(encoded).hexdigest(), contract['case_hashes'][case['id']])
 
+    def test_october20_pins_change_only_for_reviewed_stable_decisions(self) -> None:
+        fixture = json.loads((ROOT / 'tests/fixtures/upstream-pins-before-october20.json').read_text())
+        import subprocess
+        original = json.loads(subprocess.check_output(['git', 'show', fixture['source_commit'] + ':catalog/upstream-pins.json'], cwd=ROOT))
+        self.assertEqual(original, fixture['snapshot'])
+        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        self.assertEqual(fixture['snapshot']['reviewed_on'], current['reviewed_on'])
+        previous = {r['source_url']: r for r in fixture['snapshot']['sources']}
+        actual = {r['source_url']: r for r in current['sources']}
+        ledger = json.loads((ROOT / 'docs/audits/source-review-2026-10-20.json').read_text())
+        reviews = ledger['records'] + ledger['additional_reviews']
+        approved = {r['source_url']: r for r in reviews if r['decision'] == 'repin_reviewed_current_content'}
+        self.assertEqual(35, len(approved))
+        self.assertEqual(set(previous), set(actual))
+        for url, pin in actual.items():
+            if url in approved:
+                record = approved[url]
+                self.assertTrue(record['finding'])
+                self.assertEqual(1, len(set(record['resampled_markers'])))
+                self.assertEqual(f"{pin['marker_kind']}:{pin['marker_value']}", record['resampled_markers'][0])
+            else:
+                self.assertEqual(previous[url], pin)
+
 
 if __name__ == '__main__':
     unittest.main()
