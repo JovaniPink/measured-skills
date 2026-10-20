@@ -34,10 +34,16 @@
       "after_sha256": "3bb832f618c554e1153493e363fb3dab7d540327563b5b76d4428eed67875df0",
       "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
     },
+    "renovate.json": {
+      "before_sha256": null,
+      "after_sha256": "e80b4e42a3043bc12fa0640db4bac392d2bf770acf841360d7c8ceeeac2ec1a9",
+      "expression_and_license_review": "Exact six-line configuration from upstream main commit 6b3b9cbd4bcde23a2f19d6f3268ff5020f70a498, authored by the Renovate bot and merged in PR 69. Only an official schema URL and config:recommended preset reference; no bundled third-party implementation, secrets, skill grants, or license declaration. This work integrates the already-authorized upstream file, without changing repository settings."
+    },
     "tests/test_noncanonical_disposition.py": {
       "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",
       "after_sha256": "2c5425985622e34cd3cd77781d14496d51220121d55fda4730a4fa3f401c67aa",
       "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
     }
-  }
+  },
+  "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78"
 }
