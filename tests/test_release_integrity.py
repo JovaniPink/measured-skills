@@ -260,6 +260,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
                     self.assertTrue(path.startswith('skills/' + skill + '/'))
                     blob = subprocess.check_output(['git', 'show', revision + ':' + path], cwd=ROOT)
                     self.assertEqual(hashlib.sha256(blob).hexdigest(), value)
+                self.assertEqual(before[skill]['upstream_license'], record['previous_license_statement'])
+                self.assertEqual(after[skill]['upstream_license'], record['corrected_license_statement'])
+                self.assertIn('not independently established', record['corrected_license_statement'])
                 creation = record['creation_revision']
                 subprocess.run(['git', 'merge-base', '--is-ancestor', creation, revision], cwd=ROOT, check=True)
                 creation_paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', creation, 'skills/' + skill], cwd=ROOT).decode().splitlines()
@@ -271,7 +274,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 initial = subprocess.check_output(['git', 'show', creation + ':' + entrypoint], cwd=ROOT)
                 self.assertEqual(hashlib.sha256(initial).hexdigest(), record['creation_entrypoint_sha256'])
                 self.assertEqual(hashlib.sha256(initial.split(b'---', 2)[2]).hexdigest(), record['creation_body_sha256'])
-                for field in ('source_url', 'pinned_revision', 'reviewed_on', 'upstream_license', 'security_review'):
+                for field in ('source_url', 'pinned_revision', 'reviewed_on', 'security_review'):
                     self.assertEqual(before[skill][field], after[skill][field])
         for skill in set(before) - expected:
             self.assertEqual(before[skill], after[skill])

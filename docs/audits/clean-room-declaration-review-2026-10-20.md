@@ -19,6 +19,8 @@ The authoring session had opened third-party implementation pages before foundat
 
 The foundation security entrypoint was first written with an original label and then changed to clean-room in metadata. The other 39 creation writes embedded clean-room labels in the authored text or templates. None of those labels supplies evidence of a separated process. Current canonical and provenance metadata now uses `original`, following the policy for new authoring after exposure. Only that metadata field changes in the 40 entrypoints; their bodies, references, invocation controls, risk classes, authority pins, and historical review dates are preserved.
 
+The forty provenance license notes also qualified categorical no-import assertions that this review cannot independently establish. Each previous statement remains bound to the reviewed Git baseline and is retained beside its qualified replacement in the ledger. The catalog MIT offer and the cited correctness authority do not by themselves establish a license grant for any hypothetical reused expression.
+
 This correction is supported by affirmative retained write evidence, not merely by failure to find an attestation. It describes a declared authoring method. It does not establish that every expression is independent of earlier exposure, certify licensing, or erase historical investigation. No owned adaptation source comparable to the four previously corrected skills was identified for these 40; an adaptation or legal conclusion is not inferred from topic overlap.
 
 ## What remains held
