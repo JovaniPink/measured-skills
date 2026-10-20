@@ -10,6 +10,14 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 263 regression tests.
 
+## October 20 bounded client observations
+
+The [six-case Claude CLI record](audits/cli-pilot-observations-2026-10-20.json)
+separates actual selection and reference reads from answer quality. Two expected
+selections were missed, and evidence errors remain. It is not a passing release
+acceptance or a full study. Codex and Antigravity cases remain unrun for their
+recorded prerequisites. No canonical skill or generated distribution changed.
+
 ## October 20 release-readiness repairs
 
 See the [readiness record](release-readiness-2026-10-20.md) for source and client holds.

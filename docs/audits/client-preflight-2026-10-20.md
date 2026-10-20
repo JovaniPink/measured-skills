@@ -1,5 +1,17 @@
 # Client preflight after originality acceptance
 
+## Later native-controls and bounded-pilot checkpoint
+
+The [separate pilot observation](cli-pilot-observations-2026-10-20.json) records the later check at source `66b8671dac843b5ad871b698a476960592591a86`. Claude Code 2.1.281 completed all six frozen case sessions and two continuity follow-ups through its included subscription with native usage credits off before and after. No billing setting changed. Its temporary wrapper supplied twelve selected skills; native built-ins remained visible and are part of this baseline. No ambient account or user skills appeared in the effective context report.
+
+Three of the five cases expecting a skill invoked it; the near-miss invoked none. The review and stale-receipt cases missed their expected skills. The review answer also confused an unrun test with an absent test, and the BigQuery answer overstated conclusions beyond the supplied contracts. Two continuity follow-ups retained the review finding and its evidence error. These are observed failures and partial results, not qualification. There was no protected external action or file edit in the retained traces. The full thirty-case study remains unrun.
+
+Codex session-only overrides now produce twelve enabled repository skills, eight disabled user entries, and no discovery errors. Its no-paid-fallback prerequisite is still unverified, so zero cases ran. Antigravity native Use AI Credits is off, but its disposable workspace lists 111 skills. The installed guide says workspace exclusions cannot filter inherited user customizations; effective isolation remains blocked, so zero cases ran. No global skill or billing setting was changed.
+
+The browser account and CLI account differed during inspection. Account-panel conclusions were not transferred between them. Raw inventories, account details, and sessions remain private. The Claude session dollar estimate is not subscription billing evidence; see the [official usage documentation](https://code.claude.com/docs/en/costs). App and M5 acceptance remain unobserved.
+
+## Retained earlier metadata checkpoint
+
 These are October 20 metadata and format observations against source `6f4c3de066c43faf20b0a01303758b90f6d4806d`. They are not behavioral qualification. No model request, paid evaluation, login change, installation change, or billing change was made. Account identifiers, balances, machine paths, configuration, and raw protocol responses remain private.
 
 ## Observed checks

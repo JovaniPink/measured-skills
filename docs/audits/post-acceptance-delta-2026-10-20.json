@@ -1,6 +1,6 @@
 {
   "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
-  "previous_head": "6f4c3de066c43faf20b0a01303758b90f6d4806d",
+  "previous_head": "66b8671dac843b5ad871b698a476960592591a86",
   "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78",
   "reviewed_on": "2026-10-20",
   "status": "scoped_technical_delta_review",
@@ -15,9 +15,14 @@
       "after_sha256": "21ff8186e33c22783c15273703ff64be36164284dbe4c22d710f01c66ef94e57",
       "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger."
     },
+    "docs/audits/cli-pilot-observations-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "96446ac1d7e1e45d35506a8ab15b182c915fc207fca98d7022b5335330029a67",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
     "docs/audits/client-preflight-2026-10-20.md": {
       "before_sha256": null,
-      "after_sha256": "cd7386fab3f96287eb80592f0aa02ade46ffc4b40c044528a12411fed76067bb",
+      "after_sha256": "335b61efed06bfce9fdce57232c671f475d860197dce42dd5258ca28c5d0d09c",
       "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
     },
     "docs/audits/source-refresh-closeout-2026-10-20.json": {
@@ -32,12 +37,12 @@
     },
     "docs/release-readiness-2026-10-20.md": {
       "before_sha256": "0f91b44f27372e452a3afd9171d4db3dbd26295308afe4458daa08df8ca51ed9",
-      "after_sha256": "3bb832f618c554e1153493e363fb3dab7d540327563b5b76d4428eed67875df0",
+      "after_sha256": "23fb1c79ddc478408769b4cf5a613f52b4e423e6d7208589f3874d1c4ed2ff38",
       "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "779ed0c6673e43cf5da79c45f7e53efd63fac8c0036d7d2142e4c4e5701a1ed5",
+      "after_sha256": "7448366a89f2758b1bafc2cc9b82d5b16b41c710d7d8d06ce5ed93fd2effda85",
       "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
     },
     "renovate.json": {

@@ -8,7 +8,7 @@ The maintainer accepted [originality-018-owned-inventory-20261020](audits/origin
 
 The [fresh source review](audits/source-refresh-post-acceptance-2026-10-20.json) supersedes the earlier 62-of-62 count for this follow-up. It records individual source decisions and repeated observations. The [online closeout](audits/source-refresh-closeout-2026-10-20.json) is the current dated gate result; failures remain blocking. No freshness policy or global review clock was relaxed.
 
-[Client preflight](audits/client-preflight-2026-10-20.md) now includes native Codex discovery and strict Claude/Antigravity format validation. Codex discovered the twelve staged skills alongside 107 ambient skills, so that workspace is not isolated. Included-plan authentication does not by itself rule out paid fallback. All behavioral pilot cases, app-mode acceptance, and M5 observations remain unrun. No billing, installed-skill, merge, or release action followed from these checks.
+[Client preflight](audits/client-preflight-2026-10-20.md) now includes native billing and effective-isolation observations. The [bounded Claude CLI pilot](audits/cli-pilot-observations-2026-10-20.json) used six cases and two continuity follow-ups with usage credits off. It found two missed skill selections and evidence-quality errors; it does not qualify the profile. Codex isolation now passes the discovery check but its no-paid-fallback route is unverified. Antigravity credits are off but isolation fails. Both lanes remain unrun, as do app-mode and M5 acceptance. No billing change, paid evaluation, merge, or release was performed.
 
 ## Retained preacceptance checkpoints
 
@@ -40,7 +40,7 @@ The [originality disposition](audits/originality-disposition-2026-10-20.md) now 
 
 Package availability, installed files, enabled state, actual loading, case outcomes, and benefit are separate claims. A small daily-profile smoke check can support only its exact cases and client conditions. It cannot qualify all 87 skills, all 12 selected skills, every app mode, long sessions, or comparative benefit. Full catalog and frozen behavioral studies remain unchanged and unrun by this work.
 
-Subscription sign-in does not by itself attest a no-paid-fallback billing route. Effective pilot isolation and billing prerequisites remain unverified for this source. No model request is permitted while those preconditions are unresolved. Account-specific inventories and authentication observations remain private.
+Subscription sign-in does not by itself attest a no-paid-fallback billing route. The Claude lane established the native prerequisites for the bounded observations above. Codex billing and Antigravity isolation remain unresolved; neither lane may run while its prerequisite is missing. Account-specific inventories and authentication observations remain private.
 
 The initial authorized ceiling is six synthetic cases and two continuity follow-ups per CLI, with human grading. The [pilot contract](../evals/daily-engineering/cli-smoke-2026-10-20.json) freezes those inputs. No paid native eval, API collection, automated judge, overage, or permission bypass is allowed. A blocked lane consumes no further requests. Global installations must not be removed to manufacture isolation.
 
