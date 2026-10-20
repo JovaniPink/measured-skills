@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-reasoning"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "bounded-execution"
 ---
 

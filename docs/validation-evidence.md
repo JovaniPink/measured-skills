@@ -8,7 +8,7 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 248 regression tests.
+Current test suite: 250 regression tests.
 
 ## October 20 release-readiness repairs
 
@@ -285,3 +285,7 @@ Failure-first regressions reject missing or altered owned-origin evidence, misma
 A separate regression accounts for every new source decision against a frozen baseline, and the exact ASVS document authority exception rejects URL variants. These checks support classification accuracy and deterministic consistency. They do not close the broader originality or installed-client behavior gates.
 
 The continued online source checkpoint matches all 62 active authorities. Eight content bindings use substantive first-party JSON, Markdown, or versioned documentation sources, and three reviewed sources retain their marker kinds. All failed intermediate observations remain linked from the ledger. The primary-authority exceptions are three exact document URLs; raw repository links otherwise retain the owned-source boundary. These checks do not establish independent originality or client parity.
+
+## Retained authoring label corrections, October 20
+
+The [40-skill review](audits/clean-room-declaration-review-2026-10-20.md) binds six owned creation batches and private retained-write identities. New regressions check complete scope against the reviewed baseline, creation and focused-file hashes, metadata-only canonical changes, preserved authority fields, exposure chronology, and explicitly unaccepted qualification. The earlier four-adaptation audit remains a frozen checkpoint. Current declarations are 83 original and four adapted; those counts do not establish independent expression, licensing clearance, or release acceptance.

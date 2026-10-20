@@ -1,0 +1,1856 @@
+{
+  "reviewed_source": "fccce1d811a17c7bfae320b25cce8067ad14acc9",
+  "reviewed_on": "2026-10-20",
+  "reviewer": "Codex assisted evidence review; no independent human acceptance recorded",
+  "scope": "The 40 remaining clean-room declarations at the reviewed source, their owned creation commits and focused files, and retained authoring-call metadata and literal writes. Raw sessions and private mappings remain outside public artifacts.",
+  "decision": "correct_process_labels_retain_qualification_hold",
+  "release_acceptance": "not_accepted",
+  "evidence_limit": "Input/output hashes identify privately retained records; public tests verify owned Git bindings and current correction bytes, not private-session availability or comprehensive originality. Prior exposure is documented; distinctive-expression independence is not certified. No third-party collection was fetched or compared during this review.",
+  "events": {
+    "event-10504": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-25T16:49:04.387Z",
+      "call_id": "call_tEQvyqMRiEVlqfNY6HP2YhFC",
+      "input_sha256": "e7496fc7122897172bee4f9b87682a8fa0336f3903cf34a47dd3474ced5c54e0",
+      "output_sha256": "ef2567739d93d1ab50ab3c9dd08cf791565bb15afb309a0ab5b518e629ac9f89",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-137": {
+      "kind": "prior_exposure",
+      "observed_at": "2026-08-20T19:24:16.330Z",
+      "call_id": "call_AcYy72OpdDZWR4lSifnSLP15",
+      "input_sha256": "7162d84b13b1d3dafba305bfe25d12c1bdb68d1d3f2c5201af2c74a007bd1f7c",
+      "output_sha256": "a66f99353ba3381092ee15ad06788347559a8ea3816357fe3077a69677cc7e65",
+      "scope": "Retained request and response metadata for third-party implementation pages before foundation authoring. No source text or capability mapping is republished."
+    },
+    "event-1430": {
+      "kind": "prior_exposure",
+      "observed_at": "2026-08-20T20:38:57.406Z",
+      "call_id": "call_n8vu7tidv0IynZdh0Yiwgi18",
+      "input_sha256": "cb86cb5965914fcc47d069b3fe7564973d73e61604e97a78f34465c42f6fed27",
+      "output_sha256": "43562e99dea0c05f65b73b17e25acf4ad26802a1e7ab03e62173d2d5dff9bbdf",
+      "scope": "Third-party implementation review occurred after the foundation source commit but before the later creation batches. No source text or mapping is republished."
+    },
+    "event-2986": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-21T05:30:22.418Z",
+      "call_id": "call_KcqZ1dBLAAPN5zZI0E96aLqV",
+      "input_sha256": "d1a5533503cc2ddd4af96b6f9f491e5fed7b04c4cf5a88ab49ced80fc8f51013",
+      "output_sha256": "d2b2159cf3ebbb13254524bb58b0a5c742b6425937cc288d099885c202e56988",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-3027": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-21T05:34:02.681Z",
+      "call_id": "call_BPs5Teeek51QJv9PEQNOhMH4",
+      "input_sha256": "8966e85cad4cb1f4eaa9558c07f95ef082bea13990fb23fa0e9938e19fa8693f",
+      "output_sha256": "164aef4539993fac01543d03737dfe9734e317e6bd495d56cf972cac6a804792",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-3247": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-21T05:42:54.620Z",
+      "call_id": "call_9eGyyVkCczs2RuclEYipprlv",
+      "input_sha256": "d9f6b5d1535eea07eb0c0bdeb544d83079119a53b7cfe9943a2137b65dafadce",
+      "output_sha256": "d5a26d665550f2afba024dd598fe0ece994a7d4d954d8b1bf5340d643bf7eeef",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-3252": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-21T05:43:00.944Z",
+      "call_id": "call_QQob9lgmRRjmbaMicnRsRg0I",
+      "input_sha256": "82492150b16acd321f50634b6ae686868a2b4e1197b11fc0c1429f6c92f71c0f",
+      "output_sha256": "47b1eb0ae4e89f243e615fbedefda97f8b08f557311d26f7657f915f1ea0d9ab",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-3269": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-21T05:46:03.120Z",
+      "call_id": "call_En4o2XwPkpOxh4GDn0EkKYxC",
+      "input_sha256": "4239a96179181e1e8af55b9c7c9c81a73d79fed36d57f8faf68a0f2383164750",
+      "output_sha256": "f86aba28dde23ca6df8de5a1ab45ef282318c2dd80b1d5a2cd7813e6294bb6fd",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-3274": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-21T05:46:40.590Z",
+      "call_id": "call_SLxbEjF3VmaPODWfOf4ojcMD",
+      "input_sha256": "efcdb0737e2868079c5faec9b7099ab010b649455dc49880b8ad369afdd3744d",
+      "output_sha256": "f86aba28dde23ca6df8de5a1ab45ef282318c2dd80b1d5a2cd7813e6294bb6fd",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-344": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-20T19:37:56.431Z",
+      "call_id": "call_PftD2oVWM5tKNe7qDuK8BVHI",
+      "input_sha256": "82a15024dc34d141be293b95fb194b34f6410e9daf50788283d780d8b7153522",
+      "output_sha256": "1f8177ae612de856fbbc5b2c93f3bfe3e9f535219ac3ae6998ca576f197d647c",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-354": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-20T19:38:11.875Z",
+      "call_id": "call_nWmHDRxvBrr4HNuQzpqSiIao",
+      "input_sha256": "de9d6ff0b20dec46da0d270dfab09027f2029b4eb2af35e9f9178950a73a36ae",
+      "output_sha256": "80e3cd3239b5b63673ac6397bb10faf06a15cc3b400037b9dd37dbc2564ed296",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-5306": {
+      "kind": "mixed_authoring_input",
+      "observed_at": "2026-08-21T11:54:58.552Z",
+      "call_id": "call_yII8j3OO8cLHmChdKLZz11f9",
+      "input_sha256": "f21a92d1bb2dd0e016140a552baf1c512cd0eab92d774021d5868c8390e6ef2c",
+      "output_sha256": "34e6c50d0d3c010d5c576e13d16bd0331f291f26667fb3b98331fd7a16739da9",
+      "scope": "One retained lookup combined primary format authorities and third-party catalog pages before reasoning authoring. This is exposure evidence, not a separated primary-only process."
+    },
+    "event-5324": {
+      "kind": "prior_exposure",
+      "observed_at": "2026-08-21T11:55:28.608Z",
+      "call_id": "call_CYmqCu42vQghLJye2QAwK9ab",
+      "input_sha256": "df7f39b709effcdf3a61f05ba1e2211c196da32b0e9c945eb42cf94b2b85217f",
+      "output_sha256": "027446a5f0fabb6347f1379c47e070746f4f858a691f914f0ff358a8ba61a7a9",
+      "scope": "Retained tool metadata records third-party implementation or catalog review before these creation batches; no third-party text or mapping is reproduced."
+    },
+    "event-5333": {
+      "kind": "prior_exposure",
+      "observed_at": "2026-08-21T11:55:50.320Z",
+      "call_id": "call_ggmxSLFElq5pBLGe7088NqMX",
+      "input_sha256": "07dbac428e75cb6c2d7705846dc1824a0f7237f8bb1884fc98e70b1207ce022e",
+      "output_sha256": "8795d5b1b99deb5c5bdcf93084b732b8d4eb01102b280f313d9d0c3c6c9250b1",
+      "scope": "Retained tool metadata records third-party implementation or catalog review before these creation batches; no third-party text or mapping is reproduced."
+    },
+    "event-5338": {
+      "kind": "prior_exposure",
+      "observed_at": "2026-08-21T11:56:30.260Z",
+      "call_id": "call_ufOPpZolvfFHDeXGgDBEa2cg",
+      "input_sha256": "ce39cc462455f9c506a3f61f7d922b13d676ab614ff2dad81667c8ef150450b7",
+      "output_sha256": "72ca7a8108c92c35ef80f761aa20871ef3c0a583bc1c41d96835545eb49657e1",
+      "scope": "Retained tool metadata records third-party implementation or catalog review before these creation batches; no third-party text or mapping is reproduced."
+    },
+    "event-5402": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-21T12:00:19.933Z",
+      "call_id": "call_MfrcywNKBpf39HHbiMMGprtC",
+      "input_sha256": "6d1ca25107a9ae73d2a0a5c5157e0a03b04ad65b48ba9b1d685355791d18b547",
+      "output_sha256": "9a64df56d236cdc305bad2ac8221ef0aa19f66943b762344a2fd8ef44d8067b4",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-5857": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-21T12:24:55.863Z",
+      "call_id": "call_0cW799NawTMeEXveCiGwFNfb",
+      "input_sha256": "f55fae9b2b8b40b4362d2b64ef725d46eacad911cefc81340c21adbaf8221d02",
+      "output_sha256": "14e305edb07ed50e526fdf86857369b8da4a07fcb7a4d56a76cb50c4f18aa57d",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-5871": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-21T12:27:00.770Z",
+      "call_id": "call_AkrBqnfnLiO5ylLS6mUngoje",
+      "input_sha256": "c7ffcb3b16f679d221de02909c535a45c65b45d9b76547e102b1046be0c0fdb7",
+      "output_sha256": "f5ced81664612c9f90ed535f5757532ad4c254a626c7fadbdfb8c1884d7bbac8",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-667": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-20T20:02:09.921Z",
+      "call_id": "call_IafZ6zJ71VBiHAGyl27doyZv",
+      "input_sha256": "f027dd2eb421b5b7d59bd8aa6983a805159415f5bfce7e7c2f28268a402dab66",
+      "output_sha256": "aa51f3b276bfbddab00bf4f365dc281bfacbbb6827be1b9795aa2e412cd3d21f",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    },
+    "event-9196": {
+      "kind": "authoring_input",
+      "observed_at": "2026-08-25T15:36:40.989Z",
+      "call_id": "call_US62NLtSUtQl3GGr0uvCOGMP",
+      "input_sha256": "d801bd52fcfbe2675e5c7b27024a578a275878d42e654cfe70a401765d0c8e2e",
+      "output_sha256": "6c5b35f1820b55f6b38f0d66875fc5fc96dac722640a16871835051346489d97",
+      "scope": "Primary authority lookup or owned catalog/template inspection; supports inspected inputs, not absence of other exposure."
+    },
+    "event-9222": {
+      "kind": "authoring_write",
+      "observed_at": "2026-08-25T15:41:45.981Z",
+      "call_id": "call_JEe5C32ElO9TehdjuQ48GAER",
+      "input_sha256": "e51e5ab40ecb8d70e753cad25b4d87a3558d9e73cdd762ecab5427c627d39815",
+      "output_sha256": "ed7efe56cec16b6dcdc601ddcbfee91251cdc3516a31fb2d4e6d8c69e655b2a2",
+      "scope": "Literal authored workflow and focused-reference patch or literal data/template construction. Retained tool result reports completion; committed Git bytes are bound separately."
+    }
+  },
+  "changes": [
+    {
+      "skill": "accessibility-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/accessibility-review/SKILL.md": "033443c06f6eff8d03b3ef3732f003dd6f1b4f9bf9435573e276bce0e4448705",
+        "skills/accessibility-review/agents/openai.yaml": "0e66bcb0d76e7d43448356a93a896147c8434ec7d1f043ef4e16092ff8f421d6"
+      },
+      "creation_entrypoint_sha256": "033443c06f6eff8d03b3ef3732f003dd6f1b4f9bf9435573e276bce0e4448705",
+      "creation_body_sha256": "402628bd8a2de67eb8a8dcb2442088d1e8bd456309dd191c8843c23b8f64d713",
+      "reviewed_files": {
+        "skills/accessibility-review/SKILL.md": "eca18fc7a9ccdf023dacf8c4e56788c11adaf871aa335876df7330f82531f96b",
+        "skills/accessibility-review/agents/openai.yaml": "f34398c08c98998153c3e38832c8ece0d45f8bbe74150255c51f75c2170d05bf"
+      },
+      "reviewed_body_sha256": "17673b9ac348a8ff59cb1addfaeccb121b8d8f1abb7562e55a9b9f0454314065",
+      "corrected_entrypoint_sha256": "67c9d932ccf6c4f0dd25a70aa23695b188f6f51070534c07bdc417237ca0b4f1",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "agent-context-state-memory-design",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/agent-context-state-memory-design/SKILL.md": "ab806f18e61dd6aa10070bbe172f59ddfbfc520e8609c1edb72496cc1790762a",
+        "skills/agent-context-state-memory-design/agents/openai.yaml": "bea219ab85776d13215fbe31da8e7502ccf1d9474efd5d9fd89c808a55a219cf",
+        "skills/agent-context-state-memory-design/references/state-memory-lifecycle.md": "a3edae48625ae60ca1064ef050ad03ff75f6dcd69132e52249d528dd078bbfa4"
+      },
+      "creation_entrypoint_sha256": "ab806f18e61dd6aa10070bbe172f59ddfbfc520e8609c1edb72496cc1790762a",
+      "creation_body_sha256": "f13eb4d1f4d635169403ed946ff39813db205a66645c92301c5ae6ba20761d3f",
+      "reviewed_files": {
+        "skills/agent-context-state-memory-design/SKILL.md": "e6f081d8a960a076afee16a94a71682500032fb80863c6cd1c2dafd6dd0063d9",
+        "skills/agent-context-state-memory-design/agents/openai.yaml": "ee0ed6fff529ce09bdb068e3447320e3bfd0c5e238adb5134e79e311d754eb68"
+      },
+      "reviewed_body_sha256": "a9c0a33d78cb92e045605430464dd23ba987f754f253a07d5b0a1e53217c4d08",
+      "corrected_entrypoint_sha256": "1cfc3b5d2ec1955934e6b9733289fd507987d55381ca777fa095d276b242bc88",
+      "authoring_events": [
+        "event-9222"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "agent-protocol-interoperability-review",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/agent-protocol-interoperability-review/SKILL.md": "8bd9e39fd90b7ff51e0dfbd732fefe7a448a847b967ba18de511f878b213ca8e",
+        "skills/agent-protocol-interoperability-review/agents/openai.yaml": "9bf4320a3b88495d55027664be45f8ff53be1fee631bd2a8e2aa35949d2192fa",
+        "skills/agent-protocol-interoperability-review/references/protocol-boundaries.md": "bcfc60dc84ee3ea35c177851138a92a73fe48301a012d531a01f9736d3514ff9"
+      },
+      "creation_entrypoint_sha256": "8bd9e39fd90b7ff51e0dfbd732fefe7a448a847b967ba18de511f878b213ca8e",
+      "creation_body_sha256": "cb894c951a870590863d0e3e868ad05631a65e1914f1ad49d2fce8b721849627",
+      "reviewed_files": {
+        "skills/agent-protocol-interoperability-review/SKILL.md": "5a9a4c81351135ad7a55f17d54eafed6fc21187301bfee41a25917ceaa7bdfce",
+        "skills/agent-protocol-interoperability-review/agents/openai.yaml": "5f6945e0ca9145389c1e28ca48d517e73d2a15952a50689366c0e56e9fef43a2"
+      },
+      "reviewed_body_sha256": "0a50885b3d29abde456ddf87f8998441a4d8e1ff14565313e07b02c9dcfb06f8",
+      "corrected_entrypoint_sha256": "3e117fcc6dd12ce81418e19d2c6cd41c13b7f2fea4c9c6d574ea2e4469243111",
+      "authoring_events": [
+        "event-9222",
+        "event-10504"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "agent-tool-action-boundary-review",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/agent-tool-action-boundary-review/SKILL.md": "7316921517db9fbd9c17c643c65d857e7ff572223fd5a3a15873e0c7249381a0",
+        "skills/agent-tool-action-boundary-review/agents/openai.yaml": "accfc42c612398702a10dbb95f8ad12536eff61edd003ff13bad413da9411b56",
+        "skills/agent-tool-action-boundary-review/references/tool-action-matrix.md": "9141f236e5ed3ebfb1159ab106a5c05c07f5291fc3b8adbd38ba07321eab3792"
+      },
+      "creation_entrypoint_sha256": "7316921517db9fbd9c17c643c65d857e7ff572223fd5a3a15873e0c7249381a0",
+      "creation_body_sha256": "1a43b5104a35ac836fe5c29a329fed3d3ef106acb4e7d346504760d53b4bee78",
+      "reviewed_files": {
+        "skills/agent-tool-action-boundary-review/SKILL.md": "846eb8059d2e5fe73a8c251203ebfd0aa4ffa76620b9d7ff9f83a58b1613c15e",
+        "skills/agent-tool-action-boundary-review/agents/openai.yaml": "9dcacfe35cd1d75cf9ad719bf7a94356d3a314482dfeb6054b55720cdaaffedc"
+      },
+      "reviewed_body_sha256": "04d3381457638071904fdaf6167a538c775c69546d39c7072f1d5f941e653bb9",
+      "corrected_entrypoint_sha256": "057f015cf019819eadbf4eae7b18a27ca639286cb541234e03f5b1c4a8981c39",
+      "authoring_events": [
+        "event-9222"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "agentic-system-security-review",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/agentic-system-security-review/SKILL.md": "3dc91a7b1072b75a11253a317b0bb790254f1303b11e622f8ef0460e29e3ed5d",
+        "skills/agentic-system-security-review/agents/openai.yaml": "150ce51e206660634e406c8f14dddd82b7563b30d3edc353fd20f115baf6b34f",
+        "skills/agentic-system-security-review/references/agentic-threat-domains.md": "d695a594cdb123dd94db6631b68b46647ccddcab5eca84d23decc6012418288f"
+      },
+      "creation_entrypoint_sha256": "3dc91a7b1072b75a11253a317b0bb790254f1303b11e622f8ef0460e29e3ed5d",
+      "creation_body_sha256": "8450880e0b5c0e478d99358c3ab52e4e5d72d04dc44eacc316545ad7e851c02c",
+      "reviewed_files": {
+        "skills/agentic-system-security-review/SKILL.md": "41e777177438c2e40ebfc68919ea0c8598044cf7b01dcb50bb8a8e978e6c7b54",
+        "skills/agentic-system-security-review/agents/openai.yaml": "7b88f6f3795dc3fac16bc8c0d8fc5812d9abfc2feae7f441d2ade4bab9b80673"
+      },
+      "reviewed_body_sha256": "520c12ac3bc6cbf1d767091e87b34d4cba8931707eb925d7557889c4ce5c3a35",
+      "corrected_entrypoint_sha256": "558cc0b70ead278ec40d687022343b2106a8bbc6e09ed147013a048f0267a45d",
+      "authoring_events": [
+        "event-9222"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "alignment-interview",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/alignment-interview/SKILL.md": "0e54fc592e0dba2bc0038d6f660f74ad904162449f63a787549568cf81a3712a",
+        "skills/alignment-interview/agents/openai.yaml": "19429b9046a13fa97b0df37b75deb61bb31ffb35c49f6b875b0dad9cc1df38ac"
+      },
+      "creation_entrypoint_sha256": "0e54fc592e0dba2bc0038d6f660f74ad904162449f63a787549568cf81a3712a",
+      "creation_body_sha256": "2837735b8ce54865dbe68a93c298ba7d975b056fa0718d155fe01048062736ec",
+      "reviewed_files": {
+        "skills/alignment-interview/SKILL.md": "1cd6688a052f8fbbaefb1753959877fdcfba2ed0a77343836b1599f1ec2cae4b",
+        "skills/alignment-interview/agents/openai.yaml": "16598a9174027405c3eea5b223aecc3f31a05f424c504ee37396ea5b6a5a553d",
+        "skills/alignment-interview/references/continuity-example.md": "d2ff6c951d95b29003e03fa285501b41efed8eaa05f39ad93cae5a947576667c"
+      },
+      "reviewed_body_sha256": "35a6d9fbc54975daa6c4d285a016bb672c1967fe21db783a801b493adae7fe25",
+      "corrected_entrypoint_sha256": "616296d73b961e94406fb3426ebfcfcf3b79f72005449c07bae898e283d963da",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "api-contract-compatibility-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/api-contract-compatibility-review/SKILL.md": "84d92d4fa0b6e1f349e9d19cecb6b32492437c6a4d9a13f068c7ebe642c21eeb",
+        "skills/api-contract-compatibility-review/agents/openai.yaml": "3d7544ba7e711269a9fbcde82ca863fed746e582578348078879ed1ff7ad1e85"
+      },
+      "creation_entrypoint_sha256": "84d92d4fa0b6e1f349e9d19cecb6b32492437c6a4d9a13f068c7ebe642c21eeb",
+      "creation_body_sha256": "f5eda927919d733344d685770efd95ff218974a0b0250de20fd3640340771217",
+      "reviewed_files": {
+        "skills/api-contract-compatibility-review/SKILL.md": "afc8179fcb57510f59379d6663aed1be1a865ebc01b2dea265186df09c81c1a0",
+        "skills/api-contract-compatibility-review/agents/openai.yaml": "8c6e59384ac8cbb8c6acba02bca2ff495ac45df04af43577f36badfa1f7a96b1"
+      },
+      "reviewed_body_sha256": "a0e3d0571bed4557ef0be13205285c2db3835b07bdb2649a60a70cf65d89b8d5",
+      "corrected_entrypoint_sha256": "5f080aeefa0beb17ecad63aa07cb4df6d62f10efc8a9232f8c9a067e87d5d999",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "application-security-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/application-security-review/SKILL.md": "5800136aed3c8b72c9bc85f2a12ed248fa9f27abbdc46bb25313975735517ebb",
+        "skills/application-security-review/agents/openai.yaml": "a24e1c110fc4abfb7849279ebf6f4f5ba4d4eadd420cec12f928e91379031282"
+      },
+      "creation_entrypoint_sha256": "5800136aed3c8b72c9bc85f2a12ed248fa9f27abbdc46bb25313975735517ebb",
+      "creation_body_sha256": "f531d28850c46d02ab2aa2c245180562d1a60569270ac629ac294da883176475",
+      "reviewed_files": {
+        "skills/application-security-review/SKILL.md": "46f7836c6b64a256ac5fe17656a33f77f77f18a64ce959290d7faeca09d164b4",
+        "skills/application-security-review/agents/openai.yaml": "9090cc21665fe1489f176180641741c18165ea5beb3553b929386404562ba25a"
+      },
+      "reviewed_body_sha256": "69dfe7ff3b95d457447dc0162840d913c969d73f79421f974b54c890f9582086",
+      "corrected_entrypoint_sha256": "48ed0ee28e65ca36601e028e1c7bd6c049fe1f67ec85e48e62d9a0aa2d18eb03",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "change-impact-analysis",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/change-impact-analysis/SKILL.md": "b683dbd4e49fa514b4e527aa3c03885323622e8ec1dab25fb423ce5044f87719",
+        "skills/change-impact-analysis/agents/openai.yaml": "63b68fe25c7e6ef3e39815703cfb339a5f6fd4d68ee9deb1b4b981e18c59ce20"
+      },
+      "creation_entrypoint_sha256": "b683dbd4e49fa514b4e527aa3c03885323622e8ec1dab25fb423ce5044f87719",
+      "creation_body_sha256": "bf2f5db2147c05491febd64c98bf46ccb3d6dde612904ed09cfc7bfbc8f8685c",
+      "reviewed_files": {
+        "skills/change-impact-analysis/SKILL.md": "471e6188169c52b05d50e88728365b18d263fa19ce104348f5e0f78fc0912b5d",
+        "skills/change-impact-analysis/agents/openai.yaml": "c116c631bcddfb01df9e1d0f32572fef58b9a3f0b456bd8f04b7c83f8a8e5631"
+      },
+      "reviewed_body_sha256": "20edfdfe71b5e9ea024189e8b71efcc9aafd1279af9c98bdfb696910e6e5a0e9",
+      "corrected_entrypoint_sha256": "94c31e102bf2baa6be8189e3a2f110eed1bd77d11469a0a12b7cd65ab0ff8d24",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "code-change-review",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/code-change-review/SKILL.md": "e83dc40b48396e39c4cdc55967ace038dfe357734bb1f8536825cc4e5680efc8",
+        "skills/code-change-review/agents/openai.yaml": "23388ecc45b19692d19709185279843c7bc88f3f77fa3965e4b9b158967b3431"
+      },
+      "creation_entrypoint_sha256": "e83dc40b48396e39c4cdc55967ace038dfe357734bb1f8536825cc4e5680efc8",
+      "creation_body_sha256": "9bbc5f6bdbcd6da901be80127d1fc3fd586ada18f7ff92d9b9500b78b8b7b72f",
+      "reviewed_files": {
+        "skills/code-change-review/SKILL.md": "3e70856dd160fe0c31c7449b2c65e1ab047f8304ea9862a61dbbf7e564ccc4e7",
+        "skills/code-change-review/agents/openai.yaml": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5"
+      },
+      "reviewed_body_sha256": "5772bff96815147be9c09ba6ea220579db224e427804f9d766b6adcd9e02ab05",
+      "corrected_entrypoint_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "codebase-explanation",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/codebase-explanation/SKILL.md": "239c1cc4fe08449c812402286a773ff9eccefbf419cdb0d2ce17948dc243151e",
+        "skills/codebase-explanation/agents/openai.yaml": "c5da3114cda7654edaddc3c8d171b2175c022c727261969a0cf3e3a6d9d1b3d0"
+      },
+      "creation_entrypoint_sha256": "239c1cc4fe08449c812402286a773ff9eccefbf419cdb0d2ce17948dc243151e",
+      "creation_body_sha256": "62a625100f156dff8d2fd7dbad1606507cc7bd9fcbf213af9787dfaef9aff281",
+      "reviewed_files": {
+        "skills/codebase-explanation/SKILL.md": "37b8f099d5d411ff3c29ea15b74f382a04f8f757d8763c22aae493ecfa2f5f49",
+        "skills/codebase-explanation/agents/openai.yaml": "f04777e39d9fc9b2642bf721aaf742b46c44ed88bcd928f159dc4a8530acdf61"
+      },
+      "reviewed_body_sha256": "ec09b9e1159122d67a40808ce7fd24249b99ce0ee5f54c899573d4e563c95e62",
+      "corrected_entrypoint_sha256": "c72abfe6b7bbdda7b47e4a4c4ee1067f8e5f5d1a864e75f52d931286888daf91",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "data-migration-readiness",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/data-migration-readiness/SKILL.md": "bc3e44219cfd5f440dc57163f3f77eb7a0e57769dc7ea095da48e8c3bb832ed1",
+        "skills/data-migration-readiness/agents/openai.yaml": "7e4dcb8d958b966cb1c564a52538b2d5e26b2a702596280d05f68756bbb2569b"
+      },
+      "creation_entrypoint_sha256": "bc3e44219cfd5f440dc57163f3f77eb7a0e57769dc7ea095da48e8c3bb832ed1",
+      "creation_body_sha256": "7819fbd7ce45a84eafdf1de911d46fc881900c33be72963f692ea1978e9b7688",
+      "reviewed_files": {
+        "skills/data-migration-readiness/SKILL.md": "36eb2d9112154cd1fc6f01b73031b77b1b9a3da84f3558c5856ad82aa8bb4733",
+        "skills/data-migration-readiness/agents/openai.yaml": "927a1c177b044a1556adf40c44a7f70fcb0ed83d2342a498a5843d04961ee254"
+      },
+      "reviewed_body_sha256": "9283f8786ea571f4b24cc91bae72bbb1981cf09e4e941c1ef915591dcd9d8a0c",
+      "corrected_entrypoint_sha256": "43e26e4076266934c95a02609b6f8977afdb5664249ee5d5e63262dc81e2feff",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "decision-evidence-trace",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/decision-evidence-trace/SKILL.md": "b1530e4cd9097f2350c42bbd84e527dfa9e7d6c3cf7717b3be807aa67b4859ab",
+        "skills/decision-evidence-trace/agents/openai.yaml": "4f1ce3f2301a24abfe38cc8c8cd1cc0abded270c3537ff9c7e8a400a613da74a"
+      },
+      "creation_entrypoint_sha256": "b1530e4cd9097f2350c42bbd84e527dfa9e7d6c3cf7717b3be807aa67b4859ab",
+      "creation_body_sha256": "fccd4b7368aabae376041c5bc0910b36636f196797bfdf103de19cd0a1d4a320",
+      "reviewed_files": {
+        "skills/decision-evidence-trace/SKILL.md": "92de1d19ec2e9305b34c94e417bb63ac1e4a8603c6713efdb50db99932818fc9",
+        "skills/decision-evidence-trace/agents/openai.yaml": "ea136d8e1aa840c3b0d9d66b4c8021442a7b33f9835a9120a9e1ea51a5882764"
+      },
+      "reviewed_body_sha256": "57b2d8ab8f65bf6ec73887eb72d8eec184067ca20fca56963fa773bd7a3f1356",
+      "corrected_entrypoint_sha256": "f72186acfa9cf72fde0f5f71bbc7eca7b19039a5a1cdcda26af86f7ab632d7d1",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "dependency-supply-chain-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/dependency-supply-chain-review/SKILL.md": "cb116f2f96e349f55d07f56186a05ef9dc52e5c217c1606d13d5d5db7e102ccc",
+        "skills/dependency-supply-chain-review/agents/openai.yaml": "7eee5d9dfd2a1c28c1c7cd13acd63b1b00b8020befb2524ce5d5e8520b13ee99"
+      },
+      "creation_entrypoint_sha256": "cb116f2f96e349f55d07f56186a05ef9dc52e5c217c1606d13d5d5db7e102ccc",
+      "creation_body_sha256": "6d982684c0640f6852578f6b8256f0e83097a1de605cbc7ed8cfef0e325c66b8",
+      "reviewed_files": {
+        "skills/dependency-supply-chain-review/SKILL.md": "971b088ccd0822d1c80d29abb62b7aea1f6ec2991dfdadc86785906919c52792",
+        "skills/dependency-supply-chain-review/agents/openai.yaml": "3766f6f74d8695916552b27eebb799f18e646afd320260406007414940d932a2"
+      },
+      "reviewed_body_sha256": "47c157a72b4289d00fac988afe101de410b97afc324d91c665245d8c500999f1",
+      "corrected_entrypoint_sha256": "18b4926a22b6056ce022d942380e4e0d3f1b783c6c2669165edfb4cac2aaa60e",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "design-rationale-investigation",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/design-rationale-investigation/SKILL.md": "93bccec47e171f0dd9c289d837aa6939c1d7fdec8df87ba22978cfb7d4c038d4",
+        "skills/design-rationale-investigation/agents/openai.yaml": "764be011c26ba578c44b49a9afb031535913935a280331fab0d4f9f70c398801"
+      },
+      "creation_entrypoint_sha256": "93bccec47e171f0dd9c289d837aa6939c1d7fdec8df87ba22978cfb7d4c038d4",
+      "creation_body_sha256": "023a7acdee8c76548a6b047eec05a42baeca307ceb94a0ce12f2181f638aa176",
+      "reviewed_files": {
+        "skills/design-rationale-investigation/SKILL.md": "d155fcf54b53a257fcc8102d7645c31c84934520e3a3acc4592d991fa7f1a450",
+        "skills/design-rationale-investigation/agents/openai.yaml": "4f6e25fa12eaf7e2faa59b085376641432c15653eb547c5aceb0be8ea5b87eab"
+      },
+      "reviewed_body_sha256": "6a447ff0283a11f4454faf6e5018b91669db84ceb1949d75afbdc0ad83d4069c",
+      "corrected_entrypoint_sha256": "27885ebef9c720d4b8ba8f061609c7ae97a1ad4061b1e4f1c61e76decf0226fa",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "domain-vocabulary-modeling",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/domain-vocabulary-modeling/SKILL.md": "2eea29e17b75dc7c426c18a099c38ad2173bda4d808ae7c2bdade1d1e8ce43ce",
+        "skills/domain-vocabulary-modeling/agents/openai.yaml": "1ee28c8339ea671b0a917be3a0ba9e0d59e19fd33fe6008c56f146cb04d4ab82"
+      },
+      "creation_entrypoint_sha256": "2eea29e17b75dc7c426c18a099c38ad2173bda4d808ae7c2bdade1d1e8ce43ce",
+      "creation_body_sha256": "ff808d50e64d0ea2a9f345990052a196462a4dd0ec888a19cc40f699f8dad764",
+      "reviewed_files": {
+        "skills/domain-vocabulary-modeling/SKILL.md": "9cccf3364959cc08554a5f663892e00a4101fa24f11e4c6d09d844ef07444757",
+        "skills/domain-vocabulary-modeling/agents/openai.yaml": "021bf56b9b70f65414914ceb5205ad8e3462896b4462a973bab580215171e47f"
+      },
+      "reviewed_body_sha256": "5891f45a6d3bef17d907acf17268caaef81562e0cb35b89ff79aacacc0a45911",
+      "corrected_entrypoint_sha256": "4def13c2bba4fa0c7c6c20a4ed183dff55b33c454766614938ec667ae52dd066",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "go-engineering-profile",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/go-engineering-profile/SKILL.md": "bb4611942399efc4916c7af08352a0b92c5c33923040684b23369e232f62f4eb",
+        "skills/go-engineering-profile/agents/openai.yaml": "1f3600ee7fd4c80019acc59c7c0d8ad5897c5d534f5f782c9bf774d91eefccf4",
+        "skills/go-engineering-profile/references/checks.md": "81a623659c1f60aa70ef34402b82afdbed9e67af8d57b7c434141a698657eea0"
+      },
+      "creation_entrypoint_sha256": "bb4611942399efc4916c7af08352a0b92c5c33923040684b23369e232f62f4eb",
+      "creation_body_sha256": "7e4ccc686629f5afe96338521f04e1a41171523d90b180bacc7c11ce18a70183",
+      "reviewed_files": {
+        "skills/go-engineering-profile/SKILL.md": "89601203e04899d6d036db38939fa9dedc0ea178ea03fc81c4474ac90e38fcc4",
+        "skills/go-engineering-profile/agents/openai.yaml": "673a6dc4951749d278140b68020eac535c5daadd08cdf4105a16b61995384944",
+        "skills/go-engineering-profile/references/checks.md": "81a623659c1f60aa70ef34402b82afdbed9e67af8d57b7c434141a698657eea0"
+      },
+      "reviewed_body_sha256": "d5d495d532a08e2a72edaf02d86d1c813c9af928ff30aa675f5255056d171c10",
+      "corrected_entrypoint_sha256": "ce91a6542e4987f690ab609e33fb7733acca2edbbc5c276b54a7dd29a370466b",
+      "authoring_events": [
+        "event-3274"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "google-adk-engineering-profile",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/google-adk-engineering-profile/SKILL.md": "3cf7e2dfeeed84d0cef625fbb121bbd5c286c194443d22f4bb82e1e97754a51c",
+        "skills/google-adk-engineering-profile/agents/openai.yaml": "f2fefdce438cdf699b13bb90cbb6796a028a6ce24dc3434f0defedd8b51efe82",
+        "skills/google-adk-engineering-profile/references/adk-version-boundaries.md": "07abc83ea41716211bef1fb285a9f3d7b007203fe374fc958fe10bb9f8618140"
+      },
+      "creation_entrypoint_sha256": "3cf7e2dfeeed84d0cef625fbb121bbd5c286c194443d22f4bb82e1e97754a51c",
+      "creation_body_sha256": "c7812f1ad0a6b3b89baaf47e072c17855775a99bab3dec8d93e829fc1729110d",
+      "reviewed_files": {
+        "skills/google-adk-engineering-profile/SKILL.md": "ba1d89c9c4ec09dacf762e7b466879231b87afddc597f2dbdfa7a6c155f4fdb9",
+        "skills/google-adk-engineering-profile/agents/openai.yaml": "04be52ed03afde720546d7f8d149aa6de17fded65eba69a8923da4aa590a6f32",
+        "skills/google-adk-engineering-profile/references/adk-version-boundaries.md": "07abc83ea41716211bef1fb285a9f3d7b007203fe374fc958fe10bb9f8618140"
+      },
+      "reviewed_body_sha256": "862b56bab74704ca7569113dd2421158c1780ee6b316bca57a25bd08ae8f7f24",
+      "corrected_entrypoint_sha256": "9a3697aa3fc4e50b6c628f485f080378161ad95f24385be5f17665a0a6773e7c",
+      "authoring_events": [
+        "event-9222"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "guided-configuration",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/guided-configuration/SKILL.md": "dde2f7db053f0c05e6bce962d4865220074310869c5cdc2eb524b7ba21cacc0a",
+        "skills/guided-configuration/agents/openai.yaml": "c351333cb6003d81f517da86fa26e09fe71c7e8c630f6f6439942c80345be7e6"
+      },
+      "creation_entrypoint_sha256": "dde2f7db053f0c05e6bce962d4865220074310869c5cdc2eb524b7ba21cacc0a",
+      "creation_body_sha256": "a548c2c5c6cb4edd806ae622fbb76d32c5388b5bef5e0bbebe3b02cf97aca867",
+      "reviewed_files": {
+        "skills/guided-configuration/SKILL.md": "789e57a8926a3dbdc753e8f97ec55c28326664cd0507460a2a1dec0ddcf34c1e",
+        "skills/guided-configuration/agents/openai.yaml": "79ac35d71e6a262b196ceeb51cda208741054b09ef03b6318fcdd1ddb5813127",
+        "skills/guided-configuration/references/continuity-example.md": "6efc1571bd3ffc1e06c8fb1a24691e222db39314675d77b7b28c90e4b0db978d"
+      },
+      "reviewed_body_sha256": "8dbb8b6156092678235a57a66e7a4c25f7e7fc5166a0d7c69ce7a83d9aefeb72",
+      "corrected_entrypoint_sha256": "1fd8510d4f3a7f59d94c45c78caed751697b3b04626ceab508610b3ba1eb6e20",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "high-signal-technical-writing",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/high-signal-technical-writing/SKILL.md": "79c8aa0b977af6abd7ac0516c026ed9a94f36b10986e3bf5374ad348eae218c2",
+        "skills/high-signal-technical-writing/agents/openai.yaml": "4abaa608bd5e3eb4f7d18c846802226baefca809d2b34ada84e5ce2693c36cbc",
+        "skills/high-signal-technical-writing/references/editing-checklist.md": "2f8e414cc288c4465448f25492b51478308a9ef96f73dff61fd8343b30039464"
+      },
+      "creation_entrypoint_sha256": "79c8aa0b977af6abd7ac0516c026ed9a94f36b10986e3bf5374ad348eae218c2",
+      "creation_body_sha256": "bb1c13ec4982f51d64e3aa4b072502849acef33ba97d46c20fa31de0ea6d2976",
+      "reviewed_files": {
+        "skills/high-signal-technical-writing/SKILL.md": "e87ba504ca6afda55162b1bd5e5194ac289a2b22c99f29439a13c972527e68f1",
+        "skills/high-signal-technical-writing/agents/openai.yaml": "9f2fcfd22f9b9eee7c1affd90053f83d1c5fdd71a83961b73027b35ef839831b",
+        "skills/high-signal-technical-writing/references/continuity-example.md": "3e82e2d697d27b859e2bf68beb3f8a07caca6f65b155d26ac021788d41c59faf",
+        "skills/high-signal-technical-writing/references/editing-checklist.md": "2f8e414cc288c4465448f25492b51478308a9ef96f73dff61fd8343b30039464"
+      },
+      "reviewed_body_sha256": "4e51aec10c32534dd6b69cd1fd6a8c604d23cbf2d7627f6abd5695b79d3e3c6f",
+      "corrected_entrypoint_sha256": "dfd349a3643a37693eedd592339085c3f0114bc2e5ef94ee3fa369498b50cac5",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "merge-conflict-reconciliation",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/merge-conflict-reconciliation/SKILL.md": "976f5ec0b02bca0c07a823b2bde0d9a72f7b919d1aa5f68231805b91f3f1700f",
+        "skills/merge-conflict-reconciliation/agents/openai.yaml": "54bd9e99519b076c64a3799e7ecbcc12348cdad0b1085aac6b7dc513c8d266c5"
+      },
+      "creation_entrypoint_sha256": "976f5ec0b02bca0c07a823b2bde0d9a72f7b919d1aa5f68231805b91f3f1700f",
+      "creation_body_sha256": "f273f01ec4eedbab57cff396a08620f1502be22a2a03423a2aa285c050fdc73b",
+      "reviewed_files": {
+        "skills/merge-conflict-reconciliation/SKILL.md": "4b84c45a3fcab702d00f797c14ff60e634c021ab0dd7e0e8d3f15b83fa13ac20",
+        "skills/merge-conflict-reconciliation/agents/openai.yaml": "44c9f24517d0887c0afa5eefc698a9237414741e3d716e4c869c057f6be06cbf"
+      },
+      "reviewed_body_sha256": "b64c265d0e83a0eda820b6ff0e555a0e6c3fe62790f8669a778892ec366b1c87",
+      "corrected_entrypoint_sha256": "d2def75afa9401f9649639f39a2d8efebfc2f6cabddee63d518ebabe06960915",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "module-interface-design",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/module-interface-design/SKILL.md": "c18da326520306999e635cc27705e2ff84f2b393694f621ec4e33b56301a25d9",
+        "skills/module-interface-design/agents/openai.yaml": "7745da35b41986afaa450efc8a6178a3fa95622f2b2112db54abab80fca8b8bd"
+      },
+      "creation_entrypoint_sha256": "c18da326520306999e635cc27705e2ff84f2b393694f621ec4e33b56301a25d9",
+      "creation_body_sha256": "ab420da0b08c5a9d1a3fc957a0de0ca98fad63041202402ce9a616cbf011daf2",
+      "reviewed_files": {
+        "skills/module-interface-design/SKILL.md": "3c1e3aa7ba85a4a150f3b93a737ca47624f30c9fb8aa48d393f21e39edb99dc6",
+        "skills/module-interface-design/agents/openai.yaml": "1cc4bf054445a8b852bd729dc64018fe22b7d2c0a151e317f710e9f47d414ef4"
+      },
+      "reviewed_body_sha256": "22a6624f29b7e347cce30911499e96e61d039cff7e055f76f207ecf15f0dafb6",
+      "corrected_entrypoint_sha256": "316afcd012fe0eea0b5070cf74959cba177e59dfea00f36e31b856496506fc83",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "batch": "engineering-lifecycle",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_files": {
+        "skills/multi-agent-orchestration/SKILL.md": "2aa7a3e7c0644eae112e61a0113a65a7b643733d237eb62ea7c954265b2ca2e7",
+        "skills/multi-agent-orchestration/agents/openai.yaml": "010d66cb12b77c1f737ba1f00bafc5a73053ec802759049d1732ac29e00cb05d",
+        "skills/multi-agent-orchestration/references/client-mapping.md": "31e63236aa274d0ea0d40db8059d19f666ecf3baa91ae7f69e4c71ad02ea500b"
+      },
+      "creation_entrypoint_sha256": "2aa7a3e7c0644eae112e61a0113a65a7b643733d237eb62ea7c954265b2ca2e7",
+      "creation_body_sha256": "0577b80b7b036c178035bc194bc8d2079c4c96fe91fb0671255607e8c6d6c4bf",
+      "reviewed_files": {
+        "skills/multi-agent-orchestration/SKILL.md": "f5891c585319b7a4b2ec6ad75061d2e864748f843bb820db4514aa6df302af56",
+        "skills/multi-agent-orchestration/agents/openai.yaml": "cd07e1b35dc7d13ed09644f11c43f76ea10e20169162664a2e874564654a883d",
+        "skills/multi-agent-orchestration/references/candidate-comparison.md": "a48b9da5eb61523f46717a86714c39185ed301f98d9e3c1aa76f49a3416b6aa2",
+        "skills/multi-agent-orchestration/references/client-mapping.md": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
+        "skills/multi-agent-orchestration/references/coverage-fanout.md": "e95cb2d1453a55fdea1a702ba8e5a7b3bd41fc752cadf9e50e542e7bde0749e9"
+      },
+      "reviewed_body_sha256": "b8f99b53b2d80fc820848ef71f597ba463c4478ef1a6eb66694130cbdf4f9f2e",
+      "corrected_entrypoint_sha256": "53ae06e8aa1a025342e53ca06774ecf070b39db63b33bafd4662f59600634613",
+      "authoring_events": [
+        "event-3027"
+      ],
+      "input_events": [
+        "event-2986"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "observability-design",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/observability-design/SKILL.md": "e0d8e080aecd6c82e5fdd446aa1835bc7687973f9c4334208e5ad25837ab778c",
+        "skills/observability-design/agents/openai.yaml": "ea05ba4e21514eadbb8900df30c0cdb6ee5b08a339d27c19c5817af790bbd46d"
+      },
+      "creation_entrypoint_sha256": "e0d8e080aecd6c82e5fdd446aa1835bc7687973f9c4334208e5ad25837ab778c",
+      "creation_body_sha256": "9f128594f81be57c0db25fa7416aed31c3a20be4c8231a11c8de2fe590056ffd",
+      "reviewed_files": {
+        "skills/observability-design/SKILL.md": "8e101957599cebeeb75e6d3c4900117956dfd4c0a6b83dd4599aed12780df946",
+        "skills/observability-design/agents/openai.yaml": "2849100312c56d1d0a283153e6d0a70c21e02658ca1aaa210a28d196bd866c58"
+      },
+      "reviewed_body_sha256": "b9f59fa99b72be418d4e840855c91c9d083498d37d7cb169a20c505e21b50499",
+      "corrected_entrypoint_sha256": "35541936d69d1b335440d970de5f5debedb00a572726a18443207de5562aebc6",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "operational-readiness-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/operational-readiness-review/SKILL.md": "ce0b3dc8f21bbcae9e99cf52ac9c40e1885cf217d09adf41c7c34c6d7d89b251",
+        "skills/operational-readiness-review/agents/openai.yaml": "ee093677fe12d30ab19415ecfb91aa35b9c1cb4618545aa6211ca04f0706c646"
+      },
+      "creation_entrypoint_sha256": "ce0b3dc8f21bbcae9e99cf52ac9c40e1885cf217d09adf41c7c34c6d7d89b251",
+      "creation_body_sha256": "329284f5dd40331859f7ef65c2d3bfa9f34ac3533a02ce6682eabd2d56c815d0",
+      "reviewed_files": {
+        "skills/operational-readiness-review/SKILL.md": "512a2271449efb611ab9cbc2348e53cac25420ffcd61647fed030d63be0740d5",
+        "skills/operational-readiness-review/agents/openai.yaml": "38ddf7354702f288e264e248dba0ac48bf328166bea6e466d5c9413a171b61c4"
+      },
+      "reviewed_body_sha256": "2aa1ad5c376d880dc584df57b0ef4e0b851840af81fdefde9e72e73b209afed6",
+      "corrected_entrypoint_sha256": "133bdc896003108a537728f247b2396c0a517849ea1d82317bafbbbd75814009",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "performance-scalability-diagnosis",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/performance-scalability-diagnosis/SKILL.md": "bb05aa6b625de6bf625bc1146d4e5b71a1d71c80d556b347fd531b1729b4dd3e",
+        "skills/performance-scalability-diagnosis/agents/openai.yaml": "0f92a5c3376804dc53fc778cf2f5360da1390acfe4ec07d48d768cb568fcfc75"
+      },
+      "creation_entrypoint_sha256": "bb05aa6b625de6bf625bc1146d4e5b71a1d71c80d556b347fd531b1729b4dd3e",
+      "creation_body_sha256": "37f02784c239f0a8862a522478be44016c81be09bca2d6e4c49cd5255f609f91",
+      "reviewed_files": {
+        "skills/performance-scalability-diagnosis/SKILL.md": "1d4e80b3a485402fe371c6f9a89d52e77431c4529258ece3660cef72d4073cc2",
+        "skills/performance-scalability-diagnosis/agents/openai.yaml": "67966a5843873e2924e4ec115f67f904b597a905f80379fa1ccd747a02c4f510"
+      },
+      "reviewed_body_sha256": "cde169c0afd96988c30f03dae82fc16f8b82690c851ab27954b4a1dfa549443f",
+      "corrected_entrypoint_sha256": "f99692dce9508fa8080b1105df23f65518aaf5829b150e9efafa6c928b9c1711",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "portable-skill-authoring",
+      "batch": "reasoning-foundation",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "creation_files": {
+        "skills/portable-skill-authoring/SKILL.md": "f542e5927e12bb2717cc4be4c17541bc607539d00bcd82717302fa27c8c86da1",
+        "skills/portable-skill-authoring/agents/openai.yaml": "4b037dfca504e056390cb2765d220793b5a0516ec4395deb8be88bb19e39425f",
+        "skills/portable-skill-authoring/references/client-adapters.md": "452707862ae8b5d4ca6efd5c6c2aa4dcf8f735ee86d48d4fd8121df377cc9ba9"
+      },
+      "creation_entrypoint_sha256": "f542e5927e12bb2717cc4be4c17541bc607539d00bcd82717302fa27c8c86da1",
+      "creation_body_sha256": "fc36daf243eacf5014fc0cb2702550ebeb8e36938207bacf895fc83d8559804e",
+      "reviewed_files": {
+        "skills/portable-skill-authoring/SKILL.md": "1541f6e89f550d68cffec476db54ffced74cea982bcc04130c916f4d8c3b79fc",
+        "skills/portable-skill-authoring/agents/openai.yaml": "28822715d7958a80a1afda8833c3a166575346c1ac232175d0bf879f9e58e1d2",
+        "skills/portable-skill-authoring/references/client-adapters.md": "016d69a996b36c913822aaefa782e0aa3c7b7da6aadbc1aed5de0bf4bec2fdb5",
+        "skills/portable-skill-authoring/references/continuity-example.md": "d2ca6eae3923b163a549e60b4cbd65473ae78021bcdfea4bd7ed04b9a04f17bc"
+      },
+      "reviewed_body_sha256": "c3da4d24452eda2b76d5e23c289b9ad7a830b43c2d8456230554b76bf2ebfa83",
+      "corrected_entrypoint_sha256": "7e7cf235ec167eeb20ab4cab8cd1b896976ed6805d291514fbb58055afeafb11",
+      "authoring_events": [
+        "event-5402"
+      ],
+      "input_events": [
+        "event-5306"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "postgresql-sql-engineering-profile",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/postgresql-sql-engineering-profile/SKILL.md": "585e816b74745b2111021f8885dcb78e888195e3229d5399a11793f47b57b3e4",
+        "skills/postgresql-sql-engineering-profile/agents/openai.yaml": "15318f800e4fc1ed675552ad29ae4c846e36830a8f362d1f5d9a436485a3e9ca",
+        "skills/postgresql-sql-engineering-profile/references/checks.md": "ff8de9b6c51f634b41539fe62fc358557ff56d5d2495856cb159646e117e7576"
+      },
+      "creation_entrypoint_sha256": "585e816b74745b2111021f8885dcb78e888195e3229d5399a11793f47b57b3e4",
+      "creation_body_sha256": "26646d402a09f28cfe7d9dc2832c35c5c1bc5fb50252ed3b65c99d42950ad1e8",
+      "reviewed_files": {
+        "skills/postgresql-sql-engineering-profile/SKILL.md": "1c99c5d80bf2fbd789a07404ae4524004ac1add7913f9015b795bae2b1c9e862",
+        "skills/postgresql-sql-engineering-profile/agents/openai.yaml": "112ad5f71b9d9dd1c2891d534aa66247723b0e857c7ca48d0a9b389d2b167a9b",
+        "skills/postgresql-sql-engineering-profile/references/checks.md": "ff8de9b6c51f634b41539fe62fc358557ff56d5d2495856cb159646e117e7576"
+      },
+      "reviewed_body_sha256": "419bb2a9c2b353253d4a1eec809ad9be1a03b64133d438d21d5eaec243bfe84a",
+      "corrected_entrypoint_sha256": "71ca852fd3146951425bd0368fa1f68a177be6bcf1efa3ca4bef6e11437945a9",
+      "authoring_events": [
+        "event-3274"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "prototype-spike",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/prototype-spike/SKILL.md": "1117babf9e17bbcb934f391d81c624e60f6e9bcf25acbb373273ecef46a2d0b2",
+        "skills/prototype-spike/agents/openai.yaml": "29d5221f9651077b4b107f1c7eb47519178608e25eb3e8a6a487ea7041afc8c8"
+      },
+      "creation_entrypoint_sha256": "1117babf9e17bbcb934f391d81c624e60f6e9bcf25acbb373273ecef46a2d0b2",
+      "creation_body_sha256": "5168a6a0b4d2e0dd406b0dd43a2accd76c0dea3926a74c38b72c9baa99798ada",
+      "reviewed_files": {
+        "skills/prototype-spike/SKILL.md": "7f88470de8562742219b8af87625062b89913f8fed573f7529c0fe5b60dd3d76",
+        "skills/prototype-spike/agents/openai.yaml": "5b1f35048d189940f64a28d08705cee07a34ddb495bd22e96af459ae82f21dac"
+      },
+      "reviewed_body_sha256": "99a752273ecde7af33e9f2395a168bd2411f3cd2ee0c7c9d7a9cf2261f01ae5c",
+      "corrected_entrypoint_sha256": "557cf552ace5ed2886bdacb1879940b6543b204bfb44b59c6b1dde5d6f94d767",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "python-engineering-profile",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/python-engineering-profile/SKILL.md": "e28cf0004a2290de9b75ee7b5f4ae79507e84cb861a6e4b0501d3da44003a805",
+        "skills/python-engineering-profile/agents/openai.yaml": "14c3757a94efadb2162fb6e60162a0e0ace8590c5044c341bc30a062154de9f8",
+        "skills/python-engineering-profile/references/checks.md": "e934de6f55a25c0939fd758d1886694fb6bb7f2430361ee458448d0fd1cb7d05"
+      },
+      "creation_entrypoint_sha256": "e28cf0004a2290de9b75ee7b5f4ae79507e84cb861a6e4b0501d3da44003a805",
+      "creation_body_sha256": "0314200e1e70e0d37f57faffb55a86ec887af6b44fe5df60d3f8983faf99a466",
+      "reviewed_files": {
+        "skills/python-engineering-profile/SKILL.md": "9fd5c8b976a175982e45ec9b57460466ebba1dbb74ae55573613c8fdc79705ca",
+        "skills/python-engineering-profile/agents/openai.yaml": "b50be7119527fa5505c172611949c31d1d3f5b5e3e93f8ea00dc449da1af5d75",
+        "skills/python-engineering-profile/references/checks.md": "fa61c67752fb84bd02c20f2f28b880ef17d911760421390aad3c0add201a4ed3"
+      },
+      "reviewed_body_sha256": "7ca14edb08779085a0f069c79ff222ae945f634cd16da2fc72fed86cad3e57ff",
+      "corrected_entrypoint_sha256": "723aec98fb655f95a1c3c93ad13322ae4abab2d3ffeaa7b83678249c2940462c",
+      "authoring_events": [
+        "event-3274"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "request-code-review",
+      "batch": "engineering-lifecycle",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_files": {
+        "skills/request-code-review/SKILL.md": "26afc06c3dae17fa6e6ba9459e967ee8ecc3c3b2510276b6729776c22daa3d93",
+        "skills/request-code-review/agents/openai.yaml": "0854e5f6afb0b126d0600b622467839f11b91f5aad93177d46965eadfc6ae470"
+      },
+      "creation_entrypoint_sha256": "26afc06c3dae17fa6e6ba9459e967ee8ecc3c3b2510276b6729776c22daa3d93",
+      "creation_body_sha256": "fc93ca37f3a9a2fde554b80a703dbc96d89e02aec919ecb5c98092739c4ad4af",
+      "reviewed_files": {
+        "skills/request-code-review/SKILL.md": "77dda44bbf2f015f2b126d2551a1268bf994b912dd44943ff919e2021f139081",
+        "skills/request-code-review/agents/openai.yaml": "afe28c9cda29ddd460d454cebc5bd4acae7a6f98641165a1946d96dc27c39f9c"
+      },
+      "reviewed_body_sha256": "9a3896a18a3c66aecf7b432bc0a6db93b53e502e845ee56e6f572c97465e2d09",
+      "corrected_entrypoint_sha256": "15b6e2428f0c91821dd4085404469d2b505541f069a35c5bea6c9e224bfce6b0",
+      "authoring_events": [
+        "event-3027"
+      ],
+      "input_events": [
+        "event-2986"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "respond-to-code-review",
+      "batch": "engineering-lifecycle",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_files": {
+        "skills/respond-to-code-review/SKILL.md": "2ab224b08777ea6192bba41b472d6c4ecaf619b53c38cf4c957b54f3eee5247c",
+        "skills/respond-to-code-review/agents/openai.yaml": "1f179e4fe73db2d447453a48cf58068f319ed2bc870b2445e428ec5156d76ebe"
+      },
+      "creation_entrypoint_sha256": "2ab224b08777ea6192bba41b472d6c4ecaf619b53c38cf4c957b54f3eee5247c",
+      "creation_body_sha256": "aefe058cd29539823c8574e61bd2e5af44c801bf55afba9bedbabe2609cf1660",
+      "reviewed_files": {
+        "skills/respond-to-code-review/SKILL.md": "7f3b026fc1d5b977ecbe2b4cd52528a8d58251349e12ecb62448cd2c769c3dce",
+        "skills/respond-to-code-review/agents/openai.yaml": "f89f3fdea95a56dd10d1685149defb42d61fbaa475d95be6bc6a56cfee9b791c"
+      },
+      "reviewed_body_sha256": "0a9084f222f79785df68fefdfb4dd1f0fb4752b5cc6d9aeeb698fc12e1f6c45d",
+      "corrected_entrypoint_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "authoring_events": [
+        "event-3027"
+      ],
+      "input_events": [
+        "event-2986"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "retrieval-grounding-quality-review",
+      "batch": "agent-platforms",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "creation_files": {
+        "skills/retrieval-grounding-quality-review/SKILL.md": "6c8f7fc7bb61edcf2e67688af79594ac9f6d581101680491feed151e480fea2a",
+        "skills/retrieval-grounding-quality-review/agents/openai.yaml": "9f37dfdc6dd9b02c959a2e6c100b87a5e54930591fe518927b5d98cccb1ac584",
+        "skills/retrieval-grounding-quality-review/references/retrieval-evidence-matrix.md": "0c82bf71f6008ecc36cf74ee39ce759547e09326f4eb606e8067478518cdb4e2"
+      },
+      "creation_entrypoint_sha256": "6c8f7fc7bb61edcf2e67688af79594ac9f6d581101680491feed151e480fea2a",
+      "creation_body_sha256": "759abec8fd61d0ca707e7649e2f04ab37532a0f736fc4b27df068e71aa284bd8",
+      "reviewed_files": {
+        "skills/retrieval-grounding-quality-review/SKILL.md": "73e297c6d42c04c4e31fffe5a25f50b2c8bdfada9f4c5fc75d23f44881ce659b",
+        "skills/retrieval-grounding-quality-review/agents/openai.yaml": "7e82251acc5ce56f6ec3a517c838d2af15a06a33dab3866dab8ace116e3d1971"
+      },
+      "reviewed_body_sha256": "86a7f8ab156587c807595e8da6d42d7f4d0ae134189a7018bbb2be4c5ab59785",
+      "corrected_entrypoint_sha256": "b42415ef665d3953cfcd06e809bcb466077eb7b587375b4f45eeaea45d66a77e",
+      "authoring_events": [
+        "event-9222",
+        "event-10504"
+      ],
+      "input_events": [
+        "event-9196"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "skill-security-review",
+      "batch": "foundation-security",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "creation_files": {
+        "skills/skill-security-review/SKILL.md": "590b4a7d6cbaf81ccf9247ceb011f60648e341b19ffde3a487c72c8263346656",
+        "skills/skill-security-review/agents/openai.yaml": "43da9e0afb154a76b5e30ae1611e0d5d93b8cf09ebbb726697ec927d3ec18569",
+        "skills/skill-security-review/references/review-domains.md": "23bd9ee41fac0a2ab542e51a6c4de76d9f25c5c791b06dc581c0b092652f6b1c"
+      },
+      "creation_entrypoint_sha256": "590b4a7d6cbaf81ccf9247ceb011f60648e341b19ffde3a487c72c8263346656",
+      "creation_body_sha256": "d33784ac97b8bd940f9d1cfb719ff063f05790a788aaa6ab8dd8206730a4ede4",
+      "reviewed_files": {
+        "skills/skill-security-review/SKILL.md": "2266937d2d41dfafac6ad5daf97da11d082a0da86a725d81e36087136792466f",
+        "skills/skill-security-review/agents/openai.yaml": "0003fbd023aff0ac901a69dbbd19f12d4ed4266976acd84c49459203b2c66518",
+        "skills/skill-security-review/references/review-domains.md": "d641503b1760dfe898f547eb98e431edfae0cdb8707f321ec63141c7cb012ac8"
+      },
+      "reviewed_body_sha256": "ba803c5af621e8a98bb1d53032e89dab42e5712e8b25cddd0c1fc19228aa08ae",
+      "corrected_entrypoint_sha256": "a18dfa80b96a329621df38c2f38df4304de8193c4c0f34b89b49b1c49d1cf12d",
+      "authoring_events": [
+        "event-667"
+      ],
+      "input_events": [
+        "event-344",
+        "event-354"
+      ],
+      "prior_exposure_events": [
+        "event-137"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The first write declared original; later metadata adopted clean-room without a process-separated rewrite. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "task-handoff",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/task-handoff/SKILL.md": "e00f91908be18b5d2fb83ddba62ba3c41c31957869f8c6981df5610624278c28",
+        "skills/task-handoff/agents/openai.yaml": "c902004d5387d2e58b3b9fd255cd568948199a49a0bf584ceb6c00fbdbb599a6"
+      },
+      "creation_entrypoint_sha256": "e00f91908be18b5d2fb83ddba62ba3c41c31957869f8c6981df5610624278c28",
+      "creation_body_sha256": "c08620fd80c61dccd9a17869da08eb88522594957d54dd52476ea06de5070b4b",
+      "reviewed_files": {
+        "skills/task-handoff/SKILL.md": "f210bfe62fceb22c49dfd50d3d0e19f01456cfef07f31f24c03a4190b4989c1d",
+        "skills/task-handoff/agents/openai.yaml": "457f30aaf79c2eeba1d245fe71a7eb7283465301ac2ab6b0fa7a0965b316b130",
+        "skills/task-handoff/references/continuity-example.md": "1247ce437138ba6987de0d74e22bcdc0921fb5c473e48c2fedd424ad1142e268"
+      },
+      "reviewed_body_sha256": "7cc7a5f8eafd99234f1a642ba166dc6b8784ed8f38fa362a3249366ff5572b96",
+      "corrected_entrypoint_sha256": "f946e8b58e9cb034a081f9c9345fa633a665bc3a011cf39c3e6a09a73c61acc8",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "terraform-engineering-profile",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/terraform-engineering-profile/SKILL.md": "5572f34a53aeedcdea6e9eb6c3dec6f99b473d76547cbcd62fd675621e3812a0",
+        "skills/terraform-engineering-profile/agents/openai.yaml": "39a1f65a32e6d878fc8a45a68e009ccbfe6decb28f9048a94c1ad161ab0210e8",
+        "skills/terraform-engineering-profile/references/checks.md": "fabc1dcd52aff23aa1f93c347569e32e4749caa303ab1713e1787fe5120cc098"
+      },
+      "creation_entrypoint_sha256": "5572f34a53aeedcdea6e9eb6c3dec6f99b473d76547cbcd62fd675621e3812a0",
+      "creation_body_sha256": "df0455994521241e9528f68f3af335941da919d562057f1346e53918580483f9",
+      "reviewed_files": {
+        "skills/terraform-engineering-profile/SKILL.md": "282f59883a1905420a0ad75ba376b30507ab52e826fb989679c9cbab87e8c31c",
+        "skills/terraform-engineering-profile/agents/openai.yaml": "b121e23d6ad1d81ea1f36b3c3a1e31494cca80501322b5b8b273ced33315251b",
+        "skills/terraform-engineering-profile/references/checks.md": "fabc1dcd52aff23aa1f93c347569e32e4749caa303ab1713e1787fe5120cc098"
+      },
+      "reviewed_body_sha256": "c45e26aeeee721575b22a7469af8c55e9868d6e5e9bd81c74313e570abefd062",
+      "corrected_entrypoint_sha256": "714af3ad5bb23315bf454623a6590ee1f2a54593b1dc2a48d678139e543690e7",
+      "authoring_events": [
+        "event-3274"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "test-quality-review",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/test-quality-review/SKILL.md": "c0633afa6873954e9d492b04a69ade9f3da71a22de044e9ee4a497dc385f01c4",
+        "skills/test-quality-review/agents/openai.yaml": "38437a80068fca793615aa520285dd8dc5787e194579f1807a4ee999140dd305"
+      },
+      "creation_entrypoint_sha256": "c0633afa6873954e9d492b04a69ade9f3da71a22de044e9ee4a497dc385f01c4",
+      "creation_body_sha256": "d4466be6889bde03cbd0953633e260f9c9ad75460b6c97bfea1945fbd11bdca4",
+      "reviewed_files": {
+        "skills/test-quality-review/SKILL.md": "06ef366e81a6aff5c2e76a4c143df4d4cd388a66991d878d7841a8b2701428d5",
+        "skills/test-quality-review/agents/openai.yaml": "d14ceed26e174a845c2c0b0e7062daa23a06ee7e0d8a1cf948ed94c3cf1a9602"
+      },
+      "reviewed_body_sha256": "4bc924f0ea2ecb8c98cc0ecc123560764c5d2adb2e1573bb8d45531b4d662b88",
+      "corrected_entrypoint_sha256": "fc03dabe36f968f8b8555888864e552b9027c187ddc126e28e53eda454a48660",
+      "authoring_events": [
+        "event-3269"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "typescript-javascript-engineering-profile",
+      "batch": "quality-and-stack",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "creation_files": {
+        "skills/typescript-javascript-engineering-profile/SKILL.md": "abfe321a98e16a01a7ec59471d37e409d535e6910fce5fc6c290ea82f4f5684d",
+        "skills/typescript-javascript-engineering-profile/agents/openai.yaml": "7dc1446070180f2fafe01ec8ce338d9223d69022699cf7f4e2b46acfbb741092",
+        "skills/typescript-javascript-engineering-profile/references/checks.md": "acd1d80c335357105b45f147d4af028d3e641f9f9ada399c38cf443e0ca0e6c9"
+      },
+      "creation_entrypoint_sha256": "abfe321a98e16a01a7ec59471d37e409d535e6910fce5fc6c290ea82f4f5684d",
+      "creation_body_sha256": "af89861a6706c9870418637ea9dcc1075c42df10818a9485a72b1d0f4faa3739",
+      "reviewed_files": {
+        "skills/typescript-javascript-engineering-profile/SKILL.md": "82b99ce2a68ec49a6f667adf925329a02d9d827171b03e5fd120bba2aa585cea",
+        "skills/typescript-javascript-engineering-profile/agents/openai.yaml": "51fc04f61bf8e25ccd3a0c9ec70dd0e08bcdfe46a52a6aec40f10cfae572987a",
+        "skills/typescript-javascript-engineering-profile/references/checks.md": "acd1d80c335357105b45f147d4af028d3e641f9f9ada399c38cf443e0ca0e6c9"
+      },
+      "reviewed_body_sha256": "34b524d4c1374fd3a818adb9e9e1eb3f116d4e9574cad7f773cb651cfdd734d6",
+      "corrected_entrypoint_sha256": "21e32291c77b148fc55424b3dff3e4575d23509c86a15cbd2e3aa3318077ee35",
+      "authoring_events": [
+        "event-3274"
+      ],
+      "input_events": [
+        "event-3247",
+        "event-3252"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "workflow-retrospective",
+      "batch": "engineering-depth",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "creation_files": {
+        "skills/workflow-retrospective/SKILL.md": "907b5867772aacd2dbcddd317d83c08bbc2ea5d323d55a208f816774aba60718",
+        "skills/workflow-retrospective/agents/openai.yaml": "93be648a574d5f4b5225e901e2711175c9bcba06ea769b1c6769262e7f78a68a"
+      },
+      "creation_entrypoint_sha256": "907b5867772aacd2dbcddd317d83c08bbc2ea5d323d55a208f816774aba60718",
+      "creation_body_sha256": "41732ab9dfeea7601516ba74a74088b6775dcfba17e340e48c8118adb7824267",
+      "reviewed_files": {
+        "skills/workflow-retrospective/SKILL.md": "4fa8badee2e93cd023b59d225e6bc76386123b22c90f6b4d1ab38b9e804556ed",
+        "skills/workflow-retrospective/agents/openai.yaml": "eab8151526deff90a95259074190a9ed63a7f08689fc6c90bd6db080029b03de",
+        "skills/workflow-retrospective/references/continuity-example.md": "d5ae8633bbac72acaec6b870cc5090e151fe5eb101434db27174e3eaa4644a9a"
+      },
+      "reviewed_body_sha256": "52cfe7e12e97db8828bbd466cce0daa265d0f92907d531cffc4266392a398107",
+      "corrected_entrypoint_sha256": "0d3d3ee90bc852a2f7305abe3979f1af2efce96d2596f7536975e8122405a35f",
+      "authoring_events": [
+        "event-5871"
+      ],
+      "input_events": [
+        "event-5857"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430",
+        "event-5306",
+        "event-5324",
+        "event-5333",
+        "event-5338"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    },
+    {
+      "skill": "worktree-isolation",
+      "batch": "engineering-lifecycle",
+      "previous_method": "clean-room",
+      "corrected_method": "original",
+      "decision": "requires_correction",
+      "basis": "retained_new_authorship_after_exposure",
+      "creation_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "creation_files": {
+        "skills/worktree-isolation/SKILL.md": "ed8c7a41d163a724908bffe93cca2efbb1af80900999d2b6173cdad4f59c8758",
+        "skills/worktree-isolation/agents/openai.yaml": "c5afa472378f3dec37d7bd47aab6d8e45dc5cbc4a132129020791f688ab78cad",
+        "skills/worktree-isolation/references/linked-worktree-model.md": "74f6bc05c75598b56c92aa96e319c564cce97e80794586f6837dc8d29bd19657"
+      },
+      "creation_entrypoint_sha256": "ed8c7a41d163a724908bffe93cca2efbb1af80900999d2b6173cdad4f59c8758",
+      "creation_body_sha256": "ae8624af9e7b4ac767cb3e138902fec6babf58cc2cd6767a24cc577b1882da3f",
+      "reviewed_files": {
+        "skills/worktree-isolation/SKILL.md": "de8230496802e34bdda246be56d4992d17915cff901513c6fab77034fb7d6e9c",
+        "skills/worktree-isolation/agents/openai.yaml": "3f972189503e9e0a1a30bcee99e2746588e16eab38b46aa6c87a04f47a02f068",
+        "skills/worktree-isolation/references/linked-worktree-model.md": "74f6bc05c75598b56c92aa96e319c564cce97e80794586f6837dc8d29bd19657"
+      },
+      "reviewed_body_sha256": "eb67452eeb47a7a8f4a3797631a1d04782836e62725aee8bd6e08ea4a3095655",
+      "corrected_entrypoint_sha256": "bfee7f29b4814020680472aa7b1c3872d1b8795c429f12946f04e24be650a74f",
+      "authoring_events": [
+        "event-3027"
+      ],
+      "input_events": [
+        "event-2986"
+      ],
+      "prior_exposure_events": [
+        "event-137",
+        "event-1430"
+      ],
+      "workflow_trace": "All numbered creation-workflow steps occur in retained literal authoring data/templates or the recorded pre-commit refinement. No archived command was executed.",
+      "finding": "The retained creation write supplies new workflow text in the exposed authoring session. The retained record does not establish clean-room separation. Original is a scoped authorship declaration, not independent originality or licensing acceptance.",
+      "qualification": "needs_evidence",
+      "missing_evidence": [
+        "independent expression and licensing review",
+        "accepted scoped maintainer disposition"
+      ]
+    }
+  ],
+  "summary": {
+    "reviewed": 40,
+    "requires_correction": 40,
+    "corrected_to_original": 40,
+    "supported_clean_room_processes": 0,
+    "independent_qualifications": 0,
+    "current_declared_methods": {
+      "original": 83,
+      "adapted": 4
+    },
+    "batch_counts": {
+      "agent-platforms": 6,
+      "engineering-depth": 7,
+      "engineering-lifecycle": 4,
+      "foundation-security": 1,
+      "quality-and-stack": 14,
+      "reasoning-foundation": 8
+    }
+  },
+  "record_hash_contract": "input_sha256 hashes the exact retained tool input UTF-8 string. output_sha256 hashes its matching payload.output value serialized as JSON with sorted keys, compact separators, and default ASCII escaping. Timestamps and call IDs locate private records; raw sessions are not public."
+}

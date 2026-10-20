@@ -212,7 +212,10 @@ class ReleaseIntegrityTests(unittest.TestCase):
         entries = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
         self.assertEqual('not_accepted', audit['release_acceptance'])
         self.assertEqual(4, len(audit['changes']))
-        self.assertEqual(40, sum(r['implementation_method'] == 'clean-room' for r in entries.values()))
+        import subprocess
+        historical = json.loads(subprocess.check_output(['git', 'show', audit['reviewed_source'] + ':provenance/catalog.json'], cwd=ROOT))
+        self.assertEqual(audit['remaining_clean_room_declarations'],
+                         sum(r['implementation_method'] == 'clean-room' for r in historical['entries']) - len(audit['changes']))
         for change in audit['changes']:
             skill = change['skill']
             entry = entries[skill]
@@ -225,6 +228,74 @@ class ReleaseIntegrityTests(unittest.TestCase):
             errors: list[str] = []
             validator._validate_owned_origin(entry, errors)
             self.assertEqual([], errors)
+
+    def test_remaining_clean_room_review_is_complete_and_changes_only_labels(self) -> None:
+        import subprocess
+        audit = json.loads((ROOT / 'docs/audits/clean-room-declaration-review-2026-10-20.json').read_text())
+        revision = audit['reviewed_source']
+        before = {r['skill']: r for r in json.loads(subprocess.check_output(
+            ['git', 'show', revision + ':provenance/catalog.json'], cwd=ROOT))['entries']}
+        after = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        expected = {name for name, entry in before.items() if entry['implementation_method'] == 'clean-room'}
+        self.assertEqual(40, len(expected))
+        self.assertEqual(expected, {r['skill'] for r in audit['changes']})
+        self.assertEqual(40, len(audit['changes']))
+        self.assertEqual('not_accepted', audit['release_acceptance'])
+        for record in audit['changes']:
+            skill = record['skill']
+            with self.subTest(skill=skill):
+                self.assertEqual('requires_correction', record['decision'])
+                self.assertEqual('needs_evidence', record['qualification'])
+                self.assertEqual('original', after[skill]['implementation_method'])
+                self.assertEqual('original', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
+                entrypoint = 'skills/' + skill + '/SKILL.md'
+                previous = subprocess.check_output(['git', 'show', revision + ':' + entrypoint], cwd=ROOT)
+                current = (ROOT / entrypoint).read_bytes()
+                self.assertEqual(previous.replace(b'  provenance: "clean-room"', b'  provenance: "original"'), current)
+                self.assertEqual(hashlib.sha256(current).hexdigest(), record['corrected_entrypoint_sha256'])
+                self.assertEqual(hashlib.sha256(previous.split(b'---', 2)[2]).hexdigest(), record['reviewed_body_sha256'])
+                expected_paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', revision, 'skills/' + skill], cwd=ROOT).decode().splitlines()
+                self.assertEqual(set(expected_paths), set(record['reviewed_files']))
+                for path, value in record['reviewed_files'].items():
+                    self.assertTrue(path.startswith('skills/' + skill + '/'))
+                    blob = subprocess.check_output(['git', 'show', revision + ':' + path], cwd=ROOT)
+                    self.assertEqual(hashlib.sha256(blob).hexdigest(), value)
+                creation = record['creation_revision']
+                subprocess.run(['git', 'merge-base', '--is-ancestor', creation, revision], cwd=ROOT, check=True)
+                creation_paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', creation, 'skills/' + skill], cwd=ROOT).decode().splitlines()
+                self.assertEqual(set(creation_paths), set(record['creation_files']))
+                for path, value in record['creation_files'].items():
+                    self.assertTrue(path.startswith('skills/' + skill + '/'))
+                    blob = subprocess.check_output(['git', 'show', creation + ':' + path], cwd=ROOT)
+                    self.assertEqual(hashlib.sha256(blob).hexdigest(), value)
+                initial = subprocess.check_output(['git', 'show', creation + ':' + entrypoint], cwd=ROOT)
+                self.assertEqual(hashlib.sha256(initial).hexdigest(), record['creation_entrypoint_sha256'])
+                self.assertEqual(hashlib.sha256(initial.split(b'---', 2)[2]).hexdigest(), record['creation_body_sha256'])
+                for field in ('source_url', 'pinned_revision', 'reviewed_on', 'upstream_license', 'security_review'):
+                    self.assertEqual(before[skill][field], after[skill][field])
+        for skill in set(before) - expected:
+            self.assertEqual(before[skill], after[skill])
+        self.assertEqual({'original': 83, 'adapted': 4}, audit['summary']['current_declared_methods'])
+        self.assertFalse(any(r['implementation_method'] == 'clean-room' for r in after.values()))
+
+    def test_retained_authoring_evidence_does_not_invent_process_acceptance(self) -> None:
+        audit = json.loads((ROOT / 'docs/audits/clean-room-declaration-review-2026-10-20.json').read_text())
+        self.assertEqual(0, audit['summary']['supported_clean_room_processes'])
+        self.assertEqual(0, audit['summary']['independent_qualifications'])
+        self.assertEqual(40, sum(audit['summary']['batch_counts'].values()))
+        for record in audit['changes']:
+            self.assertTrue(record['missing_evidence'])
+            self.assertTrue(record['authoring_events'])
+            self.assertTrue(record['prior_exposure_events'])
+            authored_at = audit['events'][record['authoring_events'][0]]['observed_at']
+            for key in record['prior_exposure_events']:
+                self.assertLess(audit['events'][key]['observed_at'], authored_at)
+            for key in record['authoring_events'] + record['input_events'] + record['prior_exposure_events']:
+                event = audit['events'][key]
+                for field in ('input_sha256', 'output_sha256'):
+                    self.assertRegex(event[field], r'^[0-9a-f]{64}$')
+                self.assertTrue(event['scope'])
+        self.assertEqual('mixed_authoring_input', audit['events']['event-5306']['kind'])
 
     def test_new_source_review_accounts_for_each_pin_change(self) -> None:
         import subprocess

@@ -9,8 +9,8 @@ Pin the full source revision and file inventory. Review canonical skills, focuse
 ## Evidence classes
 
 - Four owned adaptations: verify the owned-origin ancestor, canonical entrypoint and license hashes, recorded changes, and preserved original declarations. The current correction supports this lineage; it is not proof of universal originality.
-- Forty historical clean-room declarations: identify the original process requirement, authoring inputs, prior exposure, process boundaries, and retained authoring/review records for each declaration. A commit subject or metadata label does not prove that process. Correct unsupported classifications through reviewed changes; preserve historical facts.
-- Forty-three original declarations: inspect authoring history, source use, and licensing basis. Original authorship after exposure is distinct from a clean-room claim. No absence-of-exposure conclusion follows from an exact-file hash nonmatch.
+- Forty corrected process declarations: the [retained authoring review](clean-room-declaration-review-2026-10-20.md) records literal writes and prior exposure across six creation batches. Current labels declare original authoring after exposure. Review expression, source use, and licensing independently; do not infer separation or comprehensive clearance from the correction. Preserve historical facts and raw-record access limits.
+- Forty-three previously original declarations, in addition to the 40 corrections: inspect authoring history, source use, and licensing basis. Original authorship after exposure is distinct from a clean-room claim. No absence-of-exposure conclusion follows from an exact-file hash nonmatch.
 - Primary-source references: distinguish a correctness or format authority from an implementation source. Check license and copied-expression questions where applicable. A citation alone does not settle them.
 
 ## Decision record

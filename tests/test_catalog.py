@@ -1149,7 +1149,7 @@ class CatalogTests(unittest.TestCase):
             metadata = read_skill_metadata(root)
             self.assertEqual("measured-agent-platforms", metadata["plugin"])
             self.assertEqual("implicit", metadata["invocation"])
-            self.assertEqual("clean-room", metadata["provenance"])
+            self.assertEqual("original", metadata["provenance"])
             self.assertEqual("read-only", metadata["risk_class"])
 
         security = (
