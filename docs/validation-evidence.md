@@ -8,7 +8,7 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 254 regression tests.
+Current test suite: 257 regression tests.
 
 ## October 20 release-readiness repairs
 
@@ -293,3 +293,9 @@ The [40-skill review](audits/clean-room-declaration-review-2026-10-20.md) binds 
 ## Scoped expression review and notice retention, October 20
 
 The [decision packet](audits/scoped-expression-disposition-2026-10-20.md) binds fourteen skills and forty canonical files at its reviewed source. A regression checks the inventory hash, exact Git bytes, the 73 excluded skills, and pending acceptance. Failure-first notice checks demonstrated omission in generated packs and independent exports, and coordinated notice loss in generated Claude source plus a rehashed ZIP. Generators and package validation now preserve the root LICENSE across distributions, exports, and project projections. Offline evaluation receipts include the committed notice, with no client execution. These checks establish notice retention, not universal originality or legally sufficient human contribution.
+
+## Full canonical expression follow-up, October 20
+
+The [full packet](audits/catalog-expression-disposition-2026-10-20.md) adds the remaining 73 skills and revalidates the earlier fourteen unchanged. Three regressions bind complete input/output inventories, owned creation/license objects, exact provenance corrections, historical receipts, and pending acceptance. The forty-label regression is bound to its historical correction commit; current expression changes are checked by the new delta inventory instead of being mistaken for changes to that old audit. The initial full run exposed that stale historical comparison and the suite-count receipt, as well as expected pre-manifest drift. Final passing results must be read with the submitted source and manifest revision.
+
+Both official format validators accepted all 87 canonical skills. Eleven Claude packs passed strict native validation. Two generations produced identical archive checksums; all 87 ZIPs were compared with the prior checkpoint, and the six changed archives modified only their corresponding entrypoint. Notices and all other members were preserved. Public-boundary and repository-independence scans passed; their results are hygiene checks, not acceptance of the proposed originality disposition or installed-client behavior. No model evaluation ran.

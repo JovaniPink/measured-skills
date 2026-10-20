@@ -234,10 +234,12 @@ class ReleaseIntegrityTests(unittest.TestCase):
         import subprocess
         audit = json.loads((ROOT / 'docs/audits/clean-room-declaration-review-2026-10-20.json').read_text())
         revision = audit['reviewed_source']
+        correction_revision = '82d3ab5f1de27a32aa1bb698b72fe29d66e75c18'
+        subprocess.run(['git', 'merge-base', '--is-ancestor', correction_revision, 'HEAD'], cwd=ROOT, check=True)
         before = {r['skill']: r for r in json.loads(subprocess.check_output(
             ['git', 'show', revision + ':provenance/catalog.json'], cwd=ROOT))['entries']}
         after = {r['skill']: r for r in json.loads(subprocess.check_output(
-            ['git', 'show', '82d3ab5f1de27a32aa1bb698b72fe29d66e75c18:provenance/catalog.json'], cwd=ROOT))['entries']}
+            ['git', 'show', correction_revision + ':provenance/catalog.json'], cwd=ROOT))['entries']}
         expected = {name for name, entry in before.items() if entry['implementation_method'] == 'clean-room'}
         self.assertEqual(40, len(expected))
         self.assertEqual(expected, {r['skill'] for r in audit['changes']})
@@ -252,7 +254,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 self.assertEqual('original', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
                 entrypoint = 'skills/' + skill + '/SKILL.md'
                 previous = subprocess.check_output(['git', 'show', revision + ':' + entrypoint], cwd=ROOT)
-                current = (ROOT / entrypoint).read_bytes()
+                # This audit proves its historical metadata-only correction.
+                # The full expression packet separately binds today's reviewed delta.
+                current = subprocess.check_output(['git', 'show', correction_revision + ':' + entrypoint], cwd=ROOT)
                 self.assertEqual(previous.replace(b'  provenance: "clean-room"', b'  provenance: "original"'), current)
                 self.assertEqual(hashlib.sha256(current).hexdigest(), record['corrected_entrypoint_sha256'])
                 self.assertEqual(hashlib.sha256(previous.split(b'---', 2)[2]).hexdigest(), record['reviewed_body_sha256'])
