@@ -1,6 +1,6 @@
 ---
 name: source-grounded-research
-description: Research a question using current primary sources, preserving publisher URLs, dates, units, provenance, and uncertainty. Use for web investigations, fact checks, comparisons, or recommendations where current evidence and precise attribution matter.
+description: "Researches a question when asked to look up, compare, or verify current facts; uses primary sources and preserves dates, links, and uncertainty without turning claims into findings."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -43,4 +43,14 @@ The source record is a handoff, not a publication decision. Catalog inclusion do
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the conclusion, then give a concise evidence table containing `Finding`, `Status`, `Source`, `Date`, and `Limit`. End with unresolved questions or recommended verification where needed. When a knowledge-lifecycle handoff was requested, also return the proposed source IDs and public-safe source fields without writing them unless the user authorized a named destination.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two reports disagree about a date, and only one links the original record.
+
+Output: Inspect the original record and distinguish its event date from publication dates. Keep the discrepancy visible until the evidence resolves it.

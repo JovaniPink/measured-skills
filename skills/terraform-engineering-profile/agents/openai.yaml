@@ -1,7 +1,7 @@
 interface:
   display_name: "Terraform Engineering Profile"
-  short_description: "Apply focused Terraform engineering guidance"
-  default_prompt: "Use $terraform-engineering-profile to apply focused stack guidance after repository discovery."
+  short_description: "Reviews Terraform changes"
+  default_prompt: "Use $terraform-engineering-profile for this task: Reviews Terraform changes when plans, state, modules, providers, or drift need focused checks; discovers backend and version constraints without applying or changing shared infrastructure."
 policy:
   allow_implicit_invocation: true
 

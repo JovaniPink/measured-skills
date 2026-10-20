@@ -1,6 +1,6 @@
 ---
 name: multi-agent-orchestration
-description: Coordinate authorized parallel agents on independent bounded tasks with explicit ownership, evidence contracts, cost awareness, and final reconciliation. Invoke explicitly when parallel work can reduce latency without creating edit collisions or delegating irreversible decisions.
+description: "Coordinates parallel agents when explicitly asked to delegate independent work; defines ownership, evidence, and reconciliation without duplicating edits or delegating irreversible decisions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the integrated result and anything that needs the user's decision. Then return `Delegation authority`, `Task map`, `Ownership`, `Evidence contract`, `Cost boundary`, `Worker results`, `Integration verification`, and `Unresolved decisions`. List a decision as unresolved only when it blocks remaining work; otherwise make the routine call, record it, and continue.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two agents are authorized to review independent API and storage changes.
+
+Output: Give each agent a distinct artifact and evidence contract, then reconcile findings against one revision. Keep shared edits with one owner.

@@ -1,6 +1,6 @@
 ---
 name: implementation-planning
-description: Produce a decision-complete implementation plan grounded in repository and platform evidence. Use when a change needs concrete interfaces, ordered steps, tests, rollout controls, checkpoints, and stopping conditions before work begins.
+description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -16,6 +16,8 @@ metadata:
 Create an executable plan that another engineer can follow without reopening material design decisions.
 
 Read [specification synthesis](references/specification-synthesis.md) when multiple evidence sources must become one behavioral contract. Read [work packages](references/work-packages.md) when the plan needs independently reviewable units. Read [decision map](references/decision-map.md) when unresolved choices or multiple sessions control sequencing.
+
+Read [document lifecycle](references/document-lifecycle.md) when a specification or README drives implementation, or a plan must survive a handoff.
 
 ## Workflow
 
@@ -40,4 +42,14 @@ Read [specification synthesis](references/specification-synthesis.md) when multi
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Objective`, `Current evidence`, `Interfaces`, `Implementation steps`, `Test strategy`, `Rollout and rollback`, `Checkpoints`, `Risks`, and `Stopping conditions`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Plan a change to `parse(text)` so empty input returns `[]` while existing exceptions remain unchanged. No repository files have been supplied.
+
+Output: The requested contract is clear, but the implementation plan is blocked on repository evidence. The proposed interface is `parse("") -> []` with existing exceptions preserved. First locate the parser and current error fixtures, then plan the smallest change and tests for empty, valid, and invalid input. The checkpoint is a review of those files and acceptance cases; stop if existing callers require a different empty-input result. Changes, commands, rollout, and rollback remain unselected until the repository is inspected.

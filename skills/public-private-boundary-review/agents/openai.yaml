@@ -1,6 +1,6 @@
 interface:
   display_name: "Public-Private Boundary Review"
-  short_description: "Check artifacts before public exposure"
-  default_prompt: "Use $public-private-boundary-review to audit this artifact before it becomes public."
+  short_description: "Reviews material before public exposure"
+  default_prompt: "Use $public-private-boundary-review for this task: Reviews material before public exposure when asked to check for secrets, private identifiers, proprietary text, or unsupported claims; keeps private context out of public artifacts."
 policy:
   allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: csharp-dotnet-engineering-profile
-description: Apply focused C# and .NET engineering judgment after repository gate discovery. Use for .NET applications, libraries, ASP.NET Core, Entity Framework Core, async behavior, tests, packages, compatibility, and builds; defer exact commands to repository evidence.
+description: "Reviews C# and .NET changes when ASP.NET, Entity Framework, async code, packages, or target frameworks need focused checks; follows repository SDK and build contracts."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: An ASP.NET handler blocks on Task.Result inside an async request.
+
+Output: warning: synchronous waiting may block request threads. Inspect the call chain and cancellation behavior; validate an async change with repository tests.

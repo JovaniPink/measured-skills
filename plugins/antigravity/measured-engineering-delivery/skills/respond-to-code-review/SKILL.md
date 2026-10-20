@@ -1,6 +1,6 @@
 ---
 name: respond-to-code-review
-description: Evaluate code review feedback against current code, tests, contracts, and authority before accepting, rejecting, or deferring it. Use when review comments contain claims or requested changes that require technical verification.
+description: "Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ The response is done when every current comment has a classification with eviden
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the result and anything that needs the user's decision. Then return a table with `Comment`, `Verdict`, `Evidence`, `Action`, and `Response`, followed by validation and unresolved decisions. List a decision as unresolved only when it blocks remaining work.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A reviewer says a null input crashes, but the current code has an explicit null guard.
+
+Output: Check the exact path with a focused test. If the guard applies, explain the evidence and reject or narrow the finding rather than changing code blindly.

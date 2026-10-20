@@ -1,6 +1,6 @@
 interface:
   display_name: "Source-Output Conformance Audit"
-  short_description: "Audit source-to-readback fidelity"
-  default_prompt: "Use $measured-ai-systems:source-output-conformance-audit to audit exact source identity through persisted readback."
+  short_description: "Audits extraction or transformation"
+  default_prompt: "Use $measured-ai-systems:source-output-conformance-audit for this task: Audits extraction or transformation when asked whether output matches source documents or data; traces exact inputs, expected values, omissions, and mismatches across processing stages."
 policy:
   allow_implicit_invocation: true

@@ -6,6 +6,9 @@ concatenation so the boundary scanner does not flag this file.
 
 from __future__ import annotations
 
+from contextlib import redirect_stdout
+import hashlib
+import io
 import json
 import os
 import shutil
@@ -19,6 +22,7 @@ from unittest import mock
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
 import build_release_manifest  # noqa: E402
+import check_upstream_freshness as freshness_cli  # noqa: E402
 import check_public_boundary  # noqa: E402
 import validate_catalog  # noqa: E402
 from cataloglib import VERSION  # noqa: E402
@@ -208,6 +212,24 @@ class SkillValidationTests(unittest.TestCase):
 
 
 class FreshnessTests(unittest.TestCase):
+    def test_cli_success_identifies_offline_or_online_scope(self) -> None:
+        for online in (False, True):
+            with self.subTest(online=online):
+                output = io.StringIO()
+                arguments = ['check_upstream_freshness.py'] + (['--online'] if online else [])
+                with (
+                    mock.patch.object(sys, 'argv', arguments),
+                    mock.patch.object(freshness_cli, 'check', return_value=([], {'online': online})) as check,
+                    redirect_stdout(output),
+                ):
+                    self.assertEqual(0, freshness_cli.main())
+                check.assert_called_once_with(online=online)
+                if online:
+                    self.assertIn('Online upstream provenance freshness passed.', output.getvalue())
+                else:
+                    self.assertIn('Offline upstream provenance checks passed', output.getvalue())
+                    self.assertIn('no sources fetched', output.getvalue())
+
     @staticmethod
     def pins() -> tuple[date, int]:
         value = json.loads((REPO / "catalog" / "upstream-pins.json").read_text(encoding="utf-8"))
@@ -266,6 +288,11 @@ class ReleaseManifestTests(unittest.TestCase):
         self.assertEqual(SHA, document["source_commit"])
         self.assertEqual(VERSION, document["catalog_version"])
         self.assertGreater(len(document["artifacts"]), 100)
+        cases = 'evals/daily-engineering/cases.json'
+        matches = [a for a in document['artifacts'] if a['path'] == cases]
+        self.assertEqual(1, len(matches), 'the daily suite must be bound by the candidate manifest')
+        self.assertEqual('file', matches[0]['kind'])
+        self.assertEqual(hashlib.sha256((REPO / cases).read_bytes()).hexdigest(), matches[0]['sha256'])
 
 
 class GateCommandTests(unittest.TestCase):

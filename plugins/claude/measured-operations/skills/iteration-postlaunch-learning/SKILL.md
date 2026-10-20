@@ -1,6 +1,6 @@
 ---
 name: iteration-postlaunch-learning
-description: Plan and synthesize postlaunch learning from observed behavior, incidents, feedback, experiments, and outcome measures. Use after a release when the team must decide what to retain, change, investigate, or stop.
+description: "Reviews postlaunch learning when asked what worked, what to change, or which feedback deserves investigation; uses observed outcomes rather than treating deployment as success."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Intended outcomes, Observed evidence, Variance, Learning, Priorities, Next experiments, and Claim limits.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Support tickets rose after launch, but usage also doubled.
+
+Output: Compare ticket rate and categories against usage before attributing deterioration to the release. Preserve the raw counts and missing segmentation.

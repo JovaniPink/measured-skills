@@ -1,6 +1,6 @@
 ---
 name: publish-change-safely
-description: Publish an authorized repository change by verifying identity, remote, branch, diff scope, checks, commit, push, PR state, and repository visibility. Use only when the user explicitly asks to commit, push, publish, or open a pull request.
+description: "Commits, pushes, or opens a PR only when explicitly requested; verifies identity, destination, diff, and checks while keeping merge, deployment, and release separately authorized."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -27,7 +27,7 @@ Perform only the publication actions the user authorized while keeping neighbori
 7. Re-read the remote before pushing when concurrent changes are plausible. Never force-push, rewrite shared history, change visibility, or alter branch protection without explicit authorization.
 8. Push only the intended branch and verify the resulting remote revision.
 9. If authorized, open or update a PR with evidence-bounded claims. Do not merge unless the user separately authorized merge.
-10. Report the verified result first, then anything that needs the user's decision. Include the exact commit, remote branch, PR/check state, every remote state change made, requested actions left unfinished, and consequential lifecycle limits.
+10. Reconcile the authorized boundary against the observed remote state and report the result using the output contract.
 
 ## Stop conditions
 
@@ -37,8 +37,20 @@ Stop before mutation when identity, target repository, branch, staged scope, sec
 
 The work is done when the authorized boundary is reached and, if that boundary includes a push, the remote readback matches the intended revision.
 
-## Continuity and evidence
+## Output
 
-Lead with the verified result at the authorized publication boundary. Preserve exact identity, revision, remote readback, failed checks, requested actions left unfinished, and consequential lifecycle limits. Do not list every unrelated action that was never requested.
+Lead with the verified result at the authorized publication boundary. Preserve
+exact identity, revision, remote readback, PR/check state, failed checks, every
+remote state change made, requested actions left unfinished, and consequential
+lifecycle limits. Include a user decision only when one is needed; omit unrelated
+actions that were never requested.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The authorized push succeeded, but creating the requested PR failed.
+
+Output: The revision is pushed; the PR remains unfinished. Report the actual error and next authorized retry without claiming review or merge.

@@ -27,17 +27,17 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 1775,
+          "description_characters": 1261,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 1775,
+          "description_characters": 1261,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 1775,
+          "description_characters": 1261,
           "budget_policy": "Measure the exact tested client's retained descriptions, omissions, and activation behavior without assuming a fixed discovery budget.",
           "observed_listing_state": "not_observed"
         }
@@ -98,12 +98,12 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 1806,
+          "description_characters": 1225,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 1806,
+          "description_characters": 1225,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         }
@@ -129,6 +129,83 @@
           "observed_at": null,
           "evidence_reference": null,
           "reason": "Candidate selection only; no fresh installed inventory or comparative run has been recorded."
+        }
+      },
+      "disposition": "experimental"
+    },
+    {
+      "id": "daily-engineering-experimental",
+      "purpose": "Prepare a focused daily engineering selection for independent client activation trials.",
+      "skills": [
+        "problem-framing",
+        "implementation-planning",
+        "systematic-diagnosis",
+        "cross-stack-quality-gates",
+        "code-change-review",
+        "claim-verification",
+        "test-strategy",
+        "change-impact-analysis",
+        "application-security-review",
+        "api-contract-compatibility-review",
+        "python-engineering-profile",
+        "gcp-data-engineering-profile"
+      ],
+      "target_surfaces": [
+        "codex",
+        "claude-code",
+        "antigravity-cli"
+      ],
+      "applicability": "General engineering review and planning with Python and GCP data changes; a selection proposal, not observed activation evidence.",
+      "exclusions": [
+        "No global installation or account-upload changes.",
+        "No provider execution, paid model runs, or promotion based on offline checks.",
+        "Project projection retains its existing read-only implicit restriction."
+      ],
+      "discovery_measurements": {
+        "codex": {
+          "description_characters": 2152,
+          "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
+          "observed_listing_state": "not_observed"
+        },
+        "claude-code": {
+          "description_characters": 2152,
+          "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
+          "observed_listing_state": "not_observed"
+        },
+        "antigravity-cli": {
+          "description_characters": 2152,
+          "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
+          "observed_listing_state": "not_observed"
+        }
+      },
+      "source_catalog_version": "0.18.0",
+      "behavioral_evidence": {
+        "status": "none",
+        "observed_against_version": null,
+        "observed_at": null,
+        "evidence_reference": null
+      },
+      "surface_evidence": {
+        "codex": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "claude-code": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "antigravity-cli": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
         }
       },
       "disposition": "experimental"

@@ -1,6 +1,6 @@
 interface:
   display_name: "Problem Framing"
-  short_description: "Frame outcomes, evidence, constraints, and unknowns"
-  default_prompt: "Use $measured-engineering-build:problem-framing to make this request decision-ready before implementation."
+  short_description: "Frames a feature or problem"
+  default_prompt: "Use $measured-engineering-build:problem-framing for this task: Frames a feature or problem when asked what to build, which outcome matters, or whether a proposed fix addresses the need; establishes users, constraints, and success before implementation."
 policy:
   allow_implicit_invocation: true

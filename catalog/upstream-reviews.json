@@ -488,6 +488,86 @@
       ],
       "finding": "Reviewed 2026-10-05: React still advises removing Effects that only derive data or handle user events, caching expensive calculations with useMemo or React Compiler, and measuring with a production build because development rendering and Strict Mode change timings.",
       "action": "Retain the measured, effect-first diagnosis in react-rendering-performance-diagnosis. Refresh this reviewed fingerprint."
+    },
+    {
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+      "status": "reviewed",
+      "ownership_check": "Apache Airflow official documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Repeatable tasks should use defined intervals and stable inputs; retries require deliberate handling of external effects.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "status": "reviewed",
+      "ownership_check": "Google Cloud BigQuery documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Query plans, projection, pruning, and intermediate computation inform diagnosis; cost and capacity require separate evidence.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+      "status": "reviewed",
+      "ownership_check": "Google Cloud Dataflow documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Exactly-once processing must be distinguished from repeated external side effects and sink behavior.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "status": "reviewed",
+      "ownership_check": "Google Cloud Dataform documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Incremental tables have distinct filtering and update configuration; assertions and full refresh require separate review.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+      "status": "reviewed",
+      "ownership_check": "Google Cloud managed Spark documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Managed image versions determine component versions; the current upstream tool version is not proof of the installed stack.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.cloud.google.com/storage/docs/metadata",
+      "status": "reviewed",
+      "ownership_check": "Google Cloud Storage documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Object generation and metadata revision distinguish versions; object names alone do not establish immutable identity.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "status": "reviewed",
+      "ownership_check": "dbt official documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Incremental conditions and unique keys must be reviewed with the configured adapter and strategy; duplicate and null keys need explicit tests.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+      "status": "reviewed",
+      "ownership_check": "Apache Spark official documentation remains the primary technical authority.",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-20: Physical plans, partitions, shuffle, and statistics inform performance review; settings remain version-specific.",
+      "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
     }
   ]
 }

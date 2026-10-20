@@ -1,6 +1,6 @@
 ---
 name: alignment-interview
-description: "Establish a shared, decision-ready understanding before implementation by inspecting available evidence and asking one material question at a time. Use when goals, constraints, terminology, or success criteria are unclear; do not use to delay an already approved and sufficiently specified change."
+description: "Clarifies an underspecified request when the desired result, constraints, or success criteria are unclear; asks only material questions and does not reopen settled decisions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,10 +33,18 @@ Reach decision readiness before implementation starts.
 
 ## Output
 
-During the interview, return the current material question and changed understanding. At readiness, return `Shared understanding`, `Evidence`, `Decisions`, `Assumptions`, `Open questions`, `Readiness`, and any `Next authorized action`.
-
-## Continuity and evidence
-
-During the interview, present the material question and only the changed understanding needed to answer it. Preserve the full agreed model for the readiness summary; do not repeat it on every turn. Do not reopen decisions already answered unless new evidence creates a material conflict.
+During the interview, present the current material question and only the changed
+understanding needed to answer it. Do not reopen settled decisions unless new
+evidence creates a material conflict. At readiness, summarize the full agreed
+understanding, evidence, decisions, assumptions, open questions, readiness, and
+any next authorized action.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Storage is already chosen; only retention is undecided.
+
+Output: How long must records remain available, and what deletion obligations constrain that period?

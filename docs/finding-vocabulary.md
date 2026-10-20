@@ -4,6 +4,9 @@ Use this vocabulary when a skill reports findings. It gives every review the sam
 
 ## Why this exists
 
+The counts in this rationale describe the 0.15.0 review. The later GCP stack
+profile also uses the severity and finding-state vocabulary defined below.
+
 The catalog has 31 skills in the `review` capability family, and they do not all return the same shape of output. Fourteen skills return a list of findings: nine in the review family and five outside it. Thirteen return a gate or a verdict instead, including all 11 stack profiles. Four return an assessment or a record. This vocabulary applies to the 14 that return findings.
 
 Overlap among them is deliberate: every skill declares `composes_with`, 27 declare `conflicts_with`, and 11 route to a named sibling in their own instructions. A motion review can hand work to accessibility, performance, and authority reviews in one pass.
@@ -84,6 +87,7 @@ Adoption is partial and tracked here. A skill released before this vocabulary ke
 | `dependency-supply-chain-review` | Yes, 0.15.0 |
 | `test-quality-review` | Yes, 0.15.0 |
 | `skill-security-review` | Yes, 0.15.0 |
+| `gcp-data-engineering-profile` | Yes, 0.18.0 candidate |
 | `functional-motion-review` | Deferred |
 | `agentic-system-security-review` | No |
 | `retrieval-grounding-quality-review` | No |

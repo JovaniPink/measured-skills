@@ -1,7 +1,7 @@
 interface:
   display_name: "Requirements Synthesis"
-  short_description: "Synthesize evidence into bounded requirements"
-  default_prompt: "Use $requirements-synthesis to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Combines interviews, documents, and issues"
+  default_prompt: "Use $requirements-synthesis for this task: Combines interviews, documents, and issues when asked to turn conflicting inputs into requirements; traces each requirement to evidence and keeps unresolved decisions visible."
 policy:
   allow_implicit_invocation: true
 

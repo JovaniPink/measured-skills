@@ -1,6 +1,6 @@
 interface:
   display_name: "Merge Conflict Reconciliation"
-  short_description: "Resolve Git conflicts without advancing state silently"
-  default_prompt: "Use $merge-conflict-reconciliation to reconcile this exact conflict while preserving the abort path."
+  short_description: "Resolves a named Git conflict"
+  default_prompt: "Use $merge-conflict-reconciliation for this task: Resolves a named Git conflict when explicitly asked to reconcile a merge, rebase, or cherry-pick; preserves both intents and keeps continuation, commit, and push authority separate."
 policy:
   allow_implicit_invocation: false

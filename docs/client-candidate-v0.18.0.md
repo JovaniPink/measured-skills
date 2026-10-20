@@ -11,3 +11,16 @@ The [0.17.1 repair evidence](client-candidate-v0.17.1.md) is historical and does
 New workflows have authored positive, near-miss, safety and semantic qualification cases. Installed-versus-baseline behavioral runs, independent case review, and benefit evidence remain blocked. No additional paid evaluation spend is authorized. Packaging, discovery, semantic outcomes, manual accessibility and physical-device behavior remain distinct claims.
 
 The existing six unresolved online freshness changes and separate historical originality-corpus gate remain unresolved. The [October 5 source review](audits/source-review-2026-10-05-semantic.md) later reviewed all 27 changed sources and repinned 24; three unstable OWASP fingerprints remain held. No source repair or successful deterministic check authorizes promotion, release, merge or deployment.
+
+## October 20 refinement
+
+The prepared candidate now contains 87 canonical skills in the same 11 packs:
+87 Codex and Claude skills, and 70 implicit Antigravity skills. The original
+September count above describes that earlier source state. The 17 explicit-only
+workflows retain their policies.
+
+This revision adds a generic GCP profile, a 12-skill experimental daily selection,
+30 unrun routing cases, task-focused descriptions, concise output guidance,
+synthetic examples, and workflow diagrams. It retains existing source-review and
+release policies. Existing client observations qualify only their exact tested
+sources; no new activation, outcome, benefit, or release claim follows here.

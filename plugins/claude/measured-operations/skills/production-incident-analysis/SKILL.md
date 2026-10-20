@@ -1,6 +1,6 @@
 ---
 name: production-incident-analysis
-description: Analyze a production incident using timestamped evidence, system behavior, contributing conditions, response actions, and recovery. Use after an incident to establish what happened, why controls failed, and what learning or remediation is justified.
+description: "Analyzes an incident when asked what happened, why recovery took time, or how to prevent recurrence; builds an evidence-backed timeline without assigning unsupported blame."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Impact, Timeline, Detection, Causal analysis, Contributing conditions, Response, Recovery evidence, Actions, and Unresolved questions.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Errors began at 10:05; rollback ended them at 10:12, but the cause is unknown.
+
+Output: The timeline supports recovery after rollback. It does not yet establish root cause; compare the changed behavior and failure evidence.

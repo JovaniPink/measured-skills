@@ -1,6 +1,6 @@
 ---
 name: prelaunch-readiness
-description: Audit whether a web property, service, application, or major relaunch is ready for public use, separating repository checks from provider and live-runtime evidence. Use for launch checklists, release readiness, and go or no-go reviews.
+description: "Reviews launch readiness when asked for a go/no-go assessment or public-launch checklist; separates source checks, provider configuration, and live user journeys."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -31,3 +31,11 @@ Audit only the surface being launched. Read [surface checks](references/surface-
 - A successful build does not prove provider configuration or live behavior.
 - A merged change does not prove deployment, traffic, data migration, monitoring, or rollback readiness.
 - Do not require irrelevant checklist items merely because they appear in a generic template.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The build is green, but sign-in has not been tested on the hosted site.
+
+Output: Launch readiness is incomplete. The source check passed; hosted sign-in remains a required user-journey gap.

@@ -50,6 +50,11 @@
       "marker_value": "5fe18c7731a3c3c12a040994f7f4ca07ed8b59ac31d884825b88926f12b76f46"
     },
     {
+      "source_url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+      "marker_kind": "etag",
+      "marker_value": "\"331bcba1c60861647bddb4fdba75e1f3\""
+    },
+    {
       "source_url": "https://antigravity.google/docs/cli/headless/",
       "marker_kind": "etag",
       "marker_value": "\"tAIKDw\""
@@ -90,14 +95,44 @@
       "marker_value": "5e67e7ad92119a4618d5d6d6e57bd4a63c99d78e1523d86d39ea1f830618eae4"
     },
     {
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "marker_kind": "last-modified",
+      "marker_value": "Tue, 13 Oct 2026 22:08:34 GMT"
+    },
+    {
       "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
       "marker_kind": "last-modified",
       "marker_value": "Wed, 30 Sep 2026 20:40:23 GMT"
     },
     {
+      "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+      "marker_kind": "last-modified",
+      "marker_value": "Wed, 14 Oct 2026 21:04:02 GMT"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "marker_kind": "last-modified",
+      "marker_value": "Wed, 14 Oct 2026 05:50:38 GMT"
+    },
+    {
       "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
       "marker_kind": "last-modified",
       "marker_value": "Thu, 01 Oct 2026 19:18:45 GMT"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+      "marker_kind": "last-modified",
+      "marker_value": "Fri, 16 Oct 2026 03:18:40 GMT"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+      "marker_kind": "last-modified",
+      "marker_value": "Tue, 13 Oct 2026 22:08:34 GMT"
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "marker_kind": "etag",
+      "marker_value": "\"6d40389ac983db31f3c9889c338ad702\""
     },
     {
       "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -198,6 +233,11 @@
       "source_url": "https://slsa.dev/spec/v1.2/provenance",
       "marker_kind": "etag",
       "marker_value": "\"37cdaf7a2205c51c395640b3d51edc24-ssl\""
+    },
+    {
+      "source_url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+      "marker_kind": "etag",
+      "marker_value": "\"dd85-6569aa5054e49\""
     },
     {
       "source_url": "https://sre.google/sre-book/monitoring-distributed-systems/",

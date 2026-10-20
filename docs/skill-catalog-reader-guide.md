@@ -1,6 +1,6 @@
 # Measured Skills Catalog: A Reader Guide
 
-The Measured Skills catalog contains 86 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
+The Measured Skills catalog contains 87 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
 
 This guide explains what each plugin is for, what every skill does, and how explicit-only invocation works. It is intended for readers who want to understand the catalog before installing or using it.
 
@@ -28,14 +28,14 @@ The counts, groupings, and invocation policies below are reconciled against the 
 | `measured-engineering-build` | 5 | None |
 | `measured-engineering-review` | 11 | None |
 | `measured-engineering-delivery` | 9 | `acceptance-evidence-ledger`, `finish-development-branch`, `merge-conflict-reconciliation`, `multi-agent-orchestration`, `plan-execution`, `prototype-spike`, `request-code-review` |
-| `measured-stack-profiles` | 11 | None |
+| `measured-stack-profiles` | 12 | None |
 | `measured-operations` | 11 | None |
 | `measured-reasoning` | 11 | `decision-evidence-trace`, `guided-configuration`, `task-handoff`, `workflow-retrospective` |
 | `measured-ai-systems` | 3 | None |
 | `measured-agent-platforms` | 6 | None |
 | `measured-nextjs-workflows` | 3 | `nextjs-feature-delivery` |
 | `measured-swift-workflows` | 4 | `ios-journey-verification`, `swiftui-feature-delivery` |
-| **Total** | **86** | **17 skills** |
+| **Total** | **87** | **17 skills** |
 
 Most skills can activate implicitly when a request clearly matches their routing description. Skills marked `explicit-only` must be selected directly.
 
@@ -242,7 +242,7 @@ Determines whether dirty or concurrent repository work should be isolated in a G
 
 ## Stack profiles: measured-stack-profiles
 
-The stack-profiles plugin contains 11 optional skills. These profiles add platform- and language-specific engineering judgment after the repository's real commands and toolchain have been discovered.
+The stack-profiles plugin contains 12 optional skills. These profiles add platform- and language-specific engineering judgment after the repository's real commands and toolchain have been discovered.
 
 ### adobe-aem-engineering-profile
 
@@ -251,6 +251,10 @@ Provides Adobe Experience Manager guidance for product-generation discovery, Sli
 ### csharp-dotnet-engineering-profile
 
 Provides C# and .NET guidance for solutions and projects, asynchronous behavior, dependency injection, Entity Framework Core, packages, compatibility, and builds. It does not install tools, change dependencies, or apply migrations merely to validate a claim.
+
+### gcp-data-engineering-profile
+
+Provides read-only discovery and review for BigQuery, dbt, Dataform, Cloud Storage, Dataflow, Spark, and orchestration. It checks grain, keys, repeatability, late input, and evidence without authorizing a query, dry run, backfill, or deployment.
 
 ### go-engineering-profile
 

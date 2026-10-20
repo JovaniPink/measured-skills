@@ -1,6 +1,6 @@
 ---
 name: code-change-review
-description: "Review an exact code change for correctness, regressions, security, compatibility, test quality, and maintainability using the diff and repository evidence. Use before commit, pull request, merge, or release when the user wants findings rather than implementation."
+description: "Reviews a PR, commit, or diff when asked to \"review this PR\", \"check my changes\", or find regressions; reports actionable findings rather than silently modifying code."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -34,4 +34,14 @@ Review a pinned change and return evidence-bounded findings.
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with findings ordered by severity, most severe first. For each finding provide `Severity`, `State`, `Location`, `Failure`, `Evidence`, `Impact`, and `Suggested direction`. Grade `Severity` as `none`, `note`, `warning`, or `error`. Set `State` to `new`, `unchanged`, `updated`, or `absent` against the pinned base revision. `error` means the finding would block the reviewed action; keep reporting findings of every severity. Then report `Questions`, `Validation`, and `Review boundary`. If no actionable finding survives verification, say so and name remaining risks or untested surfaces.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: In the supplied A-to-B diff at `api/objects.py:42`, an object lookup loses its tenant predicate and filters only by ID. No access test has run.
+
+Output: error, new, `api/objects.py:42`: the diff removes tenant isolation. A caller who knows another tenant's ID could read that object because this handler no longer checks tenant ownership. Restore the predicate and add a cross-tenant rejection test before accepting the change. Evidence: the supplied lookup diff. Questions: none for this finding. Validation: static review only; the access test has not run. Review boundary: this handler and the supplied diff.

@@ -1,6 +1,6 @@
 ---
 name: application-security-review
-description: Review application or service security against current threat evidence and verifiable control requirements. Use for read-only assessment of authentication, authorization, input handling, data protection, session, error, configuration, and abuse risks; do not use this skill to audit agent packages.
+description: "Reviews application security when asked to check authentication, authorization, input handling, sessions, or exposed data; returns evidence-based findings without changing controls."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Threat scope, Verified controls, Findings, Evidence gaps, Risk priority, Recommended verification, and Claim limits. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. No change is pinned in this review, so do not assign a finding state.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The supplied download handler at `api/download.py:24` trusts an object ID without checking tenant ownership. No live attack or access-control test is authorized.
+
+Output: error: object access lacks a tenant authorization check at `api/download.py:24`. The supplied handler is the evidence; no equivalent control was verified in the reviewed scope. A valid identifier could expose another tenant's object, so this access boundary blocks acceptance. Recommended verification: an isolated cross-tenant rejection test and a trace of upstream authorization. Upstream controls and live exploitability remain evidence gaps. This is a static handler review, not a penetration-test result.

@@ -1,6 +1,6 @@
 interface:
   display_name: "Test-Driven Change"
-  short_description: "Capture red, green, and refactor evidence"
-  default_prompt: "Use $test-driven-change to implement this behavior with test-first evidence."
+  short_description: "Implements a bounded behavior change"
+  default_prompt: "Use $test-driven-change for this task: Implements a bounded behavior change when explicitly asked to use test-driven development; establishes a meaningful failing test, makes it pass, and refactors within authorized scope."
 policy:
   allow_implicit_invocation: true

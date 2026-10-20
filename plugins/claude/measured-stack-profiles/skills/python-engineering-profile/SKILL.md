@@ -1,6 +1,6 @@
 ---
 name: python-engineering-profile
-description: Apply focused Python engineering judgment after repository gate discovery. Use for Python packages, typing, async behavior, tests, dependencies, compatibility, and builds; defer exact commands to repository evidence.
+description: "Reviews Python changes when typing, async code, packaging, dependencies, or tests need focused checks; follows discovered Python versions and repository commands."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -32,5 +32,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A supplied Python 3.12 dependency lock and handler show an async request calling a synchronous network client directly. No commands have run.
+
+Output: warning: the synchronous call can block the event loop. Discovery is limited to the supplied Python 3.12 lock and handler; runtime latency is unmeasured. Review cancellation and the client's thread-safety contract before choosing an async client or offloading work. No validation command has been selected or run because repository gates were not supplied. Compatibility evidence and a cancellation test remain missing. Next inspect those gates and the pinned client behavior.

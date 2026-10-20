@@ -1,6 +1,6 @@
 ---
 name: domain-vocabulary-modeling
-description: "Build a proposed domain vocabulary from current code, documents, and stakeholder language, including concepts, definitions, relationships, invariants, authorities, examples, and contradictions. Use when inconsistent terms are causing design or communication errors; do not treat the result as ratified without owner evidence."
+description: "Clarifies domain terms when teams use the same word differently or code and documents disagree; proposes definitions and examples without declaring owner approval."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Create a traceable proposed language model for the domain.
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return the vocabulary table, relationship notes, contradictions, ratification needs, and migration implications.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Sales uses account for a company; billing uses it for a payment ledger.
+
+Output: Define separate Company and Billing Account concepts, with an explicit relationship. These are proposed terms until the domain owners confirm them.

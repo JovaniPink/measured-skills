@@ -1,7 +1,7 @@
 interface:
   display_name: "Python Engineering Profile"
-  short_description: "Apply focused Python engineering guidance"
-  default_prompt: "Use $python-engineering-profile to apply focused stack guidance after repository discovery."
+  short_description: "Reviews Python changes"
+  default_prompt: "Use $python-engineering-profile for this task: Reviews Python changes when typing, async code, packaging, dependencies, or tests need focused checks; follows discovered Python versions and repository commands."
 policy:
   allow_implicit_invocation: true
 

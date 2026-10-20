@@ -45,6 +45,18 @@ Each command should exit with status 0. `scripts/validate.py` ends with `All det
 
 The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, originality, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
 
+## Upstream freshness scope
+
+`python3 scripts/check_upstream_freshness.py` checks local pin coverage and review
+age. Its offline success message explicitly says that no sources were fetched.
+It cannot establish whether upstream content still matches the pins.
+
+`python3 scripts/check_upstream_freshness.py --online --output upstream-freshness-report.json`
+fetches upstream sources and compares their markers. The scheduled freshness job
+uses this mode. Keep changed or unavailable sources visible; an offline pass or
+a green catalog job does not clear an online freshness hold. This distinction
+does not change the existing freshness policy or authorize pin replacement.
+
 ## Antigravity preview checks
 
 The unit suite also checks the offline preview builder: selected source and reference files survive unchanged, explicit-only skills are rejected before output is written, unknown skills are rejected, repeated builds match, and old output cannot be overwritten. Build a review copy with `python3 scripts/build_antigravity.py --output dist/antigravity-review`. Use a new folder for each build. This does not install a plugin or prove client loading.

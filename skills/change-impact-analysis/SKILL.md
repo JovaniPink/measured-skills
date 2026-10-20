@@ -1,6 +1,6 @@
 ---
 name: change-impact-analysis
-description: "Analyze the blast radius of a proposed or completed change across callers, contracts, storage, jobs, clients, security, rollout, and operations. Use before review, merge, or release when downstream effects may be missed; do not substitute speculation for traced dependencies."
+description: "Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -34,4 +34,14 @@ Trace what a change can affect beyond its immediate diff.
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Change`, `Confirmed impacts`, `Possible impacts`, `Cleared surfaces`, `Evidence`, `Required tests`, `Rollout and rollback concerns`, and `Coverage gaps`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The supplied call graph shows that removing `event.total` affects `web/summary.ts` and `jobs/settle.py`. Other consumers have not been inspected.
+
+Output: Both traced consumers are confirmed impacts: each reads `event.total`. Other consumers remain possible impacts and a coverage gap; no uninspected surface is cleared. Evidence is the supplied call graph, not a runtime test. Required checks are old/new event decoding and both consumer paths. Keep the field through a compatible upgrade order, and retain an old-contract rollback path until consumer migration is verified.

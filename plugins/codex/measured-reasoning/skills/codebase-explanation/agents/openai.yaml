@@ -1,6 +1,6 @@
 interface:
   display_name: "Codebase Explanation"
-  short_description: "Explain current code mechanics from evidence"
-  default_prompt: "Use $measured-reasoning:codebase-explanation to trace how this code path works from current repository evidence."
+  short_description: "Explains existing code"
+  default_prompt: "Use $measured-reasoning:codebase-explanation for this task: Explains existing code when asked how a request flows, where behavior lives, or what a module does; grounds the explanation in current files rather than inferred historical intent."
 policy:
   allow_implicit_invocation: true

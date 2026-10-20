@@ -1,6 +1,6 @@
 ---
 name: task-handoff
-description: "Prepare a precise handoff for continuing work in another session, client, person, or agent using exact revisions, current state, evidence, decisions, blockers, and authority boundaries. Invoke explicitly when continuity matters and the recipient must not rediscover or overstate progress."
+description: "Prepares a continuation record when explicitly asked to hand off or resume work elsewhere; records exact state, unfinished work, evidence, and existing authority without transferring new permissions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -35,10 +35,19 @@ Create a compact, verifiable continuation record without transferring hidden rea
 
 ## Output
 
-Lead with `Continuation point` and `Next verification or action`, then return `Objective`, `Exact state`, `Completed`, `In progress`, `Decisions`, `Evidence`, `Changed artifacts`, `Validation`, `Blockers`, `Authority boundary`, and `Next verification steps`.
-
-## Continuity and evidence
-
-Lead with the continuation point and next verification or executable action. Retain the objective, exact revision and working state, changed artifacts, decisions, unresolved work, evidence references and freshness, existing authorization, and stop conditions. Use a compact record when sufficient and a fuller record when requested or needed. Reverify stale evidence before dependent action; do not repeat work already proved current.
+Lead with the continuation point and next verification or authorized action.
+Retain the objective, exact revision and working state, changed artifacts,
+completed and in-progress work, decisions, validation, blockers, evidence
+references and freshness, existing authorization, and stop conditions. Use one
+compact record unless a fuller handoff is requested or needed. Reverify stale
+evidence before dependent action; do not repeat work already proved current.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A patch passed tests at revision A, but the receiving checkout is B.
+
+Output: Preserve the patch and receipt at A. Compare B before relying on those tests; carry forward the unfinished work and existing authorization.

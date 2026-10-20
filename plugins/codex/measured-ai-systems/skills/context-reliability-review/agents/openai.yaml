@@ -1,6 +1,6 @@
 interface:
   display_name: "Context Reliability Review"
-  short_description: "Audit AI context assertions and lifecycle"
-  default_prompt: "Use $measured-ai-systems:context-reliability-review to review the provenance, timing, permissions, and lifecycle of this context."
+  short_description: "Checks supplied agent context"
+  default_prompt: "Use $measured-ai-systems:context-reliability-review for this task: Checks supplied agent context when asked whether a claim is stale, conflicting, authorized, or superseded; traces assertion provenance rather than redesigning the system of record."
 policy:
   allow_implicit_invocation: true

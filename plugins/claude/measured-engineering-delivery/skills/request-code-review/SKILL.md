@@ -1,6 +1,6 @@
 ---
 name: request-code-review
-description: Prepare an evidence-bounded code review packet and, only when separately authorized, send or publish the request. Invoke explicitly when a change is ready for reviewer attention and its scope, checks, risks, and unresolved decisions must be stated precisely.
+description: "Prepares a review packet when explicitly asked to request review of a change; states scope, tests, and risks, and sends it only when the destination and action are authorized."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -34,4 +34,14 @@ Give reviewers a precise packet that separates proposed code from checks, decisi
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Scope`, `Approach`, `Evidence`, `Risks`, `Not tested`, `Review focus`, `Authority`, and, if sent, `External readback`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Prepare a review request for a tested patch; sending it is not authorized.
+
+Output: The packet states the patch scope, revision, tests, and open risks. It is prepared locally and has not been sent.

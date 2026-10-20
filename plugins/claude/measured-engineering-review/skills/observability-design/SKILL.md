@@ -1,6 +1,6 @@
 ---
 name: observability-design
-description: Review or design observability for services and applications using logs, metrics, traces, alerts, and user-impact signals. Use when operators need to detect, explain, and respond to failures without confusing telemetry volume with operational understanding.
+description: "Designs logs, metrics, traces, and alerts when asked how to detect or explain failures; connects telemetry to user impact and operator actions rather than log volume."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Journeys and objectives, Signal design, Correlation, Dashboards, Alerts, Privacy and cost controls, and Validation plan.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: An alert reports CPU usage but says nothing about failed checkouts.
+
+Output: Add a user-impact signal tied to checkout failures and an operator action. CPU remains diagnostic context, not proof of customer impact.

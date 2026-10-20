@@ -1,7 +1,7 @@
 interface:
   display_name: "Data Migration Readiness"
-  short_description: "Review migration, reconciliation, and rollback readiness"
-  default_prompt: "Use $measured-engineering-review:data-migration-readiness to review this work with focused evidence."
+  short_description: "Reviews migration readiness"
+  default_prompt: "Use $measured-engineering-review:data-migration-readiness for this task: Reviews migration readiness when asked if a schema change, backfill, or cutover is safe; checks compatibility, reconciliation, and rollback without executing the migration."
 policy:
   allow_implicit_invocation: true
 

@@ -8,9 +8,9 @@ Equal priority does not mean every feature already works everywhere. We record w
 
 | Client | What we prepare | Where to start |
 | --- | --- | --- |
-| Codex | Native plugins with all 86 skills | [Codex setup](clients/codex.md) |
-| Claude Code | Native plugins with all 86 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
-| Antigravity | Native plugins with 69 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
+| Codex | Native plugins with all 87 skills | [Codex setup](clients/codex.md) |
+| Claude Code | Native plugins with all 87 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
+| Antigravity | Native plugins with 70 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
 
 A plugin is a group of skills. A skill is a set of instructions for a kind of task. A CLI is an app you use by typing commands in a terminal.
 
@@ -75,3 +75,5 @@ Keep personal writing preferences outside the catalogs. This short preference ca
 Check that the preference loaded before calling it active. Keep the same wording when comparing clients.
 
 The study that measures whether revised skills help is separate from these setup checks. A study needs complete runs and human review. An install check cannot prove that the skills improve task results.
+
+For document-backed changes, use the [document-driven workflow](document-driven-workflow.md). Its current source changes require fresh behavior checks.

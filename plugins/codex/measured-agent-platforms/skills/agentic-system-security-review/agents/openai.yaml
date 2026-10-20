@@ -1,6 +1,6 @@
 interface:
   display_name: "Agentic System Security Review"
-  short_description: "Review agentic system threats and controls"
-  default_prompt: "Use $measured-agent-platforms:agentic-system-security-review to perform a read-only threat and control review of this agentic system."
+  short_description: "Reviews agent security"
+  default_prompt: "Use $measured-agent-platforms:agentic-system-security-review for this task: Reviews agent security when asked to threat-model prompt injection, memory poisoning, retrieval, delegation, or tool abuse; assesses controls without executing attacks or changing permissions."
 policy:
   allow_implicit_invocation: true

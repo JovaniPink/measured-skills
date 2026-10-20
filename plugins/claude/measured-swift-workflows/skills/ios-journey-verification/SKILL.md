@@ -1,6 +1,6 @@
 ---
 name: ios-journey-verification
-description: Verify an explicitly named iOS user journey with deterministic fixtures, selected schemes, and observable acceptance steps. Use for bounded test execution; do not trigger for inferred live-data journeys, broad simulator resets, or claims of physical-device inference.
+description: "Verifies a named iOS journey when explicitly asked to run fixture-based acceptance steps on selected schemes; excludes inferred live-data journeys, device claims, and broad simulator resets."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,3 +33,11 @@ A passing simulator journey cannot prove model inference, device memory/thermal 
 ## Evidence and output
 
 Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The fixture opens a form and saves it in the simulator; no physical device was tested.
+
+Output: The selected simulator fixture journey passed. Device behavior remains unverified; report the scheme, simulator, and exact steps tested.

@@ -1,6 +1,6 @@
 ---
 name: dependency-supply-chain-review
-description: Review software dependencies and build supply-chain evidence for provenance, integrity, maintenance, vulnerability, and compromise risk. Use for a read-only assessment of manifests, lockfiles, registries, build inputs, CI actions, artifacts, and update policy.
+description: "Reviews dependencies and build inputs when asked whether a package, lockfile update, CI action, or artifact can be trusted; checks provenance and integrity without installing it."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Inventory, Provenance evidence, Findings, Reachability, Build risks, Recommended controls, and Claim limits. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. No change is pinned in this review, so do not assign a finding state.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A CI action changes from a commit SHA to a moving branch.
+
+Output: warning: the build input is no longer immutable. Review the intended revision and restore a verified immutable reference.

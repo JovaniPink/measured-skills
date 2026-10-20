@@ -1,6 +1,6 @@
 ---
 name: design-rationale-investigation
-description: "Investigate why code, architecture, or an operational design exists by comparing direct historical evidence, current behavior, and competing hypotheses. Use for design history and rationale questions; do not infer intent from code shape alone or search unrelated private sources."
+description: "Investigates why a design exists when asked why code was written that way or which constraint drove it; distinguishes historical evidence from plausible explanations."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -38,4 +38,14 @@ The investigation is done when each conclusion is classified and its implication
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Current mechanics`, `Timeline`, `Evidence`, `Hypotheses`, `Contradictions`, `Confidence`, `Expired assumptions`, and `Decision implications`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A comment says the cache avoids a slow legacy query; no decision record exists.
+
+Output: The comment supports that rationale, but its current relevance is unverified. Compare the query and history before treating the cache as necessary or obsolete.

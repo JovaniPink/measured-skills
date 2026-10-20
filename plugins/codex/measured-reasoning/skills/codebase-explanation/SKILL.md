@@ -1,6 +1,6 @@
 ---
 name: codebase-explanation
-description: "Explain how an existing codebase works using current repository evidence: entrypoints, ownership, control and data flow, state, interfaces, failures, and concrete files. Use when the user asks how code behaves; use design-rationale-investigation instead for historical intent or why a design was chosen."
+description: "Explains existing code when asked how a request flows, where behavior lives, or what a module does; grounds the explanation in current files rather than inferred historical intent."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -26,10 +26,22 @@ Explain mechanics from the code that exists now.
 
 ## Boundaries
 
+Use `design-rationale-investigation` for historical intent or why a design was chosen.
+
 - Current code can establish mechanics, not historical intent. Label rationale as inference unless direct evidence supports it.
 - Do not change code merely because the explanation reveals a defect or awkward design.
 - Do not imply that an unexecuted path, configuration, or deployment is active.
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with a plain-language summary, then provide `Entrypoints`, `Flow`, `State and ownership`, `Interfaces`, `Failure paths`, `Evidence`, and `Unknowns`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Requests enter Router, call InvoiceService, and persist through InvoiceStore.
+
+Output: Router handles transport, InvoiceService applies invoice rules, and InvoiceStore owns persistence. Those observed calls define the current request path.

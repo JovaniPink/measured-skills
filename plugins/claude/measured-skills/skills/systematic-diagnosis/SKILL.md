@@ -1,6 +1,6 @@
 ---
 name: systematic-diagnosis
-description: Diagnose a defect, failure, regression, or confusing behavior by reproducing it, narrowing the causal boundary, and reporting evidence. Use when the user asks why something fails or requests diagnosis without necessarily authorizing a fix.
+description: "Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Determine the most strongly supported cause before changing the system.
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Report `Symptom`, `Reproduction`, `Cause`, `Evidence`, `Alternatives eliminated`, `Impact`, and `Fix direction`. If no cause is established, say `Diagnosis incomplete` and name the next discriminating observation.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The build started failing after a dependency update, but the failing command, lockfile diff, and error output are missing.
+
+Output: Diagnosis incomplete. The reported symptom is a build failure after the update; reproduction and cause are unverified. No competing cause has been eliminated, and the affected build is blocked. Next observation: obtain the exact command and error, then compare the same command and environment with the prior lockfile. No rollback or source change has been made.

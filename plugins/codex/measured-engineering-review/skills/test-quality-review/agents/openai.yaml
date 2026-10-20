@@ -1,7 +1,7 @@
 interface:
   display_name: "Test Quality Review"
-  short_description: "Review whether tests provide credible defect evidence"
-  default_prompt: "Use $measured-engineering-review:test-quality-review to review this work with focused evidence."
+  short_description: "Reviews test quality"
+  default_prompt: "Use $measured-engineering-review:test-quality-review for this task: Reviews test quality when asked whether tests catch real regressions or merely mirror implementation; checks assertions, isolation, failure behavior, and coverage without equating count with confidence."
 policy:
   allow_implicit_invocation: true
 

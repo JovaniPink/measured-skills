@@ -1,6 +1,6 @@
 ---
 name: api-contract-compatibility-review
-description: Review API, event, schema, and client changes for backward, forward, and rollout compatibility. Use when producers and consumers may upgrade independently or when a change can alter behavior, shape, timing, errors, or semantics.
+description: "Reviews breaking API, event, and schema changes when asked whether old clients still work or independent upgrades are safe; checks behavior and rollout order as well as field shapes."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Contract inventory, Compatibility findings, Consumer risk, Test matrix, Rollout, Deprecation, and Unresolved authority. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. Mark each finding `new`, `unchanged`, `updated`, or `absent` against the pinned base revision.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: In the supplied A-to-B API diff, `total` changes from an integer to a string. The supplied older client decoder requires an integer, and those clients remain deployed.
+
+Output: error, new: the response type breaks the supplied older decoder. Contract inventory: A emits an integer; B emits a string; deployed older consumers require A. Evidence is the API diff and decoder contract. Test matrix: decode A and B responses with both old and new clients; results are pending. Preserve the existing type or add a compatible field, then verify consumer migration before deprecating the old contract. The rollout owner and migration completion are unresolved; this review authorizes neither rollout nor deprecation.

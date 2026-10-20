@@ -1,7 +1,7 @@
 interface:
   display_name: "Data Authority and Migration Ratification"
-  short_description: "Prepare authority and migration decisions for ratification"
-  default_prompt: "Use $measured-operations:data-authority-migration-ratification to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Prepares a migration decision"
+  default_prompt: "Use $measured-operations:data-authority-migration-ratification for this task: Prepares a migration decision when owners must approve data writers, cutover, reconciliation, and rollback; records a proposal and evidence without granting approval itself."
 policy:
   allow_implicit_invocation: true
 

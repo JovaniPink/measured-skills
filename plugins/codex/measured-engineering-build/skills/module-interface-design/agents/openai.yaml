@@ -1,6 +1,6 @@
 interface:
   display_name: "Module Interface Design"
-  short_description: "Design smaller, stable module contracts"
-  default_prompt: "Use $measured-engineering-build:module-interface-design to propose an evidence-based module boundary and interface."
+  short_description: "Designs module boundaries"
+  default_prompt: "Use $measured-engineering-build:module-interface-design for this task: Designs module boundaries when asked to untangle coupling, simplify an API, or clarify ownership; makes caller contracts concrete before implementation."
 policy:
   allow_implicit_invocation: true

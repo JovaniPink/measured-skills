@@ -1,6 +1,6 @@
 ---
 name: merge-conflict-reconciliation
-description: "Reconcile an active Git merge, rebase, or cherry-pick conflict by inspecting exact repository state, preserving both sides' intent, validating the result, and keeping abort available. Invoke explicitly for an identified conflicted worktree; staging, continuing, committing, and pushing require separate authority."
+description: "Resolves a named Git conflict when explicitly asked to reconcile a merge, rebase, or cherry-pick; preserves both intents and keeps continuation, commit, and push authority separate."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -43,4 +43,14 @@ Reconciliation is done when no conflict markers remain in the authorized files, 
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the result and any decision that needs the user. List a decision as unresolved only when it blocks the reconciliation. Then return `Git state`, `Conflict map`, `Side A intent`, `Side B intent`, `Resolution`, `Validation`, `Remaining conflicts`, `Abort option`, and `Next authorized action`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: One branch adds validation; the other renames the validated field.
+
+Output: Preserve the rename and apply validation to the new field. Check both intended behaviors before staging or continuing under the task's authorization.

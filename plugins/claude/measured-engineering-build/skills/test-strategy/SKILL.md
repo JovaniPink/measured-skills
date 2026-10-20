@@ -1,6 +1,6 @@
 ---
 name: test-strategy
-description: Design risk-proportionate test coverage across unit, integration, contract, end-to-end, property, migration, and manual layers. Use when a feature, architecture change, or defect needs a justified coverage plan rather than only running existing checks.
+description: "Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,22 @@ Choose the smallest set of tests that provides credible evidence for the actual 
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return a matrix with `Risk`, `Behavior`, `Test layer`, `Fixture`, `Oracle`, `Environment`, and `Failure signal`, followed by omissions and manual evidence needs.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A change adds retries at an external API boundary. The operation can create an object, and callers can cancel it.
+
+Output: Use controlled responses to check retry behavior before seeking provider evidence.
+
+| Risk | Behavior | Test layer | Fixture | Oracle | Environment | Failure signal |
+| --- | --- | --- | --- | --- | --- | --- |
+| Lost recovery | Retry succeeds or exhausts | Unit | Failure then success; repeated failure | Expected result or terminal error, bounded attempts | Local fake transport | Wrong result or excess attempts |
+| Duplicate effect | Same operation repeats | Contract | Replayed operation key | One logical creation | Isolated provider test environment | Multiple created objects |
+| Ignored cancellation | Caller cancels during delay | Unit | Controlled clock and cancellation | No later attempt | Local fake transport | Attempt after cancellation |
+
+Provider idempotency remains unverified until a separately authorized integration check. No check has run, and live production behavior is outside this test plan.

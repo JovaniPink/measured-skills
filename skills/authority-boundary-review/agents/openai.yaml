@@ -1,6 +1,6 @@
 interface:
   display_name: "Authority Boundary Review"
-  short_description: "Map sources of truth and projections"
-  default_prompt: "Use $authority-boundary-review to map authority, writers, readers, and reconciliation."
+  short_description: "Maps sources of truth"
+  default_prompt: "Use $authority-boundary-review for this task: Maps sources of truth when asked which database owns a value, which copies are projections, or who may write during migration; distinguishes proposed ownership from approved authority."
 policy:
   allow_implicit_invocation: true

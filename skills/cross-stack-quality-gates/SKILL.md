@@ -1,6 +1,6 @@
 ---
 name: cross-stack-quality-gates
-description: Discover and run the repository's real validation gates across supported application, language, data, and infrastructure stacks without assuming a universal command. Use after changes, before review, or when asked whether a codebase passes its checks.
+description: "Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,10 +40,24 @@ The run is done when every required gate for the changed components has a record
 
 ## Output
 
-Return the overall verdict `PASS`, `FAIL`, or `INCOMPLETE` first, followed by the complete gate table with `Component`, `Command`, `Result`, and `Evidence`, and any coverage gaps.
-
-## Continuity and evidence
-
-Lead with PASS, FAIL, or INCOMPLETE, derived from the required gates. Retain the complete command and evidence table, unavailable checks, and the first actionable failure. A missing required gate cannot become a pass through summarization.
+Lead with PASS, FAIL, or INCOMPLETE as derived from the required gates. Keep the
+complete gate table with component, command, result, and evidence. Include
+unavailable checks, coverage gaps, and the first actionable failure. A missing
+required gate cannot become a pass through summarization.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: At synthetic revision B, the supplied unit-test receipt records 12 passes. The repository requires an integration check, but its service is unavailable.
+
+Output: INCOMPLETE at B.
+
+| Component | Command | Result | Evidence |
+| --- | --- | --- | --- |
+| Unit | `python3 -m unittest discover -s tests/unit` | PASS | Supplied receipt at B: 12 passes |
+| Integration | `python3 -m unittest discover -s tests/integration` | NOT RUN | Required service unavailable |
+
+The integration gate is the first actionable blocker. Its behavior remains unverified; repeat that gate when the service is available. No completion claim is supported yet.

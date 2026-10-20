@@ -1,6 +1,6 @@
 ---
 name: swiftui-feature-delivery
-description: Deliver an explicitly requested SwiftUI feature within approved files and targets. Use for bounded implementation with state ownership, availability, accessibility, and test evidence; do not trigger for read-only review or generic Swift questions.
+description: "Implements a named SwiftUI feature when explicitly requested within approved targets and files; follows actual SDK and state ownership and keeps missing required checks visible."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -36,3 +36,11 @@ Never run repository-wide mutating formatters or add dependencies, raise targets
 ## Evidence and output
 
 Lead with the result and anything that needs the user's decision. Then report the authorized scope, applicable settings, observed evidence, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Implement an approved form change; the required device check is unavailable.
+
+Output: Implement and run available gates, then report the device check as missing. Required unavailable validation keeps the work incomplete.

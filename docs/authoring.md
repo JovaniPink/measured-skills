@@ -89,3 +89,19 @@ Source: [Skill authoring best practices](https://platform.claude.com/docs/en/age
 - Run the originality and repository-independence scans.
 - Confirm that generated trees match the canonical sources.
 - Record client-specific smoke evidence when the release policy requires it.
+
+## Task-focused refinement
+
+Lead descriptions with a discriminating capability and concrete requester words.
+Target at most 400 characters while preserving selection boundaries. Explicit-only
+workflows remain explicit. Do not use indiscriminate activation commands or add
+client-only trigger fields to canonical frontmatter.
+
+Output contracts specify meaning, not a mandatory number of headings. Lead with
+the result and retain evidence, risk, unfinished work, and authority in a concise
+format. Expand when the task needs it. Synthetic input/output examples illustrate
+style; they never count as client observations.
+
+Inline a short rubric used in the ordinary workflow. Keep conditional platform
+detail and acceptance fixtures directly linked. Length alone does not determine
+placement. See the [October audit](audits/catalog-usability-2026-10-20.json).

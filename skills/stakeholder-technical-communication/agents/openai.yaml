@@ -1,7 +1,7 @@
 interface:
   display_name: "Stakeholder Technical Communication"
-  short_description: "Prepare evidence-bounded technical communication"
-  default_prompt: "Use $stakeholder-technical-communication to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Explains technical evidence"
+  default_prompt: "Use $stakeholder-technical-communication for this task: Explains technical evidence when asked for a stakeholder update, decision brief, or plain-language status; preserves the decision needed and material limitations without unnecessary approval requests."
 policy:
   allow_implicit_invocation: true
 

@@ -1,6 +1,6 @@
 ---
 name: agent-evaluation-design
-description: Design an evaluation contract for an AI agent, model-assisted workflow, or prompt-driven system using representative cases, baselines, configurations, graders, error classes, thresholds, cost, latency, human review, and limitations. Use when the decision depends on measured AI behavior across cases; use test-strategy for ordinary software coverage and test-quality-review for an existing test suite.
+description: "Designs AI evaluations when asked how to test an agent, compare prompts, or measure answer quality; requires representative cases and a baseline rather than one favorable response."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -41,10 +41,23 @@ Identify the system version, decision owner, intended users, operating environme
 
 ## Output
 
-Return an evaluation contract with `Decision`, `System under evaluation`, `Population and cases`, `Baseline`, `Configurations`, `Oracles and graders`, `Error taxonomy`, `Metrics`, `Thresholds`, `Human review`, `Cost and latency`, `Execution authority`, and `Limitations`.
+Return a concise evaluation contract covering the decision, system, population,
+cases, baseline, configurations, graders, error classes, metrics, thresholds,
+human review, cost, latency, execution authority, and limitations.
 
-## Continuity and evidence
-
-Declare planned case, arm, and repetition coverage before collection. Bind every result to a unique study, case, arm, repetition, client, source, instructions, and execution envelope; reject duplicate or mismatched identities rather than overwriting. Check coverage and evidence integrity before outcome scoring. Keep failed execution, missing evidence, deterministic diagnostics, and pending human review distinct. Isolate treatment setup from task grading and protect the test contract independently.
+Declare planned case, arm, and repetition coverage before collection. Bind each
+result to a unique study, case, arm, repetition, client, source, instructions,
+and execution envelope. Reject duplicate or mismatched identities rather than
+overwriting. Check coverage and evidence integrity before scoring; keep failed
+execution, missing evidence, deterministic diagnostics, and pending human review
+distinct. Isolate treatment setup from grading and protect the test contract.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: One of twelve planned cases has a favorable answer.
+
+Output: The comparison is incomplete. One response cannot establish the agent's success rate or justify adoption.

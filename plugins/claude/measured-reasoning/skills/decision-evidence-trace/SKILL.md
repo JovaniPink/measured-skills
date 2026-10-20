@@ -1,6 +1,6 @@
 ---
 name: decision-evidence-trace
-description: "Maintain a bounded decision and evidence trail for a long-running task without exposing hidden reasoning, raw transcripts, secrets, or unrelated activity. Invoke explicitly when the user wants an auditable task log in chat or an authorized append-only file."
+description: "Maintains a decision log when explicitly asked to record choices, evidence, and unresolved work across a task; excludes hidden reasoning, raw transcripts, and unrelated private context."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,4 +40,14 @@ Do not turn private reasoning into a claim object or treat a trace entry as sour
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return the current entries, unresolved evidence needs, and the trace location if a file was explicitly authorized. If a knowledge-lifecycle handoff was requested, include proposed note or claim IDs and relationships separately from the trace.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Record the decision to keep the old endpoint until client migration completes.
+
+Output: Decision: retain the endpoint. Status: approved for this task. Evidence needed for removal: current client migration completion; no removal authority is implied.

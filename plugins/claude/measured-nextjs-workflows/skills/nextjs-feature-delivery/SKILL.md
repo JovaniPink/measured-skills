@@ -1,6 +1,6 @@
 ---
 name: nextjs-feature-delivery
-description: Deliver an explicitly requested Next.js App Router feature within approved routes and files using installed-version documentation. Use for bounded implementation and repository gates; do not trigger for read-only audits or adding infrastructure without a product requirement.
+description: "Implements a named Next.js App Router feature when explicitly requested within approved routes and files; follows installed-version docs and repository gates without adding unrequested infrastructure."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -35,3 +35,11 @@ Do not run broad mutating formatters, framework upgrades, codemods, deployments,
 ## Evidence and output
 
 Lead with the result and anything that needs the user's decision. Then report the authorized scope, applicable settings, observed evidence, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Add a filter to one approved App Router page; the project has a pinned Next.js version.
+
+Output: Inspect installed route and data APIs, implement the filter within the approved page, and run its repository gates. No infrastructure change follows from this request.

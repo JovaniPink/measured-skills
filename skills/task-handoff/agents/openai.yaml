@@ -1,6 +1,6 @@
 interface:
   display_name: "Task Handoff"
-  short_description: "Transfer exact state without transferring authority"
-  default_prompt: "Use $task-handoff to prepare a verified continuation record for this task."
+  short_description: "Prepares a continuation record"
+  default_prompt: "Use $task-handoff for this task: Prepares a continuation record when explicitly asked to hand off or resume work elsewhere; records exact state, unfinished work, evidence, and existing authority without transferring new permissions."
 policy:
   allow_implicit_invocation: false

@@ -760,6 +760,35 @@
       "maturity_evidence": "evals/cases.json"
     },
     {
+      "skill": "gcp-data-engineering-profile",
+      "plugin": "measured-stack-profiles",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "cross-stack-quality-gates",
+        "python-engineering-profile",
+        "data-migration-readiness"
+      ],
+      "conflicts_with": [
+        "postgresql-sql-engineering-profile",
+        "google-adk-engineering-profile"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
       "skill": "go-engineering-profile",
       "plugin": "measured-stack-profiles",
       "capability_family": "review",

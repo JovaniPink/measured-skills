@@ -203,8 +203,18 @@ class CurrentEvidenceTests(unittest.TestCase):
         records = {item["source_url"]: item for item in reviewed["records"]}
         changed = {item["source_url"] for item in initial["records"] if item["result"] != "pass"}
         self.assertEqual(fixture["source_commit"], initial["source_revision"])
-        self.assertEqual(set(before), set(current))
-        self.assertEqual(55, len(current))
+        added = {
+            'https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html',
+            'https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute',
+            'https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once',
+            'https://docs.cloud.google.com/dataform/docs/create-tables',
+            'https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists',
+            'https://docs.cloud.google.com/storage/docs/metadata',
+            'https://docs.getdbt.com/docs/build/incremental-models',
+            'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
+        }
+        self.assertEqual(set(before) | added, set(current))
+        self.assertEqual(63, len(current))
         self.assertEqual(27, len(changed))
         self.assertEqual(changed, set(records))
         self.assertEqual(reviewed["reviewed_on"], pins["reviewed_on"])

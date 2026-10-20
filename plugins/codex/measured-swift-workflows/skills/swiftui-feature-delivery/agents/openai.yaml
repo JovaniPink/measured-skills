@@ -1,6 +1,6 @@
 interface:
   display_name: "SwiftUI Feature Delivery"
-  short_description: "SwiftUI Feature Delivery"
-  default_prompt: "Use $measured-swift-workflows:swiftui-feature-delivery for the identified bounded task and report observed evidence."
+  short_description: "Implements a named SwiftUI feature"
+  default_prompt: "Use $measured-swift-workflows:swiftui-feature-delivery for this task: Implements a named SwiftUI feature when explicitly requested within approved targets and files; follows actual SDK and state ownership and keeps missing required checks visible."
 policy:
   allow_implicit_invocation: false

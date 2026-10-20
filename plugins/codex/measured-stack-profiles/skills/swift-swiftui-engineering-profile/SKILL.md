@@ -1,6 +1,6 @@
 ---
 name: swift-swiftui-engineering-profile
-description: Apply focused Swift and SwiftUI engineering judgment after repository gate discovery. Use for packages, applications, SwiftUI data flow, SwiftData and CloudKit models, Swift 6 concurrency and actor isolation, Swift Testing, iOS accessibility, HealthKit authorization, compatibility, and builds; require observed macOS evidence for Apple toolchain claims.
+description: "Reviews Swift and SwiftUI changes when state, identity, layout, concurrency, or SDK compatibility need focused checks; separates compiler, simulator, device, and release evidence."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -57,5 +57,14 @@ Each rule carries a label. `[verified]` rules identify SDK inspection, compile, 
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A view loses draft input after its identity changes.
+
+Output: Trace state ownership and identity across the transition. A stable owner may be needed; verify the actual target SDK and behavior before changing state wrappers.

@@ -1,7 +1,7 @@
 interface:
   display_name: "Performance and Scalability Diagnosis"
-  short_description: "Diagnose performance limits with measured evidence"
-  default_prompt: "Use $measured-engineering-review:performance-scalability-diagnosis to review this work with focused evidence."
+  short_description: "Diagnoses a slow or overloaded system"
+  default_prompt: "Use $measured-engineering-review:performance-scalability-diagnosis for this task: Diagnoses a slow or overloaded system when asked why latency, throughput, or resource use changed; compares measurements and hypotheses without silently optimizing code."
 policy:
   allow_implicit_invocation: true
 

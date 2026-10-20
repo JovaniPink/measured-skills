@@ -1,6 +1,6 @@
 ---
 name: functional-motion-review
-description: Review motion in editorial and data interfaces for clarity, accessible content, and truthful evidence. Use for animation-gated content or sample data presented as live; not routine styling or animation implementation.
+description: "Reviews motion when animations hide content, distract from a data story, or make sample data appear live; checks accessible presentation and evidence rather than routine styling."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -42,8 +42,18 @@ Reject fake live activity, hidden essential content, unlabeled synthetic outcome
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the supported finding about the reader task. Put a blocking failure or incomplete evidence before any proposed benefit. The first sentence states the finding; do not open with file paths, reference titles, or an account of what you read. Attach each source to the finding it supports. Preserve the requested detail, failed checks, uncertainty, and relevant unfinished work.
 
 Then return `Intended benefit`, `Evidence and domain authority`, `Motion role and intensity`, `Static and keyboard behavior`, `Reduced motion and interruption`, `Bundle and performance evidence`, `Comprehension findings`, `Risks`, and `Missing evidence`. Label each conclusion as repository inspection, browser observation, automated test, participant finding, or recommendation. Record the date and exact reviewed revision inside `Evidence and domain authority`, never before the finding. Give a next action only when one is needed.
 
 WCAG 2.3.3 interaction animation is Level AAA. Pause, Stop, Hide (2.2.2) is Level A with separate conditions. Use the reference to assess those conditions; do not describe every motion preference as a universal AA requirement.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A chart hides its labels until a long animation ends.
+
+Output: warning: motion delays access to the data. Make labels available without waiting and verify reduced-motion behavior preserves the same information.
