@@ -87,6 +87,34 @@ class DistributionLicensingTests(unittest.TestCase):
         self.assertIn('universal non-infringement', audit['excluded_claims'])
         self.assertEqual('not_established', next(r['status'] for r in audit['controls'] if r['id'] == 'human-contribution'))
 
+    def test_copyable_overlay_example_preserves_its_notice(self) -> None:
+        from sync_private_overlay import sync
+        example = ROOT / 'examples/private-overlay'
+        notice = (ROOT / 'LICENSE').read_bytes()
+        with tempfile.TemporaryDirectory() as raw:
+            repo = Path(raw).resolve()
+            shutil.copytree(example / '.agent-skills', repo / '.agent-skills')
+            self.assertEqual([], sync(repo, check_only=False))
+            self.assertEqual([], sync(repo, check_only=True))
+            for prefix in ('.agent-skills', '.agents', '.claude'):
+                path = repo / prefix / 'skills/example-authority-policy/LICENSE'
+                self.assertTrue(path.is_file(), str(path))
+                self.assertEqual(notice, path.read_bytes())
+                self.assertFalse(path.is_symlink())
+
+    def test_antigravity_preview_retains_and_hashes_notices(self) -> None:
+        from build_antigravity import build
+        notice = (ROOT / 'LICENSE').read_bytes()
+        with tempfile.TemporaryDirectory() as raw:
+            output = Path(raw).resolve() / 'preview'
+            build(output, ['claim-verification'])
+            receipt = json.loads((output / 'bundle.json').read_text())
+            for relative in ('LICENSE', 'skills/claim-verification/LICENSE'):
+                path = output / 'plugin' / relative
+                self.assertTrue(path.is_file(), str(path))
+                self.assertEqual(notice, path.read_bytes())
+                self.assertEqual(hashlib.sha256(notice).hexdigest(), receipt['plugin_sha256'][relative])
+
     def test_archive_validation_rejects_coordinated_notice_loss(self) -> None:
         skill = 'claim-verification'
         metadata = read_skill_metadata(ROOT / 'skills' / skill)

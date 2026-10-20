@@ -48,3 +48,9 @@ Cloud libraries, managed work-account policies, and app-mode loading require sep
 - Release claims identify exact supported scope and untested conditions.
 
 No release follows automatically from completing repository repairs or the pilot. A separate maintainer release decision remains required.
+
+## Proposed originality decision ready for review
+
+The [exact approval packet](audits/originality-approval-2026-10-20.md) adds noncanonical inventory and licensing evidence. It records the original shared SVG write, publisher metadata for the eight pinned CI tools, license receipts for the three pinned CI actions, and review methods and limits for tooling, fixtures, and documentation. Two reproduced notice omissions are repaired: the older Antigravity preview and the copyable fictional overlay example. The root no-copy claim and inaccurate package-content statement are corrected.
+
+The proposal states the policy replacement being requested, the gaps the maintainer would accept, the exact inventory, and the actions approval would not authorize. Its status is pending. Release readiness remains blocked; the historical originality hold does not close until a separate explicit acceptance is recorded. Source freshness still needs a fresh online check before a later rollout or release, and client behavior remains unqualified.

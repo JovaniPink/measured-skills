@@ -8,7 +8,7 @@ import json
 import shutil
 from pathlib import Path
 
-from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, add_claude_explicit_control, directory_hashes
+from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, add_claude_explicit_control, directory_hashes, license_notice
 
 
 def build(output: Path, selected: list[str] | None = None) -> Path:
@@ -23,12 +23,16 @@ def build(output: Path, selected: list[str] | None = None) -> Path:
     # Refuse existing paths, including dangling symlinks. Never reset evidence or settings.
     if output.exists() or output.is_symlink():
         raise FileExistsError(f"output already exists: {output}")
+    notice = license_notice(ROOT)
     output.mkdir(parents=True)
     plugin = output / "plugin"
+    plugin.mkdir()
+    (plugin / "LICENSE").write_bytes(notice)
     for skill in included:
         source = ROOT / "skills" / skill
         target = plugin / "skills" / skill
         target.mkdir(parents=True)
+        (target / "LICENSE").write_bytes(notice)
         explicit = skill in EXPLICIT_SKILLS
         for item in sorted(source.iterdir()):
             if item.name == "agents":

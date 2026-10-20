@@ -57,7 +57,7 @@ Risk metadata never grants a tool or permission. Host policy and separate user a
 
 - [`catalog/packs.json`](../catalog/packs.json) defines plugin packs and small recipes.
 - [`evals/cases.json`](../evals/cases.json) contains routing, safety, output-quality, and baseline records.
-- [`provenance/catalog.json`](../provenance/catalog.json) records public sources and clean-room boundaries.
+- [`provenance/catalog.json`](../provenance/catalog.json) records public authorities, declared methods, owned origins, and review limits.
 - [`catalog/compatibility.json`](../catalog/compatibility.json) points to observed client evidence.
 
 ## Primary resources

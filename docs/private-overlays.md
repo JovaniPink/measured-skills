@@ -39,3 +39,7 @@ Assume a fictional warehouse service named Northwind Relay. Its public workflow 
 - Neither: proprietary, unsafe, obsolete, duplicative, unsupported, or without demonstrated use.
 
 An overlay may narrow or supply private context, but it must not weaken the public workflow's safety boundaries or silently grant tool permissions. Publication, deployment, migration, deletion, and authority ratification remain separately authorized actions.
+
+## Example notice
+
+The fictional, copyable example under `examples/private-overlay/` carries the full repository MIT notice in its canonical skill and both generated projections. Keep that notice when reusing the example. The synchronizer preserves a source skill's existing notices; it does not assign the public repository's MIT license to a private overlay or establish rights in private material.

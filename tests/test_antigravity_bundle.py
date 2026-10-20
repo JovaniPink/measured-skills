@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import tempfile
@@ -35,9 +36,10 @@ class AntigravityBundleTests(unittest.TestCase):
                         key: value for key, value in directory_hashes(ROOT / "skills" / skill).items()
                         if not key.startswith("agents/")
                     }
+                    expected["LICENSE"] = hashlib.sha256((ROOT / "LICENSE").read_bytes()).hexdigest()
                     self.assertEqual(expected, directory_hashes(destination))
             self.assertEqual(included, {path.name for path in (target / "plugin" / "skills").iterdir()})
-            self.assertEqual({"plugin.json", "skills"}, {path.name for path in (target / "plugin").iterdir()})
+            self.assertEqual({"LICENSE", "plugin.json", "skills"}, {path.name for path in (target / "plugin").iterdir()})
             manifest = json.loads((target / "plugin" / "plugin.json").read_text(encoding="utf-8"))
             self.assertEqual({"name", "description"}, set(manifest))
 

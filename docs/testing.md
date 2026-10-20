@@ -43,7 +43,7 @@ python3 -m unittest discover -s tests -v
 
 Each command should exit with status 0. `scripts/validate.py` ends with `All deterministic catalog validations passed.` It already runs the public-boundary scan. To run only that scan, use `python3 scripts/check_public_boundary.py`. If a change affects generated files, also refresh the release manifest as described in [Contributing](../CONTRIBUTING.md).
 
-The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, originality, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
+The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, attribution patterns, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
 
 ## Upstream freshness scope
 

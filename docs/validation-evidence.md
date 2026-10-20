@@ -8,7 +8,7 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 257 regression tests.
+Current test suite: 262 regression tests.
 
 ## October 20 release-readiness repairs
 
@@ -299,3 +299,9 @@ The [decision packet](audits/scoped-expression-disposition-2026-10-20.md) binds 
 The [full packet](audits/catalog-expression-disposition-2026-10-20.md) adds the remaining 73 skills and revalidates the earlier fourteen unchanged. Three regressions bind complete input/output inventories, owned creation/license objects, exact provenance corrections, historical receipts, and pending acceptance. The forty-label regression is bound to its historical correction commit; current expression changes are checked by the new delta inventory instead of being mistaken for changes to that old audit. The initial full run exposed that stale historical comparison and the suite-count receipt, as well as expected pre-manifest drift. Final passing results must be read with the submitted source and manifest revision.
 
 Both official format validators accepted all 87 canonical skills. Eleven Claude packs passed strict native validation. Two generations produced identical archive checksums; all 87 ZIPs were compared with the prior checkpoint, and the six changed archives modified only their corresponding entrypoint. Notices and all other members were preserved. Public-boundary and repository-independence scans passed; their results are hygiene checks, not acceptance of the proposed originality disposition or installed-client behavior. No model evaluation ran.
+
+## Noncanonical assets and proposed approval, October 20
+
+The [approval packet](audits/originality-approval-2026-10-20.md) binds the complete input inventory and corrected payload while preserving earlier canonical and historical packets. New regressions account for the full scope, dependency/artwork receipts, and explicitly pending policy acceptance. Failure-first tests reproduced missing notices in the Antigravity preview and copyable overlay example; the repaired preview and example projections now carry the exact root LICENSE. No private overlay is assigned the public license by the synchronizer. The attribution-pattern checker now names its limited result explicitly.
+
+Source SVG bytes match a retained completed literal write and all eleven generated copies. The SVG was inspected and rendered locally without installing tools; it uses paths, circles, text metadata, and one rectangle, with no external asset or font. Registry metadata matched all eight exact CI wheel hashes; license declarations and pinned action-license receipts are distinct from redistribution clearance. These tools are not bundled in client distributions. Final validation and source/manifest identities must accompany the submitted proposal; no approval, independent human review, model execution, or release is recorded here.

@@ -28,3 +28,7 @@ The [scoped packet](scoped-expression-disposition-2026-10-20.md) applies this co
 ## Full canonical follow-up
 
 The [catalog packet](catalog-expression-disposition-2026-10-20.md) extends the preserved fourteen-skill checkpoint to all 87 canonical skills. It binds input and corrected output inventories, per-skill owned creation/license evidence, expression findings, and the exact corrections. The review is Codex-assisted technical analysis; no independent human acceptance or counsel opinion is recorded. The maintainer decision and the separate policy decision about the historical undefined gate remain pending. No canonical skills remain outside this packet, but noncanonical assets and outside-expression corpora are excluded.
+
+## Exact approval proposal
+
+The [full inventory decision](originality-approval-2026-10-20.md) is the proposed completion contract for this candidate. It discloses targeted rather than exhaustive independent comparison and leaves missing authoring receipts, human creative contribution, and outside overlap explicitly unestablished. Any replacement of the historical gate, including the choice about further independent review, requires approval of that exact policy text. This proposed contract does not accept itself.

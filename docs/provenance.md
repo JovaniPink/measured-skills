@@ -47,3 +47,7 @@ Remove an item from generated distributions and marketplaces through ordinary re
 ## Standalone notice retention and scoped decisions
 
 The root LICENSE is the notice source for generated plugins, individual skills, selected and project exports, offline evaluation exports, and upload archives. Carry its full bytes; `license: MIT` alone does not replace the copyright and permission notice. Receipts bind the notice without certifying rights in every passage. The [initial scoped proposal](audits/scoped-expression-disposition-2026-10-20.md) is preserved as a fourteen-skill checkpoint. The [full canonical follow-up](audits/catalog-expression-disposition-2026-10-20.md) adds the remaining 73 skills and revalidates the earlier fourteen unchanged. All 87 skill inventories are covered; noncanonical assets and outside corpora remain excluded. Its pending maintainer decision is not automatic release or originality acceptance.
+
+## Proposed full inventory disposition
+
+The [exact approval proposal](audits/originality-approval-2026-10-20.md) adds noncanonical assets and openly distinguishes full inventory accounting from targeted expression review. It identifies the additional independent-review and outside-comparison decisions a maintainer would make. Approval is not inferred from preparation, hashes, scans, or passing tests. The Antigravity preview and fictional overlay example retain their complete owned notices; private overlays keep their own licensing rather than inheriting a public grant from the synchronizer.
