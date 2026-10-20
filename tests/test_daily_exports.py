@@ -215,6 +215,8 @@ class DailyExports(unittest.TestCase):
             self.assertEqual(files(a), files(b))
             receipt = json.loads((a / 'receipt.json').read_text())
             self.assertEqual('prepared_not_run', receipt['status'])
+            plugin = json.loads((a / 'claude/.claude-plugin/plugin.json').read_text())
+            self.assertEqual('Measured Studios', plugin['author']['name'])
             self.assertEqual(30, len(receipt['case_hashes']))
             self.assertEqual(12, len(receipt['skills']))
             for relative, digest in receipt['source_files'].items():

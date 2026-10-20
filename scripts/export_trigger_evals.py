@@ -145,7 +145,7 @@ def export(output: Path, source: Path = ROOT) -> None:
             if '/agents/' not in relative:
                 rendered['claude/' + relative] = payload
     rendered['codex/cases.json'] = encoded(document)
-    rendered['claude/.claude-plugin/plugin.json'] = encoded({'name': 'measured-daily-eval', 'version': VERSION, 'description': 'Temporary offline daily-profile evaluation package; no observed results.'})
+    rendered['claude/.claude-plugin/plugin.json'] = encoded({'name': 'measured-daily-eval', 'version': VERSION, 'author': {'name': 'Measured Studios'}, 'description': 'Temporary offline daily-profile evaluation package; no observed results.'})
     for case in document['cases']:
         base = 'claude/evals/' + case['id'] + '/'
         rendered[base + 'prompt.md'] = (case['prompt'] + '\n').encode()

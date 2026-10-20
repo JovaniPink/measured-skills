@@ -25,6 +25,12 @@ Observed during refinement on Python 3.14.7 with mypy 1.20.2 and Ruff 0.15.12:
 - Mermaid 11.4.1 rendered all five diagrams; a browser inspection found readable labels and the intended relationships. The temporary renderer is not a repository dependency.
 - The standalone `skills-ref` validator and a bundled Codex plugin validator were unavailable. Codex CLI 0.161.0 exposes no plugin-validation command. These checks are not recorded as passes.
 
+At manifest checkpoint `dfb2ed8`, all required local gates and all 230 unit tests
+passed. The real daily-profile exports completed for all three adapters; two
+trigger exports had identical receipts and remained `prepared_not_run`. Strict
+validation of the temporary Claude plugin exposed missing author attribution,
+which is corrected with a regression assertion in the following source commit.
+
 CI uses Python 3.12 and must be checked independently on the submitted head.
 No installed inventory changed, client activation trial ran, or paid evaluation
 ran. Native schema checks and diagrams do not establish activation quality,
