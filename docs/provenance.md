@@ -20,9 +20,11 @@ Online freshness pins use a strong ETag, a meaningful last-modified value, a byt
 
 Use only owned original work and primary authorities needed for format, interoperability, or correctness: laws, specifications, standards bodies, and official platform documentation. Discovery links, community discussions, and third-party skill catalogs are not implementation authorities.
 
-## Clean-room boundary
+## Public implementation and research boundary
 
-Do not copy external text, examples, names, structure, scripts, or distinctive expression. Third-party skill catalogs are not tracked, cited, mirrored, compared, installed, or used as implementation sources. Any external investigation occurs outside Git and may influence rejection or safety boundaries only. Current skills must remain independently authored from owned original work and the applicable primary authority.
+Do not copy external text, examples, names, structure, scripts, or distinctive expression. Third-party skill catalogs are not tracked, cited, mirrored, compared, installed, or used as implementation sources in this repository or its distributions. Keep comparative investigation outside this repository. A separately governed private research repository may retain original assessments, source permalinks, and hashes when its own policy permits them; this exception does not permit importing third-party prose, examples, structure, or behavioral authority here. External investigation may identify questions, rejection criteria, or safety boundaries; public rules require independent primary-authority review and original experiments. Current skills must remain independently authored from owned original work and the applicable primary authority.
+
+Use `original` for newly authored primary-source work after external exposure. Reserve `clean-room` for work whose recorded process supports that description. Preserve historical provenance under its original date; passing an automated independence check cannot establish authorship or lack of exposure.
 
 Repository-independence validation rejects external skill-repository links and install identifiers, repository-to-repository capability mappings, source-specific attribution, and non-primary behavior provenance. Links to repositories owned by the `JovaniPink` GitHub account and pinned CI dependency provenance are narrow operational exceptions; CI dependencies do not authorize skill behavior. `provenance/ci-tools.json` records the exact version, source, license, reviewed wheel hash, and use of every direct or transitive Python tool installed by CI.
 

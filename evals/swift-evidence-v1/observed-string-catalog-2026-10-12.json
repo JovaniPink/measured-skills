@@ -1,0 +1,33 @@
+{
+  "claim_id": "string-catalog-toolchain-v1",
+  "observed_at": "2026-10-12T17:16:57.009552+00:00",
+  "checks": {
+    "manual_key_retained": true,
+    "automatic_keys": true,
+    "verbatim_excluded": true,
+    "generated_symbol_typechecks_ios17_6": true,
+    "compiled_localizations": true
+  },
+  "status": "passed",
+  "toolchain": "Xcode 27.0\nBuild version 27A266a",
+  "compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "source_revision": "bb7539c0c34b618f5884f6fab59b99c0b2fa2261",
+  "source_dirty": true,
+  "source_hashes": {
+    "evals/swift-evidence-v1/string-catalog/Localizable.xcstrings": "c14326ed4826fde5ff3ae9c782500beda892079387f5447a4d6781c4d9d61026",
+    "evals/swift-evidence-v1/string-catalog/Extraction.swift": "7b1fb6fb57d5a0358512de730c485a910a6983951da5b5e7533776d558154a27",
+    "evals/swift-evidence-v1/string-catalog/Symbol.swift": "bd1ad8c7584ff61c9ff2ace5fe13dfb44fc88eabdce64eb16da5e3646b0b4c45"
+  },
+  "evidence_kind": "local extraction/generation plus iOS-target compilation",
+  "sdk": "iOS Simulator 27.0",
+  "deployment_target": "iOS 17.6",
+  "language_mode": "5",
+  "authority": "Installed xcstringstool help for extract, sync, generate-symbols and compile",
+  "limitations": [
+    "Lightweight extractor, not the complete Xcode build extraction pipeline.",
+    "Generated symbol typecheck, not native localized user-journey execution.",
+    "Only the selected synthetic keys and two localization outputs."
+  ],
+  "history": "Initial named Manual table generated a namespace and did not receive default-table extraction. Corrected the fixture to the Localizable table and reran in a new output directory.",
+  "raw_receipt_sha256": "0f985eb8fb5e748dfe58b3daef68c1d8d444d6be0156dda9b2fc398f782fb9d4"
+}

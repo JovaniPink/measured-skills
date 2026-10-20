@@ -57,6 +57,20 @@ class ProjectSkillsTests(unittest.TestCase):
         self.assertIn("disable-model-invocation: true", (self.app / ".claude/skills/fixture-deliver-check/SKILL.md").read_text())
         self.assertTrue((self.app / ".agents/skills/fixture-read-check/references/project-contract.md").exists())
 
+    def test_new_qualified_client_keeps_exact_version_and_local_references(self) -> None:
+        self.manifest["codex_version"] = "0.161.0"
+        self.save()
+        self.assertEqual([], project(self.source, self.app, False))
+        self.assertEqual([], project(self.source, self.app, True))
+        text = (self.app / ".codex/skills/fixture-deliver-check/SKILL.md").read_text()
+        self.assertIn("any version other than 0.161.0 blocks execution", text)
+        self.assertNotIn("any version other than 0.154.0", text)
+        self.assertTrue((self.app / ".codex/skills/fixture-deliver-check/references/check.md").exists())
+        self.manifest["codex_version"] = "0.162.0"
+        self.save()
+        with self.assertRaises(ValueError):
+            project(self.source, self.app, False)
+
     def test_one_to_zero_to_one_preserves_unowned_files(self) -> None:
         self.manifest["skills"] = ["read-check"]
         self.save()

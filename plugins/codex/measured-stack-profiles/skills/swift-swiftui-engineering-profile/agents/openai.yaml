@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-stack-profiles:swift-swiftui-engineering-profile to apply focused stack guidance after repository discovery."
 policy:
   allow_implicit_invocation: true
-

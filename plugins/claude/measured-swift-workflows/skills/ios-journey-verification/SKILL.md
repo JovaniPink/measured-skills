@@ -16,6 +16,8 @@ disable-model-invocation: true
 
 Read [fixture journey evidence](references/journeys.md) only when its checks apply to the task. Project-local copies include a project contract; compare it with current repository settings before relying on it.
 
+Read [compatibility and evidence preflight](references/currency.md) before selecting targets or reporting acceptance.
+
 ## Workflow
 
 1. Name the journey, fixture boundary, selected scheme, existing test IDs, destination, expected observations, and authorized test paths. Read the project contract before launching.

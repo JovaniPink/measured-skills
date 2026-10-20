@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "77b32b2f38a05fe564385416de00571a9a879b59",
-  "created_on": "2026-10-13",
+  "source_commit": "36d9b46d8edc76ca136842ab7a2ce5dbe2620959",
+  "created_on": "2026-10-12",
   "artifacts": [
     {
       "kind": "file",
@@ -252,12 +252,12 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/implementation-planning-0.18.0.zip",
-      "sha256": "c023b160f6217020384a317a7c0f07fb83e350f0d7f5e16d81a98138f8c76cbf"
+      "sha256": "c968c11376662f37be2c13b478a07a1292cb71b12e996544512afd6c06ae42d8"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/ios-journey-verification-0.18.0.zip",
-      "sha256": "cdcab2b3d73ab5a18213b289f47c51cd41e82237b35800200b0f92bd02a68410"
+      "sha256": "abf52b6e0347150dddc0a0a3dbfa0c9df5d933981c17154185941855bf41e0c6"
     },
     {
       "kind": "zip",
@@ -322,12 +322,12 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-execution-0.18.0.zip",
-      "sha256": "2f3350a05dda966faffac322b638bc1fcf2dc29b47414eb3bb57fb8581f12b99"
+      "sha256": "8edcc27d19176a5573de417bf84dbd7af0a627196b6c99f9148acd96c7e6de07"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/portable-skill-authoring-0.18.0.zip",
-      "sha256": "e670b0be3fb9184409841fb2a7fc744c03573d3ae9a99681d74d3fd7a5630af3"
+      "sha256": "9b611fcda9457aebcc5a63fc318248cf1c5d4a360ab7a705ae51a6cd0c0c1b52"
     },
     {
       "kind": "zip",
@@ -407,7 +407,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/skill-import-provenance-0.18.0.zip",
-      "sha256": "16bb3fbbfa06686d6231c8cb27b28312afcfb31491a3a8407a3918ca9ca28fbe"
+      "sha256": "e65d7e4b3097939b73879aab6b3ad7253c68081079707b1fca3bc5cd60ed924f"
     },
     {
       "kind": "zip",
@@ -432,22 +432,22 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/swift-concurrency-diagnosis-0.18.0.zip",
-      "sha256": "3996f93a595c45c4a7b5c5e713383308341ba9431108d7deafec145d06efe6cb"
+      "sha256": "40ec306ee712105568bc1df8f38ecdef9dcef7c02f6a469e420723456c532ff3"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/swift-persistence-contract-review-0.18.0.zip",
-      "sha256": "a78f13e9f59a957f0be3f5a0fa0f94185eb58bb2605e34fde850306648328280"
+      "sha256": "dae7c9622504ccb397cf7ae42b998d968faad711966743696e3a8c2c86499c55"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/swift-swiftui-engineering-profile-0.18.0.zip",
-      "sha256": "1045d7db110f0633427e4394b1c054a09d4c4c89ebb4bc3948681967daba80f7"
+      "sha256": "f95041db74bc323b6545431526e969c3dcc33c7dc0c7b6b7a4e331f1e5af1108"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/swiftui-feature-delivery-0.18.0.zip",
-      "sha256": "3ab6e1943af0c2ded9560b852550fbf795b1520df65e3d5dd188933d22eed97e"
+      "sha256": "04024aaaffdec04320acbb15b3cc0c8d90aefb09ecec4a3a13825142c43f5508"
     },
     {
       "kind": "zip",
@@ -507,7 +507,7 @@
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "6902b1a8bd9f40c66a6b254c86f4bc721280e32026063132ebbf2a013896b451"
+      "sha256": "cd266ba5953ad5c256d63837ae2a0214a4074dee3f09d03b6b401fedb516a675"
     },
     {
       "kind": "tree",
@@ -522,7 +522,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-build",
-      "sha256": "c1609eb8fb0d86b13d513c7bffe09e94d9f0c1d9f012c30b7c79e1ed8f1d71dc"
+      "sha256": "f75acb51246741bddc42c062710f5144feb160107461274f5ae550a6879a8492"
     },
     {
       "kind": "tree",
@@ -547,7 +547,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-reasoning",
-      "sha256": "4ebb0b81d53e5b4875fb7cdfc68e9a2dab0fac011fe5a1c179013168844c1423"
+      "sha256": "5b8c033fd962f81748eb4394115f8aa6a5c1bf3779a2e68f76f8e16b269a3e1c"
     },
     {
       "kind": "tree",
@@ -557,12 +557,12 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stack-profiles",
-      "sha256": "f3b4a574c3ab72ba7295001f8faceedd95be73843c9a065008b366bae4e62e88"
+      "sha256": "40fbdfafc7e196de6e8e4275bfcf63e64b37c03aef57c508742d8290ccfd58a0"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-swift-workflows",
-      "sha256": "c877b4ad623ea5f33fe59b27260ce89ddbf4b6aa4de60720b180a9239b801ad7"
+      "sha256": "ea17fe9e024d68d098efc1d523bea6828c3ce97682a00dcf92ba1e09684800a6"
     },
     {
       "kind": "tree",
@@ -577,12 +577,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-build",
-      "sha256": "bb41dacfdd23842d5da32786960da39414ee49107f6b139fcd3f7cf2f1e116f0"
+      "sha256": "98301ebf74ed7a318b90006c94b8d6d777f4f54ba8ba5f9d912d2470dfc5deaf"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "671a9b5288bac3d892e9980342d4e3dba4e947b613432ab6084513b88bb29a4d"
+      "sha256": "97cb73c2591e6ace5444996872d2065f4501ea9497d7669dd79815f0c9074723"
     },
     {
       "kind": "tree",
@@ -602,22 +602,22 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "670b31dda4d39fc19043b49f2f2f5ed36ec361d01f72b13ad8161bbe6a04a117"
+      "sha256": "56adb57d99e66ee4732eaf5a3874e302f4a79346647d4e681013c0b1be5a1c38"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "54c03c52697de9d00e93d8818f81482f43cb527f5f71883092bd32a4134044fa"
+      "sha256": "fe241f4e25fe5ef056032f4256f2116f0186f29c6c609574e3c1ac1a555b5e0c"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stack-profiles",
-      "sha256": "eff4839c689947cdf490737b9dc61d471fd0f0ecabfa6957f2ddad05acab5d12"
+      "sha256": "d21f941658278c0b4c44266115fdbceaad304a0fa8019fc285c64be0f4da8932"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-swift-workflows",
-      "sha256": "436c06d2a2809bf33c168a538a8300f68588a6d8a526bd5d1a6e712e60b3eeab"
+      "sha256": "74e328a05392119d4d2e869fa23dfbca1f54153b92f16fe522584461fdd049f0"
     },
     {
       "kind": "tree",
@@ -632,12 +632,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-build",
-      "sha256": "a333421bae02d00ca901982186d5a63be2eb177357634277a02c6fa8a043dd47"
+      "sha256": "a2891e888af54649d03440023031a8f385832cb1a1cd23da8837a42f4946604c"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "34b264ca7e358ed55015937adc70882d84565fff7fbacf9b73230be1331cc60b"
+      "sha256": "ee3fb6d88c719cde85ce4096eb3415770e5c0eb04fb7ebb1d66bc098b89761bf"
     },
     {
       "kind": "tree",
@@ -657,27 +657,27 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-reasoning",
-      "sha256": "de7a1a4773a1c900a8c59e47d33e72533dc8cef19558d2f519f77505512bad07"
+      "sha256": "767ca3cba2678db0f4285ee5c091545884f09bb4b2db2948fde21113e7d8f06b"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "883d616e2ab0a1a659c0c5bc05c724f8a6896a3c05438e15bc4dd5442752c90b"
+      "sha256": "1d4d616baacfcb327237391508d148a1cc947aaaddb4e4926cc63ad5f7c99adf"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stack-profiles",
-      "sha256": "ff9d1e33747d3cdb5f78a41d951b7662293ae8f805e037fe29a7e659f778c739"
+      "sha256": "dbca99ac85d75686eb10d126881638d6717d2658947ea98a77dcbcb1e5104334"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-swift-workflows",
-      "sha256": "02b55d40261d90ffc72907de8b99413e28eb0b4ba8e6d050905d1b4acf3fbc0f"
+      "sha256": "064a125185e283112b5f00d72e1f4c61f9a9cbafce84ffee180be29293e4491d"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "72d75ec572cb4edc474ed9979d913a1bec8e68e2f5b921a705711728beb65cbd"
+      "sha256": "cc406c2821fc7bbc1719685e19cffa5b9b2a7c28afdee663a15d544fcaab50d9"
     }
   ]
 }
