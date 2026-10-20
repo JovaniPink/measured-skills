@@ -2,7 +2,15 @@
 
 Status: candidate; release blocked. No tag, release, public-directory submission, or installed-client promotion is authorized by this record.
 
-## Current review checkpoint
+## Current status after maintainer acceptance
+
+The maintainer accepted [originality-018-owned-inventory-20261020](audits/originality-acceptance-0.18.0.json) for exact revision `36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7`, including its scoped gate replacement. The historical undefined corpus and further independent-review holds are closed for that accepted payload. Earlier pending statements below describe historical checkpoints, not a new request for approval. New changes are accounted for in the [scoped delta review](audits/post-acceptance-delta-2026-10-20.json); they do not manufacture a new maintainer acceptance or legal clearance.
+
+The [fresh source review](audits/source-refresh-post-acceptance-2026-10-20.json) supersedes the earlier 62-of-62 count for this follow-up. It records individual source decisions and repeated observations. The [online closeout](audits/source-refresh-closeout-2026-10-20.json) is the current dated gate result; failures remain blocking. No freshness policy or global review clock was relaxed.
+
+[Client preflight](audits/client-preflight-2026-10-20.md) now includes native Codex discovery and strict Claude/Antigravity format validation. Codex discovered the twelve staged skills alongside 107 ambient skills, so that workspace is not isolated. Included-plan authentication does not by itself rule out paid fallback. All behavioral pilot cases, app-mode acceptance, and M5 observations remain unrun. No billing, installed-skill, merge, or release action followed from these checks.
+
+## Retained preacceptance checkpoints
 
 The [continued review](audits/pr72-review-followup-2026-10-20.md) and its [source ledger](audits/source-hold-followup-2026-10-20.json) ends with [62 of 62 active authorities matching](audits/source-hold-followup-checkpoint-2026-10-20.json). Eleven individual decisions cover new drift and previously volatile page bindings. Eight bindings now use full official JSON, Markdown, or versioned documentation source responses; three reviewed sources retain their preferred marker kinds. No broad normalization, ignored failure, global review-date reset, or latest-version guarantee was added. Earlier failures below remain historical evidence and are superseded for current source planning by this checkpoint. Future drift still fails closed.
 
@@ -49,7 +57,7 @@ Cloud libraries, managed work-account policies, and app-mode loading require sep
 
 No release follows automatically from completing repository repairs or the pilot. A separate maintainer release decision remains required.
 
-## Proposed originality decision ready for review
+## Historical proposal before the recorded acceptance
 
 The [exact approval packet](audits/originality-approval-2026-10-20.md) adds noncanonical inventory and licensing evidence. It records the original shared SVG write, publisher metadata for the eight pinned CI tools, license receipts for the three pinned CI actions, and review methods and limits for tooling, fixtures, and documentation. Two reproduced notice omissions are repaired: the older Antigravity preview and the copyable fictional overlay example. The root no-copy claim and inaccurate package-content statement are corrected.
 

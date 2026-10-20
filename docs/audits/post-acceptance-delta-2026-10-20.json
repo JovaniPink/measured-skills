@@ -1,0 +1,43 @@
+{
+  "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
+  "previous_head": "6f4c3de066c43faf20b0a01303758b90f6d4806d",
+  "reviewed_on": "2026-10-20",
+  "status": "scoped_technical_delta_review",
+  "reviewer": "Codex-assisted technical review",
+  "new_maintainer_acceptance": false,
+  "review_method": "Compare every current tracked/new payload path with the frozen corrected approved inventory; inspect the complete changed prose, tests, and metadata. Preserve accepted decision/proposal bytes. No canonical skill, generated package, license, dependency, or artwork changes. The current manifest is rebound separately under the existing source/manifest contract.",
+  "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, model evaluation, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
+  "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
+  "changes": {
+    "catalog/upstream-pins.json": {
+      "before_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
+      "after_sha256": "21ff8186e33c22783c15273703ff64be36164284dbe4c22d710f01c66ef94e57",
+      "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger."
+    },
+    "docs/audits/client-preflight-2026-10-20.md": {
+      "before_sha256": null,
+      "after_sha256": "cd7386fab3f96287eb80592f0aa02ade46ffc4b40c044528a12411fed76067bb",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/audits/source-refresh-closeout-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "80cafdce4d4ffe1bc70d66d4029b370dcafa71a1b6041ab2e393a6c52fbdab5a",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/audits/source-refresh-post-acceptance-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "1d7478a58af51bc835e7556a142c4a37a395010d9936d181ec9810e58e5976bb",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/release-readiness-2026-10-20.md": {
+      "before_sha256": "0f91b44f27372e452a3afd9171d4db3dbd26295308afe4458daa08df8ca51ed9",
+      "after_sha256": "3bb832f618c554e1153493e363fb3dab7d540327563b5b76d4428eed67875df0",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "tests/test_noncanonical_disposition.py": {
+      "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",
+      "after_sha256": "2c5425985622e34cd3cd77781d14496d51220121d55fda4730a4fa3f401c67aa",
+      "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
+    }
+  }
+}

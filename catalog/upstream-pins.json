@@ -17,7 +17,7 @@
     {
       "source_url": "https://adk-labs.github.io/adk-docs/safety/",
       "marker_kind": "etag",
-      "marker_value": "\"6ad5eace-3d838\""
+      "marker_value": "\"6ad5eacf-3d838\""
     },
     {
       "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
@@ -32,7 +32,7 @@
     {
       "source_url": "https://agentskills.io/specification",
       "marker_kind": "content-sha256",
-      "marker_value": "e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2"
+      "marker_value": "22f25a748fbb71d0b47742cba8d5d920310375d3ce879b121db2947680562b6c"
     },
     {
       "source_url": "https://ai.google.dev/gemini-api/docs/agents",
@@ -57,12 +57,12 @@
     {
       "source_url": "https://antigravity.google/docs/cli/headless/",
       "marker_kind": "etag",
-      "marker_value": "\"wE2o6g\""
+      "marker_value": "\"IlmsFA\""
     },
     {
       "source_url": "https://antigravity.google/docs/skills/",
       "marker_kind": "etag",
-      "marker_value": "\"wE2o6g\""
+      "marker_value": "\"IlmsFA\""
     },
     {
       "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
@@ -87,12 +87,12 @@
     {
       "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "7abaac9957c374c79789eaf3813f82e24ca8c078495b51353dadbe630cf275d7"
+      "marker_value": "efe60958e64977e4553cab6d2e607e60712f1abbbf0645551fb062a30ac21975"
     },
     {
       "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "6084a4e22781ef798671f33f64a62c65d0cf22e3437846522cecb3a6fecb8130"
+      "marker_value": "696ec0875b6bb5e9fbf9869ec76975e48f441b18b58182ee31b21819096b0333"
     },
     {
       "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
@@ -132,12 +132,12 @@
     {
       "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
       "marker_kind": "etag",
-      "marker_value": "\"c5088f115dd80ccd3cd780e7eec364a8\""
+      "marker_value": "\"85cd4eba6e2503440a88f04264272226\""
     },
     {
       "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
       "marker_kind": "content-sha256",
-      "marker_value": "40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98"
+      "marker_value": "96ec4e47ff85e07eaa79d6776a05d31102338b7c9b5b3b0f27c26852783a2dc3"
     },
     {
       "source_url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
@@ -152,7 +152,7 @@
     {
       "source_url": "https://docs.swift.org/latest/data/documentation.json",
       "marker_kind": "content-sha256",
-      "marker_value": "9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055"
+      "marker_value": "72da9f4dcac98741a3090dd6b8aac143e76a2f2bcf105db3cda91f5cc74bfbbe"
     },
     {
       "source_url": "https://docs.swift.org/latest/documentation/",
@@ -172,7 +172,7 @@
     {
       "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
       "marker_kind": "content-sha256",
-      "marker_value": "6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12"
+      "marker_value": "31c3496ffe787649096fa90facce7e7e853edf91bded297d701e011cd79a0b5b"
     },
     {
       "source_url": "https://git-scm.com/docs/git-merge",
@@ -212,7 +212,7 @@
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
       "marker_kind": "etag",
-      "marker_value": "\"f60049a82dce58cae45aaa4eea299ba5-ssl\""
+      "marker_value": "\"4d85e2b7c1c23fb8fe97e3864ad00ad4-ssl\""
     },
     {
       "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
@@ -262,12 +262,12 @@
     {
       "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
       "marker_kind": "etag",
-      "marker_value": "\"wE2o6g\""
+      "marker_value": "\"IlmsFA\""
     },
     {
       "source_url": "https://www.antigravity.google/docs/sdk/overview",
       "marker_kind": "etag",
-      "marker_value": "\"wE2o6g\""
+      "marker_value": "\"IlmsFA\""
     },
     {
       "source_url": "https://www.drupal.org/docs/develop",
@@ -287,7 +287,7 @@
     {
       "source_url": "https://www.swift.org/swift-evolution/",
       "marker_kind": "content-sha256",
-      "marker_value": "efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022"
+      "marker_value": "a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2"
     },
     {
       "source_url": "https://www.typescriptlang.org/docs/",

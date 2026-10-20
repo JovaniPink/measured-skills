@@ -10,6 +10,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKET = 'docs/audits/originality-approval-2026-10-20.json'
+DELTA = 'docs/audits/post-acceptance-delta-2026-10-20.json'
 
 
 def git(*args: str) -> bytes:
@@ -43,10 +44,25 @@ class NoncanonicalDispositionTests(unittest.TestCase):
         result.update(audit['corrections'])
         result.update(audit['new_payload_files'])
         self.assertEqual(inventory_digest(result), audit['result_inventory_sha256'])
+        accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+        revision = accepted['accepted_revision']
+        git('merge-base', '--is-ancestor', revision, 'HEAD')
         for path, expected in result.items():
+            self.assertEqual(digest(git('show', revision + ':' + path)), expected, path)
+        delta = json.loads((ROOT / DELTA).read_text())
+        self.assertEqual(revision, delta['accepted_revision'])
+        self.assertEqual('scoped_technical_delta_review', delta['status'])
+        self.assertFalse(delta['new_maintainer_acceptance'])
+        self.assertTrue(delta['review_method'])
+        expected_current = dict(result)
+        for path, record in delta['changes'].items():
+            self.assertEqual(result.get(path), record['before_sha256'], path)
+            self.assertTrue(record['expression_and_license_review'], path)
+            expected_current[path] = record['after_sha256']
+        for path, expected in expected_current.items():
             self.assertEqual(digest((ROOT / path).read_bytes()), expected, path)
         self.assertEqual(set(paths) - {p for p in paths if p.startswith('skills/')}, set(audit['noncanonical_classes']))
-        known = set(result) | set(audit['payload_exclusions'])
+        known = set(expected_current) | set(audit['payload_exclusions']) | {DELTA}
         # Accepted decisions are separate envelopes, never retroactive edits to this proposal.
         current = set(git('ls-files').decode().splitlines())
         self.assertFalse(current - known, sorted(current - known))
