@@ -35,6 +35,11 @@
       "after_sha256": "3bb832f618c554e1153493e363fb3dab7d540327563b5b76d4428eed67875df0",
       "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
     },
+    "docs/validation-evidence.md": {
+      "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
+      "after_sha256": "779ed0c6673e43cf5da79c45f7e53efd63fac8c0036d7d2142e4c4e5701a1ed5",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
     "renovate.json": {
       "before_sha256": null,
       "after_sha256": "e80b4e42a3043bc12fa0640db4bac392d2bf770acf841360d7c8ceeeac2ec1a9",
