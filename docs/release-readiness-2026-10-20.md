@@ -12,6 +12,8 @@ The [initial source review](audits/source-review-2026-10-20.md) retains its hist
 
 The [follow-up closeout](audits/pr72-source-closeout-2026-10-20.json) matched 61 of 62 sources. It found new ASVS drift, whose three planned body samples subsequently disagreed. Its pin remains unchanged, so the online gate still fails for that one source. No global review clock, normalization rule, or fail-closed policy was relaxed. The initial nine holds are addressed; the new hold is not concealed by that progress.
 
+A [later check of pushed head d2633f2](audits/pr72-pushed-head-source-closeout-2026-10-20.json) matched 59 of 62 sources: Terraform changed and both OWASP pages returned HTTP 403. Those pages cannot currently be verified, despite the earlier agreeing samples. ASVS matched its old pin on that request, but its prior inconsistent-sample hold remains. No further repin or normalization was attempted. Source drift and availability therefore remain open alongside the ASVS review hold; the nine initial repair decisions are not a declaration that the current gate passes.
+
 The [originality disposition](audits/originality-disposition-2026-10-20.md) now traces all 87 histories and locates the owned MIT source license for four historical adaptations. Their later clean-room relabel changed no procedural body. Current provenance qualifies those labels; no independent process or comprehensive originality qualification was found. The release hold remains until a scoped review and maintainer disposition are accepted.
 
 ## Limited-evidence target

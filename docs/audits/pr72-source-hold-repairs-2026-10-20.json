@@ -169,5 +169,18 @@
   ],
   "remaining_holds": [
     "https://owasp.org/www-project-application-security-verification-standard/"
-  ]
+  ],
+  "post_push_observation": {
+    "source_revision": "d2633f2e3ba0434b1958b31133d4852e6b32ce37",
+    "receipt": "pr72-pushed-head-source-closeout-2026-10-20.json",
+    "matching": 59,
+    "changed": [
+      "https://developer.hashicorp.com/terraform/language"
+    ],
+    "unavailable": [
+      "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/"
+    ],
+    "finding": "The later gate remains failing. New Terraform drift is not reviewed or repinned. OWASP HTTP 403 responses prevent current verification even though the earlier reviewed samples agreed. ASVS matches its existing pin on this request, which does not revoke the inconsistent-sample hold. No pin or policy changes follow from this observation."
+  }
 }
