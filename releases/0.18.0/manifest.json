@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "81c67015684a580c02f010e98d1bbaca8b0c7d99",
+  "source_commit": "697fff1fafd7f64fa2d90932759fbd1ff36e72b0",
   "created_on": "2026-10-20",
   "artifacts": [
     {
@@ -67,7 +67,7 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "ee5fd6b44dad36597ad161ea033231932520678fc2e72de0f76b84666ceef608"
+      "sha256": "5e5b27f8c67c23145ba005b72e64ccb4948bdc037e69bd6520d30a47532b6a8d"
     },
     {
       "kind": "file",
@@ -518,6 +518,11 @@
       "kind": "file",
       "path": "evals/daily-engineering/cases.json",
       "sha256": "bfc68e581395830a162297a9b04988d54452d6e2aa900fa7c7bb28dbbd40b6ca"
+    },
+    {
+      "kind": "file",
+      "path": "evals/daily-engineering/cli-smoke-2026-10-20.json",
+      "sha256": "8891777c4050f5433bd9588d38a94ee9c102d7710ed2bd8aea73b1c6dfee2c3d"
     },
     {
       "kind": "tree",
