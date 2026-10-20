@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "28456b65f4464ab7aba49b04af23d562514757c9",
+  "source_commit": "d75802cf9ba0ef7d4a31649b1c2eceefb61d9d37",
   "created_on": "2026-10-20",
   "artifacts": [
     {
