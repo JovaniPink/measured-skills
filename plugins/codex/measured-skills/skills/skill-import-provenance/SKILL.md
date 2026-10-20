@@ -1,6 +1,6 @@
 ---
 name: skill-import-provenance
-description: Review provenance before transferring owned original skill material between authorized repositories or distributions. Invoke explicitly for an owned-source transfer or a decision about whether proposed external skill material must be rejected; third-party skill catalogs are never implementation sources.
+description: "Reviews an owned skill transfer when explicitly asked to import it; checks ownership, license, exact source, and public boundaries before any copy or installation."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -36,3 +36,11 @@ Keep owned original work and primary authorities separate from external rejectio
 ## Stop conditions
 
 Stop on any third-party skill-catalog source, unclear ownership, incompatible or absent licensing, unverifiable artifact origin, unexplained binary content, unsafe activation, or a review scope that cannot cover the proposed package. Do not install or materialize a rejected source.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: An owned skill transfer lacks an exact source revision.
+
+Output: Transfer is blocked until source identity and ownership evidence are established. Do not copy an unidentified payload into the destination.

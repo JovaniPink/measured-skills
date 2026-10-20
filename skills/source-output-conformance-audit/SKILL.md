@@ -1,6 +1,6 @@
 ---
 name: source-output-conformance-audit
-description: Audit whether exact source identity and expected values survive parsing or extraction, validation, persistence, and readback using source-cited oracles and mutation-sensitive tests. Use for end-to-end source-to-output fidelity claims; use test-quality-review for test-suite quality and authority-boundary-review for ownership architecture alone.
+description: "Audits extraction or transformation when asked whether output matches source documents or data; traces exact inputs, expected values, omissions, and mismatches across processing stages."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -52,4 +52,14 @@ For forecast paths, reject any source snapshot whose as-of time is later than th
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Scope and authority`, `Pinned source identity`, `Oracle`, a conformance matrix with `Stage`, `Input identity`, `Transformation`, `Expected`, `Observed`, `Evidence`, and `Result`, followed by `Mutation results`, `Correctness`, `Completeness`, `Storage correctness`, `Reproducibility`, `Unresolved evidence`, `Defects by first divergence`, and `Next authorized checks`. When requested, add the proposed knowledge-object IDs and relationship evidence without publishing or writing them automatically.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A source row contains 12 units; extracted output contains 21.
+
+Output: Mismatch: the value changed between source and output. Preserve source identity and row location, and inspect the transformation before accepting totals.

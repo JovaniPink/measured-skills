@@ -35,7 +35,7 @@ class MeasuredReleaseTests(unittest.TestCase):
         from export_selected import export
 
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
+            root = Path(tmp).resolve()
             skill = root / "skills" / "test-strategy"
             skill.mkdir(parents=True)
             (skill / "SKILL.md").write_text("[missing](references/missing.md)")
@@ -47,8 +47,8 @@ class MeasuredReleaseTests(unittest.TestCase):
         packs = skills_by_plugin()
         self.assertEqual("measured-skills", CATALOG_NAME)
         self.assertEqual(11, len(packs))
-        self.assertEqual(86, len(SKILLS))
-        self.assertEqual(86, len({s for skills in packs.values() for s in skills}))
+        self.assertEqual(87, len(SKILLS))
+        self.assertEqual(87, len({s for skills in packs.values() for s in skills}))
         self.assertEqual(5, len(packs["measured-engineering-build"]))
         self.assertEqual(11, len(packs["measured-engineering-review"]))
         self.assertEqual(9, len(packs["measured-engineering-delivery"]))
@@ -64,18 +64,18 @@ class MeasuredReleaseTests(unittest.TestCase):
 
         for client in ("codex", "claude", "antigravity"):
             with tempfile.TemporaryDirectory() as tmp:
-                first, second = Path(tmp) / "first", Path(tmp) / "second"
+                first, second = Path(tmp).resolve() / "first", Path(tmp).resolve() / "second"
                 export(first, client, ["test-strategy", "cross-stack-quality-gates"])
                 export(second, client, ["cross-stack-quality-gates", "test-strategy"])
                 self.assertEqual(directory_hashes(first), directory_hashes(second))
                 with self.assertRaises(ValueError):
                     export(first, client, ["test-strategy"])
                 with self.assertRaises(ValueError):
-                    export(Path(tmp) / "unknown", client, ["unknown"])
+                    export(Path(tmp).resolve() / "unknown", client, ["unknown"])
                 with self.assertRaises(ValueError):
-                    export(Path(tmp) / "duplicate", client, ["test-strategy", "test-strategy"])
+                    export(Path(tmp).resolve() / "duplicate", client, ["test-strategy", "test-strategy"])
                 with self.assertRaises(ValueError):
-                    export(Path(tmp) / "explicit", client, ["publish-change-safely"])
+                    export(Path(tmp).resolve() / "explicit", client, ["publish-change-safely"])
                 self.assertTrue((first / "cross-stack-quality-gates" / "references").is_dir())
                 if client == "codex":
                     text = (first / "test-strategy" / "agents" / "openai.yaml").read_text()

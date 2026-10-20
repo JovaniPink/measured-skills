@@ -1,6 +1,6 @@
 ---
 name: value-attribution-evidence-maturity
-description: Assess claimed value, benefit, savings, risk reduction, or outcome contribution against an explicit evidence-maturity model. Use when stakeholders need to distinguish observed results, estimates, attribution, contribution, and causal claims.
+description: "Assesses value claims when asked whether a change saved time, reduced risk, or caused an outcome; separates observed results, estimates, attribution, and unsupported conclusions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Claim register, Evidence maturity, Calculation and lineage, Attribution limits, Sensitivity, Supported language, and Next evidence.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A team claims 30 percent time savings from one successful task.
+
+Output: The observation is a single-task result, not an attributable savings estimate. Record a baseline, comparable cases, and measurement limits.

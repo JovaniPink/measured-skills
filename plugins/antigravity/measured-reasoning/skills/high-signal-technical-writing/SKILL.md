@@ -1,6 +1,6 @@
 ---
 name: high-signal-technical-writing
-description: "Edit technical prose for clarity, evidence density, specificity, rhythm, and audience fit while preserving meaning and repository voice. Use for completion reports, status updates, or documentation that sounds vague, repetitive, promotional, or machine-generic; do not use style heuristics as evidence of authorship."
+description: "Edits technical writing when asked to tighten a status update, clarify documentation, or remove vague and repetitive prose; preserves evidence, uncertainty, and the author's meaning."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -35,10 +35,19 @@ Read [editing checklist](references/editing-checklist.md) for a full revision pa
 
 ## Output
 
-Return the revised text first. Then list only material meaning-preservation notes, unresolved factual gaps, and optional alternatives.
-
-## Continuity and evidence
-
-Lead with the supported result or current decision. Preserve failed checks, uncertainty, requested detail, and requested work still unfinished. Match depth to the audience; do not impose a word limit or move essential evidence into an inaccessible appendix.
+Return the revised text first, followed only by material meaning-preservation
+notes, unresolved factual gaps, and useful alternatives. The revision should
+lead with the supported result or current decision while retaining failed
+checks, uncertainty, requested detail, and unfinished work. Match depth to the
+audience; do not impose a word limit or hide essential evidence in an inaccessible
+appendix.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Tighten: everything works, except the integration checks could not run.
+
+Output: Local checks passed. Integration behavior remains unverified because the required checks could not run.

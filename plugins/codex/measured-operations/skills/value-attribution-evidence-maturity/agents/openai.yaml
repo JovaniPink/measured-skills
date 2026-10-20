@@ -1,7 +1,7 @@
 interface:
   display_name: "Value Attribution and Evidence Maturity"
-  short_description: "Assess value claims and evidence maturity"
-  default_prompt: "Use $measured-operations:value-attribution-evidence-maturity to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Assesses value claims"
+  default_prompt: "Use $measured-operations:value-attribution-evidence-maturity for this task: Assesses value claims when asked whether a change saved time, reduced risk, or caused an outcome; separates observed results, estimates, attribution, and unsupported conclusions."
 policy:
   allow_implicit_invocation: true
 

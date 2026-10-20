@@ -1,6 +1,6 @@
 interface:
   display_name: "Cross-Capability Dependency Mapping"
-  short_description: "Map cross-capability dependencies and ownership"
-  default_prompt: "Use $cross-capability-dependency-mapping to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Maps cross-team dependencies"
+  default_prompt: "Use $cross-capability-dependency-mapping for this task: Maps cross-team dependencies when asked what blocks delivery, who owns an input, or which decisions must happen first; records ownership and failure paths without inventing commitments."
 policy:
   allow_implicit_invocation: true

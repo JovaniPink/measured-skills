@@ -1,6 +1,6 @@
 ---
 name: problem-framing
-description: Frame a proposed feature, defect, workflow, or system change before implementation by identifying users, outcomes, evidence, constraints, unknowns, options, and measurable success. Use when a request is important but the problem or desired result is not yet decision-ready.
+description: "Frames a feature or problem when asked what to build, which outcome matters, or whether a proposed fix addresses the need; establishes users, constraints, and success before implementation."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ Framing is done when the recommendation names the next step and the evidence tha
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Problem`, `Affected parties`, `Evidence`, `Constraints`, `Unknowns`, `Options`, `Success criteria`, `Non-goals`, and `Recommended next step`. Mark each statement as observed, reported, assumed, proposed, or ratified when the distinction matters.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A team requests a dashboard, but the decision it should support is unspecified.
+
+Output: First identify the user decision, missing information, and observable success. A dashboard is one possible solution, not the problem statement.

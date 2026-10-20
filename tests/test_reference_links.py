@@ -91,9 +91,11 @@ class ReferenceLinkTests(unittest.TestCase):
         validate_catalog.validate_reference_links(errors)
         self.assertEqual([], errors)
 
-    def test_the_agentic_security_review_links_its_threat_domains(self) -> None:
+    def test_the_agentic_security_review_contains_its_threat_domains(self) -> None:
         text = (REPO / "skills" / "agentic-system-security-review" / "SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("](references/agentic-threat-domains.md)", text)
+        for domain in ("Instructions", "Identity", "Tools", "Context and memory", "Retrieval", "Delegation and protocols", "Supply chain", "Output", "Resources", "Operations"):
+            self.assertIn("| " + domain + " |", text)
+        self.assertIn("These resources support risk discovery", text)
 
 
 if __name__ == "__main__":

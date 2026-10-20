@@ -1,7 +1,7 @@
 interface:
   display_name: "KPI and Outcome Measurement"
-  short_description: "Design traceable outcome and KPI measurement"
-  default_prompt: "Use $kpi-outcome-measurement to prepare this operating workflow with evidence and decision boundaries."
+  short_description: "Defines outcome measures"
+  default_prompt: "Use $kpi-outcome-measurement for this task: Defines outcome measures when asked how to measure success, choose a KPI, or distinguish activity from impact; specifies population, units, baseline, and decision use."
 policy:
   allow_implicit_invocation: true
 

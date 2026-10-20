@@ -1,6 +1,6 @@
 ---
 name: java-spring-engineering-profile
-description: Apply focused Java and Spring engineering judgment after repository gate discovery. Use for JVM services, Spring Boot applications, concurrency, transactions, tests, dependencies, compatibility, and builds; honor repository wrappers and toolchains.
+description: "Reviews Java and Spring changes when transactions, concurrency, services, dependencies, or JVM compatibility need focused checks; follows repository wrappers and toolchains."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A transaction annotation is applied to an internal self-call.
+
+Output: warning: confirm how this call reaches transaction interception in the configured Spring setup. Annotation presence alone does not prove a transaction boundary.

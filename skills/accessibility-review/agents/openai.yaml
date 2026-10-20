@@ -1,7 +1,7 @@
 interface:
   display_name: "Accessibility Review"
-  short_description: "Review accessibility against WCAG 2.2 evidence"
-  default_prompt: "Use $accessibility-review to review this work with focused evidence."
+  short_description: "Reviews accessibility"
+  default_prompt: "Use $accessibility-review for this task: Reviews accessibility when asked to check keyboard access, screen-reader behavior, focus, contrast, or WCAG requirements; incomplete testing cannot establish conformance."
 policy:
   allow_implicit_invocation: true
 

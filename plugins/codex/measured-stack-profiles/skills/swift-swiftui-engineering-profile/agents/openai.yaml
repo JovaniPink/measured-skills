@@ -1,6 +1,6 @@
 interface:
   display_name: "Swift and SwiftUI Engineering Profile"
-  short_description: "Apply focused Swift and SwiftUI guidance"
-  default_prompt: "Use $measured-stack-profiles:swift-swiftui-engineering-profile to apply focused stack guidance after repository discovery."
+  short_description: "Reviews Swift and SwiftUI changes"
+  default_prompt: "Use $measured-stack-profiles:swift-swiftui-engineering-profile for this task: Reviews Swift and SwiftUI changes when state, identity, layout, concurrency, or SDK compatibility need focused checks; separates compiler, simulator, device, and release evidence."
 policy:
   allow_implicit_invocation: true

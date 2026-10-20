@@ -1,6 +1,6 @@
 ---
 name: test-quality-review
-description: Review the quality of a test suite or change-specific tests for meaningful assertions, defect sensitivity, isolation, determinism, risk coverage, and maintenance cost. Use when existing gates pass but the strength of the tests themselves is uncertain.
+description: "Reviews test quality when asked whether tests catch real regressions or merely mirror implementation; checks assertions, isolation, failure behavior, and coverage without equating count with confidence."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Protected behavior, Oracle quality, Missing risks, Flakiness and isolation, Maintenance cost, and Recommended evidence. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. When a pinned change is under review, mark each finding `new`, `unchanged`, `updated`, or `absent` against the state before the change; otherwise report severity alone.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A test asserts only that a mock method was called, not what the user receives.
+
+Output: The test may pass with incorrect output. Add an observable result or error assertion and demonstrate that a real regression fails it.

@@ -1,6 +1,6 @@
 ---
 name: data-authority-migration-ratification
-description: Prepare a proposed data-authority and migration decision record covering owners, writers, readers, cutover, reconciliation, rollback, and acceptance. Use when decision owners need evidence to ratify or reject a migration contract; the skill cannot ratify it.
+description: "Prepares a migration decision when owners must approve data writers, cutover, reconciliation, and rollback; records a proposal and evidence without granting approval itself."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Current authority, Proposed contract, Migration phases, Reconciliation, Rollback, Risks, Decision owner, Required evidence, and Status.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A proposed cutover changes the only writer, but no owner has approved it.
+
+Output: The writer change remains proposed. Record the deciding owner, reconciliation evidence, rollback condition, and approval status before cutover.

@@ -1,6 +1,6 @@
 ---
 name: kpi-outcome-measurement
-description: Design or review outcome measurement with precise definitions, units, populations, baselines, targets, data authority, and decision use. Use when a program or product needs measures that distinguish activity, output, outcome, and impact.
+description: "Defines outcome measures when asked how to measure success, choose a KPI, or distinguish activity from impact; specifies population, units, baseline, and decision use."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Decision use, Metric dictionary, Data lineage, Baseline and target, Guardrails, Bias and gaming risks, and Review cadence.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A team counts tasks closed and calls that customer success.
+
+Output: Tasks closed measures output. Define a customer outcome, population, baseline, and observation window before claiming customer improvement.

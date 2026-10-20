@@ -1,6 +1,6 @@
 ---
 name: performance-scalability-diagnosis
-description: Diagnose latency, throughput, resource, contention, and scalability problems using measured evidence and competing hypotheses. Use when a system is slow, unstable under load, or approaching a capacity boundary; do not silently optimize code.
+description: "Diagnoses a slow or overloaded system when asked why latency, throughput, or resource use changed; compares measurements and hypotheses without silently optimizing code."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Symptom, Baseline, Hypotheses, Measurements, Causal diagnosis, Capacity estimate, and Next experiment.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Latency doubled, but no comparable load or tracing data is available.
+
+Output: The regression is reported, not localized. Establish comparable workload and stage timings before choosing an optimization.

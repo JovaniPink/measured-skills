@@ -1,6 +1,6 @@
 ---
 name: operational-readiness-review
-description: Review whether a service or application is operationally ready for release and sustained ownership. Use for read-only assessment of objectives, dependencies, monitoring, alerts, capacity, failure handling, incidents, runbooks, recovery, and support boundaries.
+description: "Reviews operational readiness when asked who will support a service or whether alerts, capacity, recovery, and runbooks are sufficient; reports gaps without deploying it."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Objectives and ownership, Failure readiness, Observability, Recovery, Incident response, Blockers, and Go or no-go decision needs.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A service has alerts but no on-call owner or recovery procedure.
+
+Output: Readiness is incomplete: alerts lack an accountable responder and tested recovery path. Name both gaps before release approval.

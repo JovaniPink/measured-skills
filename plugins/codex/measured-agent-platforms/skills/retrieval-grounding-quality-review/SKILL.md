@@ -1,6 +1,6 @@
 ---
 name: retrieval-grounding-quality-review
-description: Review whether an agent retrieval and grounding system selects authorized, current, relevant evidence and produces claims that the evidence actually supports. Use for corpus authority, tenant filtering, retrieval metrics, citation support, abstention, poisoning, and injection; use source-grounded-research for a human research task and source-output-conformance-audit for deterministic source-to-output transformation.
+description: "Reviews retrieval and citations when an agent finds irrelevant evidence, misses sources, or makes unsupported claims; checks permissions and grounding separately from the broader agent threat model."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -13,7 +13,7 @@ metadata:
 
 # Retrieval and Grounding Quality Review
 
-Review both retrieval quality and whether generated claims remain within the evidence retrieved. Read [the retrieval evidence matrix](references/retrieval-evidence-matrix.md) when defining cases, metrics, or finding severity.
+Review both retrieval quality and whether generated claims remain within the evidence retrieved. Read [the retrieval evidence matrix](#retrieval-evidence-matrix) when defining cases, metrics, or finding severity.
 
 ## Preconditions
 
@@ -40,4 +40,39 @@ Identify the intended users, tenants, questions, source authorities, corpus revi
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Decision`, `Corpus authority`, `Access and isolation`, `Pinned configuration`, `Query set`, `Retrieval findings`, `Claim support findings`, `Citation findings`, `Poisoning and injection`, `Abstention and conflict behavior`, `Metrics`, `Limitations`, and `Required changes or tests`.
+
+## Retrieval Evidence Matrix
+
+Assess retrieval and claim support as separate stages.
+
+| Stage | Questions |
+| --- | --- |
+| Source | Is the source authorized, licensed, current, versioned, and eligible for this user and purpose? |
+| Ingestion | Were content, metadata, authority, time, access control, and deletion status preserved? |
+| Embedding | Can stored or exposed vectors reveal protected source content through inversion, reconstruction, or similarity access? |
+| Query | Does the case represent a real need, boundary, conflict, no-answer state, or attack? |
+| Retrieval | Were relevant sources found, ranked, filtered, and returned within limits? |
+| Claim | Is each material claim directly or partially supported, contradicted, or unsupported? |
+| Citation | Does the cited source support the nearby claim with correct date, unit, and context? |
+| Safety | Can document text, metadata, or a tool result change instructions, cross a tenant boundary, or trigger a tool? |
+| Behavior | Does retrieval preserve the intended correctness, relevance, safety, tone, and usefulness of the application? |
+| Recovery | Can the system abstain, ask, disclose conflict, correct a result, and revoke bad content? |
+
+### Primary resources
+
+- [OWASP vector and embedding weaknesses](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/)
+- [Google ADK safety and security](https://adk-labs.github.io/adk-docs/safety/)
+- [NIST AI Resource Center](https://airc.nist.gov/)
+
+A retrieved passage and a visible citation are evidence inputs. They are not proof that every generated claim is supported.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: An answer cites a document that does not support its numerical claim.
+
+Output: warning: retrieval succeeded but grounding failed. Remove or qualify the unsupported claim and trace whether a supporting source exists.

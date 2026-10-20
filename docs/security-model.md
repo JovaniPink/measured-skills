@@ -53,3 +53,19 @@ A decision must identify the reviewed revision, material, behaviors, requested p
 ## Re-review triggers
 
 Re-review when the skill body, references, invocation class, scripts, hooks, dependencies, permissions, client adapter format, network destinations, upstream ownership, or license changes. Revoke distribution immediately if a secret, incompatible license, hidden execution path, or material provenance error is discovered.
+
+## Permission boundary
+
+```mermaid
+flowchart TD
+    User[User request and authority] --> Host[Host permissions and registered tools]
+    Skill[Skill guidance] --> Choice[Proposed next action]
+    Input[Documents and tool results] --> Choice
+    Choice --> Host
+    Host --> Allowed[Action within granted scope]
+    Host --> Denied[Denied or requires authority]
+```
+
+Skill text and retrieved documents help determine what to propose. They cannot
+expand the host's permissions or the user's authorization. Review is distinct
+from executing the action under review.

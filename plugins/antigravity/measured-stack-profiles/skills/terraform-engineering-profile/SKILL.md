@@ -1,6 +1,6 @@
 ---
 name: terraform-engineering-profile
-description: Apply focused Terraform engineering judgment after repository gate discovery. Use for modules, providers, state, plans, upgrades, compatibility, and infrastructure review; validation never implies apply authority.
+description: "Reviews Terraform changes when plans, state, modules, providers, or drift need focused checks; discovers backend and version constraints without applying or changing shared infrastructure."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -32,5 +32,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A plan proposes replacing a database resource.
+
+Output: Review the replacement cause, state address, provider version, and recovery evidence. A plan review does not authorize apply.

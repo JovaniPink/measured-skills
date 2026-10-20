@@ -1,6 +1,6 @@
 ---
 name: worktree-isolation
-description: Assess whether dirty or concurrent repository work needs Git worktree isolation and design a safe isolation approach. Use when work may overlap existing changes; require explicit authority before creating, moving, locking, repairing, or removing a worktree.
+description: "Assesses checkout isolation when concurrent edits or dirty files may collide with a new task; reuses safe worktrees and preserves unrelated work rather than creating or deleting blindly."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ The assessment is done when the isolation decision and proposed layout are state
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Report `Current state`, `Collision risks`, `Isolation decision`, `Proposed layout`, `Required authority`, `Validation`, and `Cleanup conditions`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A checkout contains an unrelated uncommitted patch.
+
+Output: Preserve the patch and inspect available worktrees. Isolate the new task only if a safe existing checkout cannot serve it.

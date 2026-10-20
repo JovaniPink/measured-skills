@@ -15,11 +15,11 @@
         "google-adk-engineering-profile",
         "retrieval-grounding-quality-review"
       ],
-      "description_characters": 2309,
+      "description_characters": 1128,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3053,
-        "claude": 3059
+        "codex": 1872,
+        "claude": 1878
       }
     },
     {
@@ -30,11 +30,11 @@
         "context-reliability-review",
         "source-output-conformance-audit"
       ],
-      "description_characters": 1130,
+      "description_characters": 545,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 1449,
-        "claude": 1452
+        "codex": 864,
+        "claude": 867
       }
     },
     {
@@ -47,11 +47,11 @@
         "test-driven-change",
         "test-strategy"
       ],
-      "description_characters": 1301,
+      "description_characters": 883,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 1785,
-        "claude": 1790
+        "codex": 1367,
+        "claude": 1372
       }
     },
     {
@@ -68,11 +68,11 @@
         "respond-to-code-review",
         "worktree-isolation"
       ],
-      "description_characters": 2415,
+      "description_characters": 1583,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3368,
-        "claude": 3377
+        "codex": 2536,
+        "claude": 2545
       }
     },
     {
@@ -91,11 +91,11 @@
         "performance-scalability-diagnosis",
         "test-quality-review"
       ],
-      "description_characters": 2750,
+      "description_characters": 1939,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3973,
-        "claude": 3984
+        "codex": 3162,
+        "claude": 3173
       }
     },
     {
@@ -114,11 +114,11 @@
         "value-attribution-evidence-maturity",
         "workshop-planning-synthesis"
       ],
-      "description_characters": 2570,
+      "description_characters": 1911,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3797,
-        "claude": 3808
+        "codex": 3138,
+        "claude": 3149
       }
     },
     {
@@ -137,11 +137,11 @@
         "task-handoff",
         "workflow-retrospective"
       ],
-      "description_characters": 3171,
+      "description_characters": 1974,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 4237,
-        "claude": 4248
+        "codex": 3040,
+        "claude": 3051
       }
     },
     {
@@ -161,11 +161,11 @@
         "source-grounded-research",
         "systematic-diagnosis"
       ],
-      "description_characters": 3321,
+      "description_characters": 2101,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 4469,
-        "claude": 4481
+        "codex": 3249,
+        "claude": 3261
       }
     },
     {
@@ -174,6 +174,7 @@
       "skills": [
         "adobe-aem-engineering-profile",
         "csharp-dotnet-engineering-profile",
+        "gcp-data-engineering-profile",
         "go-engineering-profile",
         "java-spring-engineering-profile",
         "php-drupal-engineering-profile",
@@ -184,11 +185,11 @@
         "terraform-engineering-profile",
         "typescript-javascript-engineering-profile"
       ],
-      "description_characters": 2803,
+      "description_characters": 2127,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 4116,
-        "claude": 4127
+        "codex": 3553,
+        "claude": 3565
       }
     },
     {
@@ -200,11 +201,11 @@
         "swift-persistence-contract-review",
         "swiftui-feature-delivery"
       ],
-      "description_characters": 994,
+      "description_characters": 728,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 1442,
-        "claude": 1446
+        "codex": 1176,
+        "claude": 1180
       }
     },
     {
@@ -215,11 +216,11 @@
         "nextjs-feature-delivery",
         "react-rendering-performance-diagnosis"
       ],
-      "description_characters": 764,
+      "description_characters": 576,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 1127,
-        "claude": 1130
+        "codex": 939,
+        "claude": 942
       }
     }
   ],
@@ -232,7 +233,7 @@
         "agent-tool-action-boundary-review",
         "agentic-system-security-review"
       ],
-      "description_characters": 1126,
+      "description_characters": 549,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -244,7 +245,7 @@
         "agent-evaluation-design",
         "agentic-system-security-review"
       ],
-      "description_characters": 1168,
+      "description_characters": 561,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -255,7 +256,7 @@
         "claim-verification",
         "acceptance-evidence-ledger"
       ],
-      "description_characters": 587,
+      "description_characters": 328,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -267,7 +268,7 @@
         "implementation-planning",
         "test-strategy"
       ],
-      "description_characters": 760,
+      "description_characters": 548,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -279,7 +280,7 @@
         "prelaunch-readiness",
         "publish-change-safely"
       ],
-      "description_characters": 789,
+      "description_characters": 522,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -290,7 +291,7 @@
         "systematic-diagnosis",
         "claim-verification"
       ],
-      "description_characters": 491,
+      "description_characters": 354,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -302,7 +303,7 @@
         "context-reliability-review",
         "source-output-conformance-audit"
       ],
-      "description_characters": 1130,
+      "description_characters": 545,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -314,7 +315,7 @@
         "operational-readiness-review",
         "observability-design"
       ],
-      "description_characters": 815,
+      "description_characters": 517,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -326,7 +327,7 @@
         "decision-governance-records",
         "stakeholder-technical-communication"
       ],
-      "description_characters": 734,
+      "description_characters": 537,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -338,7 +339,7 @@
         "kpi-outcome-measurement",
         "production-incident-analysis"
       ],
-      "description_characters": 697,
+      "description_characters": 515,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     }

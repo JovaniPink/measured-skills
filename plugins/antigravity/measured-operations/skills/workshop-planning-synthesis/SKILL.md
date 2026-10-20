@@ -1,6 +1,6 @@
 ---
 name: workshop-planning-synthesis
-description: Plan a workshop around a concrete decision or learning outcome, then synthesize its evidence without manufacturing consensus. Use for agendas, facilitation structure, prework, participation, decisions, actions, and follow-up.
+description: "Plans or synthesizes a workshop when asked to prepare an agenda or turn session notes into decisions; ties activities to outcomes and leaves unresolved ownership visible."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Purpose, Participants and roles, Prework, Agenda, Facilitation plan, Evidence captured, Decisions, Dissent, Actions, and Follow-up.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A workshop should choose one migration option, but the decision owner cannot attend.
+
+Output: Adjust the session to prepare a decision brief or secure the owner's participation. Discussion alone cannot ratify the migration choice.

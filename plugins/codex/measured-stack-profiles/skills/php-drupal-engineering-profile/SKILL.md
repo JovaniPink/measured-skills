@@ -1,6 +1,6 @@
 ---
 name: php-drupal-engineering-profile
-description: Apply focused PHP and Drupal engineering judgment after repository gate discovery. Use for Composer projects, Drupal modules or themes, entity and configuration APIs, caching, security, tests, compatibility, and builds; defer exact commands to repository evidence.
+description: "Reviews PHP and Drupal changes when modules, themes, entities, caching, or configuration need focused checks; follows Composer locks, repository tests, and supported versions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A cached Drupal fragment varies by user but has no matching cache context.
+
+Output: warning: inspect cache contexts and tags for user-specific content. A correct render in one session does not establish cache isolation.

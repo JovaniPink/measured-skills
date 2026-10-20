@@ -1,6 +1,6 @@
 interface:
   display_name: "High-Signal Technical Writing"
-  short_description: "Edit technical prose for clarity and evidence density"
-  default_prompt: "Use $measured-reasoning:high-signal-technical-writing to revise this technical draft without changing its meaning."
+  short_description: "Edits technical writing"
+  default_prompt: "Use $measured-reasoning:high-signal-technical-writing for this task: Edits technical writing when asked to tighten a status update, clarify documentation, or remove vague and repetitive prose; preserves evidence, uncertainty, and the author's meaning."
 policy:
   allow_implicit_invocation: true

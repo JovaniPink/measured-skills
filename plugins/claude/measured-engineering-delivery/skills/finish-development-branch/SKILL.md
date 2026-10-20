@@ -1,6 +1,6 @@
 ---
 name: finish-development-branch
-description: Reconcile a development branch and present evidence-based options for pull request, merge, retention, or cleanup. Invoke explicitly when implementation is complete enough to decide the branch's next state without assuming push, merge, deletion, or abandonment authority.
+description: "Assesses next steps for a finished branch when explicitly asked to wrap up development; presents PR, retention, or cleanup options without assuming merge or deletion authority."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ The workflow is done when the branch state and options are reported, any selecte
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Report `Branch state`, `Scope reconciliation`, `Validation`, `Remote and review state`, `Options`, `Selected authority`, and `Final readback`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The patch is tested locally; no push or cleanup was requested.
+
+Output: The branch is ready for a delivery decision. Report its revision and checks; retain it until the user chooses the next authorized state.

@@ -1,6 +1,6 @@
 interface:
   display_name: "Research-to-Publication Lifecycle"
-  short_description: "Connect sources, forecasts, outcomes, and findings"
-  default_prompt: "Use $research-to-publication-lifecycle to coordinate a traceable research, evaluation, retrospective, and public-safe publication workflow."
+  short_description: "Coordinates a research lifecycle"
+  default_prompt: "Use $research-to-publication-lifecycle for this task: Coordinates a research lifecycle when explicitly asked to maintain traceable knowledge, evaluation, and corrections; excludes one-off search and never implies automatic publication."
 policy:
   allow_implicit_invocation: false

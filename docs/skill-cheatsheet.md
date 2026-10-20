@@ -1,6 +1,6 @@
 # Measured Skills Cheatsheet
 
-Use this page to find a skill fast. The catalog contains 86 skills in 11 packs. Each row names one skill, says what it does, and says how it gets picked.
+Use this page to find a skill fast. The catalog contains 87 skills in 11 packs. Each row names one skill, says what it does, and says how it gets picked.
 
 The [glossary](glossary.md) defines the words on this page. To install a pack, read [How to Use Measured Skills](README.md). For a longer write-up of each skill, read the [Skill Catalog Reader Guide](skill-catalog-reader-guide.md).
 
@@ -85,6 +85,7 @@ Add one of these only after you know the commands and tools the repository actua
 | --- | --- | --- |
 | `adobe-aem-engineering-profile` | Adds focused guidance for AEM product generations, Sling and OSGi, content packages, Dispatcher, caching, compatibility, and builds. | Implicit |
 | `csharp-dotnet-engineering-profile` | Adds focused guidance for .NET projects, async behavior, dependency injection, Entity Framework, packages, compatibility, and builds. | Implicit |
+| `gcp-data-engineering-profile` | Reviews GCP data contracts, transformations, cost evidence, and pipeline boundaries without provider execution. | Implicit |
 | `go-engineering-profile` | Adds focused guidance for Go modules, packages, concurrency, APIs, tests, dependencies, and builds. | Implicit |
 | `java-spring-engineering-profile` | Adds focused guidance for JVM toolchains, concurrency, Spring configuration and transactions, tests, dependencies, and builds. | Implicit |
 | `php-drupal-engineering-profile` | Adds focused guidance for PHP, Composer, Drupal extensions, entities, configuration, caching, tests, and builds. | Implicit |

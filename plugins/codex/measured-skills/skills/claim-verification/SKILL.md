@@ -1,6 +1,6 @@
 ---
 name: claim-verification
-description: Verify claims that work is complete, broken, missing, merged, deployed, or live by checking the relevant repository and platform evidence. Use when a review, handoff, PR, agent, or collaborator makes claims that would materially change the next action.
+description: "Checks claims such as \"is this done\", \"did that deploy go out\", or \"is the fix live\" against current evidence; keeps local tests, merge, deployment, and live behavior separate."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,10 +40,18 @@ Turn each material claim into a falsifiable statement, then verify it against th
 
 ## Output
 
-Return the supported verdict first, then a claim table with `Claim`, `Verdict`, `Authority`, and `Evidence`. Include confirmed work to preserve, actual gaps, unresolved evidence, and the next justified action only where applicable.
-
-## Continuity and evidence
-
-State the supported verdict before the claim table. Preserve authority, exact evidence, and freshness for each claim. Omit empty gap categories and do not invent remediation when every requested claim is confirmed.
+Lead with the supported verdict, then a claim table containing the claim,
+verdict, authority, exact evidence, and freshness. Preserve confirmed work and
+include actual gaps, unresolved evidence, and a next justified action only where
+applicable. Omit empty categories; do not invent remediation when all requested
+claims are confirmed.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Tests passed locally, but the deployed revision is unknown. Is the fix live?
+
+Output: Local checks passed. Live deployment is unverified because no serving revision or runtime observation was supplied.

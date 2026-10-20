@@ -381,3 +381,9 @@ If an action could publish, merge, deploy, delete, send, or change an external s
 - [Antigravity Agent Skills](https://antigravity.google/docs/skills/)
 - [Google ADK Agent Skills](https://adk-labs.github.io/adk-docs/skills/)
 - [Repository license](../LICENSE)
+
+## Daily use and history
+
+- [Use the skills in daily work](daily-agent-operating-model.md)
+- [Evidence history index](history/README.md)
+- [Data workflow pack proposal](data-workflow-pack-proposal.md)

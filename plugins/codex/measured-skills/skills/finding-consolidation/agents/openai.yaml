@@ -1,6 +1,6 @@
 interface:
   display_name: "Finding Consolidation"
-  short_description: "Merge review findings into one owned, ranked list"
-  default_prompt: "Use $measured-skills:finding-consolidation to merge these review findings into one ranked list with a single owner per root cause."
+  short_description: "Consolidates completed reviews"
+  default_prompt: "Use $measured-skills:finding-consolidation for this task: Consolidates completed reviews when findings overlap or disagree in severity; assigns each root cause one owner and reports discarded duplicates without running another review."
 policy:
   allow_implicit_invocation: true

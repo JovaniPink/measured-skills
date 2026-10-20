@@ -1,6 +1,6 @@
 ---
 name: research-to-publication-lifecycle
-description: "Coordinate an explicitly requested source-to-publication learning lifecycle across research, evidence tracing, model or forecast evaluation, corrections, and retrospective findings. Invoke explicitly when the user wants traceable knowledge objects or a public-safe research index; do not use for a one-off search, ordinary summary, or automatic publication."
+description: "Coordinates a research lifecycle when explicitly asked to maintain traceable knowledge, evaluation, and corrections; excludes one-off search and never implies automatic publication."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -43,4 +43,14 @@ Confirm the research question, project-scoped identifier, intended audience, evi
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Question and decision`, `Authority and visibility`, `Source ledger`, `Knowledge objects`, `Relationships`, `Cutoff and leakage checks`, `Outcome and evaluation`, `Retrospective`, `Public projection`, `Corrections`, `Validation`, `Missing gates`, and `Next authorized action`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A research finding was corrected after a draft was prepared.
+
+Output: Link the correction to the original claim and update the draft's evidence state. Public release remains a separately authorized action.

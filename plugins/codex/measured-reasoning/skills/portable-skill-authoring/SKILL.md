@@ -1,6 +1,6 @@
 ---
 name: portable-skill-authoring
-description: "Design or revise a portable Agent Skill with precise routing, invocation policy, focused references, provenance, security boundaries, evals, and generated client adapters. Use for cross-client SKILL.md catalog work; do not trigger for ordinary documentation or client-specific command files."
+description: "Authors portable skills when asked to create or revise SKILL.md workflows and client distributions; preserves routing, provenance, and invocation controls rather than treating ordinary docs as skills."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -36,10 +36,22 @@ Read [client adapters](references/client-adapters.md) when invocation controls, 
 
 ## Output
 
-Return `Capability`, `Routing`, `Invocation`, `Canonical files`, `Adapters`, `Provenance`, `Security`, `Evaluations`, `Validation`, and `Observed client limits`.
+Report the capability, routing, invocation policy, canonical changes, adapters,
+provenance, security, evaluations, validation, and observed client limits. These
+are required meanings, not mandatory headings; match detail to the request.
 
-## Continuity and evidence
-
-Separate required semantic content from optional presentation. Test concise and requested long-form outputs, competing instructions, partial failure, stale handoffs, and interruptions. Keep shared workflow meaning canonical and client-native loading and invocation controls in generated adapters. Do not claim explicit-only support from a slash command alone or distribute an explicit-only workflow to an unverified surface.
+Test concise and requested long-form outputs, competing instructions, partial
+failure, stale handoffs, and interruptions. Keep shared meaning canonical and
+native loading and invocation controls in generated adapters. A slash command
+does not prove explicit-only enforcement; exclude those workflows from an
+unverified surface.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A client has a manual skill command but no verified implicit-selection control.
+
+Output: Keep explicit-only workflows unavailable on that surface until the control is verified. File compatibility does not establish behavioral parity.

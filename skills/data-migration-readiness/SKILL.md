@@ -1,6 +1,6 @@
 ---
 name: data-migration-readiness
-description: Review a proposed data or schema migration for authority, compatibility, sequencing, reconciliation, rollback, and operational evidence. Use before a migration or cutover; do not execute or ratify the migration.
+description: "Reviews migration readiness when asked if a schema change, backfill, or cutover is safe; checks compatibility, reconciliation, and rollback without executing the migration."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Authority map, Migration phases, Compatibility, Reconciliation, Failure handling, Rollback, and Decision gates.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A migration drops a column still read by the current application.
+
+Output: Not ready: the deployed reader still depends on the column. Establish a compatible transition and recovery evidence before removal.

@@ -1,6 +1,6 @@
 ---
 name: stakeholder-technical-communication
-description: Translate technical evidence for a named stakeholder decision without overstating certainty, hiding risk, or exposing inappropriate detail. Use for executive summaries, review packets, status updates, decision briefs, and cross-functional explanations.
+description: "Explains technical evidence when asked for a stakeholder update, decision brief, or plain-language status; preserves the decision needed and material limitations without unnecessary approval requests."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,11 +33,18 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
-Return Audience and decision, Executive summary, Evidence, Tradeoffs, Risks, Decisions needed, and Appendix as required.
-
-
-## Continuity and evidence
-
-For an informational update, state the supported outcome without manufacturing a decision or action request. When a decision is needed, identify its owner, exact scope, evidence, and consequence. Preserve material dissent, uncertainty, and requested technical detail.
+Lead with the supported outcome for the named audience. An informational update
+needs no manufactured decision or action request. When a decision is required,
+state its owner, exact scope, evidence, tradeoffs, and consequence. Retain material
+risks, dissent, uncertainty, and requested technical detail; use an appendix only
+when it helps the audience access supporting evidence.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Give an informational update: local tests passed; hosted checks are pending.
+
+Output: Local checks passed. Hosted behavior is still unverified; no release decision is requested by this update.

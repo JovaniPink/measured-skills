@@ -1,0 +1,1151 @@
+{
+  "status": "authored_not_behaviorally_tested",
+  "description_decisions": [
+    {
+      "skill": "acceptance-evidence-ledger",
+      "before_characters": 335,
+      "after_characters": 146,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "accessibility-review",
+      "before_characters": 263,
+      "after_characters": 170,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "adobe-aem-engineering-profile",
+      "before_characters": 272,
+      "after_characters": 189,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "agent-context-state-memory-design",
+      "before_characters": 373,
+      "after_characters": 189,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "agent-evaluation-design",
+      "before_characters": 401,
+      "after_characters": 180,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "agent-protocol-interoperability-review",
+      "before_characters": 386,
+      "after_characters": 192,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "agent-tool-action-boundary-review",
+      "before_characters": 364,
+      "after_characters": 168,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "agentic-system-security-review",
+      "before_characters": 389,
+      "after_characters": 192,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "alignment-interview",
+      "before_characters": 297,
+      "after_characters": 174,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "api-contract-compatibility-review",
+      "before_characters": 228,
+      "after_characters": 182,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "application-security-review",
+      "before_characters": 298,
+      "after_characters": 181,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "authority-boundary-review",
+      "before_characters": 257,
+      "after_characters": 184,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "change-adoption-planning",
+      "before_characters": 214,
+      "after_characters": 159,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "change-impact-analysis",
+      "before_characters": 275,
+      "after_characters": 163,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "claim-verification",
+      "before_characters": 252,
+      "after_characters": 176,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "code-change-review",
+      "before_characters": 264,
+      "after_characters": 167,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "codebase-explanation",
+      "before_characters": 303,
+      "after_characters": 180,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "context-reliability-review",
+      "before_characters": 384,
+      "after_characters": 180,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "cross-capability-dependency-mapping",
+      "before_characters": 226,
+      "after_characters": 185,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "cross-stack-quality-gates",
+      "before_characters": 251,
+      "after_characters": 172,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "csharp-dotnet-engineering-profile",
+      "before_characters": 259,
+      "after_characters": 167,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "data-authority-migration-ratification",
+      "before_characters": 258,
+      "after_characters": 173,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "data-migration-readiness",
+      "before_characters": 211,
+      "after_characters": 172,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "decision-evidence-trace",
+      "before_characters": 257,
+      "after_characters": 185,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "decision-governance-records",
+      "before_characters": 234,
+      "after_characters": 156,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "dependency-supply-chain-review",
+      "before_characters": 260,
+      "after_characters": 178,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "design-rationale-investigation",
+      "before_characters": 279,
+      "after_characters": 166,
+      "invocation": "implicit",
+      "risk_class": "network-read",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "domain-vocabulary-modeling",
+      "before_characters": 325,
+      "after_characters": 163,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "finding-consolidation",
+      "before_characters": 367,
+      "after_characters": 176,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "finish-development-branch",
+      "before_characters": 270,
+      "after_characters": 176,
+      "invocation": "explicit",
+      "risk_class": "external-write",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "functional-motion-review",
+      "before_characters": 217,
+      "after_characters": 178,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "go-engineering-profile",
+      "before_characters": 220,
+      "after_characters": 155,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "google-adk-engineering-profile",
+      "before_characters": 378,
+      "after_characters": 189,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "guided-configuration",
+      "before_characters": 251,
+      "after_characters": 180,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "high-signal-technical-writing",
+      "before_characters": 316,
+      "after_characters": 182,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "implementation-planning",
+      "before_characters": 235,
+      "after_characters": 197,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "ios-journey-verification",
+      "before_characters": 267,
+      "after_characters": 190,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "iteration-postlaunch-learning",
+      "before_characters": 211,
+      "after_characters": 176,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "java-spring-engineering-profile",
+      "before_characters": 248,
+      "after_characters": 173,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "kpi-outcome-measurement",
+      "before_characters": 237,
+      "after_characters": 167,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "merge-conflict-reconciliation",
+      "before_characters": 313,
+      "after_characters": 181,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "module-interface-design",
+      "before_characters": 281,
+      "after_characters": 152,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "before_characters": 280,
+      "after_characters": 191,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "nextjs-cache-auth-boundary-review",
+      "before_characters": 251,
+      "after_characters": 190,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "nextjs-feature-delivery",
+      "before_characters": 275,
+      "after_characters": 200,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "observability-design",
+      "before_characters": 257,
+      "after_characters": 166,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "operational-readiness-review",
+      "before_characters": 260,
+      "after_characters": 170,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "performance-scalability-diagnosis",
+      "before_characters": 241,
+      "after_characters": 169,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "php-drupal-engineering-profile",
+      "before_characters": 264,
+      "after_characters": 175,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "plan-execution",
+      "before_characters": 213,
+      "after_characters": 170,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "portable-skill-authoring",
+      "before_characters": 291,
+      "after_characters": 200,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "postgresql-sql-engineering-profile",
+      "before_characters": 236,
+      "after_characters": 176,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "prelaunch-readiness",
+      "before_characters": 235,
+      "after_characters": 162,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "problem-framing",
+      "before_characters": 273,
+      "after_characters": 189,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "production-incident-analysis",
+      "before_characters": 249,
+      "after_characters": 172,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "prototype-spike",
+      "before_characters": 262,
+      "after_characters": 180,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "public-private-boundary-review",
+      "before_characters": 316,
+      "after_characters": 181,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "publish-change-safely",
+      "before_characters": 238,
+      "after_characters": 179,
+      "invocation": "explicit",
+      "risk_class": "external-write",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "python-engineering-profile",
+      "before_characters": 216,
+      "after_characters": 162,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "react-rendering-performance-diagnosis",
+      "before_characters": 238,
+      "after_characters": 186,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "request-code-review",
+      "before_characters": 258,
+      "after_characters": 175,
+      "invocation": "explicit",
+      "risk_class": "external-write",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "requirements-synthesis",
+      "before_characters": 223,
+      "after_characters": 175,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "research-to-publication-lifecycle",
+      "before_characters": 357,
+      "after_characters": 181,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "respond-to-code-review",
+      "before_characters": 227,
+      "after_characters": 178,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "retrieval-grounding-quality-review",
+      "before_characters": 419,
+      "after_characters": 198,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "salesforce-apex-engineering-profile",
+      "before_characters": 267,
+      "after_characters": 174,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "skill-import-provenance",
+      "before_characters": 304,
+      "after_characters": 163,
+      "invocation": "explicit",
+      "risk_class": "trust-decision",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "skill-security-review",
+      "before_characters": 257,
+      "after_characters": 168,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "source-grounded-research",
+      "before_characters": 248,
+      "after_characters": 181,
+      "invocation": "implicit",
+      "risk_class": "network-read",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "source-output-conformance-audit",
+      "before_characters": 345,
+      "after_characters": 185,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "stakeholder-technical-communication",
+      "before_characters": 252,
+      "after_characters": 200,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "swift-concurrency-diagnosis",
+      "before_characters": 248,
+      "after_characters": 187,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "swift-persistence-contract-review",
+      "before_characters": 232,
+      "after_characters": 174,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "swift-swiftui-engineering-profile",
+      "before_characters": 354,
+      "after_characters": 179,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "swiftui-feature-delivery",
+      "before_characters": 247,
+      "after_characters": 177,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "systematic-diagnosis",
+      "before_characters": 239,
+      "after_characters": 166,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "task-handoff",
+      "before_characters": 288,
+      "after_characters": 199,
+      "invocation": "explicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "terraform-engineering-profile",
+      "before_characters": 213,
+      "after_characters": 188,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "test-driven-change",
+      "before_characters": 260,
+      "after_characters": 183,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "test-quality-review",
+      "before_characters": 251,
+      "after_characters": 202,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "test-strategy",
+      "before_characters": 252,
+      "after_characters": 162,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "typescript-javascript-engineering-profile",
+      "before_characters": 254,
+      "after_characters": 170,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "value-attribution-evidence-maturity",
+      "before_characters": 241,
+      "after_characters": 178,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "workflow-retrospective",
+      "before_characters": 289,
+      "after_characters": 182,
+      "invocation": "explicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "workshop-planning-synthesis",
+      "before_characters": 225,
+      "after_characters": 170,
+      "invocation": "implicit",
+      "risk_class": "read-only",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    },
+    {
+      "skill": "worktree-isolation",
+      "before_characters": 257,
+      "after_characters": 186,
+      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "decision": "Reworded around concrete requests; invocation and risk retained."
+    }
+  ],
+  "reference_decisions": [
+    {
+      "path": "skills/acceptance-evidence-ledger/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/acceptance-evidence-ledger/references/ledger-contract.md",
+      "lines": 54,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/adobe-aem-engineering-profile/references/checks.md",
+      "lines": 19,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/agent-context-state-memory-design/references/state-memory-lifecycle.md",
+      "lines": 25,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/agent-evaluation-design/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/agent-evaluation-design/references/evaluation-contract.md",
+      "lines": 29,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/agent-protocol-interoperability-review/references/protocol-boundaries.md",
+      "lines": 25,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/agent-tool-action-boundary-review/references/tool-action-matrix.md",
+      "lines": 24,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/agentic-system-security-review/references/agentic-threat-domains.md",
+      "lines": 24,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/alignment-interview/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/claim-verification/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/context-reliability-review/references/assertion-matrix.md",
+      "lines": 30,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/cross-stack-quality-gates/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/cross-stack-quality-gates/references/gate-discovery.md",
+      "lines": 25,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/csharp-dotnet-engineering-profile/references/checks.md",
+      "lines": 19,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/functional-motion-review/references/motion-evidence.md",
+      "lines": 42,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/go-engineering-profile/references/checks.md",
+      "lines": 20,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/google-adk-engineering-profile/references/adk-version-boundaries.md",
+      "lines": 29,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/guided-configuration/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/high-signal-technical-writing/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/high-signal-technical-writing/references/editing-checklist.md",
+      "lines": 22,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/implementation-planning/references/decision-map.md",
+      "lines": 15,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/implementation-planning/references/document-lifecycle.md",
+      "lines": 51,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/implementation-planning/references/specification-synthesis.md",
+      "lines": 11,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/implementation-planning/references/work-packages.md",
+      "lines": 15,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/ios-journey-verification/references/currency.md",
+      "lines": 11,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/ios-journey-verification/references/journeys.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/java-spring-engineering-profile/references/checks.md",
+      "lines": 19,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/multi-agent-orchestration/references/candidate-comparison.md",
+      "lines": 11,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/multi-agent-orchestration/references/client-mapping.md",
+      "lines": 23,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/multi-agent-orchestration/references/coverage-fanout.md",
+      "lines": 12,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/nextjs-cache-auth-boundary-review/references/boundaries.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/nextjs-feature-delivery/references/delivery.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/php-drupal-engineering-profile/references/checks.md",
+      "lines": 19,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/plan-execution/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/plan-execution/references/document-reconciliation.md",
+      "lines": 28,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/portable-skill-authoring/references/client-adapters.md",
+      "lines": 37,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/portable-skill-authoring/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/postgresql-sql-engineering-profile/references/checks.md",
+      "lines": 20,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/prelaunch-readiness/references/surface-checks.md",
+      "lines": 32,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/publish-change-safely/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/python-engineering-profile/references/checks.md",
+      "lines": 20,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/react-rendering-performance-diagnosis/references/measurement.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/research-to-publication-lifecycle/references/knowledge-object-handoff.md",
+      "lines": 46,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/retrieval-grounding-quality-review/references/retrieval-evidence-matrix.md",
+      "lines": 24,
+      "decision": "inline",
+      "reason": "The matrix is the ordinary review contract, so it belongs beside its workflow."
+    },
+    {
+      "path": "skills/salesforce-apex-engineering-profile/references/checks.md",
+      "lines": 19,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/skill-import-provenance/references/provenance-record.md",
+      "lines": 22,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/skill-security-review/references/review-domains.md",
+      "lines": 51,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/source-output-conformance-audit/references/conformance-matrix.md",
+      "lines": 32,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/stakeholder-technical-communication/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/swift-concurrency-diagnosis/references/isolation.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-persistence-contract-review/references/persistence.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/adaptive-layout.md",
+      "lines": 25,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/animations.md",
+      "lines": 21,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/api-currency.md",
+      "lines": 48,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/checks.md",
+      "lines": 30,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/concurrency.md",
+      "lines": 52,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/folding-displays.md",
+      "lines": 13,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/healthkit.md",
+      "lines": 49,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/identity-and-collections.md",
+      "lines": 33,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/ios-accessibility.md",
+      "lines": 46,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/localization.md",
+      "lines": 24,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/release-readiness.md",
+      "lines": 11,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/state-and-environment.md",
+      "lines": 33,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/swift-testing.md",
+      "lines": 62,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/swiftdata.md",
+      "lines": 55,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/swiftui-performance.md",
+      "lines": 26,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/swiftui.md",
+      "lines": 50,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swift-swiftui-engineering-profile/references/toolbars-and-presentation.md",
+      "lines": 32,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swiftui-feature-delivery/references/currency.md",
+      "lines": 11,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/swiftui-feature-delivery/references/delivery.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/task-handoff/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/terraform-engineering-profile/references/checks.md",
+      "lines": 20,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/typescript-javascript-engineering-profile/references/checks.md",
+      "lines": 20,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    },
+    {
+      "path": "skills/workflow-retrospective/references/continuity-example.md",
+      "lines": 5,
+      "decision": "retain",
+      "reason": "Synthetic acceptance fixture retained for regression review."
+    },
+    {
+      "path": "skills/worktree-isolation/references/linked-worktree-model.md",
+      "lines": 15,
+      "decision": "retain",
+      "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
+    }
+  ]
+}

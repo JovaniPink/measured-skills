@@ -1,6 +1,6 @@
 ---
 name: api-contract-compatibility-review
-description: Review API, event, schema, and client changes for backward, forward, and rollout compatibility. Use when producers and consumers may upgrade independently or when a change can alter behavior, shape, timing, errors, or semantics.
+description: "Reviews breaking API, event, and schema changes when asked whether old clients still work or independent upgrades are safe; checks behavior and rollout order as well as field shapes."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Contract inventory, Compatibility findings, Consumer risk, Test matrix, Rollout, Deprecation, and Unresolved authority. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. Mark each finding `new`, `unchanged`, `updated`, or `absent` against the pinned base revision.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A response field changes from an integer to a string while old clients remain deployed.
+
+Output: warning: old clients may reject the new type. Preserve the old contract or establish a compatible transition before rollout.

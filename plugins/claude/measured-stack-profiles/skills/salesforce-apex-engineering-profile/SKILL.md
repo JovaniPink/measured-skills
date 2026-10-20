@@ -1,6 +1,6 @@
 ---
 name: salesforce-apex-engineering-profile
-description: Apply focused Salesforce, Apex, and Lightning Web Components engineering judgment after repository gate discovery. Use for metadata projects, packages, governor limits, data access, tests, compatibility, and deployment readiness; preserve separate live-org authority.
+description: "Reviews Salesforce Apex changes when governor limits, bulk processing, triggers, sharing, or tests need focused checks; keeps deployment and org writes separately authorized."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Org evidence boundary, Missing evidence, and Next safe gate.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A trigger performs one query per record.
+
+Output: warning: query count grows with batch size. Review bulk behavior and governor limits; deployment to an org is outside this review.

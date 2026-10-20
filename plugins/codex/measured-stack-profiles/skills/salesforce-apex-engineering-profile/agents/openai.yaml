@@ -1,6 +1,6 @@
 interface:
   display_name: "Salesforce and Apex Engineering Profile"
-  short_description: "Apply focused Salesforce engineering guidance"
-  default_prompt: "Use $measured-stack-profiles:salesforce-apex-engineering-profile to apply focused Salesforce, Apex, and LWC guidance after repository discovery."
+  short_description: "Reviews Salesforce Apex changes"
+  default_prompt: "Use $measured-stack-profiles:salesforce-apex-engineering-profile for this task: Reviews Salesforce Apex changes when governor limits, bulk processing, triggers, sharing, or tests need focused checks; keeps deployment and org writes separately authorized."
 policy:
   allow_implicit_invocation: true

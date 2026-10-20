@@ -1,6 +1,6 @@
 interface:
   display_name: "Agent Context State Memory Design"
-  short_description: "Design safe agent information lifecycles"
-  default_prompt: "Use $measured-agent-platforms:agent-context-state-memory-design to map context, state, memory, identity, and retention boundaries."
+  short_description: "Designs agent context and memory boundaries"
+  default_prompt: "Use $measured-agent-platforms:agent-context-state-memory-design for this task: Designs agent context and memory boundaries when asked where session state belongs, how memory expires, or how tenants stay isolated; distinguishes architecture from a context-packet audit."
 policy:
   allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: requirements-synthesis
-description: Synthesize interviews, documents, issues, observations, and constraints into traceable requirements. Use when multiple sources must become a decision-ready scope without turning proposals or preferences into ratified facts.
+description: "Combines interviews, documents, and issues when asked to turn conflicting inputs into requirements; traces each requirement to evidence and keeps unresolved decisions visible."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Source inventory, Findings, Requirement set, Traceability, Conflicts, Open questions, and Decisions needed.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: One interview requests immediate deletion; another requires seven-year retention.
+
+Output: Record the conflict and responsible decision owner. Do not silently choose one requirement or label the combined scope approved.

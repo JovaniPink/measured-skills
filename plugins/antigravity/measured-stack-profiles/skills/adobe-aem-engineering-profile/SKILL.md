@@ -1,6 +1,6 @@
 ---
 name: adobe-aem-engineering-profile
-description: Apply focused Adobe Experience Manager engineering judgment after repository gate discovery. Use for AEM as a Cloud Service or AEM 6.5 code, Sling and OSGi, content packages, Dispatcher, caching, tests, compatibility, and builds; preserve separate Cloud Manager authority.
+description: "Reviews AEM code, Sling, OSGi, Dispatcher, and content packages when an Adobe Experience Manager change needs stack-specific checks; follows discovered versions and Cloud Manager authority."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Product generation, Discovery, Hazards, Commands selected, Results, Compatibility, Cloud evidence boundary, Missing evidence, and Next safe gate.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A Dispatcher rule caches a page containing a signed-in user's name.
+
+Output: warning: the response contains user-specific content. Check cache eligibility and isolation before treating this as safe for shared caching.

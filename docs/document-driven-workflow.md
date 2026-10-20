@@ -33,3 +33,23 @@ The new trigger and safety cases in `evals/cases.json` are authored test cases,
 not observed client results. Use the [client checks](client-support.md) separately
 for each installed client and surface. Existing 0.18.0 observations predate this
 source revision and do not qualify these changes.
+
+## Reconciliation cycle
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Plan
+    participant Work
+    participant Evidence
+    User->>Plan: Define outcome and action authority
+    Plan->>Work: Hand off acceptance criteria and baseline
+    Work->>Evidence: Run authorized checks
+    Evidence-->>Plan: Record passed, missing, or failed evidence
+    Plan-->>User: Reconcile outcome and unfinished work
+    User->>Work: Authorize any next delivery action
+```
+
+The plan records intent. Implementation changes behavior. Evidence supports
+only the checks actually observed. Review and delivery use those distinctions;
+a completed plan cannot grant its own permission to publish or merge.

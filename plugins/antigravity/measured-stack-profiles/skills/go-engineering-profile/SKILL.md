@@ -1,6 +1,6 @@
 ---
 name: go-engineering-profile
-description: Apply focused Go engineering judgment after repository gate discovery. Use for Go modules, packages, concurrency, APIs, tests, dependencies, compatibility, and build concerns; defer exact commands to repository evidence.
+description: "Reviews Go changes when goroutines, modules, APIs, dependencies, or tests need language-specific checks; follows repository toolchain and gate definitions."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -32,5 +32,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A goroutine writes to a map while the request handler reads it.
+
+Output: warning: concurrent access lacks synchronization. Inspect ownership and run the repository's race checks before selecting a fix.

@@ -1,6 +1,6 @@
 ---
 name: decision-governance-records
-description: Create or review decision records that preserve context, options, evidence, ownership, status, consequences, and review triggers. Use when a proposal must be distinguished from a ratified, rejected, superseded, or unresolved decision.
+description: "Writes or reviews a decision record when asked to document options, rationale, ownership, or approval status; separates a proposal from a ratified decision."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Decision question, Status, Context, Options, Evidence, Owner, Consequences, Follow-up, and Review triggers.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two storage options are documented, but the owner has not selected one.
+
+Output: Status: proposed. Preserve both options and their tradeoffs, name the decision owner, and keep implementation dependent on selection.

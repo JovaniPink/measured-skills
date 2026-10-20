@@ -1,6 +1,6 @@
 ---
 name: test-strategy
-description: Design risk-proportionate test coverage across unit, integration, contract, end-to-end, property, migration, and manual layers. Use when a feature, architecture change, or defect needs a justified coverage plan rather than only running existing checks.
+description: "Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -39,4 +39,14 @@ Choose the smallest set of tests that provides credible evidence for the actual 
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return a matrix with `Risk`, `Behavior`, `Test layer`, `Fixture`, `Oracle`, `Environment`, and `Failure signal`, followed by omissions and manual evidence needs.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A change alters retry behavior at an external API boundary.
+
+Output: Cover successful retry, exhausted attempts, duplicate effects, and cancellation with controlled responses; add integration evidence where the contract cannot be simulated.

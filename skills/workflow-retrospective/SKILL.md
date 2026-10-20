@@ -1,6 +1,6 @@
 ---
 name: workflow-retrospective
-description: "Review a completed or paused workflow using supplied artifacts and current task evidence to identify what helped, what failed, why, and which bounded improvement to test next. Invoke explicitly after meaningful work; do not mine private histories or automatically rewrite policy or skills."
+description: "Reviews a completed workflow when explicitly asked what caused friction or what to improve next; uses observed task evidence without diagnosing people or claiming unmeasured benefit."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,10 +40,23 @@ A retrospective is after-the-fact interpretation. It does not change the origina
 
 ## Output
 
-Return `Scope`, `Observed timeline`, `What helped`, `What hindered`, `Contributing conditions`, `Evidence limits`, `Improvement experiment`, `Owner and review date`, and `Rejected generalizations`. If a knowledge-lifecycle handoff was requested, add the proposed retrospective ID, subject relationships, findings, unknowns, and limitations without writing or publishing them automatically.
+Report the scope, observed timeline, what helped or hindered, contributing
+conditions, evidence limits, improvement experiment, owner, review date, and
+rejected generalizations. Include observable communication friction: finding
+results, repeated discovery, lost evidence, unnecessary decisions, and corrections
+needed to resume. Separate measured effort from estimates and preferences.
 
-## Continuity and evidence
-
-Review observable communication friction: time spent finding results, repeated discovery after interruption, lost evidence, unnecessary decisions, and corrections needed to resume. Distinguish measured effort from estimates and preference. Compare the current workflow, a small preference change, and a focused skill revision before proposing general adoption.
+Compare the current workflow, a small preference change, and a focused skill
+revision before recommending general adoption. For a requested knowledge-lifecycle
+handoff, include the proposed retrospective ID, subject relationships, findings,
+unknowns, and limitations without automatically writing or publishing them.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two status updates omitted a failed required check.
+
+Output: Record the omission and its recovery cost, then propose a focused evidence-retention change. Do not infer personal traits or unmeasured productivity gains.

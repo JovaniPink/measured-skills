@@ -1,6 +1,6 @@
 interface:
   display_name: "Respond to Code Review"
-  short_description: "Verify feedback before accepting or changing code"
-  default_prompt: "Use $measured-engineering-delivery:respond-to-code-review to verify and address this review feedback."
+  short_description: "Evaluates reviewer comments"
+  default_prompt: "Use $measured-engineering-delivery:respond-to-code-review for this task: Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it."
 policy:
   allow_implicit_invocation: true

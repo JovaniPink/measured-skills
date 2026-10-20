@@ -1,6 +1,6 @@
 interface:
   display_name: "PHP and Drupal Engineering Profile"
-  short_description: "Apply focused PHP and Drupal guidance"
-  default_prompt: "Use $php-drupal-engineering-profile to apply focused PHP and Drupal guidance after repository discovery."
+  short_description: "Reviews PHP and Drupal changes"
+  default_prompt: "Use $php-drupal-engineering-profile for this task: Reviews PHP and Drupal changes when modules, themes, entities, caching, or configuration need focused checks; follows Composer locks, repository tests, and supported versions."
 policy:
   allow_implicit_invocation: true

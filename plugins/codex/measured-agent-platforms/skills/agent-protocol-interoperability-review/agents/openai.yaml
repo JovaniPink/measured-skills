@@ -1,6 +1,6 @@
 interface:
   display_name: "Agent Protocol Interoperability Review"
-  short_description: "Review agent protocol trust and compatibility"
-  default_prompt: "Use $measured-agent-platforms:agent-protocol-interoperability-review to review this A2A, MCP, or agent protocol boundary."
+  short_description: "Reviews MCP, A2A, and agent protocol integration"
+  default_prompt: "Use $measured-agent-platforms:agent-protocol-interoperability-review for this task: Reviews MCP, A2A, and agent protocol integration when tools fail discovery or delegation, streaming, retries, or cancellation cross services; ordinary API changes use API compatibility review."
 policy:
   allow_implicit_invocation: true

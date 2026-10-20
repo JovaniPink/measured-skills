@@ -1,6 +1,6 @@
 ---
 name: prototype-spike
-description: "Run a bounded prototype or technical spike to answer a named uncertainty with disposable or isolated work and explicit evidence. Invoke explicitly when the user authorizes implementation for learning but has not authorized production adoption, merge, or release."
+description: "Runs an isolated technical experiment when explicitly asked to test feasibility or answer an implementation uncertainty; disposable evidence does not authorize production adoption."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -38,4 +38,14 @@ Confirm the question, success and failure evidence, time or cost bound, allowed 
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Question`, `Hypothesis`, `Bounds`, `Prototype`, `Evidence`, `Result`, `Limitations`, `Disposition`, and `Production gaps`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Test whether a parser library supports one unusual syntax in an isolated experiment.
+
+Output: Build the smallest representative case and report support, failure, or uncertainty. A successful spike is not approval to adopt the dependency.

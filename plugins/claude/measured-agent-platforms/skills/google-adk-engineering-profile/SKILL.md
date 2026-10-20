@@ -1,6 +1,6 @@
 ---
 name: google-adk-engineering-profile
-description: Review or design a Google Agent Development Kit system using exact framework, language, model, session, tool, evaluation, and deployment evidence. Use for human-facing ADK architecture and version discovery; combine it with the focused agent security, evaluation, context, retrieval, and operational skills instead of treating framework defaults as proof of safety or readiness.
+description: "Reviews Google ADK architecture when asked about sessions, tools, models, evaluations, or deployment compatibility; checks exact versions and does not equate framework defaults with safety."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,4 +40,14 @@ Identify the repository, language, installed ADK version, intended users, runtim
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Decision`, `Exact versions`, `Developer and runtime planes`, `Agent composition`, `State and memory`, `Tool boundaries`, `Runtime skills`, `Evaluation`, `Security`, `Operational boundaries`, `Confirmed evidence`, `Experimental or version-sensitive behavior`, `Missing evidence`, and `Next safe test`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A design assumes agent sessions survive restarts without a configured store.
+
+Output: Persistence is unverified. Identify the exact ADK session service and storage configuration; an in-memory session does not prove restart recovery.

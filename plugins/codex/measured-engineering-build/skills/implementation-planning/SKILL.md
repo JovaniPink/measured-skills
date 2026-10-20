@@ -1,6 +1,6 @@
 ---
 name: implementation-planning
-description: Produce a decision-complete implementation plan grounded in repository and platform evidence. Use when a change needs concrete interfaces, ordered steps, tests, rollout controls, checkpoints, and stopping conditions before work begins.
+description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -42,4 +42,14 @@ Read [document lifecycle](references/document-lifecycle.md) when a specification
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Objective`, `Current evidence`, `Interfaces`, `Implementation steps`, `Test strategy`, `Rollout and rollback`, `Checkpoints`, `Risks`, and `Stopping conditions`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Plan a parser change that must accept empty input and retain existing errors.
+
+Output: Define acceptance for empty input and existing error behavior, change the parser boundary, and verify both paths with focused tests before declaring completion.

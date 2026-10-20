@@ -1,6 +1,6 @@
 interface:
   display_name: "Alignment Interview"
-  short_description: "Resolve material unknowns before implementation"
-  default_prompt: "Use $measured-reasoning:alignment-interview to establish a decision-ready shared understanding before implementation."
+  short_description: "Clarifies an underspecified request"
+  default_prompt: "Use $measured-reasoning:alignment-interview for this task: Clarifies an underspecified request when the desired result, constraints, or success criteria are unclear; asks only material questions and does not reopen settled decisions."
 policy:
   allow_implicit_invocation: true

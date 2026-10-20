@@ -1,6 +1,6 @@
 ---
 name: authority-boundary-review
-description: Review a system or migration to identify authoritative stores, exact-byte custody, projections, writers, readers, reconciliation paths, and ratified versus proposed contracts. Use for data architecture, migration, integration, and source-of-truth decisions.
+description: "Maps sources of truth when asked which database owns a value, which copies are projections, or who may write during migration; distinguishes proposed ownership from approved authority."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -31,6 +31,32 @@ Make authority claims explicit and verify them against operational behavior rath
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Provide an authority matrix with `Artifact`, `Owned fact`, `Class`, `Writer`, `Readers`, `Conflict rule`, and `Evidence`. Follow it with confirmed boundaries, contradictions, proposed changes, and unresolved decisions.
 
 Do not call a migration complete from schema or code changes alone. Writer cutover, historical data, reconciliation, deployment, and live reads require separate evidence.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Orders are written to a ledger and copied into a search index.
+
+Output: The ledger owns order state; the index is a projection. Repair stale search documents from the ledger unless an approved contract says otherwise.
+
+## Authority and projections
+
+```mermaid
+flowchart LR
+    Writer[Authorized writer] --> Store[Authoritative store]
+    Store --> Pipeline[Projection process]
+    Pipeline --> Index[Search index]
+    Pipeline --> Cache[Cache]
+    Store --> Reconcile[Reconciliation evidence]
+    Index --> Reconcile
+    Cache --> Reconcile
+```
+
+A projection can be rebuilt from its authority under an approved contract.
+Neither a cache hit nor a matching total grants the projection write authority.

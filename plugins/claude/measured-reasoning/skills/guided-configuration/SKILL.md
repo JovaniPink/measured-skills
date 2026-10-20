@@ -1,6 +1,6 @@
 ---
 name: guided-configuration
-description: "Guide a person through configuration steps that require their account, device, approval, credential, or external interface while verifying each observable result. Invoke explicitly when the agent cannot or should not perform the protected step itself."
+description: "Guides account or device setup when explicitly asked to help with a protected configuration step; verifies visible results without requesting secrets or claiming unseen completion."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -35,10 +35,19 @@ Help a person complete protected configuration without pretending the agent perf
 
 ## Output
 
-During a step, return `Current step`, `Expected result`, and relevant `Recovery` or `Security boundary`. At a checkpoint or completion, lead with the observed result and anything the user must do next. Then reconcile `Goal`, `Authoritative source`, `Observed result`, `Changes applied`, and `Remaining steps`, preserving failed and unverified work. `Changes applied` lists every configuration change the user reported or the agent observed, including reversed ones, and marks which were observed.
-
-## Continuity and evidence
-
-During configuration, present the current human step, expected result, and relevant recovery or security boundary. Keep the complete state reconciliation for a checkpoint or final response. Preserve failed and unverified steps, and reuse observed completion when it remains current.
+During a step, state the current human action, expected result, and relevant
+recovery or security boundary. Reuse observed completion while it remains current.
+At a checkpoint, lead with the observed result and anything the user must do
+next; reconcile the goal, authoritative source, results, changes, and remaining
+steps. List every reported or observed configuration change, including reversed
+ones, and identify which were observed. Failed and unverified steps remain visible.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The account is selected, but the permission screen is still pending.
+
+Output: Complete the permission step in the account interface and verify its result. Account selection alone does not establish access.

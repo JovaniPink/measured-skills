@@ -1,6 +1,6 @@
 ---
 name: acceptance-evidence-ledger
-description: "Create or update an acceptance ledger for substantial work that needs explicit outcomes, current evidence, re-verification, and visible blockers or abandonments. Invoke explicitly when a user requests an inline or repository-owned completion contract; use focused testing, execution, or claim-verification skills for one-time requests."
+description: "Creates a completion ledger when explicitly asked to track acceptance criteria and current evidence; preserves blocked and abandoned requirements."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -49,10 +49,17 @@ Confirm the task scope, required outcomes, evidence authorities, owner, and inte
 
 ## Output
 
-Return `Result`, `Ledger location`, `Scope`, and the complete `Gate table`. Include applicable `Reverification`, `Abandonments`, `Unresolved`, and `Next authorized action`.
-
-## Continuity and evidence
-
-Present the calculated result first, followed by the complete ledger. Keep abandoned requirements, stale receipts, blockers, and their consequences visible. Include a next authorized action only when one exists; presentation never changes gate calculation.
+Lead with the calculated result, followed by the complete gate table, scope,
+and ledger location. Keep abandoned requirements, stale receipts, blockers,
+reverification needs, and their consequences visible. Include a next authorized
+action only when one exists. Presentation never changes gate calculation.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Track two required checks: parsing passes; recovery was abandoned.
+
+Output: QUALIFIED: parsing is met. Recovery remains abandoned, with recovery behavior unverified.

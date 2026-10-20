@@ -744,6 +744,16 @@ class CatalogTests(unittest.TestCase):
             "https://nextjs.org/docs/app/guides/authentication",
             "https://react.dev/learn/you-might-not-need-an-effect",
         })
+        expected.update({
+            'https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html',
+            'https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute',
+            'https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once',
+            'https://docs.cloud.google.com/dataform/docs/create-tables',
+            'https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists',
+            'https://docs.cloud.google.com/storage/docs/metadata',
+            'https://docs.getdbt.com/docs/build/incremental-models',
+            'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():
@@ -1094,7 +1104,7 @@ class CatalogTests(unittest.TestCase):
                     {
                         "SKILL.md",
                         "agents/openai.yaml",
-                        f"references/{references[skill]}",
+                        *({f"references/{references[skill]}"} if skill != "context-reliability-review" else set()),
                     }
                     | (
                         {"references/continuity-example.md"}
@@ -1119,7 +1129,7 @@ class CatalogTests(unittest.TestCase):
             "google-adk-engineering-profile": "adk-version-boundaries.md",
             "retrieval-grounding-quality-review": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(86, len(SKILLS))
+        self.assertEqual(87, len(SKILLS))
         self.assertEqual(11, len(skills_by_plugin()))
         self.assertEqual(
             set(new_skills), set(skills_by_plugin()["measured-agent-platforms"])
@@ -1134,7 +1144,7 @@ class CatalogTests(unittest.TestCase):
                 if path.is_file()
             }
             self.assertEqual(
-                {"SKILL.md", "agents/openai.yaml", f"references/{reference}"},
+                {"SKILL.md", "agents/openai.yaml"} | ({f"references/{reference}"} if skill == "google-adk-engineering-profile" else set()),
                 files,
             )
             metadata = read_skill_metadata(root)

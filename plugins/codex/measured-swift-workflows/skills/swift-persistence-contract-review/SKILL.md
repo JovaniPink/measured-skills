@@ -1,6 +1,6 @@
 ---
 name: swift-persistence-contract-review
-description: Review Swift persistence mutation authority, SwiftData model identity, deletion, migration compatibility, or synchronization contracts. Read-only; do not trigger for visual styling, generic database advice, or executing a migration.
+description: "Reviews Swift persistence when SwiftData identity, context ownership, deletion, migration, or sync behavior is uncertain; does not assume CloudKit or authorize data mutation."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -34,3 +34,11 @@ Report the authorized scope, applicable settings, observed evidence, result, mis
 ## Editable ordering
 
 Separate draft order from durable order. Moving an item must preserve its ID and any unsaved fields keyed by that ID. Review no-op, boundary, invalid/stale-ID, deletion, cancellation, failed-save, reopen, and synchronization cases. Order-only changes must not accidentally create domain events. Preserve the existing conflict protocol; adding a drag gesture does not authorize a schema migration.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two SwiftData contexts edit the same model and sync behavior is unspecified.
+
+Output: Map context ownership and conflict handling. Persistence configuration alone does not establish synchronization or safe concurrent writes.

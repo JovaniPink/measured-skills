@@ -1,72 +1,78 @@
-# Daily agent workflow
+# Use the skills in daily work
 
-Use Codex, Claude Code, or Antigravity for the work each can do in your setup. No client is the required starting point. Pick one based on the files, tools, and permissions the task needs.
+Start with one task and the smallest useful selection. The 0.18.0 candidate
+includes `daily-engineering-experimental`, a 12-skill selection for planning,
+diagnosis, review, tests, Python, and GCP data work. It is prepared for trials;
+its activation and benefit have not been measured in a client.
 
-## Choose where to work
+## Prepare a selection
 
-| Need | What to check before you start |
+From a reviewed checkout, export to a new folder outside the repository. The
+parent must already exist and have no symlink components. This creates files;
+it does not install anything or change account settings.
+
+```sh
+python3 scripts/export_selected.py --profile daily-engineering-experimental --client codex --output /private/tmp/daily-codex-review
+```
+
+Use `--client claude` or `--client antigravity` for the other adapters and a new
+output folder for each. Follow the relevant [client guide](client-support.md)
+for a separately chosen installation. Keep the output receipt with that review.
+The [selection guide](choose-your-skills.md) lists other packs and recipes.
+
+The project projector is a different path: it accepts only read-only implicit
+skills in shared discovery. This daily profile includes bounded execution
+skills, so do not pass it through that projector or weaken its checks.
+
+## Five useful requests
+
+The examples below are synthetic, not observed client results.
+
+| Request | Expected response |
 | --- | --- |
-| Research or discuss a decision | The app can reach the sources and show its evidence. |
-| Write or review code | The app or CLI can open the right checkout and run its checks. |
-| Make a document or other result file | The client can save it where you can find and open it. |
-| Resume work elsewhere | The receiving client has the needed files and a short handoff. |
+| "The parser must accept empty input. Plan the change and its checks." | A concrete contract and tests before implementation |
+| "Why is the build failing after this dependency update? Investigate first." | Reproduction evidence, a causal hypothesis, and the next discriminating check |
+| "Review this PR for bugs; return findings without editing." | Findings tied to the exact diff, with severity and evidence |
+| "Local tests passed. Is the fix live?" | Local success retained; deployment and runtime remain unverified without their evidence |
+| "Review this incremental model; only supplied files may be inspected." | Grain, keys, late-data risks, and missing evidence; no warehouse query or backfill |
 
-ChatGPT, Claude chat, Cowork, and the coding apps may use different files and tools. Check the exact mode. A shared account does not prove shared skills or memory.
+A successful answer can be brief: "The supplied checks passed at this revision."
+An uncertain answer should name the missing proof: "Serving revision is unknown."
+A blocked answer keeps the consequence: "The required integration service is
+unavailable, so verification remains incomplete."
 
-## State the task
+## Check whether the skill ran
 
-Give the agent a clear goal and the checks that define success:
+Inspect the client's actual tool or skill-loading trace. Record the selected
+skill, exact client/model version, source revision, and visible result. An answer
+that sounds like a skill is not proof it loaded. A successful load is not proof
+that its answer was correct. Check output quality separately.
 
-```text
-Goal:
-Files or repository:
-What is already done:
-Required checks:
-What may change:
-Actions already approved:
-Open questions:
+If selection is missing or wrong, inspect the loaded inventory before rewriting
+the prompt. A plugin copy and an account upload can duplicate the same skill.
+Compare canonical identity, version, and path; do not delete either automatically.
+In Claude Code, `/doctor` and `/context` can help inspect listing cost. Codex has
+its own listing policy. Names, paths, and other installed skills also consume
+space; description totals are estimates, not a universal client limit.
+
+## Choose the next kind of work
+
+```mermaid
+flowchart LR
+    Need[Unclear need] --> Frame[Frame the problem]
+    Frame --> Plan[Plan the change]
+    Plan --> Build[Implement when authorized]
+    Build --> Check[Run required checks]
+    Check --> Review[Review the exact change]
+    Review --> Deliver[Deliver when authorized]
+    Failure[Observed failure] --> Diagnose[Diagnose the cause]
+    Diagnose --> Plan
 ```
 
-The agent should keep working through brief status questions. If you change the goal, say so. It should carry that change into its next update.
+Keep user authority controlling each action. Private facts stay in their owning
+repository; personal preferences stay in client settings. A status question does
+not replace the active objective. At handoff, retain exact state, evidence,
+unfinished work, and existing authorization.
 
-## Match permissions to the work
-
-For reading and review, use a setup that limits edits. For building, allow changes only where the task needs them. For publishing or release work, name the destination and the approved actions.
-
-Check each client's actual settings. Codex sandbox options, Claude permission modes, and Antigravity sandbox and file rules are different controls. Similar names do not prove that they allow the same actions. A plan mode alone does not prove read-only access.
-
-Skill text guides the agent. File access rules, tool permissions, and repository protections enforce limits. Selecting a skill does not grant permission to merge, deploy, use credentials, or contact someone.
-
-## Keep useful updates
-
-Lead with the result or current decision. Keep failures, unknowns, and unfinished work visible. Give detail when it is requested. Name the next action only if there is one.
-
-At a pause or handoff, save this record:
-
-```text
-Active goal:
-Current branch, commit, and changed files:
-Completed work and evidence links:
-Checks, results, and when they ran:
-Unfinished work and blockers:
-Existing approvals and their limits:
-Next action:
-```
-
-Open those evidence links in the receiving client. Recheck facts that may have changed. A handoff should let work resume without retelling the full conversation.
-
-## Put notes where they belong
-
-- Shared rules belong in repository guidance and docs.
-- Project facts belong in project docs or project skills.
-- Personal preferences belong in the client's user instructions or rules.
-- Current work belongs in a task record, issue, branch, or pull request.
-- Secrets belong in approved secret storage, never in skills or memory notes.
-
-Keep each client's memory separate from shared policy. Do not assume a local memory file syncs to a web or remote task. Check the loaded instructions before relying on a preference.
-
-For lab studies, use made-up or public data until a separate private-data plan is approved. In ordinary work, keep connected accounts and tools limited to the task.
-
-Use parallel agents only when the task allows it and their work can stay separate. After a workflow repeats several times, consider a tested script if that would make it more reliable.
-
-See [client support](client-support.md) for setup and use checks across all three CLIs and their apps.
+See the [offline trial protocol](../evals/daily-engineering/README.md) for the
+prepared comparison. No trial, paid run, or installation is implied by this guide.

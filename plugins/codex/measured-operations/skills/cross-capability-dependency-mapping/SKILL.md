@@ -1,6 +1,6 @@
 ---
 name: cross-capability-dependency-mapping
-description: Map dependencies across products, teams, data, platforms, decisions, and operating capabilities. Use when delivery or outcomes depend on multiple owners and hidden sequencing, authority, or failure paths must be made explicit.
+description: "Maps cross-team dependencies when asked what blocks delivery, who owns an input, or which decisions must happen first; records ownership and failure paths without inventing commitments."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,4 +33,14 @@ Use generic terminology and preserve the status of every material statement: obs
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Capability map, Dependency register, Critical path, Ownership gaps, Failure paths, Parallel work, and Decisions needed.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A report launch needs a schema from one team and access approval from another.
+
+Output: Schema delivery and access approval are separate dependencies. Record an owner and acceptance evidence for each before committing to the launch sequence.

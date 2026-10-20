@@ -1,6 +1,6 @@
 ---
 name: typescript-javascript-engineering-profile
-description: Apply focused TypeScript and JavaScript engineering judgment after repository gate discovery. Use for Node or browser packages, type safety, async behavior, tests, dependencies, compatibility, and builds; honor the repository package manager and scripts.
+description: "Reviews TypeScript and JavaScript changes when async code, modules, types, dependencies, or builds need focused checks; uses repository runtimes, lockfiles, and commands."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -32,5 +32,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A TypeScript cast suppresses a possible undefined value at runtime.
+
+Output: The cast changes type checking, not runtime behavior. Trace the absent-value path and test the intended fallback or error.

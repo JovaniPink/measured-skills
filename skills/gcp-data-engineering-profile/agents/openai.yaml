@@ -1,0 +1,6 @@
+interface:
+  display_name: "GCP Data Engineering Profile"
+  short_description: "Review GCP data contracts and pipeline risks"
+  default_prompt: "Use $gcp-data-engineering-profile to review this data change against its discovered stack and authority boundaries."
+policy:
+  allow_implicit_invocation: true

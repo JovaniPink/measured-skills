@@ -1,6 +1,6 @@
 interface:
   display_name: "Finish Development Branch"
-  short_description: "Choose safe integration or cleanup boundaries"
-  default_prompt: "Use $measured-engineering-delivery:finish-development-branch to reconcile this branch and present safe next-state options."
+  short_description: "Assesses next steps for a finished branch"
+  default_prompt: "Use $measured-engineering-delivery:finish-development-branch for this task: Assesses next steps for a finished branch when explicitly asked to wrap up development; presents PR, retention, or cleanup options without assuming merge or deletion authority."
 policy:
   allow_implicit_invocation: false

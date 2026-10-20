@@ -1,6 +1,6 @@
 interface:
   display_name: "Source-Grounded Research"
-  short_description: "Research with primary-source provenance"
-  default_prompt: "Use $measured-skills:source-grounded-research to investigate this question with current primary sources."
+  short_description: "Researches a question"
+  default_prompt: "Use $measured-skills:source-grounded-research for this task: Researches a question when asked to look up, compare, or verify current facts; uses primary sources and preserves dates, links, and uncertainty without turning claims into findings."
 policy:
   allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: swift-concurrency-diagnosis
-description: Diagnose Swift actor isolation, Sendable diagnostics, task lifetime, cancellation, or reentrancy using actual compiler settings. Read-only; do not trigger for formatting, ordinary synchronous logic, or implementation without a concurrency question.
+description: "Diagnoses Swift actor, Sendable, task-lifetime, and cancellation issues when compiler errors or runtime behavior indicate concurrency problems; uses exact language and isolation settings."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -34,3 +34,11 @@ Report the authorized scope, applicable settings, observed evidence, result, mis
 ## Repeated and canceled work
 
 Trace what happens when a request is superseded before and after suspension, when a canceled dependency returns success or a non-cancellation error, and when an old callback arrives after a new request. Request identity and Task cancellation solve different parts of the problem. Record both. Measure work before the first suspension rather than assuming async moves it off the main actor.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A Sendable error appears after changing Swift language mode.
+
+Output: Record the exact language and isolation settings, locate the cross-actor value, and distinguish a compiler contract change from a proven runtime race.

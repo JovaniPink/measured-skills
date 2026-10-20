@@ -1,6 +1,6 @@
 ---
 name: finding-consolidation
-description: Merge findings from several completed reviews into one ranked list by assigning each root cause a single owner, regrading onto one severity scale, and disclosing what was cut. Use when two or more reviews have already reported on the same artifact and their findings overlap, repeat, or rank differently; not for running a review or for consolidating command results.
+description: "Consolidates completed reviews when findings overlap or disagree in severity; assigns each root cause one owner and reports discarded duplicates without running another review."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -40,4 +40,14 @@ Two or more completed reviews with their findings, the artifact they reviewed, a
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Lead with the ranked findings, most severe first. For each finding provide `Severity`, `State`, `Owner`, `Locations`, `Cause`, `Evidence`, and `Observed by`. Then report `Sources`, `Disagreements`, `Held back`, and `Uncovered scope`. If no finding survives consolidation, say so and name the reviews that reported nothing.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Two reviews report the same missing tenant predicate with different severity.
+
+Output: Keep one finding for the missing predicate, regrade its actual access impact, and record the second report as a duplicate rather than a second defect.

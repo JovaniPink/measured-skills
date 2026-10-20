@@ -1,6 +1,6 @@
 ---
 name: test-driven-change
-description: Guide feature and defect work through red, green, and refactor evidence while preserving a clear exception path when test-first work is unsuitable. Use for behavior changes where an executable test can prove the defect or desired outcome before implementation.
+description: "Implements a bounded behavior change when explicitly asked to use test-driven development; establishes a meaningful failing test, makes it pass, and refactors within authorized scope."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -43,4 +43,14 @@ If test-first is unsuitable, state why before changing code. Valid reasons can i
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Report `Behavior`, `Red evidence`, `Implementation`, `Green evidence`, `Refactor`, `Regression coverage`, and `Unverified behavior`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Change a parser so empty input returns an empty list.
+
+Output: First reproduce the missing behavior with a failing test, implement the smallest fix, and rerun relevant existing cases before refactoring.

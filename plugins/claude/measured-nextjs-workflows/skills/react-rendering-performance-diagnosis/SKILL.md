@@ -1,6 +1,6 @@
 ---
 name: react-rendering-performance-diagnosis
-description: Diagnose React rendering or request-waterfall costs using an observed interaction, profiler evidence, and actual server/client boundaries. Read-only; do not trigger for speculative blanket memoization, styling, or unmeasured speed claims.
+description: "Diagnoses React rerenders or request waterfalls when an observed interaction is slow; requires profiler and boundary evidence rather than blanket memoization or speculative speed claims."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -30,3 +30,11 @@ Do not add memoization everywhere, alter cache/auth semantics, install profiling
 ## Evidence and output
 
 Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A click is slow, but there is no profiler trace.
+
+Output: Capture that interaction under comparable conditions. Separate rendering time from requests before adding memoization or changing component boundaries.

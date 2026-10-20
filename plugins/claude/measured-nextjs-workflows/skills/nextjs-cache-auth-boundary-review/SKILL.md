@@ -1,6 +1,6 @@
 ---
 name: nextjs-cache-auth-boundary-review
-description: Review Next.js authorization and cache boundaries across reads, server mutations, cookies, invalidation, and user-specific data. Read-only; do not trigger for unrelated UI, installing authentication, or enabling Cache Components without a requirement.
+description: "Reviews Next.js cache and authorization when user data leaks across requests, invalidation is unclear, or server mutations need checks; excludes unrelated UI and authentication installation."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -30,3 +30,11 @@ Do not install an identity provider, turn on cache configuration, change authori
 ## Evidence and output
 
 Report the authorized scope, applicable settings, observed evidence, result, missing evidence, and next bounded check. Use Not Needed when no applicable authorized work exists and Blocked when a required precondition is missing. Do not substitute required headings for semantic compliance or invent executed checks.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A cached server response includes the current user's profile.
+
+Output: warning: verify that cache identity and lifetime preserve authorization. A client-side login check does not protect a shared cached response.

@@ -1,6 +1,6 @@
 ---
 name: context-reliability-review
-description: Review the reliability of context assertions supplied to an AI system by tracing provenance, authority, freshness, effective and recorded time, permissions, conflicts, supersession, and revocation. Use when agent behavior depends on whether contextual claims are current and allowed; use authority-boundary-review for system-of-record architecture rather than assertion-level context.
+description: "Checks supplied agent context when asked whether a claim is stale, conflicting, authorized, or superseded; traces assertion provenance rather than redesigning the system of record."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -13,7 +13,7 @@ metadata:
 
 # Context Reliability Review
 
-Evaluate context as a set of assertions with evidence and lifecycle, not as an undifferentiated prompt. Read [the assertion matrix reference](references/assertion-matrix.md) when assertions conflict or change over time.
+Evaluate context as a set of assertions with evidence and lifecycle, not as an undifferentiated prompt. Read [the assertion matrix reference](#assertion-matrix-reference) when assertions conflict or change over time.
 
 ## Preconditions
 
@@ -41,4 +41,45 @@ Identify the decision or behavior that consumes the context, the reviewed contex
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Review scope`, an assertion matrix with `ID`, `Assertion`, `Type`, `Source`, `Authority`, `Effective time`, `Recorded time`, `Observed time`, `Freshness rule`, `Permissions`, `Conflict or supersession`, `Status`, and `Impact`, followed by `Corrections`, `Private-output boundary`, and `Unresolved authority decisions`.
+
+## Assertion Matrix Reference
+
+Use this reference for assertion-level context audits. The model follows provenance relationships described by [W3C PROV](https://www.w3.org/TR/prov-n/) while keeping the review language and status model specific to this catalog.
+
+### Assertion Anatomy
+
+An assertion is a claim used by the consuming agent or workflow. Record:
+
+- the entity or subject the assertion describes;
+- the source entity and the activity that collected or transformed it;
+- the responsible issuer or authority;
+- effective time, recorded time, observation time, and expiration;
+- the permitted audience, purpose, environment, and actions;
+- derivation, conflict, supersession, and revocation links;
+- the behavior or decision affected when the assertion is wrong or unavailable.
+
+### Status Rules
+
+| Status | Meaning |
+| --- | --- |
+| `RELIABLE` | Current evidence supports the assertion within its authority and permission scope. |
+| `QUALIFIED` | The assertion is usable only with an explicit limitation or narrower scope. |
+| `STALE` | Its freshness rule is violated or currentness cannot be established. |
+| `CONFLICTED` | Relevant sources disagree and no ratified resolution rule settles the conflict. |
+| `REVOKED` | An authorized event invalidated the assertion for the reviewed use. |
+| `UNVERIFIED` | The source, authority, or supporting evidence cannot be established. |
+
+### Time Discipline
+
+Effective time answers when the assertion was true in the modeled world. Recorded time answers when a system captured it. Observation time answers when the reviewer inspected it. Never substitute one for another. A later recording can describe an earlier effective fact, and a recently observed cache can still contain revoked context.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A context note says access is allowed, but a newer policy revokes it.
+
+Output: The newer authoritative policy supersedes the note. Mark the access assertion stale and do not use it to authorize a request.

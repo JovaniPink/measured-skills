@@ -1,7 +1,7 @@
 interface:
   display_name: "Application Security Review"
-  short_description: "Review application security controls and evidence"
-  default_prompt: "Use $measured-engineering-review:application-security-review to review this work with focused evidence."
+  short_description: "Reviews application security"
+  default_prompt: "Use $measured-engineering-review:application-security-review for this task: Reviews application security when asked to check authentication, authorization, input handling, sessions, or exposed data; returns evidence-based findings without changing controls."
 policy:
   allow_implicit_invocation: true
 

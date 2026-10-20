@@ -1,6 +1,6 @@
 interface:
   display_name: "Worktree Isolation"
-  short_description: "Assess safe isolation for concurrent Git work"
-  default_prompt: "Use $measured-engineering-delivery:worktree-isolation to assess whether this work needs a linked worktree."
+  short_description: "Assesses checkout isolation"
+  default_prompt: "Use $measured-engineering-delivery:worktree-isolation for this task: Assesses checkout isolation when concurrent edits or dirty files may collide with a new task; reuses safe worktrees and preserves unrelated work rather than creating or deleting blindly."
 policy:
   allow_implicit_invocation: true

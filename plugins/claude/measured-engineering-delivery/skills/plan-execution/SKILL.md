@@ -1,6 +1,6 @@
 ---
 name: plan-execution
-description: Execute a named, approved implementation plan with checkpoints, validation, deviation tracking, and strict stopping boundaries. Invoke explicitly when the user authorizes implementation against an identified plan.
+description: "Executes an identified implementation plan when explicitly authorized to implement it; tracks checkpoints, tests, deviations, and unfinished work without expanding scope."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -47,10 +47,25 @@ The plan is complete only when every authorized step and its acceptance criteria
 
 ## Output
 
-During execution, report meaningful changes and their implications. At a checkpoint or completion, lead with the result, then anything that needs the user's decision or approval. Then reconcile `Plan`, `Completed`, `Deviations`, `Validation`, `State changes`, and `Unresolved`. `State changes` lists every external state change made, including any outside the plan. List a decision as unresolved only when it blocks remaining work; otherwise make the routine call, record it, and continue. Include requested actions left unfinished and the next authorized step when applicable.
+During execution, report meaningful changes in verified state, decisions,
+failures, or blockers and explain their implications. Preserve the approved
+objective through status questions, interruptions, and compaction. Apply explicit
+corrections; replace the objective only when the user changes it. Reuse existing
+authorization and seek a new decision only for a material change outside it.
 
-## Continuity and evidence
-
-Report meaningful changes in verified state, a decision, a failure, or a blocker rather than repeated plan narration. Preserve the approved objective through status requests, side questions, interruptions, and compaction. Apply explicit corrections; replace the objective only when the user changes it. Reuse authorization already established in the task and seek a new decision only for a material change outside that authority.
+At a checkpoint, lead with the result and any required user decision. Reconcile
+the plan, completed criteria, deviations, validation, state changes, and
+unresolved work. State changes include every external change made, including
+any outside the plan. Routine decisions should be made, recorded, and followed
+by continued work; a decision is unresolved only when it blocks what remains.
+Include requested actions left unfinished and the next authorized step when one exists.
 
 Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The approved parser fix is underway, and the user asks why a test failed.
+
+Output: Explain the observed failure, retain the parser-fix objective and remaining checks, and resume the authorized work after resolving the failure.

@@ -1,6 +1,6 @@
 ---
 name: public-private-boundary-review
-description: Review code, documentation, examples, articles, or release artifacts before public exposure to find secrets, internal identifiers, private operational details, proprietary material, and claims unsupported by public evidence. Use before open-sourcing or publishing work derived from mixed public and private contexts.
+description: "Reviews material before public exposure when asked to check for secrets, private identifiers, proprietary text, or unsupported claims; keeps private context out of public artifacts."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -31,4 +31,14 @@ Review both content and provenance. Renaming an internal identifier does not mak
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Use `BLOCK`, `REVIEW`, or `CLEAR` per finding, with location, risk, evidence, and disposition. A `CLEAR` verdict means no issue was found in the reviewed scope; it is not a legal opinion or proof that unreviewed history is safe.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A draft guide includes an internal dataset identifier.
+
+Output: Remove or generalize the private identifier before public exposure. Keep any needed operational detail in its owning private context.

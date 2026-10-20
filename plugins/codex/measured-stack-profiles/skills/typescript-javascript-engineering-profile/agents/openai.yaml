@@ -1,7 +1,7 @@
 interface:
   display_name: "TypeScript and JavaScript Engineering Profile"
-  short_description: "Apply focused TypeScript and JavaScript guidance"
-  default_prompt: "Use $measured-stack-profiles:typescript-javascript-engineering-profile to apply focused stack guidance after repository discovery."
+  short_description: "Reviews TypeScript and JavaScript changes"
+  default_prompt: "Use $measured-stack-profiles:typescript-javascript-engineering-profile for this task: Reviews TypeScript and JavaScript changes when async code, modules, types, dependencies, or builds need focused checks; uses repository runtimes, lockfiles, and commands."
 policy:
   allow_implicit_invocation: true
 

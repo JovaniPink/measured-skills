@@ -1,10 +1,34 @@
 # Validation Evidence
 
+Current refinement inventory: 87 canonical skills in 11 packs. The October 20
+candidate adds offline cases and authored guidance; validation receipts for this
+revision are recorded after checks complete. Earlier counts below are historical.
+
 See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 220 regression tests.
+Current test suite: 230 regression tests.
+
+## October 20 refinement checks
+
+The integration checkpoint at `5bc7136` preserves `b03ca1f` and `f33351a` through
+merge commit `b320bb8`; deterministic validation and all 220 then-current unit
+tests passed. The refinement retains version 0.18.0 and the upstream-freshness
+policy. Final source and artifact identity is recorded by the candidate manifest.
+
+Observed during refinement on Python 3.14.7 with mypy 1.20.2 and Ruff 0.15.12:
+
+- Two distribution and archive builds produced identical SHA-256 checksum lists.
+- Claude Code 2.1.281 accepted all 11 native plugins and the marketplace with its official strict validator.
+- Codex's bundled skill-creator validator accepted all 87 canonical skills.
+- Mermaid 11.4.1 rendered all five diagrams; a browser inspection found readable labels and the intended relationships. The temporary renderer is not a repository dependency.
+- The standalone `skills-ref` validator and a bundled Codex plugin validator were unavailable. Codex CLI 0.161.0 exposes no plugin-validation command. These checks are not recorded as passes.
+
+CI uses Python 3.12 and must be checked independently on the submitted head.
+No installed inventory changed, client activation trial ran, or paid evaluation
+ran. Native schema checks and diagrams do not establish activation quality,
+output benefit, runtime acceptance, or parity between clients.
 
 ## 0.18.0 candidate baseline
 

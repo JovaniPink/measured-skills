@@ -1,6 +1,6 @@
 ---
 name: postgresql-sql-engineering-profile
-description: Apply focused PostgreSQL and SQL engineering judgment after repository gate discovery. Use for schemas, queries, transactions, migrations, indexing, compatibility, and database test concerns; never mutate shared data merely to validate.
+description: "Reviews PostgreSQL schemas, queries, indexes, transactions, and migrations when database changes need focused checks; does not mutate shared data merely to validate a proposal."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -32,5 +32,14 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing evidence, and Next safe gate.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: A new index is proposed for a slow query without its plan or workload.
+
+Output: Index benefit is unverified. Inspect the query plan and write workload before recommending the index; do not alter shared data to test the idea.

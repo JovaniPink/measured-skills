@@ -1,6 +1,6 @@
 ---
 name: accessibility-review
-description: Review web or application accessibility using WCAG 2.2 success criteria, semantic structure, keyboard behavior, assistive-technology needs, visual presentation, and user impact. Use for evidence-based findings without claiming conformance from incomplete testing.
+description: "Reviews accessibility when asked to check keyboard access, screen-reader behavior, focus, contrast, or WCAG requirements; incomplete testing cannot establish conformance."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -33,5 +33,14 @@ Use current primary guidance as a review baseline, then report only what the ava
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return Scope, Findings by criterion, User impact, Automated evidence, Manual evidence, Untested areas, and Remediation priority. Grade each finding `none`, `note`, `warning`, or `error`, and order the list with the most severe first. When a pinned change is under review, mark each finding `new`, `unchanged`, `updated`, or `absent` against the state before the change; otherwise report severity alone.
 
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: The checkout dialog opens, but Tab moves behind it.
+
+Output: warning: focus escapes the active dialog. Keyboard users can reach obscured controls; verify focus containment and return focus after close.

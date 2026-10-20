@@ -1,6 +1,6 @@
 ---
 name: module-interface-design
-description: "Design or review a module boundary, vocabulary, interface, and hidden implementation so callers face a smaller and more stable contract. Use when code is coupled, concepts leak across layers, responsibilities are unclear, or a redesign needs concrete options before implementation."
+description: "Designs module boundaries when asked to untangle coupling, simplify an API, or clarify ownership; makes caller contracts concrete before implementation."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -36,4 +36,14 @@ Propose a coherent boundary that reduces caller knowledge without hiding importa
 
 ## Output
 
+Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
+
 Return `Current pressure`, `Vocabulary`, `Invariants`, `Candidate boundaries`, `Recommended interface`, `Hidden implementation`, `Compatibility`, `Migration`, `Tradeoffs`, and `Open decisions`.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: Callers need one price but currently depend on an internal pricing table.
+
+Output: Expose the price calculation as a stable contract with explicit inputs and errors; keep table layout behind the module boundary.
