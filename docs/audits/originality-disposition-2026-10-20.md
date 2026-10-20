@@ -6,7 +6,7 @@ Status: retain the release hold. The historical owned-source license basis is su
 
 The explicit combined wording "originality-corpus gate" first appears in candidate commit `46e6a61`, alongside the seven owned workflow additions. The October 5 review (`3d706c6`) and October 6 provenance audit (`4efc7a6`) retain or discuss the hold. These records do not define a reproducible corpus inventory, comparison threshold, reviewer, or accepted completion receipt. Earlier retrieval-corpus references concern a different contract.
 
-The [owned-history audit](originality-history-review-2026-10-20.json) covers every current skill, its entrypoint hash, earliest preserved revision, and provenance-method transitions. Current declarations are 43 original and 44 clean-room. A declaration is not a process attestation.
+The [owned-history audit](originality-history-review-2026-10-20.json) covers every current skill, its entrypoint hash, earliest preserved revision, and provenance-method transitions. That preserved snapshot declared 43 original and 44 clean-room. The follow-up correction now records 43 original, 40 historical clean-room, and four owned adaptations. A declaration is not a process attestation.
 
 ## What the investigation established
 
@@ -16,7 +16,7 @@ Commit `41a14c1` changed all four canonical metadata labels from adapted to clea
 
 The retained foundation plan called for independently written portable workflows from primary authorities and owned MIT work. A later migration plan prohibited third-party implementation reuse and reported aggregate exact-file comparisons. These records support authoring intent and the owned-license basis. They do not establish a clean-room process for the four relabeled skills or qualify today's entire catalog. Exact-file nonmatches cannot exclude adaptation or distinctive-expression overlap.
 
-The four current provenance entries now explicitly qualify their historical labels. They are not silently relabeled original, and their history is preserved. The other 40 clean-room declarations also lack an independent process attestation in the inspected records. No conclusion of infringement, absence of exposure, or universal originality follows from this gap.
+The [follow-up correction](owned-origin-corrections-2026-10-20.json) changes the four current canonical and provenance labels to adapted, supported by a retained public owned baseline and its MIT license hashes. Validation requires those Git objects and their ancestry. They are not relabeled original, and the historical audit stays unchanged. The remaining 40 clean-room declarations lack an independent process attestation in the inspected records. No conclusion of infringement, absence of exposure, or universal originality follows from this gap.
 
 ## Disposition and next decision
 
@@ -26,3 +26,7 @@ The four current provenance entries now explicitly qualify their historical labe
 4. Have the maintainer accept a written, scoped qualification contract: exact source revision and files, evidence reviewed, authorship/licensing conclusions, exceptions, remaining risks, reviewer, and decision date. If a corpus comparison is intended, define its authority, permissible corpus, method, thresholds, and limitations first. A replacement for the undefined historical gate requires an explicit accepted decision.
 
 No third-party skill collection was downloaded, compared, installed, or imported for this investigation. Retained authoring records were inspected privately; raw sessions and private inventory mappings remain outside public artifacts. No acceptance signature or missing receipt has been invented. The release remains blocked pending the independent review and accepted disposition.
+
+## Reviewable qualification contract
+
+The [proposed review contract](originality-review-contract-2026-10-20.md) makes the remaining evidence and decision fields explicit. Its status is proposed, not accepted. Correcting a historical process label is distinct from accepting a release. No paid evaluation, corpus download, or automated judge is needed to inspect the retained records, but a scan cannot supply missing process evidence.

@@ -69,8 +69,8 @@
       "affected_skills": [
         "terraform-engineering-profile"
       ],
-      "finding": "Reviewed 2026-10-05: The Terraform language index still describes a declarative language, resources, providers, expressions, and dependency relations. Reading a newer language index does not authorize infrastructure creation or select a project upgrade.",
-      "action": "Retain repository toolchain discovery and the no-apply boundary. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: Current official overview describes declarative resources, dependency relationships, the installed-version language reference, and distinct CLI/provider/backend concerns. The existing profile retains project version discovery and prohibits apply authority. Historical response bodies do not support a complete upstream semantic diff; current-content review requires no workflow change.",
+      "action": "Refresh only this reviewed fingerprint. Preserve authorization, version discovery, and historical observations."
     },
     {
       "url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -85,24 +85,24 @@
       "action": "Use GitHub's official Markdown representation for a stable authority-content marker. No skill instruction change is required."
     },
     {
-      "url": "https://docs.python.org/3/",
+      "url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
       "status": "reviewed",
       "ownership_check": "The Python Software Foundation remains the publisher of the official Python documentation.",
       "affected_skills": [
         "python-engineering-profile"
       ],
-      "finding": "Reviewed 2026-10-05: The Python index now identifies stable 3.14.8, with 3.15 as a prerelease and 3.16 in development. It still links installation, packaging, typing, language, and library guidance.",
-      "action": "Retain discovery of the project interpreter, constraints, and configured gates; do not select the newest interpreter by default. No skill names a Python patch version. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: current official Python 3.15.0 documentation retains interpreter-specific language and unittest behavior. Earlier bytes are not available for a complete upstream semantic diff.",
+      "action": "Retain installed interpreter, project gates, discovery, cleanup, and assertion requirements. Refresh only the reviewed strong ETag; do not upgrade any interpreter. Bind the reviewed official 3.15-branch documentation source, preserving project-version discovery. The contents index alone does not cover all transitive references."
     },
     {
-      "url": "https://docs.python.org/3/library/unittest.html",
+      "url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
       "status": "reviewed",
       "ownership_check": "The Python Software Foundation remains the publisher of the unittest reference.",
       "affected_skills": [
         "test-quality-review"
       ],
-      "finding": "Reviewed 2026-10-05: unittest still documents fixtures, test cases, suites, runners, discovery, skips, and expected failures. Passing test counts do not establish application outcomes outside their observed assertions.",
-      "action": "Retain behavior-focused assertions, isolation, and explicit incomplete or skipped evidence. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: current official Python 3.15.0 documentation retains interpreter-specific language and unittest behavior. Earlier bytes are not available for a complete upstream semantic diff.",
+      "action": "Retain installed interpreter, project gates, discovery, cleanup, and assertion requirements. Refresh only the reviewed strong ETag; do not upgrade any interpreter. Bind the reviewed official 3.15-branch documentation source, preserving project-version discovery. The contents index alone does not cover all transitive references."
     },
     {
       "url": "https://git-scm.com/docs/git-merge",
@@ -126,34 +126,34 @@
       "action": "Retain isolation decisions, peer-worktree preservation, and exact ownership before removal. Refresh this reviewed fingerprint."
     },
     {
-      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
       "status": "reviewed",
       "ownership_check": "OpenAI ChatGPT Learn remains the official documentation surface for Codex and ChatGPT subagents.",
       "affected_skills": [
         "multi-agent-orchestration"
       ],
-      "finding": "Reviewed 2026-10-05: OpenAI subagent guidance still treats custom-agent model, sandbox, MCP, skill, and concurrency settings as effective configuration, and each worker consumes tokens. The concurrency key is now agents.max_concurrent_threads_per_session, with agents.max_threads kept as a legacy alias.",
-      "action": "Retain host and user delegation authority, exact client configuration, bounded fanout, and independent integration verification. No skill names either concurrency key. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: documented Markdown retains exact-role configuration and inherited tool/provider/permission requirements.",
+      "action": "Bind full official Markdown bytes. Preserve host-authorized delegation, managed configuration, and surface-specific evidence."
     },
     {
-      "url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
       "status": "reviewed",
       "ownership_check": "The OWASP Gen AI Security Project remains the publisher of the Agentic Security Initiative.",
       "affected_skills": [
         "agentic-system-security-review"
       ],
-      "finding": "Reviewed 2026-10-05: The agentic initiative page still lists the OWASP Top 10 for Agentic Applications for 2026, the Agent Control Standard, MCP security, and governance resources. Their availability does not certify an agent package.",
-      "action": "Retain the system-wide identity, tool, instruction, memory, supply-chain, and stop-boundary review. Three fetches matched, but the closing readback returned different normalized content, so the prior pin stays held and the online gate keeps reporting this URL."
+      "finding": "Reviewed 2026-10-20: public JSON alternate page 50812 identifies the same initiative and canonical link and contains substantive research/resource content. Three full response samples agree.",
+      "action": "Pin full JSON bytes instead of template widgets and cache metadata. Preserve index-versus-control and current-version distinctions; do not infer observed security effectiveness."
     },
     {
-      "url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
       "status": "reviewed",
       "ownership_check": "The OWASP Gen AI Security Project remains the named publisher of the vector and embedding risk guidance.",
       "affected_skills": [
         "retrieval-grounding-quality-review"
       ],
-      "finding": "Reviewed 2026-10-05: OWASP LLM08 still addresses embedding confidentiality, data poisoning, cross-context leakage in multi-tenant vector stores, and changes to model behavior after retrieval augmentation.",
-      "action": "Retain permission-aware retrieval, source provenance, untrusted-content boundaries, and behavior checks. Repeated responses changed the fingerprint, so the prior pin stays held and the online gate keeps reporting this URL."
+      "finding": "Reviewed 2026-10-20: Current vector guidance retains access control, tenant isolation, retrieval poisoning, provenance, and validation concerns. Three planned samples agree under the unchanged trailing-whitespace rule. Earlier volatility and HTTP 403 observations remain retained; availability can still block a later check.",
+      "action": "Refresh only this reviewed fingerprint. Preserve authorization, version discovery, and historical observations. Bind the full official machine-readable response instead of rendered HTML; no broad normalization is added."
     },
     {
       "url": "https://opentelemetry.io/docs/concepts/signals/",
@@ -384,8 +384,8 @@
       "affected_skills": [
         "agent-tool-action-boundary-review"
       ],
-      "finding": "Reviewed 2026-09-30: ADK distinguishes agent identity from controlling-user identity. OAuth scopes can exceed the needed action; deterministic in-tool guardrails and sandboxing complement model screening.",
-      "action": "Retain explicit tool-effect authority, identity tracing, and independent security controls. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-10-20: Current official ADK safety guidance keeps developer-controlled tool context, input validation, callbacks, shared guardrail plugins, and sandboxed code execution distinct from model instructions. Conceptual examples are not proof of configured enforcement. Existing exact-version discovery and tool/action-boundary guidance remain consistent; no provider operation or judge plugin was run.",
+      "action": "Refresh the individually reviewed stable ETag. Retain configured enforcement, exact-version, sandbox, and action authority evidence boundaries."
     },
     {
       "url": "https://adk-labs.github.io/adk-docs/sessions/",
@@ -408,14 +408,14 @@
       "action": "Retain repository wrappers, pinned JVM and dependency discovery, and separate runtime gates. Refresh this reviewed fingerprint."
     },
     {
-      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
       "status": "reviewed",
       "ownership_check": "The existing provenance record identifies this publisher as the primary project authority; the current source was retrieved directly.",
       "affected_skills": [
         "application-security-review"
       ],
-      "finding": "Reviewed 2026-10-05: The ASVS project page still describes verifiable application-security requirements, names 5.0.0 as the latest stable version, and recommends version-qualified requirement identifiers. Landing-page metadata is insufficient for exact requirement mapping.",
-      "action": "Retain exact-version ASVS mapping. Repeated responses changed the fingerprint, so the prior pin stays held and the online gate keeps reporting this URL."
+      "finding": "Reviewed 2026-10-20: official ASVS 5.0.0 JSON data supplies substantive version-qualified security requirements; the project landing page is not the content binding.",
+      "action": "Pin full document bytes and retain exact-version mapping and review-age requirements. This does not establish application compliance or freshness of later standards."
     },
     {
       "url": "https://slsa.dev/spec/v1.2/provenance",
@@ -449,24 +449,24 @@
       "action": "Use the combined guide in current setup documentation, and retain native exact-version path readback and the explicit-only exclusion. Refresh this reviewed fingerprint. Retire the obsolete CLI redirect URL from active source coverage; keep this combined authority and historical receipts."
     },
     {
-      "url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "url": "https://nextjs.org/docs/app/guides/ai-agents.md",
       "status": "reviewed",
       "ownership_check": "Vercel's Next.js documentation remains the official authority for Next.js App Router behavior.",
       "affected_skills": [
         "nextjs-feature-delivery"
       ],
-      "finding": "Reviewed 2026-10-05: Next.js still bundles version-matched documentation at node_modules/next/dist/docs/ and directs agents to it through a root AGENTS.md. Upgrading Next.js also upgrades the bundled docs, which is why delivery reads the installed version rather than the website.",
-      "action": "Retain installed-version documentation routing in nextjs-feature-delivery. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: Current guide distinguishes bundled documentation by installed framework version, managed project blocks, optional feedback, upgrades, and runtime tools. The reference now handles missing bundled documentation and explicitly preserves user authorization for feedback and external actions; provider prose grants no action authority.",
+      "action": "Refresh only this reviewed fingerprint. Preserve authorization, version discovery, and historical observations. Bind the full official machine-readable response instead of rendered HTML; no broad normalization is added."
     },
     {
-      "url": "https://nextjs.org/docs/app/guides/authentication",
+      "url": "https://nextjs.org/docs/app/guides/authentication.md",
       "status": "reviewed",
       "ownership_check": "Vercel's Next.js documentation remains the official authority for Next.js App Router behavior.",
       "affected_skills": [
         "nextjs-cache-auth-boundary-review"
       ],
-      "finding": "Reviewed 2026-10-05: The Next.js authentication guide still recommends centralizing authorization in a Data Access Layer, returning Data Transfer Objects, and treating Proxy checks as optional and optimistic. It also covers auth checks in Server Components, Server Actions, and Route Handlers.",
-      "action": "Retain the server-side authorization boundary in nextjs-cache-auth-boundary-review. Refresh this reviewed fingerprint."
+      "finding": "Reviewed 2026-10-20: Current auth guidance retains secure checks at the data-access boundary, distinguishes optimistic routing checks, and warns that client/layout hiding does not protect nested routes or mutations. Existing read/write-owner authorization and cache tracing remain consistent; no runtime parity is inferred.",
+      "action": "Refresh only this reviewed fingerprint. Preserve authorization, version discovery, and historical observations. Bind the full official machine-readable response instead of rendered HTML; no broad normalization is added."
     },
     {
       "url": "https://react.dev/learn/you-might-not-need-an-effect",

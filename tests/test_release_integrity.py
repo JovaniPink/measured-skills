@@ -16,7 +16,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import validate_catalog as validator  # noqa: E402
-from cataloglib import VERSION  # noqa: E402
+from cataloglib import VERSION, read_skill_metadata  # noqa: E402
 
 
 class ReleaseIntegrityTests(unittest.TestCase):
@@ -135,7 +135,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
         fixture = json.loads((ROOT / 'tests/fixtures/upstream-pins-before-pr72-followup.json').read_text())
         original = json.loads(subprocess.check_output(['git', 'show', fixture['source_commit'] + ':catalog/upstream-pins.json'], cwd=ROOT))
         self.assertEqual(original, fixture['snapshot'])
-        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        current = json.loads((ROOT / 'tests/fixtures/upstream-pins-before-readiness-followup.json').read_text())['snapshot']
         self.assertEqual(original['reviewed_on'], current['reviewed_on'])
         previous = {r['source_url']: r for r in original['sources']}
         actual = {r['source_url']: r for r in current['sources']}
@@ -177,13 +177,13 @@ class ReleaseIntegrityTests(unittest.TestCase):
     def test_originality_review_binds_owned_history_without_inventing_acceptance(self) -> None:
         import subprocess
         audit = json.loads((ROOT / 'docs/audits/originality-history-review-2026-10-20.json').read_text())
-        entries = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        entries = {r['skill']: r for r in json.loads(subprocess.check_output(['git', 'show', audit['source_revision'] + ':provenance/catalog.json'], cwd=ROOT))['entries']}
         self.assertEqual(set(entries), {r['skill'] for r in audit['skills']})
         disputed = []
         for record in audit['skills']:
             skill = record['skill']
             self.assertEqual(entries[skill]['implementation_method'], record['current_declared_method'])
-            payload = (ROOT / 'skills' / skill / 'SKILL.md').read_bytes()
+            payload = subprocess.check_output(['git', 'show', audit['source_revision'] + ':skills/' + skill + '/SKILL.md'], cwd=ROOT)
             self.assertEqual(hashlib.sha256(payload).hexdigest(), record['current_entrypoint_sha256'])
             if record['historical_adaptation_declaration']:
                 disputed.append(skill)
@@ -193,9 +193,176 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 self.assertEqual(bodies[0], bodies[1])
                 self.assertEqual(hashlib.sha256(bodies[0]).hexdigest(), relabel['before_body_sha256'])
                 self.assertEqual(relabel['before_body_sha256'], relabel['after_body_sha256'])
-                self.assertIn('Release acceptance remains held', entries[skill]['local_changes'])
         self.assertEqual(['claim-verification', 'cross-stack-quality-gates', 'prelaunch-readiness', 'publish-change-safely'], disputed)
         self.assertTrue(audit['retained_record_findings']['missing_evidence'])
+
+    def test_owned_origin_schema_accepts_valid_paths_and_rejects_unsafe_paths(self) -> None:
+        from schema_validation import validate_instance
+        document = json.loads((ROOT / 'provenance/catalog.json').read_text())
+        schema = json.loads((ROOT / 'provenance/schema.json').read_text())
+        self.assertEqual([], validate_instance(document, schema))
+        for path in ('../outside', 'skills/claim-verification/SKILLXmd', 'skills/claim-verification/SKILL\\Xmd'):
+            mutated = copy.deepcopy(document)
+            entry = next(r for r in mutated['entries'] if 'owned_origin' in r)
+            entry['owned_origin']['entrypoint'] = path
+            self.assertTrue(validate_instance(mutated, schema), path)
+
+    def test_owned_origin_corrections_preserve_history_and_remain_unqualified(self) -> None:
+        audit = json.loads((ROOT / 'docs/audits/owned-origin-corrections-2026-10-20.json').read_text())
+        entries = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        self.assertEqual('not_accepted', audit['release_acceptance'])
+        self.assertEqual(4, len(audit['changes']))
+        self.assertEqual(40, sum(r['implementation_method'] == 'clean-room' for r in entries.values()))
+        for change in audit['changes']:
+            skill = change['skill']
+            entry = entries[skill]
+            self.assertEqual('adapted', entry['implementation_method'])
+            self.assertEqual(change['owned_origin'], entry['owned_origin'])
+            self.assertEqual(entry['owned_origin']['revision'], entry['pinned_revision'])
+            payload = (ROOT / 'skills' / skill / 'SKILL.md').read_bytes()
+            self.assertEqual(hashlib.sha256(payload).hexdigest(), change['corrected_entrypoint_sha256'])
+            self.assertEqual('adapted', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
+            errors: list[str] = []
+            validator._validate_owned_origin(entry, errors)
+            self.assertEqual([], errors)
+
+    def test_new_source_review_accounts_for_each_pin_change(self) -> None:
+        import subprocess
+        fixture = json.loads((ROOT / 'tests/fixtures/upstream-pins-before-readiness-followup.json').read_text())
+        original = json.loads(subprocess.check_output(['git', 'show', fixture['source_commit'] + ':catalog/upstream-pins.json'], cwd=ROOT))
+        self.assertEqual(original, fixture['snapshot'])
+        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        for field in ('reviewed_on', 'max_review_age_days'):
+            self.assertEqual(original[field], current[field])
+        before = {r['source_url']: r for r in original['sources']}
+        actual = {r['source_url']: r for r in current['sources']}
+        audit = json.loads((ROOT / 'docs/audits/source-hold-followup-2026-10-20.json').read_text())
+        expected = before.copy()
+        for decision in audit['decisions']:
+            prior = expected.pop(decision['old_url'])
+            self.assertEqual(f"{prior['marker_kind']}:{prior['marker_value']}", decision['previous_marker'])
+            self.assertEqual(3, len(decision['sampled_markers']))
+            self.assertTrue(decision['finding'])
+            if decision['decision'] == 'retain_inconsistent_sample_hold':
+                self.assertGreater(len(set(decision['sampled_markers'])), 1)
+                expected[decision['old_url']] = prior
+            else:
+                self.assertEqual(1, len(set(decision['sampled_markers'])))
+                kind, value = decision['sampled_markers'][0].split(':', 1)
+                url = decision['current_url']
+                expected[url] = {'source_url': url, 'marker_kind': kind, 'marker_value': value}
+        self.assertEqual(expected, actual)
+        self.assertEqual(audit['active_sources'], len(actual))
+        checkpoint = json.loads((ROOT / 'docs/audits/source-hold-followup-checkpoint-2026-10-20.json').read_text())
+        self.assertEqual('pass', checkpoint['result'])
+        self.assertEqual(set(actual), {r['source_url'] for r in checkpoint['records']})
+        self.assertEqual(hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest(),
+                         audit['reviewed_pin_inventory_sha256'])
+        for record in checkpoint['records']:
+            self.assertEqual('pass', record['result'])
+            pin = actual[record['source_url']]
+            self.assertEqual(f"{pin['marker_kind']}:{pin['marker_value']}", record['expected_marker'])
+            self.assertEqual(record['expected_marker'], record['observed_marker'])
+
+    def test_owned_origin_rejects_an_existing_nonancestor_commit(self) -> None:
+        import subprocess
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            target = root / 'skills/claim-verification/SKILL.md'
+            target.parent.mkdir(parents=True)
+            target.write_text('Synthetic owned-origin fixture.\n')
+            (root / 'LICENSE').write_bytes((ROOT / 'LICENSE').read_bytes())
+            def git(*args: str) -> bytes:
+                return subprocess.check_output(['git', '-C', str(root), *args], stderr=subprocess.DEVNULL)
+            git('init', '-q')
+            git('add', '.')
+            git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+                '-c', 'core.hooksPath=/dev/null', '-c', 'commit.gpgsign=false', 'commit', '-qm', 'source')
+            revision = git('rev-parse', 'HEAD').decode().strip()
+            git('checkout', '--orphan', 'other-history')
+            git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+                '-c', 'core.hooksPath=/dev/null', '-c', 'commit.gpgsign=false', 'commit', '-qm', 'unrelated')
+            git('cat-file', '-e', revision + '^{commit}')
+            entry: dict[str, object] = {'skill': 'claim-verification', 'implementation_method': 'adapted',
+                                       'pinned_revision': revision, 'owned_origin': {
+                'revision': revision, 'entrypoint': 'skills/claim-verification/SKILL.md', 'license': 'MIT',
+                'entrypoint_sha256': hashlib.sha256(target.read_bytes()).hexdigest(),
+                'license_sha256': hashlib.sha256((root / 'LICENSE').read_bytes()).hexdigest()}}
+            errors: list[str] = []
+            with patch.object(validator, 'ROOT', root):
+                validator._validate_owned_origin(entry, errors)
+            self.assertTrue(any('owned origin is unavailable' in e for e in errors), errors)
+
+    def test_owned_adaptation_requires_verified_ancestor_and_license(self) -> None:
+        import subprocess
+        revision = '5593d89f8a9b2d30509244fb82d9c16666423151'
+        entrypoint = 'skills/claim-verification/SKILL.md'
+        payload = subprocess.check_output(['git', 'show', revision + ':' + entrypoint], cwd=ROOT)
+        license_bytes = subprocess.check_output(['git', 'show', revision + ':LICENSE'], cwd=ROOT)
+        original: dict[str, object] = {'skill': 'claim-verification', 'disposition': 'covered',
+                    'implementation_method': 'adapted', 'pinned_revision': revision,
+                    'owned_origin': {'revision': revision, 'entrypoint': entrypoint, 'license': 'MIT',
+                                     'entrypoint_sha256': hashlib.sha256(payload).hexdigest(),
+                                     'license_sha256': hashlib.sha256(license_bytes).hexdigest()}}
+        for mutation in ('valid', 'missing', 'unknown_revision', 'content', 'license', 'path', 'pin', 'wrong_method'):
+            with self.subTest(mutation=mutation):
+                entry = copy.deepcopy(original)
+                if mutation == 'missing':
+                    entry.pop('owned_origin')
+                elif mutation == 'unknown_revision':
+                    origin = entry['owned_origin']
+                    assert isinstance(origin, dict)
+                    entry['pinned_revision'] = origin['revision'] = '0' * 40
+                elif mutation == 'content':
+                    origin = entry['owned_origin']
+                    assert isinstance(origin, dict)
+                    origin['entrypoint_sha256'] = '0' * 64
+                elif mutation == 'license':
+                    origin = entry['owned_origin']
+                    assert isinstance(origin, dict)
+                    origin['license_sha256'] = '0' * 64
+                elif mutation == 'path':
+                    origin = entry['owned_origin']
+                    assert isinstance(origin, dict)
+                    origin['entrypoint'] = '../outside'
+                elif mutation == 'pin':
+                    entry['pinned_revision'] = '0' * 40
+                elif mutation == 'wrong_method':
+                    entry['implementation_method'] = 'original'
+                errors: list[str] = []
+                with patch.object(validator, '_validate_json_schema', return_value={'entries': [entry]}), \
+                        patch.object(validator, 'ALL_SKILLS', ('claim-verification',)), \
+                        patch.object(validator, 'read_skill_metadata', return_value={'provenance': entry['implementation_method']}):
+                    validator.validate_provenance(errors)
+                self.assertEqual(mutation != 'valid', bool(errors), errors)
+
+    def test_raw_repository_links_keep_the_same_boundary(self) -> None:
+        import check_repository_independence as independence
+        prefix = 'https://' + 'raw.githubusercontent.com/'
+        asvs = prefix + 'OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json'
+        self.assertEqual([], independence.scan_text('fixture.md', asvs))
+        self.assertEqual([], independence.scan_text('fixture.md', prefix + 'JovaniPink/measured-skills/main/README.md'))
+        self.assertTrue(independence.scan_text('fixture.md', prefix + 'unreviewed/skill-catalog/main/SKILL.md'))
+        self.assertTrue(independence.scan_text('fixture.md', asvs + '?other=1'))
+        self.assertEqual([], independence.scan_text('fixture.md', prefix + 'python/cpython/3.15/Doc/contents.rst'))
+        self.assertTrue(independence.scan_text('fixture.md', prefix + 'python/cpython/3.15/Lib/unittest/__init__.py'))
+
+    def test_primary_document_exceptions_are_exact(self) -> None:
+        import check_repository_independence as independence
+        prefix = 'https://' + 'raw.githubusercontent.com/'
+        urls = [prefix + 'OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json',
+                prefix + 'python/cpython/3.15/Doc/contents.rst',
+                prefix + 'python/cpython/3.15/Doc/library/unittest.rst']
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / 'provenance').mkdir()
+            for url in urls:
+                wrong_owner = prefix + 'unreviewed/' + url.removeprefix(prefix).split('/', 1)[1]
+                for candidate, allowed in [(url, True), (url + '?variant=other', False), (wrong_owner, False)]:
+                    (root / 'provenance/catalog.json').write_text(json.dumps({'entries': [{'skill': 'fixture', 'source_url': candidate}]}))
+                    with patch.object(independence, 'ROOT', root):
+                        errors = independence.provenance_source_errors()
+                    self.assertEqual(allowed, not errors)
 
     def test_official_swift_data_host_is_allowed_but_lookalikes_are_not(self) -> None:
         import check_repository_independence as independence

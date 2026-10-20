@@ -25,6 +25,10 @@ REPOSITORY_URL = re.compile(
     rf"https?://(?:www\.)?(?P<host>{REPOSITORY_HOSTS})/(?P<owner>[A-Za-z0-9_.-]+)/(?P<repo>[A-Za-z0-9_.-]+)",
     re.IGNORECASE,
 )
+RAW_REPOSITORY_URL = re.compile(
+    r"""https?://raw\.githubusercontent\.com/(?P<owner>[A-Za-z0-9_.-]+)/(?P<repo>[A-Za-z0-9_.-]+)/[^\s<>"')]+""",
+    re.IGNORECASE,
+)
 MARKETPLACE_COMMAND = re.compile(
     r"\b(?:marketplace|plugin|skills?)\s+(?:add|install)\s+(?P<owner>[A-Za-z0-9][A-Za-z0-9_.-]*)/(?P<repo>[A-Za-z0-9_.-]+)",
     re.IGNORECASE,
@@ -82,6 +86,12 @@ PRIMARY_AUTHORITY_HOSTS = frozenset(
         "php.net",
     }
 )
+# Reviewed primary documents, not a general repository-host grant.
+APPROVED_PRIMARY_AUTHORITY_URLS = frozenset({
+    "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
+    "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+    "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+})
 GITHUB_REPOSITORY_ROOT = "https://" + "github.com/"
 CI_TOOL_SOURCES = {
     "librt": GITHUB_REPOSITORY_ROOT + "mypyc/librt",
@@ -137,6 +147,12 @@ def scan_text(label: str, text: str) -> list[str]:
         line = text.count("\n", 0, match.start()) + 1
         errors.append(f"{label}:{line}: external repository URL is not permitted")
 
+    for match in RAW_REPOSITORY_URL.finditer(text):
+        if _owned(match.group("owner")) or match.group(0) in APPROVED_PRIMARY_AUTHORITY_URLS:
+            continue
+        line = text.count("\n", 0, match.start()) + 1
+        errors.append(f"{label}:{line}: external raw repository URL is not permitted")
+
     for match in MARKETPLACE_COMMAND.finditer(text):
         if _owned(match.group("owner")):
             continue
@@ -176,7 +192,7 @@ def provenance_source_errors() -> list[str]:
         host = (parsed.hostname or "").casefold()
         if host.startswith("www."):
             host = host[4:]
-        if host not in PRIMARY_AUTHORITY_HOSTS:
+        if host not in PRIMARY_AUTHORITY_HOSTS and source_url not in APPROVED_PRIMARY_AUTHORITY_URLS:
             errors.append(f"provenance/catalog.json: {skill} source is not an approved primary authority: {source_url}")
         if "/blog/" in parsed.path.casefold():
             errors.append(f"provenance/catalog.json: {skill} uses a blog path instead of a primary authority")

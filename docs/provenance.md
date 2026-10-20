@@ -28,6 +28,14 @@ Use `original` for newly authored primary-source work after external exposure. R
 
 Repository-independence validation rejects external skill-repository links and install identifiers, repository-to-repository capability mappings, source-specific attribution, and non-primary behavior provenance. Links to repositories owned by the `JovaniPink` GitHub account and pinned CI dependency provenance are narrow operational exceptions; CI dependencies do not authorize skill behavior. `provenance/ci-tools.json` records the exact version, source, license, reviewed wheel hash, and use of every direct or transitive Python tool installed by CI.
 
+## Owned adaptation records
+
+`source_url` identifies the format or correctness authority. An owned adaptation also records `owned_origin`, which identifies its implementation lineage separately: a full ancestor commit in this public catalog, the same skill's canonical entrypoint path, the entrypoint SHA-256, and the MIT LICENSE SHA-256 at that commit. `pinned_revision` must equal that owned revision. Current validation requires the Git objects, their ancestry, and both hashes to match. Private origin names and mappings are not required or published.
+
+This is evidence for a declared owned adaptation, not a comprehensive authorship or licensing certificate. It does not authorize third-party skill imports. Do not replace an unsupported clean-room label with an unsupported original label. The [originality disposition](audits/originality-disposition-2026-10-20.md) separates the four corrected owned adaptations from the 40 remaining historical clean-room declarations and the unaccepted release qualification.
+
+The primary-authority URL check has three exact resource exceptions: OWASP's official ASVS 5.0.0 JSON requirement document and CPython's official 3.15-branch documentation contents and unittest sources on their raw-content host. These are primary documents, not external skill implementations. The full response remains content-hashed, and the global review-age limit remains in force. No general repository-host exception is granted. The source branch can change; this binding does not assert an immutable release or the latest standard version.
+
 ## Placement policy
 
 A capability belongs in the public core only when it is reusable across independent contexts, independently sourceable, safe to expose, and testable without private facts. It belongs in a private overlay when correct use depends on a private authority, identity, topology, contract, dataset, customer, or product. It belongs in neither when it is proprietary, unsafe, obsolete, duplicative, unsupported, or lacks demonstrated use.

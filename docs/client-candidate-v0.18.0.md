@@ -28,3 +28,5 @@ sources; no new activation, outcome, benefit, or release claim follows here.
 ## Release-readiness follow-up
 
 The [October 20 readiness record](release-readiness-2026-10-20.md) supersedes the older unresolved-source counts for current planning. The initial current check found 43 changed fingerprints among 63 sources; the dated review records individual decisions and retained holds. Historical observations above remain unchanged. The candidate is not promoted, and the bounded subscription-only CLI pilot remains subject to verified billing and isolation prerequisites.
+
+The continued October 20 review now records a passing 62-source checkpoint after individual content-binding decisions. The dated source ledger retains every earlier failed observation. Four current labels are corrected to owned adaptation with verifiable public Git and MIT license lineage; the broader originality disposition remains unaccepted. No source check qualifies client activation or promotes this candidate.

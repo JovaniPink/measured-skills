@@ -2,6 +2,16 @@
 
 Status: candidate; release blocked. No tag, release, public-directory submission, or installed-client promotion is authorized by this record.
 
+## Current review checkpoint
+
+The [continued review](audits/pr72-review-followup-2026-10-20.md) and its [source ledger](audits/source-hold-followup-2026-10-20.json) ends with [62 of 62 active authorities matching](audits/source-hold-followup-checkpoint-2026-10-20.json). Eleven individual decisions cover new drift and previously volatile page bindings. Eight bindings now use full official JSON, Markdown, or versioned documentation source responses; three reviewed sources retain their preferred marker kinds. No broad normalization, ignored failure, global review-date reset, or latest-version guarantee was added. Earlier failures below remain historical evidence and are superseded for current source planning by this checkpoint. Future drift still fails closed.
+
+Four unsupported clean-room labels are now corrected to owned adaptation, with ancestor commit, entrypoint, and MIT license hashes checked by validation. Current declarations are 43 original, 40 historical clean-room, and four owned adaptations. The [proposed originality review contract](audits/originality-review-contract-2026-10-20.md) is not accepted; the wider process and originality qualification remains held. Repository consistency, a supported owned-license lineage, and receiving-client behavior are separate evidence.
+
+No bounded model pilot, paid evaluation, billing change, merge, tag, release, or installed-skill promotion was performed. Required client behavior and effective isolation/billing prerequisites remain unverified. The final manifest binds the submitted artifact scope and retains historical ancestry.
+
+## Retained earlier checkpoints
+
 Merged baseline `7aff034` passed 233 unit tests and deterministic gates. All 87 archives matched generated Claude source bytes. Its manifest bound 137 artifacts to ancestor `81c6701`, preserving both feature and main histories. These are baseline receipts, not results for later edits.
 
 ## Follow-up repairs
@@ -14,7 +24,7 @@ The [follow-up closeout](audits/pr72-source-closeout-2026-10-20.json) matched 61
 
 A [later check of pushed head d2633f2](audits/pr72-pushed-head-source-closeout-2026-10-20.json) matched 59 of 62 sources: Terraform changed and both OWASP pages returned HTTP 403. Those pages cannot currently be verified, despite the earlier agreeing samples. ASVS matched its old pin on that request, but its prior inconsistent-sample hold remains. No further repin or normalization was attempted. Source drift and availability therefore remain open alongside the ASVS review hold; the nine initial repair decisions are not a declaration that the current gate passes.
 
-The [originality disposition](audits/originality-disposition-2026-10-20.md) now traces all 87 histories and locates the owned MIT source license for four historical adaptations. Their later clean-room relabel changed no procedural body. Current provenance qualifies those labels; no independent process or comprehensive originality qualification was found. The release hold remains until a scoped review and maintainer disposition are accepted.
+The [originality disposition](audits/originality-disposition-2026-10-20.md) now traces all 87 histories and locates the owned MIT source license for four historical adaptations. Their later clean-room relabel changed no procedural body. That earlier checkpoint qualified the labels; the current review above corrects them to owned adaptation. No comprehensive originality qualification was found. The release hold remains until a scoped review and maintainer disposition are accepted.
 
 ## Limited-evidence target
 

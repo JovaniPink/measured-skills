@@ -29,3 +29,7 @@ The [final closeout](source-final-closeout-2026-10-20.json) matched 54 of 63 sou
 The observations above remain historical. The [follow-up decision ledger](pr72-source-hold-repairs-2026-10-20.json) records the later repair of all nine original holds, the newly reviewed subagent page, and a new retained ASVS hold. The [follow-up closeout](pr72-source-closeout-2026-10-20.json) is the current online result: 61 matching sources of 62 active sources, with a failing gate for ASVS. Three planned ASVS samples disagree; no further repin is accepted from those observations.
 
 A [later pushed-head check](pr72-pushed-head-source-closeout-2026-10-20.json) supersedes that availability snapshot: 59 matching, one changed Terraform source, and two OWASP HTTP 403 responses across 62 sources. ASVS matches that request but retains its inconsistent-sample review hold. No additional pins are refreshed from this observation.
+
+## Continued review checkpoint
+
+The [continued decision ledger](source-hold-followup-2026-10-20.json) and [checkpoint receipt](source-hold-followup-checkpoint-2026-10-20.json) supersede earlier source availability snapshots: all 62 active sources match at this checkpoint. The record preserves eleven individual decisions, unavailable alternatives, differing HTML observations, and the transition to substantive publisher representations where appropriate. No normalization or review-age policy was relaxed. This is a dated source observation, not release or client qualification.

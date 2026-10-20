@@ -17,7 +17,7 @@
     {
       "source_url": "https://adk-labs.github.io/adk-docs/safety/",
       "marker_kind": "etag",
-      "marker_value": "\"6ad5eacf-3d838\""
+      "marker_value": "\"6ad5eace-3d838\""
     },
     {
       "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
@@ -82,7 +82,7 @@
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
       "marker_kind": "etag",
-      "marker_value": "\"c2a70c088e5fd3b33fc5fccbc6d7af17\""
+      "marker_value": "\"75533pg6gn4r3l\""
     },
     {
       "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
@@ -145,16 +145,6 @@
       "marker_value": "Sun, 05 Apr 2026 14:01:15 GMT"
     },
     {
-      "source_url": "https://docs.python.org/3/",
-      "marker_kind": "etag",
-      "marker_value": "\"6ad77096-4ca9\""
-    },
-    {
-      "source_url": "https://docs.python.org/3/library/unittest.html",
-      "marker_kind": "etag",
-      "marker_value": "\"6ad77097-5243a\""
-    },
-    {
       "source_url": "https://docs.spring.io/spring-boot/",
       "marker_kind": "last-modified",
       "marker_value": "Tue, 20 Oct 2026 16:09:11 GMT"
@@ -175,14 +165,14 @@
       "marker_value": "Wed, 02 Sep 2026 14:04:07 GMT"
     },
     {
-      "source_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
-      "marker_kind": "normalized-content-sha256",
-      "marker_value": "87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928"
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+      "marker_kind": "content-sha256",
+      "marker_value": "46595a553b00caf99e46272992834f03b58b564cfaa5cbfacba42ee35ce3a303"
     },
     {
-      "source_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
-      "marker_kind": "normalized-content-sha256",
-      "marker_value": "d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5"
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "marker_kind": "content-sha256",
+      "marker_value": "6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12"
     },
     {
       "source_url": "https://git-scm.com/docs/git-merge",
@@ -200,9 +190,9 @@
       "marker_value": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509"
     },
     {
-      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
-      "marker_kind": "normalized-content-sha256",
-      "marker_value": "4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a"
+      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f"
     },
     {
       "source_url": "https://learn.microsoft.com/en-us/dotnet/",
@@ -210,14 +200,14 @@
       "marker_value": "\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\""
     },
     {
-      "source_url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "source_url": "https://nextjs.org/docs/app/guides/ai-agents.md",
       "marker_kind": "content-sha256",
-      "marker_value": "6ed2cc7386976aa1bb5ebbc7c5979f47b3b156a42d52226d5b1ec93c59a16ece"
+      "marker_value": "b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22"
     },
     {
-      "source_url": "https://nextjs.org/docs/app/guides/authentication",
+      "source_url": "https://nextjs.org/docs/app/guides/authentication.md",
       "marker_kind": "content-sha256",
-      "marker_value": "1d742fdc2b6822724bb7875bf46722bc4e4a66bd16aa418a60811662c5de2d26"
+      "marker_value": "96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c"
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
@@ -225,9 +215,19 @@
       "marker_value": "\"f60049a82dce58cae45aaa4eea299ba5-ssl\""
     },
     {
-      "source_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
       "marker_kind": "content-sha256",
-      "marker_value": "46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99"
+      "marker_value": "bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+      "marker_kind": "content-sha256",
+      "marker_value": "6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+      "marker_kind": "content-sha256",
+      "marker_value": "3bdf26061ab3655763b6f5a7d3487d81ad103400cca54febf84f08c52032b849"
     },
     {
       "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
@@ -287,7 +287,7 @@
     {
       "source_url": "https://www.swift.org/swift-evolution/",
       "marker_kind": "content-sha256",
-      "marker_value": "9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac"
+      "marker_value": "efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022"
     },
     {
       "source_url": "https://www.typescriptlang.org/docs/",

@@ -429,6 +429,40 @@ def validate_evals(errors: list[str]) -> None:
                     errors.append(f"evals/cases.json: {case.get('id')} must explicitly invoke {skill}")
 
 
+def _validate_owned_origin(entry: dict[str, object], errors: list[str]) -> None:
+    """Verify a declared owned adaptation against retained public Git objects."""
+    origin = entry.get("owned_origin")
+    if entry.get("implementation_method") != "adapted":
+        if origin is not None:
+            errors.append("owned_origin is only valid for an adapted implementation")
+        return
+    if not isinstance(origin, dict):
+        errors.append(f"provenance/catalog.json: {entry.get('skill')} adaptation requires owned_origin")
+        return
+    skill = entry.get("skill")
+    revision = origin.get("revision")
+    entrypoint = origin.get("entrypoint")
+    if (not isinstance(revision, str) or re.fullmatch(r"[0-9a-f]{40}", revision) is None or
+            revision != entry.get("pinned_revision") or
+            not isinstance(skill, str) or re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", skill) is None or
+            entrypoint != f"skills/{skill}/SKILL.md" or origin.get("license") != "MIT"):
+        errors.append(f"provenance/catalog.json: {skill} has an invalid owned origin identity")
+        return
+    try:
+        _git_output(ROOT, ["merge-base", "--is-ancestor", revision, "HEAD"])
+        payload = _git_output(ROOT, ["show", f"{revision}:{entrypoint}"])
+        license_bytes = _git_output(ROOT, ["show", f"{revision}:LICENSE"])
+    except ValueError as error:
+        errors.append(f"provenance/catalog.json: {skill} owned origin is unavailable: {error}")
+        return
+    if hashlib.sha256(payload).hexdigest() != origin.get("entrypoint_sha256"):
+        errors.append(f"provenance/catalog.json: {skill} owned origin content hash differs")
+    if (hashlib.sha256(license_bytes).hexdigest() != origin.get("license_sha256") or
+            not license_bytes.startswith(b"MIT License\n") or
+            b"Copyright (c) 2026 Jovani Pink" not in license_bytes):
+        errors.append(f"provenance/catalog.json: {skill} owned MIT license evidence differs")
+
+
 def validate_provenance(errors: list[str]) -> None:
     document = _validate_json_schema(
         ROOT / "provenance" / "catalog.json",
@@ -453,6 +487,7 @@ def validate_provenance(errors: list[str]) -> None:
             revision = str(entry.get("pinned_revision", ""))
             if not re.fullmatch(r"[0-9a-f]{40}", revision):
                 errors.append(f"provenance/catalog.json: {entry.get('skill')} requires a 40-character pinned revision")
+        _validate_owned_origin(entry, errors)
         skill = entry.get("skill")
         if skill in ALL_SKILLS:
             metadata = read_skill_metadata(ROOT / "skills" / skill)
