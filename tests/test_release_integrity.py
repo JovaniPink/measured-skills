@@ -311,7 +311,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
         fixture = json.loads((ROOT / 'tests/fixtures/upstream-pins-before-readiness-followup.json').read_text())
         original = json.loads(subprocess.check_output(['git', 'show', fixture['source_commit'] + ':catalog/upstream-pins.json'], cwd=ROOT))
         self.assertEqual(original, fixture['snapshot'])
-        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+        historical = subprocess.check_output(['git', 'show', accepted['accepted_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT)
+        current = json.loads(historical)
         for field in ('reviewed_on', 'max_review_age_days'):
             self.assertEqual(original[field], current[field])
         before = {r['source_url']: r for r in original['sources']}
@@ -336,11 +338,46 @@ class ReleaseIntegrityTests(unittest.TestCase):
         checkpoint = json.loads((ROOT / 'docs/audits/source-hold-followup-checkpoint-2026-10-20.json').read_text())
         self.assertEqual('pass', checkpoint['result'])
         self.assertEqual(set(actual), {r['source_url'] for r in checkpoint['records']})
-        self.assertEqual(hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest(),
+        self.assertEqual(hashlib.sha256(historical).hexdigest(),
                          audit['reviewed_pin_inventory_sha256'])
         for record in checkpoint['records']:
             self.assertEqual('pass', record['result'])
             pin = actual[record['source_url']]
+            self.assertEqual(f"{pin['marker_kind']}:{pin['marker_value']}", record['expected_marker'])
+            self.assertEqual(record['expected_marker'], record['observed_marker'])
+
+    def test_post_acceptance_source_refresh_accounts_for_all_changes(self) -> None:
+        import subprocess
+        ledger = json.loads((ROOT / 'docs/audits/source-refresh-post-acceptance-2026-10-20.json').read_text())
+        before = json.loads(subprocess.check_output(['git', 'show', ledger['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT))
+        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        expected = {r['source_url']: r for r in before['sources']}
+        self.assertEqual(14, len(ledger['records']))
+        self.assertEqual(14, len({r['source_url'] for r in ledger['records']}))
+        for record in ledger['records']:
+            prior = expected[record['source_url']]
+            self.assertEqual(f"{prior['marker_kind']}:{prior['marker_value']}", record['expected_marker'])
+            kind, value = record['observed_marker'].split(':', 1)
+            self.assertEqual(prior['marker_kind'], kind)
+            self.assertEqual('reviewed_repin', record['decision'])
+            self.assertTrue(record['finding'])
+            self.assertTrue(record['affected_skills'])
+            self.assertEqual(3, len(record['observations']))
+            for observation in record['observations']:
+                marker = observation.get('preferred_marker')
+                if marker is None:
+                    marker = kind + ':' + observation['etag' if kind == 'etag' else 'raw_sha256']
+                self.assertEqual(record['observed_marker'], marker)
+            expected[record['source_url']] = {**prior, 'marker_value': value}
+        self.assertEqual(expected, {r['source_url']: r for r in current['sources']})
+        self.assertEqual({k: v for k, v in before.items() if k != 'sources'},
+                         {k: v for k, v in current.items() if k != 'sources'})
+        checkpoint = json.loads((ROOT / 'docs/audits/source-refresh-closeout-2026-10-20.json').read_text())
+        self.assertEqual('pass', checkpoint['result'])
+        self.assertEqual(set(expected), {r['source_url'] for r in checkpoint['records']})
+        for record in checkpoint['records']:
+            pin = expected[record['source_url']]
+            self.assertEqual('pass', record['result'])
             self.assertEqual(f"{pin['marker_kind']}:{pin['marker_value']}", record['expected_marker'])
             self.assertEqual(record['expected_marker'], record['observed_marker'])
 

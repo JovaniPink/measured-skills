@@ -118,4 +118,8 @@ class ExpressionDispositionTests(unittest.TestCase):
             'docs/audits/scoped-expression-disposition-2026-10-20.json',
             'catalog/upstream-pins.json',
         ):
-            self.assertEqual(git('show', audit['reviewed_source'] + ':' + path), (ROOT / path).read_bytes())
+            accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+            historical = git('show', accepted['accepted_revision'] + ':' + path)
+            self.assertEqual(git('show', audit['reviewed_source'] + ':' + path), historical)
+            if path != 'catalog/upstream-pins.json':
+                self.assertEqual(historical, (ROOT / path).read_bytes())

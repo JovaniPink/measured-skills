@@ -1,6 +1,7 @@
 {
   "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
   "previous_head": "6f4c3de066c43faf20b0a01303758b90f6d4806d",
+  "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78",
   "reviewed_on": "2026-10-20",
   "status": "scoped_technical_delta_review",
   "reviewer": "Codex-assisted technical review",
@@ -37,13 +38,22 @@
     "renovate.json": {
       "before_sha256": null,
       "after_sha256": "e80b4e42a3043bc12fa0640db4bac392d2bf770acf841360d7c8ceeeac2ec1a9",
-      "expression_and_license_review": "Exact six-line configuration from upstream main commit 6b3b9cbd4bcde23a2f19d6f3268ff5020f70a498, authored by the Renovate bot and merged in PR 69. Only an official schema URL and config:recommended preset reference; no bundled third-party implementation, secrets, skill grants, or license declaration. This work integrates the already-authorized upstream file, without changing repository settings."
+      "expression_and_license_review": "Exact six-line configuration from upstream main commit 6b3b9cbd4bcde23a2f19d6f3268ff5020f70a498, authored by the Renovate bot and merged in PR 69. Official schema URL and config:recommended preset only; no bundled implementation, secrets, or license change."
+    },
+    "tests/test_expression_disposition.py": {
+      "before_sha256": "75f02904eec8a7242acfff6b5f819589b444efe4ed007dd86eb157cc81cdb547",
+      "after_sha256": "33d86d1bd87921e40df74c2b87127c0f4cd4a4dc1bcba10f077ac8f2ef97114e",
+      "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
     },
     "tests/test_noncanonical_disposition.py": {
       "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",
       "after_sha256": "2c5425985622e34cd3cd77781d14496d51220121d55fda4730a4fa3f401c67aa",
       "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
+    },
+    "tests/test_release_integrity.py": {
+      "before_sha256": "1f629c1596ec1cfbf5adf218bec2ff07685033ffe3c7982d304eaa18285fd565",
+      "after_sha256": "075a7a2265698a92c97c260f4ad5d328ffd1fbf0271a0734ba2d5d4d66259cab",
+      "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
     }
-  },
-  "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78"
+  }
 }
