@@ -986,8 +986,21 @@ def validate_packages(errors: list[str]) -> None:
         digest = hashlib.sha256(archive_path.read_bytes()).hexdigest()
         if checksums.get(archive_path.name) != digest:
             errors.append(f"dist/claude-ai/SHA256SUMS: digest mismatch for {archive_path.name}")
+        plugin = read_skill_metadata(ROOT / "skills" / skill)["plugin"]
+        source = ROOT / "plugins" / "claude" / plugin / "skills" / skill
+        expected = {f"{skill}/{item.relative_to(source).as_posix()}": item.read_bytes()
+                    for item in source.rglob("*") if item.is_file()}
+        if not expected:
+            errors.append(f"{archive_path.name}: generated Claude source is missing")
         with zipfile.ZipFile(archive_path) as archive:
             names = archive.namelist()
+            if len(names) != len(set(names)):
+                errors.append(f"{archive_path.name}: duplicate archive members")
+            if set(names) != set(expected):
+                errors.append(f"{archive_path.name}: archive members differ from generated Claude source")
+            for info in archive.infolist():
+                if info.filename in expected and archive.read(info) != expected[info.filename]:
+                    errors.append(f"{archive_path.name}: noncanonical archive content: {info.filename}")
             if f"{skill}/SKILL.md" not in names:
                 errors.append(f"{archive_path.name}: missing nested {skill}/SKILL.md")
             for name in names:
@@ -1125,6 +1138,26 @@ def validate_release_manifest(errors: list[str]) -> None:
         return
     if document.get("catalog_version") != VERSION:
         errors.append(f"{manifest.relative_to(ROOT)}: catalog version does not match {VERSION}")
+    from build_release_manifest import artifact_inventory
+
+    expected = artifact_inventory()
+    artifacts = document.get("artifacts")
+    if isinstance(artifacts, list):
+        actual: dict[str, str] = {}
+        invalid = False
+        for item in artifacts:
+            if not isinstance(item, dict):
+                invalid = True
+                continue
+            relative, kind = item.get("path"), item.get("kind")
+            if not isinstance(relative, str) or not isinstance(kind, str):
+                invalid = True
+                continue
+            if relative in actual:
+                invalid = True
+            actual[relative] = kind
+        if invalid or actual != expected:
+            errors.append(f"{manifest.relative_to(ROOT)}: artifact inventory must contain each required path and kind exactly once")
     for error in release_manifest_source_errors(document):
         errors.append(f"{manifest.relative_to(ROOT)}: {error}")
     for error in release_manifest_current_errors(document):

@@ -8,7 +8,21 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 233 regression tests.
+Current test suite: 237 regression tests.
+
+## October 20 release-readiness repairs
+
+See the [readiness record](release-readiness-2026-10-20.md) for source and client holds.
+The new mutation tests first failed in nine subcases, then passed after archive
+content and current manifest inventory validation were repaired. The official
+`skills-ref` 0.1.0 validator at source revision
+`69ef37e9424c0a7ea9dd2293b559e43ec8176379` passed all 87 canonical skills.
+It ran from an isolated temporary environment with its upstream frozen lock:
+click 8.3.1, strictyaml 1.7.3, python-dateutil 2.9.0.post0, and six 1.17.0.
+No global package or installed skill changed for this format check.
+The bundled Codex plugin validator remains unavailable at CLI 0.161.0;
+format validation does not establish client loading or behavior.
+Final source and artifact identity will be recorded by the submitted manifest.
 
 ## October 20 follow-up review
 
