@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "dbed6aa61ca616d3299312cf8571c93ec5ffdee3",
+  "source_commit": "87538d0dab5df32e09c91d6a30d486e791effe87",
   "created_on": "2026-10-20",
   "artifacts": [
     {
@@ -187,7 +187,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/data-migration-readiness-0.18.0.zip",
-      "sha256": "95758bbecd68478ad80ba117605bdda36dc89c9e43d3fa892d62a84d706140e5"
+      "sha256": "8e47d7ecbf0df91e60d89829d0ff4d6e779e8b94d057bd4b2be56e5c93ceed26"
     },
     {
       "kind": "zip",
@@ -202,7 +202,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/dependency-supply-chain-review-0.18.0.zip",
-      "sha256": "45572dc1cf9a82df0b44eb6d9350397e5da558e5861f4f4c9f50c34251d833f3"
+      "sha256": "b1118f0df7b1469124b2d617cff955b4612dc8ebc0563f950377b48db847df36"
     },
     {
       "kind": "zip",
@@ -307,17 +307,17 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/observability-design-0.18.0.zip",
-      "sha256": "3b87686b29adae878c40a8404f3743c51afa2d2bd6bab68625976f4151693922"
+      "sha256": "827ecdf4d755c003eb885dced103175a1fe02da59fd25006d00f4f13bc546618"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/operational-readiness-review-0.18.0.zip",
-      "sha256": "5c365356db7426f036170167dfdb2fea0dc1a246a7f6827fb9526a9cde6e1af8"
+      "sha256": "f9b4293c9b6582f9e8f6d22b27d4472344fe2ca2f97626b5483041e2ec59c88c"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/performance-scalability-diagnosis-0.18.0.zip",
-      "sha256": "43d24c6ebaf88061747a7e20733fb300701d5ced878ba47bf421aef6d01cfe27"
+      "sha256": "a41fae3f2e14ffd1424a6c54fb1781bd7dae1daf5ba60308a2803bb953807e58"
     },
     {
       "kind": "zip",
@@ -477,7 +477,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/test-quality-review-0.18.0.zip",
-      "sha256": "cffe05d009903951202deeea40d923496e83497008afca6f8c7d569e8316707e"
+      "sha256": "b3a2c5c6f9f8ad10a7662beb342a0d1ebc00a57e00ef114b75346485abe4499a"
     },
     {
       "kind": "zip",
@@ -547,7 +547,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "b9b2d1079946d0b856ee0e58a422d8581f716a48a71e6391e8851e1188ce303f"
+      "sha256": "08300d66bce3409be5fbc21194217422bded5c8dd7a74b31687b607498ba228a"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "e81a7fa6ac01afb688bdbb739ef31fbf16dcd3010f9bccf43c77bdfafd4c248b"
+      "sha256": "49e36c8795215b23d2a4cd40462c5762ac9b20199607ab9e99277c7adc80cde8"
     },
     {
       "kind": "tree",
@@ -657,7 +657,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "ea259129245cf797565169e8a1bd92db64c4a02c0613c110c0cf5f8192387643"
+      "sha256": "a157f588f061ba9a0686f9c0c88e790374c5eb48beb83562819bb8f19a7cff9f"
     },
     {
       "kind": "tree",
@@ -692,7 +692,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "d9a38b1c713e41dd7e740589c30990d9ef37ef0fdb51703c56f08646b123bf65"
+      "sha256": "24faeb3e66d1950b112e0d47734246a6a58d5c96dd7f217585b4c0eea0e4c9fa"
     }
   ]
 }
