@@ -522,5 +522,13 @@
       "corrected_local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "reason": "Qualify categorical historical absence claims; retain the bounded current-text finding and MIT offer."
     }
-  ]
+  ],
+  "notice_repair_checkpoint": {
+    "source_commit": "2e43c1e96b39b17b70e9a994862bdf77b2e21f40",
+    "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "generated_pack_notices": 33,
+    "generated_skill_notices": 244,
+    "upload_archives": 87,
+    "acceptance_condition": "The expression input baseline is not an installation target. Any accepted candidate must retain this repair source in ancestry, match its notice-carrying artifacts, pass current notice validation, and record the exact submitted source/manifest revision in the maintainer decision. No acceptance is inferred."
+  }
 }

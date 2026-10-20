@@ -48,6 +48,11 @@ class DistributionLicensingTests(unittest.TestCase):
         import subprocess
         audit = json.loads((ROOT / 'docs/audits/scoped-expression-disposition-2026-10-20.json').read_text())
         self.assertEqual('proposed', audit['status'])
+        repair = audit['notice_repair_checkpoint']
+        subprocess.run(['git', 'merge-base', '--is-ancestor', repair['source_commit'], 'HEAD'], cwd=ROOT, check=True)
+        self.assertEqual(hashlib.sha256(subprocess.check_output(['git', 'show', repair['source_commit'] + ':LICENSE'], cwd=ROOT)).hexdigest(), repair['license_sha256'])
+        self.assertEqual((33, 244, 87), (repair['generated_pack_notices'], repair['generated_skill_notices'], repair['upload_archives']))
+
         self.assertEqual({'status': 'pending', 'accepted_by': None, 'accepted_on': None, 'accepted_revision': None}, audit['maintainer_decision'])
         profile = next(r for r in json.loads((ROOT / 'catalog/profiles.json').read_text())['profiles'] if r['id'] == 'daily-engineering-experimental')
         selected = set(profile['skills']) | {'claim-verification', 'cross-stack-quality-gates', 'prelaunch-readiness', 'publish-change-safely'}

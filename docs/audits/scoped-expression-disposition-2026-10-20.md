@@ -39,6 +39,8 @@ The four adaptations visibly retain owned foundation expression. The ledger reco
 
 The repository contains the complete MIT notice naming Jovani Pink. Before this repair, independently usable plugin folders, skill exports, and nested upload archives carried MIT labels without that notice. MIT requires retention of the copyright and permission notice; a metadata label is insufficient. See the [MIT text](https://opensource.org/license/mit) and this repository's LICENSE.
 
+The notice repair is committed at `2e43c1e96b39b17b70e9a994862bdf77b2e21f40`. The expression-input baseline above is not an installation target. Any accepted candidate must retain that repair in ancestry, match its notice-carrying artifacts, pass current notice validation, and record the final submitted source/manifest revision in the decision.
+
 Generators now carry the exact owned LICENSE into each plugin and skill folder, selected exports, project projections, offline evaluation exports, and upload archives. Archive validation independently checks the notice against the root LICENSE, even if a faulty generated source and rehashed archive agree with each other. Receipts bind the notice bytes. Two-Mac staging binds LICENSE to the committed source and retains it in wrappers and upload ZIPs. No extra grant, hook, or executable is introduced.
 
 These notices preserve the stated offer for rights the contributor can grant. They do not themselves settle third-party expression rights. Primary-document links identify correctness or format authorities; they do not automatically grant permission to copy their prose or examples. No such bundled excerpt requiring a separate permission or attribution repair was identified in this 14-skill review. No fair-use conclusion is asserted.
