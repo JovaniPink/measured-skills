@@ -40,6 +40,6 @@ Return Discovery, Hazards, Commands selected, Results, Compatibility, Missing ev
 
 Synthetic example; not an observed client result.
 
-Input: An async Python handler calls a blocking network library directly.
+Input: A supplied Python 3.12 dependency lock and handler show an async request calling a synchronous network client directly. No commands have run.
 
-Output: warning: the call may block the event loop. Confirm library behavior and cancellation needs against the pinned environment before choosing a change.
+Output: warning: the synchronous call can block the event loop. Discovery is limited to the supplied Python 3.12 lock and handler; runtime latency is unmeasured. Review cancellation and the client's thread-safety contract before choosing an async client or offloading work. No validation command has been selected or run because repository gates were not supplied. Compatibility evidence and a cancellation test remain missing. Next inspect those gates and the pinned client behavior.

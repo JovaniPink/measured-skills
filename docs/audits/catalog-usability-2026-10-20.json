@@ -788,6 +788,18 @@
       "reason": "Conditional or platform-specific detail remains directly linked for use when relevant."
     },
     {
+      "path": "skills/gcp-data-engineering-profile/references/pipelines.md",
+      "lines": 24,
+      "decision": "retain",
+      "reason": "Conditional storage, streaming, Spark, and orchestration checks; load only for a pipeline review."
+    },
+    {
+      "path": "skills/gcp-data-engineering-profile/references/warehouse.md",
+      "lines": 22,
+      "decision": "retain",
+      "reason": "Conditional BigQuery, dbt, and Dataform checks; load only for a warehouse or transformation review."
+    },
+    {
       "path": "skills/go-engineering-profile/references/checks.md",
       "lines": 20,
       "decision": "retain",

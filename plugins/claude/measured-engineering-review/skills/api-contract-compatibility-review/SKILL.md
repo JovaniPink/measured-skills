@@ -41,6 +41,6 @@ Return Contract inventory, Compatibility findings, Consumer risk, Test matrix, R
 
 Synthetic example; not an observed client result.
 
-Input: A response field changes from an integer to a string while old clients remain deployed.
+Input: In the supplied A-to-B API diff, `total` changes from an integer to a string. The supplied older client decoder requires an integer, and those clients remain deployed.
 
-Output: warning: old clients may reject the new type. Preserve the old contract or establish a compatible transition before rollout.
+Output: error, new: the response type breaks the supplied older decoder. Contract inventory: A emits an integer; B emits a string; deployed older consumers require A. Evidence is the API diff and decoder contract. Test matrix: decode A and B responses with both old and new clients; results are pending. Preserve the existing type or add a compatible field, then verify consumer migration before deprecating the old contract. The rollout owner and migration completion are unresolved; this review authorizes neither rollout nor deprecation.

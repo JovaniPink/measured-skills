@@ -41,6 +41,6 @@ Report `Symptom`, `Reproduction`, `Cause`, `Evidence`, `Alternatives eliminated`
 
 Synthetic example; not an observed client result.
 
-Input: The build fails only after a dependency update.
+Input: The build started failing after a dependency update, but the failing command, lockfile diff, and error output are missing.
 
-Output: Compare the exact failing command and dependency revisions, reproduce the failure, and test a causal hypothesis before proposing a rollback or fix.
+Output: Diagnosis incomplete. The reported symptom is a build failure after the update; reproduction and cause are unverified. No competing cause has been eliminated, and the affected build is blocked. Next observation: obtain the exact command and error, then compare the same command and environment with the prior lockfile. No rollback or source change has been made.

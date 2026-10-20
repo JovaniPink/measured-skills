@@ -211,7 +211,7 @@
       "reviewed_material": [
         "official primary documentation linked by the skill"
       ],
-      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-and-reference-only workflow with no hooks, executables, broad tool grants, dependency installation, external writes, or state application.",
       "rereview_triggers": [
         "upstream standard or toolchain revision changes",
@@ -231,7 +231,7 @@
       "reviewed_material": [
         "official primary documentation linked by the skill"
       ],
-      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-and-reference-only workflow with no hooks, executables, broad tool grants, dependency installation, external writes, or state application.",
       "rereview_triggers": [
         "upstream standard or toolchain revision changes",
@@ -292,7 +292,7 @@
         "Open Agent Skills specification",
         "Jovani-owned dependency and rollout analysis practice"
       ],
-      "local_changes": "Independently authored cross-surface impact workflow with confirmed, possible, and cleared classifications. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored cross-surface impact workflow with confirmed, possible, and cleared classifications. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: read-only and explicitly separates impact analysis from merge, migration, deployment, and notification authority.",
       "rereview_triggers": [
         "new execution behavior",
@@ -312,7 +312,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored client-neutral claim and authority workflow. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored client-neutral claim and authority workflow. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: read-only verification workflow with no bundled execution.",
       "rereview_triggers": [
         "specification change",
@@ -334,7 +334,7 @@
         "Open Agent Skills specification",
         "Jovani-owned code review practice"
       ],
-      "local_changes": "Independently authored exact-diff review with verified findings, severity, test sensitivity, compatibility, and separate merge authority. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored exact-diff review with verified findings, severity, test sensitivity, compatibility, and separate merge authority. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: read-only; proposed changes, review comments, checks, and merge authority remain distinct.",
       "rereview_triggers": [
         "review starts editing code",
@@ -417,7 +417,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored cross-stack gate-discovery workflow without fixed commands or project assumptions. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored cross-stack gate-discovery workflow without fixed commands or project assumptions. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: gate discovery is conservative and excludes mutation by default.",
       "rereview_triggers": [
         "supported stack change",
@@ -668,7 +668,7 @@
         "Spark SQL tuning and managed image versions",
         "Airflow best practices"
       ],
-      "local_changes": "Independently authored generic data-contract review, conditional stack checks, authorization boundaries, and synthetic cases. No private workflow or infrastructure contract imported.",
+      "local_changes": "Independently authored generic data-contract review, conditional stack checks, authorization boundaries, and synthetic cases. No private workflow or infrastructure contract imported. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract. Apache Beam SDK discovery and late-data trigger checks are explicit under the already reviewed Dataflow authority.",
       "security_review": "APPROVE: read-only instruction and reference workflow; no credentials, provider execution, grants, hooks, or executable payloads.",
       "rereview_triggers": [
         "platform semantics or supported versions change",
@@ -771,7 +771,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Independently extended owned document lifecycle and client-adapter contracts; no external workflow text, command structure, or executable payload imported. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-only workflow with no hooks, bundled agents, executables, tool grants, or automatic external actions.",
       "rereview_triggers": [
         "source revision changes",
@@ -1145,7 +1145,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-only workflow with no hooks, bundled agents, executables, tool grants, or automatic external actions.",
       "rereview_triggers": [
         "source revision changes",
@@ -1246,7 +1246,7 @@
       "reviewed_material": [
         "official primary documentation linked by the skill"
       ],
-      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored review or stack workflow with evidence, compatibility, safety, and claim boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-and-reference-only workflow with no hooks, executables, broad tool grants, dependency installation, external writes, or state application.",
       "rereview_triggers": [
         "upstream standard or toolchain revision changes",
@@ -1634,7 +1634,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: diagnostic workflow prohibits silent implementation.",
       "rereview_triggers": [
         "skill behavior change",
@@ -1735,7 +1735,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained.",
+      "local_changes": "Independently authored portable workflow with explicit authority, evidence, and stopping boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract.",
       "security_review": "APPROVE: instruction-only workflow with no hooks, bundled agents, executables, tool grants, or automatic external actions.",
       "rereview_triggers": [
         "source revision changes",

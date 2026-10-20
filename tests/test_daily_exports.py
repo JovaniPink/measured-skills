@@ -11,6 +11,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import export_selected  # noqa: E402
@@ -189,6 +191,32 @@ class DailyExports(unittest.TestCase):
                 export_selected.export(base / 'link' / 'out', 'codex', ['claim-verification'])
             self.assertFalse((base / 'real' / 'out').exists())
 
+    def test_selected_export_rejects_symlinked_skill_root(self) -> None:
+        for client in ('codex', 'claude', 'antigravity'):
+            with self.subTest(client=client), tempfile.TemporaryDirectory() as raw:
+                base = Path(raw).resolve()
+                (base / 'skills').mkdir()
+                shutil.copytree(ROOT / 'skills/test-strategy', base / 'external')
+                (base / 'skills/test-strategy').symlink_to(base / 'external', target_is_directory=True)
+                with patch.object(export_selected, 'ROOT', base):
+                    with self.assertRaisesRegex(ValueError, 'symlink'):
+                        export_selected.export(base / 'out', client, ['test-strategy'])
+                self.assertFalse((base / 'out').exists())
+
+    def test_selected_export_removes_its_partial_output_on_copy_failure(self) -> None:
+        for client in ('codex', 'claude', 'antigravity'):
+            with self.subTest(client=client), tempfile.TemporaryDirectory() as raw:
+                base = Path(raw).resolve()
+                copy = 'shutil.copytree' if client == 'codex' else '_copy_claude_skill'
+                with patch('export_selected.' + copy, side_effect=OSError('synthetic disk failure')):
+                    with self.assertRaisesRegex(OSError, 'disk failure'):
+                        export_selected.export(base / 'out', client, ['test-strategy'])
+                self.assertFalse((base / 'out').exists())
+                with patch.object(Path, 'write_text', side_effect=OSError('synthetic receipt failure')):
+                    with self.assertRaisesRegex(OSError, 'receipt failure'):
+                        export_selected.export(base / 'out', client, ['test-strategy'])
+                self.assertFalse((base / 'out').exists())
+
     def fixture(self, base: Path) -> Path:
         source = base / 'source'
         source.mkdir()
@@ -229,6 +257,19 @@ class DailyExports(unittest.TestCase):
             self.assertEqual(subprocess.check_output(['git', '-C', str(source), 'rev-parse', 'HEAD'], text=True).strip(), receipt['source_commit'])
             cases = json.loads((a / 'codex/cases.json').read_text())['cases']
             self.assertEqual(24, sum(c['kind'] == 'positive' for c in cases))
+            for case in cases:
+                prompt = (a / 'claude/evals' / case['id'] / 'prompt.md').read_text()
+                self.assertTrue(prompt.startswith('---\n'), case['id'])
+                _, frontmatter, body = prompt.split('---', 2)
+                policy = yaml.safe_load(frontmatter)
+                self.assertEqual({'Read', 'Glob', 'Grep', 'Skill'}, set(policy['allowed_tools']))
+                self.assertLessEqual(policy['max_turns'], 10)
+                self.assertLessEqual(policy['timeout_seconds'], 300)
+                self.assertEqual(case['prompt'] + '\n', body.lstrip('\n'))
+                if case['kind'] == 'safety':
+                    rubric = (a / 'claude/evals' / case['id'] / 'graders/output.md').read_text()
+                    policy = yaml.safe_load(rubric.split('---', 2)[1])
+                    self.assertEqual('trace', policy['focus'])
             positive = next(c for c in cases if c['expected_skills'])
             grader = a / 'claude/evals' / positive['id'] / 'graders' / ('expect-' + positive['expected_skills'][0] + '.md')
             text = grader.read_text()

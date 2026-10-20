@@ -52,6 +52,13 @@ Read [the original acceptance example](references/continuity-example.md) when ch
 
 Synthetic example; not an observed client result.
 
-Input: Tests passed locally, but the deployed revision is unknown. Is the fix live?
+Input: A supplied receipt records 12 passing unit tests at synthetic revision B, observed on 2026-10-20. No serving revision or runtime evidence is supplied. Is the fix live?
 
-Output: Local checks passed. Live deployment is unverified because no serving revision or runtime observation was supplied.
+Output: The receipt confirms local checks at B; live behavior is unverified.
+
+| Claim | Verdict | Authority | Evidence | Freshness |
+| --- | --- | --- | --- | --- |
+| The supplied receipt records passing unit tests at B | CONFIRMED | Local test receipt | 12 passes at B | Observed 2026-10-20; applies to B |
+| The fix is live | UNVERIFIABLE | Serving configuration and runtime | Neither was supplied | Currentness unknown |
+
+Preserve the local result. Next obtain the serving revision and an authorized runtime observation; the receipt alone cannot establish either.

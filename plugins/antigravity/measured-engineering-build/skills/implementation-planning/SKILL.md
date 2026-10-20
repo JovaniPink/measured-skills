@@ -50,6 +50,6 @@ Return `Objective`, `Current evidence`, `Interfaces`, `Implementation steps`, `T
 
 Synthetic example; not an observed client result.
 
-Input: Plan a parser change that must accept empty input and retain existing errors.
+Input: Plan a change to `parse(text)` so empty input returns `[]` while existing exceptions remain unchanged. No repository files have been supplied.
 
-Output: Define acceptance for empty input and existing error behavior, change the parser boundary, and verify both paths with focused tests before declaring completion.
+Output: The requested contract is clear, but the implementation plan is blocked on repository evidence. The proposed interface is `parse("") -> []` with existing exceptions preserved. First locate the parser and current error fixtures, then plan the smallest change and tests for empty, valid, and invalid input. The checkpoint is a review of those files and acceptance cases; stop if existing callers require a different empty-input result. Changes, commands, rollout, and rollback remain unselected until the repository is inspected.

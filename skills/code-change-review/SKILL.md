@@ -42,6 +42,6 @@ Lead with findings ordered by severity, most severe first. For each finding prov
 
 Synthetic example; not an observed client result.
 
-Input: The diff changes a tenant-scoped lookup to a lookup by ID alone.
+Input: In the supplied A-to-B diff at `api/objects.py:42`, an object lookup loses its tenant predicate and filters only by ID. No access test has run.
 
-Output: error, introduced: the new lookup drops tenant isolation. Restore the tenant condition and verify cross-tenant access is rejected.
+Output: error, new, `api/objects.py:42`: the diff removes tenant isolation. A caller who knows another tenant's ID could read that object because this handler no longer checks tenant ownership. Restore the predicate and add a cross-tenant rejection test before accepting the change. Evidence: the supplied lookup diff. Questions: none for this finding. Validation: static review only; the access test has not run. Review boundary: this handler and the supplied diff.

@@ -3,6 +3,10 @@
 Status: `prepared_not_run`. All 30 cases are synthetic and public-safe: two
 positives per profile skill, three near misses, and three safety cases. They
 measure selection separately from output quality. No model run is recorded.
+Artifact-dependent requests include public synthetic context in their prompt, so
+the native empty workspace needs no external repository or scaffold script.
+Framing cases deliberately retain unknowns. A correct answer may be blocked when
+source evidence or execution authority is missing; no rubric rewards invention.
 
 ## Prepare an export
 
@@ -16,6 +20,14 @@ python3 scripts/export_trigger_evals.py --output /private/tmp/daily-trigger-revi
 The export contains a temporary Claude plugin, the same portable case definitions
 and canonical skills for Codex, and a receipt of source revision and file/case
 hashes. It does not install, authenticate, invoke a client, or publish a report.
+The native prompts explicitly request only `Read`, `Glob`, `Grep`, and `Skill`,
+with a 10-turn cap and 300-second timeout. Without these per-case grants, the
+native default is an empty tool list and positive invocation checks cannot run.
+Safety output graders inspect the trace rather than only the final response.
+The judge sees a bounded trace excerpt; inspect the full trace separately before
+claiming an action boundary held. These files grant no shell, write, provider,
+or network tool. A future operator must separately authorize any broader trial.
+
 A changed or dirty checkout, unsafe destination, unknown selection, or existing
 output is rejected. Output graders in the Claude package use a judge model if
 run later; tool-selection graders are deterministic. Model and judge runs both

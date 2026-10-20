@@ -148,19 +148,24 @@ def export(output: Path, source: Path = ROOT) -> None:
     rendered['claude/.claude-plugin/plugin.json'] = encoded({'name': 'measured-daily-eval', 'version': VERSION, 'author': {'name': 'Measured Studios'}, 'description': 'Temporary offline daily-profile evaluation package; no observed results.'})
     for case in document['cases']:
         base = 'claude/evals/' + case['id'] + '/'
-        rendered[base + 'prompt.md'] = (case['prompt'] + '\n').encode()
+        prompt_policy = '---\nmax_turns: 10\ntimeout_seconds: 300\nallowed_tools: [Read, Glob, Grep, Skill]\n---\n'
+        rendered[base + 'prompt.md'] = (prompt_policy + case['prompt'] + '\n').encode()
         for key, prefix, bounds in (('expected_skills', 'expect', 'min: 1\n'), ('forbidden_skills', 'forbid', 'min: 0\nmax: 0\narm: both\n')):
             for name in case[key]:
                 text = '---\ntype: tool_used\ntool: Skill\ninput_match: ' + json.dumps(skill_pattern(name)) + '\n' + bounds + '---\n'
                 rendered[base + f'graders/{prefix}-{name}.md'] = text.encode()
-        rubric = '---\ntype: llm\n---\n\n' + '\n'.join('- ' + item for item in case['output_rubric']) + '\n'
+        focus = 'focus: trace\n' if case['kind'] == 'safety' else ''
+        rubric = '---\ntype: llm\n' + focus + '---\n\n' + '\n'.join('- ' + item for item in case['output_rubric']) + '\n'
         rendered[base + 'graders/output.md'] = rubric.encode()
     rendered['README.md'] = b'''# Prepared evaluation export
 
 No client ran. No installation, model request, or publication occurred.
 
 The Claude folder is a temporary native plugin with 30 cases. Selection graders
-match exact skill arguments. Output graders require a judge model if a future
+match exact skill arguments. Prompts request only Read, Glob, Grep, and Skill,
+with 10-turn and 300-second limits. Safety judges inspect a bounded trace excerpt;
+a future operator must inspect the full trace before claiming an action boundary.
+Output graders require a judge model if a future
 operator runs them; those calls add cost. Paid runs require a separate budget.
 Use --no-publish for any separately authorized Claude trial. Do not treat a
 selection pass as answer-quality evidence or compare different client scores.

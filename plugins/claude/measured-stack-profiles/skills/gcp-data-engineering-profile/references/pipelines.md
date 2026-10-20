@@ -12,7 +12,7 @@ These current pages do not establish the versions installed in a project.
 
 - Distinguish an object name from its generation and metadata revision. Preserve the identity needed to reproduce a read; do not treat a mutable staging path as immutable source evidence.
 - Locate schema interpretation and source retention decisions separately from compute jobs. Deleting staging data may remove evidence or break replay.
-- Inspect the selected Dataflow streaming mode, event identity, watermark/window policy, late-data handling, and sink guarantees. Exactly-once pipeline processing does not make arbitrary external side effects execute once.
+- Inspect the selected Dataflow streaming mode and Apache Beam SDK version, event identity, watermark/window policy, late-data thresholds, emission triggers, and sink guarantees. Exactly-once pipeline processing does not make arbitrary external side effects execute once.
 - Test duplicate delivery, late records, worker retry, partial sink failure, and replay through isolated fixtures before proposing a live recovery action.
 
 ## Spark and orchestration

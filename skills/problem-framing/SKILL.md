@@ -47,6 +47,6 @@ Return `Problem`, `Affected parties`, `Evidence`, `Constraints`, `Unknowns`, `Op
 
 Synthetic example; not an observed client result.
 
-Input: A team requests a dashboard, but the decision it should support is unspecified.
+Input: A team requests a dashboard, but has not identified its users, decision, evidence of delay, or deadline.
 
-Output: First identify the user decision, missing information, and observable success. A dashboard is one possible solution, not the problem statement.
+Output: The reported request is a dashboard; the underlying problem remains unverified. Affected users and their decision are unknown. No delay measurements or constraints were supplied. Options are to inspect the current decision process or interview its users before selecting a solution. Proposed success is a measurable improvement in that decision; its target still needs agreement. Building the dashboard is outside this framing step. Next: identify who makes the decision and what information is missing.

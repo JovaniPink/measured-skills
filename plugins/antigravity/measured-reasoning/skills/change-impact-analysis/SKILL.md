@@ -42,6 +42,6 @@ Return `Change`, `Confirmed impacts`, `Possible impacts`, `Cleared surfaces`, `E
 
 Synthetic example; not an observed client result.
 
-Input: An event field is removed; two consumers still read it.
+Input: The supplied call graph shows that removing `event.total` affects `web/summary.ts` and `jobs/settle.py`. Other consumers have not been inspected.
 
-Output: The two traced consumers are affected. Their compatibility checks and upgrade order belong in the change; uninspected consumers remain an evidence gap.
+Output: Both traced consumers are confirmed impacts: each reads `event.total`. Other consumers remain possible impacts and a coverage gap; no uninspected surface is cleared. Evidence is the supplied call graph, not a runtime test. Required checks are old/new event decoding and both consumer paths. Keep the field through a compatible upgrade order, and retain an old-contract rollback path until consumer migration is verified.

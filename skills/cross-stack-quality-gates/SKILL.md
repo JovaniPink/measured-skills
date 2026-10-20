@@ -51,6 +51,13 @@ Read [the original acceptance example](references/continuity-example.md) when ch
 
 Synthetic example; not an observed client result.
 
-Input: Unit tests pass, but the required integration service is unavailable.
+Input: At synthetic revision B, the supplied unit-test receipt records 12 passes. The repository requires an integration check, but its service is unavailable.
 
-Output: INCOMPLETE: unit tests passed; the required integration check did not run. Preserve that gap before making a completion claim.
+Output: INCOMPLETE at B.
+
+| Component | Command | Result | Evidence |
+| --- | --- | --- | --- |
+| Unit | `python3 -m unittest discover -s tests/unit` | PASS | Supplied receipt at B: 12 passes |
+| Integration | `python3 -m unittest discover -s tests/integration` | NOT RUN | Required service unavailable |
+
+The integration gate is the first actionable blocker. Its behavior remains unverified; repeat that gate when the service is available. No completion claim is supported yet.

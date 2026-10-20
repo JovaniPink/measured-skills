@@ -6,6 +6,7 @@ concatenation so the boundary scanner does not flag this file.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import shutil
@@ -266,6 +267,11 @@ class ReleaseManifestTests(unittest.TestCase):
         self.assertEqual(SHA, document["source_commit"])
         self.assertEqual(VERSION, document["catalog_version"])
         self.assertGreater(len(document["artifacts"]), 100)
+        cases = 'evals/daily-engineering/cases.json'
+        matches = [a for a in document['artifacts'] if a['path'] == cases]
+        self.assertEqual(1, len(matches), 'the daily suite must be bound by the candidate manifest')
+        self.assertEqual('file', matches[0]['kind'])
+        self.assertEqual(hashlib.sha256((REPO / cases).read_bytes()).hexdigest(), matches[0]['sha256'])
 
 
 class GateCommandTests(unittest.TestCase):

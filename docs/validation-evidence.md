@@ -8,7 +8,17 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 230 regression tests.
+Current test suite: 232 regression tests.
+
+## October 20 follow-up review
+
+The [PR 71 review](audits/pr71-review-2026-10-20.md) records the reviewed head,
+reproductions, findings, and fixes. Native prompt policies are parsed in offline
+tests; artifact-dependent cases now contain synthetic context. Copy and receipt
+failures remove the staging directory created by that export, and symlinked
+skill roots are refused. The release inventory now binds the daily case file.
+The final PR and manifest provide the submitted revision and artifact identity.
+No installed-client or model evaluation has run for these fixes.
 
 ## October 20 refinement checks
 

@@ -20,7 +20,7 @@ for storage, streaming, Spark, and orchestration concerns.
 
 ## Workflow
 
-1. Identify SQL dialect, framework and adapter versions, job definitions, dependency locks, and repository checks. Record which source files and supplied observations were inspected.
+1. Identify SQL dialect, Apache Beam SDK, framework and adapter versions, job definitions, dependency locks, and repository checks. Record which source files and supplied observations were inspected.
 2. Define grain (what one row represents), keys, source authority, derived outputs, permitted writers, schema expectations, and freshness requirements. A copied dataset is not automatically authoritative.
 3. Inspect applicable query plans and job observations already supplied. Distinguish bytes processed, elapsed time, contention, and capacity; do not attribute cost or speed to an untested change.
 4. Trace incremental filters, uniqueness assumptions, late updates, schema evolution, retries, and backfills. Ask whether repeating the same input can duplicate or overwrite results.
@@ -38,13 +38,13 @@ for storage, streaming, Spark, and orchestration concerns.
 
 Lead with the finding or readiness limit. Include the discovered stack and versions,
 reviewed input, affected contract, evidence, and next authorized check. Grade each
-finding as none, note, warning, or error; add its state when reviewing a pinned
-change. Concise output is the default; missing evidence remains visible.
+finding as `none`, `note`, `warning`, or `error`; add `new`, `unchanged`,
+`updated`, or `absent` against the base when reviewing a pinned change. Concise output is the default; missing evidence remains visible.
 
 ## Example
 
 Synthetic example; not an observed client result.
 
-Input: A daily incremental model filters only today's rows, but corrections arrive two days late.
+Input: A supplied dbt model for BigQuery filters only today's rows, but corrections can arrive two days late. Adapter versions, row grain, and key uniqueness evidence are missing; no diff is pinned.
 
-Output: warning: older corrections may be omitted. Define the correction window and key behavior, then test repeated and late input locally. No warehouse query or backfill has run.
+Output: warning: the filter may omit older corrections. Evidence is the supplied filter and reported correction delay; no warehouse observation supports a count of lost rows. The stack is dbt on BigQuery, with adapter versions, grain, and keys unverified. Next define the correction window and key contract, then inspect hooks before selecting local repeated-input and late-input tests. No query, dry run, or backfill has run.

@@ -41,6 +41,6 @@ Return Threat scope, Verified controls, Findings, Evidence gaps, Risk priority, 
 
 Synthetic example; not an observed client result.
 
-Input: The download handler trusts an object ID without checking its tenant.
+Input: The supplied download handler at `api/download.py:24` trusts an object ID without checking tenant ownership. No live attack or access-control test is authorized.
 
-Output: error: object access lacks a tenant authorization check. A valid identifier must not allow one tenant to read another tenant's object.
+Output: error: object access lacks a tenant authorization check at `api/download.py:24`. The supplied handler is the evidence; no equivalent control was verified in the reviewed scope. A valid identifier could expose another tenant's object, so this access boundary blocks acceptance. Recommended verification: an isolated cross-tenant rejection test and a trace of upstream authorization. Upstream controls and live exploitability remain evidence gaps. This is a static handler review, not a penetration-test result.

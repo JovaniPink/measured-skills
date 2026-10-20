@@ -47,6 +47,14 @@ Return a matrix with `Risk`, `Behavior`, `Test layer`, `Fixture`, `Oracle`, `Env
 
 Synthetic example; not an observed client result.
 
-Input: A change alters retry behavior at an external API boundary.
+Input: A change adds retries at an external API boundary. The operation can create an object, and callers can cancel it.
 
-Output: Cover successful retry, exhausted attempts, duplicate effects, and cancellation with controlled responses; add integration evidence where the contract cannot be simulated.
+Output: Use controlled responses to check retry behavior before seeking provider evidence.
+
+| Risk | Behavior | Test layer | Fixture | Oracle | Environment | Failure signal |
+| --- | --- | --- | --- | --- | --- | --- |
+| Lost recovery | Retry succeeds or exhausts | Unit | Failure then success; repeated failure | Expected result or terminal error, bounded attempts | Local fake transport | Wrong result or excess attempts |
+| Duplicate effect | Same operation repeats | Contract | Replayed operation key | One logical creation | Isolated provider test environment | Multiple created objects |
+| Ignored cancellation | Caller cancels during delay | Unit | Controlled clock and cancellation | No later attempt | Local fake transport | Attempt after cancellation |
+
+Provider idempotency remains unverified until a separately authorized integration check. No check has run, and live production behavior is outside this test plan.

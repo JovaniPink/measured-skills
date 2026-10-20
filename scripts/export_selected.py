@@ -54,6 +54,8 @@ def export(output: Path, client: str, selected: list[str]) -> None:
     check_destination(output)
     for skill in selected:
         source = ROOT / "skills" / skill
+        if source.is_symlink() or source.parent.is_symlink():
+            raise ValueError("symlinked skill roots are not permitted in selected exports")
         if not (source / "SKILL.md").is_file():
             raise ValueError("missing canonical skill")
         for item in source.rglob("*"):
@@ -69,23 +71,27 @@ def export(output: Path, client: str, selected: list[str]) -> None:
                         raise ValueError("missing or non-portable selected-skill reference")
     # Resolve the parent, but never follow an output symlink or replace old output.
     output = output.parent.resolve() / output.name
-    output.mkdir(parents=True, exist_ok=False)
-    for skill in sorted(selected):
-        source = ROOT / "skills" / skill
-        target = output / skill
-        if client == "codex":
-            shutil.copytree(source, target)
-        else:
-            _copy_claude_skill(source, target, explicit=False)
-    manifest = {
-        "catalog_version": VERSION,
-        "client": client,
-        "skills": sorted(selected),
-        "files": directory_hashes(output),
-        "installation": "not_installed",
-        "behavior": "not_observed",
-    }
-    (output / "export-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    output.mkdir(parents=False, exist_ok=False)
+    try:
+        for skill in sorted(selected):
+            source = ROOT / "skills" / skill
+            target = output / skill
+            if client == "codex":
+                shutil.copytree(source, target)
+            else:
+                _copy_claude_skill(source, target, explicit=False)
+        manifest = {
+            "catalog_version": VERSION,
+            "client": client,
+            "skills": sorted(selected),
+            "files": directory_hashes(output),
+            "installation": "not_installed",
+            "behavior": "not_observed",
+        }
+        (output / "export-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    except BaseException:
+        shutil.rmtree(output)
+        raise
 
 
 def main() -> int:
