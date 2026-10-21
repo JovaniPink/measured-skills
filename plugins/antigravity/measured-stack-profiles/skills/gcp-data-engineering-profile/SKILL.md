@@ -33,6 +33,22 @@ arrival time, and the configured key from the actual update strategy. Do not
 infer permanent loss, a particular merge operation, or absent recovery paths
 from a filter alone.
 
+## Contract before recommendation
+
+A supplied plan without a partition filter supports a pruning observation, not
+proof that the model is incorrect. Before proposing a window, establish which
+timestamp records correction arrival, what "late" is measured from, how old a
+corrected event may be, and which missed-run/replay paths must remain valid.
+Correction delivery delay does not by itself bound event age. Do not require a
+finite event-time lookback or add a guessed safety margin while that bound is
+unknown; pruning must preserve every correction required by the data contract.
+
+Choose a key or deduplication rule only after grain, version ordering, and update
+strategy are known. If those decisions are missing, recommend obtaining the
+contract instead of prescribing a fix. Use "coverage unverified" for that gap,
+not an unconditional claim that corrections are lost or unreliable. Apply these
+conditions to headings and the final recommendation as well as detailed prose.
+
 ## Boundaries
 
 - Local source inspection does not authorize authentication, querying a warehouse, a cloud dry run, job submission, backfills, data writes, IAM changes, or deployment. Existing explicit authority controls those actions.
@@ -53,4 +69,14 @@ Synthetic example; not an observed client result.
 
 Input: A dbt model for BigQuery filters today's `ingested_at` date. Corrections can arrive two days late. The meaning of `ingested_at`, adapter versions, update strategy, row grain, key uniqueness, and recovery policy are missing; no diff is pinned.
 
-Output: warning: correction handling is unverified. If `ingested_at` records correction arrival, a two-day-old event corrected today may still be selected; if it retains the original ingestion date, it may be excluded. The filter alone does not prove permanent loss. The stack is dbt on BigQuery, with versions, strategy, grain, keys, and recovery unverified. Next establish those contracts and inspect hooks before choosing local checks. No query, dry run, or backfill has run.
+Output: warning: correction handling is unverified. If `ingested_at` records correction arrival, an earlier event corrected today may still be selected; if it retains the original ingestion date, it may be excluded. The filter alone does not prove permanent loss. The stack is dbt on BigQuery, with versions, strategy, grain, keys, and recovery unverified. Next establish those contracts and inspect hooks before choosing local checks. No query, dry run, or backfill has run.
+
+Input: Corrections are delivered within two days of being authored, but may
+update events from any prior date. Would a two-day `event_time` lookback be safe?
+
+Output: No. Delivery delay does not bound the age of the corrected event. A
+correction authored two days ago for a ninety-day-old event can arrive today and
+fall outside that lookback. Establish an accepted event-age bound or a separate
+older-correction path before narrowing the scan. The actual arrival timestamp,
+strategy, and replay contract still determine how the model should change; no
+SQL, deduplication key, or fixed margin is justified by the delay alone.

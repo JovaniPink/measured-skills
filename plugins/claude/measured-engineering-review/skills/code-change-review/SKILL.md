@@ -1,6 +1,6 @@
 ---
 name: code-change-review
-description: "Reviews a supplied PR diff, commit, or code snippet when asked to \"review this PR\", check changes, or find bugs and regressions; covers static review without a checkout and returns findings without editing code."
+description: "Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -15,13 +15,36 @@ metadata:
 
 Review a pinned change and return evidence-bounded findings.
 
+## Routing and evidence
+
+Use this workflow when the requested result is findings about changed code,
+including a self-contained pasted diff without a checkout. An access-control
+change is still a code review; a broader security assessment is a different task.
+Use claim-verification when the question is whether a receipt proves completion.
+An implementation request does not become read-only review merely because code
+is supplied.
+
+Separate the observed change, the contract needed for a failure, and the evidence
+that establishes that contract. If store behavior or equivalent authorization is
+unknown, the defect remains conditional in its heading, conclusion, severity
+explanation, and suggested direction. A qualifier buried in the body does not
+support an unconditional headline or verdict.
+
+Track test existence, execution, and outcome separately:
+
+| Evidence | Supported statement | Still unknown |
+| --- | --- | --- |
+| No test has run | No execution result is available | Whether a test exists and how it would behave |
+| No test was supplied | Coverage was not provided in this review | Existence or execution elsewhere |
+| A proposed regression test | Expected result under named assumptions | Execution and observed result until the test runs |
+
 ## Workflow
 
 1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority when supplied. A pasted diff or snippet is enough for a scoped static review; label unavailable repository context instead of inventing it or requiring access unrelated to the request.
 2. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
 3. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
 4. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
-5. Check whether inspected tests would fail for the defect and whether the proposed behavior is compatible with existing consumers. A test that has not run may still exist; absent test results do not prove absent coverage.
+5. Inspect available coverage and compatibility. A proposed test's expected failure is a prediction under its stated contract, not an observed result. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
 6. Separate findings from questions, optional improvements, and unsupported concerns.
 7. Report validation performed, unavailable evidence, and the remaining review boundary.
 
@@ -33,6 +56,20 @@ Review a pinned change and return evidence-bounded findings.
 - Do not claim the change is safe outside the inspected scope.
 - Keep a demonstrated defect, a conditional risk, and missing evidence distinct. Do not turn an unrun test into a separate missing-test defect without inspecting the relevant coverage.
 - Use claim-verification for whether an old receipt still proves completion at a new revision; use this workflow when the requested result is code findings.
+
+## Status updates and resumed reviews
+
+Carry forward the original goal, pinned scope, evidence actually reviewed,
+findings with their conditions, validation performed, unresolved checks, and next
+authorized step. Change those states only when new evidence supports the change.
+An earlier assistant answer is not new evidence: correct its unsupported claim
+rather than repeating it as fact.
+
+If only "no test has run" was supplied, both a pause update and a resumed review
+must retain unknown test existence and an unobserved outcome. Do not change that
+to "not written", "missing coverage", or "will fail". If equivalent tenant
+scoping remains unknown, retain that condition through the final verdict; an
+equivalent control could establish that the suspected exposure does not occur.
 
 ## Output
 
@@ -47,3 +84,11 @@ Synthetic example; not an observed client result.
 Input: In the supplied A-to-B diff at `api/objects.py:42`, an object lookup loses its tenant predicate and filters only by ID. No access test has run.
 
 Output: error, new, `api/objects.py:42`: the explicit tenant filter is removed. If the lookup has no implicit tenant scope, a caller who knows another tenant's ID could receive that object. Evidence: the supplied diff; the store implementation is unavailable. Restore or demonstrate an equivalent authorization check before acceptance. Validation: static review only; test execution is unobserved and test existence is unknown. Review boundary: the supplied handler diff. Next inspect the store contract and existing cross-tenant coverage; do not report missing tests as a confirmed defect.
+
+Follow-up input: Pause, then resume the same review with no new evidence.
+
+Output: The goal and supplied handler scope are unchanged. Exposure remains
+conditional on the uninspected store and authorization contract. Test existence
+is unknown, no test result is available, and a proposed cross-tenant test has no
+observed outcome. Next inspect the equivalent control and coverage within the
+authorized review scope. No files were changed and no check was run.

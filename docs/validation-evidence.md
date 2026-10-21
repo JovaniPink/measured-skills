@@ -10,6 +10,26 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 263 regression tests.
 
+## October 21 post-retest repair
+
+The [new repair audit](audits/claude-post-retest-repairs-2026-10-21.json) binds
+four changed canonical files to the prior head and the
+[prepared diagnostic plan](audits/claude-routing-contract-retest-plan-2026-10-21.md).
+It separates a review routing hypothesis from loaded-body evidence handling and
+removes premature GCP window/key advice. Four appended synthetic safety cases
+remain unrun; frozen cases, prior observations, and historical approval are
+preserved. Two complete distribution/archive builds agree on all 87 archive
+checksums. The submitted manifest and draft PR record final source identity and
+required-check results; format and repository checks cannot establish behavior.
+No new model run occurred, and the prior failed acceptance remains open.
+
+Both changed canonical skills pass `skills-ref` and the bundled Codex
+skill-format validator. The two affected packs pass Claude Code 2.1.306 native
+strict validation and Antigravity 1.4.4 strict validation with no findings. No
+update command was issued. These format receipts do not transfer the earlier
+versions' account, billing, context, or model observations. Standalone Codex
+plugin validation remains unavailable.
+
 ## October 21 bounded Claude retest
 
 The [retest observation](audits/claude-retest-observations-2026-10-21.json)

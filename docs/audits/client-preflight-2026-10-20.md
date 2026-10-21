@@ -1,5 +1,10 @@
 # Client preflight after originality acceptance
 
+The [post-retest repairs](claude-post-retest-repairs-2026-10-21.json) and
+[next diagnostic plan](claude-routing-contract-retest-plan-2026-10-21.md) are the
+current proposal. No further case has run. A previous billing/isolation receipt
+does not clear the next run; both earlier Claude allowances remain consumed.
+
 For the subsequent October 21 source repairs and unresolved prerequisites, see
 the [native-controls investigation](client-controls-2026-10-21.md) and
 [prepared retest plan](claude-retest-plan-2026-10-21.md). The later authorized

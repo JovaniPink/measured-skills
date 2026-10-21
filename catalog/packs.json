@@ -91,11 +91,11 @@
         "performance-scalability-diagnosis",
         "test-quality-review"
       ],
-      "description_characters": 1981,
+      "description_characters": 2020,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3204,
-        "claude": 3215
+        "codex": 3243,
+        "claude": 3254
       }
     },
     {
