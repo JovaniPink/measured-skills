@@ -62,7 +62,7 @@
     },
     "docs/audits/client-controls-2026-10-21.md": {
       "before_sha256": null,
-      "after_sha256": "fec335ba27914172af3f03878ac5ec7d7756c1c229e297e6e5705f7b79910616",
+      "after_sha256": "4c547d729e83d2778dd81d4eaab03bf72541cca76719a54d38e88693c446702a",
       "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The retest plan remains prepared and unrun."
     },
     "docs/audits/client-preflight-2026-10-20.md": {

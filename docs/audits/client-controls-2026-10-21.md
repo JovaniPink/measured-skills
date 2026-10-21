@@ -4,6 +4,15 @@ No new model case ran. The [Claude retest plan](claude-retest-plan-2026-10-21.md
 was prepared before the [source repairs](claude-source-repairs-2026-10-21.json).
 The earlier pilot results and frozen inputs are preserved.
 
+## Claude Code version difference
+
+The read-only version command now reports 2.1.305. The historical pilot ran
+2.1.281; no update command was issued by this work. All eleven generated Claude
+packs and the temporary twelve-skill wrapper pass the current native strict
+format validator. This does not verify the new binary's billing route, effective
+context, or behavior. Those checks must be repeated before any retest, and a
+result on 2.1.305 cannot isolate the effect of source edits from client changes.
+
 ## Codex CLI 0.161.0
 
 A fresh native app-server inspection used only initialization, skill listing,
