@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-agent-platforms"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
@@ -76,3 +76,7 @@ Synthetic example; not an observed client result.
 Input: An answer cites a document that does not support its numerical claim.
 
 Output: warning: retrieval succeeded but grounding failed. Remove or qualify the unsupported claim and trace whether a supporting source exists.
+
+## Vector-risk source
+
+The publisher-linked [official vector-risk data](https://genai.owasp.org/wp-json/wp/v2/llmrisk/254) identifies OWASP LLM08:2025 and the same canonical article. Use it as risk guidance alongside the reviewed system's concrete authorization and retrieval evidence; it does not establish that controls or isolation were observed.

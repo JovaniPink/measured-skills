@@ -21,3 +21,5 @@ Current Codex documentation also describes project or personal custom-agent file
 ## Claude
 
 Claude Code can expose subagents, and some versions can expose experimental agent teams with different coordination behavior. Consult the current [Claude subagent documentation](https://code.claude.com/docs/en/sub-agents) and [Claude agent team documentation](https://code.claude.com/docs/en/agent-teams). Record unsupported behavior as unsupported rather than inferring parity.
+
+Content binding: [official subagent Markdown](https://learn.chatgpt.com/docs/agent-configuration/subagents.md). Read exact installed-version and managed-policy evidence before selecting a supported role or capability. This documentation does not authorize delegation or override inherited permissions.

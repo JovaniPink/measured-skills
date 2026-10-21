@@ -91,11 +91,11 @@
         "performance-scalability-diagnosis",
         "test-quality-review"
       ],
-      "description_characters": 1939,
+      "description_characters": 2020,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3162,
-        "claude": 3173
+        "codex": 3243,
+        "claude": 3254
       }
     },
     {
@@ -161,11 +161,11 @@
         "source-grounded-research",
         "systematic-diagnosis"
       ],
-      "description_characters": 2101,
+      "description_characters": 2144,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3249,
-        "claude": 3261
+        "codex": 3292,
+        "claude": 3304
       }
     },
     {
@@ -256,7 +256,7 @@
         "claim-verification",
         "acceptance-evidence-ledger"
       ],
-      "description_characters": 328,
+      "description_characters": 371,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -291,7 +291,7 @@
         "systematic-diagnosis",
         "claim-verification"
       ],
-      "description_characters": 354,
+      "description_characters": 397,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },

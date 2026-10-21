@@ -143,7 +143,7 @@ Read the [security policy](SECURITY.md) and the [security model](docs/security-m
 
 ## License and origin
 
-This is an independent work under the [MIT license](LICENSE). It does not copy or redistribute anyone else's skill text. The skills are written from the author's own practice and from primary sources, such as standards and official platform documentation.
+The repository offers its owned contributions under the [MIT license](LICENSE). [Provenance records](provenance/catalog.json) distinguish original declarations from four owned adaptations. The [proposed originality disposition](docs/audits/originality-approval-2026-10-20.md) records prior exposure, AI assistance, review limits, and the pending maintainer decision; it does not certify universal originality or absence of outside rights.
 
 Private product facts stay out of this catalog. [Private overlays](docs/private-overlays.md) explains how they are kept apart.
 

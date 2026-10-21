@@ -10,7 +10,7 @@ import shutil
 from pathlib import Path
 
 from build_distributions import _copy_claude_skill
-from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, directory_hashes
+from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, directory_hashes, license_notice
 
 
 def check_destination(output: Path) -> None:
@@ -78,6 +78,7 @@ def export(output: Path, client: str, selected: list[str]) -> None:
             target = output / skill
             if client == "codex":
                 shutil.copytree(source, target)
+                (target / "LICENSE").write_bytes(license_notice(ROOT))
             else:
                 _copy_claude_skill(source, target, explicit=False)
         manifest = {

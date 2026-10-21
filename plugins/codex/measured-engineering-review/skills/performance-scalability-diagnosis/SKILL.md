@@ -7,13 +7,13 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
 # Performance and Scalability Diagnosis
 
-Use current primary guidance as a review baseline, then report only what the available evidence supports. Primary authority: [official reference](https://sre.google/sre-book/monitoring-distributed-systems/).
+Use [Google SRE monitoring guidance](https://sre.google/sre-book/monitoring-distributed-systems/) for operational signals. The diagnosis and capacity workflow below is this catalog's review contract; neither the reference nor a signal alone proves a cause or scaling limit.
 
 ## Workflow
 

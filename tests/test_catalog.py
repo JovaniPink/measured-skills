@@ -700,17 +700,16 @@ class CatalogTests(unittest.TestCase):
             "https://agentskills.io/specification",
             "https://developer.hashicorp.com/terraform/language",
             "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
-            "https://docs.python.org/3/",
-            "https://docs.python.org/3/library/unittest.html",
+            "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+            "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
             "https://git-scm.com/docs/git-merge",
             "https://git-scm.com/docs/git-worktree",
-            "https://learn.chatgpt.com/docs/agent-configuration/subagents",
-            "https://genai.owasp.org/initiatives/agentic-security-initiative/",
-            "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+            "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+            "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+            "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
             "https://opentelemetry.io/docs/concepts/signals/",
             "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
             "https://antigravity.google/docs/skills/",
-            "https://www.antigravity.google/docs/cli/plugins/",
             "https://agent-plugins.org/specification",
             "https://antigravity.google/docs/cli/headless/",
             "https://ai.google.dev/gemini-api/docs/agents",
@@ -725,7 +724,7 @@ class CatalogTests(unittest.TestCase):
             "https://learn.microsoft.com/en-us/dotnet/",
             "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
             "https://www.drupal.org/docs/develop",
-            "https://www.swift.org/documentation/",
+            "https://docs.swift.org/latest/data/documentation.json",
             "https://www.typescriptlang.org/docs/",
             "https://docs.swift.org/latest/documentation/",
             "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
@@ -734,14 +733,14 @@ class CatalogTests(unittest.TestCase):
             "https://adk-labs.github.io/adk-docs/safety/",
             "https://adk-labs.github.io/adk-docs/sessions/",
             "https://docs.spring.io/spring-boot/",
-            "https://owasp.org/www-project-application-security-verification-standard/",
+            "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
             "https://slsa.dev/spec/v1.2/provenance",
             "https://www.postgresql.org/docs/current/",
             "https://www.antigravity.google/docs/plugins?tab=cli",
         })
         expected.update({
-            "https://nextjs.org/docs/app/guides/ai-agents",
-            "https://nextjs.org/docs/app/guides/authentication",
+            "https://nextjs.org/docs/app/guides/ai-agents.md",
+            "https://nextjs.org/docs/app/guides/authentication.md",
             "https://react.dev/learn/you-might-not-need-an-effect",
         })
         expected.update({
@@ -1150,7 +1149,7 @@ class CatalogTests(unittest.TestCase):
             metadata = read_skill_metadata(root)
             self.assertEqual("measured-agent-platforms", metadata["plugin"])
             self.assertEqual("implicit", metadata["invocation"])
-            self.assertEqual("clean-room", metadata["provenance"])
+            self.assertEqual("original", metadata["provenance"])
             self.assertEqual("read-only", metadata["risk_class"])
 
         security = (

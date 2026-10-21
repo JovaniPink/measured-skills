@@ -1,0 +1,251 @@
+{
+  "source_revision": "b23a058110bcd24c15cf79a68febfffc197c5d02",
+  "reviewed_on": "2026-10-20",
+  "planned_samples_per_source": 3,
+  "scope": "Current primary content and instruction consequences. No broad normalization, clock reset, access-control bypass, or model execution. Three sample responses were planned before collection; historic volatility remains evidence.",
+  "active_sources": 62,
+  "decisions": [
+    {
+      "old_url": "https://developer.hashicorp.com/terraform/language",
+      "current_url": "https://developer.hashicorp.com/terraform/language",
+      "decision": "repin_reviewed_current_content",
+      "previous_marker": "etag:\"c2a70c088e5fd3b33fc5fccbc6d7af17\"",
+      "sampled_markers": [
+        "etag:\"75533pg6gn4r3l\"",
+        "etag:\"75533pg6gn4r3l\"",
+        "etag:\"75533pg6gn4r3l\""
+      ],
+      "body_sha256_samples": [
+        "b493e580dc2d681f83285c7f890985063c165025a210f2a36d0cbaa96ee9f75d",
+        "b493e580dc2d681f83285c7f890985063c165025a210f2a36d0cbaa96ee9f75d",
+        "b493e580dc2d681f83285c7f890985063c165025a210f2a36d0cbaa96ee9f75d"
+      ],
+      "finding": "Current official overview describes declarative resources, dependency relationships, the installed-version language reference, and distinct CLI/provider/backend concerns. The existing profile retains project version discovery and prohibits apply authority. Historical response bodies do not support a complete upstream semantic diff; current-content review requires no workflow change."
+    },
+    {
+      "old_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "current_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "decision": "replace_volatile_page_with_official_data",
+      "previous_marker": "normalized-content-sha256:87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+      "body_sha256_samples": [
+        "3292c8c5ca44a5bbf606682cbd9491bd2fefcba3e4943add3f86d1e569d31ec9",
+        "33c932b6cd0a56856d1a99aa84b11777508153fb6b9710ad23aec3ecbecc212d",
+        "33c932b6cd0a56856d1a99aa84b11777508153fb6b9710ad23aec3ecbecc212d"
+      ],
+      "finding": "The public HTML links this official JSON alternate for page 50812. Its identity, canonical link, and substantive initiative content were checked, and three planned full-JSON samples agree. HTML differences include speech-widget/session and cache-generation data. The data binding preserves the actual published content without adding normalization or bypassing access controls. The index describes research scope and linked resources; it is not proof of control effectiveness.",
+      "initial_html_sampled_markers": [
+        "normalized-content-sha256:3292c8c5ca44a5bbf606682cbd9491bd2fefcba3e4943add3f86d1e569d31ec9",
+        "normalized-content-sha256:33c932b6cd0a56856d1a99aa84b11777508153fb6b9710ad23aec3ecbecc212d",
+        "normalized-content-sha256:33c932b6cd0a56856d1a99aa84b11777508153fb6b9710ad23aec3ecbecc212d"
+      ],
+      "sampled_markers": [
+        "content-sha256:6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12",
+        "content-sha256:6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12",
+        "content-sha256:6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12"
+      ],
+      "document_id": 50812,
+      "canonical_link": "https://genai.owasp.org/initiatives/agentic-security-initiative/"
+    },
+    {
+      "old_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "current_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+      "decision": "replace_volatile_html_with_official_content",
+      "previous_marker": "normalized-content-sha256:d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5",
+      "finding": "Current vector guidance retains access control, tenant isolation, retrieval poisoning, provenance, and validation concerns. Three planned samples agree under the unchanged trailing-whitespace rule. Earlier volatility and HTTP 403 observations remain retained; availability can still block a later check. A later closeout changed the HTML fingerprint again. The official JSON alternate or documented Markdown representation was therefore inspected, with matching identity/title and three agreeing full-response samples. Full content bytes replace the HTML binding; no content normalization or sampling-until-pass is used.",
+      "initial_html_sampled_markers": [
+        "normalized-content-sha256:296e9799d5740063725b37da0d9ebfc58d852433852b422a8186015f03b09dae",
+        "normalized-content-sha256:296e9799d5740063725b37da0d9ebfc58d852433852b422a8186015f03b09dae",
+        "normalized-content-sha256:296e9799d5740063725b37da0d9ebfc58d852433852b422a8186015f03b09dae"
+      ],
+      "initial_html_body_sha256_samples": [
+        "8abb733c1ab618538ca9618578cd30d0439de29790752002881fdb64c97df37b",
+        "8abb733c1ab618538ca9618578cd30d0439de29790752002881fdb64c97df37b",
+        "8abb733c1ab618538ca9618578cd30d0439de29790752002881fdb64c97df37b"
+      ],
+      "sampled_markers": [
+        "content-sha256:46595a553b00caf99e46272992834f03b58b564cfaa5cbfacba42ee35ce3a303",
+        "content-sha256:46595a553b00caf99e46272992834f03b58b564cfaa5cbfacba42ee35ce3a303",
+        "content-sha256:46595a553b00caf99e46272992834f03b58b564cfaa5cbfacba42ee35ce3a303"
+      ]
+    },
+    {
+      "old_url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "current_url": "https://nextjs.org/docs/app/guides/ai-agents.md",
+      "decision": "replace_volatile_html_with_official_content",
+      "previous_marker": "content-sha256:6ed2cc7386976aa1bb5ebbc7c5979f47b3b156a42d52226d5b1ec93c59a16ece",
+      "finding": "Current guide distinguishes bundled documentation by installed framework version, managed project blocks, optional feedback, upgrades, and runtime tools. The reference now handles missing bundled documentation and explicitly preserves user authorization for feedback and external actions; provider prose grants no action authority. A later closeout changed the HTML fingerprint again. The official JSON alternate or documented Markdown representation was therefore inspected, with matching identity/title and three agreeing full-response samples. Full content bytes replace the HTML binding; no content normalization or sampling-until-pass is used.",
+      "initial_html_sampled_markers": [
+        "content-sha256:7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724",
+        "content-sha256:7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724",
+        "content-sha256:7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724"
+      ],
+      "initial_html_body_sha256_samples": [
+        "7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724",
+        "7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724",
+        "7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724"
+      ],
+      "sampled_markers": [
+        "content-sha256:b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22",
+        "content-sha256:b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22",
+        "content-sha256:b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22"
+      ]
+    },
+    {
+      "old_url": "https://nextjs.org/docs/app/guides/authentication",
+      "current_url": "https://nextjs.org/docs/app/guides/authentication.md",
+      "decision": "replace_volatile_html_with_official_content",
+      "previous_marker": "content-sha256:1d742fdc2b6822724bb7875bf46722bc4e4a66bd16aa418a60811662c5de2d26",
+      "finding": "Current auth guidance retains secure checks at the data-access boundary, distinguishes optimistic routing checks, and warns that client/layout hiding does not protect nested routes or mutations. Existing read/write-owner authorization and cache tracing remain consistent; no runtime parity is inferred. A later closeout changed the HTML fingerprint again. The official JSON alternate or documented Markdown representation was therefore inspected, with matching identity/title and three agreeing full-response samples. Full content bytes replace the HTML binding; no content normalization or sampling-until-pass is used.",
+      "initial_html_sampled_markers": [
+        "content-sha256:0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b",
+        "content-sha256:0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b",
+        "content-sha256:0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b"
+      ],
+      "initial_html_body_sha256_samples": [
+        "0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b",
+        "0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b",
+        "0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b"
+      ],
+      "sampled_markers": [
+        "content-sha256:96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c",
+        "content-sha256:96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c",
+        "content-sha256:96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c"
+      ]
+    },
+    {
+      "old_url": "https://www.swift.org/swift-evolution/",
+      "current_url": "https://www.swift.org/swift-evolution/",
+      "decision": "repin_reviewed_current_content",
+      "previous_marker": "content-sha256:9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac",
+      "sampled_markers": [
+        "content-sha256:efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+        "content-sha256:efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+        "content-sha256:efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022"
+      ],
+      "body_sha256_samples": [
+        "efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+        "efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+        "efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022"
+      ],
+      "finding": "Current official evolution page distinguishes proposal and implementation status. Existing profiles require installed toolchain/version discovery and do not equate an accepted proposal with available compiler behavior. No execution or compiler upgrade is authorized."
+    },
+    {
+      "old_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "current_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
+      "decision": "replace_project_page_with_versioned_standard_document",
+      "previous_marker": "content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+      "sampled_markers": [
+        "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+        "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+        "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35"
+      ],
+      "version": "5.0.0",
+      "finding": "Official project documentation identifies ASVS 5.0.0 and its JSON requirement data. The full substantive JSON document supplies version-qualified requirements and 17 chapters, with three matching planned samples. The moving source branch remains content-hashed; no immutable-release or latest-version guarantee is asserted. This replaces the volatile project page binding without normalizing content or resetting the review clock."
+    },
+    {
+      "old_url": "https://docs.python.org/3/",
+      "current_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+      "decision": "replace_generated_html_with_versioned_document_source",
+      "previous_marker": "etag:\"6ad77096-4ca9\"",
+      "finding": "Additional drift found by the intermediate closeout. Current official documentation identifies Python 3.15.0; the unittest guide retains fixtures, discovery, assertions, cleanup, and version-specific CLI behavior. Existing skills require installed interpreter/project gate discovery, so no interpreter upgrade or change to repository commands follows. Three planned body and strong-ETag samples agree; the earlier observation is retained. Subsequent generated HTML changed both ETag and full bytes. Public source-text candidates were unavailable, so the official versioned documentation tree was inspected. The documentation contents index and unittest source on the 3.15 branch each had three matching planned responses. These are mutable branch snapshots, not immutable release or latest-version guarantees. The contents index does not bind all transitive documentation; exact project-version guides remain required.",
+      "initial_html_sampled_markers": [
+        "etag:\"6ad7a282-4ca9\"",
+        "etag:\"6ad7a282-4ca9\"",
+        "etag:\"6ad7a282-4ca9\""
+      ],
+      "initial_html_body_sha256_samples": [
+        "6d78ba2867c661638ff0ad36591145f89f154ef8402d37e82b913c36201bed93",
+        "6d78ba2867c661638ff0ad36591145f89f154ef8402d37e82b913c36201bed93",
+        "6d78ba2867c661638ff0ad36591145f89f154ef8402d37e82b913c36201bed93"
+      ],
+      "later_html_comparison": {
+        "url": "https://docs.python.org/3/",
+        "etag": "\"6ad7a605-4ca9\"",
+        "sha256": "7a3d556a92547f46a64951ba70a606a967af4013d6bd1c99b28d2cc47f7426ed",
+        "matches_three_prior_bodies": false
+      },
+      "sampled_markers": [
+        "content-sha256:6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc",
+        "content-sha256:6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc",
+        "content-sha256:6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc"
+      ]
+    },
+    {
+      "old_url": "https://docs.python.org/3/library/unittest.html",
+      "current_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+      "decision": "replace_generated_html_with_versioned_document_source",
+      "previous_marker": "etag:\"6ad77097-5243a\"",
+      "finding": "Additional drift found by the intermediate closeout. Current official documentation identifies Python 3.15.0; the unittest guide retains fixtures, discovery, assertions, cleanup, and version-specific CLI behavior. Existing skills require installed interpreter/project gate discovery, so no interpreter upgrade or change to repository commands follows. Three planned body and strong-ETag samples agree; the earlier observation is retained. Subsequent generated HTML changed both ETag and full bytes. Public source-text candidates were unavailable, so the official versioned documentation tree was inspected. The documentation contents index and unittest source on the 3.15 branch each had three matching planned responses. These are mutable branch snapshots, not immutable release or latest-version guarantees. The contents index does not bind all transitive documentation; exact project-version guides remain required.",
+      "initial_html_sampled_markers": [
+        "etag:\"6ad7a283-5243a\"",
+        "etag:\"6ad7a283-5243a\"",
+        "etag:\"6ad7a283-5243a\""
+      ],
+      "initial_html_body_sha256_samples": [
+        "7127eb0e75fc5d30f86546e911a0fd4da64f77cf5f3aee4bf944c71407f28fe2",
+        "7127eb0e75fc5d30f86546e911a0fd4da64f77cf5f3aee4bf944c71407f28fe2",
+        "7127eb0e75fc5d30f86546e911a0fd4da64f77cf5f3aee4bf944c71407f28fe2"
+      ],
+      "later_html_comparison": {
+        "url": "https://docs.python.org/3/library/unittest.html",
+        "etag": "\"6ad7a605-5243a\"",
+        "sha256": "704eddf288b1c2ca9fb0578f75926befabda8514e96e7140e0380dc8b5875fd9",
+        "matches_three_prior_bodies": false
+      },
+      "sampled_markers": [
+        "content-sha256:3bdf26061ab3655763b6f5a7d3487d81ad103400cca54febf84f08c52032b849",
+        "content-sha256:3bdf26061ab3655763b6f5a7d3487d81ad103400cca54febf84f08c52032b849",
+        "content-sha256:3bdf26061ab3655763b6f5a7d3487d81ad103400cca54febf84f08c52032b849"
+      ]
+    },
+    {
+      "old_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "current_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "decision": "repin_reviewed_current_content",
+      "previous_marker": "etag:\"6ad5eacf-3d838\"",
+      "sampled_markers": [
+        "etag:\"6ad5eace-3d838\"",
+        "etag:\"6ad5eace-3d838\"",
+        "etag:\"6ad5eace-3d838\""
+      ],
+      "body_sha256_samples": [
+        "b976820deef9b80664e97aed57d1f134a0506f29c181abcd1cb43447585d6dd7",
+        "b976820deef9b80664e97aed57d1f134a0506f29c181abcd1cb43447585d6dd7",
+        "b976820deef9b80664e97aed57d1f134a0506f29c181abcd1cb43447585d6dd7"
+      ],
+      "finding": "Current official ADK safety guidance keeps developer-controlled tool context, input validation, callbacks, shared guardrail plugins, and sandboxed code execution distinct from model instructions. Conceptual examples are not proof of configured enforcement. Existing exact-version discovery and tool/action-boundary guidance remain consistent; no provider operation or judge plugin was run."
+    },
+    {
+      "old_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "current_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+      "decision": "replace_rendered_page_with_documented_markdown",
+      "previous_marker": "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+      "sampled_markers": [
+        "content-sha256:e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f",
+        "content-sha256:e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f",
+        "content-sha256:e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f"
+      ],
+      "finding": "The official page explicitly documents its Markdown representation. Current content retains bounded custom-agent definitions, inherited permissions/provider/MCP configuration, managed requirements, and version-specific capability discovery. Three planned full Markdown samples agree. Existing explicit delegation and host permission boundaries remain; no agent was spawned or provider/configuration changed."
+    }
+  ],
+  "remaining_review_holds": [],
+  "intermediate_receipt": "source-hold-followup-intermediate-2026-10-20.json",
+  "second_closeout_receipt": "source-hold-followup-second-closeout-2026-10-20.json",
+  "third_closeout_receipt": "source-hold-followup-third-closeout-2026-10-20.json",
+  "unavailable_alternatives": [
+    {
+      "kind": "published Sphinx text candidates",
+      "result": "HTTP 404",
+      "planned_samples_each": 3
+    },
+    {
+      "kind": "versioned source index filename candidate",
+      "result": "HTTP 404",
+      "planned_samples": 3
+    }
+  ],
+  "fourth_closeout_receipt": "source-hold-followup-fourth-closeout-2026-10-20.json",
+  "checkpoint_receipt": "source-hold-followup-checkpoint-2026-10-20.json",
+  "reviewed_pin_inventory_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
+  "checkpoint_result": "pass"
+}

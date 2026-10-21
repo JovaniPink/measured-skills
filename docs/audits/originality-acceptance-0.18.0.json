@@ -1,0 +1,122 @@
+{
+  "decision_id": "originality-018-owned-inventory-20261020",
+  "status": "accepted",
+  "accepted_by": "JovaniPink",
+  "accepted_on": "2026-10-20",
+  "approval_evidence": {
+    "authority": "Direct explicit instruction from the repository maintainer in this repository task",
+    "statement": "Approve originality-018-owned-inventory-20261020 for 36a4e56 exactly as written, including the gate change. Record my acceptance, rerun checks, and update both drafts. Don't change billing, run paid evaluations, merge, or release.",
+    "statement_sha256": "1486e0ee42044adc0e8e21c5d97ccaca119c0ebdeacf892e300aac954e2a4f49",
+    "recorded_by": "Codex; records the maintainer decision, not an independent reviewer acceptance",
+    "statement_representation": "ASCII transcription of the direct approval: the curly apostrophe is normalized to a straight apostrophe to follow repository editorial rules. Decision identifier, revision, approval, and scope are unchanged."
+  },
+  "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
+  "accepted_source_commit": "904a0990f3699f33990e8c659151fdabefd43214",
+  "accepted_manifest_commit": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
+  "accepted_manifest": {
+    "path": "releases/0.18.0/manifest.json",
+    "sha256": "0b1e803101fbe84bf8d04173975461b7e0513b243438dc1afda1b4ed1b5772f5",
+    "artifact_count": 138
+  },
+  "proposal": {
+    "path": "docs/audits/originality-approval-2026-10-20.json",
+    "revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
+    "sha256": "2c121d09416ebb253e83c564a7fc3ba1a7a0a952792a5739eb4c6a5296730520",
+    "companion_path": "docs/audits/originality-approval-2026-10-20.md",
+    "companion_sha256": "a9b7d51ecd40b89fe1a020216e88ea2042556ae4da544f72ae7e19558bccc7b2"
+  },
+  "reviewed_input_revision": "64682fc047afffa3518ec97a03e5d85f09f1a2a9",
+  "input_inventory_sha256": "3dfe1db69b0cd4a0ffc7aa7041bb5dc6f01b74a1f62e3ac49db3d525d44251fe",
+  "corrected_payload_sha256": "2f2e5fdf5405d423018e99f3ff81369107a1fbebc38b909e33038c516312c448",
+  "decision_text": "I accept the bounded owned-history, expression-review, and notice-retention evidence in originality-018-owned-inventory-20261020 for the exact submitted candidate, corrected payload hash, source commit, manifest commit, and proposal hash recorded with my decision. I accept its disclosed full inventory accounting and targeted manual/static review; I do not treat that work as a line-by-line independent outside comparison.\n\nFor this 0.18.0 candidate only, I adopt that defined review plus my maintainer acceptance as the originality completion contract in place of the historical undefined originality-corpus gate and unspecified further independent-review requirement. I do not require an additional independent human/counsel review or outside-corpus comparison for this scoped decision. Those checks remain unperformed, not passing. This is an explicit policy choice accepting the recorded uncertainty, not a claim that independent legal clearance occurred.\n\nI retain the four supported owned adaptations, 83 original declarations after exposure, model-assistance limits, missing literal-write receipts, and unresolved passage-level human contribution. The repository offers only rights its contributors can grant under its retained MIT notices; this decision does not establish exclusive copyrightability, universal non-infringement, lack of prior exposure, trademark clearance, or a primary publisher's blanket prose-reuse permission.\n\nI accept the repaired notices in the Antigravity preview and fictional example, the shared SVG lineage and generated-copy evidence, and the distinction between referenced CI tools and bundled code. I do not authorize new third-party implementation imports, private-to-public promotion, or redistribution under an unsupported license. Credible conflicting expression or license evidence reopens the affected gate before further promotion.\n\nThis approval changes only the named candidate's originality disposition. It does not approve billing changes, paid evaluations, client installation or qualification, merge, tag, publication, release, repository settings, or promotion. Fail-closed freshness, safety, provenance, private boundaries, independent behavioral case review, and receiving-client requirements remain. Future payload changes need a recorded delta review.",
+  "decision_text_sha256": "4ad69e25924547f7ef8d5734f0b41aeb2507e5b3a09400d9d99b575267785bd6",
+  "originality_hold": "closed_for_accepted_scope",
+  "gate_change": {
+    "status": "accepted_for_this_candidate_only",
+    "replaces": "The undefined historical originality-corpus gate and unspecified additional independent-review requirement for this exact 0.18.0 candidate only.",
+    "adopted_contract": "Bounded owned-source and expression assessment, complete payload inventory, accurate declarations, notice retention, explicit residual-risk acceptance, and re-review on changes or credible conflicts.",
+    "additional_independent_human_or_counsel_review": "not_required_for_this_scoped_decision; not performed",
+    "outside_corpus_comparison": "not_required_for_this_scoped_decision; not performed",
+    "unchanged_requirements": [
+      "Third-party implementation exclusion",
+      "Private-to-public promotion policy",
+      "Safety and authorization boundaries",
+      "Fail-closed source freshness",
+      "Behavioral case review and receiving-client evidence",
+      "Separate merge/publication/release decisions"
+    ]
+  },
+  "retained_evidence_limits": [
+    {
+      "id": "exclusive-human-contribution",
+      "status": "not_established",
+      "proposed_disposition": "Accept this limitation and make no exclusive human-authorship or passage-level copyrightability claim; a registration or exclusive-rights assertion requires a separate assessment."
+    },
+    {
+      "id": "outside-corpus-comparison",
+      "status": "not_performed",
+      "proposed_disposition": "Explicitly do not require an unspecified outside corpus campaign for this candidate; preserve the no-import boundary and reopen for credible conflicts."
+    },
+    {
+      "id": "independent-human-review",
+      "status": "not_observed",
+      "proposed_disposition": "Maintainer must explicitly decide whether this disclosed technical review plus their acceptance satisfies the candidate gate. No human/counsel independence is invented."
+    },
+    {
+      "id": "literal-authoring-gaps",
+      "status": "partially_retained",
+      "proposed_disposition": "Retain the canonical packet distinctions, including seventeen skills without a located literal creation event and the Swift profile partial creation-step trace. Do not manufacture receipts or infer no exposure."
+    },
+    {
+      "id": "source-and-client-qualification",
+      "status": "separate_gate",
+      "proposed_disposition": "Do not waive online freshness, independent behavioral case review, installed-client observations, billing prerequisites, or release acceptance."
+    }
+  ],
+  "scope_and_exceptions": [
+    "Only the exact approved 0.18.0 candidate and corrected payload are accepted. Approval does not certify universal originality, exclusive human authorship, trademark clearance, or independent legal clearance.",
+    "The proposal and earlier audit records retain their original proposed/pending status as historical evidence. This separate decision is the authority for the later maintainer acceptance.",
+    "This record is an append-only decision envelope already excluded from the approved payload inventory. No canonical skill, tool, fixture, provenance declaration, source pin, or approved payload byte changes when recording this acceptance.",
+    "A subsequent source/manifest commit may bind this decision record while preserving identical artifact bytes and history. It does not expand acceptance to new substantive payload changes.",
+    "Approval does not accept a separate private-kit licensing proposal or grant a license to unrelated dotfiles content."
+  ],
+  "reopen_triggers": [
+    "Any substantive change to the accepted payload requires a recorded scoped delta review.",
+    "Credible conflicting expression or licensing evidence reopens the affected gate before further promotion.",
+    "New third-party implementation imports or private-to-public promotion require their own authorization and review."
+  ],
+  "remaining_gates": [
+    {
+      "gate": "upstream_freshness",
+      "status": "fresh_online_check_required_before_rollout_or_release",
+      "note": "The earlier 62-of-62 checkpoint is dated evidence; the fail-closed policy and source pins are unchanged."
+    },
+    {
+      "gate": "receiving_client_acceptance",
+      "status": "unqualified_for_current_candidate",
+      "note": "Required loading, isolation, billing-route prerequisites, case outcomes, app/CLI differences, and M5 observations remain separate."
+    },
+    {
+      "gate": "behavioral_evidence",
+      "status": "prepared_not_run",
+      "note": "Independent behavioral-case review, model observations, full catalog benefit, and client parity are not established by this acceptance."
+    },
+    {
+      "gate": "release_decision",
+      "status": "not_authorized",
+      "note": "Version 0.18.0 remains a candidate. No merge, tag, publication, promotion, or release is authorized."
+    }
+  ],
+  "excluded_authorizations": [
+    "billing changes",
+    "paid evaluations",
+    "installation",
+    "merge",
+    "tag",
+    "publication",
+    "release",
+    "repository settings",
+    "candidate promotion"
+  ],
+  "verification": "Before recording: exact approved head, source ancestry, proposal bytes, manifest bytes, all approved payload file hashes, and corrected inventory hash were checked. Repository checks are rerun and reported at the final recording head; they do not supply independent legal or receiving-client evidence."
+}

@@ -12,7 +12,7 @@ import shutil
 import subprocess
 from typing import Any
 
-from cataloglib import ROOT, VERSION, read_skill_metadata
+from cataloglib import ROOT, VERSION, read_skill_metadata, license_notice
 from export_selected import check_destination, profile_skills
 
 PROFILE = 'daily-engineering-experimental'
@@ -84,7 +84,8 @@ def validate_suite(document: Any, names: list[str]) -> None:
 
 
 def source_files(source: Path, names: list[str]) -> dict[str, bytes]:
-    paths = ['catalog/profiles.json', 'catalog/revocations.json', SUITE]
+    license_notice(source)
+    paths = ['LICENSE', 'catalog/profiles.json', 'catalog/revocations.json', SUITE]
     revoked = json.loads((source / 'catalog/revocations.json').read_text())['entries']
     for name in names:
         base = source / 'skills' / name
@@ -144,6 +145,10 @@ def export(output: Path, source: Path = ROOT) -> None:
             rendered['codex/' + relative] = payload
             if '/agents/' not in relative:
                 rendered['claude/' + relative] = payload
+    for client in ('codex', 'claude'):
+        rendered[client + '/LICENSE'] = files['LICENSE']
+        for name in names:
+            rendered[client + '/skills/' + name + '/LICENSE'] = files['LICENSE']
     rendered['codex/cases.json'] = encoded(document)
     rendered['claude/.claude-plugin/plugin.json'] = encoded({'name': 'measured-daily-eval', 'version': VERSION, 'author': {'name': 'Measured Studios'}, 'description': 'Temporary offline daily-profile evaluation package; no observed results.'})
     for case in document['cases']:

@@ -7,13 +7,13 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
 # Test Quality Review
 
-Use current primary guidance as a review baseline, then report only what the available evidence supports. Primary authority: [official reference](https://docs.python.org/3/library/unittest.html).
+Use [Python unittest documentation](https://docs.python.org/3/library/unittest.html) for that framework's behavior when applicable. The defect-sensitivity and quality checks below are this catalog's review contract; discover the actual framework and its version before applying framework-specific guidance.
 
 ## Workflow
 

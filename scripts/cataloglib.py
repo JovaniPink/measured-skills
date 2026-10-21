@@ -208,3 +208,14 @@ def directory_hashes(path: Path) -> dict[str, str]:
             relative = item.relative_to(path).as_posix()
             hashes[relative] = hashlib.sha256(item.read_bytes()).hexdigest()
     return hashes
+
+
+def license_notice(root: Path) -> bytes:
+    """Read the owned notice that must travel with standalone distributions."""
+    path = root / "LICENSE"
+    if path.is_symlink() or not path.is_file() or path.stat().st_mode & 0o111:
+        raise ValueError("license notice must be a regular non-executable file")
+    payload = path.read_bytes()
+    if not payload.startswith(b"MIT License\n") or b"Copyright (c)" not in payload:
+        raise ValueError("canonical MIT license notice is missing")
+    return payload

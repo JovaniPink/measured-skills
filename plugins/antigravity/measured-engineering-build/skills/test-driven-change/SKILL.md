@@ -54,3 +54,7 @@ Synthetic example; not an observed client result.
 Input: Change a parser so empty input returns an empty list.
 
 Output: First reproduce the missing behavior with a failing test, implement the smallest fix, and rerun relevant existing cases before refactoring.
+
+## Test framework authority
+
+The reviewed [official unittest documentation source](https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst) is a 3.15-branch snapshot. Discover the repository's actual framework and interpreter first; this reference does not authorize substituting unittest, upgrading tools, or assuming later-version APIs exist locally.

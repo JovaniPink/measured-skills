@@ -4,7 +4,7 @@ The repository root is a marketplace. Its `marketplace.json` points to the
 11 generated Claude plugin packs under `plugins/claude/`. Each pack has its
 own `.claude-plugin/plugin.json`; install the packs you need.
 
-`icon.svg` is the original shared Measured Skills artwork. The distribution
+`icon.svg` is the shared Measured Skills artwork authored in this repository. The distribution
 builder copies it into every Claude pack and sets the pack's `icon` path.
 The mark combines measurement ticks with a rising path: progress needs evidence.
 The `icon` field supports Anthropic's directory listing. Claude Code ignores it
@@ -18,3 +18,5 @@ uses per-pack manifests to preserve generated invocation controls.
 
 The engineering-learning workflow remains a separate pilot. Branding does not
 qualify or publish another catalog skill.
+
+The [asset review and proposed disposition](../docs/audits/originality-approval-2026-10-20.md) records the owned creation commit, retained literal write, full MIT notice, generated-copy checks, and the limits of that evidence.

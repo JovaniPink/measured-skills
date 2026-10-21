@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
@@ -44,3 +44,7 @@ Synthetic example; not an observed client result.
 Input: The supplied download handler at `api/download.py:24` trusts an object ID without checking tenant ownership. No live attack or access-control test is authorized.
 
 Output: error: object access lacks a tenant authorization check at `api/download.py:24`. The supplied handler is the evidence; no equivalent control was verified in the reviewed scope. A valid identifier could expose another tenant's object, so this access boundary blocks acceptance. Recommended verification: an isolated cross-tenant rejection test and a trace of upstream authorization. Upstream controls and live exploitability remain evidence gaps. This is a static handler review, not a penetration-test result.
+
+## Standard authority
+
+The reviewed [official ASVS 5.0.0 requirement data](https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json) supports version-qualified mappings. Confirm the project's standard version before mapping; this reference does not establish the latest standard, complete coverage, or compliance.

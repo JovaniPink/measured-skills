@@ -7,13 +7,13 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
 # Observability Design
 
-Use current primary guidance as a review baseline, then report only what the available evidence supports. Primary authority: [official reference](https://opentelemetry.io/docs/concepts/signals/).
+Use [OpenTelemetry signal concepts](https://opentelemetry.io/docs/concepts/signals/) for telemetry vocabulary. The journey, alert, privacy, and operator checks below are this catalog's design contract; the reference does not certify a complete operational design.
 
 ## Workflow
 

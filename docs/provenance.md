@@ -28,6 +28,14 @@ Use `original` for newly authored primary-source work after external exposure. R
 
 Repository-independence validation rejects external skill-repository links and install identifiers, repository-to-repository capability mappings, source-specific attribution, and non-primary behavior provenance. Links to repositories owned by the `JovaniPink` GitHub account and pinned CI dependency provenance are narrow operational exceptions; CI dependencies do not authorize skill behavior. `provenance/ci-tools.json` records the exact version, source, license, reviewed wheel hash, and use of every direct or transitive Python tool installed by CI.
 
+## Owned adaptation records
+
+`source_url` identifies the format or correctness authority. An owned adaptation also records `owned_origin`, which identifies its implementation lineage separately: a full ancestor commit in this public catalog, the same skill's canonical entrypoint path, the entrypoint SHA-256, and the MIT LICENSE SHA-256 at that commit. `pinned_revision` must equal that owned revision. Current validation requires the Git objects, their ancestry, and both hashes to match. Private origin names and mappings are not required or published.
+
+This is evidence for a declared owned adaptation, not a comprehensive authorship or licensing certificate. It does not authorize third-party skill imports. Do not replace an unsupported clean-room label with an unsupported original label. The [originality disposition](audits/originality-disposition-2026-10-20.md) separates the four corrected owned adaptations from the [40 corrected process declarations](audits/clean-room-declaration-review-2026-10-20.md) and the unaccepted release qualification. Current labels are 83 original and four adapted. The retained write evidence supports the declared method; it does not independently qualify expression or licensing.
+
+The primary-authority URL check has three exact resource exceptions: OWASP's official ASVS 5.0.0 JSON requirement document and CPython's official 3.15-branch documentation contents and unittest sources on their raw-content host. These are primary documents, not external skill implementations. The full response remains content-hashed, and the global review-age limit remains in force. No general repository-host exception is granted. The source branch can change; this binding does not assert an immutable release or the latest standard version.
+
 ## Placement policy
 
 A capability belongs in the public core only when it is reusable across independent contexts, independently sourceable, safe to expose, and testable without private facts. It belongs in a private overlay when correct use depends on a private authority, identity, topology, contract, dataset, customer, or product. It belongs in neither when it is proprietary, unsafe, obsolete, duplicative, unsupported, or lacks demonstrated use.
@@ -35,3 +43,11 @@ A capability belongs in the public core only when it is reusable across independ
 ## Revocation
 
 Remove an item from generated distributions and marketplaces through ordinary reviewed commits when its license, authorship, security behavior, or provenance cannot be supported. Preserve Git history and a migration notice in `deprecated/` when users need a safe replacement path.
+
+## Standalone notice retention and scoped decisions
+
+The root LICENSE is the notice source for generated plugins, individual skills, selected and project exports, offline evaluation exports, and upload archives. Carry its full bytes; `license: MIT` alone does not replace the copyright and permission notice. Receipts bind the notice without certifying rights in every passage. The [initial scoped proposal](audits/scoped-expression-disposition-2026-10-20.md) is preserved as a fourteen-skill checkpoint. The [full canonical follow-up](audits/catalog-expression-disposition-2026-10-20.md) adds the remaining 73 skills and revalidates the earlier fourteen unchanged. All 87 skill inventories are covered; noncanonical assets and outside corpora remain excluded. Its pending maintainer decision is not automatic release or originality acceptance.
+
+## Proposed full inventory disposition
+
+The [exact approval proposal](audits/originality-approval-2026-10-20.md) adds noncanonical assets and openly distinguishes full inventory accounting from targeted expression review. It identifies the additional independent-review and outside-comparison decisions a maintainer would make. Approval is not inferred from preparation, hashes, scans, or passing tests. The Antigravity preview and fictional overlay example retain their complete owned notices; private overlays keep their own licensing rather than inheriting a public grant from the synchronizer.

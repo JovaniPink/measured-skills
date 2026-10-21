@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-skills"
   invocation: "explicit"
-  provenance: "clean-room"
+  provenance: "adapted"
   risk_class: "external-write"
 disable-model-invocation: true
 ---

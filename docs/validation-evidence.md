@@ -8,7 +8,79 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 233 regression tests.
+Current test suite: 263 regression tests.
+
+## October 21 post-retest repair
+
+The [new repair audit](audits/claude-post-retest-repairs-2026-10-21.json) binds
+four changed canonical files to the prior head and the
+[prepared diagnostic plan](audits/claude-routing-contract-retest-plan-2026-10-21.md).
+It separates a review routing hypothesis from loaded-body evidence handling and
+removes premature GCP window/key advice. Four appended synthetic safety cases
+remain unrun; frozen cases, prior observations, and historical approval are
+preserved. Two complete distribution/archive builds agree on all 87 archive
+checksums. The submitted manifest and draft PR record final source identity and
+required-check results; format and repository checks cannot establish behavior.
+No new model run occurred, and the prior failed acceptance remains open.
+
+Both changed canonical skills pass `skills-ref` and the bundled Codex
+skill-format validator. The two affected packs pass Claude Code 2.1.306 native
+strict validation and Antigravity 1.4.4 strict validation with no findings. No
+update command was issued. These format receipts do not transfer the earlier
+versions' account, billing, context, or model observations. Standalone Codex
+plugin validation remains unavailable.
+
+## October 21 bounded Claude retest
+
+The [retest observation](audits/claude-retest-observations-2026-10-21.json)
+records four frozen cases and two continuity follow-ups at source `c8358cb`,
+without retries. Native credits were off before and after, and all 49 staged
+file hashes matched after exit. Claude Code 2.1.305 loaded the twelve staged
+skills plus seventeen native built-ins. This differs from the earlier client
+configuration and is not a source-only comparison.
+
+Review selection failed again. Its proposed-test result was unsupported, and
+both follow-ups asserted an unrun test had not been written. GCP selection and
+reference loading passed; its answer remained partial because an unqualified
+finding and proposed window exceeded the missing data contract. The near-miss
+and stale-receipt cases passed their exact rubrics. The preregistered acceptance
+rule therefore fails. Grading is Codex-assisted, with independent maintainer
+adjudication separate. No billing change, paid evaluation, global installation
+change, merge, or release occurred. No new source repair was tested.
+
+## October 21 source repair
+
+The [repair audit](audits/claude-source-repairs-2026-10-21.json) binds the three
+changed canonical skill sets to their prior bytes and the staged retest plan.
+Historical expression tests reproduced four inventory failures and one owned-origin
+entrypoint failure; the full suite also exposed an earlier scoped-inventory failure.
+Those tests now check the exact accepted ancestor. The
+separate delta inventory continues to enforce every current payload byte. Two
+distribution/archive builds produced identical hashes for all 87 ZIPs. Behavioral
+retest results were unavailable at this source-repair checkpoint. The later
+observation above does not establish activation gains or qualify the profile.
+
+## October 20 bounded client observations
+
+The [six-case Claude CLI record](audits/cli-pilot-observations-2026-10-20.json)
+separates actual selection and reference reads from answer quality. Two expected
+selections were missed, and evidence errors remain. It is not a passing release
+acceptance or a full study. Codex and Antigravity cases remain unrun for their
+recorded prerequisites. No canonical skill or generated distribution changed.
+
+## October 20 release-readiness repairs
+
+See the [readiness record](release-readiness-2026-10-20.md) for source and client holds.
+The new mutation tests first failed in nine subcases, then passed after archive
+content and current manifest inventory validation were repaired. The official
+`skills-ref` 0.1.0 validator at source revision
+`69ef37e9424c0a7ea9dd2293b559e43ec8176379` passed all 87 canonical skills.
+It ran from an isolated temporary environment with its upstream frozen lock:
+click 8.3.1, strictyaml 1.7.3, python-dateutil 2.9.0.post0, and six 1.17.0.
+No global package or installed skill changed for this format check.
+The bundled Codex plugin validator remains unavailable at CLI 0.161.0;
+format validation does not establish client loading or behavior.
+Final source and artifact identity will be recorded by the submitted manifest.
 
 ## October 20 follow-up review
 
@@ -259,3 +331,35 @@ See `client-observations-v0.5.json`. Every supported surface has a terminal `blo
 ## Client evidence boundary
 
 See `manual-smoke-tests.md` and `client-observations-v0.1.json`. Codex CLI and the required manual Claude Code CLI behaviors passed. Codex Desktop, Claude Code Desktop, and Claude.ai invocation remain blocked, and Claude Code's built-in plugin-eval ablation remains blocked by client availability. No validation, CLI result, or package inspection is substituted for those observations.
+
+## PR review follow-up, October 20
+
+Additional failure-first archive mutations reject executable and symlink member flags even when bytes and recomputed archive checksums agree. The official Swift data hostname has a focused allowlist regression that rejects lookalike hosts. Source-decision regressions account for every changed or retired pin while preserving the earlier snapshot and global review date. An owned-history audit binds all 87 entrypoint hashes and verifies unchanged procedural bodies at the four disputed relabel transitions. These checks do not establish independent originality or client behavior.
+
+## Continued source and provenance review, October 20
+
+Failure-first regressions reject missing or altered owned-origin evidence, mismatched pins, unsafe paths, unavailable revisions, and inappropriate classifications. A retained nonancestor commit is also rejected. Four current skills now declare owned adaptation with verified public Git and MIT license hashes. The preserved historical audit remains bound to its original revision.
+
+A separate regression accounts for every new source decision against a frozen baseline, and the exact ASVS document authority exception rejects URL variants. These checks support classification accuracy and deterministic consistency. They do not close the broader originality or installed-client behavior gates.
+
+The continued online source checkpoint matches all 62 active authorities. Eight content bindings use substantive first-party JSON, Markdown, or versioned documentation sources, and three reviewed sources retain their marker kinds. All failed intermediate observations remain linked from the ledger. The primary-authority exceptions are three exact document URLs; raw repository links otherwise retain the owned-source boundary. These checks do not establish independent originality or client parity.
+
+## Retained authoring label corrections, October 20
+
+The [40-skill review](audits/clean-room-declaration-review-2026-10-20.md) binds six owned creation batches and private retained-write identities. New regressions check complete scope against the reviewed baseline, creation and focused-file hashes, metadata-only canonical changes, preserved authority fields, exposure chronology, and explicitly unaccepted qualification. The earlier four-adaptation audit remains a frozen checkpoint. Current declarations are 83 original and four adapted; those counts do not establish independent expression, licensing clearance, or release acceptance.
+
+## Scoped expression review and notice retention, October 20
+
+The [decision packet](audits/scoped-expression-disposition-2026-10-20.md) binds fourteen skills and forty canonical files at its reviewed source. A regression checks the inventory hash, exact Git bytes, the 73 excluded skills, and pending acceptance. Failure-first notice checks demonstrated omission in generated packs and independent exports, and coordinated notice loss in generated Claude source plus a rehashed ZIP. Generators and package validation now preserve the root LICENSE across distributions, exports, and project projections. Offline evaluation receipts include the committed notice, with no client execution. These checks establish notice retention, not universal originality or legally sufficient human contribution.
+
+## Full canonical expression follow-up, October 20
+
+The [full packet](audits/catalog-expression-disposition-2026-10-20.md) adds the remaining 73 skills and revalidates the earlier fourteen unchanged. Three regressions bind complete input/output inventories, owned creation/license objects, exact provenance corrections, historical receipts, and pending acceptance. The forty-label regression is bound to its historical correction commit; current expression changes are checked by the new delta inventory instead of being mistaken for changes to that old audit. The initial full run exposed that stale historical comparison and the suite-count receipt, as well as expected pre-manifest drift. Final passing results must be read with the submitted source and manifest revision.
+
+Both official format validators accepted all 87 canonical skills. Eleven Claude packs passed strict native validation. Two generations produced identical archive checksums; all 87 ZIPs were compared with the prior checkpoint, and the six changed archives modified only their corresponding entrypoint. Notices and all other members were preserved. Public-boundary and repository-independence scans passed; their results are hygiene checks, not acceptance of the proposed originality disposition or installed-client behavior. No model evaluation ran.
+
+## Noncanonical assets and proposed approval, October 20
+
+The [approval packet](audits/originality-approval-2026-10-20.md) binds the complete input inventory and corrected payload while preserving earlier canonical and historical packets. New regressions account for the full scope, dependency/artwork receipts, and explicitly pending policy acceptance. Failure-first tests reproduced missing notices in the Antigravity preview and copyable overlay example; the repaired preview and example projections now carry the exact root LICENSE. No private overlay is assigned the public license by the synchronizer. The attribution-pattern checker now names its limited result explicitly.
+
+Source SVG bytes match a retained completed literal write and all eleven generated copies. The SVG was inspected and rendered locally without installing tools; it uses paths, circles, text metadata, and one rectangle, with no external asset or font. Registry metadata matched all eight exact CI wheel hashes; license declarations and pinned action-license receipts are distinct from redistribution clearance. These tools are not bundled in client distributions. Final validation and source/manifest identities must accompany the submitted proposal; no approval, independent human review, model execution, or release is recorded here.
