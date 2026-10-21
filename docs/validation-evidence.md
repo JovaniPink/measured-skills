@@ -10,6 +10,24 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 263 regression tests.
 
+## October 21 bounded Claude retest
+
+The [retest observation](audits/claude-retest-observations-2026-10-21.json)
+records four frozen cases and two continuity follow-ups at source `c8358cb`,
+without retries. Native credits were off before and after, and all 49 staged
+file hashes matched after exit. Claude Code 2.1.305 loaded the twelve staged
+skills plus seventeen native built-ins. This differs from the earlier client
+configuration and is not a source-only comparison.
+
+Review selection failed again. Its proposed-test result was unsupported, and
+both follow-ups asserted an unrun test had not been written. GCP selection and
+reference loading passed; its answer remained partial because an unqualified
+finding and proposed window exceeded the missing data contract. The near-miss
+and stale-receipt cases passed their exact rubrics. The preregistered acceptance
+rule therefore fails. Grading is Codex-assisted, with independent maintainer
+adjudication separate. No billing change, paid evaluation, global installation
+change, merge, or release occurred. No new source repair was tested.
+
 ## October 21 source repair
 
 The [repair audit](audits/claude-source-repairs-2026-10-21.json) binds the three
@@ -19,7 +37,8 @@ entrypoint failure; the full suite also exposed an earlier scoped-inventory fail
 Those tests now check the exact accepted ancestor. The
 separate delta inventory continues to enforce every current payload byte. Two
 distribution/archive builds produced identical hashes for all 87 ZIPs. Behavioral
-retest results remain unavailable; these changes do not establish activation gains.
+retest results were unavailable at this source-repair checkpoint. The later
+observation above does not establish activation gains or qualify the profile.
 
 ## October 20 bounded client observations
 

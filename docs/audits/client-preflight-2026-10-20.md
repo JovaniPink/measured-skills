@@ -2,8 +2,11 @@
 
 For the subsequent October 21 source repairs and unresolved prerequisites, see
 the [native-controls investigation](client-controls-2026-10-21.md) and
-[prepared retest plan](claude-retest-plan-2026-10-21.md). The observations below
-retain their original October 20 source identity.
+[prepared retest plan](claude-retest-plan-2026-10-21.md). The later authorized
+[four-case retest](claude-retest-observations-2026-10-21.json) passed fresh
+billing/isolation prerequisites but failed acceptance on review selection and
+evidence quality. It consumed its four cases and two follow-ups without retries.
+The observations below retain their original October 20 source identity.
 
 ## Later native-controls and bounded-pilot checkpoint
 
