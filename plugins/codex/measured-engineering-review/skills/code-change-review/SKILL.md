@@ -1,6 +1,6 @@
 ---
 name: code-change-review
-description: "Reviews a PR, commit, or diff when asked to \"review this PR\", \"check my changes\", or find regressions; reports actionable findings rather than silently modifying code."
+description: "Reviews a supplied PR diff, commit, or code snippet when asked to \"review this PR\", check changes, or find bugs and regressions; covers static review without a checkout and returns findings without editing code."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -17,11 +17,11 @@ Review a pinned change and return evidence-bounded findings.
 
 ## Workflow
 
-1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority.
+1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority when supplied. A pasted diff or snippet is enough for a scoped static review; label unavailable repository context instead of inventing it or requiring access unrelated to the request.
 2. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
 3. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
 4. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
-5. Check whether tests would fail for the defect and whether the proposed behavior is compatible with existing consumers.
+5. Check whether inspected tests would fail for the defect and whether the proposed behavior is compatible with existing consumers. A test that has not run may still exist; absent test results do not prove absent coverage.
 6. Separate findings from questions, optional improvements, and unsupported concerns.
 7. Report validation performed, unavailable evidence, and the remaining review boundary.
 
@@ -31,6 +31,8 @@ Review a pinned change and return evidence-bounded findings.
 - Do not implement fixes unless the user separately asks for changes.
 - Do not treat a review comment as a decision, a passing check as merge authority, or a mergeable state as approval.
 - Do not claim the change is safe outside the inspected scope.
+- Keep a demonstrated defect, a conditional risk, and missing evidence distinct. Do not turn an unrun test into a separate missing-test defect without inspecting the relevant coverage.
+- Use claim-verification for whether an old receipt still proves completion at a new revision; use this workflow when the requested result is code findings.
 
 ## Output
 
@@ -44,4 +46,4 @@ Synthetic example; not an observed client result.
 
 Input: In the supplied A-to-B diff at `api/objects.py:42`, an object lookup loses its tenant predicate and filters only by ID. No access test has run.
 
-Output: error, new, `api/objects.py:42`: the diff removes tenant isolation. A caller who knows another tenant's ID could read that object because this handler no longer checks tenant ownership. Restore the predicate and add a cross-tenant rejection test before accepting the change. Evidence: the supplied lookup diff. Questions: none for this finding. Validation: static review only; the access test has not run. Review boundary: this handler and the supplied diff.
+Output: error, new, `api/objects.py:42`: the explicit tenant filter is removed. If the lookup has no implicit tenant scope, a caller who knows another tenant's ID could receive that object. Evidence: the supplied diff; the store implementation is unavailable. Restore or demonstrate an equivalent authorization check before acceptance. Validation: static review only; test execution is unobserved and test existence is unknown. Review boundary: the supplied handler diff. Next inspect the store contract and existing cross-tenant coverage; do not report missing tests as a confirmed defect.

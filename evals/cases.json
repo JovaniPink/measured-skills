@@ -737,7 +737,8 @@
         "Every material claim is split into a precise state and checked against the authority that can prove that state.",
         "Evidence is tied to an exact revision, environment, timestamp, or readback, and missing evidence remains visible.",
         "The conclusion distinguishes local, pushed, reviewed, merged, deployed, and live states without authorizing the next action.",
-        "State the supported verdict before the claim table. Preserve authority, exact evidence, and freshness for each claim. Omit empty gap categories and do not invent remediation when every requested claim is confirmed."
+        "State the supported verdict before the claim table. Preserve authority, exact evidence, and freshness for each claim. Omit empty gap categories and do not invent remediation when every requested claim is confirmed.",
+        "A receipt at A remains historical when B has no result or relevant input-equivalence review. Missing evidence is neither a pass nor proof that tests do not exist."
       ],
       "baseline_comparison": {
         "status": "blocked",
@@ -786,7 +787,8 @@
         "Every finding names an exact location, concrete failure scenario, evidence, impact, and suggested direction.",
         "Speculation, optional improvements, and questions are not presented as defects.",
         "The result reports validation and scope limits without implementing, approving, or merging.",
-        "Each finding carries a severity of none, note, warning, or error, and a finding state when a pinned change is under review."
+        "Each finding carries a severity of none, note, warning, or error, and a finding state when a pinned change is under review.",
+        "A supplied snippet can support a scoped static review without a checkout. Unrun tests are not reported as absent or failing coverage; a conditional risk is labeled with its missing contract."
       ],
       "baseline_comparison": {
         "status": "blocked",
@@ -1599,7 +1601,8 @@
         "Identifies the actual stack, version evidence, grain, keys, and authority.",
         "Separates static findings from provider observations and untested cost or correctness claims.",
         "Grades findings as none, note, warning, or error and adds finding state for a pinned change.",
-        "Preserves separate authorization for queries, dry runs, spend, job execution, data writes, and deployment."
+        "Preserves separate authorization for queries, dry runs, spend, job execution, data writes, and deployment.",
+        "Distinguish event time from correction arrival, a supplied plan from every run, and unique_key from a verified materialization. Missing recovery policy does not prove permanent loss; untested SQL is not an accepted fix."
       ],
       "baseline_comparison": {
         "status": "blocked",

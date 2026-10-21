@@ -10,6 +10,17 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 263 regression tests.
 
+## October 21 source repair
+
+The [repair audit](audits/claude-source-repairs-2026-10-21.json) binds the three
+changed canonical skill sets to their prior bytes and the staged retest plan.
+Historical expression tests reproduced four inventory failures and one owned-origin
+entrypoint failure; the full suite also exposed an earlier scoped-inventory failure.
+Those tests now check the exact accepted ancestor. The
+separate delta inventory continues to enforce every current payload byte. Two
+distribution/archive builds produced identical hashes for all 87 ZIPs. Behavioral
+retest results remain unavailable; these changes do not establish activation gains.
+
 ## October 20 bounded client observations
 
 The [six-case Claude CLI record](audits/cli-pilot-observations-2026-10-20.json)

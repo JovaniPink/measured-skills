@@ -1,6 +1,6 @@
 ---
 name: claim-verification
-description: "Checks claims such as \"is this done\", \"did that deploy go out\", or \"is the fix live\" against current evidence; keeps local tests, merge, deployment, and live behavior separate."
+description: "Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -28,6 +28,11 @@ Turn each material claim into a falsifiable statement, then verify it against th
 5. Separate verified work that must not be redone from actual gaps.
 6. Recommend the smallest action supported by the evidence. Do not implement it unless the user also asked for a change.
 
+A supplied claim and receipt can support a bounded verdict without a checkout.
+If only A's passing receipt and the existence of revision B are supplied, report
+B as unverified. Do not invent a repository, run checks, or require access merely
+to state that evidence limit.
+
 ## Evidence rules
 
 - Cite files and lines for repository claims when practical.
@@ -35,6 +40,8 @@ Turn each material claim into a falsifiable statement, then verify it against th
 - Treat passing static checks, merge, deploy, live traffic, and correct behavior as separate facts.
 - Say what could not be checked and why. Never convert missing access into a passing verdict.
 - Re-read drift-prone evidence immediately before a conclusion that depends on it.
+- Bind each result to its checked revision and inputs. A result at A does not verify B unless a justified scope comparison establishes that the relevant checked inputs are identical; label that comparison separately from execution at B.
+- Keep `not run`, `not supplied`, `not found in the inspected scope`, and `does not exist` distinct. Missing evidence cannot establish a failing test, absent coverage, or a completed action.
 - Similar names do not prove that two resources, branches, or environments are the same. Confirm identity by identifier, URL, or direct inspection.
 - When the user disputes a verdict and current evidence still supports it, state the evidence once and record the disagreement. The verdict changes only with new evidence, while the user's direction still decides the next action.
 
@@ -62,3 +69,11 @@ Output: The receipt confirms local checks at B; live behavior is unverified.
 | The fix is live | UNVERIFIABLE | Serving configuration and runtime | Neither was supplied | Currentness unknown |
 
 Preserve the local result. Next obtain the serving revision and an authorized runtime observation; the receipt alone cannot establish either.
+
+Input: An old receipt records all checks passing at A. The current revision is B,
+and no B receipt or input comparison is supplied. Is the work verified at B?
+
+Output: UNVERIFIABLE at B. The supplied receipt remains historical evidence for A;
+no result at B or relevant input-equivalence review was supplied. Next obtain a
+B-bound receipt or inspect the changed inputs within the authorized scope. No
+check has been run by this review, and the existence of tests is unknown.

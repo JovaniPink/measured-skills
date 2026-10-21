@@ -20,6 +20,12 @@ def digest(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def accepted_payload(path: str) -> bytes:
+    """Keep the frozen review bound to the payload the maintainer accepted."""
+    record = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+    return git('show', record['accepted_revision'] + ':' + path)
+
+
 class ExpressionDispositionTests(unittest.TestCase):
     def setUp(self) -> None:
         self.audit: dict[str, Any] = json.loads((ROOT / PACKET).read_text())
@@ -35,7 +41,7 @@ class ExpressionDispositionTests(unittest.TestCase):
         for path in sorted(expected):
             with self.subTest(path=path):
                 self.assertEqual(digest(git('show', source + ':' + path)), audit['inventory'][path])
-                self.assertEqual(digest((ROOT / path).read_bytes()), audit['result_inventory'][path])
+                self.assertEqual(digest(accepted_payload(path)), audit['result_inventory'][path])
         for key in ('inventory', 'result_inventory'):
             encoded = (json.dumps(audit[key], sort_keys=True, separators=(',', ':')) + '\n').encode()
             self.assertEqual(digest(encoded), audit[key + '_sha256'])
@@ -44,7 +50,7 @@ class ExpressionDispositionTests(unittest.TestCase):
         self.assertEqual({'provenance/catalog.json'} | {r['path'] for r in repairs}, modified)
         for repair in repairs:
             before = git('show', source + ':' + repair['path'])
-            after = (ROOT / repair['path']).read_bytes()
+            after = accepted_payload(repair['path'])
             self.assertEqual(digest(before), repair['previous_sha256'])
             self.assertEqual(digest(after), repair['corrected_sha256'])
             self.assertEqual(before.decode().replace(repair['previous_text'], repair['corrected_text']), after.decode())
@@ -97,7 +103,7 @@ class ExpressionDispositionTests(unittest.TestCase):
     def test_note_corrections_preserve_methods_pins_and_historical_receipts(self) -> None:
         audit = self.audit
         before = {r['skill']: r for r in json.loads(git('show', audit['reviewed_source'] + ':provenance/catalog.json'))['entries']}
-        after = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        after = {r['skill']: r for r in json.loads(accepted_payload('provenance/catalog.json'))['entries']}
         corrections = audit['provenance_note_corrections']
         self.assertEqual(38, len(corrections))
         self.assertEqual(9, sum('wholly jovani-authored' in r['previous_local_changes'].lower() for r in corrections))

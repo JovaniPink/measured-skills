@@ -223,7 +223,11 @@ class ReleaseIntegrityTests(unittest.TestCase):
             self.assertEqual('adapted', entry['implementation_method'])
             self.assertEqual(change['owned_origin'], entry['owned_origin'])
             self.assertEqual(entry['owned_origin']['revision'], entry['pinned_revision'])
-            payload = (ROOT / 'skills' / skill / 'SKILL.md').read_bytes()
+            accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+            # This receipt binds its accepted historical correction. The current
+            # canonical payload remains covered by the separate delta inventory.
+            payload = subprocess.check_output(
+                ['git', 'show', accepted['accepted_revision'] + ':skills/' + skill + '/SKILL.md'], cwd=ROOT)
             self.assertEqual(hashlib.sha256(payload).hexdigest(), change['corrected_entrypoint_sha256'])
             self.assertEqual('adapted', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
             errors: list[str] = []

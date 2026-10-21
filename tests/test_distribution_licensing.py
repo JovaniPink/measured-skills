@@ -47,6 +47,7 @@ class DistributionLicensingTests(unittest.TestCase):
     def test_scoped_disposition_binds_inventory_without_accepting_it(self) -> None:
         import subprocess
         audit = json.loads((ROOT / 'docs/audits/scoped-expression-disposition-2026-10-20.json').read_text())
+        accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
         self.assertEqual('proposed', audit['status'])
         repair = audit['notice_repair_checkpoint']
         subprocess.run(['git', 'merge-base', '--is-ancestor', repair['source_commit'], 'HEAD'], cwd=ROOT, check=True)
@@ -69,11 +70,16 @@ class DistributionLicensingTests(unittest.TestCase):
             payload = subprocess.check_output(['git', 'show', audit['reviewed_source'] + ':' + path], cwd=ROOT)
             self.assertEqual(hashlib.sha256(payload).hexdigest(), value)
             if path == 'LICENSE' or path.startswith('skills/'):
-                self.assertEqual(payload, (ROOT / path).read_bytes())
+                # Preserve the fourteen-skill checkpoint at its accepted payload.
+                # Current source and notices have their own delta/parity checks.
+                historical = subprocess.check_output(
+                    ['git', 'show', accepted['accepted_revision'] + ':' + path], cwd=ROOT)
+                self.assertEqual(payload, historical)
         encoded = (json.dumps(audit['inventory'], sort_keys=True, separators=(',', ':')) + '\n').encode()
         self.assertEqual(hashlib.sha256(encoded).hexdigest(), audit['inventory_sha256'])
         previous = {r['skill']: r for r in json.loads(subprocess.check_output(['git', 'show', audit['reviewed_source'] + ':provenance/catalog.json'], cwd=ROOT))['entries']}
-        current = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        current = {r['skill']: r for r in json.loads(subprocess.check_output(
+            ['git', 'show', accepted['accepted_revision'] + ':provenance/catalog.json'], cwd=ROOT))['entries']}
         self.assertEqual(5, len(audit['provenance_note_corrections']))
         for correction in audit['provenance_note_corrections']:
             name = correction['skill']

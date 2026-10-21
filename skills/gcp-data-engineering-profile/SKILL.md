@@ -27,6 +27,12 @@ for storage, streaming, Spark, and orchestration concerns.
 5. Select only repository checks compatible with the user's authority. Inspect command definitions before execution; compilation, tests, and dry runs may contact a provider or run hooks.
 6. Return concrete findings and evidence gaps. Propose the next check with its required access, possible cost, and expected observation, without executing a cloud action merely to close the gap.
 
+For BigQuery and incremental-model reviews, read the warehouse reference before
+concluding. Separate the observed plan from possible future runs, event time from
+arrival time, and the configured key from the actual update strategy. Do not
+infer permanent loss, a particular merge operation, or absent recovery paths
+from a filter alone.
+
 ## Boundaries
 
 - Local source inspection does not authorize authentication, querying a warehouse, a cloud dry run, job submission, backfills, data writes, IAM changes, or deployment. Existing explicit authority controls those actions.
@@ -45,6 +51,6 @@ finding as `none`, `note`, `warning`, or `error`; add `new`, `unchanged`,
 
 Synthetic example; not an observed client result.
 
-Input: A supplied dbt model for BigQuery filters only today's rows, but corrections can arrive two days late. Adapter versions, row grain, and key uniqueness evidence are missing; no diff is pinned.
+Input: A dbt model for BigQuery filters today's `ingested_at` date. Corrections can arrive two days late. The meaning of `ingested_at`, adapter versions, update strategy, row grain, key uniqueness, and recovery policy are missing; no diff is pinned.
 
-Output: warning: the filter may omit older corrections. Evidence is the supplied filter and reported correction delay; no warehouse observation supports a count of lost rows. The stack is dbt on BigQuery, with adapter versions, grain, and keys unverified. Next define the correction window and key contract, then inspect hooks before selecting local repeated-input and late-input tests. No query, dry run, or backfill has run.
+Output: warning: correction handling is unverified. If `ingested_at` records correction arrival, a two-day-old event corrected today may still be selected; if it retains the original ingestion date, it may be excluded. The filter alone does not prove permanent loss. The stack is dbt on BigQuery, with versions, strategy, grain, keys, and recovery unverified. Next establish those contracts and inspect hooks before choosing local checks. No query, dry run, or backfill has run.

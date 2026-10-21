@@ -1,5 +1,10 @@
 # Client preflight after originality acceptance
 
+For the subsequent October 21 source repairs and unresolved prerequisites, see
+the [native-controls investigation](client-controls-2026-10-21.md) and
+[prepared retest plan](claude-retest-plan-2026-10-21.md). The observations below
+retain their original October 20 source identity.
+
 ## Later native-controls and bounded-pilot checkpoint
 
 The [separate pilot observation](cli-pilot-observations-2026-10-20.json) records the later check at source `66b8671dac843b5ad871b698a476960592591a86`. Claude Code 2.1.281 completed all six frozen case sessions and two continuity follow-ups through its included subscription with native usage credits off before and after. No billing setting changed. Its temporary wrapper supplied twelve selected skills; native built-ins remained visible and are part of this baseline. No ambient account or user skills appeared in the effective context report.
