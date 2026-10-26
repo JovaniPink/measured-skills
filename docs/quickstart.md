@@ -11,6 +11,11 @@ requests and an experimental profile, or [choose one pack](choose-your-skills.md
 A pack is an installation unit; a profile is a selection of skills for a task.
 Do not install every pack merely to try one skill.
 
+For a new feature, use the [feature-development workflow](feature-development-workflow.md).
+It explains the order, what each step delivers, and which prompt to paste into
+your client. The daily profile does not include the explicit execution and
+publication skills; the workflow explains those choices without installing them.
+
 ## 2. Follow your client's setup
 
 | Client | Guide |

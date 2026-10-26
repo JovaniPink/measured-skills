@@ -1,5 +1,9 @@
 # Claude setup
 
+For everyday feature work, use the [step-by-step prompts and fast path](../feature-development-workflow.md#claude-code-prompts).
+Check the installed skill entry before using a prompt. Dated observations below
+apply to their recorded versions, not every current installation.
+
 Claude Code gets the same source skills and release checks as Codex. Its install and use tests run on their own schedule.
 
 A **Code plugin** is a package installed for Claude Code. An **account upload** is a skill added through Customize in Claude. Check both stores. A successful Code update does not prove that Chat has the same files.

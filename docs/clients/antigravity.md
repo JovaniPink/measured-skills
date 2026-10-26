@@ -29,12 +29,21 @@ agy plugin list
 
 Repeat with another folder under `plugins/antigravity/` for each pack you want. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema.
 
-The expected slash commands use the installed plugin namespace. This form has not been observed on agy for these packs:
+For everyday tasks, start with an ordinary request naming an eligible skill:
 
 ```text
-/measured-skills:claim-verification Check which completion claims have evidence.
-/measured-skills:systematic-diagnosis Investigate this failure.
+Use the installed claim-verification skill to check which completion claims have evidence. Report if it is unavailable. Make no changes.
+Use the installed systematic-diagnosis skill to investigate this failure. Report if it is unavailable. Diagnose before editing.
 ```
+
+Google's [skill guide](https://www.antigravity.google/docs/skills?tab=ide), checked
+October 26, 2026, describes slash commands derived from skill names. Select the
+actual entry shown by your installed client; do not assume one plugin namespace
+spelling applies across versions. The preview observations below retain their
+original command names and dates. They do not establish current behavior for all
+packs. Check actual loading separately from answer quality. The
+[feature workflow](../feature-development-workflow.md#antigravity-prompts)
+provides prompts that preserve the explicit-only exclusions.
 
 ## Prepare a preview
 

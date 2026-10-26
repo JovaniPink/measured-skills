@@ -1,12 +1,12 @@
 {
   "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
-  "previous_head": "300133c0431c7b60ceeda6d46fdd242ad4c71ff0",
+  "previous_head": "cace51e6e5cf2c29f19097fe6cb7650a2e3bcfe7",
   "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78",
-  "reviewed_on": "2026-10-21",
+  "reviewed_on": "2026-10-26",
   "status": "scoped_technical_delta_review",
   "reviewer": "Codex-assisted technical review",
   "new_maintainer_acceptance": false,
-  "review_method": "Compare all current payload bytes with the exact accepted inventory; retain unchanged per-file reviews and inspect changed expression. This follow-up repairs review routing/continuity and GCP contract advice after the failed retest, regenerates adapters/archives and listing measurements, appends offline safety coverage, and prepares an unrun five-session/two-follow-up diagnostic. Prior observations, frozen cases/studies, accepted approval bytes, source pins, invocation boundaries, methods, and MIT notices remain. No new maintainer acceptance, license/dependency/asset import, behavioral improvement, or release qualification is inferred.",
+  "review_method": "Compare current payload bytes with the exact accepted inventory; retain unchanged per-file reviews and review the new documentation. This follow-up adds client-specific feature workflow prompts, links navigation, corrects current-facing originality/continuity summaries, and removes unsupported Antigravity invocation expectations while preserving historical observations. Official client and engineering documentation was checked October 26, 2026. Canonical skills, generated artifacts, release-manifest binding, source pins, frozen studies, accepted decision bytes, and the unrun retest proposal remain unchanged. No model trial, installed-client acceptance, new maintainer acceptance, or release qualification is inferred.",
   "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, independent human grading, catalog qualification, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
   "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
   "changes": {
@@ -239,6 +239,46 @@
       "before_sha256": "1f629c1596ec1cfbf5adf218bec2ff07685033ffe3c7982d304eaa18285fd565",
       "after_sha256": "dbd4f81271b6578e8bfe9d13964d1d5d84301f1b3e4b8eb02bf71c81348afdcb",
       "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited."
+    },
+    "README.md": {
+      "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
+      "after_sha256": "c190ed85057d7947fd02ab56a413adba72f1e93025fb00fb4e771f5cadea557e",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/clients/antigravity.md": {
+      "before_sha256": "15a779160f21f2b01a5e5ff40459dc30eb7b037ecabf06737ce67dc6bd2df45e",
+      "after_sha256": "0e4cd494cc153bcf92032ea55de525ca4ec7bf6ce430618d309853e26a1ca66f",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/clients/claude.md": {
+      "before_sha256": "1aa304f29251e41f8e5f4c18590c10938a8e1c70cfe1c9d2e3ac4dbd1411ea33",
+      "after_sha256": "f3e8cac794934a0ac3ca880a4cd8c0f8dc023e1eb3d4a901af9590cab18edc54",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/clients/codex.md": {
+      "before_sha256": "84602dec8a77a675286d1d96196fc426690a0088a292e567d0788ec5d463a069",
+      "after_sha256": "d4ab6f86a69a6869a86f5f9cb2b7e0be14a783d4a11e174d20815dbe9e94abbf",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/daily-agent-operating-model.md": {
+      "before_sha256": "b2eeb216162c1847f37e01e2b0e717243b5851940ac470ebdc9b43ab9b8dbf72",
+      "after_sha256": "d3a34ad282e45e466750071776f4ab3a2b69135857d6e228d2a9fc747fb803c7",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/document-driven-workflow.md": {
+      "before_sha256": "566b941372b09cd63b17e1c2e50aa3997d3d150fceb76e76b502b2a1be8fb719",
+      "after_sha256": "53083c92eb7966321279ef36bf1ef194321c8815fa46248e305dba9e48ca07b1",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/feature-development-workflow.md": {
+      "before_sha256": null,
+      "after_sha256": "81047447b360ed5c05ae79c411d858b5e72f2f0782e97aea4259ebdd99d33e33",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/quickstart.md": {
+      "before_sha256": "d2e9520c94df63e41d319517534e3ad638839ce7e74e598fcb1246d0c59b6a23",
+      "after_sha256": "ea2d575bebe4f3527c3100354ef8b51e9d8458f372c648873d9028eb95eff9b7",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
     }
   }
 }
