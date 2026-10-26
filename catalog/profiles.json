@@ -209,6 +209,86 @@
         }
       },
       "disposition": "experimental"
+    },
+    {
+      "id": "finish-existing-work-experimental",
+      "purpose": "Stage a focused selection for resuming and completing authorized engineering repairs.",
+      "skills": [
+        "engineering-prompt-review",
+        "implementation-planning",
+        "systematic-diagnosis",
+        "respond-to-code-review",
+        "change-impact-analysis",
+        "test-strategy",
+        "cross-stack-quality-gates",
+        "code-change-review",
+        "claim-verification",
+        "python-engineering-profile",
+        "typescript-javascript-engineering-profile",
+        "postgresql-sql-engineering-profile",
+        "gcp-data-engineering-profile",
+        "swift-swiftui-engineering-profile"
+      ],
+      "target_surfaces": [
+        "codex",
+        "claude-code",
+        "antigravity-cli"
+      ],
+      "applicability": "Unfinished changes, defects, review findings, and journey gaps across Python, TypeScript/JavaScript, SQL/GCP, and Swift. Prepared selection, not observed activation evidence.",
+      "exclusions": [
+        "No global installation or account-upload changes.",
+        "No provider execution, paid model runs, or promotion based on offline checks.",
+        "Project projection retains its existing read-only implicit restriction.",
+        "Explicit execution, publication, and handoff workflows are not staged."
+      ],
+      "discovery_measurements": {
+        "codex": {
+          "description_characters": 2683,
+          "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
+          "observed_listing_state": "not_observed"
+        },
+        "claude-code": {
+          "description_characters": 2683,
+          "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
+          "observed_listing_state": "not_observed"
+        },
+        "antigravity-cli": {
+          "description_characters": 2683,
+          "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
+          "observed_listing_state": "not_observed"
+        }
+      },
+      "source_catalog_version": "0.18.0",
+      "behavioral_evidence": {
+        "status": "none",
+        "observed_against_version": null,
+        "observed_at": null,
+        "evidence_reference": null
+      },
+      "surface_evidence": {
+        "codex": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "claude-code": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "antigravity-cli": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        }
+      },
+      "disposition": "experimental"
     }
   ]
 }

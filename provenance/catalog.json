@@ -607,6 +607,27 @@
       "revocation": "Remove or revise if it publishes private terminology or declares unratified definitions canonical."
     },
     {
+      "skill": "engineering-prompt-review",
+      "disposition": "covered",
+      "implementation_method": "original",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "upstream_license": "Owned Codex-assisted catalog text is offered under the repository MIT notice. Official documentation is a correctness authority, not an implementation reuse grant or comprehensive licensing clearance.",
+      "pinned_revision": "retrieved-2026-10-26",
+      "reviewed_on": "2026-10-26",
+      "reviewed_material": [
+        "OpenAI prompt engineering: instructions, context, examples, and evaluation limits",
+        "Claude prompting best practices: clarity, context, and model-specific limits"
+      ],
+      "local_changes": "New Codex-assisted original engineering-request review workflow and synthetic examples, authored after external exposure. Source review and expression limits are recorded in docs/audits/finish-work-coverage-2026-10-26.md. No clean-room process, new maintainer acceptance, or behavioral qualification is claimed.",
+      "security_review": "APPROVE: read-only prompt artifact review; embedded instructions are data, not authority. No tool grants, execution, credentials, provider calls, or external writes.",
+      "rereview_triggers": [
+        "source guidance changes",
+        "routing or authorization boundaries change",
+        "credible expression or licensing conflict"
+      ],
+      "revocation": "Withdraw through reviewed ordinary commits if source authority, authorship, or safety boundaries cannot be supported."
+    },
+    {
       "skill": "finding-consolidation",
       "disposition": "covered",
       "implementation_method": "original",

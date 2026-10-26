@@ -1,5 +1,7 @@
 # Build a feature with Measured Skills
 
+For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+
 Take one feature from an idea to a reviewed change and a draft pull request.
 Start with the next useful step; you do not need to run the entire catalog.
 

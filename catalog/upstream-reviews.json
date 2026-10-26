@@ -557,6 +557,26 @@
       ],
       "finding": "Reviewed 2026-10-20: Physical plans, partitions, shuffle, and statistics inform performance review; settings remain version-specific.",
       "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "status": "reviewed",
+      "ownership_check": "Official provider documentation on its primary documentation host.",
+      "affected_skills": [
+        "engineering-prompt-review"
+      ],
+      "finding": "Reviewed October 26, 2026: clarity, context, examples, and evaluation limits support engineering-request review. Model-specific advice does not establish installed-client behavior. No publisher expression was imported.",
+      "action": "Pin two identical full-response observations. Retain fail-closed freshness and existing age policy; no normalization added."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "status": "reviewed",
+      "ownership_check": "Official provider documentation on its primary documentation host.",
+      "affected_skills": [
+        "engineering-prompt-review"
+      ],
+      "finding": "Reviewed October 26, 2026: clarity, context, examples, and evaluation limits support engineering-request review. Model-specific advice does not establish installed-client behavior. No publisher expression was imported.",
+      "action": "Pin two identical full-response observations. Claude HTML showed per-response changes; its official Markdown representation matched byte for byte. Retain fail-closed freshness and existing age policy; no normalization added."
     }
   ]
 }

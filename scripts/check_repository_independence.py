@@ -88,6 +88,8 @@ PRIMARY_AUTHORITY_HOSTS = frozenset(
 )
 # Reviewed primary documents, not a general repository-host grant.
 APPROVED_PRIMARY_AUTHORITY_URLS = frozenset({
+    "https://developers.openai.com/api/docs/guides/prompt-engineering",
+    "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
     "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
     "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
     "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",

@@ -1,5 +1,7 @@
 # Use the skills in daily work
 
+For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+
 Start with one task and the smallest useful selection. The 0.18.0 candidate
 includes `daily-engineering-experimental`, a 12-skill selection for planning,
 diagnosis, review, tests, Python, and GCP data work. Bounded Claude trials found

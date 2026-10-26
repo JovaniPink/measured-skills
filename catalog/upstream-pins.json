@@ -95,6 +95,11 @@
       "marker_value": "696ec0875b6bb5e9fbf9869ec76975e48f441b18b58182ee31b21819096b0333"
     },
     {
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "marker_kind": "content-sha256",
+      "marker_value": "32e2e03c432789431b2bf519249d880ca313d86c2068c44c892e58941a8aed75"
+    },
+    {
       "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
       "marker_kind": "last-modified",
       "marker_value": "Tue, 13 Oct 2026 22:08:34 GMT"
@@ -213,6 +218,11 @@
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
       "marker_kind": "etag",
       "marker_value": "\"4d85e2b7c1c23fb8fe97e3864ad00ad4-ssl\""
+    },
+    {
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "68fa2aeb65250f259c1acd2c1d00fcb0024368e867f26f1614b1b09f4e69355f"
     },
     {
       "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",

@@ -684,6 +684,34 @@
       "maturity_evidence": "evals/cases.json"
     },
     {
+      "skill": "engineering-prompt-review",
+      "plugin": "measured-reasoning",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "review"
+      ],
+      "targets": [
+        "repository",
+        "agent"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "implementation-planning",
+        "claim-verification"
+      ],
+      "conflicts_with": [
+        "high-signal-technical-writing",
+        "problem-framing",
+        "context-reliability-review",
+        "agent-evaluation-design"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
       "skill": "finding-consolidation",
       "plugin": "measured-skills",
       "capability_family": "review",

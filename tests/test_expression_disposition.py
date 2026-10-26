@@ -57,7 +57,7 @@ class ExpressionDispositionTests(unittest.TestCase):
 
     def test_all_skills_have_owned_history_and_explicit_review_limits(self) -> None:
         audit = self.audit
-        entries = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        entries = {r['skill']: r for r in json.loads(accepted_payload('provenance/catalog.json'))['entries']}
         records = audit['skills']
         self.assertEqual(len(entries), len(records))
         self.assertEqual(set(entries), {r['skill'] for r in records})
@@ -129,3 +129,24 @@ class ExpressionDispositionTests(unittest.TestCase):
             self.assertEqual(git('show', audit['reviewed_source'] + ':' + path), historical)
             if path != 'catalog/upstream-pins.json':
                 self.assertEqual(historical, (ROOT / path).read_bytes())
+
+    def test_new_skills_are_separate_from_accepted_history(self) -> None:
+        historical = {r['skill'] for r in self.audit['skills']}
+        current = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        additions = set(current) - historical
+        self.assertEqual({'engineering-prompt-review'}, additions)
+        delta = json.loads((ROOT / 'docs/audits/post-acceptance-delta-2026-10-20.json').read_text())
+        self.assertFalse(delta['new_maintainer_acceptance'])
+        for name in additions:
+            self.assertEqual('original', current[name]['implementation_method'])
+            for path in (ROOT / 'skills' / name).rglob('*'):
+                if path.is_file():
+                    record = delta['changes'][path.relative_to(ROOT).as_posix()]
+                    self.assertIsNone(record['before_sha256'])
+                    self.assertEqual(digest(path.read_bytes()), record['after_sha256'])
+                    self.assertTrue(record['expression_and_license_review'])
+
+    def test_historical_inventory_tampering_still_fails(self) -> None:
+        self.audit['skills'].pop()
+        with self.assertRaises(AssertionError):
+            self.test_all_skills_have_owned_history_and_explicit_review_limits()

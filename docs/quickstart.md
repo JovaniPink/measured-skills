@@ -1,5 +1,7 @@
 # Quickstart
 
+For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+
 Choose one task, one client, and a small set of skills. This is the unreleased
 0.18.0 candidate; use a reviewed source revision and keep its identity with your
 installation. Historical release checks do not qualify a changed candidate.
