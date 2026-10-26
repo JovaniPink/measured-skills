@@ -1,5 +1,7 @@
 # 0.18.0 release readiness, October 20
 
+Historical checkpoint. Use the [October 26 gate ledger](release-readiness-2026-10-26.md) for current planning. Statements labeled current below were current at their recorded checkpoint; they are not fresh account, version, or source observations.
+
 Status: candidate; release blocked. No tag, release, public-directory submission, or installed-client promotion is authorized by this record.
 
 ## Current status after maintainer acceptance

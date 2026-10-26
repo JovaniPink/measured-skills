@@ -6,14 +6,14 @@
   "status": "scoped_technical_delta_review",
   "reviewer": "Codex-assisted technical review",
   "new_maintainer_acceptance": false,
-  "review_method": "Retain prior per-file delta reviews and accepted snapshot bytes. Review the five existing skill changes, two self-contained references, bounded-maintenance prompts, primary-source ledger, twelve prepared scenarios, generated projections/archives, and export regressions. See bounded-pr-maintenance-2026-10-26.md and bounded-maintenance-followup-2026-10-26.md. The follow-up repairs index/working snapshot identity, dispatch accounting and shutdown, and exact head-repository/draft-state checks; it adds four prepared scenarios and a local Git fixture, not model execution. No model trial, installation, new maintainer acceptance, or release qualification is inferred.",
+  "review_method": "Retain prior per-file delta reviews and accepted snapshot bytes. Review the five existing skill changes, two self-contained references, bounded-maintenance prompts, primary-source ledger, twelve prepared scenarios, generated projections/archives, and export regressions. See bounded-pr-maintenance-2026-10-26.md and bounded-maintenance-followup-2026-10-26.md. The follow-up repairs index/working snapshot identity, dispatch accounting and shutdown, and exact head-repository/draft-state checks; it adds four prepared scenarios and a local Git fixture, not model execution. No model trial, installation, new maintainer acceptance, or release qualification is inferred. October 26 source follow-up: review each of 33 changed authorities against canonical guidance, record repeated response hashes and individual decisions, preserve unresolved Antigravity holds, consolidate dated release gates, and bind regressions to historical pin checkpoints. See source-review-2026-10-26.json and release-readiness-2026-10-26.md. No new maintainer acceptance, client execution, or release qualification.",
   "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, independent human grading, catalog qualification, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
   "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
   "changes": {
     "README.md": {
       "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
-      "after_sha256": "09a78d530e99891ed27e3c927330f661453d28194a1ea004a7436c51d7ea7d6b",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "0588efe6d32533ed2477cfa6ba6af89a92b51a0d6c8e37343ef72c2e87dc75a2",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 source-review follow-up: Update the current release-ledger entry point; retain candidate status and exact scoped acceptance limits."
     },
     "catalog/evidence.json": {
       "before_sha256": "7f63f6aabbbd6a6369b86bf0c750dfc66b6cc2f7c1a7e9007fa05b38f39c0ab9",
@@ -37,13 +37,13 @@
     },
     "catalog/upstream-pins.json": {
       "before_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
-      "after_sha256": "b4386c9701143cfa673ef4de318fe23d7c3f039a89832af64e99dacb5ec1ce03",
-      "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+      "after_sha256": "9d03f2680e4e76d4b3e8a6209c705dab68419964e5660e35f1dec30595e35020",
+      "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence."
     },
     "catalog/upstream-reviews.json": {
       "before_sha256": "3b837ec11614e30daa3c409936efe156ab97de2a18fd7a77d24c833c8b298a53",
-      "after_sha256": "1e5d07f4e12b02b89c1c612765d9725f184877a072fd6fc68dee734b9c138e76",
-      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+      "after_sha256": "bbe13e6f36e8f09789ee52414e23989ba37d81d0cc6bf377a0d2e4f86bc9566a",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence."
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
@@ -167,8 +167,8 @@
     },
     "docs/provenance.md": {
       "before_sha256": "d6d5d2a80b3ebe036f83a7377328f9e3ed21b30e9a40e76aaca3c4029d2aa165",
-      "after_sha256": "cff9e05161af7d34933ee86cdcbd49770751b38311c43c8478bb9e5104c2e9ef",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "7f89afacc424a8a3a1e6f293ae448565dbd4e97dba05b1967faa2990837f6159",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
     },
     "docs/quickstart.md": {
       "before_sha256": "d2e9520c94df63e41d319517534e3ad638839ce7e74e598fcb1246d0c59b6a23",
@@ -177,8 +177,8 @@
     },
     "docs/release-readiness-2026-10-20.md": {
       "before_sha256": "0f91b44f27372e452a3afd9171d4db3dbd26295308afe4458daa08df8ca51ed9",
-      "after_sha256": "cab1479c5365ff15b4b9c70a019cfbdc9ff11f52951c1bc22e0c39b88d7e7e12",
-      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority."
+      "after_sha256": "df1a416c56f16b9d91c33a6aec9252bac29aa3d868891e247f93db692278390b",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
     },
     "docs/skill-catalog-reader-guide.md": {
       "before_sha256": "01739e2d857116314c972d257099e816a63f295f642a2cc03d10df854dd3ff88",
@@ -377,8 +377,8 @@
     },
     "tests/test_finish_work.py": {
       "before_sha256": null,
-      "after_sha256": "155b34ba80568b033213903f27be5a6417c813d483149e534d9dd20e4fe1877b",
-      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+      "after_sha256": "ce62a9074badef642d85976a0024f91a488d7fe817dd7e45332b643967213c52",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 source-review follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; production validators are unchanged."
     },
     "tests/test_measured_release.py": {
       "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
@@ -539,6 +539,56 @@
       "before_sha256": null,
       "after_sha256": "fc9210a1bb7c3bd594b015a7ead0391bd7f0fdc1a6abcade43c7f638a492dc32",
       "expression_and_license_review": "October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "docs/audits/source-check-closeout-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "57abfa1046fb8319fdc5df3227a279261796d8b88d921045bffb16045d1f26ff",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-initial-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "b908c56650e1b1da3b6d8e8c021d902542a3fef00030d4f6a4f4b3170f6c5e08",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "624c010ac17f3f097a2d7cee35680458e8d4965d023edcd19652351ce80ad99a",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-second-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "238fc69a06701185e86af3b9f519755bf84021ba8aa22b9cd00d60ac1a6d4fd7",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-third-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "8244db8309556f221d5e58f71f34d9da0b548406e9ea04ba8c7fa6dea3ad7ae6",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-review-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "68fee06733bd2a7dbd2df58b9bf920b8d22d4079201f50a14149337c25e21311",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/client-candidate-v0.18.0.md": {
+      "before_sha256": "9bfd37b720229abada4cf6024a598670ae30961b9a917f4f460a4665c6e3afea",
+      "after_sha256": "12bd295bb52d13aa4f9030cb6012e305925201bdc6430d8c43767c1a1cfa61dc",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/client-support.md": {
+      "before_sha256": "83bf82c86d4426033718ec0c5a74c7f788428a59270e033058eb83c52325bbdc",
+      "after_sha256": "a939a8de033a704ee6168ab569ecbb28ec4460e7a715c0911400844decfc71cb",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/release-readiness-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "d75b343b1a0c65b4529ddeed534c71d3c958c44f2134ecddfb365803b5224d85",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "tests/test_source_review_checkpoint.py": {
+      "before_sha256": null,
+      "after_sha256": "ac5d133ac9d709db3697815bf34d3ff643d3d1ee9d79cd805d744a05dc4546af",
+      "expression_and_license_review": "October 26 source-review follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; production validators are unchanged."
     }
   }
 }

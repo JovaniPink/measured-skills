@@ -131,7 +131,7 @@ The current candidate is 0.18.0: 88 skills in 11 packs. The [candidate record](d
 
 Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.18.0 installed-client benefit is claimed.
 
-The October 20 pilot and [October 21 retest](docs/audits/claude-retest-observations-2026-10-21.json) include continuity follow-ups. They found review-selection and evidence errors; the later GCP answer also exceeded its supplied contract. These bounded observations do not establish long-session reliability or qualify the profile. The [next diagnostic plan](docs/audits/claude-routing-contract-retest-plan-2026-10-21.md) remains unrun, and the broader [turn-depth study](docs/turn-depth-study.md) remains separate. Read the [readiness record](docs/release-readiness-2026-10-20.md) for current decisions and dated evidence.
+The October 20 pilot and [October 21 retest](docs/audits/claude-retest-observations-2026-10-21.json) include continuity follow-ups. They found review-selection and evidence errors; the later GCP answer also exceeded its supplied contract. These bounded observations do not establish long-session reliability or qualify the profile. The [next diagnostic plan](docs/audits/claude-routing-contract-retest-plan-2026-10-21.md) remains unrun, and the broader [turn-depth study](docs/turn-depth-study.md) remains separate. Read the [readiness record](docs/release-readiness-2026-10-26.md) for current decisions and dated evidence.
 
 We do not claim that these skills improve your results. That claim would need a separate study with complete runs and human review. That study has not been run.
 

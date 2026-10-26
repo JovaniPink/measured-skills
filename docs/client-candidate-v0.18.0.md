@@ -1,5 +1,17 @@
 # Measured Skills owned workflow candidate
 
+## Current planning checkpoint, October 26
+
+The candidate contains 88 skills in 11 packs: 88 Codex and Claude skills and
+71 implicit Antigravity skills, with 17 explicit-only exclusions. Read the
+[current gate ledger](release-readiness-2026-10-26.md) for source decisions,
+accepted originality scope, failed client observations, and remaining work.
+The records below retain their dated counts and decisions; pending-originality
+wording predates the exact maintainer acceptance and is not a renewed hold.
+No new client qualification or release is established by this documentation.
+
+## Historical candidate checkpoints
+
 Catalog version: 0.18.0
 
 Prepared: 2026-09-30

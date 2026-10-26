@@ -71,7 +71,10 @@ class FinishWorkTests(unittest.TestCase):
         ledger = json.loads((ROOT / 'docs/audits/finish-work-source-pins-2026-10-26.json').read_text())
         before = json.loads(subprocess.check_output(
             ['git', 'show', ledger['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT))
-        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        # Bind the historical addition to its retained checkpoint, not later reviewed repins.
+        current = json.loads(subprocess.check_output(
+            ['git', 'show', '56aa6a9fb8462875edd05984d162acc3fc140eee:catalog/upstream-pins.json'],
+            cwd=ROOT))
         expected = {r['source_url']: r for r in before['sources']}
         self.assertEqual(set(PROMPT_SOURCES), {r['source_url'] for r in ledger['records']})
         self.assertEqual(2, len(ledger['records']))
