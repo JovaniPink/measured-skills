@@ -177,15 +177,15 @@
       "action": "Retain separate client acceptance; do not migrate accounts or infer parity from the announcement. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
     },
     {
-      "url": "https://antigravity.google/docs/skills/",
+      "url": "https://antigravity.google/docs/skills.md",
       "status": "reviewed",
-      "ownership_check": "Google Antigravity documentation is the official authority for Antigravity skill discovery and invocation.",
+      "ownership_check": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
       "affected_skills": [
         "portable-skill-authoring",
         "skill-security-review"
       ],
-      "finding": "Reviewed 2026-10-26: Antigravity documents automatic skill use, manual slash selection, and different workspace/global loading paths.",
-      "action": "Current content was reviewed, but response binding remains held. Retain the original pin; see docs/audits/source-review-2026-10-26.json. Do not infer installed invocation controls or client acceptance."
+      "finding": "Reviewed 2026-10-26: The official Markdown retains discovery/activation, metadata, and App/CLI/IDE locations, including manual slash selection and autonomous activation. It does not document a verified explicit-only enforcement control.",
+      "action": "Retain all 17 exclusions and independent loading checks. A publisher claim that naming a skill ensures use does not establish this catalog's observed routing or isolation. Replace the unstable HTML binding with the complete official Markdown response, using existing content-sha256 after declared HTTP decoding. See docs/audits/antigravity-source-resolution-2026-10-26.json; preserve the global review-age date."
     },
     {
       "url": "https://agent-plugins.org/specification",
@@ -199,15 +199,15 @@
       "action": "Retain separate native projections and defer a portable proof package until a selected client is tested. Refresh only this reviewed fingerprint; preserve the older global review-age date."
     },
     {
-      "url": "https://antigravity.google/docs/cli/headless/",
+      "url": "https://antigravity.google/docs/cli/headless.md",
       "status": "reviewed",
-      "ownership_check": "Google Antigravity documentation is the official authority for headless CLI output and result behavior.",
+      "ownership_check": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
       "affected_skills": [
         "agent-evaluation-design",
         "claim-verification"
       ],
-      "finding": "Reviewed 2026-10-26: Antigravity headless documentation separates result output from diagnostics; unavailable interactive permission can soft-deny a tool while the command exits successfully.",
-      "action": "Current content was reviewed, but response binding remains held. Retain the original pin; see docs/audits/source-review-2026-10-26.json. Do not infer client acceptance from this review."
+      "finding": "Reviewed 2026-10-26: The official Markdown retains headless output formats, stream events and cumulative counters, continuation, permission soft-denial, terminal status, timeout, and errors. A zero exit can accompany a denied action; a response is not proof that the action ran.",
+      "action": "Retain actual-action and diagnostic evidence, exact installed-version discovery, and separate authorization. No runner, permission bypass, authentication, or model request is introduced. Replace the unstable HTML binding with the complete official Markdown response, using existing content-sha256 after declared HTTP decoding. See docs/audits/antigravity-source-resolution-2026-10-26.json; preserve the global review-age date."
     },
     {
       "url": "https://ai.google.dev/gemini-api/docs/agents",
@@ -243,15 +243,15 @@
       "action": "Keep model selection out of portable instructions and record current execution-envelope facts per run. Refresh only this reviewed fingerprint; preserve the older global review-age date."
     },
     {
-      "url": "https://www.antigravity.google/docs/sdk/overview",
+      "url": "https://antigravity.google/docs/sdk/overview.md",
       "status": "reviewed",
-      "ownership_check": "Google Antigravity documentation is the official authority for the Antigravity SDK harness.",
+      "ownership_check": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
       "affected_skills": [
         "agent-evaluation-design",
         "google-adk-engineering-profile"
       ],
-      "finding": "Reviewed 2026-10-26: Antigravity SDK documentation describes stateful orchestration, tools, permissions, subagents, and a managed API integration.",
-      "action": "Current content was reviewed, but response binding remains held. Retain the original pin; see docs/audits/source-review-2026-10-26.json. Do not infer client acceptance from this review."
+      "finding": "Reviewed 2026-10-26: The official Markdown retains SDK setup, stateful agent lifecycle, enterprise routing, and linked examples, while separating the managed API from the local Python SDK.",
+      "action": "Retain SDK/CLI separation, provider access and spend boundaries. Examples require credentials and may spend; they were inspected as text and not executed. Replace the unstable HTML binding with the complete official Markdown response, using existing content-sha256 after declared HTTP decoding. See docs/audits/antigravity-source-resolution-2026-10-26.json; preserve the global review-age date."
     },
     {
       "url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
@@ -438,15 +438,15 @@
       "action": "Retain exact installed-server discovery. The mutable current URL cannot identify the project server or justify an upgrade. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
     },
     {
-      "url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "url": "https://antigravity.google/docs/plugins.md",
       "status": "reviewed",
-      "ownership_check": "Official Google Antigravity documentation; this destination is linked by the legacy guide and was read directly.",
+      "ownership_check": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
       "affected_skills": [
         "portable-skill-authoring",
         "skill-security-review"
       ],
-      "finding": "Reviewed 2026-10-26: Antigravity plugin documentation describes plugin components, marketplace/local installation, app/CLI synchronization, and lifecycle commands.",
-      "action": "Current content was reviewed, but response binding remains held. Retain the original pin; see docs/audits/source-review-2026-10-26.json. Do not infer client acceptance from this review."
+      "finding": "Reviewed 2026-10-26: The official selector-free Markdown retains the complete manifest, component schema, all three client sections, inventories, and installation/synchronization guidance. Six responses match. Compared with the rejected tab-selected candidate, its only line change uses Automations as the adjacent app navigation label. No corresponding canonical navigation instruction needs repair.",
+      "action": "Retain the current instruction-only package boundaries. Do not add hooks, servers, or scripts because the platform supports them; documentation is not proof of installed synchronization or isolation. Use the complete selector-free publisher document, not a filtered excerpt. Retain future mismatches as blocking; this bounded sample is not a stability guarantee. Complete document SHA-256 binding; see docs/audits/antigravity-source-resolution-2026-10-26.json. Preserve the global review-age date."
     },
     {
       "url": "https://nextjs.org/docs/app/guides/ai-agents.md",

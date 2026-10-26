@@ -709,13 +709,13 @@ class CatalogTests(unittest.TestCase):
             "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
             "https://opentelemetry.io/docs/concepts/signals/",
             "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-            "https://antigravity.google/docs/skills/",
+            "https://antigravity.google/docs/skills.md",
             "https://agent-plugins.org/specification",
-            "https://antigravity.google/docs/cli/headless/",
+            "https://antigravity.google/docs/cli/headless.md",
             "https://ai.google.dev/gemini-api/docs/agents",
             "https://docs.cloud.google.com/data-agent-kit/overview",
             "https://ai.google.dev/gemini-api/docs/latest-model",
-            "https://www.antigravity.google/docs/sdk/overview",
+            "https://antigravity.google/docs/sdk/overview.md",
             "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
             "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
         }
@@ -736,7 +736,7 @@ class CatalogTests(unittest.TestCase):
             "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
             "https://slsa.dev/spec/v1.2/provenance",
             "https://www.postgresql.org/docs/current/",
-            "https://www.antigravity.google/docs/plugins?tab=cli",
+            "https://antigravity.google/docs/plugins.md",
         })
         expected.update({
             "https://nextjs.org/docs/app/guides/ai-agents.md",

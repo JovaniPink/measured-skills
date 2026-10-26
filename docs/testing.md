@@ -57,6 +57,14 @@ uses this mode. Keep changed or unavailable sources visible; an offline pass or
 a green catalog job does not clear an online freshness hold. This distinction
 does not change the existing freshness policy or authorize pin replacement.
 
+Content hashes cover complete document bytes after declared HTTP content decoding.
+The fetcher requests identity encoding and also decodes gzip when the publisher
+returns it. Unsupported coding and corrupt gzip fail closed. This is transport
+decoding, not a new normalization rule: whitespace, line endings, and all decoded
+members still affect full-content hashes. Header-based pins retain their existing
+behavior. Official Markdown replacements require individual content/coverage review;
+a later mismatch is still blocking.
+
 ## Antigravity preview checks
 
 The unit suite also checks the offline preview builder: selected source and reference files survive unchanged, explicit-only skills are rejected before output is written, unknown skills are rejected, repeated builds match, and old output cannot be overwritten. Build a review copy with `python3 scripts/build_antigravity.py --output dist/antigravity-review`. Use a new folder for each build. This does not install a plugin or prove client loading.

@@ -18,6 +18,13 @@ Each public entry records source URL, license, pinned revision or an explicit no
 
 Online freshness pins use a strong ETag, a meaningful last-modified value, a byte-level content hash, or a reviewed normalized-content hash. Normalization is limited to named per-request HTML values such as session tokens and telemetry timing; regression tests require substantive authority-content changes to alter the marker.
 
+Content hashing uses complete document bytes after declared HTTP identity/gzip
+decoding; unsupported coding and corrupt gzip remain failures. No content is
+removed by transport decoding. A publisher's complete Markdown representation
+may replace an HTML binding only after individual authority and coverage review,
+with its old decision and failed observations retained. This does not certify
+future stability or receiving-client behavior.
+
 Use only owned original work and primary authorities needed for format, interoperability, or correctness: laws, specifications, standards bodies, and official platform documentation. Discovery links, community discussions, and third-party skill catalogs are not implementation authorities.
 
 ## Public implementation and research boundary

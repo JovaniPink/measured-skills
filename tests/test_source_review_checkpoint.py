@@ -11,6 +11,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '56aa6a9fb8462875edd05984d162acc3fc140eee'
+CHECKPOINT = '13c3e4e36c82782c17b197fdeb1159b3d388d6d0'
 FULL_BODY_BINDINGS = {
     'https://git-scm.com/docs/git-worktree': 'last-modified',
     'https://adk-labs.github.io/adk-docs/': 'etag',
@@ -21,7 +22,10 @@ FULL_BODY_BINDINGS = {
 class SourceReviewCheckpointTests(unittest.TestCase):
     def setUp(self) -> None:
         self.ledger = json.loads((ROOT / 'docs/audits/source-review-2026-10-26.json').read_text())
-        self.current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        # Later representation changes must not rewrite this retained four-hold checkpoint.
+        self.current_bytes = subprocess.check_output(
+            ['git', 'show', CHECKPOINT + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.current = json.loads(self.current_bytes)
         self.before = json.loads(subprocess.check_output(
             ['git', 'show', BASE + ':catalog/upstream-pins.json'], cwd=ROOT))
 
@@ -109,7 +113,7 @@ class SourceReviewCheckpointTests(unittest.TestCase):
         payload = (ROOT / ledger['closeout_report']).read_bytes()
         self.assertEqual(ledger['closeout_report_sha256'], hashlib.sha256(payload).hexdigest())
         self.assertEqual(ledger['closeout_pins_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+                         hashlib.sha256(self.current_bytes).hexdigest())
         report = json.loads(payload)
         self.assertTrue(report['online'])
         self.assertEqual('fail', report['result'])

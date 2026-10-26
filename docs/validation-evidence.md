@@ -8,9 +8,36 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 275 regression tests.
+Current test suite: 285 regression tests.
 
-## October 26 source review and current release gates
+## October 26 Antigravity source resolution
+
+The [individual representation review](audits/antigravity-source-resolution-2026-10-26.json)
+replaces four unstable HTML bindings with complete official Markdown documents.
+The [new closeout](audits/antigravity-source-closeout-2026-10-26.json) records all
+four matching: 62 sources pass, two newly changed sources remain held, and none
+are unavailable. The remaining sources are OpenAI prompting and Swift Evolution;
+their pins are unchanged. The earlier four-hold receipt below is historical.
+
+An intermediate scan caught alternating plugin navigation labels on the tab-selected
+Markdown URL. The selected URL omits that selector and returned six identical
+complete documents. Failed observations remain in the audit; the bounded sample
+is not a promise of future stability or installed-client behavior.
+
+A failing regression exposed gzip-encoded responses being hashed before decoding.
+The checker now requests identity encoding and decodes declared gzip before
+content hashing. Unsupported encodings and corrupt gzip fail closed. Tests cover
+full decoded bytes, trailing bytes, concatenated members, existing normalization,
+and pass/changed/blocked reports. No normalization rule, clock reset, or bulk repin
+was added. Ten new tests cover transport and exact source transitions; historical
+source decisions remain checked at their retained revision. Final checks and
+exact-head CI are recorded in the draft PR after completion.
+
+Canonical skills, generated packages, profiles, frozen studies, and the accepted
+originality packet are unchanged. Source catalogs require a new clean-source
+manifest binding. No model trial, billing change, installation, or release occurred.
+
+## October 26 earlier source review checkpoint
 
 The [current gate ledger](release-readiness-2026-10-26.md) consolidates source,
 originality, client, and release boundaries. The [individual source review](audits/source-review-2026-10-26.json)

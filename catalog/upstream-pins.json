@@ -55,14 +55,24 @@
       "marker_value": "\"331bcba1c60861647bddb4fdba75e1f3\""
     },
     {
-      "source_url": "https://antigravity.google/docs/cli/headless/",
-      "marker_kind": "etag",
-      "marker_value": "\"IlmsFA\""
+      "source_url": "https://antigravity.google/docs/cli/headless.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9"
     },
     {
-      "source_url": "https://antigravity.google/docs/skills/",
-      "marker_kind": "etag",
-      "marker_value": "\"IlmsFA\""
+      "source_url": "https://antigravity.google/docs/plugins.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/sdk/overview.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/skills.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2"
     },
     {
       "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
@@ -268,16 +278,6 @@
       "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
       "marker_kind": "normalized-content-sha256",
       "marker_value": "1101530b1d70fe1c8be470a821e8c6cb0593023922f72adfc98db1cc18bc2447"
-    },
-    {
-      "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
-      "marker_kind": "etag",
-      "marker_value": "\"IlmsFA\""
-    },
-    {
-      "source_url": "https://www.antigravity.google/docs/sdk/overview",
-      "marker_kind": "etag",
-      "marker_value": "\"IlmsFA\""
     },
     {
       "source_url": "https://www.drupal.org/docs/develop",
