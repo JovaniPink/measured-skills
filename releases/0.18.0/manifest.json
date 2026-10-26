@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "fbb25942fb46d436d4f5c66729b2eb5663353dd0",
-  "created_on": "2026-10-21",
+  "source_commit": "62cee963e4295d30f5545fc1989e263ad6197060",
+  "created_on": "2026-10-26",
   "artifacts": [
     {
       "kind": "file",
@@ -32,7 +32,7 @@
     {
       "kind": "file",
       "path": "catalog/evidence.json",
-      "sha256": "7f63f6aabbbd6a6369b86bf0c750dfc66b6cc2f7c1a7e9007fa05b38f39c0ab9"
+      "sha256": "67207e876adc8008003df16dadea1c507f9333df314ef6d543951b4cf8418bd1"
     },
     {
       "kind": "file",
@@ -42,7 +42,7 @@
     {
       "kind": "file",
       "path": "catalog/packs.json",
-      "sha256": "466beb117d9f02885ba51d6eeb54addd19f1ba887382c6eaa4abc44d1ef89294"
+      "sha256": "5676794fbbf9486b58b1d525de08701d3f2b0f17338a3c530d03c334faff428c"
     },
     {
       "kind": "file",
@@ -52,7 +52,7 @@
     {
       "kind": "file",
       "path": "catalog/profiles.json",
-      "sha256": "dc6464e7dc203080ae6a8bc4c8ad8f332a8c550de92397a5ede5654589ac8f44"
+      "sha256": "5d7732792de238e3de635150ec94069515f1853f698726b074ac8846337bbf80"
     },
     {
       "kind": "file",
@@ -62,17 +62,17 @@
     {
       "kind": "file",
       "path": "catalog/skills.json",
-      "sha256": "56fbdcf0fd1817da8e69f0657db8b7289ee5205105316f90ac0abd9d7df97a25"
+      "sha256": "6f0a586b714beb2ddd07a2d84076936842c93b70362c8e76d3bc9183939d1f23"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "21ff8186e33c22783c15273703ff64be36164284dbe4c22d710f01c66ef94e57"
+      "sha256": "b4386c9701143cfa673ef4de318fe23d7c3f039a89832af64e99dacb5ec1ce03"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "3b837ec11614e30daa3c409936efe156ab97de2a18fd7a77d24c833c8b298a53"
+      "sha256": "1e5d07f4e12b02b89c1c612765d9725f184877a072fd6fc68dee734b9c138e76"
     },
     {
       "kind": "zip",
@@ -213,6 +213,11 @@
       "kind": "zip",
       "path": "dist/claude-ai/domain-vocabulary-modeling-0.18.0.zip",
       "sha256": "0f52e3dda0685c780dbedfc6babd29d9e8fd5f43c36656bfb5a1a4925cf708af"
+    },
+    {
+      "kind": "zip",
+      "path": "dist/claude-ai/engineering-prompt-review-0.18.0.zip",
+      "sha256": "ed0d24620e0fe2d58756289803825b51a09764b0e9d825e0edc57fe37e362a96"
     },
     {
       "kind": "zip",
@@ -512,7 +517,7 @@
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "56ca4ecbd37daec0518bf9b794c1767449540ebd86c94546aacc3ab22bb472f4"
+      "sha256": "6ed78bf3297988fac7e3cd7c8af8eaa5ef26afc50750b2def1760733e54e6779"
     },
     {
       "kind": "file",
@@ -562,7 +567,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-reasoning",
-      "sha256": "512044a452bfb43255e7ab0a52672c6e36d9bddc7955323cd117d1710076cb91"
+      "sha256": "4522c8a48c13a46b75d1412289d716b9e1c1cce4c33118fd43b2be85129667b5"
     },
     {
       "kind": "tree",
@@ -617,7 +622,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-reasoning",
-      "sha256": "146e89b863e06f8a1cf89b73b8fb3a27f0f6c945ba4286251b2460d6a329527e"
+      "sha256": "200b4c4193dccc366972da2475ca52f7d7217ceb2c18b28c687504b3b5a462d9"
     },
     {
       "kind": "tree",
@@ -672,7 +677,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-reasoning",
-      "sha256": "6c482387be2fc37e6510c1ca1fda44303415b8bf835b98cae96789b15189cbb5"
+      "sha256": "5884ea4623708adf60776598c2af0f853f735da73fdd3df7ba32b85bddce1a82"
     },
     {
       "kind": "tree",
@@ -692,7 +697,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "045a563c4f447975c689711f789948a7cf07bc0711931ffad6874cb5a7071a59"
+      "sha256": "cc6ab62fb52dbeb1e2f29a94003a0c3de1f4374d7c0217215531796960fdf72b"
     }
   ]
 }
