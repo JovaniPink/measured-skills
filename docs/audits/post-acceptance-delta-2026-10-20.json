@@ -1,12 +1,12 @@
 {
   "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
-  "previous_head": "cace51e6e5cf2c29f19097fe6cb7650a2e3bcfe7",
+  "previous_head": "1a9df7d196a9d118424524d1d11a27a541f10f6e",
   "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78",
   "reviewed_on": "2026-10-26",
   "status": "scoped_technical_delta_review",
   "reviewer": "Codex-assisted technical review",
   "new_maintainer_acceptance": false,
-  "review_method": "Compare current payload bytes with the exact accepted inventory; retain unchanged per-file reviews and review the new documentation. This follow-up adds client-specific feature workflow prompts, links navigation, corrects current-facing originality/continuity summaries, and removes unsupported Antigravity invocation expectations while preserving historical observations. Official client and engineering documentation was checked October 26, 2026. Canonical skills, generated artifacts, release-manifest binding, source pins, frozen studies, accepted decision bytes, and the unrun retest proposal remain unchanged. No model trial, installed-client acceptance, new maintainer acceptance, or release qualification is inferred.",
+  "review_method": "Compare current payload bytes with the exact accepted inventory; retain unchanged per-file reviews and review the new documentation. This follow-up adds client-specific feature workflow prompts, links navigation, corrects current-facing originality/continuity summaries, and removes unsupported Antigravity invocation expectations while preserving historical observations. Official client and engineering documentation was checked October 26, 2026. Canonical skills, generated artifacts, release-manifest binding, source pins, frozen studies, accepted decision bytes, and the unrun retest proposal remain unchanged. No model trial, installed-client acceptance, new maintainer acceptance, or release qualification is inferred. Fresh documentation review clarifies missing-plan recovery, final verification after the repair loop, exact draft PR targets, local-check authority, and self-review limits. No private project examples or evidence enter the guide.",
   "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, independent human grading, catalog qualification, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
   "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
   "changes": {
@@ -272,8 +272,8 @@
     },
     "docs/feature-development-workflow.md": {
       "before_sha256": null,
-      "after_sha256": "81047447b360ed5c05ae79c411d858b5e72f2f0782e97aea4259ebdd99d33e33",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+      "after_sha256": "a88708886c7ae59a79b14c9d0886dc1ce5b723962766640220c532b515f86fce",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. Follow-up wording is original local documentation; it narrows ambiguous actions and preserves unavailable evidence rather than asserting new client behavior."
     },
     "docs/quickstart.md": {
       "before_sha256": "d2e9520c94df63e41d319517534e3ad638839ce7e74e598fcb1246d0c59b6a23",

@@ -36,11 +36,23 @@ a client has passed this workflow. The catalog remains a 0.18.0 candidate; see
 | `[BRANCH]` | The intended feature branch; use the repository's branch policy |
 | `[BASE_REVISION]` | The branch or commit to compare against; have the assistant resolve and record its exact commit |
 | `[DESTINATION]` | The authorized remote repository and PR base branch |
+| `[PR_TARGET]` | One exact existing draft PR URL, or `new draft PR` |
 
 Do not invent a plan directory for every project. Reuse an issue or specification
 when it already holds the contract. If a saved plan no longer matches the code,
 reconcile the difference before implementing it. For a small, clear change,
 combine framing and planning using the fast path.
+
+If planning mode returns an unsaved plan in chat, approve that exact plan and
+supply it with the implementation request. The assistant may save it in
+`[PLAN_FILE]` before editing code. If neither the file nor the approved text is
+available, recover the plan first; do not reconstruct it from a vague summary.
+
+An existing PR needs an exact target. A repository's open-PR page is a queue,
+not permission to change every PR. Check the target's repository, branch, base,
+and current head. Keep unrelated PRs intact. Choose a feature-workflow skill for
+implementation; an artifact-template skill formats a deliverable and does not
+replace implementation planning, execution, or review.
 
 ### A running example
 
@@ -99,6 +111,15 @@ Test-driven development is a choice: first show a meaningful failing test, then
 implement the behavior and keep it passing while improving the code. Do not
 force this approach onto a prose edit or pretend an unavailable test ran.
 Choose checks based on the change's risks and the repository's requirements.
+Use authorized local checks first. A repository command that accesses providers,
+changes shared data, or incurs cost needs authority for that action. Mark a
+blocked check incomplete instead of bypassing permissions. In the checks-only
+stage, use a nonwriting check mode where available; if a required command can
+rewrite tracked files, report the need for a separate authorized repair step.
+
+A review pass by the author is self-review. A separate reviewer can provide
+independent review, but requesting one, sending messages, and sharing context
+need their own authority. The prompts below do not authorize coordination.
 
 ## Select skills without guessing
 
@@ -163,8 +184,9 @@ the current mode prevents saving, return the plan in chat and state that it is u
 
 ```text
 $measured-engineering-delivery:plan-execution Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH].
-First check that the plan matches the current code and repository instructions. Complete each
-authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
+If the file is missing, save the exact approved plan supplied in chat there first; if neither
+is available, stop and ask for the plan. Check it against current code and instructions. Complete
+each authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
 Preserve unrelated changes. Resolve routine details within scope; ask before material scope,
 permission, or cost changes. Report failures and unavailable checks. Stop with local changes
 ready for review; do not commit, push, deploy, or release.
@@ -206,12 +228,14 @@ checks, or publish.
 
 ```text
 $measured-skills:publish-change-safely In [REPOSITORY], commit and push only the reviewed
-feature changes on [BRANCH] to [DESTINATION], and open or update its draft PR. Inspect
-instructions, identity, exact diff, required checks, and remote state first. Preserve unrelated
-work; no force-push. If required evidence is missing or failing, report the gap before
-publication. Describe behavior, checks, risks, and unverified work. Verify the remote commit and
-inspect CI for that exact head; report pending or failed checks accurately. Keep the PR draft.
-Do not merge, deploy, tag, or release.
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
 ```
 
 ### Three-request fast path
@@ -236,25 +260,28 @@ saving, return the plan in chat and state that it is unsaved.
 
 ```text
 $measured-engineering-delivery:plan-execution Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH]
-after checking it against current code and instructions. Complete each slice with focused tests
-and documentation; preserve unrelated work. Then use cross-stack-quality-gates,
-code-change-review against [BASE_REVISION], and claim-verification where available. Keep the
-review findings-only, then repair confirmed findings within the approved scope, rerun affected
-checks, and review the changed code again. Record actual skill loading, results, missing checks,
-deviations, and unfinished criteria. Ask before material scope, permission, or cost changes.
-Finish with reviewed local changes; do not commit, push, deploy, or release.
+after checking it against current code and instructions. If the file is missing, first save the
+exact approved chat plan there; if neither is available, stop and ask for the plan. Complete each
+slice with focused tests and documentation; preserve unrelated work. Use cross-stack-quality-gates,
+then code-change-review against [BASE_REVISION], where available. Keep review findings-only.
+Repair confirmed findings within scope, rerun affected checks, and review the revised diff.
+Only then use claim-verification against the final code, criteria, findings, and current receipts.
+Record actual skill loading, self-review limits, missing checks, deviations, and unfinished work.
+Ask before material scope, permission, or cost changes. Stop before commit, push, deploy, or release.
 ```
 
 **3. Publish the reviewed change**
 
 ```text
 $measured-skills:publish-change-safely In [REPOSITORY], commit and push only the reviewed
-feature changes on [BRANCH] to [DESTINATION], and open or update its draft PR. Inspect
-instructions, identity, exact diff, required checks, and remote state first. Preserve unrelated
-work; no force-push. If required evidence is missing or failing, report the gap before
-publication. Describe behavior, checks, risks, and unverified work. Verify the remote commit and
-inspect CI for that exact head; report pending or failed checks accurately. Keep the PR draft.
-Do not merge, deploy, tag, or release.
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
 ```
 
 ## Claude Code prompts
@@ -294,8 +321,9 @@ the current mode prevents saving, return the plan in chat and state that it is u
 
 ```text
 /measured-engineering-delivery:plan-execution Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH].
-First check that the plan matches the current code and repository instructions. Complete each
-authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
+If the file is missing, save the exact approved plan supplied in chat there first; if neither
+is available, stop and ask for the plan. Check it against current code and instructions. Complete
+each authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
 Preserve unrelated changes. Resolve routine details within scope; ask before material scope,
 permission, or cost changes. Report failures and unavailable checks. Stop with local changes
 ready for review; do not commit, push, deploy, or release.
@@ -337,12 +365,14 @@ checks, or publish.
 
 ```text
 /measured-skills:publish-change-safely In [REPOSITORY], commit and push only the reviewed
-feature changes on [BRANCH] to [DESTINATION], and open or update its draft PR. Inspect
-instructions, identity, exact diff, required checks, and remote state first. Preserve unrelated
-work; no force-push. If required evidence is missing or failing, report the gap before
-publication. Describe behavior, checks, risks, and unverified work. Verify the remote commit and
-inspect CI for that exact head; report pending or failed checks accurately. Keep the PR draft.
-Do not merge, deploy, tag, or release.
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
 ```
 
 ### Three-request fast path
@@ -367,25 +397,28 @@ saving, return the plan in chat and state that it is unsaved.
 
 ```text
 /measured-engineering-delivery:plan-execution Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH]
-after checking it against current code and instructions. Complete each slice with focused tests
-and documentation; preserve unrelated work. Then use cross-stack-quality-gates,
-code-change-review against [BASE_REVISION], and claim-verification where available. Keep the
-review findings-only, then repair confirmed findings within the approved scope, rerun affected
-checks, and review the changed code again. Record actual skill loading, results, missing checks,
-deviations, and unfinished criteria. Ask before material scope, permission, or cost changes.
-Finish with reviewed local changes; do not commit, push, deploy, or release.
+after checking it against current code and instructions. If the file is missing, first save the
+exact approved chat plan there; if neither is available, stop and ask for the plan. Complete each
+slice with focused tests and documentation; preserve unrelated work. Use cross-stack-quality-gates,
+then code-change-review against [BASE_REVISION], where available. Keep review findings-only.
+Repair confirmed findings within scope, rerun affected checks, and review the revised diff.
+Only then use claim-verification against the final code, criteria, findings, and current receipts.
+Record actual skill loading, self-review limits, missing checks, deviations, and unfinished work.
+Ask before material scope, permission, or cost changes. Stop before commit, push, deploy, or release.
 ```
 
 **3. Publish the reviewed change**
 
 ```text
 /measured-skills:publish-change-safely In [REPOSITORY], commit and push only the reviewed
-feature changes on [BRANCH] to [DESTINATION], and open or update its draft PR. Inspect
-instructions, identity, exact diff, required checks, and remote state first. Preserve unrelated
-work; no force-push. If required evidence is missing or failing, report the gap before
-publication. Describe behavior, checks, risks, and unverified work. Verify the remote commit and
-inspect CI for that exact head; report pending or failed checks accurately. Keep the PR draft.
-Do not merge, deploy, tag, or release.
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
 ```
 
 ## Antigravity prompts
@@ -429,7 +462,8 @@ and state that it is unsaved.
 ```text
 In [REPOSITORY] on [BRANCH], implement the feature described in [PLAN_FILE]. I authorize local
 source, test, and documentation edits for that feature. Inspect project instructions and confirm
-the plan still matches the code. Preserve unrelated work. Test the changed behavior and report
+the plan still matches the code. If missing, first save the exact approved chat plan there; if
+neither is available, stop and ask for the plan. Preserve unrelated work. Test the behavior and report
 results, limitations, and unfinished criteria. Ask before expanding scope or permissions. Finish
 with local changes ready for review; do not commit, push, deploy, or release.
 ```
@@ -472,11 +506,13 @@ Return a concise evidence summary; do not edit, run new checks, or publish.
 
 ```text
 In [REPOSITORY], I authorize committing and pushing the reviewed feature on [BRANCH] to
-[DESTINATION] and opening or updating its draft PR. Inspect project instructions, Git status,
-identity, diff, checks, and remote state first. Preserve unrelated work and use a normal push.
-Report missing or failing required checks before publishing. Include behavior, checks, risks,
-and limits in the PR. Verify the remote commit and CI for that head, reporting pending or failed
-results. Keep it draft; do not merge, deploy, tag, or release.
+[DESTINATION], creating or updating only [PR_TARGET]. Inspect instructions, identity, diff,
+checks, and remote state. Confirm repository and base; for an existing PR, verify its head
+branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated work and PRs. Stop before commit
+or push if required local evidence is missing or failing, unless I explicitly authorize a draft
+documenting those gaps. Use a normal push. Describe behavior, checks, risks, and limits. Verify
+the remote commit and CI for that exact head; report pending or failed results accurately.
+Keep it draft. Do not send coordination messages, request reviews, merge, deploy, tag, or release.
 ```
 
 ### Three-request fast path
@@ -501,23 +537,27 @@ prevents saving, return the plan in chat and state that it is unsaved.
 
 ```text
 In [REPOSITORY] on [BRANCH], implement [PLAN_FILE]. I authorize local feature, test, and
-documentation changes. Inspect instructions and current code first; preserve unrelated work. Run
-focused tests during implementation. Use the available cross-stack-quality-gates,
-code-change-review against [BASE_REVISION], and claim-verification skills to check the result.
-Review without editing first, then fix confirmed findings within scope and repeat affected
-checks and review. Report actual loading, evidence, unavailable checks, and unfinished work. Ask
-before expanding scope, permissions, or cost. Stop before commit, push, deployment, or release.
+documentation changes. Inspect instructions and current code first. If the file is missing,
+first save the exact approved chat plan there; if neither is available, stop and ask for the plan.
+Preserve unrelated work and run focused tests during implementation. Use the available
+cross-stack-quality-gates, then code-change-review against [BASE_REVISION]. Review without editing,
+fix confirmed findings within scope, and repeat affected checks and review. Only then use
+claim-verification against the final code, criteria, findings, and current receipts. Report actual
+loading, self-review limits, unavailable checks, and unfinished work. Ask before expanding scope,
+permissions, or cost. Stop before commit, push, deployment, or release.
 ```
 
 **3. Publish the reviewed change**
 
 ```text
 In [REPOSITORY], I authorize committing and pushing the reviewed feature on [BRANCH] to
-[DESTINATION] and opening or updating its draft PR. Inspect instructions, identity, current
-changes, required checks, and remote state; preserve unrelated work. Report missing or failing
-required checks before publishing. Use a normal push and verify the remote commit. Include
-behavior, evidence, risks, and limits in the PR. Inspect CI for that exact head and report its
-actual state. Keep it draft; do not merge, deploy, tag, or release.
+[DESTINATION], creating or updating only [PR_TARGET]. Inspect instructions, identity, diff,
+checks, and remote state. Confirm repository and base; for an existing PR, verify its head
+branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated work and PRs. Stop before commit
+or push if required local evidence is missing or failing, unless I explicitly authorize a draft
+documenting those gaps. Use a normal push. Describe behavior, checks, risks, and limits. Verify
+the remote commit and CI for that exact head; report pending or failed results accurately.
+Keep it draft. Do not send coordination messages, request reviews, merge, deploy, tag, or release.
 ```
 
 ## Repair findings without losing the review boundary
