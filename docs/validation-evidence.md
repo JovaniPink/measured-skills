@@ -8,7 +8,31 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 271 regression tests.
+Current test suite: 275 regression tests.
+
+## October 26 source review and current release gates
+
+The [current gate ledger](release-readiness-2026-10-26.md) consolidates source,
+originality, client, and release boundaries. The [individual source review](audits/source-review-2026-10-26.json)
+repairs 29 of 33 changed bindings and retains four unstable Antigravity holds.
+The [online closeout](audits/source-check-closeout-2026-10-26.json) has 60 matches,
+four changes, and no unavailable sources; the online gate remains failed.
+
+Four new regression tests bind the exact pin transition and final scan, and
+reject unrecorded changes, missing/divergent observations, and rewritten historical
+markers. The first full run caught two stale test/evidence inventories: the review
+URL set omitted the newly recorded Go and Adobe decisions, and this suite count
+still said 271. Both inventories are corrected without changing production
+validators or relaxing assertions. Final local and exact-head CI results are
+recorded in the draft PR. The original two-source addition remains checked at its
+retained historical revision; later reviewed repins are checked separately.
+
+Canonical skills, generated projections/archives, frozen cases, and exact
+originality acceptance are unchanged. Source catalogs require the manifest
+refresh despite unchanged package bytes. Native format receipts below remain
+historical for unchanged canonical inputs; skills-ref is absent from PATH, and
+installed Codex plugin help provides no standalone validation command. No model,
+installation, billing, or release action occurred.
 
 ## October 26 bounded-maintenance fresh review
 

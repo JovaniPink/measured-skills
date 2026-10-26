@@ -757,6 +757,10 @@ class CatalogTests(unittest.TestCase):
             'https://developers.openai.com/api/docs/guides/prompt-engineering',
             'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md',
         })
+        expected.update({
+            'https://experienceleague.adobe.com/en/docs/experience-manager',
+            'https://go.dev/doc/',
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():
