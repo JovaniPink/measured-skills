@@ -6,7 +6,7 @@
   "status": "scoped_technical_delta_review",
   "reviewer": "Codex-assisted technical review",
   "new_maintainer_acceptance": false,
-  "review_method": "Retain prior per-file delta reviews and accepted snapshot bytes; review the finish-work guide, four routes, twelve fictional cases, new original prompt-review skill, fourteen-skill profile, three composition recipes, exact source allowances and stable source pins, generated projections and archive, regression-first validation, and historical test binding. See finish-work-coverage-2026-10-26.md for research, expression/licensing review, and limits. No installed skill, model trial, new maintainer acceptance, or release qualification is inferred.",
+  "review_method": "Retain prior per-file delta reviews and accepted snapshot bytes. Review the five existing skill changes, two self-contained references, bounded-maintenance prompts, primary-source ledger, twelve prepared scenarios, generated projections/archives, and export regressions. See bounded-pr-maintenance-2026-10-26.md. No model trial, installation, new maintainer acceptance, or release qualification is inferred.",
   "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, independent human grading, catalog qualification, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
   "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
   "changes": {
@@ -22,8 +22,8 @@
     },
     "catalog/packs.json": {
       "before_sha256": "da1913d9b56893d25430fb8236a4b1798c2bbf20fe9e03e0be3ff6ad7f4f3966",
-      "after_sha256": "5676794fbbf9486b58b1d525de08701d3f2b0f17338a3c530d03c334faff428c",
-      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+      "after_sha256": "eba7986156431eb8f5e71a08c5d20eb93851d6e5fca722f027d7e88f6bd871ad",
+      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Recompute pack/recipe/profile discovery measurements after the orchestration description update. No selections, invocation classes, or behavioral evidence change."
     },
     "catalog/profiles.json": {
       "before_sha256": "20670199b1ebe47fec81ceb37c7495c6e12045d3bc541902f193c6abea8c5c8e",
@@ -47,8 +47,8 @@
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "44642043e50f2df1dba4ab90598a86afd283e3dda45faf6546b795f8df640ede",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 finish-work increment: Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+      "after_sha256": "df0d17015c47aa89e45f2f3855c990228a9c194c7c30da85c4c551e5331ff778",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 finish-work increment: Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
     },
     "dist/claude-ai/claim-verification-0.18.0.zip": {
       "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
@@ -57,8 +57,8 @@
     },
     "dist/claude-ai/code-change-review-0.18.0.zip": {
       "before_sha256": "ae6a75f2f8a8a16d8f40785078d5839730a602dfcbf5319e47fbc3b8f2cb2296",
-      "after_sha256": "c615c39005cdd90205a0be8b0926e9e876483e9ba733113347f163a1b4613341",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced."
+      "after_sha256": "3a8c388bd432586877f312f3c9fd2788f62dc64f00b26252144ad549470254be",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
     },
     "dist/claude-ai/engineering-prompt-review-0.18.0.zip": {
       "before_sha256": null,
@@ -147,8 +147,8 @@
     },
     "docs/daily-agent-operating-model.md": {
       "before_sha256": "b2eeb216162c1847f37e01e2b0e717243b5851940ac470ebdc9b43ab9b8dbf72",
-      "after_sha256": "5997c8173fe7ef060e3361527659f9d63099e59189ca16ac3ed901c7cefba9cd",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "125bca7457d33543df75c8f61e2c31e7db4eec62968e43deca7742a4bee61952",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
     },
     "docs/document-driven-workflow.md": {
       "before_sha256": "566b941372b09cd63b17e1c2e50aa3997d3d150fceb76e76b502b2a1be8fb719",
@@ -157,13 +157,13 @@
     },
     "docs/feature-development-workflow.md": {
       "before_sha256": null,
-      "after_sha256": "949976d77a88d12bb36cc5dcd24bd50fcaac3865ae683c8cf464b94ba0ddaaf3",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. Follow-up wording is original local documentation; it narrows ambiguous actions and preserves unavailable evidence rather than asserting new client behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "be29c2338a70de305726af778a9249150293e3d3e4638c88ba2ec9dc8b8024d4",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. Follow-up wording is original local documentation; it narrows ambiguous actions and preserves unavailable evidence rather than asserting new client behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
     },
     "docs/finish-existing-work.md": {
       "before_sha256": null,
-      "after_sha256": "c1125f68205da37751fb69c7984183b8e65ce2b432f2db7b3873518ca42bf1e7",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "8a2280f90ecfee37c2740d8e5fdd6f355dba6515460abab1246734e034c58a95",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
     },
     "docs/provenance.md": {
       "before_sha256": "d6d5d2a80b3ebe036f83a7377328f9e3ed21b30e9a40e76aaca3c4029d2aa165",
@@ -192,8 +192,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "2c96dadd6413eaa0f075724439b2eabfa27e3f78ff2f1d9d5bff6308646c39d7",
-      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "47351b1771c579500b54bc66a95a66447d59b2dd31ee01898ba9bee85fccfb38",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
     },
     "evals/cases.json": {
       "before_sha256": "5db02bc0bf883c1bf19b5bff66c24430b7149e2990828991a993a41edc837344",
@@ -202,8 +202,8 @@
     },
     "plugins/antigravity/measured-engineering-review/skills/code-change-review/SKILL.md": {
       "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
-      "after_sha256": "e5964250cc14dff640e8f12906f908e38cd97a8f7258d5939a78673770ce0c30",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced."
+      "after_sha256": "ae56589ec16833be166ddad8e407c77859165947876f29325734a717fae4243e",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
     },
     "plugins/antigravity/measured-reasoning/skills/engineering-prompt-review/LICENSE": {
       "before_sha256": null,
@@ -232,8 +232,8 @@
     },
     "plugins/claude/measured-engineering-review/skills/code-change-review/SKILL.md": {
       "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
-      "after_sha256": "e5964250cc14dff640e8f12906f908e38cd97a8f7258d5939a78673770ce0c30",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced."
+      "after_sha256": "ae56589ec16833be166ddad8e407c77859165947876f29325734a717fae4243e",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
     },
     "plugins/claude/measured-reasoning/skills/engineering-prompt-review/LICENSE": {
       "before_sha256": null,
@@ -262,8 +262,8 @@
     },
     "plugins/codex/measured-engineering-review/skills/code-change-review/SKILL.md": {
       "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
-      "after_sha256": "e5964250cc14dff640e8f12906f908e38cd97a8f7258d5939a78673770ce0c30",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced."
+      "after_sha256": "ae56589ec16833be166ddad8e407c77859165947876f29325734a717fae4243e",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
     },
     "plugins/codex/measured-engineering-review/skills/code-change-review/agents/openai.yaml": {
       "before_sha256": "e854ee640fe78f91b783eaf3158dda3f67965ed2ea684768fbf4ac9013597e47",
@@ -307,8 +307,8 @@
     },
     "provenance/catalog.json": {
       "before_sha256": "24faeb3e66d1950b112e0d47734246a6a58d5c96dd7f217585b4c0eea0e4c9fa",
-      "after_sha256": "cc6ab62fb52dbeb1e2f29a94003a0c3de1f4374d7c0217215531796960fdf72b",
-      "expression_and_license_review": "Append original Codex-assisted disclosure for the two post-retest source repairs. Historical authorship records, owned lineage, methods, licenses, sources, pins, review clocks, and exact prior acceptance remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+      "after_sha256": "5aa25f721bb35c9491e83845522d4b76ace815322db5562da02c21a87b5f9a68",
+      "expression_and_license_review": "Append original Codex-assisted disclosure for the two post-retest source repairs. Historical authorship records, owned lineage, methods, licenses, sources, pins, review clocks, and exact prior acceptance remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Append scoped authoring evidence for five existing skills without changing historical labels, source pins, or owned adaptation ancestry."
     },
     "renovate.json": {
       "before_sha256": null,
@@ -332,8 +332,8 @@
     },
     "skills/code-change-review/SKILL.md": {
       "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
-      "after_sha256": "e5964250cc14dff640e8f12906f908e38cd97a8f7258d5939a78673770ce0c30",
-      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim."
+      "after_sha256": "ae56589ec16833be166ddad8e407c77859165947876f29325734a717fae4243e",
+      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
     },
     "skills/code-change-review/agents/openai.yaml": {
       "before_sha256": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5",
@@ -394,6 +394,146 @@
       "before_sha256": "1f629c1596ec1cfbf5adf218bec2ff07685033ffe3c7982d304eaa18285fd565",
       "after_sha256": "553842e517e26840beb745f9e967cd4f53ed7d75f58663efecef9692ce0bf63f",
       "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
+    "dist/claude-ai/multi-agent-orchestration-0.18.0.zip": {
+      "before_sha256": "e83c6187b349625cb430fcbb7cd92f010825022dff825b686e31bf7bd50e0a37",
+      "after_sha256": "bc3b0ea6898e876cb6c394ff5d9e5c4f0dcbbe6d2f9114e59117a856b5912468",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/publish-change-safely-0.18.0.zip": {
+      "before_sha256": "00191a1d638d0ea9e263335faf917dee19ace3a89f96692cd308cfdc92d15bfd",
+      "after_sha256": "8ce24716a1bbbe04141e4bcc4897c3ea579c3f1100bcdff8ebaec0d8f6d3e303",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/request-code-review-0.18.0.zip": {
+      "before_sha256": "60986a2af55778b6afcaca8e4171606d643860860af8d7edc70f90da0f8433b1",
+      "after_sha256": "75fcbc4d4002a2f9e043cea2f605f4e760050fb2d7d27370a1ce6591ceaa3994",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/respond-to-code-review-0.18.0.zip": {
+      "before_sha256": "ff323872ec4e126d3ddf0f0148ffe08be8838f55c391a25cf2d3aac765c46895",
+      "after_sha256": "67619fb3300251ce6e905582e7a0fa2fa4a5ed0b62f0f27eed5238f5b07a12bd",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "docs/audits/bounded-pr-maintenance-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "6a0d9485a2953423a704b18860d1521ea46befc3f2eab47593e5c08373b35c37",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "plugins/antigravity/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "800a8027bd1cca2e3eadee795af9220c6335408faa510209a40265f49b8b93c7",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/antigravity/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "aaad9286c1966e85f8daca7fa5265e7473b8778d753da638be1659a06b0e19d5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "e123889210db40d1660faadcc20f8e83ec4f823bdcac4ee4976d8bd7a85f5565",
+      "after_sha256": "1257139d9a6bae7d0cb1ccf6c6393e3b9aaeabab71d7f67d89f4e3b46f9847e8",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/request-code-review/SKILL.md": {
+      "before_sha256": "04133aa9fcf192ddc986ec0ace26dc6ff33ceb363935017dbda019ddcacbf45b",
+      "after_sha256": "ef2fb4ef33c4f905ab9e174735a738de85397a841cab27b58efc891c78c1d850",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "800a8027bd1cca2e3eadee795af9220c6335408faa510209a40265f49b8b93c7",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "aaad9286c1966e85f8daca7fa5265e7473b8778d753da638be1659a06b0e19d5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-skills/skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "1cf69f1aa75bc689dff665c27339c34514b1285f2768e7be17c8bc253baa95da",
+      "after_sha256": "4f94169991117bdf9ee2d6c1bea089dc949c58f7ec2677ec41bf8eb5d5b68c8f",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-skills/skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "6921c344ba28d257874606905eced246d1e00638f2e4a79d324f7e79b71de761",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "53ae06e8aa1a025342e53ca06774ecf070b39db63b33bafd4662f59600634613",
+      "after_sha256": "daab30193fb5290da60c1559726f35b4e7af23a06b08591a5571d4235851185c",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/multi-agent-orchestration/agents/openai.yaml": {
+      "before_sha256": "6791dbe57592a892cd9b01ef17e04d834a3b5e9aad273fb40be924cdb1fd609f",
+      "after_sha256": "eaddca83f761bc9a9f374f8d03a6f05835729b59b1cfacbec998eecf77743cac",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/request-code-review/SKILL.md": {
+      "before_sha256": "15b6e2428f0c91821dd4085404469d2b505541f069a35c5bea6c9e224bfce6b0",
+      "after_sha256": "160317fda05dcf6199c5bb08e9ece6a094a9710bddcb24d5d7096bb8a8065cf0",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "800a8027bd1cca2e3eadee795af9220c6335408faa510209a40265f49b8b93c7",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "aaad9286c1966e85f8daca7fa5265e7473b8778d753da638be1659a06b0e19d5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-skills/skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+      "after_sha256": "dac4f8cf60426254944cd90ef048a7fedb197764ec64d5dc7adcf3e7004bb8b5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-skills/skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "6921c344ba28d257874606905eced246d1e00638f2e4a79d324f7e79b71de761",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "aaad9286c1966e85f8daca7fa5265e7473b8778d753da638be1659a06b0e19d5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "53ae06e8aa1a025342e53ca06774ecf070b39db63b33bafd4662f59600634613",
+      "after_sha256": "daab30193fb5290da60c1559726f35b4e7af23a06b08591a5571d4235851185c",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/multi-agent-orchestration/agents/openai.yaml": {
+      "before_sha256": "cd07e1b35dc7d13ed09644f11c43f76ea10e20169162664a2e874564654a883d",
+      "after_sha256": "450ddc0b91c7a9d395187f1257f743e21a9dc31fc8930b24dab3a1c5fa28803b",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+      "after_sha256": "dac4f8cf60426254944cd90ef048a7fedb197764ec64d5dc7adcf3e7004bb8b5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "6921c344ba28d257874606905eced246d1e00638f2e4a79d324f7e79b71de761",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/request-code-review/SKILL.md": {
+      "before_sha256": "15b6e2428f0c91821dd4085404469d2b505541f069a35c5bea6c9e224bfce6b0",
+      "after_sha256": "160317fda05dcf6199c5bb08e9ece6a094a9710bddcb24d5d7096bb8a8065cf0",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "800a8027bd1cca2e3eadee795af9220c6335408faa510209a40265f49b8b93c7",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "tests/test_bounded_review_exports.py": {
+      "before_sha256": null,
+      "after_sha256": "f5af5ff33ee09c8b4531d64d2a7b2a280a9e18eea0c508077859352d9ab55d25",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original integration tests exercise temporary exports and ZIP contents against canonical bytes, invocation metadata, and explicit-only exclusions. No model calls or validator behavior changes."
     }
   }
 }

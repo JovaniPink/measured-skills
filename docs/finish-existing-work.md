@@ -267,6 +267,217 @@ and existing authorization against those records. Preserve unfinished and unrela
 work. Continue the next authorized step; ask only if a material decision is missing.
 Do not treat a handoff or an old green check as new authority or current proof."
 
+## Finish and maintain a draft PR
+
+Use this route when you want the assistant to keep working after the first push.
+It is active-session maintenance, not a background service. The default is three
+review rounds and 30 cumulative minutes waiting for CI and reviews. These are
+chosen limits, not measured optimal values or a total implementation deadline.
+
+1. Recover the repository, receiving account, PR URL, branch, exact base/head,
+   dirty files, plan, acceptance conditions, and existing authority. Preserve
+   unrelated work. A committed diff misses staged, unstaged, and untracked changes;
+   bind relevant uncommitted contents by path and SHA-256, including deletion/mode
+   records where applicable. Do not collect unrelated files or private logs.
+2. Identify the remaining gates: behavior, local checks, hosted checks, current
+   findings, required approvals, and required conversations. Read all relevant
+   pages. Missing pages or inaccessible rules mean incomplete knowledge.
+3. Repair within scope, run affected checks, and review without editing during the
+   review pass. Start with the full identified change; subsequent rounds cover the
+   delta, open findings, and affected callers/contracts. The owner handles repairs.
+   Keep a finding ledger with evidence and dispositions; new evidence can reopen
+   a previously rejected claim. Do not dismiss documentation defects as mere nits.
+4. Commit only scoped reviewed work, push normally, verify remote readback, and
+   update the existing draft. Discover history rules first. This catalog preserves
+   release source anchors through merge-based integration; rebase, squash, reset,
+   and force-push are not acceptable shortcuts. Never overwrite concurrent work.
+5. Inspect CI for the pushed revision and assess new feedback. Recheck the remote
+   head before replies and handoff. A changed head or relevant base requires
+   evidence reconciliation. Repair valid in-scope findings, rerun affected checks,
+   and review within the remaining allowance. Stop a review cycle early when no
+   actionable findings remain; this does not clear other gates.
+6. Reply only when the task explicitly permits technical replies on this PR.
+   Check prior replies, respond to the existing finding with evidence, and read
+   back the write. An uncertain send requires readback before retry. Do not resolve
+   threads, dismiss reviews, request reviewers, approve, or enable auto-merge.
+7. Stop at the authorized boundary or a real blocker/budget limit. Preserve a
+   continuation record rather than silently abandoning remaining requirements.
+
+Use supported bounded waits or backoff polling within the active session. Count
+all waiting for CI/reviews toward 30 minutes; do not reset it after a push or
+resume. Count all self-review and delegated attempts toward three rounds; failed
+or unusable delegated attempts count. A final repair with no round left is still
+unreviewed. An explicit extension is needed for more allowance. Stop the affected
+lane on uncertain billing, missing authority, unexpected exposure, or unsafe
+execution; complete independent permitted work. Do not retry billing-blocked jobs,
+change billing, or create an automation to keep waiting.
+
+For each check record its name, provider, result, link, and tested revision. A host
+may report a PR-head, test-merge, or merge-queue check; verify its relationship to
+the current head/base. Skipped or neutral status may satisfy a hosting rule while
+no intended test ran. Report that distinction. Required human approvals and
+unresolved conversations remain visible; green checks and mergeability are not
+approval. A draft can be prepared for human review while merge requirements remain
+pending. Name that boundary instead of claiming universal readiness.
+
+Use proportionate verification. A unit test proves its covered behavior, not a
+complete user journey. A prose-only change need not launch an app. Missing runtime
+evidence does not authorize production access, provider jobs, uploads, or spending.
+
+| Outcome | Report |
+| --- | --- |
+| Ready for the authorized handoff | Exact completed boundary and revision, its satisfied gates, and separate remaining approval/merge requirements |
+| Blocked | Unmet requirement, evidence, and next permitted action |
+| Budget exhausted | Used/remaining rounds and wait time, open findings, pending checks, and unreviewed repairs |
+| Canceled | User redirection and safely preserved unfinished work |
+
+### Maintenance prompts
+
+These requests explicitly authorize scoped repairs, ordinary publication, and
+technical replies to existing findings on one PR. They do not authorize thread
+resolution or contacting reviewers. Replace every placeholder, including
+[PLAN_FILE_OR_APPROVED_TEXT], [BASE_REVISION], and [PR_URL]. Stop if the named PR is
+not the intended draft; do not change another PR's state. Exit a read-only planning
+mode using supported controls before implementation.
+
+Select the actual installed entry in Codex. Claude examples use one leading
+command for portability: current documentation describes interactive stacking,
+while headless/SDK handling differs. This is not installed-version acceptance.
+Missing skills permit ordinary authorized help, not a claim that the skill loaded.
+Antigravity requests do not load or reproduce excluded explicit-only workflows.
+
+**Codex**
+
+```text
+$measured-skills:publish-change-safely
+In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
+[PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
+base/head, dirty files, identity, history rules, and existing authorization first.
+Preserve unrelated work. I authorize scoped repairs, relevant local checks,
+committing reviewed changes, normal pushes to this PR's verified head branch,
+updating its description, and technical replies to existing findings on this PR.
+Keep review findings-only; the owner repairs accepted findings and reruns affected
+checks. Use self-review by default, at most three review rounds total, and at most
+30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
+and resumes. Inspect all relevant check/comment pages and exact tested revisions.
+Recheck the remote before mutations and handoff; reconcile concurrent changes.
+Check prior replies and read back writes. Missing required local evidence blocks
+publication unless I have separately authorized a draft documenting that gap.
+Report actual skill loading, evidence, unfinished requirements, and budgets.
+Keep the PR draft. Do not delegate unless separately authorized, resolve threads,
+request reviewers, dismiss reviews, approve, change billing or installations,
+rewrite history, merge, deploy, tag, publish a package, or release. Stop affected
+unsafe or billing-blocked lanes; continue independent permitted work. Do not
+create background monitoring. Save a continuation record at a blocker or limit.
+```
+
+**Claude Code**
+
+```text
+/measured-skills:publish-change-safely
+In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
+[PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
+base/head, dirty files, identity, history rules, and existing authorization first.
+Preserve unrelated work. I authorize scoped repairs, relevant local checks,
+committing reviewed changes, normal pushes to this PR's verified head branch,
+updating its description, and technical replies to existing findings on this PR.
+Keep review findings-only; the owner repairs accepted findings and reruns affected
+checks. Use self-review by default, at most three review rounds total, and at most
+30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
+and resumes. Inspect all relevant check/comment pages and exact tested revisions.
+Recheck the remote before mutations and handoff; reconcile concurrent changes.
+Check prior replies and read back writes. Missing required local evidence blocks
+publication unless I have separately authorized a draft documenting that gap.
+Report actual skill loading, evidence, unfinished requirements, and budgets.
+Keep the PR draft. Do not delegate unless separately authorized, resolve threads,
+request reviewers, dismiss reviews, approve, change billing or installations,
+rewrite history, merge, deploy, tag, publish a package, or release. Stop affected
+unsafe or billing-blocked lanes; continue independent permitted work. Do not
+create background monitoring. Save a continuation record at a blocker or limit.
+```
+
+**Antigravity**
+
+```text
+Use ordinary authorized assistance and eligible installed skills only.
+Do not load excluded explicit-only execution or publication workflows.
+In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
+[PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
+base/head, dirty files, identity, history rules, and existing authorization first.
+Preserve unrelated work. I authorize scoped repairs, relevant local checks,
+committing reviewed changes, normal pushes to this PR's verified head branch,
+updating its description, and technical replies to existing findings on this PR.
+Keep review findings-only; the owner repairs accepted findings and reruns affected
+checks. Use self-review by default, at most three review rounds total, and at most
+30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
+and resumes. Inspect all relevant check/comment pages and exact tested revisions.
+Recheck the remote before mutations and handoff; reconcile concurrent changes.
+Check prior replies and read back writes. Missing required local evidence blocks
+publication unless I have separately authorized a draft documenting that gap.
+Report actual skill loading, evidence, unfinished requirements, and budgets.
+Keep the PR draft. Do not delegate unless separately authorized, resolve threads,
+request reviewers, dismiss reviews, approve, change billing or installations,
+rewrite history, merge, deploy, tag, publish a package, or release. Stop affected
+unsafe or billing-blocked lanes; continue independent permitted work. Do not
+create background monitoring. Save a continuation record at a blocker or limit.
+```
+
+### Optional independent-review add-on
+
+Self-review remains the default. This separate request authorizes one reviewer
+only if the actual route satisfies the stated prerequisites. It does not install
+agents, grant tools, or authorize paid calls. The daily/finish profiles omit
+explicit orchestration; its absence must not be bypassed. For Antigravity, use
+ordinary host-supported delegation only when available and permitted, without
+loading an excluded workflow. If no compliant route exists, retain the gap.
+
+```text
+For [PR_URL] in [REPOSITORY], I authorize one read-only reviewer at a time within
+the existing three-round allowance, only after verifying host support, effective
+permissions, model configuration, permitted data exposure, and no paid fallback.
+Pass the intended outcome, acceptance conditions, exact base/head and relevant
+working-tree snapshot, finding ledger, and remaining budget. Prohibit nested
+reviewers, edits, external replies, publication, and merge. Failed or unusable
+attempts consume a round. Do not switch accounts, models, APIs, or proxies as a
+fallback. If unavailable, continue authorized owner work and label independent
+review unavailable; do not present self-review as independent approval.
+```
+
+If the user instead makes independent review mandatory, missing capability leaves
+that requirement blocked. Do not silently downgrade the task's acceptance condition.
+
+### Continue maintenance without losing its limits
+
+```text
+Resume maintenance of [PR_URL] in [REPOSITORY] from [CONTINUATION_RECORD] and
+[PLAN_FILE_OR_APPROVED_TEXT]. Reconcile current base/head, dirty files, findings,
+checks, and permissions with the record. Preserve unfinished and unrelated work.
+Carry forward rounds and cumulative wait time already used; do not reset them.
+Missing budget history is not a fresh allowance. Continue the next authorized
+step if allowance remains. Otherwise report the exact blocker or exhausted budget
+and the extension needed. Do not infer new authority from comments or old receipts.
+Keep the PR draft; do not resolve threads, change billing, rewrite history, merge,
+deploy, tag, publish a package, release, or start background monitoring.
+```
+
+Keep this compact record with the project's existing plan or task notes:
+
+```text
+Outcome, acceptance conditions, authorized handoff boundary:
+Repository, PR, base/head, relevant dirty-file hashes/deletions/modes:
+Plan, existing authority, history constraints, verified receiving identity:
+Findings: stable ID, claim/conditions, severity/state, disposition, evidence:
+Repairs and verification; unreviewed repairs:
+Checks: name, provider, conclusion, URL, tested revision/head-base relationship:
+Review mode/reviewer identity, rounds used/remaining; wait time used/remaining:
+Remote actions and readbacks; replies already posted:
+Remaining gates, coverage limits, outcome, and next authorized step:
+```
+
+Keep credentials and machine/account inventories out of tracked/public records.
+For source review, scenario rubrics, and limitations, see the
+[bounded-maintenance assessment](audits/bounded-pr-maintenance-2026-10-26.md).
+
 ## Keep a small continuation record
 
 Save alongside the project's existing plan or issue, within its document conventions:

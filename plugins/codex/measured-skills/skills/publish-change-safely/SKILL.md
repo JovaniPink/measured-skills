@@ -28,6 +28,15 @@ Perform only the publication actions the user authorized while keeping neighbori
 9. If authorized, open or update a PR with evidence-bounded claims. Do not merge unless the user separately authorized merge.
 10. Reconcile the authorized boundary against the observed remote state and report the result using the output contract.
 
+## Explicit maintenance continuation
+
+Read [draft PR maintenance](references/pr-maintenance.md) only when the user asks
+to maintain an identified draft beyond the initial publication. This adds a
+bounded repair/review/check cycle within existing authority, not automatic merge
+or background monitoring. Ordinary publication retains its original stopping
+point. The default limits are three review rounds and 30 cumulative minutes
+waiting for CI/review results, preserved across pushes and resumed sessions.
+
 ## Stop conditions
 
 Stop before mutation when identity, target repository, branch, staged scope, secret exposure, history divergence, or requested authority is unclear. A rejected push is not permission to rebase, merge, or force. A remote, repository, or branch with a similar name is a different target until its URL or identifier matches the authorized one.

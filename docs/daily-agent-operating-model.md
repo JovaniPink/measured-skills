@@ -1,5 +1,9 @@
 # Use the skills in daily work
 
+After the first push, use [finish and maintain a draft PR](finish-existing-work.md#finish-and-maintain-a-draft-pr)
+for bounded review, CI follow-up, evidence-based repairs, and an honest handoff.
+It preserves the draft state and requires explicit authority for technical replies.
+
 For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
 
 Start with one task and the smallest useful selection. The 0.18.0 candidate

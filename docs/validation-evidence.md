@@ -8,7 +8,27 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 269 regression tests.
+Current test suite: 271 regression tests.
+
+## October 26 bounded-maintenance increment
+
+The [bounded-maintenance assessment](audits/bounded-pr-maintenance-2026-10-26.md)
+records five existing skill refinements, two conditional references, and twelve
+prepared synthetic scenarios. The catalog remains 88 skills in 11 packs with 17
+explicit-only exclusions from Antigravity. No model run or installation occurred.
+
+Two full regeneration/package passes produced identical checksums for all 88 ZIPs.
+Two added export tests exercise temporary client projections and archives, reference
+bytes and hash receipts, native invocation metadata, and explicit-only exclusions.
+The existing pack/recipe/profile measurements were recomputed; only the delivery
+pack's description and discovery sizes changed. Profile selections are unchanged.
+
+The bundled Codex skill-format validator passed all 88 canonical skills. Claude
+Code 2.1.306 strict plugin validation passed the three affected packs. Antigravity
+1.4.4 strict validation passed its two affected packs with no findings. Standalone
+skills-ref and standalone Codex plugin validation remain unavailable. Native
+format checks do not establish installed loading, billing isolation, or behavior.
+Final required checks and exact-head CI are recorded in the updated draft PR.
 
 ## October 26 finish-work increment
 

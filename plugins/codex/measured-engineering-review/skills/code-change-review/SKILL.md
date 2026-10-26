@@ -15,6 +15,10 @@ metadata:
 
 Review a pinned change and return evidence-bounded findings.
 
+Read [bounded review](references/bounded-review.md) when repeated review or a
+maintenance loop is requested. The reference defines snapshot identity, round
+limits, and the optional reviewer boundary; this skill remains findings-only.
+
 ## Routing and evidence
 
 Use this workflow when the requested result is findings about changed code,
@@ -41,12 +45,13 @@ Track test existence, execution, and outcome separately:
 ## Workflow
 
 1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority when supplied. A pasted diff or snippet is enough for a scoped static review; label unavailable repository context instead of inventing it or requiring access unrelated to the request.
-2. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
-3. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
-4. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
-5. Inspect available coverage and compatibility. A proposed test's expected failure is a prediction under its stated contract, not an observed result. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
-6. Separate findings from questions, optional improvements, and unsupported concerns.
-7. Report validation performed, unavailable evidence, and the remaining review boundary.
+2. Include relevant staged, unstaged, and untracked files when the scope is a working tree; a committed diff omits them. Bind relevant uncommitted contents with path and SHA-256, retaining deletions and file modes. Do not collect unrelated or sensitive files. Reconcile concurrent changes before calling the review current.
+3. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
+4. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
+5. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
+6. Inspect available coverage and compatibility. A proposed test's expected failure is a prediction under its stated contract, not an observed result. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
+7. Separate findings from questions, optional improvements, and unsupported concerns.
+8. Report validation performed, unavailable evidence, and the remaining review boundary.
 
 ## Boundaries
 

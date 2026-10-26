@@ -68,11 +68,11 @@
         "respond-to-code-review",
         "worktree-isolation"
       ],
-      "description_characters": 1583,
+      "description_characters": 1592,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 2536,
-        "claude": 2545
+        "codex": 2545,
+        "claude": 2554
       }
     },
     {
