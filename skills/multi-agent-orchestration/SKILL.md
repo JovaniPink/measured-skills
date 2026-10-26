@@ -44,7 +44,16 @@ snapshot, findings ledger, and available rounds. Include affected callers and
 contracts rather than only changed lines. The default is three review rounds
 across self-review and delegated attempts per maintenance invocation. Failed or
 unusable delegated attempts consume a round. Preserve the count across new heads,
-comments, and resumed sessions; extensions require explicit authority.
+comments, and resumed sessions; extensions require explicit authority. Record a
+round as started before dispatch and retain its identifier/outcome. An uncertain
+dispatch consumes a round; reconcile it before launching any replacement.
+
+Verify host-supported deadline and stop controls before dispatch. The reviewer
+must fit the remaining CI/review wait allowance (30 minutes by default); otherwise
+the lane is unavailable. Charge its pending elapsed time, including owner work,
+without double-counting overlapping waits. On timeout, cancellation, or an authority
+or billing failure, stop only this task's reviewer and read back its status. Keep
+unconfirmed shutdown unresolved. Do not cancel hosted CI or unrelated workers.
 
 If the optional reviewer is unavailable, report the limitation and continue
 permitted owner work. If independent review is required, leave it blocked. Never

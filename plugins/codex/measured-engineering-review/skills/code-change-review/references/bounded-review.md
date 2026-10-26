@@ -11,8 +11,12 @@ Record the outcome, acceptance conditions, repository and PR when supplied, exac
 base and head revisions, intended diff scope, and existing authorization. Include
 relevant staged, unstaged, and untracked work. A committed diff does not include
 those changes. Identify relevant uncommitted file contents by path and SHA-256;
-record deletions and relevant file modes separately. Do not collect unrelated
-files, credentials, or private logs. A pasted diff supports only its stated scope.
+label each hash as index (staged), working-tree, or untracked content. When one
+path has different staged and working-tree bytes, retain both. Record deletions,
+file types, and modes separately; do not follow links outside the authorized scope.
+Review the intended staged tree before commit and reconcile the resulting commit
+with that reviewed tree before push. Do not collect unrelated files, credentials,
+or private logs. A pasted diff supports only its stated scope.
 
 Keep the snapshot stable during each pass. If files or the remote head change,
 identify what the reviewer actually saw and reconcile before using the result.
@@ -23,7 +27,11 @@ An unchanged line can carry the consequence of a changed assumption.
 
 - The default is three review rounds per maintenance invocation, including
   self-review and delegated attempts. A failed or unusable delegated attempt
-  consumes one round; preflight discovery without launching does not.
+  consumes one round; preflight discovery without launching does not. Record the
+  round as started before beginning self-review or dispatching a reviewer. Retain
+  the dispatch identifier when available, then record its outcome. An interrupted
+  or uncertain dispatch remains consumed until its status is reconciled; do not
+  launch a duplicate to replace missing output.
 - Round one covers the full identified change. Later rounds cover the delta,
   open findings, and surrounding behavior affected by the repair.
 - The owner records each accepted repair and its checks. Reviewers return
@@ -45,6 +53,16 @@ actual host, effective permissions, model configuration, data exposure, and abse
 of paid fallback are verified. Use one read-only reviewer at a time. No nested
 reviewers, edits, external replies, publication, or merge are permitted. Do not
 substitute a proxy, API, model, or account if the approved route is unavailable.
+
+Verify supported deadline and stop controls before dispatch. Bound reviewer runtime
+by the remaining CI/review wait allowance (30 minutes by default). If the host
+cannot bound the call or stop this task's reviewer, the lane is unavailable.
+Charge elapsed time while that reviewer is pending, even during owner work; count
+overlapping CI/reviewer intervals once, and retain start/end times. On timeout,
+user cancellation, or an authority/billing failure, stop only the reviewer this
+task owns and read back its status. Report unconfirmed shutdown as unresolved;
+do not claim the worker stopped or launch a replacement. Do not cancel hosted CI
+or another task's workers as a way to satisfy this budget.
 
 Continue authorized owner work when this optional lane is unavailable and say so.
 If the task requires independent review, its absence remains a blocker. A separate

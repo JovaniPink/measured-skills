@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 import sys
 import shutil
@@ -35,7 +36,8 @@ class BoundedReviewExports(unittest.TestCase):
                 self.assertEqual((ROOT / 'skills' / relative).read_bytes(),
                                  (output / relative).read_bytes())
                 receipt = json.loads((output / 'export-manifest.json').read_text())
-                self.assertIn(relative, receipt['files'])
+                self.assertEqual(hashlib.sha256((output / relative).read_bytes()).hexdigest(),
+                                 receipt['files'][relative])
                 self.assertEqual('not_installed', receipt['installation'])
                 self.assertEqual('not_observed', receipt['behavior'])
                 with self.assertRaises(ValueError):

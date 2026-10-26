@@ -278,7 +278,12 @@ chosen limits, not measured optimal values or a total implementation deadline.
    dirty files, plan, acceptance conditions, and existing authority. Preserve
    unrelated work. A committed diff misses staged, unstaged, and untracked changes;
    bind relevant uncommitted contents by path and SHA-256, including deletion/mode
-   records where applicable. Do not collect unrelated files or private logs.
+   records where applicable. Label index (staged), working-tree, and untracked
+   representations; one path can need two hashes. Review the intended staged tree
+   and reconcile the resulting commit before push. Do not collect unrelated files
+   or private logs. Bind the PR's head repository as well as its branch; for a fork,
+   this differs from the base repository. Require open/draft state before writes,
+   stopping on closure, merge, state change, or a changed destination.
 2. Identify the remaining gates: behavior, local checks, hosted checks, current
    findings, required approvals, and required conversations. Read all relevant
    pages. Missing pages or inaccessible rules mean incomplete knowledge.
@@ -306,7 +311,10 @@ chosen limits, not measured optimal values or a total implementation deadline.
 Use supported bounded waits or backoff polling within the active session. Count
 all waiting for CI/reviews toward 30 minutes; do not reset it after a push or
 resume. Count all self-review and delegated attempts toward three rounds; failed
-or unusable delegated attempts count. A final repair with no round left is still
+or unusable delegated attempts count. Record a round as started before self-review
+or dispatch, then its outcome; retain a dispatch identifier where available.
+An uncertain dispatch stays consumed and must be reconciled before replacement.
+A final repair with no round left is still
 unreviewed. An explicit extension is needed for more allowance. Stop the affected
 lane on uncertain billing, missing authority, unexpected exposure, or unsafe
 execution; complete independent permitted work. Do not retry billing-blocked jobs,
@@ -354,13 +362,18 @@ In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
 [PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
 base/head, dirty files, identity, history rules, and existing authorization first.
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
-committing reviewed changes, normal pushes to this PR's verified head branch,
-updating its description, and technical replies to existing findings on this PR.
+committing reviewed changes, normal pushes to this PR's verified head repository
+and branch, updating its description, and technical replies to existing findings on this PR.
 Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
-and resumes. Inspect all relevant check/comment pages and exact tested revisions.
-Recheck the remote before mutations and handoff; reconcile concurrent changes.
+and resumes. Record rounds before starting them; retain uncertain attempts.
+Inspect all relevant check/comment pages and exact tested revisions.
+Verify the PR is still open and draft before each remote write; stop if its state
+or destination changed. Match the push remote to its head repository, including
+forks. Distinguish staged and working-tree bytes, review the intended staged tree,
+and reconcile the resulting commit before push. Recheck remote head before writes
+and handoff; reconcile concurrent changes rather than overwriting them.
 Check prior replies and read back writes. Missing required local evidence blocks
 publication unless I have separately authorized a draft documenting that gap.
 Report actual skill loading, evidence, unfinished requirements, and budgets.
@@ -379,13 +392,18 @@ In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
 [PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
 base/head, dirty files, identity, history rules, and existing authorization first.
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
-committing reviewed changes, normal pushes to this PR's verified head branch,
-updating its description, and technical replies to existing findings on this PR.
+committing reviewed changes, normal pushes to this PR's verified head repository
+and branch, updating its description, and technical replies to existing findings on this PR.
 Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
-and resumes. Inspect all relevant check/comment pages and exact tested revisions.
-Recheck the remote before mutations and handoff; reconcile concurrent changes.
+and resumes. Record rounds before starting them; retain uncertain attempts.
+Inspect all relevant check/comment pages and exact tested revisions.
+Verify the PR is still open and draft before each remote write; stop if its state
+or destination changed. Match the push remote to its head repository, including
+forks. Distinguish staged and working-tree bytes, review the intended staged tree,
+and reconcile the resulting commit before push. Recheck remote head before writes
+and handoff; reconcile concurrent changes rather than overwriting them.
 Check prior replies and read back writes. Missing required local evidence blocks
 publication unless I have separately authorized a draft documenting that gap.
 Report actual skill loading, evidence, unfinished requirements, and budgets.
@@ -405,13 +423,18 @@ In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
 [PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
 base/head, dirty files, identity, history rules, and existing authorization first.
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
-committing reviewed changes, normal pushes to this PR's verified head branch,
-updating its description, and technical replies to existing findings on this PR.
+committing reviewed changes, normal pushes to this PR's verified head repository
+and branch, updating its description, and technical replies to existing findings on this PR.
 Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
-and resumes. Inspect all relevant check/comment pages and exact tested revisions.
-Recheck the remote before mutations and handoff; reconcile concurrent changes.
+and resumes. Record rounds before starting them; retain uncertain attempts.
+Inspect all relevant check/comment pages and exact tested revisions.
+Verify the PR is still open and draft before each remote write; stop if its state
+or destination changed. Match the push remote to its head repository, including
+forks. Distinguish staged and working-tree bytes, review the intended staged tree,
+and reconcile the resulting commit before push. Recheck remote head before writes
+and handoff; reconcile concurrent changes rather than overwriting them.
 Check prior replies and read back writes. Missing required local evidence blocks
 publication unless I have separately authorized a draft documenting that gap.
 Report actual skill loading, evidence, unfinished requirements, and budgets.
@@ -435,6 +458,13 @@ loading an excluded workflow. If no compliant route exists, retain the gap.
 For [PR_URL] in [REPOSITORY], I authorize one read-only reviewer at a time within
 the existing three-round allowance, only after verifying host support, effective
 permissions, model configuration, permitted data exposure, and no paid fallback.
+Verify deadline and stop controls; if unavailable, do not launch. Bound runtime by
+the remaining CI/review wait allowance. Record the attempt before dispatch and
+retain its identifier. Charge elapsed time while the reviewer is pending, even
+during owner work, counting overlapping CI/reviewer intervals once. On timeout,
+user cancellation, or authority/billing failure, stop only this task's reviewer
+and read back its status. Report unconfirmed shutdown; do not launch a duplicate
+or cancel hosted CI or unrelated workers.
 Pass the intended outcome, acceptance conditions, exact base/head and relevant
 working-tree snapshot, finding ledger, and remaining budget. Prohibit nested
 reviewers, edits, external replies, publication, and merge. Failed or unusable
@@ -451,7 +481,9 @@ that requirement blocked. Do not silently downgrade the task's acceptance condit
 ```text
 Resume maintenance of [PR_URL] in [REPOSITORY] from [CONTINUATION_RECORD] and
 [PLAN_FILE_OR_APPROVED_TEXT]. Reconcile current base/head, dirty files, findings,
-checks, and permissions with the record. Preserve unfinished and unrelated work.
+checks, and permissions with the record. Verify the PR's open/draft state and exact
+head repository/branch. Reconcile pending reviewer identifiers and shutdown status
+before any replacement dispatch. Preserve unfinished and unrelated work.
 Carry forward rounds and cumulative wait time already used; do not reset them.
 Missing budget history is not a fresh allowance. Continue the next authorized
 step if allowance remains. Otherwise report the exact blocker or exhausted budget
@@ -464,19 +496,22 @@ Keep this compact record with the project's existing plan or task notes:
 
 ```text
 Outcome, acceptance conditions, authorized handoff boundary:
-Repository, PR, base/head, relevant dirty-file hashes/deletions/modes:
+Repository, PR open/draft state, base/head repository/ref/SHA:
+Relevant index/working hashes, untracked files, deletions, file types and modes:
 Plan, existing authority, history constraints, verified receiving identity:
 Findings: stable ID, claim/conditions, severity/state, disposition, evidence:
 Repairs and verification; unreviewed repairs:
 Checks: name, provider, conclusion, URL, tested revision/head-base relationship:
-Review mode/reviewer identity, rounds used/remaining; wait time used/remaining:
+Review mode/identity, round started/outcome, dispatch ID and shutdown status:
+Rounds used/remaining; wait intervals/timestamps and consumed/remaining time:
 Remote actions and readbacks; replies already posted:
 Remaining gates, coverage limits, outcome, and next authorized step:
 ```
 
 Keep credentials and machine/account inventories out of tracked/public records.
 For source review, scenario rubrics, and limitations, see the
-[bounded-maintenance assessment](audits/bounded-pr-maintenance-2026-10-26.md).
+[bounded-maintenance assessment](audits/bounded-pr-maintenance-2026-10-26.md) and
+[fresh review repairs](audits/bounded-maintenance-followup-2026-10-26.md).
 
 ## Keep a small continuation record
 

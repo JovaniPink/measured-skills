@@ -45,7 +45,7 @@ Track test existence, execution, and outcome separately:
 ## Workflow
 
 1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority when supplied. A pasted diff or snippet is enough for a scoped static review; label unavailable repository context instead of inventing it or requiring access unrelated to the request.
-2. Include relevant staged, unstaged, and untracked files when the scope is a working tree; a committed diff omits them. Bind relevant uncommitted contents with path and SHA-256, retaining deletions and file modes. Do not collect unrelated or sensitive files. Reconcile concurrent changes before calling the review current.
+2. Include relevant staged, unstaged, and untracked files when the scope is a working tree; a committed diff omits them. Bind relevant uncommitted contents with path, representation (index, working-tree, or untracked), and SHA-256; retain both versions when staged and working-tree bytes differ, plus deletions and file modes. Do not collect unrelated or sensitive files. Reconcile concurrent changes before calling the review current.
 3. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
 4. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
 5. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.

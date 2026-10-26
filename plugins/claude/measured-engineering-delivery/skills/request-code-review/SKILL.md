@@ -30,7 +30,9 @@ Give reviewers a precise packet that separates proposed code from checks, decisi
 
 A packet for uncommitted work includes relevant staged, unstaged, and untracked
 files as well as base/head revisions. Bind relevant file contents with path and
-SHA-256 and retain deletions and file modes; exclude unrelated or sensitive files.
+SHA-256, labeling index, working-tree, and untracked representations. Retain both
+versions when the same path differs in the index and working tree, plus deletions
+and file modes; exclude unrelated or sensitive files.
 A committed diff alone cannot represent that working tree. Recheck the snapshot
 before sending and reconcile any concurrent changes.
 

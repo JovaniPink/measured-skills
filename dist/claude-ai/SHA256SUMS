@@ -13,7 +13,7 @@ d12e156eab21773e33eb2cbdb1256cddcedfac79c3a7460bf01cbbeb8b5a6b8d  alignment-inte
 f4789e2d972801b8fcbb75b8eee24f230c574b25674f01912eaad0d0144f9a9a  change-adoption-planning-0.18.0.zip
 92ff792814d74cb1ec9fbc98738b64bdc288e595d9084b8a70b3f2e88902fd51  change-impact-analysis-0.18.0.zip
 70dd3765e39e96667e42aa91e59eea6e83677f976783e554f0c0ec381561d3c5  claim-verification-0.18.0.zip
-3a8c388bd432586877f312f3c9fd2788f62dc64f00b26252144ad549470254be  code-change-review-0.18.0.zip
+befcb7212727dbd8bd9074a98a8424605ce3cb9cfab4ae5ba4ed073cc877d465  code-change-review-0.18.0.zip
 8b729a88d1b7564673ffa3da786ca816d52d8b7548c97b64037f72d6c99e5718  codebase-explanation-0.18.0.zip
 f2e86ff2e44508c44a113ffcd20bcf8e20d3f41112fc63225810b1c663ac8e4e  context-reliability-review-0.18.0.zip
 ccb59a6442d01d540f0fdbb156343215b4a3d3492215bc30e8a97b59086ec965  cross-capability-dependency-mapping-0.18.0.zip
@@ -42,7 +42,7 @@ ccc8932aef7293eea348e1b19652a32b5ee22ab8526e4631d7daf43e3f490925  java-spring-en
 dcf4b060929c88f9325bf0e8255cb1122fdb33cebc1755d2348bce5e25a8913f  kpi-outcome-measurement-0.18.0.zip
 66b5a6b1eee32b55c75195bf69841236548a995f8db96ba3f3d4fb78058198e2  merge-conflict-reconciliation-0.18.0.zip
 30bcc309bf9d8f5ffbe2c4ce2db4a447c3de86ce9d9c3213d2c5efddfbc07110  module-interface-design-0.18.0.zip
-bc3b0ea6898e876cb6c394ff5d9e5c4f0dcbbe6d2f9114e59117a856b5912468  multi-agent-orchestration-0.18.0.zip
+3364af853b68c183181685e50f246764364441083b511ec67d6c384c80837ce1  multi-agent-orchestration-0.18.0.zip
 c0a15e706a5ce5651f27e413cc6850d20acfa7cf16c26760420b6eae8eee0e61  nextjs-cache-auth-boundary-review-0.18.0.zip
 c314bdf71e52d9b947b82a93ce76907a861d8c3af73e24b00eae37bf2511b8f0  nextjs-feature-delivery-0.18.0.zip
 827ecdf4d755c003eb885dced103175a1fe02da59fd25006d00f4f13bc546618  observability-design-0.18.0.zip
@@ -57,13 +57,13 @@ de22cdcbbb33a75525cd93500f544b0d2e88435c152b1cb0adb961039979c5b1  problem-framin
 6ca9103f979f84d595f39cd01db8c419a426dacfe0c067c746d625293d922b96  production-incident-analysis-0.18.0.zip
 609d2b3616015978542c588fbe00594f3a21b72996c416302f3f9a523abaca23  prototype-spike-0.18.0.zip
 6bcfa7b9569667831ee0f34a69b838ec2a12f300cd05c18e381606dd90145873  public-private-boundary-review-0.18.0.zip
-8ce24716a1bbbe04141e4bcc4897c3ea579c3f1100bcdff8ebaec0d8f6d3e303  publish-change-safely-0.18.0.zip
+ffcd20b0d62ef92d8bf3e4892e93dd46e5044a8522f581fdaaad5ad5b6f4ffc6  publish-change-safely-0.18.0.zip
 6216ae342a3a1d047463ea499469c744249692dc13bd135c9cf7371385b5c135  python-engineering-profile-0.18.0.zip
 035870097ca11a36871dcc0871ed3fcb372eba763c9a9f84a0a189a2bbe64403  react-rendering-performance-diagnosis-0.18.0.zip
-75fcbc4d4002a2f9e043cea2f605f4e760050fb2d7d27370a1ce6591ceaa3994  request-code-review-0.18.0.zip
+0f4a4671f8f680171305baddfc00690219dc468527d866bf6f16cd36808608e4  request-code-review-0.18.0.zip
 b80f9644fc4b80f94c45fbf07d213bc803556b8ead4dbb27fc086f9df03b6b3c  requirements-synthesis-0.18.0.zip
 4c8f31fae5f346fd034137bfd5bf19231fbef8044da6fded39d8ae9d5cd8e3d0  research-to-publication-lifecycle-0.18.0.zip
-67619fb3300251ce6e905582e7a0fa2fa4a5ed0b62f0f27eed5238f5b07a12bd  respond-to-code-review-0.18.0.zip
+c298373c4bd78258b3b5507177078b5582cbcbd0ecdcbd3dcc688965234ce09e  respond-to-code-review-0.18.0.zip
 10620b18c51491143d18d523300a8a8ae7953edcc9990df7cf2434ef7bc6efa1  retrieval-grounding-quality-review-0.18.0.zip
 5216881ef542103e0e03ae4c88d76ec4117b0df292dd459e5bf13d9b0ad512fb  salesforce-apex-engineering-profile-0.18.0.zip
 048cdeccb8af38e936e192090593960ce6afd107d141038d52edaebaffcbcabd  skill-import-provenance-0.18.0.zip

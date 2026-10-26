@@ -10,6 +10,16 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 271 regression tests.
 
+## October 26 bounded-maintenance fresh review
+
+The [follow-up review](audits/bounded-maintenance-followup-2026-10-26.md) records
+three corrected workflow gaps: snapshot representation, interrupted reviewer
+accounting/shutdown, and PR lifecycle/head-repository identity. An isolated Git
+fixture reproduced the staged-versus-working distinction. Four additional scenario
+rubrics remain prepared and unrun. The existing export regression now verifies the
+reference receipt's actual SHA-256. The suite remains 271 tests; final check and
+exact-head CI results are recorded in the draft PR. No model reviewer was launched.
+
 ## October 26 bounded-maintenance increment
 
 The [bounded-maintenance assessment](audits/bounded-pr-maintenance-2026-10-26.md)
