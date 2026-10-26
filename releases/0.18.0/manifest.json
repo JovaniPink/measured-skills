@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "62cee963e4295d30f5545fc1989e263ad6197060",
+  "source_commit": "706ffae0772ed1901d1b091d70210db97695733d",
   "created_on": "2026-10-26",
   "artifacts": [
     {
@@ -42,7 +42,7 @@
     {
       "kind": "file",
       "path": "catalog/packs.json",
-      "sha256": "5676794fbbf9486b58b1d525de08701d3f2b0f17338a3c530d03c334faff428c"
+      "sha256": "eba7986156431eb8f5e71a08c5d20eb93851d6e5fca722f027d7e88f6bd871ad"
     },
     {
       "kind": "file",
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/code-change-review-0.18.0.zip",
-      "sha256": "c615c39005cdd90205a0be8b0926e9e876483e9ba733113347f163a1b4613341"
+      "sha256": "3a8c388bd432586877f312f3c9fd2788f62dc64f00b26252144ad549470254be"
     },
     {
       "kind": "zip",
@@ -297,7 +297,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/multi-agent-orchestration-0.18.0.zip",
-      "sha256": "e83c6187b349625cb430fcbb7cd92f010825022dff825b686e31bf7bd50e0a37"
+      "sha256": "bc3b0ea6898e876cb6c394ff5d9e5c4f0dcbbe6d2f9114e59117a856b5912468"
     },
     {
       "kind": "zip",
@@ -372,7 +372,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/publish-change-safely-0.18.0.zip",
-      "sha256": "00191a1d638d0ea9e263335faf917dee19ace3a89f96692cd308cfdc92d15bfd"
+      "sha256": "8ce24716a1bbbe04141e4bcc4897c3ea579c3f1100bcdff8ebaec0d8f6d3e303"
     },
     {
       "kind": "zip",
@@ -387,7 +387,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/request-code-review-0.18.0.zip",
-      "sha256": "60986a2af55778b6afcaca8e4171606d643860860af8d7edc70f90da0f8433b1"
+      "sha256": "75fcbc4d4002a2f9e043cea2f605f4e760050fb2d7d27370a1ce6591ceaa3994"
     },
     {
       "kind": "zip",
@@ -402,7 +402,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/respond-to-code-review-0.18.0.zip",
-      "sha256": "ff323872ec4e126d3ddf0f0148ffe08be8838f55c391a25cf2d3aac765c46895"
+      "sha256": "67619fb3300251ce6e905582e7a0fa2fa4a5ed0b62f0f27eed5238f5b07a12bd"
     },
     {
       "kind": "zip",
@@ -547,12 +547,12 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-delivery",
-      "sha256": "edc2d64315503c066b63efb768e8488657d606815bc5489fa0023e9df617886d"
+      "sha256": "c81b877f5301e4cb210782d7cac1abdcefddcdd5d118198ea3a502ea55351856"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "6633b06ef46f6c2c54c07ec62d4b32735fc5842b1c5d3175d5f134a679a254b3"
+      "sha256": "b902a9bb0fd0dd3a39386c4eae827d4dd5fa024c1bacf8a0b55c2063dca7d557"
     },
     {
       "kind": "tree",
@@ -602,12 +602,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "34751f0c53c0043d5b2f59bb4b4d57d9c761c7d2eda0c77772e131b395810d21"
+      "sha256": "c39c05ce2577857582ed20d39154f42f6199fe930a0ec08a01358069e0d39426"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "546d99c7426aaae973ce7fd41d6d4d5b154be7ef5c6544cb1ef2880716b090cd"
+      "sha256": "e06d023cddc4247509d5d164129bda848d453b07dc1920aca1439f8ccfcd2eba"
     },
     {
       "kind": "tree",
@@ -627,7 +627,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "61fdfd2694405d3c102bfddc70355accadd3344608f1a1637a20def5dc569fd5"
+      "sha256": "034d044edcbf4401c2b0dbc6e7230ba7cc474f6a50b9de5df6d3e61c655d7c62"
     },
     {
       "kind": "tree",
@@ -657,12 +657,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "23860f42ab31b23d744ef10db5516fcdfee04c229bcf93b82934628a7802569c"
+      "sha256": "f86ce04b6d26b46d72227826ff3b4c25af62cde13e100446e217ba88abc269e9"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "9aa9113b4aa8210dfb22ef045116f3e4ea115d4ad2f3fc39763b8cc1e7e14c09"
+      "sha256": "e87bc537341c2a337f52a2f58e857e1e547c8221b7d7a997f04a90fcad418be6"
     },
     {
       "kind": "tree",
@@ -682,7 +682,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "8e3a119305d582ab4ecf77d5b7aa86db3fa8b951b7a162fa0532bb29fa5aa10b"
+      "sha256": "28609ba22312906c2f9d22682780ecf84122565e207ec3633b927e63a1639fd1"
     },
     {
       "kind": "tree",
@@ -697,7 +697,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "cc6ab62fb52dbeb1e2f29a94003a0c3de1f4374d7c0217215531796960fdf72b"
+      "sha256": "5aa25f721bb35c9491e83845522d4b76ace815322db5562da02c21a87b5f9a68"
     }
   ]
 }
