@@ -112,8 +112,13 @@
     },
     "docs/audits/finish-work-coverage-2026-10-26.md": {
       "before_sha256": null,
-      "after_sha256": "a567744744bfd4d82ffab3bbbc3a01f5f948c1f6d7ab86b68810509572930763",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "5144267d824c32cc3f2910b3b7ccb71d938da9e39cd9be53ae21d74c669959ee",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/audits/finish-work-source-pins-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "b0df91ca175d54f8d98e7e1929de021005214aca5cacbd120b8399592b6077b6",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
     },
     "docs/audits/source-refresh-closeout-2026-10-20.json": {
       "before_sha256": null,
@@ -177,18 +182,18 @@
     },
     "docs/skill-catalog-reader-guide.md": {
       "before_sha256": "01739e2d857116314c972d257099e816a63f295f642a2cc03d10df854dd3ff88",
-      "after_sha256": "9a4d2f5f1eef82c6a57e71ff3b946574a51b9cfa312b14a35791b2e8f32b37f2",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "d55343649b991a5947f7856656c2a191b22b21a53dc904ac46763cf96156b28c",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
     },
     "docs/skill-cheatsheet.md": {
       "before_sha256": "95336348d147f690075815f0f6597e5ea1aa7efd16e1f4492c5213159ee4e215",
-      "after_sha256": "62e1e754ea22bf22060e52633279db512dc6778eb004f658829ba0e55f74d777",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+      "after_sha256": "a11c180bf74dbf77148cc4b03493db65d04a37cb7d93ed6b35e2e5b59200d12d",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "234318101cfb9e447eea3f1560252a9a65af33096da5f1b4eb3d050f27593249",
-      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority."
+      "after_sha256": "2c96dadd6413eaa0f075724439b2eabfa27e3f78ff2f1d9d5bff6308646c39d7",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
     },
     "evals/cases.json": {
       "before_sha256": "5db02bc0bf883c1bf19b5bff66c24430b7149e2990828991a993a41edc837344",
@@ -355,10 +360,15 @@
       "after_sha256": "8f99ca393da7e15cc420038ff2e84756747b4c69ab342b07bbee5642642a59a7",
       "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim."
     },
+    "tests/test_catalog.py": {
+      "before_sha256": "a6bc0c40605ae1fd2f389c5aabdee6ca380dfc81fe6415d0f325a27ad9f95cde",
+      "after_sha256": "94e0cddb5f920ba19bc96653ed0fc4a235d65ee703d74e8acd2bfba3709712ee",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
     "tests/test_distribution_licensing.py": {
       "before_sha256": "ec67144681f1709596ede554f633f401e75712bb17a10d3e4a57f8e3b026590f",
-      "after_sha256": "9d6b6af9ae6667e8331220a0b396d5343c3a37c79d669449bc64d8912d0d6c49",
-      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited."
+      "after_sha256": "86b045732904bdd42ebcade68e653c713af44010deaa33a7c862f1f088847142",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
     },
     "tests/test_expression_disposition.py": {
       "before_sha256": "75f02904eec8a7242acfff6b5f819589b444efe4ed007dd86eb157cc81cdb547",
@@ -367,8 +377,8 @@
     },
     "tests/test_finish_work.py": {
       "before_sha256": null,
-      "after_sha256": "5c3f7af585d09590337f5f83b37f406df80ef9e66406123b4662f8864c5fc801",
-      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+      "after_sha256": "155b34ba80568b033213903f27be5a6417c813d483149e534d9dd20e4fe1877b",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
     },
     "tests/test_measured_release.py": {
       "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
@@ -382,8 +392,8 @@
     },
     "tests/test_release_integrity.py": {
       "before_sha256": "1f629c1596ec1cfbf5adf218bec2ff07685033ffe3c7982d304eaa18285fd565",
-      "after_sha256": "dbd4f81271b6578e8bfe9d13964d1d5d84301f1b3e4b8eb02bf71c81348afdcb",
-      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited."
+      "after_sha256": "553842e517e26840beb745f9e967cd4f53ed7d75f58663efecef9692ce0bf63f",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
     }
   }
 }

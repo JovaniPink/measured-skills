@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import sys
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -65,3 +66,23 @@ class FinishWorkTests(unittest.TestCase):
         self.assertIn('Not run:', record['baseline_comparison']['note'])
         prompts = [r['prompt'] for r in record['positive']]
         self.assertTrue(all('engineering-prompt-review' not in p for p in prompts))
+
+    def test_new_source_pins_extend_exact_reviewed_checkpoint(self) -> None:
+        ledger = json.loads((ROOT / 'docs/audits/finish-work-source-pins-2026-10-26.json').read_text())
+        before = json.loads(subprocess.check_output(
+            ['git', 'show', ledger['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT))
+        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        expected = {r['source_url']: r for r in before['sources']}
+        self.assertEqual(set(PROMPT_SOURCES), {r['source_url'] for r in ledger['records']})
+        self.assertEqual(2, len(ledger['records']))
+        for record in ledger['records']:
+            self.assertNotIn(record['source_url'], expected)
+            self.assertEqual('reviewed_new_source', record['decision'])
+            self.assertEqual('content-sha256', record['marker_kind'])
+            self.assertEqual([{'raw_sha256': record['marker_value']}] * 2, record['observations'])
+            self.assertTrue(record['finding'])
+            self.assertEqual(['engineering-prompt-review'], record['affected_skills'])
+            expected[record['source_url']] = {k: record[k] for k in ('source_url', 'marker_kind', 'marker_value')}
+        self.assertEqual(expected, {r['source_url']: r for r in current['sources']})
+        self.assertEqual({k: v for k, v in before.items() if k != 'sources'},
+                         {k: v for k, v in current.items() if k != 'sources'})

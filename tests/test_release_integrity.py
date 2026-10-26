@@ -354,7 +354,8 @@ class ReleaseIntegrityTests(unittest.TestCase):
         import subprocess
         ledger = json.loads((ROOT / 'docs/audits/source-refresh-post-acceptance-2026-10-20.json').read_text())
         before = json.loads(subprocess.check_output(['git', 'show', ledger['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT))
-        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        additions = json.loads((ROOT / 'docs/audits/finish-work-source-pins-2026-10-26.json').read_text())
+        current = json.loads(subprocess.check_output(['git', 'show', additions['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT))
         expected = {r['source_url']: r for r in before['sources']}
         self.assertEqual(14, len(ledger['records']))
         self.assertEqual(14, len({r['source_url'] for r in ledger['records']}))

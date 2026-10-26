@@ -27,7 +27,7 @@ frozen cases, and prepared retests are unchanged.
 Sources were inspected in the October 26 planning and implementation passes.
 These are evolving documentation pages, not pinned framework versions. Discover
 the actual project/client versions before applying version-specific advice.
-The two prompt authorities also have byte-level freshness pins in the catalog;
+The two prompt authorities also have byte-level freshness pins in the catalog and a [separate observation receipt](finish-work-source-pins-2026-10-26.json);
 the Claude pin uses its official Markdown representation after two HTML responses differed and two Markdown responses matched. No normalization was added. Other entries here support documentation only. No external prose, diagrams,
 implementation, executable, or distinctive skill structure was imported.
 

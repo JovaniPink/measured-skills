@@ -59,7 +59,7 @@ class DistributionLicensingTests(unittest.TestCase):
         selected = set(profile['skills']) | {'claim-verification', 'cross-stack-quality-gates', 'prelaunch-readiness', 'publish-change-safely'}
         self.assertEqual(14, len(selected))
         self.assertEqual(selected, {r['skill'] for r in audit['skills']})
-        all_skills = {r['skill'] for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
+        all_skills = {r['skill'] for r in json.loads(subprocess.check_output(['git', 'show', accepted['accepted_revision'] + ':provenance/catalog.json'], cwd=ROOT))['entries']}
         self.assertEqual(all_skills - selected, set(audit['outside_scope']))
         self.assertEqual(73, len(audit['outside_scope']))
         expected = {'LICENSE', 'provenance/catalog.json'}

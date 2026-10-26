@@ -1,6 +1,6 @@
 # Validation Evidence
 
-Current refinement inventory: 87 canonical skills in 11 packs. The October 20
+Current refinement inventory: 88 canonical skills in 11 packs. The October 20
 candidate adds offline cases and authored guidance; validation receipts for this
 revision are recorded after checks complete. Earlier counts below are historical.
 
@@ -8,7 +8,22 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 263 regression tests.
+Current test suite: 269 regression tests.
+
+## October 26 finish-work increment
+
+The [coverage review](audits/finish-work-coverage-2026-10-26.md) records one new
+original prompt-review skill, a fourteen-skill profile, and twelve synthetic
+workflow cases. The [source receipt](audits/finish-work-source-pins-2026-10-26.json)
+binds two new official-source fingerprints without rewriting historical closeout
+records. No model trial, installation, billing change, or new acceptance occurred.
+Two generation/package passes produced matching checksums for all 88 archives.
+The bundled Codex skill-format validator passed the new skill. Claude Code
+2.1.306 and Antigravity 1.4.4 strict plugin validators passed the changed pack. Standalone skills-ref and standalone Codex plugin
+validation were unavailable in this environment; historical receipts do not count
+as current passes. Final required gates and exact-head CI are recorded in the draft
+PR after they complete. The existing 87 canonical skills and frozen daily cases
+are unchanged by this increment.
 
 ## October 21 post-retest repair
 

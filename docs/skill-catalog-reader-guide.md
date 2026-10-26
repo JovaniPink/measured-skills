@@ -370,15 +370,15 @@ Investigates why code, architecture, or an operational design exists by comparin
 
 Builds a proposed shared vocabulary from code, documents, and stakeholder language. It records concepts, definitions, relationships, invariants, authorities, examples, and contradictions without pretending the vocabulary is ratified.
 
+### engineering-prompt-review
+
+Reviews requests addressed to engineering assistants, preserving scope and authorization without executing the quoted task. Returns a short assessment and a revision only when useful. Missing context or tools remain explicit. See [finish existing work](finish-existing-work.md) for usage and limits.
+
 ### guided-configuration
 
 Invocation: `explicit-only`.
 
 Guides a person through configuration that requires their account, device, approval, credential, or external interface. It verifies each observable result while leaving protected steps with the authorized person.
-
-### engineering-prompt-review
-
-Reviews requests addressed to engineering assistants, preserving scope and authorization without executing the quoted task. Returns a short assessment and a revision only when useful. Missing context or tools remain explicit. See [finish existing work](finish-existing-work.md) for usage and limits.
 
 ### high-signal-technical-writing
 

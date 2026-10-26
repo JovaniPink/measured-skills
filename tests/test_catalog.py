@@ -86,7 +86,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_reasoning_plugin_keeps_discovery_scope_focused(self) -> None:
         reasoning = skills_by_plugin()["measured-reasoning"]
-        self.assertEqual(11, len(reasoning))
+        self.assertEqual(12, len(reasoning))
         descriptions = [
             read_skill_metadata(ROOT / "skills" / skill)["description"]
             for skill in reasoning
@@ -753,6 +753,10 @@ class CatalogTests(unittest.TestCase):
             'https://docs.getdbt.com/docs/build/incremental-models',
             'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
         })
+        expected.update({
+            'https://developers.openai.com/api/docs/guides/prompt-engineering',
+            'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md',
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():
@@ -1128,7 +1132,7 @@ class CatalogTests(unittest.TestCase):
             "google-adk-engineering-profile": "adk-version-boundaries.md",
             "retrieval-grounding-quality-review": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(87, len(SKILLS))
+        self.assertEqual(88, len(SKILLS))
         self.assertEqual(11, len(skills_by_plugin()))
         self.assertEqual(
             set(new_skills), set(skills_by_plugin()["measured-agent-platforms"])
