@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "706ffae0772ed1901d1b091d70210db97695733d",
+  "source_commit": "e61bab841e96e711428f1778ce88018c32346d60",
   "created_on": "2026-10-26",
   "artifacts": [
     {
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/code-change-review-0.18.0.zip",
-      "sha256": "3a8c388bd432586877f312f3c9fd2788f62dc64f00b26252144ad549470254be"
+      "sha256": "befcb7212727dbd8bd9074a98a8424605ce3cb9cfab4ae5ba4ed073cc877d465"
     },
     {
       "kind": "zip",
@@ -297,7 +297,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/multi-agent-orchestration-0.18.0.zip",
-      "sha256": "bc3b0ea6898e876cb6c394ff5d9e5c4f0dcbbe6d2f9114e59117a856b5912468"
+      "sha256": "3364af853b68c183181685e50f246764364441083b511ec67d6c384c80837ce1"
     },
     {
       "kind": "zip",
@@ -372,7 +372,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/publish-change-safely-0.18.0.zip",
-      "sha256": "8ce24716a1bbbe04141e4bcc4897c3ea579c3f1100bcdff8ebaec0d8f6d3e303"
+      "sha256": "ffcd20b0d62ef92d8bf3e4892e93dd46e5044a8522f581fdaaad5ad5b6f4ffc6"
     },
     {
       "kind": "zip",
@@ -387,7 +387,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/request-code-review-0.18.0.zip",
-      "sha256": "75fcbc4d4002a2f9e043cea2f605f4e760050fb2d7d27370a1ce6591ceaa3994"
+      "sha256": "0f4a4671f8f680171305baddfc00690219dc468527d866bf6f16cd36808608e4"
     },
     {
       "kind": "zip",
@@ -402,7 +402,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/respond-to-code-review-0.18.0.zip",
-      "sha256": "67619fb3300251ce6e905582e7a0fa2fa4a5ed0b62f0f27eed5238f5b07a12bd"
+      "sha256": "c298373c4bd78258b3b5507177078b5582cbcbd0ecdcbd3dcc688965234ce09e"
     },
     {
       "kind": "zip",
@@ -547,12 +547,12 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-delivery",
-      "sha256": "c81b877f5301e4cb210782d7cac1abdcefddcdd5d118198ea3a502ea55351856"
+      "sha256": "2be5d58e77651c0c53e1615447ef9d6467c7ff5744d56c59a2335a8ccb8e9afc"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "b902a9bb0fd0dd3a39386c4eae827d4dd5fa024c1bacf8a0b55c2063dca7d557"
+      "sha256": "c344f1504dda395789950aee4fb54c84b8c4ceb10c20b8e05c080e6a06bf7aef"
     },
     {
       "kind": "tree",
@@ -602,12 +602,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-delivery",
-      "sha256": "c39c05ce2577857582ed20d39154f42f6199fe930a0ec08a01358069e0d39426"
+      "sha256": "61a583b06d14141467b2c6b9ecae22f30b844e3a71c847dd4eb1ec7c5df06862"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "e06d023cddc4247509d5d164129bda848d453b07dc1920aca1439f8ccfcd2eba"
+      "sha256": "78fbd622fe9fb7ab4b9b9414ff48ad25dba7da6dc5a5710d0be3f3126f771532"
     },
     {
       "kind": "tree",
@@ -627,7 +627,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-skills",
-      "sha256": "034d044edcbf4401c2b0dbc6e7230ba7cc474f6a50b9de5df6d3e61c655d7c62"
+      "sha256": "d653d395bd2dc97e036a21ffb82daaba0ab242183bf5a38e4698ed24a7beb7b4"
     },
     {
       "kind": "tree",
@@ -657,12 +657,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-delivery",
-      "sha256": "f86ce04b6d26b46d72227826ff3b4c25af62cde13e100446e217ba88abc269e9"
+      "sha256": "19b4554fc432860fa80132eecae3af51b531be30ba0dfc670629a23687396a21"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "e87bc537341c2a337f52a2f58e857e1e547c8221b7d7a997f04a90fcad418be6"
+      "sha256": "014b849526a8467067a9dcced8a8830cdaa080f5797c3c0c31d480ef7f8fec79"
     },
     {
       "kind": "tree",
@@ -682,7 +682,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-skills",
-      "sha256": "28609ba22312906c2f9d22682780ecf84122565e207ec3633b927e63a1639fd1"
+      "sha256": "dac661bc2acedaffeb4e5d0e0db60575014bc164d2d72caf30283da08e5bba28"
     },
     {
       "kind": "tree",
@@ -697,7 +697,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "5aa25f721bb35c9491e83845522d4b76ace815322db5562da02c21a87b5f9a68"
+      "sha256": "75761e14062cdc06f6e75647304ab2ab46153abfc13415be9641451828a3cf1e"
     }
   ]
 }
