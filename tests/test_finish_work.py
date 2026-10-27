@@ -35,6 +35,20 @@ class FinishWorkTests(unittest.TestCase):
                         with patch.object(independence, 'ROOT', root):
                             self.assertEqual(not valid, bool(independence.provenance_source_errors()))
 
+    def test_official_openai_markdown_allowance_is_exact(self) -> None:
+        source = 'https://developers.openai.com/api/docs/guides/prompt-engineering.md'
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / 'provenance').mkdir()
+            for url, valid in ((source, True), (source + '?unreviewed=1', False),
+                               (source + '/other', False),
+                               (source.replace('prompt-engineering.md', 'unreviewed.md'), False)):
+                with self.subTest(url=url):
+                    (root / 'provenance/catalog.json').write_text(json.dumps({'entries': [
+                        {'skill': 'engineering-prompt-review', 'source_url': url}]}))
+                    with patch.object(independence, 'ROOT', root):
+                        self.assertEqual(not valid, bool(independence.provenance_source_errors()))
+
     def test_finish_profile_exports_are_deterministic_and_implicit(self) -> None:
         for client in ('codex', 'claude', 'antigravity'):
             with self.subTest(client=client), tempfile.TemporaryDirectory() as temporary:

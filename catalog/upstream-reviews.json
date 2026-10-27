@@ -559,14 +559,14 @@
       "action": "Record the observed marker and independently authored review guidance. No external prose, examples, or executable payload was imported."
     },
     {
-      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
       "status": "reviewed",
       "ownership_check": "Official provider documentation on its primary documentation host.",
       "affected_skills": [
         "engineering-prompt-review"
       ],
-      "finding": "Reviewed 2026-10-26: OpenAI prompt guidance covers instruction hierarchy, context, examples, nondeterminism, and evaluation across model snapshots.",
-      "action": "Retain prompt review as non-executing analysis. Wording changes do not establish improved performance or installed skill loading. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date. A second full-body review found only Astro asset URL changes; three matching new responses support the final exact-content pin. No normalized pin is used."
+      "finding": "Reviewed 2026-10-26: The retained and current HTML differ only in 26 site-asset URL hunks; the authority article is unchanged. The publisher explicitly advertises a complete Markdown representation. Reviewed all sections and examples, including instruction roles, context, evaluation limits, and API-specific caveats. Model recommendations, embedded example commands, and persistent-loop examples are not portable requirements or task authority.",
+      "action": "Bind the complete official Markdown bytes, with no extraction or normalization. Keep the human-facing HTML reference. Preserve prompt review as non-executing analysis; source examples do not authorize API calls, spending, or indefinite work. No canonical change is needed. See docs/audits/openai-swift-source-review-2026-10-26.json; preserve historical records and the global review clock."
     },
     {
       "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
@@ -597,6 +597,17 @@
       ],
       "finding": "Reviewed 2026-10-26: Go documentation links module/workspace management, tests, fuzzing, language specifications, and toolchain guidance.",
       "action": "Retain repository-specific version and command discovery; an index is not evidence that local gates ran. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+    },
+    {
+      "url": "https://www.swift.org/swift-evolution/",
+      "status": "reviewed",
+      "ownership_check": "The official Swift project website is the primary proposal discovery and process entry point.",
+      "affected_skills": [
+        "swift-concurrency-diagnosis",
+        "swift-swiftui-engineering-profile"
+      ],
+      "finding": "Reviewed 2026-10-26: The current official landing document distinguishes proposal approval from a future release goal and links to the proposal process. The proposal list is loaded by JavaScript, so its HTML fingerprint is not a binding for every proposal or compiler behavior. The prior exact response body was not retained; no claim that this change is cosmetic or textually equivalent is made.",
+      "action": "Accept a new full-response pin after current-content review and three identical observations. Retain per-module toolchain/language/isolation discovery and direct proposal checks for technical claims. Historical compiler tests remain dated; neither landing-page freshness nor a proposal status establishes current local execution. No canonical change is needed. See docs/audits/openai-swift-source-review-2026-10-26.json; preserve the global review clock."
     }
   ]
 }

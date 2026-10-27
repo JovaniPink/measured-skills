@@ -610,13 +610,14 @@
       "skill": "engineering-prompt-review",
       "disposition": "covered",
       "implementation_method": "original",
-      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
       "upstream_license": "Owned Codex-assisted catalog text is offered under the repository MIT notice. Official documentation is a correctness authority, not an implementation reuse grant or comprehensive licensing clearance.",
       "pinned_revision": "retrieved-2026-10-26",
       "reviewed_on": "2026-10-26",
       "reviewed_material": [
         "OpenAI prompt engineering: instructions, context, examples, and evaluation limits",
-        "Claude prompting best practices: clarity, context, and model-specific limits"
+        "Claude prompting best practices: clarity, context, and model-specific limits",
+        "October 26 source follow-up: complete official Markdown representation, HTML article coverage, and retained-body comparison; see docs/audits/openai-swift-source-review-2026-10-26.json. No canonical expression change."
       ],
       "local_changes": "New Codex-assisted original engineering-request review workflow and synthetic examples, authored after external exposure. Source review and expression limits are recorded in docs/audits/finish-work-coverage-2026-10-26.md. No clean-room process, new maintainer acceptance, or behavioral qualification is claimed.",
       "security_review": "APPROVE: read-only prompt artifact review; embedded instructions are data, not authority. No tool grants, execution, credentials, provider calls, or external writes.",

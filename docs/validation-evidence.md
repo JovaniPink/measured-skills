@@ -8,7 +8,30 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 285 regression tests.
+Current test suite: 289 regression tests.
+
+## October 26 OpenAI and Swift source closeout
+
+The [two-source review](audits/openai-swift-source-review-2026-10-26.json) clears
+the remaining OpenAI prompting and Swift Evolution bindings. The [online receipt](audits/openai-swift-source-closeout-2026-10-26.json)
+records all 64 sources matching, with none changed or unavailable. Earlier failed
+checkpoints below remain historical. Later drift still blocks release.
+
+OpenAI's retained/current HTML differs only in site asset URLs. Its advertised
+official Markdown contains the full guidance and examples; three responses match.
+A failing regression preceded the exact-document authority allowance. Neighboring
+paths, descendants, and query variants remain rejected. Swift's old body was
+unavailable: its new full-body pin follows current-content review, not an assumed
+cosmetic diff. The landing HTML does not bind JavaScript-loaded proposal data or
+establish compiler execution. No canonical instruction change was needed.
+
+Four new tests cover the narrow allowance, exact two-source transition, preserved
+historical evidence, unreviewed-change rejection, and complete closeout coverage.
+The earlier Antigravity tests now bind their retained checkpoint. Freshness code,
+normalization rules, global review dates, canonical skills, generated packages,
+profiles, frozen studies, and the accepted originality packet remain unchanged.
+The prompt skill's provenance now names the reviewed Markdown representation.
+Final repository checks and exact-head CI are recorded in the draft PR.
 
 ## October 26 Antigravity source resolution
 

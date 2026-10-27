@@ -16,17 +16,16 @@ with no behavioral evidence and one with partial historical evidence. Package
 availability, installation, successful loading, correct behavior, and measured
 benefit are separate claims.
 
-This follow-up starts at `13c3e4e36c82782c17b197fdeb1159b3d388d6d0` and preserves
-its source anchor `99497dc4aecc6de6180023a3f9c9fb9c1fec373a`, plus all earlier
-anchors including `e61bab841e96e711428f1778ce88018c32346d60`. The follow-up
-manifest must bind the new clean source commit while retaining those ancestors.
-The manifest records 139 artifacts; source-pin changes require rebinding even
-though canonical skills and generated archives are unchanged.
+This follow-up starts at `115b65085efa472584e9ae1be23b0f2737e68c9c` and preserves
+its source anchor `ddf40499835e8dc0b39079cd8deb7dba0594f85a` and all earlier
+source/acceptance anchors. The new manifest must bind the clean source commit.
+It retains 139 artifacts; the two source catalogs and prompt-review provenance
+require rebinding, while canonical skills and generated archives are unchanged.
 
 | Gate | Current evidence and limit | Required next step |
 | --- | --- | --- |
-| Online source freshness | The [initial check](audits/source-check-initial-2026-10-26.json) found 33 changed and 31 matching sources, with none unavailable. The [individual review](audits/source-review-2026-10-26.json) records current-content decisions and three observations per changed source. | The first review repaired 29 bindings. This follow-up clears the four Antigravity bindings using individually reviewed official Markdown; two newly changed sources remain held. See the current closeout below. |
-| Repository consistency | The prior checkpoint passed 275 unit tests. This follow-up adds ten transport and source-binding tests. Follow-up checks and the refreshed manifest must pass on the submitted revision. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
+| Online source freshness | The [new closeout](audits/openai-swift-source-closeout-2026-10-26.json) records 64 matching sources, none changed, none unavailable, after [two individual decisions](audits/openai-swift-source-review-2026-10-26.json). Earlier 33-source and Antigravity failures remain historical. | Passed at this checkpoint. Recheck before a later release decision; new drift remains blocking. |
+| Repository consistency | The prior checkpoint passed 285 unit tests. This follow-up adds four authority/source-binding tests. Follow-up checks and the refreshed manifest must pass on the submitted revision. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
 | Generated artifacts | Canonical skills and generated output are unchanged in this source-review increment. Existing byte checks cover projections and all 88 archives. | Retain byte correspondence and complete manifest inventory; version labels alone are insufficient. |
 | Originality and licensing disposition | The maintainer [accepted the exact scoped decision](audits/originality-acceptance-0.18.0.json) for `36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7`, including the gate replacement. The undefined corpus and further independent-review holds are closed for that payload. | Preserve the accepted packet and [post-acceptance delta](audits/post-acceptance-delta-2026-10-20.json). Later changes are technical delta reviews, not new acceptance or universal legal clearance. |
 | Claude Code acceptance | The [pilot](audits/cli-pilot-observations-2026-10-20.json) and [retest](audits/claude-retest-observations-2026-10-21.json) recorded routing and evidence failures, including continuity and GCP contract errors. Both allowances are consumed. | The [five-case, two-follow-up diagnostic proposal](audits/claude-routing-contract-retest-plan-2026-10-21.md) remains prepared, not run. It needs a separate execution decision and fresh billing/isolation checks. Repairs alone do not establish success. |
@@ -38,12 +37,30 @@ though canonical skills and generated archives are unchanged.
 
 ## Source closeout
 
-The [current closeout](audits/antigravity-source-closeout-2026-10-26.json) records
-62 matches, two changed sources, and none unavailable. All four Antigravity
-replacements match. The online gate still fails because OpenAI's prompting page
-and Swift Evolution changed after the prior review. Their pins remain unchanged;
-review their exact changes before any replacement. No cosmetic classification or
-semantic clearance is inferred for those two holds.
+The [current closeout](audits/openai-swift-source-closeout-2026-10-26.json) records
+64 matches, no changes, and none unavailable. The [two-source decision ledger](audits/openai-swift-source-review-2026-10-26.json)
+records the exact before/after bindings and their limits. All other 62 pins and
+the global review clock remain unchanged.
+
+OpenAI's HTML differs from the retained body only in site asset URLs. Its official
+page advertises [complete Markdown](https://developers.openai.com/api/docs/guides/prompt-engineering.md),
+which was reviewed against the article and returned three identical responses.
+The complete Markdown bytes are hashed; no content is stripped. The provenance
+URL and one exact primary-document allowance now name that representation.
+Regression tests reject neighboring URLs. The skill's human-facing HTML link and
+non-executing prompt-review contract remain unchanged.
+
+The [Swift Evolution document](https://www.swift.org/swift-evolution/) also returned
+three identical responses. Its old exact body was unavailable; this is an explicit
+current-content review, not a claim that the drift was cosmetic. The page explains
+proposal discovery and review, while JavaScript loads the proposal list. Its HTML
+fingerprint does not bind every linked proposal, feature status, or compiler result.
+Retain exact toolchain and per-module setting checks for technical claims. No new
+runtime or installed-client qualification is inferred.
+
+The [previous Antigravity closeout](audits/antigravity-source-closeout-2026-10-26.json)
+remains the historical 62-match/two-hold checkpoint. The source repairs below are
+retained context, not a claim that their earlier counts are current.
 
 The [Antigravity review](audits/antigravity-source-resolution-2026-10-26.json)
 checks complete official Markdown for [headless CLI](https://antigravity.google/docs/cli/headless.md),
@@ -73,7 +90,7 @@ changed ETag or Last-Modified values. Those individual decisions use the existin
 full-content SHA-256 method. At that earlier checkpoint, OpenAI's prompting-page
 response changed only Astro asset URLs, with three identical responses supporting
 its then-reviewed full-body pin. That historical comparison does not classify the
-new OpenAI drift above. No byte is removed when computing these pins.
+OpenAI HTML drift reviewed in this follow-up. No byte is removed when computing these pins.
 
 A changed marker is not proof that an instruction is wrong. Conversely, three
 matching markers do not prove stable page bytes or semantic equivalence. The
@@ -84,7 +101,8 @@ No new normalization or global review-date reset was introduced.
 
 ## What can proceed without paid evaluations
 
-1. Finish source review, pin accounting, deterministic checks, and exact-head CI.
+1. Retain source-review decisions and repeat freshness before a later release
+   decision. Complete deterministic checks and exact-head CI.
    Preserve unavailable hosted execution as unavailable; changing billing is not
    a repair within this scope.
 2. Inspect native account controls, loading paths, and duplicate-source inventories

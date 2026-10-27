@@ -11,6 +11,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '13c3e4e36c82782c17b197fdeb1159b3d388d6d0'
+CHECKPOINT = '115b65085efa472584e9ae1be23b0f2737e68c9c'
 REPLACEMENTS = {
     'https://antigravity.google/docs/cli/headless/': 'https://antigravity.google/docs/cli/headless.md',
     'https://antigravity.google/docs/skills/': 'https://antigravity.google/docs/skills.md',
@@ -22,7 +23,9 @@ REPLACEMENTS = {
 class AntigravitySourceResolutionTests(unittest.TestCase):
     def setUp(self) -> None:
         self.ledger = json.loads((ROOT / 'docs/audits/antigravity-source-resolution-2026-10-26.json').read_text())
-        self.pins = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        self.pin_bytes = subprocess.check_output(
+            ['git', 'show', CHECKPOINT + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.pins = json.loads(self.pin_bytes)
         self.before = json.loads(subprocess.check_output(
             ['git', 'show', BASE + ':catalog/upstream-pins.json'], cwd=ROOT))
 
@@ -72,7 +75,8 @@ class AntigravitySourceResolutionTests(unittest.TestCase):
 
     def test_only_four_reviewed_representations_replace_the_retained_holds(self) -> None:
         self.assert_transition(self.ledger, self.pins)
-        reviews = json.loads((ROOT / 'catalog/upstream-reviews.json').read_text())['reviews']
+        reviews = json.loads(subprocess.check_output(
+            ['git', 'show', CHECKPOINT + ':catalog/upstream-reviews.json'], cwd=ROOT))['reviews']
         urls = {r['url'] for r in reviews}
         self.assertFalse(set(REPLACEMENTS) & urls)
         self.assertTrue(set(REPLACEMENTS.values()) <= urls)
@@ -106,7 +110,7 @@ class AntigravitySourceResolutionTests(unittest.TestCase):
         payload = (ROOT / closeout['path']).read_bytes()
         self.assertEqual(closeout['sha256'], hashlib.sha256(payload).hexdigest())
         self.assertEqual(closeout['pins_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+                         hashlib.sha256(self.pin_bytes).hexdigest())
         report = json.loads(payload)
         self.assertTrue(report['online'])
         self.assertEqual('fail', report['result'])

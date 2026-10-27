@@ -754,7 +754,8 @@ class CatalogTests(unittest.TestCase):
             'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
         })
         expected.update({
-            'https://developers.openai.com/api/docs/guides/prompt-engineering',
+            'https://developers.openai.com/api/docs/guides/prompt-engineering.md',
+            'https://www.swift.org/swift-evolution/',
             'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md',
         })
         expected.update({
