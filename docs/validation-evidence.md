@@ -10,6 +10,21 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 289 regression tests.
 
+## October 26 Haiku continuation and consumed allowance
+
+The [continuation](audits/claude-haiku-continuation-2026-10-26.md) records the three
+remaining cases after fresh browser and native controls. The running client is
+2.1.311, separately recorded from the first segment's 2.1.306. GCP missed both
+skill/reference loading and the output contract. Near-miss and stale-receipt rows
+passed their inspected requirements. The prior direct control remains invalid;
+all five case requests and both follow-ups are consumed without retries.
+
+All fifty staged files and three additional prompt texts match. The successful
+claim-verification expansion matches the staged body. No acceptance is inferred
+from these file checks or individual passes. Earlier partial and failed records
+remain unchanged. This follow-up changes documentation only; final local checks
+and exact pushed-head CI are recorded in the draft descriptions.
+
 ## October 26 partial Haiku diagnostic
 
 The [new observation](audits/claude-haiku-retest-2026-10-26.md) records two case
