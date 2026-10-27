@@ -10,6 +10,22 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 292 regression tests.
 
+## October 27 completed output-contract diagnostic
+
+The [new observation](audits/claude-contract-retest-2026-10-27.md) completes four
+fresh cases and two fixed follow-ups on Haiku 5.5/medium, Claude Code 2.1.311,
+after fresh billing and isolation checks. All prepared requirements passed.
+Six exact inputs, three loaded bodies, two reference reads and fifty unchanged
+staged files were verified. Both native commands dispatched correctly. The owned
+session is closed and the allowance consumed. The prior failed run below remains
+historical evidence for its different source.
+
+This closes the focused diagnostic, not profile qualification. The release ledger
+now prioritizes the remaining client checklist and a finite supported-scope matrix
+instead of another identical wording retest. No source, generated, manifest,
+frozen-case or accepted-originality bytes changed. Required checks are repeated
+for this documentation-only record; final receipts appear in the draft summaries.
+
 ## October 27 output-contract repair and next preparation
 
 The [focused repair](audits/gcp-review-contract-repair-2026-10-27.md) separates
