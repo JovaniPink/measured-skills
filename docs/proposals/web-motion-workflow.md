@@ -31,7 +31,9 @@ element to move or every site to share one visual language.
 > Implement [accepted specification] in [repository] within [routes and files].
 > Preserve unrelated work. Keep semantic state independent of animation completion
 > and keep the static content usable. Run repository checks and inspect the actual
-> browser behavior, including keyboard, reduced motion, and interruption. Record
+> browser behavior, including keyboard, reduced motion, interruption, and enlarged
+> text. Keep visible and accessible labels consistent, and preserve focus when
+> playback pauses or the scene leaves view. Record
 > exact revisions and unavailable evidence. Leave the change ready for review;
 > do not merge, deploy, or release.
 
@@ -44,7 +46,9 @@ Do not manufacture an additional approval step for routine decisions within it.
 > functional-motion-review when that installed skill is available, and verify its
 > loading separately from output quality. Inspect meaning, source truthfulness,
 > complete static content, focus, reduced motion, pause/replay, and performance
-> evidence. Report concrete findings and limits. Do not edit or publish.
+> evidence. Check speech-control labels and narrow/enlarged-text layouts. Separate
+> mocked events from observed browser behavior, and identify evidence made stale
+> by later changes. Report concrete findings and limits. Do not edit or publish.
 
 Repair accepted findings under existing implementation authority, rerun affected
 checks, and review the changed scope. Self-review is not independent review.
