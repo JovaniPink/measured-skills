@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "a55f0f750d64e005f6768dba2c5c971a1f5fbfd0",
-  "created_on": "2026-10-26",
+  "source_commit": "4d72d37d9240ffc6169a31d600cc0d800aef9ada",
+  "created_on": "2026-10-27",
   "artifacts": [
     {
       "kind": "file",
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/code-change-review-0.18.0.zip",
-      "sha256": "befcb7212727dbd8bd9074a98a8424605ce3cb9cfab4ae5ba4ed073cc877d465"
+      "sha256": "1eecd4e455ad3b4314ba42d2678acd247362921c064817954dc76d73ed811480"
     },
     {
       "kind": "zip",
@@ -237,7 +237,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/gcp-data-engineering-profile-0.18.0.zip",
-      "sha256": "30d46581d958bc9ef086060b5f1d3c058ea00ac82df320d3e39a20a71ac2f120"
+      "sha256": "5de084edb7c39aaf540b561ceb16bd87e4097cd18f7d1f2033e58c1d436ca606"
     },
     {
       "kind": "zip",
@@ -517,7 +517,7 @@
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "6ed78bf3297988fac7e3cd7c8af8eaa5ef26afc50750b2def1760733e54e6779"
+      "sha256": "8af0259ddcfc41955d028ffd35b8c98c6670b353d9b406b310520ddb9b218e8a"
     },
     {
       "kind": "file",
@@ -552,7 +552,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "c344f1504dda395789950aee4fb54c84b8c4ceb10c20b8e05c080e6a06bf7aef"
+      "sha256": "c50640a5cdb7c51d6946cd9c66321326977806f66bb338378ad5d713a752ec0b"
     },
     {
       "kind": "tree",
@@ -577,7 +577,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stack-profiles",
-      "sha256": "c5c247bdbe276a8d4a5f1fb15ca669e0788705c6760bbe4ac8f145574ac466fe"
+      "sha256": "abc40ab77c67b180e7f758cd8af5f714757e8980d90604d3bd1a96a0cd89e69c"
     },
     {
       "kind": "tree",
@@ -607,7 +607,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "78fbd622fe9fb7ab4b9b9414ff48ad25dba7da6dc5a5710d0be3f3126f771532"
+      "sha256": "4f2fd25c1b24ca2207e111f55603ba08056f8b1c011d960c364777ef9aca0ecc"
     },
     {
       "kind": "tree",
@@ -632,7 +632,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stack-profiles",
-      "sha256": "fc46ea8e8c0a6b483eb9d84a93b097a1856a3858dc1bbdca83c55ac3d2cfe799"
+      "sha256": "6ec9fece98e2c86dd22df8f3b0ac7f860060822db7b1c3363c45c9d818691424"
     },
     {
       "kind": "tree",
@@ -662,7 +662,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "014b849526a8467067a9dcced8a8830cdaa080f5797c3c0c31d480ef7f8fec79"
+      "sha256": "b37bfc5bbfaa300e4f3e779678770c34ce5d5dded81f4649cf45a11349e89774"
     },
     {
       "kind": "tree",
@@ -687,7 +687,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stack-profiles",
-      "sha256": "b092cd559d3968b37e9e66edead2c2f9f8469dba512d85115036688b231b74c0"
+      "sha256": "67a0da0260a04662632276acc6368152691b1bf89f11bd14d6d1992262061054"
     },
     {
       "kind": "tree",
@@ -697,7 +697,7 @@
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "56bcb935186f592e7b5b39a7c4562128d3df4c9a810cbdff5162419729b7b679"
+      "sha256": "d93a08319da8fd1ea49e60916800c2d880734e39edfe24852c08280bd579d28c"
     }
   ]
 }
