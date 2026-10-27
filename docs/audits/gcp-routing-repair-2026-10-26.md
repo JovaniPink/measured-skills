@@ -141,3 +141,14 @@ Raw account/session evidence stays private. These known synthetic cases cannot
 establish catalog activation rates, causal improvement, client parity, M5 acceptance,
 or release readiness. The generic-SQL near misses and streaming routes are not
 behaviorally covered by this small proposal.
+
+## Deterministic review
+
+Three-client export checks bind the canonical entry, both required references,
+native metadata and receipt hashes. The preparation test keeps old task payloads
+unchanged while separating native commands. All 88 archives rebuilt identically
+twice; only the GCP archive changed. The initial full suite exposed a stale count
+and a historical provenance comparison; the repaired comparison uses retained
+source `d67fcb70f64ebc36618ba27e080e02ec4845aaf1`, while existing delta tests
+still enforce every current provenance byte. No historical receipt or validator
+policy changed. Final gate results accompany the pushed draft revision.

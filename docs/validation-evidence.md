@@ -8,7 +8,24 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 289 regression tests.
+Current test suite: 291 regression tests.
+
+## October 26 GCP routing repair and prepared controls
+
+The [routing diagnosis and preparation](audits/gcp-routing-repair-2026-10-26.md)
+clarifies the GCP description and supplied-context routing without rewriting its
+warehouse safeguards. Two regressions compare standalone exports across all three
+clients and bind prepared task payloads, native-command fields and canonical hashes.
+All 88 archives were generated twice with identical checksums; only the GCP archive
+changed. The source/artifact commit and separate manifest commit preserve ancestry.
+
+The first full run found a stale suite count and a historical source-transition
+test comparing today's provenance against an old checkpoint. The latter now reads
+that exact retained source commit; current bytes remain enforced by the existing
+post-acceptance delta tests. No validator, source pin or historical record changed.
+Final local and hosted outcomes are recorded in the draft descriptions. Native
+Claude format validation passes for the changed stack pack; skills-ref remains
+unavailable. No model test ran, and prepared controls are not acceptance evidence.
 
 ## October 26 Haiku continuation and consumed allowance
 

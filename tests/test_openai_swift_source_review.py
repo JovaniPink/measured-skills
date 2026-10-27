@@ -11,6 +11,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '115b65085efa472584e9ae1be23b0f2737e68c9c'
+REVIEWED_SOURCE = 'd67fcb70f64ebc36618ba27e080e02ec4845aaf1'
 OPENAI = 'https://developers.openai.com/api/docs/guides/prompt-engineering'
 SWIFT = 'https://www.swift.org/swift-evolution/'
 
@@ -58,7 +59,11 @@ class OpenAISwiftSourceReviewTests(unittest.TestCase):
     def test_exact_transition_and_authority_coverage(self) -> None:
         self.assert_transition(self.ledger, self.pins)
         before = json.loads(subprocess.check_output(['git', 'show', BASE + ':provenance/catalog.json'], cwd=ROOT))
-        current = json.loads((ROOT / 'provenance/catalog.json').read_text())
+        # This assertion concerns the source-review transition, not later authoring.
+        # Current provenance bytes are bound by the post-acceptance delta tests.
+        subprocess.run(['git', 'merge-base', '--is-ancestor', REVIEWED_SOURCE, 'HEAD'], cwd=ROOT, check=True)
+        current = json.loads(subprocess.check_output(
+            ['git', 'show', REVIEWED_SOURCE + ':provenance/catalog.json'], cwd=ROOT))
         for old, new in zip(before['entries'], current['entries'], strict=True):
             if old['skill'] == 'engineering-prompt-review':
                 self.assertEqual(OPENAI, old['source_url'])
