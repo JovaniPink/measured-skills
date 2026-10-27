@@ -10,6 +10,20 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 291 regression tests.
 
+## October 27 four-case Claude retest
+
+The [completed retest](audits/claude-gcp-retest-2026-10-27.md) consumed exactly
+four case sessions and two follow-ups after fresh native/browser billing controls
+and isolation checks. All six payloads, three loaded bodies, two warehouse reads
+and fifty unchanged staged files were verified. Both native controls dispatched
+correctly. Implicit GCP fact fidelity and code-review prediction wording still
+failed; continuity retained scope and unrun checks but carried the wording error.
+No whole-profile acceptance or further run authority follows from this evidence.
+
+This is a documentation-only observation against the preserved source/manifest
+pair. Required checks are repeated for the report; final local and hosted outcomes
+are recorded in the draft descriptions. No new online freshness check was made.
+
 ## October 26 GCP routing repair and prepared controls
 
 The [routing diagnosis and preparation](audits/gcp-routing-repair-2026-10-26.md)
