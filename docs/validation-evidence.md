@@ -10,6 +10,20 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 289 regression tests.
 
+## October 26 client-control and retest preparation
+
+The [native-control audit](audits/client-controls-2026-10-26.md) preserves Codex's
+unverified billing boundary and Antigravity's failed isolation readback. No model
+request ran. The [Claude preparation](audits/claude-retest-preparation-2026-10-26.json)
+binds twelve selected skills, all 50 staged files, and five cases plus two
+continuations. All staged hashes match. Native strict format validation establishes
+the wrapper manifest only; zero skill-body checks were reported.
+
+Canonical skills, source pins, profiles, frozen cases, generated packages, accepted
+originality records, and the valid manifest binding are unchanged. Repository
+checks are repeated for the documentation delta; exact-head CI is recorded in the
+draft. File evidence and native metadata do not qualify behavior on any client.
+
 ## October 26 OpenAI and Swift source closeout
 
 The [two-source review](audits/openai-swift-source-review-2026-10-26.json) clears

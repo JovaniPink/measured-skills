@@ -16,21 +16,21 @@ with no behavioral evidence and one with partial historical evidence. Package
 availability, installation, successful loading, correct behavior, and measured
 benefit are separate claims.
 
-This follow-up starts at `115b65085efa472584e9ae1be23b0f2737e68c9c` and preserves
-its source anchor `ddf40499835e8dc0b39079cd8deb7dba0594f85a` and all earlier
-source/acceptance anchors. The new manifest must bind the clean source commit.
-It retains 139 artifacts; the two source catalogs and prompt-review provenance
-require rebinding, while canonical skills and generated archives are unchanged.
+The client-control follow-up starts at `3c5cc3a794918773ac649e072ccd58e4f0bced5f`.
+Its existing manifest binds source `d67fcb70f64ebc36618ba27e080e02ec4845aaf1`
+and retains all 139 artifacts and historical anchors. This follow-up changes only
+documentation and prepared records, so no regeneration or manifest rebinding is
+needed. The prior source-review checkpoint passed 289 tests and hosted CI.
 
 | Gate | Current evidence and limit | Required next step |
 | --- | --- | --- |
 | Online source freshness | The [new closeout](audits/openai-swift-source-closeout-2026-10-26.json) records 64 matching sources, none changed, none unavailable, after [two individual decisions](audits/openai-swift-source-review-2026-10-26.json). Earlier 33-source and Antigravity failures remain historical. | Passed at this checkpoint. Recheck before a later release decision; new drift remains blocking. |
-| Repository consistency | The prior checkpoint passed 285 unit tests. This follow-up adds four authority/source-binding tests. Follow-up checks and the refreshed manifest must pass on the submitted revision. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
+| Repository consistency | The source-review checkpoint passed 289 unit tests and exact-head hosted validation. Repeat the required checks for this documentation update; no test or validator changes are needed. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
 | Generated artifacts | Canonical skills and generated output are unchanged in this source-review increment. Existing byte checks cover projections and all 88 archives. | Retain byte correspondence and complete manifest inventory; version labels alone are insufficient. |
 | Originality and licensing disposition | The maintainer [accepted the exact scoped decision](audits/originality-acceptance-0.18.0.json) for `36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7`, including the gate replacement. The undefined corpus and further independent-review holds are closed for that payload. | Preserve the accepted packet and [post-acceptance delta](audits/post-acceptance-delta-2026-10-20.json). Later changes are technical delta reviews, not new acceptance or universal legal clearance. |
-| Claude Code acceptance | The [pilot](audits/cli-pilot-observations-2026-10-20.json) and [retest](audits/claude-retest-observations-2026-10-21.json) recorded routing and evidence failures, including continuity and GCP contract errors. Both allowances are consumed. | The [five-case, two-follow-up diagnostic proposal](audits/claude-routing-contract-retest-plan-2026-10-21.md) remains prepared, not run. It needs a separate execution decision and fresh billing/isolation checks. Repairs alone do not establish success. |
-| Codex CLI acceptance | [Dated native checks](audits/client-controls-2026-10-21.md) established isolated discovery but not a verified no-paid-fallback route. | Establish the actual billing boundary before a model run. No proxy or API fallback is authorized. |
-| Antigravity CLI acceptance | The same dated checks found ambient skill/instruction loading despite the disposable workspace. Published loading and slash-command documentation do not demonstrate effective isolation. | Find and verify supported isolation without altering ordinary installations; retain exclusions and leave the lane unrun meanwhile. |
+| Claude Code acceptance | The [pilot](audits/cli-pilot-observations-2026-10-20.json) and [retest](audits/claude-retest-observations-2026-10-21.json) recorded routing and evidence failures, including continuity and GCP contract errors. Both allowances are consumed. | The [five-case, two-follow-up diagnostic proposal](audits/claude-routing-contract-retest-plan-2026-10-26.md) remains prepared, not run. It needs a separate execution decision and fresh billing/isolation checks. Repairs alone do not establish success. |
+| Codex CLI acceptance | [Fresh native metadata](audits/client-controls-2026-10-26.md) on Codex 0.161.0 still reports available credits without a verified no-paid-fallback control. Isolated discovery was observed at the older checkpoint, not retested here. | Establish the actual billing boundary before a model run. No proxy or API fallback is authorized. |
+| Antigravity CLI acceptance | [Fresh 1.4.7 observations](audits/client-controls-2026-10-26.md) show 111 discovered skills and an auto-loaded global instruction file in both default and no-inheritance custom-agent sessions. AI Credits are not enabled. Isolation remains unverified. | Find and verify supported isolation without altering ordinary installations; retain exclusions and leave the lane unrun meanwhile. |
 | App, account-library, and second-machine acceptance | No new app-mode or second-machine qualification is recorded. CLI observations cannot fill these cells. | Inspect and test each claimed surface separately under its own authority. Narrowing claims does not waive required gates. |
 | External validators | Standalone skills-ref and Codex CLI plugin validation were unavailable in the retained environment evidence. Native format results are not behavior results. | Record availability honestly; a reviewed isolated validator installation remains separate work. |
 | Release decision | The candidate draft remains unmerged and unpromoted. Required trigger and manual evidence is incomplete. | Follow the [release gate](testing.md#release-gate), retain failed/unavailable cells, then seek a separate release decision. |
