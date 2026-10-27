@@ -42,7 +42,7 @@ Track test existence, execution, and outcome separately:
 | No test was supplied | Coverage was not provided in this review | Existence or execution elsewhere |
 | A proposed test assertion | Desired behavior required by a stated contract | What the current implementation returns and whether the assertion passes |
 | A static prediction | Predicted response and assertion outcome under named implementation assumptions | Whether those assumptions hold and what an actual run observes |
-| An executed test | Observed outcome for its recorded revision and setup | Behavior outside that test's scope |
+| A recorded test result | Observed outcome for its identified revision and setup | Behavior outside that test's scope; an incomplete run does not establish a pass |
 
 Do not use "expected result" to mean both the desired assertion and the predicted
 response. For a proposed test, identify what it should assert, what the current
