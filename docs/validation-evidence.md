@@ -10,6 +10,22 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 289 regression tests.
 
+## October 26 partial Haiku diagnostic
+
+The [new observation](audits/claude-haiku-retest-2026-10-26.md) records two case
+sessions and two follow-ups on Claude Code 2.1.306, Haiku 5.5/medium. Implicit review
+loaded the exact staged body. The direct-control paste did not dispatch a native
+command, so that condition is invalid. Continuity retained evidence limits, with
+an ambiguous test-prediction phrase preserved for review. Three cases remain unrun
+after automatic approval review blocked the next submission. No retry was made.
+
+All 50 staged hashes and four submitted input texts match their prepared values;
+client paste envelopes are retained in private evidence. Native credits remained
+off, but browser corroboration was not obtained. This is partial diagnostic
+evidence, not profile acceptance. Canonical/generated content, frozen records,
+source pins, and manifest bindings are unchanged. Final repository checks and
+exact pushed-head CI are recorded in the draft; they cannot replace client results.
+
 ## October 26 client-control and retest preparation
 
 The [native-control audit](audits/client-controls-2026-10-26.md) preserves Codex's
