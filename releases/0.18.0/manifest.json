@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.18.0",
-  "source_commit": "4d72d37d9240ffc6169a31d600cc0d800aef9ada",
+  "source_commit": "f209dcf26047edc35c7d5c3489198826ddd136a0",
   "created_on": "2026-10-27",
   "artifacts": [
     {
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/code-change-review-0.18.0.zip",
-      "sha256": "1eecd4e455ad3b4314ba42d2678acd247362921c064817954dc76d73ed811480"
+      "sha256": "20a4e58a4f15746d68331587de4d4271466f236e751bb72c7fbadea55ce4a788"
     },
     {
       "kind": "zip",
@@ -552,7 +552,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-engineering-review",
-      "sha256": "c50640a5cdb7c51d6946cd9c66321326977806f66bb338378ad5d713a752ec0b"
+      "sha256": "4e34cb3ba6ae5ab1d50e01b89d9c9cbbb98aed8ac7c91c77fe7b8181557e0a29"
     },
     {
       "kind": "tree",
@@ -607,7 +607,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-engineering-review",
-      "sha256": "4f2fd25c1b24ca2207e111f55603ba08056f8b1c011d960c364777ef9aca0ecc"
+      "sha256": "e25f4682b7e197cb3ddbd0823dc7f931e72ae65c215a44b30b62c9ee24e64c68"
     },
     {
       "kind": "tree",
@@ -662,7 +662,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-engineering-review",
-      "sha256": "b37bfc5bbfaa300e4f3e779678770c34ce5d5dded81f4649cf45a11349e89774"
+      "sha256": "bb9ab0ba071a4fd54c119302734f8f2e0906b3ed019fd119ec19b390d99dac91"
     },
     {
       "kind": "tree",
