@@ -16,19 +16,20 @@ with no behavioral evidence and one with partial historical evidence. Package
 availability, installation, successful loading, correct behavior, and measured
 benefit are separate claims.
 
-The client-control follow-up starts at `3c5cc3a794918773ac649e072ccd58e4f0bced5f`.
-Its existing manifest binds source `d67fcb70f64ebc36618ba27e080e02ec4845aaf1`
-and retains all 139 artifacts and historical anchors. This follow-up changes only
-documentation and prepared records, so no regeneration or manifest rebinding is
-needed. The prior source-review checkpoint passed 289 tests and hosted CI.
+The [GCP routing repair and diagnostic](audits/gcp-routing-repair-2026-10-26.md)
+updates the canonical GCP entry and Codex presentation after the completed Haiku
+failure. The warehouse contract is unchanged. Regenerated projections and archives
+must be rebound using the source/artifact commit followed by the manifest-only
+commit. Historical source `d67fcb70f64ebc36618ba27e080e02ec4845aaf1`
+and all other release anchors remain ancestors. Preparation is not execution.
 
 | Gate | Current evidence and limit | Required next step |
 | --- | --- | --- |
 | Online source freshness | The [new closeout](audits/openai-swift-source-closeout-2026-10-26.json) records 64 matching sources, none changed, none unavailable, after [two individual decisions](audits/openai-swift-source-review-2026-10-26.json). Earlier 33-source and Antigravity failures remain historical. | Passed at this checkpoint. Recheck before a later release decision; new drift remains blocking. |
-| Repository consistency | The source-review checkpoint passed 289 unit tests and exact-head hosted validation. Repeat the required checks for this documentation update; no test or validator changes are needed. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
-| Generated artifacts | Canonical skills and generated output are unchanged in this source-review increment. Existing byte checks cover projections and all 88 archives. | Retain byte correspondence and complete manifest inventory; version labels alone are insufficient. |
+| Repository consistency | The source-review checkpoint passed 289 unit tests and exact-head hosted validation. The routing repair adds export/input regression coverage; repeat required checks after generation and manifest binding. No validator policy is changed. | Verify the final source/manifest pair and exact pushed-head CI; local tests do not prove hosted execution. |
+| Generated artifacts | The GCP entry and its projections change; rebuild all 88 archives twice and require identical checksums. Existing byte checks cover their canonical correspondence. | Retain byte correspondence and complete manifest inventory; version labels alone are insufficient. |
 | Originality and licensing disposition | The maintainer [accepted the exact scoped decision](audits/originality-acceptance-0.18.0.json) for `36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7`, including the gate replacement. The undefined corpus and further independent-review holds are closed for that payload. | Preserve the accepted packet and [post-acceptance delta](audits/post-acceptance-delta-2026-10-20.json). Later changes are technical delta reviews, not new acceptance or universal legal clearance. |
-| Claude Code acceptance | The [pilot](audits/cli-pilot-observations-2026-10-20.json) and [retest](audits/claude-retest-observations-2026-10-21.json) recorded routing and evidence failures, including continuity and GCP contract errors. Both allowances are consumed. | The [completed Haiku request set](audits/claude-haiku-continuation-2026-10-26.md) consumed five cases and two follow-ups across client versions 2.1.306 and 2.1.311. GCP selection/reference/output checks failed; the direct-review control remains invalid. Prepare a routing/diagnostic proposal and separately bound any replacement control. No retries or paid fallback; acceptance remains open. |
+| Claude Code acceptance | The [pilot](audits/cli-pilot-observations-2026-10-20.json) and [retest](audits/claude-retest-observations-2026-10-21.json) recorded routing and evidence failures, including continuity and GCP contract errors. Both allowances are consumed. | The [completed Haiku request set](audits/claude-haiku-continuation-2026-10-26.md) consumed five cases and two follow-ups across client versions 2.1.306 and 2.1.311. GCP selection/reference/output checks failed; the direct-review control remains invalid. The [replacement proposal](audits/gcp-routing-repair-2026-10-26.md) contains four cases and two follow-ups, all not run, with separately typed native controls and fixed payloads. No retries or paid fallback; acceptance remains open. |
 | Codex CLI acceptance | [Fresh native metadata](audits/client-controls-2026-10-26.md) on Codex 0.161.0 still reports available credits without a verified no-paid-fallback control. Isolated discovery was observed at the older checkpoint, not retested here. | Establish the actual billing boundary before a model run. No proxy or API fallback is authorized. |
 | Antigravity CLI acceptance | [Fresh 1.4.7 observations](audits/client-controls-2026-10-26.md) show 111 discovered skills and an auto-loaded global instruction file in both default and no-inheritance custom-agent sessions. AI Credits are not enabled. Isolation remains unverified. | Find and verify supported isolation without altering ordinary installations; retain exclusions and leave the lane unrun meanwhile. |
 | App, account-library, and second-machine acceptance | No new app-mode or second-machine qualification is recorded. CLI observations cannot fill these cells. | Inspect and test each claimed surface separately under its own authority. Narrowing claims does not waive required gates. |
@@ -108,9 +109,9 @@ No new normalization or global review-date reset was introduced.
 2. Inspect native account controls, loading paths, and duplicate-source inventories
    read-only. Keep private inventories outside public artifacts. A documentation
    claim cannot substitute for an observed billing or isolation control.
-3. Review the failed GCP selection/output and native-command submission defect.
-   Prepare a routing repair or diagnostic proposal; a replacement control or
-   further model request needs a separate bounded decision. The allowance is consumed.
+3. Review the prepared GCP routing repair and corrected native-command protocol.
+   Before any replacement control, approve a separate bounded execution decision
+   and repeat billing, source and isolation checks. The old allowance is consumed.
 4. Prepare an explicit supported-surface claim and acceptance matrix. Failed,
    untested, and unavailable cells remain visible. Do not call a reduced scope
    an automatic waiver.

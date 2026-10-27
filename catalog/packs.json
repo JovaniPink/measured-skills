@@ -186,11 +186,11 @@
         "terraform-engineering-profile",
         "typescript-javascript-engineering-profile"
       ],
-      "description_characters": 2127,
+      "description_characters": 2219,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3553,
-        "claude": 3565
+        "codex": 3645,
+        "claude": 3657
       }
     },
     {
