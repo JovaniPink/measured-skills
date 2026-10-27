@@ -28,8 +28,8 @@ Use the project's installed versions for version-sensitive recommendations.
 
 ## Correction-window decision order
 
-1. Record what the supplied filter and plan actually show. Keep "correction coverage unverified" distinct from a demonstrated exclusion or loss; use the same qualification in headings and the verdict.
-2. Define the clocks separately: event occurrence, original ingestion, correction authoring, correction delivery, and scheduled/retried run. "Two days late" needs a reference clock; it does not automatically mean every corrected event is at most two days old.
+1. Record what the supplied filter and plan actually show. Do not import clocks, event ages, keys, or recovery assumptions from a skill example; a hypothetical counterexample is not evidence of this system's contract. Keep "correction coverage unverified" distinct from a demonstrated exclusion or loss; use the same qualification in headings and the verdict.
+2. Define the clocks separately: event occurrence, original ingestion, correction authoring, correction delivery, and scheduled/retried run. "Two days late" needs a reference clock; it establishes neither authoring-to-delivery delay nor a maximum corrected-event age unless the task evidence says so. Unknown event age is not evidence of unlimited event age.
 3. Establish the oldest event that may be corrected and the missed-run/replay requirement. A delivery-delay limit alone cannot justify a finite event-time lookback or an arbitrary margin. If eligible corrections have no event-age bound, a finite lookback needs a separately accepted path for older corrections; otherwise it can discard valid input.
 4. Inspect grain, update strategy, and source/target match semantics before choosing keys or tie-breakers. A target-side pruning predicate can also affect which existing rows match, so a performance change needs a correctness check for older records.
 5. Only then compare candidate predicates and their scan behavior using supplied evidence or separately authorized checks. Without those contracts, return a readiness limit and the next contract question, not a mandatory repair.

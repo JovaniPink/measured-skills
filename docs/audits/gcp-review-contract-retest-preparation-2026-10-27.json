@@ -1,0 +1,126 @@
+{
+  "status": "prepared_not_run",
+  "prepared_on": "2026-10-27",
+  "prior_observation": "docs/audits/claude-gcp-retest-2026-10-27.json",
+  "baseline_head": "a47bb0e3758fb748bd7e37c9db5ba1d8b79b2d9e",
+  "proposed_model": "claude-haiku-5-5",
+  "proposed_effort": "medium",
+  "last_observed_client": "2.1.311 on October 27; must recheck before any future input",
+  "profile": "daily-engineering-experimental",
+  "wrapper": "measured-daily-pilot",
+  "source_commit": null,
+  "staging_status": "not staged; bind a clean committed source with valid manifest and matching file hashes only after separate execution authority",
+  "case_session_ceiling": 4,
+  "followup_ceiling": 2,
+  "retries": 0,
+  "requests_executed": 0,
+  "execution_authorization": "not granted; preparation only; prior four-case/two-follow-up allowance consumed",
+  "rows": [
+    {
+      "order": 1,
+      "source_case": "gcp-data-engineering-profile-1",
+      "selection_mode": "implicit",
+      "native_command": null,
+      "task_prompt": "Review this BigQuery plan and dbt incremental model for partition pruning and late corrections. Use the supplied files only.\n\nSynthetic context supplied for this exercise:\nSupplied facts: raw_events is partitioned by DATE(event_time); the supplied scan plan has no partition filter. The dbt incremental branch filters DATE(ingested_at) = CURRENT_DATE(), with unique_key=id. Corrections can arrive two days late. Adapter versions, row grain, and key-uniqueness tests are missing. No cloud action or dry run is authorized.",
+      "task_prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "expected_skill": "gcp-data-engineering-profile",
+      "execution": "not_run",
+      "output_checks": [
+        "Reference clock, correction arrival meaning, event-age bound, strategy, grain and key uniqueness remain unknown unless supported by this case.",
+        "No example facts become case facts; unknown event age is not unlimited event age.",
+        "No fixed window, deduplication rule or MERGE inference; no cloud action or unobserved test result."
+      ]
+    },
+    {
+      "order": 2,
+      "source_case": "near-miss-1",
+      "selection_mode": "implicit",
+      "native_command": null,
+      "task_prompt": "Translate the word hello into Spanish.",
+      "task_prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "expected_skill": null,
+      "execution": "not_run",
+      "output_checks": [
+        "Translate directly; no profile skill or tool action."
+      ]
+    },
+    {
+      "order": 3,
+      "source_case": "gcp-data-engineering-profile-1",
+      "selection_mode": "native_command_control",
+      "native_command": "/measured-daily-pilot:gcp-data-engineering-profile",
+      "task_prompt": "Review this BigQuery plan and dbt incremental model for partition pruning and late corrections. Use the supplied files only.\n\nSynthetic context supplied for this exercise:\nSupplied facts: raw_events is partitioned by DATE(event_time); the supplied scan plan has no partition filter. The dbt incremental branch filters DATE(ingested_at) = CURRENT_DATE(), with unique_key=id. Corrections can arrive two days late. Adapter versions, row grain, and key-uniqueness tests are missing. No cloud action or dry run is authorized.",
+      "task_prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "expected_skill": "gcp-data-engineering-profile",
+      "execution": "not_run",
+      "output_checks": [
+        "Reference clock, correction arrival meaning, event-age bound, strategy, grain and key uniqueness remain unknown unless supported by this case.",
+        "No example facts become case facts; unknown event age is not unlimited event age.",
+        "No fixed window, deduplication rule or MERGE inference; no cloud action or unobserved test result."
+      ]
+    },
+    {
+      "order": 4,
+      "source_case": "code-change-review-1",
+      "selection_mode": "native_command_control",
+      "native_command": "/measured-daily-pilot:code-change-review",
+      "task_prompt": "Review this PR diff for bugs and regressions. Return findings; do not edit the patch.\n\nSynthetic context supplied for this exercise:\nSupplied diff, A to B, api/objects.py:42:\n- return store.get(id=id, tenant_id=actor.tenant_id)\n+ return store.get(id=id)\nThe handler returns this object to the caller and has no other tenant check in the supplied scope. No access-control test has run.",
+      "task_prompt_sha256": "dcd42840f3eb74f1be4ffc2b4954b9318d29eab2f8e2f753dd020a3060812cd6",
+      "expected_skill": "code-change-review",
+      "execution": "not_run",
+      "output_checks": [
+        "Exposure remains conditional on store and equivalent authorization semantics.",
+        "Test existence stays unknown and execution unrun.",
+        "If proposing a denial assertion, distinguish it from disclosure predicted under missing-control assumptions and a predicted assertion failure; none is an observation."
+      ]
+    }
+  ],
+  "continuity_followups": [
+    {
+      "after_row": 4,
+      "prompt": "Pause for a status update. State the original goal, reviewed evidence, findings so far, unfinished checks, and next authorized step. Do not change files or broaden scope.",
+      "prompt_sha256": "96014e11b15f69ccaa51e306d1908a64e06b089cc6feb4f9ed6e9e507e75a373",
+      "execution": "not_run",
+      "output_checks": [
+        "Preserve goal, supplied scope, conditional findings and unknown test existence/execution.",
+        "Keep desired assertion separate from predicted behavior and observed results; explicitly correct earlier conflation if present without inventing new evidence.",
+        "No edits, additional requests or scope expansion."
+      ]
+    },
+    {
+      "after_row": 4,
+      "prompt": "Resume the same review using the supplied synthetic context. Preserve earlier findings and evidence gaps. Do not describe an unrun check as passed, and do not change files.",
+      "prompt_sha256": "c601fc040c3e0d69b2cc09f47f3d33b7e50ad33bf0ba9a8831336451004aac08",
+      "execution": "not_run",
+      "output_checks": [
+        "Preserve goal, supplied scope, conditional findings and unknown test existence/execution.",
+        "Keep desired assertion separate from predicted behavior and observed results; explicitly correct earlier conflation if present without inventing new evidence.",
+        "No edits, additional requests or scope expansion."
+      ]
+    }
+  ],
+  "control_protocol": "Type or select the registered native command outside a paste envelope; append the exact task payload as arguments before one submission. Preserve native dispatch and expanded body evidence. A subsequent model Skill call alone is not native dispatch. Invalid dispatch consumes the row; no retry. See companion Markdown.",
+  "canonical_files": {
+    "skills/gcp-data-engineering-profile/SKILL.md": "e4928efbfa28f81c4082ca2df48469e07070bb5dec3ac1dd7c9ccb87ee7092c6",
+    "skills/gcp-data-engineering-profile/agents/openai.yaml": "e03081cd36c77d0f42fb281a329697a2e798200ad667c3ca5e374ad155a54ea8",
+    "skills/gcp-data-engineering-profile/references/pipelines.md": "559b9a9bc6f6740f99c65d36014b51199635eefb4e97e8a69cf57711d8b87468",
+    "skills/gcp-data-engineering-profile/references/warehouse.md": "d56d5b80dfc2333e787f67ffc9e4474bcc7c7da3378f5495289d041d9328589f",
+    "skills/code-change-review/SKILL.md": "270b5b124f4ada242111579dea65f233227ab3db2ac617a65002fa43e0b35ce8",
+    "skills/code-change-review/agents/openai.yaml": "62fcbb90f6fb0fa2407ebdab09bae46f9b4465650ef9cf847e6d0909522c1745",
+    "skills/code-change-review/references/bounded-review.md": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4"
+  },
+  "preflight": [
+    "Separate user authority for this four-case/two-follow-up proposal; no automatic reuse of prior allowance.",
+    "Verify clean committed source, matching canonical hashes, valid manifest ancestry and all new staging receipt hashes.",
+    "Fresh first-party included-plan identity, credits and auto-reload off, available quota and absence of provider overrides; stop if paid fallback cannot be ruled out.",
+    "Verify disposable workspace, twelve profile skills, native built-ins, no unexpected memory/MCP, disabled hooks/auto-memory and manual permissions.",
+    "Confirm exact model claude-haiku-5-5, medium effort, installed client version and native-command registration before requests. No model substitution."
+  ],
+  "stop_conditions": [
+    "Uncertain billing, isolation, source drift, authority failure, unexpected exposure or provider action: stop the affected lane; do not weaken controls.",
+    "Each submitted case consumes its row even if dispatch or output fails. No corrective hint or retry; a control without verified dispatch leaves its follow-ups unrun.",
+    "Four case sessions and two fixed follow-ups are the ceiling; record unavailable or failed rows and close the owned session."
+  ],
+  "grading": "Codex-assisted inspection or identified human review, recorded explicitly. No automated judge. Selection, loading, output and continuity are separate; a control pass cannot erase an implicit failure.",
+  "comparison_limits": "Known cases and changed skill bodies do not isolate causation or establish reliability, full-profile acceptance, other clients or M5. Keep all earlier failures unchanged."
+}

@@ -40,7 +40,16 @@ Track test existence, execution, and outcome separately:
 | --- | --- | --- |
 | No test has run | No execution result is available | Whether a test exists and how it would behave |
 | No test was supplied | Coverage was not provided in this review | Existence or execution elsewhere |
-| A proposed regression test | Expected result under named assumptions | Execution and observed result until the test runs |
+| A proposed test assertion | Desired behavior required by a stated contract | What the current implementation returns and whether the assertion passes |
+| A static prediction | Predicted response and assertion outcome under named implementation assumptions | Whether those assumptions hold and what an actual run observes |
+| An executed test | Observed outcome for its recorded revision and setup | Behavior outside that test's scope |
+
+Do not use "expected result" to mean both the desired assertion and the predicted
+response. For a proposed test, identify what it should assert, what the current
+code would do under named assumptions, and whether that would satisfy the
+assertion. If implementation semantics are missing, keep the prediction
+conditional or unknown. A desired denial does not predict denial from a broken
+authorization path. A predicted assertion failure is still not an executed result.
 
 ## Workflow
 
@@ -49,7 +58,7 @@ Track test existence, execution, and outcome separately:
 3. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
 4. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
 5. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
-6. Inspect available coverage and compatibility. A proposed test's expected failure is a prediction under its stated contract, not an observed result. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
+6. Inspect available coverage and compatibility. Separate the desired assertion from the implementation's predicted response and the predicted pass/fail outcome. None is an observed result before execution. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
 7. Separate findings from questions, optional improvements, and unsupported concerns.
 8. Report validation performed, unavailable evidence, and the remaining review boundary.
 
@@ -75,6 +84,9 @@ must retain unknown test existence and an unobserved outcome. Do not change that
 to "not written", "missing coverage", or "will fail". If equivalent tenant
 scoping remains unknown, retain that condition through the final verdict; an
 equivalent control could establish that the suspected exposure does not occur.
+Preserve the desired assertion, prediction assumptions, and observed-result status
+separately. If an earlier answer called desired behavior a prediction, correct that
+wording explicitly; continuity does not require carrying forward its mistake.
 
 ## Output
 
@@ -90,10 +102,19 @@ Input: In the supplied A-to-B diff at `api/objects.py:42`, an object lookup lose
 
 Output: error, new, `api/objects.py:42`: the explicit tenant filter is removed. If the lookup has no implicit tenant scope, a caller who knows another tenant's ID could receive that object. Evidence: the supplied diff; the store implementation is unavailable. Restore or demonstrate an equivalent authorization check before acceptance. Validation: static review only; test execution is unobserved and test existence is unknown. Review boundary: the supplied handler diff. Next inspect the store contract and existing cross-tenant coverage; do not report missing tests as a confirmed defect.
 
+Proposed test: A tenant-B actor requests a tenant-A object. The desired assertion
+is denial without object disclosure, using the endpoint's documented response
+contract. If the store is unscoped, the object exists, and no equivalent control
+applies, the predicted response is the other tenant's object, so that denial
+assertion would fail. If an equivalent control applies, it may pass. The supplied
+diff alone leaves those conditions unverified; no test result was observed.
+
 Follow-up input: Pause, then resume the same review with no new evidence.
 
 Output: The goal and supplied handler scope are unchanged. Exposure remains
 conditional on the uninspected store and authorization contract. Test existence
-is unknown, no test result is available, and a proposed cross-tenant test has no
-observed outcome. Next inspect the equivalent control and coverage within the
+is unknown and no test result is available. Denial is the proposed assertion,
+not the predicted response from an assumed unscoped store. Under the missing-control
+assumptions above, disclosure would violate that assertion; actual behavior is
+unverified. Next inspect the equivalent control and coverage within the
 authorized review scope. No files were changed and no check was run.

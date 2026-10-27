@@ -8,7 +8,22 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 291 regression tests.
+Current test suite: 292 regression tests.
+
+## October 27 output-contract repair and next preparation
+
+The [focused repair](audits/gcp-review-contract-repair-2026-10-27.md) separates
+GCP case facts from fictional examples and distinguishes desired assertions,
+predicted responses and observed test outcomes in review and continuity.
+Standalone export checks cover both repaired skills across all three projections.
+A new regression binds the next four-case/two-follow-up packet to current files
+and unchanged input hashes; the old packet remains tied to its tested revision.
+
+No model request ran in this repair. Prior acceptance failures remain recorded;
+the next packet is prepared only. Source pins, frozen cases, invocation classes,
+profile selections and the accepted originality packet are unchanged. Required
+checks and repeated archive generation are recorded in the draft summaries after
+source/artifact and manifest commits. No new online freshness scan is claimed.
 
 ## October 27 four-case Claude retest
 

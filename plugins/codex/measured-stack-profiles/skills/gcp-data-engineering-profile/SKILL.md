@@ -36,6 +36,22 @@ arrival time, and the configured key from the actual update strategy. Do not
 infer permanent loss, a particular merge operation, or absent recovery paths
 from a filter alone.
 
+## Separate case facts from illustrations
+
+Use facts from the current request and inspected task evidence for this case.
+Skill examples and reference illustrations explain reasoning; their clocks,
+windows, keys, versions, and recovery assumptions are not facts about the task.
+For each material conclusion, distinguish a supplied fact, an inference under
+named assumptions, and a missing contract. A compact sentence is enough; a
+mandatory report table is not required.
+
+If the case says only "two days late", preserve those words as supplied and leave
+both the reference clock and corrected-event age unknown. Do not silently turn
+that into "two days after authoring" or "events of any age". Unknown is neither
+bounded nor unbounded. A counterexample can show why a rule is not justified,
+but label its added assumptions and do not transfer them to the reviewed system.
+Apply this distinction to summaries and follow-ups as well as detailed findings.
+
 ## Contract before recommendation
 
 A supplied plan without a partition filter supports a pruning observation, not
@@ -78,20 +94,32 @@ reviewed input, affected contract, evidence, and next authorized check. Grade ea
 finding as `none`, `note`, `warning`, or `error`; add `new`, `unchanged`,
 `updated`, or `absent` against the base when reviewing a pinned change. Concise output is the default; missing evidence remains visible.
 
-## Example
+## Examples
 
-Synthetic example; not an observed client result.
+These are separate fictional cases, not observations or defaults for another task.
 
-Input: A dbt model for BigQuery filters today's `ingested_at` date. Corrections can arrive two days late. The meaning of `ingested_at`, adapter versions, update strategy, row grain, key uniqueness, and recovery policy are missing; no diff is pinned.
+### Case A: clocks not supplied
 
-Output: warning: correction handling is unverified. If `ingested_at` records correction arrival, an earlier event corrected today may still be selected; if it retains the original ingestion date, it may be excluded. The filter alone does not prove permanent loss. The stack is dbt on BigQuery, with versions, strategy, grain, keys, and recovery unverified. Next establish those contracts and inspect hooks before choosing local checks. No query, dry run, or backfill has run.
+Input: A dbt model for BigQuery filters today's `ingested_at` date. Corrections
+can arrive two days late. The timestamp meaning, reference clock, event-age bound,
+adapter versions, update strategy, grain, key uniqueness and recovery are unknown.
 
-Input: Corrections are delivered within two days of being authored, but may
-update events from any prior date. Would a two-day `event_time` lookback be safe?
+Output: warning: correction coverage is unverified. The supplied delay has no
+reference clock; neither an authoring-to-arrival limit nor a maximum event age is
+established. If `ingested_at` records correction arrival, an older event corrected
+today may be selected; if it retains the original ingestion date, it may be
+excluded. Those are conditional alternatives, not discovered configuration.
+Establish the missing contracts before choosing a window or key. No query, dry
+run or backfill has run, and the filter alone does not prove permanent loss.
 
-Output: No. Delivery delay does not bound the age of the corrected event. A
-correction authored two days ago for a ninety-day-old event can arrive today and
-fall outside that lookback. Establish an accepted event-age bound or a separate
-older-correction path before narrowing the scan. The actual arrival timestamp,
-strategy, and replay contract still determine how the model should change; no
-SQL, deduplication key, or fixed margin is justified by the delay alone.
+### Case B: an explicit fictional counterexample
+
+Input: In this separate example only, the contract permits a correction to an
+event from ninety days ago, delivered today within one day of authoring. Would
+an event-time predicate restricted to the last seven days include that correction?
+
+Output: No. Under those supplied example assumptions, that event is outside the
+predicate. This demonstrates that a delivery-delay limit alone cannot establish
+an event-age bound. It does not prove that another system permits ninety-day-old
+corrections or has no event-age limit. Inspect that system's own correction and
+replay contract before recommending its scan window. No provider action was run.
