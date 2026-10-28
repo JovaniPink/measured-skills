@@ -15,6 +15,8 @@ metadata:
 
 Turn each material claim into a falsifiable statement, then verify it against the authority capable of proving it.
 
+Read [document reconciliation](references/document-reconciliation.md) when comparing a current plan, README, runbook, or specification with implementation.
+
 ## Workflow
 
 1. Preserve the claim's original meaning. Split bundled claims into independently testable statements.

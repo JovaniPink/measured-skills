@@ -75,6 +75,16 @@
       "marker_value": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2"
     },
     {
+      "source_url": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "85f785f00741d67f386a4fc70056f5e1c2f0ba5ee8ad7bd4e4270272a604e421"
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "10c91224352ebdb11060e1029c7d03c6c9dc14257138678ebe55e6cace96f7b3"
+    },
+    {
       "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
       "marker_kind": "content-sha256",
       "marker_value": "c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f"
@@ -215,6 +225,11 @@
       "marker_value": "\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\""
     },
     {
+      "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "marker_kind": "content-sha256",
+      "marker_value": "33929f42959c859164e841bc71057e57766abf15a1643449b8b884142c8084e1"
+    },
+    {
       "source_url": "https://nextjs.org/docs/app/guides/ai-agents.md",
       "marker_kind": "content-sha256",
       "marker_value": "b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22"
@@ -223,6 +238,11 @@
       "source_url": "https://nextjs.org/docs/app/guides/authentication.md",
       "marker_kind": "content-sha256",
       "marker_value": "96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "marker_kind": "content-sha256",
+      "marker_value": "3534904cc85ee092fb4d3a6371b299969fa1a43757ef582edccee1e077e7a71d"
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
@@ -283,6 +303,11 @@
       "source_url": "https://www.drupal.org/docs/develop",
       "marker_kind": "normalized-content-sha256",
       "marker_value": "79ff293e7caa2d0ece096711dee7d15b7a11cbdd4489c08d7b6f9d80322581b4"
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "marker_kind": "content-sha256",
+      "marker_value": "2b0fcd555487d48d8c59065b4ba682c9a53760eb64ef8352ea9face07daa2f56"
     },
     {
       "source_url": "https://www.postgresql.org/docs/current/",

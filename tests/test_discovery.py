@@ -12,6 +12,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import discovery  # noqa: E402
+import canonical_deltas  # noqa: E402
 
 
 class MigrationTests(unittest.TestCase):
@@ -30,7 +31,8 @@ class MigrationTests(unittest.TestCase):
                 if not path.endswith('.md'):
                     continue
                 before = discovery.git(ROOT, 'show', document['source_revision'] + ':' + path).decode()
-                after = (ROOT / 'skills' / row['new_id'] / Path(path).relative_to(prefix)).read_text()
+                current_path = (Path('skills') / row['new_id'] / Path(path).relative_to(prefix)).as_posix()
+                after = discovery.git(ROOT, 'show', canonical_deltas.BASELINE + ':' + current_path).decode()
                 if path.endswith('/SKILL.md'):
                     before, after = before.split('---', 2)[2], after.split('---', 2)[2]
                 for entry in document['entries']:

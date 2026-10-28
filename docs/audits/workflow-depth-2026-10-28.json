@@ -1,0 +1,89 @@
+{
+  "format_version": 1,
+  "baseline_revision": "62af7d15431c9b3e653523888cd574b7319d7171",
+  "reviewed_on": "2026-10-28",
+  "status": "scoped_technical_delta_review",
+  "new_maintainer_acceptance": false,
+  "changes": {
+    "skills/design-module-interface/SKILL.md": {
+      "before_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "review_reason": "Reviewed characterization and observable-behavior preservation; known defects and intentional changes remain distinct, with finite coverage limits."
+    },
+    "skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "review_reason": "Reviewed characterization and observable-behavior preservation; known defects and intentional changes remain distinct, with finite coverage limits."
+    },
+    "skills/explain-codebase/SKILL.md": {
+      "before_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "review_reason": "Reviewed bounded source-linked context map; persistence follows existing authority; no recursive instructions or token-saving claim."
+    },
+    "skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "review_reason": "Reviewed bounded source-linked context map; persistence follows existing authority; no recursive instructions or token-saving claim."
+    },
+    "skills/plan-change/SKILL.md": {
+      "before_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
+      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+    },
+    "skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+    },
+    "skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+    },
+    "skills/stack-gcp-data/SKILL.md": {
+      "before_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary."
+    },
+    "skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary."
+    },
+    "skills/stack-postgresql-sql/SKILL.md": {
+      "before_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority."
+    },
+    "skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority."
+    },
+    "skills/stack-swift-swiftui/SKILL.md": {
+      "before_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/stack-swift-swiftui/references/swiftui-performance.md": {
+      "before_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/verify-claims/SKILL.md": {
+      "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
+      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained."
+    },
+    "skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained."
+    }
+  }
+}

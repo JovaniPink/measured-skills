@@ -608,6 +608,56 @@
       ],
       "finding": "Reviewed 2026-10-26: The current official landing document distinguishes proposal approval from a future release goal and links to the proposal process. The proposal list is loaded by JavaScript, so its HTML fingerprint is not a binding for every proposal or compiler behavior. The prior exact response body was not retained; no claim that this change is cosmetic or textually equivalent is made.",
       "action": "Accept a new full-response pin after current-content review and three identical observations. Retain per-module toolchain/language/isolation discovery and direct proposal checks for technical claims. Historical compiler tests remain dated; neither landing-page freshness nor a proposal status establishes current local execution. No canonical change is needed. See docs/audits/openai-swift-source-review-2026-10-26.json; preserve the global review clock."
+    },
+    {
+      "url": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
+      "status": "reviewed",
+      "ownership_check": "Publisher-controlled documentation on the named author or platform domain; reviewed directly on 2026-10-28.",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "finding": "Reviewed 2026-10-28: Apple describes memory graphs, allocation stacks and generations. Simulator memory indicators do not qualify physical-device limits.",
+      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
+    },
+    {
+      "url": "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md",
+      "status": "reviewed",
+      "ownership_check": "Publisher-controlled documentation on the named author or platform domain; reviewed directly on 2026-10-28.",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "finding": "Reviewed 2026-10-28: Apple describes slow versus frequent updates and combined SwiftUI/Time Profiler inspection. No local trace or device acceptance follows from reading it.",
+      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
+    },
+    {
+      "url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "status": "reviewed",
+      "ownership_check": "Publisher-controlled documentation on the named author or platform domain; reviewed directly on 2026-10-28.",
+      "affected_skills": [
+        "design-module-interface"
+      ],
+      "finding": "Reviewed 2026-10-28: The author defines refactoring around preserving observable behavior; finite characterization tests provide bounded evidence, not equivalence proof.",
+      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
+    },
+    {
+      "url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "status": "reviewed",
+      "ownership_check": "Publisher-controlled documentation on the named author or platform domain; reviewed directly on 2026-10-28.",
+      "affected_skills": [
+        "plan-change"
+      ],
+      "finding": "Reviewed 2026-10-28: Official major-version guide includes runtime, API, bundler, and codemod changes. Its floating installer examples are not authorization to run them.",
+      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "status": "reviewed",
+      "ownership_check": "Publisher-controlled documentation on the named author or platform domain; reviewed directly on 2026-10-28.",
+      "affected_skills": [
+        "stack-postgresql-sql"
+      ],
+      "finding": "Reviewed 2026-10-28: PostgreSQL 18 distinguishes estimated cost from actual execution. ANALYZE executes the statement; rollback is not universal side-effect recovery.",
+      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
     }
   ]
 }

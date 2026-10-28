@@ -15,6 +15,8 @@ metadata:
 
 Use this profile only after repository discovery identifies the stack. Read [focused checks](references/checks.md) when stack-specific gates or hazards determine the result.
 
+Read [query plans](references/query-plans.md) when diagnosing query behavior from supplied SQL and plan evidence.
+
 ## Workflow
 
 1. Discover migration directories, schema definitions, SQL files, database test harnesses, version declarations, and repository scripts.

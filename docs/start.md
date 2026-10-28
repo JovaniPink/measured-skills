@@ -29,3 +29,6 @@ beginner entry point; these documents explain a selected route in more depth.
 
 [Acceptance exercises](acceptance-0.19.md) are prepared, not completed.
 [Source and research decisions](audits/discovery-0.19.md) distinguish facts from proposals.
+
+For upgrades, refactoring, queries, replay and Swift diagnosis, search the chooser.
+[Workflow depth and evidence limits](workflow-depth-0.19.md) explains these routes.

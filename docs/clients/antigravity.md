@@ -52,10 +52,10 @@ provides prompts that preserve the explicit-only exclusions.
 To prepare a self-contained preview directory for inspection or offline testing:
 
 ```sh
-python3 scripts/build_antigravity.py --skill claim-verification --output dist/antigravity-check
+python3 scripts/build_antigravity.py --skill verify-claims --output dist/antigravity-check
 ```
 
-The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 70 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
+The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 73 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
 
 The preview keeps `skills/<name>/SKILL.md` and linked notes. It omits Codex's `agents/` folder and excludes explicit-only skills. The directory layout loaded correctly on CLI 1.1.28; recheck it on a version you have not tested. Do not flatten files by hand or lose their links.
 

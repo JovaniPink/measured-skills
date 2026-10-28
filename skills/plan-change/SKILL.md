@@ -19,6 +19,10 @@ Read [specification synthesis](references/specification-synthesis.md) when multi
 
 Read [document lifecycle](references/document-lifecycle.md) when a specification or README drives implementation, or a plan must survive a handoff.
 
+Read [design review](references/design-review.md) when assessing a design document, RFC, or specification before implementation.
+
+Read [dependency upgrades](references/dependency-upgrade.md) when planning a dependency, runtime, or framework version change.
+
 ## Workflow
 
 1. Confirm the approved problem, desired outcome, scope, non-goals, and decision owner.

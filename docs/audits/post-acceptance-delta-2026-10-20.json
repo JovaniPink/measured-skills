@@ -122,8 +122,8 @@
     },
     "catalog/upstream-pins.json": {
       "before_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
-      "after_sha256": "0cf6b933294e4b8de32bd3b7f03868c034854986e56314d2c439bb5d77c59d0a",
-      "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 Antigravity representation follow-up: Individually reviewed source bindings and current authority summaries only. Replace only four individually reviewed official Antigravity representations; retain all other pins and new source holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 OpenAI and Swift follow-up: Only the two reviewed source decisions change. OpenAI uses complete official Markdown; Swift uses a current-content full-body pin with unavailable historical bytes explicit. Other bindings, marker strength, review clock, and behavior limits remain."
+      "after_sha256": "e0f4d879b0efb2ec96affab8dcd4907f741f4dbf9105ab91dbb28dfd213fe87f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "catalog/upstream-reviews-schema.json": {
       "before_sha256": "45055e4cccca6cca18d5c95ea2511e7e21c90b3a5a15a1e66f6650aed0292fbe",
@@ -132,13 +132,13 @@
     },
     "catalog/upstream-reviews.json": {
       "before_sha256": "3b837ec11614e30daa3c409936efe156ab97de2a18fd7a77d24c833c8b298a53",
-      "after_sha256": "6ba75387c4caa6812a29c3a720c400009bc75f65c3da16404302ae83a1f6b05a",
-      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 Antigravity representation follow-up: Individually reviewed source bindings and current authority summaries only. Replace only four individually reviewed official Antigravity representations; retain all other pins and new source holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 OpenAI and Swift follow-up: Only the two reviewed source decisions change. OpenAI uses complete official Markdown; Swift uses a current-content full-body pin with unavailable historical bytes explicit. Other bindings, marker strength, review clock, and behavior limits remain. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "a55006ecc65a92250f8170bd9e80f89a1efa9e4a319e5e5091cc4277ca11929c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "catalog/workflows.json": {
       "before_sha256": null,
-      "after_sha256": "f493a0e4ec1041388fa1f1850b1cab8f023883c7aecce2d4ac20bef1f496cfce",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "f8f826ed48e40181a29305e5c86c046fdff8a8b8a11af8313fa631c6fa9ca54a",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
@@ -1057,8 +1057,8 @@
     },
     "docs/acceptance-0.19.md": {
       "before_sha256": null,
-      "after_sha256": "194d563890da88e4b2bc97d1c05938ac06aaecf6e1c2ce715ebd1a01898e944a",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "3fb428ad438c34ffd90d2af32c079a394b068014dd661ca756693489c21f48c6",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "docs/audits/antigravity-source-closeout-2026-10-26.json": {
       "before_sha256": null,
@@ -1302,8 +1302,8 @@
     },
     "docs/clients/antigravity.md": {
       "before_sha256": "15a779160f21f2b01a5e5ff40459dc30eb7b037ecabf06737ce67dc6bd2df45e",
-      "after_sha256": "248219e5e930c5591b68019b77b310088fc6d0862127034b5f997b1801be8b5b",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "987140fa5acd2276a464a513931dab0d9c5cd4130849b71d31a5acabc6fe805c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "docs/clients/claude.md": {
       "before_sha256": "1aa304f29251e41f8e5f4c18590c10938a8e1c70cfe1c9d2e3ac4dbd1411ea33",
@@ -1382,8 +1382,8 @@
     },
     "docs/start.md": {
       "before_sha256": null,
-      "after_sha256": "c367bb97bee6e9cd4ffc82046105671a57d6ff0b10aa957113cab13e292a7c9b",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "4ad3d6c9d8ff22ec07cd075071e12fda752ae9fe68aded3c9d27daf3c4fce84c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "docs/testing.md": {
       "before_sha256": "0fcc49ce9e29c0787b25461209eb89dad007679eddf4963dd7d143d45d1ca1ca",
@@ -9787,8 +9787,8 @@
     },
     "provenance/catalog.json": {
       "before_sha256": "24faeb3e66d1950b112e0d47734246a6a58d5c96dd7f217585b4c0eea0e4c9fa",
-      "after_sha256": "567332f15c7db17502c4a73dfba1afa18b98293032c565187cd274f197af751d",
-      "expression_and_license_review": "Append original Codex-assisted disclosure for the two post-retest source repairs. Historical authorship records, owned lineage, methods, licenses, sources, pins, review clocks, and exact prior acceptance remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Append scoped authoring evidence for five existing skills without changing historical labels, source pins, or owned adaptation ancestry. October 26 bounded-maintenance increment: Append scoped authoring evidence for five existing skills without changing historical labels, source pins, or owned adaptation ancestry. October 26 OpenAI and Swift follow-up: Record the reviewed official Markdown representation for engineering-prompt-review without changing authorship, license, security, implementation expression, or acceptance. All other entries are unchanged. October 26 GCP routing repair: Append original routing-repair authoring evidence; retain historical source pins, ownership, license limits and accepted packet. October 27 GCP/review contract repair: Append original output-contract repair authoring evidence; source pins, owned lineage, license limits and accepted packet unchanged. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "9c600bd3e605dd727e38946a607257d687706f343e433010849bf92358f3c4ff",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "renovate.json": {
       "before_sha256": null,
@@ -9832,8 +9832,8 @@
     },
     "scripts/discovery.py": {
       "before_sha256": null,
-      "after_sha256": "f0af229ed5b62ccd408f342d4d21aeff7fd07101499c3b4df1482264daa2d273",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "bd3a8680f6217a728334edfe4f4966c3d8000f84b18e871517c6babae220832e",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "scripts/export_selected.py": {
       "before_sha256": "e52ccd5aeb07450eb14a2c6eaf86e6e31656a5235ed37087c4d06807e87ce819",
@@ -10382,8 +10382,8 @@
     },
     "skills/design-module-interface/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/design-module-interface/agents/openai.yaml": {
       "before_sha256": null,
@@ -10532,8 +10532,8 @@
     },
     "skills/explain-codebase/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/explain-codebase/agents/openai.yaml": {
       "before_sha256": null,
@@ -11002,8 +11002,8 @@
     },
     "skills/plan-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/plan-change/agents/openai.yaml": {
       "before_sha256": null,
@@ -11732,8 +11732,8 @@
     },
     "skills/stack-gcp-data/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/stack-gcp-data/agents/openai.yaml": {
       "before_sha256": null,
@@ -11812,8 +11812,8 @@
     },
     "skills/stack-postgresql-sql/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/stack-postgresql-sql/agents/openai.yaml": {
       "before_sha256": null,
@@ -11857,8 +11857,8 @@
     },
     "skills/stack-swift-swiftui/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/stack-swift-swiftui/agents/openai.yaml": {
       "before_sha256": null,
@@ -11937,8 +11937,8 @@
     },
     "skills/stack-swift-swiftui/references/swiftui-performance.md": {
       "before_sha256": null,
-      "after_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/stack-swift-swiftui/references/swiftui.md": {
       "before_sha256": null,
@@ -12277,8 +12277,8 @@
     },
     "skills/verify-claims/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/verify-claims/agents/openai.yaml": {
       "before_sha256": null,
@@ -12402,8 +12402,8 @@
     },
     "tests/test_discovery.py": {
       "before_sha256": null,
-      "after_sha256": "01cedfea8a0499f6d3e66a5884b536777635e72b7477f7e53c74ee750fa0c500",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "0cf66df1afa1121bc8abc2630761f5a59d30c57975a29f2f4ab5527beb2dc0e2",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "tests/test_distribution_licensing.py": {
       "before_sha256": "ec67144681f1709596ede554f633f401e75712bb17a10d3e4a57f8e3b026590f",
@@ -12464,6 +12464,86 @@
       "before_sha256": "9fd2f4aa22e3883093bab807ac5742f61ae74c894ec49bc65ed96c47070913c7",
       "after_sha256": "69d895731cd06a318817fccf40fd119d979a5d0158ddc3ced093429f967487df",
       "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+    },
+    "docs/audits/workflow-depth-2026-10-28.json": {
+      "before_sha256": null,
+      "after_sha256": "1b91596559ad3db49b0d16e74a89e77a11e8d58d58035ff4d321680cdd2744da",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "docs/workflow-depth-0.19.md": {
+      "before_sha256": null,
+      "after_sha256": "013741786df898f116e4a3cb4373edff825e00331c4a6244055278f7c1e1680f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "evals/workflow-depth/README.md": {
+      "before_sha256": null,
+      "after_sha256": "b6ea81e9d01407e50d6d10c63407963663733eaee87efb92d6b24be7f6c71d11",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "evals/workflow-depth/cases.json": {
+      "before_sha256": null,
+      "after_sha256": "b64a884e6aed6bc52366dc82c919007201296d4eb64633a23a1d82db708d761e",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "incubator/roadmap.json": {
+      "before_sha256": "f5fe44d1c66a5c6c1032c06cd089857718397e495c64b5a07f8168c5aa1b7444",
+      "after_sha256": "e385f165c237d36de6799f0cbd6fba551aa050e0599aa4ac86abcdeedf71d293",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "scripts/canonical_deltas.py": {
+      "before_sha256": null,
+      "after_sha256": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "tests/test_canonical_deltas.py": {
+      "before_sha256": null,
+      "after_sha256": "6a607fc93afea236f521bf6ad0de4d5f5d7e601ad3cc937fd12c39ce726179ca",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "tests/test_workflow_depth.py": {
+      "before_sha256": null,
+      "after_sha256": "aff6b658654eb510bd813738e5e106090398e5508f317ccef00af6eafb75e2ce",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     }
   },
   "additional_payload_exclusions": [

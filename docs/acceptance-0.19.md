@@ -40,3 +40,6 @@ Desktop, web accounts and the second Mac need their own later observations.
 
 A small trial cannot establish financial benefit, statistical reliability,
 defect-detection accuracy, or cross-client parity. Release approval stays separate.
+
+The original ten-card exercise remains pending and unchanged. After draft updates,
+use the five separate workflow-depth cards in [the increment record](workflow-depth-0.19.md#verification-and-next-observation); do not substitute them for original results.

@@ -10,6 +10,8 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+import canonical_deltas
+
 from cataloglib import ROOT, VERSION, read_skill_metadata
 
 MIGRATION = 'catalog/migrations/0.18-to-0.19.json'
@@ -149,7 +151,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
 
 
 def input_hashes(root: Path = ROOT) -> dict[str, str]:
-    paths = [REGISTRY, MIGRATION, 'catalog/skills.json', 'catalog/profiles.json', 'catalog/evidence.json',
+    paths = [REGISTRY, MIGRATION, canonical_deltas.RECORD, 'scripts/canonical_deltas.py', 'catalog/skills.json', 'catalog/profiles.json', 'catalog/evidence.json',
              'catalog/compatibility.json', 'scripts/discovery.py', 'scripts/discovery-ui.js', 'scripts/cataloglib.py']
     paths += [p.relative_to(root).as_posix() for p in sorted((root / 'skills').rglob('*'))
               if p.is_file() and p.relative_to(root).as_posix() != GENERATED_INDEX]
@@ -159,7 +161,7 @@ def input_hashes(root: Path = ROOT) -> dict[str, str]:
 def build_data(revision: str, root: Path = ROOT, verify_source: bool = True) -> dict[str, Any]:
     registry = json.loads((root / REGISTRY).read_text())
     catalog = json.loads((root / 'catalog/skills.json').read_text())['skills']
-    errors = migration_errors(root) + registry_errors(registry, {r['skill'] for r in catalog})
+    errors = canonical_deltas.check(root) + migration_errors(root) + registry_errors(registry, {r['skill'] for r in catalog})
     if errors:
         raise ValueError('\n'.join(errors))
     if re.fullmatch('[0-9a-f]{40}', revision) is None:

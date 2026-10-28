@@ -39,6 +39,8 @@ Read only the reference that matches the code under review:
 
 Each rule carries a label. `[verified]` rules identify SDK inspection, compile, simulator, or device evidence and its toolchain; `[documented]` rules come from Apple documentation or Swift Evolution; `[unverified]` rules are review judgment. Recheck `[verified]` rules against the repository's own toolchain and deployment targets before reporting them as current.
 
+Read [memory and lifetime diagnosis](references/memory-diagnosis.md) when allocations, retained objects, memory growth, or UI stalls need investigation.
+
 ## Workflow
 
 1. Discover `Package.swift`, Xcode projects or workspaces, schemes, package resolution, deployment targets, and repository scripts.

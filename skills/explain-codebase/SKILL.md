@@ -15,6 +15,8 @@ metadata:
 
 Explain mechanics from the code that exists now.
 
+Read [context map](references/context-map.md) when the explanation must support later navigation or a resumed session.
+
 ## Workflow
 
 1. Clarify the behavior or path the user wants explained and bound the relevant component.
