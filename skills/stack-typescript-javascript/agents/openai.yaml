@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $stack-typescript-javascript for this task: Reviews TypeScript and JavaScript changes when async code, modules, types, dependencies, or builds need focused checks; uses repository runtimes, lockfiles, and commands."
 policy:
   allow_implicit_invocation: true
-

@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $review-api-compatibility for this task: Reviews breaking API, event, and schema changes when asked whether old clients still work or independent upgrades are safe; checks behavior and rollout order as well as field shapes."
 policy:
   allow_implicit_invocation: true
-

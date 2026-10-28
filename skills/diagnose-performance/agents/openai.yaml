@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $diagnose-performance for this task: Diagnoses a slow or overloaded system when asked why latency, throughput, or resource use changed; compares measurements and hypotheses without silently optimizing code."
 policy:
   allow_implicit_invocation: true
-

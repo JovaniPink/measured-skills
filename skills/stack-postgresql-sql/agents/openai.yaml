@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $stack-postgresql-sql for this task: Reviews PostgreSQL schemas, queries, indexes, transactions, and migrations when database changes need focused checks; does not mutate shared data merely to validate a proposal."
 policy:
   allow_implicit_invocation: true
-

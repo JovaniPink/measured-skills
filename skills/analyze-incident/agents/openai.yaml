@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $analyze-incident for this task: Analyzes an incident when asked what happened, why recovery took time, or how to prevent recurrence; builds an evidence-backed timeline without assigning unsupported blame."
 policy:
   allow_implicit_invocation: true
-

@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $explain-to-stakeholders for this task: Explains technical evidence when asked for a stakeholder update, decision brief, or plain-language status; preserves the decision needed and material limitations without unnecessary approval requests."
 policy:
   allow_implicit_invocation: true
-

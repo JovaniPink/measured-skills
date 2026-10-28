@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $stack-python for this task: Reviews Python changes when typing, async code, packaging, dependencies, or tests need focused checks; follows discovered Python versions and repository commands."
 policy:
   allow_implicit_invocation: true
-
