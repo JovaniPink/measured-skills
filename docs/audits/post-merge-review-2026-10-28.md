@@ -85,9 +85,10 @@ acceptance results.
 Focused regression definitions cover action-entry lookup through a historical
 name and preservation of task authority while removing a leading native token.
 They were not executed locally under the user's no-test-rerun instruction.
-No validator was weakened or changed. Deterministic generation is needed to
-carry the new data and controls into the offline guide, bundled index, projections
-and affected archive. The 0.19 manifest is rebound in its separate commit; the
+No validator was weakened or changed. Generation carries the new data and controls
+into the offline guide, bundled index, projections and affected archive. The
+input checkpoint is `82115567df98d85fbc70a2e26b82c8adb5b48fa1`. The 0.19
+manifest is rebound in its separate commit; the
 preserved 0.18 manifest remains untouched. No model call, installation or release
 is part of this repair.
 

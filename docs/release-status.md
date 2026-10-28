@@ -18,8 +18,10 @@ package distributions or claim they were qualified on every client.
 | Two-Mac tooling | Dotfiles #35 and #37 merged October 28 | Staging and receipt support, not an installed update or M5 qualification |
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
-The 0.19 manifest names source `87b9741ba3dc8133974bd0ba38b74338fad9ead5`.
-The discovery export names input source `d9d9055a87bbe47b72122c2370404e8c2779c1a2`.
+Read the current 0.19 artifact source from `source_commit` in
+[its manifest](../releases/0.19.0/manifest.json); the chooser repair rebinds it in
+the separate manifest commit. The discovery export names input source
+`82115567df98d85fbc70a2e26b82c8adb5b48fa1`.
 These identities have different jobs. Do not replace them with a merge SHA just
 to make the labels match. A website can also retain a separately pinned export;
 merging a repository does not update that website or an installed client cache.
@@ -33,7 +35,7 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 
 | Gate | Retained evidence | Next action and boundary |
 | --- | --- | --- |
-| Source and metadata | October 28 inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | Source audit complete within [its stated scope](audits/post-merge-review-2026-10-28.md). No new skill or rename is justified by this pass |
+| Source and metadata | October 28 inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
 | Automated repository evidence | [Merged-main validate job](https://github.com/JovaniPink/measured-skills/actions/runs/40753511774/job/123046173473) succeeded for `b4200af` | Existing remote evidence was read, not rerun. It does not validate later documentation changes or receiving-client behavior |
 | Online authorities | October 26 0.18 closeout: 64 matching sources | Dated evidence only. A new online check and individual drift decisions remain required for a later release; no freshness run or repinning occurred in this audit |
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
@@ -48,9 +50,9 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 ## Use what is available now
 
 Read [the start guide](start.md), open the local chooser, and choose the intended
-scope. Its source is available without installing anything. Check the actual
-installed entry before sending a native command; use the documented ordinary
-request fallback when it is missing. Do not infer that 0.18 observations qualify
+scope. Its source is available without installing anything. Ordinary requests
+are the default; select the native-command option only after checking the actual
+installed entry. Do not infer that 0.18 observations qualify
 the renamed 0.19 package.
 
 Human results and model results stay separate. If the chooser is confusing,
