@@ -1,5 +1,8 @@
 # Design, build, and review web motion
 
+Historical proposal: retained from the pre-0.19 pilot work. The 0.19 preview now registers `design-web-motion`; see [the canonical skill](../../skills/design-web-motion/SKILL.md). Original proposal limits and pilot failures remain historical evidence, not current client qualification.
+
+
 Provisional post-0.18 workflow. The proposed `web-motion-design` skill is not yet
 registered or installed. Use these as ordinary requests until a separately
 approved release includes it. Do not invent a native command or loading receipt.

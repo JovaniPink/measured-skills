@@ -1,5 +1,8 @@
 # Web motion design: post-0.18 proposal
 
+Historical proposal: retained from the pre-0.19 pilot work. The 0.19 preview now registers `design-web-motion`; see [the canonical skill](../../skills/design-web-motion/SKILL.md). Original proposal limits and pilot failures remain historical evidence, not current client qualification.
+
+
 Status: provisional design contract, not an installed or registered skill.
 Prepared 2026-10-27. This work does not expand the 0.18.0 candidate or add a release gate.
 It requires a separately approved development version before canonical registration.
