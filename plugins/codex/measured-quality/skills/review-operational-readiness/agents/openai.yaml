@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review operational readiness"
+  short_description: "Reviews operational readiness"
+  default_prompt: "Use $measured-quality:review-operational-readiness for this task: Reviews operational readiness when asked who will support a service or whether alerts, capacity, recovery, and runbooks are sufficient; reports gaps without deploying it."
+policy:
+  allow_implicit_invocation: true
+

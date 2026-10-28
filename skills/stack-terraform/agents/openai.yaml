@@ -1,0 +1,7 @@
+interface:
+  display_name: "Terraform guidance"
+  short_description: "Reviews Terraform changes"
+  default_prompt: "Use $stack-terraform for this task: Reviews Terraform changes when plans, state, modules, providers, or drift need focused checks; discovers backend and version constraints without applying or changing shared infrastructure."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Plan a workshop"
+  short_description: "Plans or synthesizes a workshop"
+  default_prompt: "Use $plan-workshop for this task: Plans or synthesizes a workshop when asked to prepare an agenda or turn session notes into decisions; ties activities to outcomes and leaves unresolved ownership visible."
+policy:
+  allow_implicit_invocation: true
+

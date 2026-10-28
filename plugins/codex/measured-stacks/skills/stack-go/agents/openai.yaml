@@ -1,0 +1,7 @@
+interface:
+  display_name: "Go guidance"
+  short_description: "Reviews Go changes"
+  default_prompt: "Use $measured-stacks:stack-go for this task: Reviews Go changes when goroutines, modules, APIs, dependencies, or tests need language-specific checks; follows repository toolchain and gate definitions."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,6 @@
+interface:
+  display_name: "GCP data guidance"
+  short_description: "Review BigQuery, incremental models, and GCP pipelines"
+  default_prompt: "Use $stack-gcp-data to review the supplied BigQuery plan, incremental model, or GCP pipeline for its data contracts and evidence gaps without assuming cloud access."
+policy:
+  allow_implicit_invocation: true

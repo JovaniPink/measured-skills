@@ -1,5 +1,8 @@
 # Manual Cross-Client Smoke Tests
 
+Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
+
+
 See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the account and CLI checks it records. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.

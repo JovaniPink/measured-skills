@@ -75,7 +75,7 @@ When installed, also run the current official tools:
 
 ```sh
 skills-ref validate skills/<skill-name>
-claude plugin validate plugins/claude/measured-skills --strict
+claude plugin validate plugins/claude/measured-workflows --strict
 ```
 
 Run Codex's bundled skill validator for every canonical skill and the bundled plugin validator for the Codex plugin. Tool availability and observed output belong in `docs/validation-evidence.md`; never silently treat an unavailable validator as passing.

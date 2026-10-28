@@ -1,6 +1,0 @@
-interface:
-  display_name: "Code Change Review"
-  short_description: "Review PR diffs for bugs and regressions"
-  default_prompt: "Use $measured-engineering-review:code-change-review to review the supplied PR diff or code snippet for bugs and regressions. Return scoped findings without editing; preserve conditional defects and unrun checks through follow-ups."
-policy:
-  allow_implicit_invocation: true

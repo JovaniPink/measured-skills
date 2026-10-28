@@ -1,0 +1,7 @@
+interface:
+  display_name: "Synthesize requirements"
+  short_description: "Combines interviews, documents, and issues"
+  default_prompt: "Use $measured-operations:synthesize-requirements for this task: Combines interviews, documents, and issues when asked to turn conflicting inputs into requirements; traces each requirement to evidence and keeps unresolved decisions visible."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Diagnose Swift concurrency"
+  short_description: "Diagnoses Swift actor, Sendable, task-lifetime, and cancellation issues"
+  default_prompt: "Use $measured-stacks:diagnose-swift-concurrency for this task: Diagnoses Swift actor, Sendable, task-lifetime, and cancellation issues when compiler errors or runtime behavior indicate concurrency problems; uses exact language and isolation settings."
+policy:
+  allow_implicit_invocation: true

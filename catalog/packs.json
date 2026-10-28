@@ -1,227 +1,145 @@
 {
   "$schema": "./packs-schema.json",
-  "catalog_version": "0.18.0",
+  "catalog_version": "0.19.0",
   "budget_warning_characters": 6000,
   "budget_limit_characters": 8000,
   "plugin_packs": [
     {
-      "plugin": "measured-agent-platforms",
-      "purpose": "Human-facing agent architecture, security, tooling, context, protocol, retrieval, and Google ADK workflows.",
-      "skills": [
-        "agent-context-state-memory-design",
-        "agent-protocol-interoperability-review",
-        "agent-tool-action-boundary-review",
-        "agentic-system-security-review",
-        "google-adk-engineering-profile",
-        "retrieval-grounding-quality-review"
-      ],
-      "description_characters": 1128,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 1872,
-        "claude": 1878
-      }
-    },
-    {
-      "plugin": "measured-ai-systems",
-      "purpose": "Optional AI evaluation, context reliability, and source-to-output conformance workflows.",
-      "skills": [
-        "agent-evaluation-design",
-        "context-reliability-review",
-        "source-output-conformance-audit"
-      ],
-      "description_characters": 545,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 864,
-        "claude": 867
-      }
-    },
-    {
-      "plugin": "measured-engineering-build",
-      "purpose": "Frame outcomes, design interfaces, plan vertical slices, and test behavior.",
-      "skills": [
-        "implementation-planning",
-        "module-interface-design",
-        "problem-framing",
-        "test-driven-change",
-        "test-strategy"
-      ],
-      "description_characters": 883,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 1367,
-        "claude": 1372
-      }
-    },
-    {
-      "plugin": "measured-engineering-delivery",
-      "purpose": "Coordinate bounded execution, isolated work, review handoffs, and delivery evidence.",
-      "skills": [
-        "acceptance-evidence-ledger",
-        "finish-development-branch",
-        "merge-conflict-reconciliation",
-        "multi-agent-orchestration",
-        "plan-execution",
-        "prototype-spike",
-        "request-code-review",
-        "respond-to-code-review",
-        "worktree-isolation"
-      ],
-      "description_characters": 1592,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 2545,
-        "claude": 2554
-      }
-    },
-    {
-      "plugin": "measured-engineering-review",
-      "purpose": "Review correctness, compatibility, security, operations, and test quality.",
-      "skills": [
-        "accessibility-review",
-        "api-contract-compatibility-review",
-        "application-security-review",
-        "code-change-review",
-        "data-migration-readiness",
-        "dependency-supply-chain-review",
-        "functional-motion-review",
-        "observability-design",
-        "operational-readiness-review",
-        "performance-scalability-diagnosis",
-        "test-quality-review"
-      ],
-      "description_characters": 2020,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 3243,
-        "claude": 3254
-      }
-    },
-    {
       "plugin": "measured-operations",
-      "purpose": "Portable requirements, decision, measurement, adoption, and incident workflows.",
+      "purpose": "Clarify requirements, decisions, adoption, measurement, and incident learning.",
       "skills": [
-        "change-adoption-planning",
-        "cross-capability-dependency-mapping",
-        "data-authority-migration-ratification",
-        "decision-governance-records",
-        "iteration-postlaunch-learning",
-        "kpi-outcome-measurement",
-        "production-incident-analysis",
-        "requirements-synthesis",
-        "stakeholder-technical-communication",
-        "value-attribution-evidence-maturity",
-        "workshop-planning-synthesis"
+        "analyze-incident",
+        "explain-to-stakeholders",
+        "learn-after-launch",
+        "map-capability-dependencies",
+        "measure-outcomes",
+        "plan-adoption",
+        "plan-workshop",
+        "prepare-migration-decision",
+        "record-decisions",
+        "review-value-evidence",
+        "synthesize-requirements"
       ],
       "description_characters": 1911,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3138,
-        "claude": 3149
+        "codex": 2918,
+        "claude": 2929
       }
     },
     {
-      "plugin": "measured-reasoning",
-      "purpose": "Portable alignment, explanation, impact, writing, evidence, and skill-authoring workflows.",
+      "plugin": "measured-quality",
+      "purpose": "Check behavior, evidence, compatibility, security, and operational boundaries.",
       "skills": [
-        "alignment-interview",
-        "change-impact-analysis",
-        "codebase-explanation",
-        "decision-evidence-trace",
-        "design-rationale-investigation",
-        "domain-vocabulary-modeling",
-        "engineering-prompt-review",
-        "guided-configuration",
-        "high-signal-technical-writing",
-        "portable-skill-authoring",
-        "task-handoff",
-        "workflow-retrospective"
+        "check-launch-readiness",
+        "consolidate-findings",
+        "design-agent-evaluations",
+        "design-agent-memory",
+        "design-observability",
+        "diagnose-performance",
+        "review-accessibility",
+        "review-agent-protocols",
+        "review-agent-security",
+        "review-agent-tools",
+        "review-api-compatibility",
+        "review-app-security",
+        "review-code-change",
+        "review-context-evidence",
+        "review-data-authority",
+        "review-data-migration",
+        "review-dependencies",
+        "review-interface-motion",
+        "review-operational-readiness",
+        "review-public-boundary",
+        "review-retrieval-grounding",
+        "review-skill-import",
+        "review-skill-security",
+        "review-tests",
+        "run-project-checks",
+        "verify-claims",
+        "verify-source-output"
       ],
-      "description_characters": 2230,
+      "description_characters": 4935,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3398,
-        "claude": 3410
+        "codex": 7391,
+        "claude": 7418
       }
     },
     {
-      "plugin": "measured-skills",
-      "purpose": "Portable evidence, diagnosis, quality, publication, and skill-security workflows.",
+      "plugin": "measured-stacks",
+      "purpose": "Apply language and platform guidance after discovering the project.",
       "skills": [
-        "authority-boundary-review",
-        "claim-verification",
-        "cross-stack-quality-gates",
-        "finding-consolidation",
-        "prelaunch-readiness",
-        "public-private-boundary-review",
-        "publish-change-safely",
-        "research-to-publication-lifecycle",
-        "skill-import-provenance",
-        "skill-security-review",
-        "source-grounded-research",
-        "systematic-diagnosis"
+        "deliver-nextjs-feature",
+        "deliver-swiftui-feature",
+        "diagnose-react-rendering",
+        "diagnose-swift-concurrency",
+        "review-nextjs-cache-auth",
+        "review-swift-persistence",
+        "stack-adobe-aem",
+        "stack-csharp-dotnet",
+        "stack-gcp-data",
+        "stack-go",
+        "stack-google-adk",
+        "stack-java-spring",
+        "stack-php-drupal",
+        "stack-postgresql-sql",
+        "stack-python",
+        "stack-salesforce-apex",
+        "stack-swift-swiftui",
+        "stack-terraform",
+        "stack-typescript-javascript",
+        "verify-ios-journey"
       ],
-      "description_characters": 2144,
+      "description_characters": 3712,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3292,
-        "claude": 3304
+        "codex": 5452,
+        "claude": 5472
       }
     },
     {
-      "plugin": "measured-stack-profiles",
-      "purpose": "Optional language and infrastructure engineering profiles.",
+      "plugin": "measured-workflows",
+      "purpose": "Find a route, understand the work, plan, repair, and deliver within authority.",
       "skills": [
-        "adobe-aem-engineering-profile",
-        "csharp-dotnet-engineering-profile",
-        "gcp-data-engineering-profile",
-        "go-engineering-profile",
-        "java-spring-engineering-profile",
-        "php-drupal-engineering-profile",
-        "postgresql-sql-engineering-profile",
-        "python-engineering-profile",
-        "salesforce-apex-engineering-profile",
-        "swift-swiftui-engineering-profile",
-        "terraform-engineering-profile",
-        "typescript-javascript-engineering-profile"
+        "address-review",
+        "align-on-decisions",
+        "assess-change-impact",
+        "assess-worktree-isolation",
+        "author-skill",
+        "build-spike",
+        "choose-workflow",
+        "coordinate-agents",
+        "design-module-interface",
+        "design-web-motion",
+        "diagnose-failure",
+        "edit-technical-writing",
+        "execute-plan",
+        "explain-codebase",
+        "finish-branch",
+        "frame-problem",
+        "guide-configuration",
+        "handoff-work",
+        "implement-test-first",
+        "investigate-design-rationale",
+        "model-domain-vocabulary",
+        "plan-change",
+        "plan-tests",
+        "publish-change",
+        "request-review",
+        "research-sources",
+        "resolve-merge-conflicts",
+        "review-engineering-prompt",
+        "review-workflow",
+        "run-research-workflow",
+        "trace-decisions",
+        "track-acceptance"
       ],
-      "description_characters": 2219,
+      "description_characters": 5807,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3645,
-        "claude": 3657
-      }
-    },
-    {
-      "plugin": "measured-swift-workflows",
-      "purpose": "Focused swift workflows with project contracts and bounded evidence.",
-      "skills": [
-        "ios-journey-verification",
-        "swift-concurrency-diagnosis",
-        "swift-persistence-contract-review",
-        "swiftui-feature-delivery"
-      ],
-      "description_characters": 728,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 1176,
-        "claude": 1180
-      }
-    },
-    {
-      "plugin": "measured-nextjs-workflows",
-      "purpose": "Focused nextjs workflows with project contracts and bounded evidence.",
-      "skills": [
-        "nextjs-cache-auth-boundary-review",
-        "nextjs-feature-delivery",
-        "react-rendering-performance-diagnosis"
-      ],
-      "description_characters": 576,
-      "budget_status": "within-budget",
-      "discovery_estimates": {
-        "codex": 939,
-        "claude": 942
+        "codex": 8563,
+        "claude": 8595
       }
     }
   ],
@@ -230,9 +148,9 @@
       "id": "secure-an-agent-system",
       "purpose": "Review agent context, tools, and system-wide security boundaries.",
       "skills": [
-        "agent-context-state-memory-design",
-        "agent-tool-action-boundary-review",
-        "agentic-system-security-review"
+        "design-agent-memory",
+        "review-agent-tools",
+        "review-agent-security"
       ],
       "description_characters": 549,
       "budget_status": "within-budget",
@@ -242,9 +160,9 @@
       "id": "review-a-google-adk-system",
       "purpose": "Review an exact-version Google ADK design, its evaluation contract, and its agentic security boundaries.",
       "skills": [
-        "google-adk-engineering-profile",
-        "agent-evaluation-design",
-        "agentic-system-security-review"
+        "stack-google-adk",
+        "design-agent-evaluations",
+        "review-agent-security"
       ],
       "description_characters": 561,
       "budget_status": "within-budget",
@@ -254,8 +172,8 @@
       "id": "verify-a-completion-claim",
       "purpose": "Verify a material completion claim and preserve acceptance evidence.",
       "skills": [
-        "claim-verification",
-        "acceptance-evidence-ledger"
+        "verify-claims",
+        "track-acceptance"
       ],
       "description_characters": 371,
       "budget_status": "within-budget",
@@ -265,9 +183,9 @@
       "id": "plan-a-safe-code-change",
       "purpose": "Frame and plan a code change with risk-based testing.",
       "skills": [
-        "problem-framing",
-        "implementation-planning",
-        "test-strategy"
+        "frame-problem",
+        "plan-change",
+        "plan-tests"
       ],
       "description_characters": 548,
       "budget_status": "within-budget",
@@ -277,9 +195,9 @@
       "id": "review-a-public-release",
       "purpose": "Review a change for public exposure and publication readiness.",
       "skills": [
-        "public-private-boundary-review",
-        "prelaunch-readiness",
-        "publish-change-safely"
+        "review-public-boundary",
+        "check-launch-readiness",
+        "publish-change"
       ],
       "description_characters": 522,
       "budget_status": "within-budget",
@@ -289,8 +207,8 @@
       "id": "diagnose-with-evidence",
       "purpose": "Diagnose a defect and verify the resulting claims.",
       "skills": [
-        "systematic-diagnosis",
-        "claim-verification"
+        "diagnose-failure",
+        "verify-claims"
       ],
       "description_characters": 397,
       "budget_status": "within-budget",
@@ -300,9 +218,9 @@
       "id": "review-an-ai-workflow",
       "purpose": "Design AI evaluations and review the reliability of supplied context.",
       "skills": [
-        "agent-evaluation-design",
-        "context-reliability-review",
-        "source-output-conformance-audit"
+        "design-agent-evaluations",
+        "review-context-evidence",
+        "verify-source-output"
       ],
       "description_characters": 545,
       "budget_status": "within-budget",
@@ -312,9 +230,9 @@
       "id": "review-a-service-release",
       "purpose": "Review application controls and operational readiness before release.",
       "skills": [
-        "application-security-review",
-        "operational-readiness-review",
-        "observability-design"
+        "review-app-security",
+        "review-operational-readiness",
+        "design-observability"
       ],
       "description_characters": 517,
       "budget_status": "within-budget",
@@ -324,9 +242,9 @@
       "id": "write-a-decision-brief",
       "purpose": "Ground a decision in sources and communicate it for its intended audience.",
       "skills": [
-        "source-grounded-research",
-        "decision-governance-records",
-        "stakeholder-technical-communication"
+        "research-sources",
+        "record-decisions",
+        "explain-to-stakeholders"
       ],
       "description_characters": 537,
       "budget_status": "within-budget",
@@ -336,9 +254,9 @@
       "id": "learn-after-launch",
       "purpose": "Connect observed outcomes and incidents to a bounded next decision.",
       "skills": [
-        "iteration-postlaunch-learning",
-        "kpi-outcome-measurement",
-        "production-incident-analysis"
+        "learn-after-launch",
+        "measure-outcomes",
+        "analyze-incident"
       ],
       "description_characters": 515,
       "budget_status": "within-budget",
@@ -348,8 +266,8 @@
       "id": "review-an-engineering-request",
       "purpose": "Check a request before planning its implementation.",
       "skills": [
-        "engineering-prompt-review",
-        "implementation-planning"
+        "review-engineering-prompt",
+        "plan-change"
       ],
       "description_characters": 453,
       "budget_status": "within-budget",
@@ -359,9 +277,9 @@
       "id": "repair-reviewed-work",
       "purpose": "Assess review findings and plan evidence for a repair.",
       "skills": [
-        "respond-to-code-review",
-        "systematic-diagnosis",
-        "test-strategy"
+        "address-review",
+        "diagnose-failure",
+        "plan-tests"
       ],
       "description_characters": 512,
       "budget_status": "within-budget",
@@ -371,11 +289,35 @@
       "id": "verify-a-repaired-change",
       "purpose": "Run checks, review the exact diff, and reconcile completion.",
       "skills": [
-        "cross-stack-quality-gates",
-        "code-change-review",
-        "claim-verification"
+        "run-project-checks",
+        "review-code-change",
+        "verify-claims"
       ],
       "description_characters": 649,
+      "budget_status": "within-budget",
+      "installation_claim": "composition-only"
+    },
+    {
+      "id": "understand-a-design",
+      "purpose": "Reconstruct intended behavior and identify missing decisions before implementation.",
+      "skills": [
+        "explain-codebase",
+        "review-context-evidence",
+        "plan-change"
+      ],
+      "description_characters": 557,
+      "budget_status": "within-budget",
+      "installation_claim": "composition-only"
+    },
+    {
+      "id": "reconcile-plan-and-code",
+      "purpose": "Compare current requirements with code and evidence without treating comparison as a deterministic scanner.",
+      "skills": [
+        "assess-change-impact",
+        "verify-claims",
+        "plan-change"
+      ],
+      "description_characters": 585,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     }

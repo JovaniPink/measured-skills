@@ -1,0 +1,26 @@
+{
+  "name": "measured-quality",
+  "version": "0.19.0",
+  "description": "Check behavior, evidence, compatibility, security, and operational boundaries.",
+  "author": {
+    "name": "Measured Studios",
+    "url": "https://measuredstudios.com"
+  },
+  "homepage": "https://measuredstudios.com/skills",
+  "repository": "https://github.com/JovaniPink/measured-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Measured Quality",
+    "shortDescription": "Quality for focused engineering work",
+    "longDescription": "Check behavior, evidence, compatibility, security, and operational boundaries.",
+    "developerName": "Measured Studios",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Help me choose and use a Measured Quality workflow skill."
+    ]
+  }
+}

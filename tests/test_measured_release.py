@@ -17,7 +17,8 @@ class MeasuredReleaseTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         mappings = json.loads((root / "catalog" / "plugin-migrations.json").read_text())
         targets = [target for values in mappings["plugins"].values() for target in values]
-        self.assertEqual(set(skills_by_plugin()) - {"measured-swift-workflows", "measured-nextjs-workflows"}, set(targets))
+        historical = json.loads(__import__('subprocess').check_output(['git', 'show', 'cd9ff2417a5b6ca468642fad2da179dbebd99cbd:catalog/packs.json'], cwd=ROOT))
+        self.assertEqual({p['plugin'] for p in historical['plugin_packs']} - {'measured-swift-workflows', 'measured-nextjs-workflows'}, set(targets))
         self.assertEqual(len(targets), len(set(targets)))
         for source in (root / "skills").glob("*/SKILL.md"):
             self.assertNotIn('author: "Jovani', source.read_text())
@@ -36,22 +37,19 @@ class MeasuredReleaseTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()
-            skill = root / "skills" / "test-strategy"
+            skill = root / "skills" / "plan-tests"
             skill.mkdir(parents=True)
             (skill / "SKILL.md").write_text("[missing](references/missing.md)")
             with patch("export_selected.ROOT", root), self.assertRaises(ValueError):
-                export(root / "output", "codex", ["test-strategy"])
+                export(root / "output", "codex", ["plan-tests"])
             self.assertFalse((root / "output").exists())
 
     def test_pack_partition(self) -> None:
         packs = skills_by_plugin()
         self.assertEqual("measured-skills", CATALOG_NAME)
-        self.assertEqual(11, len(packs))
-        self.assertEqual(88, len(SKILLS))
-        self.assertEqual(88, len({s for skills in packs.values() for s in skills}))
-        self.assertEqual(5, len(packs["measured-engineering-build"]))
-        self.assertEqual(11, len(packs["measured-engineering-review"]))
-        self.assertEqual(9, len(packs["measured-engineering-delivery"]))
+        self.assertEqual({'measured-workflows': 32, 'measured-quality': 27, 'measured-stacks': 20, 'measured-operations': 11}, {p: len(s) for p, s in packs.items()})
+        self.assertEqual(90, len(SKILLS))
+        self.assertEqual(90, len({s for skills in packs.values() for s in skills}))
 
     def test_antigravity_manifests_use_documented_fields_only(self) -> None:
         for plugin in skills_by_plugin():
@@ -65,21 +63,21 @@ class MeasuredReleaseTests(unittest.TestCase):
         for client in ("codex", "claude", "antigravity"):
             with tempfile.TemporaryDirectory() as tmp:
                 first, second = Path(tmp).resolve() / "first", Path(tmp).resolve() / "second"
-                export(first, client, ["test-strategy", "cross-stack-quality-gates"])
-                export(second, client, ["cross-stack-quality-gates", "test-strategy"])
+                export(first, client, ["plan-tests", "run-project-checks"])
+                export(second, client, ["run-project-checks", "plan-tests"])
                 self.assertEqual(directory_hashes(first), directory_hashes(second))
                 with self.assertRaises(ValueError):
-                    export(first, client, ["test-strategy"])
+                    export(first, client, ["plan-tests"])
                 with self.assertRaises(ValueError):
                     export(Path(tmp).resolve() / "unknown", client, ["unknown"])
                 with self.assertRaises(ValueError):
-                    export(Path(tmp).resolve() / "duplicate", client, ["test-strategy", "test-strategy"])
+                    export(Path(tmp).resolve() / "duplicate", client, ["plan-tests", "plan-tests"])
                 with self.assertRaises(ValueError):
-                    export(Path(tmp).resolve() / "explicit", client, ["publish-change-safely"])
-                self.assertTrue((first / "cross-stack-quality-gates" / "references").is_dir())
+                    export(Path(tmp).resolve() / "explicit", client, ["publish-change"])
+                self.assertTrue((first / "run-project-checks" / "references").is_dir())
                 if client == "codex":
-                    text = (first / "test-strategy" / "agents" / "openai.yaml").read_text()
-                    self.assertIn("$test-strategy", text)
+                    text = (first / "plan-tests" / "agents" / "openai.yaml").read_text()
+                    self.assertIn("$plan-tests", text)
                     self.assertNotIn("$measured-", text)
                 else:
-                    self.assertFalse((first / "test-strategy" / "agents").exists())
+                    self.assertFalse((first / "plan-tests" / "agents").exists())

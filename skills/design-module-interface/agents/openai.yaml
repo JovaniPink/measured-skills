@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design a module interface"
+  short_description: "Designs module boundaries"
+  default_prompt: "Use $design-module-interface for this task: Designs module boundaries when asked to untangle coupling, simplify an API, or clarify ownership; makes caller contracts concrete before implementation."
+policy:
+  allow_implicit_invocation: true

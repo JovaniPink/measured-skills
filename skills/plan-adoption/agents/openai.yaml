@@ -1,0 +1,7 @@
+interface:
+  display_name: "Plan adoption"
+  short_description: "Plans adoption"
+  default_prompt: "Use $plan-adoption for this task: Plans adoption when a new process or product needs people to change how they work; connects training, incentives, support, and feedback to observable behavior."
+policy:
+  allow_implicit_invocation: true
+

@@ -5,78 +5,6 @@
   },
   "plugins": [
     {
-      "name": "measured-agent-platforms",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-agent-platforms"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-ai-systems",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-ai-systems"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-engineering-build",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-engineering-build"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-engineering-delivery",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-engineering-delivery"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-engineering-review",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-engineering-review"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-nextjs-workflows",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-nextjs-workflows"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
       "name": "measured-operations",
       "source": {
         "source": "local",
@@ -89,10 +17,10 @@
       "category": "Developer Tools"
     },
     {
-      "name": "measured-reasoning",
+      "name": "measured-quality",
       "source": {
         "source": "local",
-        "path": "./plugins/codex/measured-reasoning"
+        "path": "./plugins/codex/measured-quality"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -101,10 +29,10 @@
       "category": "Developer Tools"
     },
     {
-      "name": "measured-skills",
+      "name": "measured-stacks",
       "source": {
         "source": "local",
-        "path": "./plugins/codex/measured-skills"
+        "path": "./plugins/codex/measured-stacks"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -113,22 +41,10 @@
       "category": "Developer Tools"
     },
     {
-      "name": "measured-stack-profiles",
+      "name": "measured-workflows",
       "source": {
         "source": "local",
-        "path": "./plugins/codex/measured-stack-profiles"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
-      "name": "measured-swift-workflows",
-      "source": {
-        "source": "local",
-        "path": "./plugins/codex/measured-swift-workflows"
+        "path": "./plugins/codex/measured-workflows"
       },
       "policy": {
         "installation": "AVAILABLE",

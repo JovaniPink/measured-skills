@@ -69,6 +69,9 @@ def artifact_inventory() -> dict[str, str]:
         artifacts[relative] = "file"
     for skill in SKILLS:
         artifacts[f"dist/claude-ai/{skill}-{VERSION}.zip"] = "zip"
+    artifacts['catalog/migrations/0.18-to-0.19.json'] = 'file'
+    artifacts['catalog/workflows.json'] = 'file'
+    artifacts['dist/discovery'] = 'tree'
     return dict(sorted(artifacts.items()))
 
 

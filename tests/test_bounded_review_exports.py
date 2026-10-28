@@ -21,8 +21,8 @@ import package_claude_ai  # noqa: E402
 from cataloglib import EXPLICIT_SKILLS, read_skill_metadata  # noqa: E402
 
 REFERENCES = {
-    'code-change-review': 'bounded-review.md',
-    'publish-change-safely': 'pr-maintenance.md',
+    'review-code-change': 'bounded-review.md',
+    'publish-change': 'pr-maintenance.md',
 }
 
 
@@ -31,8 +31,8 @@ class BoundedReviewExports(unittest.TestCase):
         for client in ('codex', 'claude', 'antigravity'):
             with self.subTest(client=client), tempfile.TemporaryDirectory() as temporary:
                 output = Path(temporary).resolve() / 'review with spaces'
-                export_selected.export(output, client, ['code-change-review'])
-                relative = 'code-change-review/references/bounded-review.md'
+                export_selected.export(output, client, ['review-code-change'])
+                relative = 'review-code-change/references/bounded-review.md'
                 self.assertEqual((ROOT / 'skills' / relative).read_bytes(),
                                  (output / relative).read_bytes())
                 receipt = json.loads((output / 'export-manifest.json').read_text())
@@ -42,7 +42,7 @@ class BoundedReviewExports(unittest.TestCase):
                 self.assertEqual('not_observed', receipt['behavior'])
                 with self.assertRaises(ValueError):
                     export_selected.export(Path(temporary).resolve() / 'excluded', client,
-                                           ['publish-change-safely'])
+                                           ['publish-change'])
 
     def test_generated_packages_and_archives_keep_references_and_controls(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -71,7 +71,7 @@ class BoundedReviewExports(unittest.TestCase):
                         self.assertEqual(not explicit, policy['policy']['allow_implicit_invocation'])
                     if client == 'claude':
                         self.assertEqual(explicit, 'disable-model-invocation: true' in body)
-                archive = root / 'archives' / f'{skill}-0.18.0.zip'
+                archive = root / 'archives' / f'{skill}-0.19.0.zip'
                 with zipfile.ZipFile(archive) as bundle:
                     self.assertEqual(expected, bundle.read(f'{skill}/references/{reference}'))
                     body = bundle.read(f'{skill}/SKILL.md').decode()

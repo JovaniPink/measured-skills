@@ -1,7 +1,0 @@
-interface:
-  display_name: "Observability Design"
-  short_description: "Designs logs, metrics, traces, and alerts"
-  default_prompt: "Use $observability-design for this task: Designs logs, metrics, traces, and alerts when asked how to detect or explain failures; connects telemetry to user impact and operator actions rather than log volume."
-policy:
-  allow_implicit_invocation: true
-

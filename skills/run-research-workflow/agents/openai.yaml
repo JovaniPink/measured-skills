@@ -1,0 +1,6 @@
+interface:
+  display_name: "Manage a research workflow"
+  short_description: "Coordinates a research lifecycle"
+  default_prompt: "Use $run-research-workflow for this task: Coordinates a research lifecycle when explicitly asked to maintain traceable knowledge, evaluation, and corrections; excludes one-off search and never implies automatic publication."
+policy:
+  allow_implicit_invocation: false

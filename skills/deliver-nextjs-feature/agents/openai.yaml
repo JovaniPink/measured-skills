@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deliver a Next.js feature"
+  short_description: "Implements a named Next.js App Router feature"
+  default_prompt: "Use $deliver-nextjs-feature for this task: Implements a named Next.js App Router feature when explicitly requested within approved routes and files; follows installed-version docs and repository gates without adding unrequested infrastructure."
+policy:
+  allow_implicit_invocation: false

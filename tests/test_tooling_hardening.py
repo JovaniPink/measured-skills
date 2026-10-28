@@ -134,7 +134,7 @@ class NonUtf8Tests(unittest.TestCase):
 
 
 class SkillValidationTests(unittest.TestCase):
-    SKILL = "claim-verification"
+    SKILL = "verify-claims"
 
     def validate(self, mutate: object = None, base: tuple[str, ...] = ()) -> list[str]:
         """Copy a real skill into a temporary root, optionally change it, and validate it."""

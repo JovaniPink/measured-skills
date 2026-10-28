@@ -1,6 +1,0 @@
-interface:
-  display_name: "Design Rationale Investigation"
-  short_description: "Investigates why a design exists"
-  default_prompt: "Use $measured-reasoning:design-rationale-investigation for this task: Investigates why a design exists when asked why code was written that way or which constraint drove it; distinguishes historical evidence from plausible explanations."
-policy:
-  allow_implicit_invocation: true

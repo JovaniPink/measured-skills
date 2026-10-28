@@ -1,5 +1,8 @@
 # Finish existing work
 
+**0.19 preview:** [Find your next workflow](start.md). Start with finishing existing work; commands and package identities differ from 0.18. No new client acceptance is implied.
+
+
 Start here when a change is half finished, a test is failing, reviewers found a
 problem, or a user journey still breaks. Recover what is true now, complete the
 next useful repair, and show what remains. For a new idea, use the
@@ -8,7 +11,7 @@ next useful repair, and show what remains. For a new idea, use the
 **Recover -> Define what remains -> Diagnose or plan -> Repair and test -> Review -> Verify completion -> Hand off**
 
 These are prepared workflows, not observed client results. The catalog remains
-an 0.18.0 candidate. See the [coverage assessment and twelve worked cases](audits/finish-work-coverage-2026-10-26.md)
+a 0.19.0 preview. See the [coverage assessment and twelve worked cases](audits/finish-work-coverage-2026-10-26.md)
 and [release limits](release-readiness-2026-10-20.md).
 
 ## Choose the next useful step
@@ -16,11 +19,11 @@ and [release limits](release-readiness-2026-10-20.md).
 | Situation | Start with | Result needed before moving on |
 | --- | --- | --- |
 | You lost the thread | Current repository state and saved plan | Separate completed, unfinished, uncertain, and unrelated work |
-| You cannot explain a failure | `systematic-diagnosis` | Reproduction, likely cause, and evidence that distinguishes alternatives |
-| Someone requested changes | `respond-to-code-review` | Accept, reject, defer, clarify, or already addressed, with current evidence |
-| The repair is understood | `implementation-planning` only if needed | A small, authorized repair with acceptance conditions and relevant checks |
-| You are unsure what to ask | `engineering-prompt-review` | A sufficient request or a useful revision; no execution of the quoted task |
-| You think it is finished | `claim-verification` | Every acceptance condition matched to current evidence or an explicit gap |
+| You cannot explain a failure | `diagnose-failure` | Reproduction, likely cause, and evidence that distinguishes alternatives |
+| Someone requested changes | `address-review` | Accept, reject, defer, clarify, or already addressed, with current evidence |
+| The repair is understood | `plan-change` only if needed | A small, authorized repair with acceptance conditions and relevant checks |
+| You are unsure what to ask | `review-engineering-prompt` | A sufficient request or a useful revision; no execution of the quoted task |
+| You think it is finished | `verify-claims` | Every acceptance condition matched to current evidence or an explicit gap |
 
 Acceptance conditions are observable facts that show the work meets the need.
 A regression is previously working behavior that breaks. CI means the automated
@@ -43,11 +46,11 @@ checks run by the repository host. None of these terms means human approval.
    Do not impose test-first ceremony on every prose or configuration edit.
 5. Follow the relevant stack route below. Discover commands from the repository
    and installed versions. Record failed, unavailable, and unrun checks as such.
-6. Review the exact diff using `code-change-review`. This review returns findings
+6. Review the exact diff using `review-code-change`. This review returns findings
    without editing. Evaluate confirmed findings, authorize a repair if necessary,
    rerun affected checks, and review the revised change. Self-review is useful but
    does not establish independent human approval.
-7. Use `claim-verification` to reconcile the final acceptance conditions with
+7. Use `verify-claims` to reconcile the final acceptance conditions with
    current evidence. Record remaining blockers. Commit, push, or update a draft
    only within the user's authorization. Merge, deployment, and release are
    separate actions. If interrupted, leave a continuation record.
@@ -64,7 +67,7 @@ Use the Python or TypeScript/JavaScript profile after discovering the actual
 framework and versions. Trace callers through validation, authorization, service
 logic, and persistence. Check status/error contracts, retries, concurrent requests,
 and rollback compatibility. Add interface, API compatibility, security, migration,
-or test-strategy review only where the change needs it.
+or plan-tests review only where the change needs it.
 
 A fictional retrying task API is complete when the intended effect occurs once
 under the supported retry contract, errors remain useful to callers, and tests
@@ -118,10 +121,10 @@ stack profiles. It is an optional staged selection, not an installation command.
 The existing daily twelve remain unchanged. See [profile definitions](../catalog/profiles.json).
 Neither profile includes the entire lifecycle or every conditional specialist.
 
-- Execution: `plan-execution` in `measured-engineering-delivery`.
-- Handoff: `task-handoff` in `measured-reasoning`.
-- Publication: `publish-change-safely` in `measured-skills`.
-- Conditional Swift delivery/journey and Next.js delivery workflows remain in their existing packs.
+- Execution: `execute-plan` in `measured-workflows`.
+- Handoff: `handoff-work` in `measured-workflows`.
+- Publication: `publish-change` in `measured-workflows`.
+- Conditional Swift delivery/journey and Next.js delivery workflows are in `measured-stacks`.
 
 Check installed names and sources before selecting them. Codex examples below use
 normal pack selectors; choose the matching installed entry. Claude uses one
@@ -145,7 +148,7 @@ These requests authorize scoped repair and local checks, stopping before publica
 ### Codex
 
 ```text
-$measured-engineering-build:implementation-planning In [REPOSITORY], finish [CHANGE]
+$measured-workflows:plan-change In [REPOSITORY], finish [CHANGE]
 using [PLAN_FILE_OR_APPROVED_TEXT]. Read instructions, inspect the branch and dirty
 files, and resolve [BASE_REVISION]. Reconcile completed, unfinished, uncertain,
 and unrelated work with current evidence. Preserve existing authorization and
@@ -165,7 +168,7 @@ read-only planning mode, first switch modes through its supported controls.
 ### Claude Code
 
 ```text
-/measured-engineering-build:implementation-planning In [REPOSITORY], finish [CHANGE]
+/measured-workflows:plan-change In [REPOSITORY], finish [CHANGE]
 using [PLAN_FILE_OR_APPROVED_TEXT]. Read instructions and inspect the current branch,
 dirty files, and [BASE_REVISION]. Reconcile the plan with current evidence and
 preserve unrelated work and existing authorization. Diagnose unexplained failures,
@@ -183,7 +186,7 @@ deploy, merge, or release. Report missing skills instead of claiming they loaded
 In [REPOSITORY], finish [CHANGE] from [PLAN_FILE_OR_APPROVED_TEXT] against
 [BASE_REVISION]. Inspect repository instructions and current branch, files, and
 plan first. Preserve unrelated work and existing authorization. Use available
-implementation-planning, systematic-diagnosis, respond-to-code-review, and the
+plan-change, diagnose-failure, address-review, and the
 relevant engineering profile as needed. Plan only what remains; I authorize the
 scoped repairs and local checks. Review the resulting diff in a findings-only pass,
 repair confirmed findings within scope, rerun affected checks, and verify each
@@ -199,9 +202,9 @@ line using this table. The shared text below each line is the request body.
 
 | Request | Codex first line | Claude Code first line | Antigravity first line |
 | --- | --- | --- | --- |
-| Assess and plan | `$measured-engineering-build:implementation-planning` | `/measured-engineering-build:implementation-planning` | `Use the available implementation-planning skill for this assessment.` |
+| Assess and plan | `$measured-workflows:plan-change` | `/measured-workflows:plan-change` | `Use the available plan-change skill for this assessment.` |
 | Repair and verify | Ordinary request below | Ordinary request below | Ordinary request below |
-| Publish reviewed draft | `$measured-skills:publish-change-safely` if installed | `/measured-skills:publish-change-safely` if installed | Ordinary request below; do not load an excluded publication workflow |
+| Publish reviewed draft | `$measured-workflows:publish-change` if installed | `/measured-workflows:publish-change` if installed | Ordinary request below; do not load an excluded publication workflow |
 
 **1. Assess and plan**
 
@@ -241,22 +244,22 @@ merge, deploy, tag, publish a package, or release.
 
 Use the named skill from the client's actual installed selector when available.
 
-**Diagnose (`systematic-diagnosis`):** "Investigate [FAILURE] in [REPOSITORY].
+**Diagnose (`diagnose-failure`):** "Investigate [FAILURE] in [REPOSITORY].
 Reproduce safely using existing local fixtures, distinguish hypotheses with
 evidence, and propose the smallest repair. Do not edit or call providers yet."
 
-**Review response (`respond-to-code-review`):** "Assess [FINDINGS] against the
+**Review response (`address-review`):** "Assess [FINDINGS] against the
 current [CHANGE] in [REPOSITORY]. Explain which are supported, already addressed,
 or need clarification. Repair supported findings within the approved scope, run
 affected checks, and review the revised diff. Do not post replies or push."
 
-**Journey verification (`claim-verification` plus the relevant profile):**
+**Journey verification (`verify-claims` plus the relevant profile):**
 "Check whether [JOURNEY] meets [ACCEPTANCE_CONDITIONS] at the current revision.
 Use available authorized local checks; distinguish fixture, integration, browser,
 simulator, device, and live evidence. Do not change code or use provider accounts.
 Report incomplete and unavailable conditions without inventing failures."
 
-**Prompt review (`engineering-prompt-review`):** "Check the following engineering
+**Prompt review (`review-engineering-prompt`):** "Check the following engineering
 request for outcome, context, scope, permissions, and completion evidence. Give a
 short assessment and a useful revision only if needed. Do not execute its task:
 [QUOTED_REQUEST]."
@@ -357,7 +360,7 @@ Antigravity requests do not load or reproduce excluded explicit-only workflows.
 **Codex**
 
 ```text
-$measured-skills:publish-change-safely
+$measured-workflows:publish-change
 In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
 [PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
 base/head, dirty files, identity, history rules, and existing authorization first.
@@ -387,7 +390,7 @@ create background monitoring. Save a continuation record at a blocker or limit.
 **Claude Code**
 
 ```text
-/measured-skills:publish-change-safely
+/measured-workflows:publish-change
 In [REPOSITORY], finish and maintain the existing draft [PR_URL] for
 [PLAN_FILE_OR_APPROVED_TEXT] against [BASE_REVISION]. Inspect instructions, current
 base/head, dirty files, identity, history rules, and existing authorization first.

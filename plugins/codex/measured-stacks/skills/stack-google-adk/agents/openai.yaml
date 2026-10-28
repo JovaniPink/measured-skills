@@ -1,0 +1,6 @@
+interface:
+  display_name: "Google ADK guidance"
+  short_description: "Reviews Google ADK architecture"
+  default_prompt: "Use $measured-stacks:stack-google-adk for this task: Reviews Google ADK architecture when asked about sessions, tools, models, evaluations, or deployment compatibility; checks exact versions and does not equate framework defaults with safety."
+policy:
+  allow_implicit_invocation: true

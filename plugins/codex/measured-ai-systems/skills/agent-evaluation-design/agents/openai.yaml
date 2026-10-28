@@ -1,6 +1,0 @@
-interface:
-  display_name: "Agent Evaluation Design"
-  short_description: "Designs AI evaluations"
-  default_prompt: "Use $measured-ai-systems:agent-evaluation-design for this task: Designs AI evaluations when asked how to test an agent, compare prompts, or measure answer quality; requires representative cases and a baseline rather than one favorable response."
-policy:
-  allow_implicit_invocation: true

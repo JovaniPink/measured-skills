@@ -1,0 +1,6 @@
+interface:
+  display_name: "Diagnose a failure"
+  short_description: "Diagnoses failures"
+  default_prompt: "Use $diagnose-failure for this task: Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix."
+policy:
+  allow_implicit_invocation: true

@@ -1,14 +1,17 @@
 # Validation Evidence
 
-Current refinement inventory: 88 canonical skills in 11 packs. The October 20
-candidate adds offline cases and authored guidance; validation receipts for this
-revision are recorded after checks complete. Earlier counts below are historical.
+Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
+
+
+Current preview inventory: 90 canonical skills in four packs. The 0.19 discovery
+and identity migration retains the 0.18 candidate as historical source. Validation
+results for this change are recorded separately; earlier counts below are historical.
 
 See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 292 regression tests.
+Current test suite: 302 regression tests.
 
 ## October 27 completed output-contract diagnostic
 

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Claim Verification"
-  short_description: "Verifies current checks and completion claims"
-  default_prompt: "Use $claim-verification for this task: Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct."
-policy:
-  allow_implicit_invocation: true

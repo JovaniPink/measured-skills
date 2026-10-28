@@ -19,6 +19,9 @@ import validate_catalog as validator  # noqa: E402
 from cataloglib import VERSION, read_skill_metadata  # noqa: E402
 
 
+MAPPING = {r['old_id']: r['new_id'] for r in json.loads((ROOT / 'catalog/migrations/0.18-to-0.19.json').read_text())['entries']}
+
+
 class ReleaseIntegrityTests(unittest.TestCase):
     def test_manifest_rejects_inventory_mutations(self) -> None:
         original = json.loads((ROOT / 'releases' / VERSION / 'manifest.json').read_text())
@@ -41,7 +44,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 self.assertTrue(any('artifact inventory' in e for e in errors), errors)
 
     def test_rehashed_archive_rejects_content_mutations(self) -> None:
-        skill = 'claim-verification'
+        skill = 'verify-claims'
         source = next((ROOT / 'plugins' / 'claude').glob('*/skills/' + skill))
         expected = {f'{skill}/{p.relative_to(source).as_posix()}': p.read_bytes()
                     for p in source.rglob('*') if p.is_file()}
@@ -94,10 +97,11 @@ class ReleaseIntegrityTests(unittest.TestCase):
         self.assertTrue(any('artifact inventory' in e for e in errors))
 
     def test_cli_smoke_contract_preserves_cases_and_request_ceiling(self) -> None:
-        suite_path = ROOT / 'evals/daily-engineering/cases.json'
-        suite = json.loads(suite_path.read_text())
+        import subprocess
+        suite_bytes = subprocess.check_output(['git', 'show', 'cd9ff2417a5b6ca468642fad2da179dbebd99cbd:evals/daily-engineering/cases.json'], cwd=ROOT)
+        suite = json.loads(suite_bytes)
         contract = json.loads((ROOT / 'evals/daily-engineering/cli-smoke-2026-10-20.json').read_text())
-        self.assertEqual(hashlib.sha256(suite_path.read_bytes()).hexdigest(), contract['source_suite_sha256'])
+        self.assertEqual(hashlib.sha256(suite_bytes).hexdigest(), contract['source_suite_sha256'])
         cases = {case['id']: case for case in suite['cases']}
         self.assertEqual(6, len(contract['cases']))
         self.assertEqual(6, contract['case_session_ceiling_per_client'])
@@ -202,7 +206,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
         document = json.loads((ROOT / 'provenance/catalog.json').read_text())
         schema = json.loads((ROOT / 'provenance/schema.json').read_text())
         self.assertEqual([], validate_instance(document, schema))
-        for path in ('../outside', 'skills/claim-verification/SKILLXmd', 'skills/claim-verification/SKILL\\Xmd'):
+        for path in ('../outside', 'skills/verify-claims/SKILLXmd', 'skills/verify-claims/SKILL\\Xmd'):
             mutated = copy.deepcopy(document)
             entry = next(r for r in mutated['entries'] if 'owned_origin' in r)
             entry['owned_origin']['entrypoint'] = path
@@ -219,7 +223,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                          sum(r['implementation_method'] == 'clean-room' for r in historical['entries']) - len(audit['changes']))
         for change in audit['changes']:
             skill = change['skill']
-            entry = entries[skill]
+            entry = entries[MAPPING[skill]]
             self.assertEqual('adapted', entry['implementation_method'])
             self.assertEqual(change['owned_origin'], entry['owned_origin'])
             self.assertEqual(entry['owned_origin']['revision'], entry['pinned_revision'])
@@ -229,7 +233,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
             payload = subprocess.check_output(
                 ['git', 'show', accepted['accepted_revision'] + ':skills/' + skill + '/SKILL.md'], cwd=ROOT)
             self.assertEqual(hashlib.sha256(payload).hexdigest(), change['corrected_entrypoint_sha256'])
-            self.assertEqual('adapted', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
+            self.assertEqual('adapted', read_skill_metadata(ROOT / 'skills' / MAPPING[skill])['provenance'])
             errors: list[str] = []
             validator._validate_owned_origin(entry, errors)
             self.assertEqual([], errors)
@@ -255,7 +259,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                 self.assertEqual('requires_correction', record['decision'])
                 self.assertEqual('needs_evidence', record['qualification'])
                 self.assertEqual('original', after[skill]['implementation_method'])
-                self.assertEqual('original', read_skill_metadata(ROOT / 'skills' / skill)['provenance'])
+                self.assertEqual('original', read_skill_metadata(ROOT / 'skills' / MAPPING[skill])['provenance'])
                 entrypoint = 'skills/' + skill + '/SKILL.md'
                 previous = subprocess.check_output(['git', 'show', revision + ':' + entrypoint], cwd=ROOT)
                 # This audit proves its historical metadata-only correction.
@@ -390,7 +394,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
         import subprocess
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            target = root / 'skills/claim-verification/SKILL.md'
+            target = root / 'skills/verify-claims/SKILL.md'
             target.parent.mkdir(parents=True)
             target.write_text('Synthetic owned-origin fixture.\n')
             (root / 'LICENSE').write_bytes((ROOT / 'LICENSE').read_bytes())
@@ -405,9 +409,9 @@ class ReleaseIntegrityTests(unittest.TestCase):
             git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
                 '-c', 'core.hooksPath=/dev/null', '-c', 'commit.gpgsign=false', 'commit', '-qm', 'unrelated')
             git('cat-file', '-e', revision + '^{commit}')
-            entry: dict[str, object] = {'skill': 'claim-verification', 'implementation_method': 'adapted',
+            entry: dict[str, object] = {'skill': 'verify-claims', 'implementation_method': 'adapted',
                                        'pinned_revision': revision, 'owned_origin': {
-                'revision': revision, 'entrypoint': 'skills/claim-verification/SKILL.md', 'license': 'MIT',
+                'revision': revision, 'entrypoint': 'skills/verify-claims/SKILL.md', 'license': 'MIT',
                 'entrypoint_sha256': hashlib.sha256(target.read_bytes()).hexdigest(),
                 'license_sha256': hashlib.sha256((root / 'LICENSE').read_bytes()).hexdigest()}}
             errors: list[str] = []
@@ -421,7 +425,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
         entrypoint = 'skills/claim-verification/SKILL.md'
         payload = subprocess.check_output(['git', 'show', revision + ':' + entrypoint], cwd=ROOT)
         license_bytes = subprocess.check_output(['git', 'show', revision + ':LICENSE'], cwd=ROOT)
-        original: dict[str, object] = {'skill': 'claim-verification', 'disposition': 'covered',
+        original: dict[str, object] = {'skill': 'verify-claims', 'disposition': 'covered',
                     'implementation_method': 'adapted', 'pinned_revision': revision,
                     'owned_origin': {'revision': revision, 'entrypoint': entrypoint, 'license': 'MIT',
                                      'entrypoint_sha256': hashlib.sha256(payload).hexdigest(),
@@ -453,7 +457,7 @@ class ReleaseIntegrityTests(unittest.TestCase):
                     entry['implementation_method'] = 'original'
                 errors: list[str] = []
                 with patch.object(validator, '_validate_json_schema', return_value={'entries': [entry]}), \
-                        patch.object(validator, 'ALL_SKILLS', ('claim-verification',)), \
+                        patch.object(validator, 'ALL_SKILLS', ('verify-claims',)), \
                         patch.object(validator, 'read_skill_metadata', return_value={'provenance': entry['implementation_method']}):
                     validator.validate_provenance(errors)
                 self.assertEqual(mutation != 'valid', bool(errors), errors)

@@ -27,7 +27,7 @@ class DailyExports(unittest.TestCase):
         self.assertNotIn('unreviewed.example', PRIMARY_AUTHORITY_HOSTS)
 
     def test_inlined_matrices_preserve_every_original_row(self) -> None:
-        matrices = {'agent-context-state-memory-design': ['| Field | Question |',
+        matrices = {'design-agent-memory': ['| Field | Question |',
                                                '| --- | --- |',
                                                '| Class | Is this instruction, request context, event '
                                                'history, scoped state, memory, retrieval, tool output, or '
@@ -51,7 +51,7 @@ class DailyExports(unittest.TestCase):
                                                'future context? |',
                                                '| Isolation | Which request, session, user, tenant, and '
                                                'evaluation boundaries apply? |'],
-         'agent-protocol-interoperability-review': ['| Boundary | Questions |',
+         'review-agent-protocols': ['| Boundary | Questions |',
                                                     '| --- | --- |',
                                                     '| Version | Which specification and implementation '
                                                     'versions are in use? |',
@@ -81,7 +81,7 @@ class DailyExports(unittest.TestCase):
                                                     'URLs, credentials, rendering, or another agent? |',
                                                     '| Revocation | How are credentials, capabilities, '
                                                     'tasks, and compromised endpoints disabled? |'],
-         'agent-tool-action-boundary-review': ['| Field | Required evidence |',
+         'review-agent-tools': ['| Field | Required evidence |',
                                                '| --- | --- |',
                                                '| Tool | Registered name, version, owner, and '
                                                'implementation |',
@@ -104,7 +104,7 @@ class DailyExports(unittest.TestCase):
                                                'emergency stop |',
                                                '| Evidence | Request, decision, execution, and readback '
                                                'audit records |'],
-         'agentic-system-security-review': ['| Domain | Evidence and tests |',
+         'review-agent-security': ['| Domain | Evidence and tests |',
                                             '| --- | --- |',
                                             '| Instructions | Priority rules, direct and indirect '
                                             'injection, conflict, and untrusted-content labeling |',
@@ -126,7 +126,7 @@ class DailyExports(unittest.TestCase):
                                             'concurrency, and emergency limits |',
                                             '| Operations | Monitoring, incidents, audit evidence, '
                                             'revocation, rollback, and emergency stop |'],
-         'context-reliability-review': ['| Status | Meaning |',
+         'review-context-evidence': ['| Status | Meaning |',
                                         '| --- | --- |',
                                         '| `RELIABLE` | Current evidence supports the assertion within its '
                                         'authority and permission scope. |',
@@ -140,7 +140,7 @@ class DailyExports(unittest.TestCase):
                                         'the reviewed use. |',
                                         '| `UNVERIFIED` | The source, authority, or supporting evidence '
                                         'cannot be established. |'],
-         'retrieval-grounding-quality-review': ['| Stage | Questions |',
+         'review-retrieval-grounding': ['| Stage | Questions |',
                                                 '| --- | --- |',
                                                 '| Source | Is the source authorized, licensed, current, '
                                                 'versioned, and eligible for this user and purpose? |',
@@ -173,12 +173,12 @@ class DailyExports(unittest.TestCase):
     def test_profile_resolves_exact_members_and_rejects_unknown(self) -> None:
         names = export_selected.profile_skills('daily-engineering-experimental', 'codex')
         self.assertEqual(12, len(names))
-        self.assertIn('gcp-data-engineering-profile', names)
+        self.assertIn('stack-gcp-data', names)
         with self.assertRaisesRegex(ValueError, 'unknown profile'):
             export_selected.profile_skills('missing', 'codex')
 
     def test_cli_selection_is_mutually_exclusive(self) -> None:
-        run = subprocess.run([sys.executable, str(ROOT / 'scripts/export_selected.py'), '--output', 'unused', '--client', 'codex', '--skill', 'claim-verification', '--profile', 'daily-engineering-experimental'], capture_output=True, text=True)
+        run = subprocess.run([sys.executable, str(ROOT / 'scripts/export_selected.py'), '--output', 'unused', '--client', 'codex', '--skill', 'verify-claims', '--profile', 'daily-engineering-experimental'], capture_output=True, text=True)
         self.assertNotEqual(0, run.returncode)
         self.assertIn('not allowed with argument', run.stderr)
 
@@ -188,7 +188,7 @@ class DailyExports(unittest.TestCase):
             (base / 'real').mkdir()
             (base / 'link').symlink_to(base / 'real', target_is_directory=True)
             with self.assertRaisesRegex(ValueError, 'symlink'):
-                export_selected.export(base / 'link' / 'out', 'codex', ['claim-verification'])
+                export_selected.export(base / 'link' / 'out', 'codex', ['verify-claims'])
             self.assertFalse((base / 'real' / 'out').exists())
 
     def test_selected_export_rejects_symlinked_skill_root(self) -> None:
@@ -196,11 +196,11 @@ class DailyExports(unittest.TestCase):
             with self.subTest(client=client), tempfile.TemporaryDirectory() as raw:
                 base = Path(raw).resolve()
                 (base / 'skills').mkdir()
-                shutil.copytree(ROOT / 'skills/test-strategy', base / 'external')
-                (base / 'skills/test-strategy').symlink_to(base / 'external', target_is_directory=True)
+                shutil.copytree(ROOT / 'skills/plan-tests', base / 'external')
+                (base / 'skills/plan-tests').symlink_to(base / 'external', target_is_directory=True)
                 with patch.object(export_selected, 'ROOT', base):
                     with self.assertRaisesRegex(ValueError, 'symlink'):
-                        export_selected.export(base / 'out', client, ['test-strategy'])
+                        export_selected.export(base / 'out', client, ['plan-tests'])
                 self.assertFalse((base / 'out').exists())
 
     def test_selected_export_removes_its_partial_output_on_copy_failure(self) -> None:
@@ -210,11 +210,11 @@ class DailyExports(unittest.TestCase):
                 copy = 'shutil.copytree' if client == 'codex' else '_copy_claude_skill'
                 with patch('export_selected.' + copy, side_effect=OSError('synthetic disk failure')):
                     with self.assertRaisesRegex(OSError, 'disk failure'):
-                        export_selected.export(base / 'out', client, ['test-strategy'])
+                        export_selected.export(base / 'out', client, ['plan-tests'])
                 self.assertFalse((base / 'out').exists())
                 with patch.object(Path, 'write_text', side_effect=OSError('synthetic receipt failure')):
                     with self.assertRaisesRegex(OSError, 'receipt failure'):
-                        export_selected.export(base / 'out', client, ['test-strategy'])
+                        export_selected.export(base / 'out', client, ['plan-tests'])
                 self.assertFalse((base / 'out').exists())
 
     def fixture(self, base: Path) -> Path:
@@ -294,12 +294,12 @@ class DailyExports(unittest.TestCase):
                 base = Path(raw).resolve()
                 source = self.fixture(base)
                 if mode == 'explicit':
-                    p = source / 'skills/claim-verification/SKILL.md'
+                    p = source / 'skills/verify-claims/SKILL.md'
                     p.write_text(p.read_text().replace('invocation: "implicit"', 'invocation: "explicit"'))
                 else:
                     p = source / 'catalog/revocations.json'
                     value = json.loads(p.read_text())
-                    value['entries'].append({'skill': 'claim-verification', 'revoked_on': '2026-10-20', 'reason': 'Synthetic revocation', 'replacement': 'none', 'security_immediate': True})
+                    value['entries'].append({'skill': 'verify-claims', 'revoked_on': '2026-10-20', 'reason': 'Synthetic revocation', 'replacement': 'none', 'security_immediate': True})
                     p.write_text(json.dumps(value))
                 subprocess.run(['git', '-C', str(source), 'add', '.'], check=True)
                 subprocess.run(['git', '-C', str(source), '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'Change policy'], check=True)

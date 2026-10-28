@@ -1,6 +1,0 @@
-interface:
-  display_name: "Workflow Retrospective"
-  short_description: "Reviews a completed workflow"
-  default_prompt: "Use $workflow-retrospective for this task: Reviews a completed workflow when explicitly asked what caused friction or what to improve next; uses observed task evidence without diagnosing people or claiming unmeasured benefit."
-policy:
-  allow_implicit_invocation: false

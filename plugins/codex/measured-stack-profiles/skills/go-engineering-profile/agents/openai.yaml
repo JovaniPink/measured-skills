@@ -1,7 +1,0 @@
-interface:
-  display_name: "Go Engineering Profile"
-  short_description: "Reviews Go changes"
-  default_prompt: "Use $measured-stack-profiles:go-engineering-profile for this task: Reviews Go changes when goroutines, modules, APIs, dependencies, or tests need language-specific checks; follows repository toolchain and gate definitions."
-policy:
-  allow_implicit_invocation: true
-

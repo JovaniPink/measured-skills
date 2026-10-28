@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ("plan-execution", "swiftui-feature-delivery", "nextjs-feature-delivery")
+SKILLS = ("execute-plan", "deliver-swiftui-feature", "deliver-nextjs-feature")
 
 
 class CompletionContracts(unittest.TestCase):
@@ -23,7 +23,7 @@ class CompletionContracts(unittest.TestCase):
                 ("completed", "complete", True),
                 ("no-op", "not_needed", True),
             )
-            if suffix != "no-op" or skill != "plan-execution"
+            if suffix != "no-op" or skill != "execute-plan"
         }
         scenarios = document["scenarios"]
         self.assertEqual(len(expected), len(scenarios))
@@ -69,7 +69,7 @@ class CompletionContracts(unittest.TestCase):
                 self.assertNotIn("or when the result is Not Needed or Blocked", text)
 
     def test_noop_requires_evidence(self) -> None:
-        for name in ("swiftui-feature-delivery", "nextjs-feature-delivery"):
+        for name in ("deliver-swiftui-feature", "deliver-nextjs-feature"):
             self.assertIn(
                 "Not Needed requires evidence",
                 (ROOT / "skills" / name / "SKILL.md").read_text(),

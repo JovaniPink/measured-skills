@@ -1,0 +1,7 @@
+interface:
+  display_name: "Record decisions and evidence"
+  short_description: "Writes or reviews a decision record"
+  default_prompt: "Use $measured-operations:record-decisions for this task: Writes or reviews a decision record when asked to document options, rationale, ownership, or approval status; separates a proposal from a ratified decision."
+policy:
+  allow_implicit_invocation: true
+

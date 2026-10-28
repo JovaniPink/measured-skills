@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prepare a migration decision"
+  short_description: "Prepares a migration decision"
+  default_prompt: "Use $prepare-migration-decision for this task: Prepares a migration decision when owners must approve data writers, cutover, reconciliation, and rollback; records a proposal and evidence without granting approval itself."
+policy:
+  allow_implicit_invocation: true
+

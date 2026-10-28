@@ -17,7 +17,7 @@ import export_selected  # noqa: E402
 
 class GcpRoutingPacketTests(unittest.TestCase):
     def test_standalone_exports_preserve_required_reference_bytes_and_controls(self) -> None:
-        for name in ('gcp-data-engineering-profile', 'code-change-review'):
+        for name in ('stack-gcp-data', 'review-code-change'):
             source = ROOT / 'skills' / name
             canonical = (source / 'SKILL.md').read_bytes()
             for client in ('codex', 'claude', 'antigravity'):
@@ -73,7 +73,7 @@ class GcpRoutingPacketTests(unittest.TestCase):
                                                 f'1a23a574f43e1e9032985f97536bb0b1ce35262c:{relative}'], cwd=ROOT)
             self.assertEqual(digest, hashlib.sha256(retained).hexdigest())
 
-    def test_contract_retest_binds_current_exports_without_reauthorizing_runs(self) -> None:
+    def test_contract_retest_binds_historical_exports_without_reauthorizing_runs(self) -> None:
         packet = json.loads((ROOT / 'docs/audits/gcp-review-contract-retest-preparation-2026-10-27.json').read_text())
         previous = json.loads((ROOT / 'docs/audits/gcp-routing-retest-preparation-2026-10-26.json').read_text())
         self.assertEqual('prepared_not_run', packet['status'])
@@ -95,9 +95,9 @@ class GcpRoutingPacketTests(unittest.TestCase):
                 self.assertEqual(old[key], row[key])
             self.assertEqual('not_run', row['execution'])
             self.assertEqual(row['prompt_sha256'], hashlib.sha256(row['prompt'].encode()).hexdigest())
-        expected = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
-                    for name in ('gcp-data-engineering-profile', 'code-change-review')
-                    for path in (ROOT / 'skills' / name).rglob('*') if path.is_file()}
+        expected = {path: hashlib.sha256(subprocess.check_output(['git', 'show',
+                    'cd9ff2417a5b6ca468642fad2da179dbebd99cbd:' + path], cwd=ROOT)).hexdigest()
+                    for path in packet['canonical_files']}
         self.assertEqual(expected, packet['canonical_files'])
 
 
