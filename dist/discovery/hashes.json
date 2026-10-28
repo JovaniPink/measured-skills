@@ -1,7 +1,7 @@
 {
-  "dist/discovery/catalog.json": "312846f955e64be4ee2ab097eb23db81e49bd458917edd59ba1f2e939ab36807",
-  "dist/discovery/guide.md": "e64759fe767fbc0b13bba05767fb75d6f81413a8828dfb2697995b6cf5d91487",
-  "dist/discovery/index.html": "21fcd954488be7c0c83214b261d68eb2da7e3918d33dfe867f68c0136fc66afd",
+  "dist/discovery/catalog.json": "c15e0b15292cfd01742bf067daec9a52423a28f71348f1c8c0a10725fd011775",
+  "dist/discovery/guide.md": "baa1add8450755c1816e7eafe7228d6c5adc997cac8978ff7c14c26449ed781c",
+  "dist/discovery/index.html": "8e0d17f0e230657b79e90f9a4b0f96e6cbaf88263bd7c1938e53975866de59ed",
   "skills/choose-workflow/references/workflow-index.md": "035f60883bc4353c04d3dfb291a3bbb68f0781c623640885ecda91ab26a761ca",
   "docs/skill-catalog-reader-guide.md": "6687116e3bd213bdd44a7fafb7109113e1d9a51ff87c12b80086ae91af276409"
 }

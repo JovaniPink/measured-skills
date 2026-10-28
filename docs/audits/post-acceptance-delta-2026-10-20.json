@@ -1032,22 +1032,22 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "312846f955e64be4ee2ab097eb23db81e49bd458917edd59ba1f2e939ab36807",
+      "after_sha256": "c15e0b15292cfd01742bf067daec9a52423a28f71348f1c8c0a10725fd011775",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "e64759fe767fbc0b13bba05767fb75d6f81413a8828dfb2697995b6cf5d91487",
+      "after_sha256": "baa1add8450755c1816e7eafe7228d6c5adc997cac8978ff7c14c26449ed781c",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "155d7515088d569dae8dedc63a573b93ba94f1dea95dbeb8f638a6106a8a4daa",
+      "after_sha256": "a6844dd8764c4017e2146f7cda7f8e7c5c25aa746421b7a295e09531bc760fec",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "21fcd954488be7c0c83214b261d68eb2da7e3918d33dfe867f68c0136fc66afd",
+      "after_sha256": "8e0d17f0e230657b79e90f9a4b0f96e6cbaf88263bd7c1938e53975866de59ed",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "docs/README.md": {

@@ -796,7 +796,7 @@
       ]
     }
   ],
-  "source_revision": "3f3cbe34019f0edeaaf620631332c4b1a6d1e4b6",
+  "source_revision": "7dd62db3018da0f1479a2c67039124c7e1f80c30",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
@@ -808,7 +808,7 @@
     "scripts/canonical_deltas.py": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
     "scripts/discovery-ui.js": "376cb8efa37832d43952b9c27d82e80bb2e8632f09ef622325d05fb9c74f2308",
-    "scripts/discovery.py": "bd3a8680f6217a728334edfe4f4966c3d8000f84b18e871517c6babae220832e",
+    "scripts/discovery.py": "62a5c562ae7d1321e333225d60e667eafec227d8befbcd1c99b7a953e1526e76",
     "skills/AGENTS.md": "8f95b31d79420e93e53b891b00812085c51bd3cc28a88a0a6e955c2e0e43e377",
     "skills/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
     "skills/address-review/SKILL.md": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
