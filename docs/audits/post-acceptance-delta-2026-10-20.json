@@ -9832,7 +9832,7 @@
     },
     "scripts/discovery.py": {
       "before_sha256": null,
-      "after_sha256": "bd3a8680f6217a728334edfe4f4966c3d8000f84b18e871517c6babae220832e",
+      "after_sha256": "62a5c562ae7d1321e333225d60e667eafec227d8befbcd1c99b7a953e1526e76",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "scripts/export_selected.py": {
@@ -12402,7 +12402,7 @@
     },
     "tests/test_discovery.py": {
       "before_sha256": null,
-      "after_sha256": "0cf66df1afa1121bc8abc2630761f5a59d30c57975a29f2f4ab5527beb2dc0e2",
+      "after_sha256": "d25c937ee24fd46dd0562f1279afa3af13ec846181ebfd381e11793776a13e29",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "tests/test_distribution_licensing.py": {

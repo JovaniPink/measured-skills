@@ -244,7 +244,7 @@ def offline_html(data: dict[str, Any], root: Path = ROOT) -> str:
         modes = ''.join('<details><summary>' + e(m['label']) + '</summary><p>' + e(m['scope']) + '</p>' +
                         ''.join('<h4>' + e(data['clients'][c]) + '</h4><pre tabindex="0">' + e(p) + '</pre>' for c, p in m['prompts'].items()) + '</details>' for m in r['modes'])
         cards.append('<article id="' + e(r['id']) + '"><h2>' + e(r['label']) + '</h2><p>' + e(r['why']) + '</p><p>Start here: ' + e(r['primary_skill']) + '</p><p>Provide: ' + e(', '.join(r['required_inputs'])) + '</p><p>Synthetic output: ' + e(r['output_example']) + '</p>' + modes + '</article>')
-    nav = ''.join('<a href="#' + e(r['id']) + '">' + e(r['label']) + '</a> ' for r in data['routes'])
+    nav = ''.join('<a href="#' + e(r['id']) + '">' + e(r['label']) + '</a> ' for r in data['routes'][:7])
     catalog = ''.join('<li><strong>' + e(s['label']) + '</strong>: ' + e(s['id']) + ' (formerly ' + e(', '.join(s['historical_names']) or 'new') + '). ' + e(s['description']) + ' Invocation: ' + e(s['invocation']) + '.</li>' for s in data['skills'])
     payload = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     script = (root / 'scripts/discovery-ui.js').read_text()

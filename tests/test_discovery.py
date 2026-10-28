@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 from pathlib import Path
 import sys
 import unittest
@@ -111,6 +112,10 @@ class MigrationTests(unittest.TestCase):
             return real_git(root, *args)
         with patch.object(discovery, 'git', side_effect=source):
             data = discovery.build_data(revision)
+            navigation = re.search(r'<nav aria-label="Tasks">(.*?)</nav>', discovery.offline_html(data))
+            self.assertIsNotNone(navigation)
+            assert navigation is not None
+            self.assertEqual(7, navigation.group(1).count('<a '))
             with patch.object(discovery, 'input_hashes', return_value={discovery.REGISTRY: '0' * 64}):
                 with self.assertRaisesRegex(ValueError, 'input drift'):
                     discovery.build_data(revision)
