@@ -760,4 +760,4 @@ Use verify-claims if the matching skill is available; otherwise state that it di
 
 Package availability, invocation policy, and observed behavior are separate. All 0.19 installed-client behavior remains unobserved. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `cd9ff2417a5b6ca468642fad2da179dbebd99cbd`. File hashes: `catalog.json` alongside this guide.
+Source revision: `c0cd0b06061944c09e7738b702d059d3308fe567`. File hashes: `catalog.json` alongside this guide.

@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-quality:review-data-migration for this task: Reviews migration readiness when asked if a schema change, backfill, or cutover is safe; checks compatibility, reconciliation, and rollback without executing the migration."
 policy:
   allow_implicit_invocation: true
-

@@ -18,6 +18,27 @@ class MigrationTests(unittest.TestCase):
     def test_complete_migration_preserves_contracts(self) -> None:
         self.assertEqual([], discovery.migration_errors(ROOT))
 
+    def test_migrated_markdown_retains_each_existing_contract(self) -> None:
+        import re
+        document = json.loads((ROOT / discovery.MIGRATION).read_text())
+        mapping = {r['old_id']: r['new_id'] for r in document['entries']}
+        pattern = re.compile('|'.join(re.escape(k) for k in sorted(mapping, key=len, reverse=True)))
+        for row in document['entries']:
+            prefix = 'skills/' + row['old_id']
+            paths = discovery.git(ROOT, 'ls-tree', '-r', '--name-only', document['source_revision'], '--', prefix).decode().splitlines()
+            for path in paths:
+                if not path.endswith('.md'):
+                    continue
+                before = discovery.git(ROOT, 'show', document['source_revision'] + ':' + path).decode()
+                after = (ROOT / 'skills' / row['new_id'] / Path(path).relative_to(prefix)).read_text()
+                if path.endswith('/SKILL.md'):
+                    before, after = before.split('---', 2)[2], after.split('---', 2)[2]
+                for entry in document['entries']:
+                    before = before.replace(entry['old_pack'] + ':' + entry['old_id'], entry['new_pack'] + ':' + entry['new_id'])
+                    before = before.replace(entry['old_pack'] + '/skills/' + entry['old_id'], entry['new_pack'] + '/skills/' + entry['new_id'])
+                expected = pattern.sub(lambda match: mapping[match[0]], before)
+                self.assertEqual(expected, after, path)
+
     def test_duplicate_destination_and_changed_authority_fail(self) -> None:
         record = json.loads((ROOT / discovery.MIGRATION).read_text())
         bad = copy.deepcopy(record)

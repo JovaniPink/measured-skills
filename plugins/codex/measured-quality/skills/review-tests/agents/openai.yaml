@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-quality:review-tests for this task: Reviews test quality when asked whether tests catch real regressions or merely mirror implementation; checks assertions, isolation, failure behavior, and coverage without equating count with confidence."
 policy:
   allow_implicit_invocation: true
-

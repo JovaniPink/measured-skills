@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-operations:review-value-evidence for this task: Assesses value claims when asked whether a change saved time, reduced risk, or caused an outcome; separates observed results, estimates, attribution, and unsupported conclusions."
 policy:
   allow_implicit_invocation: true
-

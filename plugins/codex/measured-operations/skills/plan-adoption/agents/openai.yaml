@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-operations:plan-adoption for this task: Plans adoption when a new process or product needs people to change how they work; connects training, incentives, support, and feedback to observable behavior."
 policy:
   allow_implicit_invocation: true
-

@@ -4,4 +4,3 @@ interface:
   default_prompt: "Use $measured-quality:design-observability for this task: Designs logs, metrics, traces, and alerts when asked how to detect or explain failures; connects telemetry to user impact and operator actions rather than log volume."
 policy:
   allow_implicit_invocation: true
-
