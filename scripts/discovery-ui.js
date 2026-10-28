@@ -34,6 +34,7 @@
     make("p", `${routes.length} routes. Search stays on this page.`, result);
     routes.forEach(r => {
       const article = make("article", "", result);
+      article.id = "choice-" + r.id;
       make("h3", r.label, article); make("p", r.why, article);
       make("p", `Start here: ${r.primary_skill}. Provide: ${r.required_inputs.join(", ")}.`, article);
       make("p", `Synthetic output: ${r.output_example}`, article);
@@ -67,6 +68,12 @@
     if (!routes.length && !matching.length) make("p", "No match. Try a shorter task phrase or browse the complete catalog below.", result);
   };
   search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render);
-  host.hidden = false;
   render();
+  host.hidden = false;
+  document.getElementById("static-guide").hidden = true;
+  document.querySelectorAll('nav[aria-label="Tasks"] a').forEach(link => {
+    const id = link.getAttribute("href").slice(1);
+    link.href = "#choice-" + id;
+    link.addEventListener("click", () => { search.value = ""; render(); });
+  });
 })();
