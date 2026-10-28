@@ -915,7 +915,7 @@ class CatalogTests(unittest.TestCase):
             "jovanipink-reasoning", tracks["portable-skill-authoring"]["plugin"]
         )
         self.assertEqual(
-            ["author-skill"], tracks["portable-skill-authoring"]["skills"]
+            ["portable-skill-authoring"], tracks["portable-skill-authoring"]["skills"]
         )
         self.assertEqual(
             "released", tracks["engineering-depth-and-continuity"]["status"]
