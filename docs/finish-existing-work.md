@@ -12,7 +12,11 @@ next useful repair, and show what remains. For a new idea, use the
 
 These are prepared workflows, not observed client results. The catalog remains
 a 0.19.0 preview. See the [coverage assessment and twelve worked cases](audits/finish-work-coverage-2026-10-26.md)
-and [release limits](release-readiness-2026-10-20.md).
+and [current release limits](release-status.md).
+
+The prompts use 0.19 names. Check [the installed-entry guidance](start.md#use-the-guide-with-the-skills-you-actually-have)
+before sending a native command, and preserve current constraints when adapting
+a request. Missing skills do not authorize installation or new external actions.
 
 ## Choose the next useful step
 

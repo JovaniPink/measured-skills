@@ -9,8 +9,10 @@ acceptance work remain separate.
    **maintain this draft PR**. Read the stated scope before copying the prompt.
 3. Replace the placeholders with your repository, task, comparison revision, plan,
    and PR where needed. Let the assistant discover real paths and commands.
-4. Check which installed entry matches. If absent, use ordinary task wording and
-   record that no skill loaded. Do not invent a command or install a replacement
+4. Check which installed entry matches. If absent, remove its leading native
+   command and use ordinary task wording, recording that no skill loaded.
+   See [missing-entry guidance](start.md#use-the-guide-with-the-skills-you-actually-have).
+   Do not invent a command or install a replacement
    merely to continue authorized work.
 5. Inspect the result against the expected output. A selected skill, a successfully
    loaded reference, and a useful answer are three separate observations.

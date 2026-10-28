@@ -11,10 +11,12 @@ For unfinished changes and repairs, use [Finish existing work](finish-existing-w
 
 Start with one task and the smallest useful selection. The 0.19.0 preview
 includes `daily-engineering-experimental`, a 12-skill selection for planning,
-diagnosis, review, tests, Python, and GCP data work. Bounded Claude trials found
-selection and output errors. Those observations do not qualify the profile or
-establish measured benefit. See the dated evidence in
-[release readiness](release-readiness-2026-10-20.md).
+diagnosis, review, tests, Python, and GCP data work. Earlier 0.18 Claude trials
+found selection and output errors; the recorded October 27 four-case retest and
+two follow-ups closed that targeted diagnostic. Neither outcome qualifies the
+whole profile or the renamed 0.19 source. See the preserved
+[0.18 evidence](release-readiness-2026-10-26.md) and
+[current release status](release-status.md).
 
 To build a feature, follow the [feature-development workflow](feature-development-workflow.md):
 frame the need, plan, implement, check, review, verify completion, and open a

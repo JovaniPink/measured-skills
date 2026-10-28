@@ -4,6 +4,13 @@ The catalog uses one SemVer release train. Every canonical skill, generated plug
 
 ## Staged release
 
+Select the version's source before running any generator. Merged `main` contains
+0.19; it cannot rebuild the preserved 0.18 candidate by changing a command label.
+Use the exact candidate and manifest source identities in [release status](release-status.md).
+Keep older candidates in separate clean checkouts, preserve their anchors, and
+reconcile intentional changes through ordinary commits. A merged preparation PR
+does not authorize tagging or turn its old client observations into new acceptance.
+
 1. Confirm scope, identity, branch, clean status, provenance, and the target version.
 2. Regenerate client trees and marketplaces.
 3. Package individual Claude.ai ZIPs twice and compare checksums.

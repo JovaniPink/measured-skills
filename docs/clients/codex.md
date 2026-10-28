@@ -2,6 +2,8 @@
 
 **0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
 
+Before copying a command, follow [installed-name and missing-entry guidance](../start.md#use-the-guide-with-the-skills-you-actually-have). An older installed pack does not supply a renamed 0.19 entry.
+
 For everyday feature work, use the [step-by-step prompts and fast path](../feature-development-workflow.md#codex-prompts).
 Check the installed skill entry before using a prompt. Dated observations below
 apply to their recorded versions, not every current installation.
