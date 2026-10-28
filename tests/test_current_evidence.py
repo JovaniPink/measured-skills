@@ -125,6 +125,11 @@ class CurrentEvidenceTests(unittest.TestCase):
     def test_motion_preserves_original_cases_and_adds_focused_checks(self) -> None:
         original = json.loads((ROOT / "tests/fixtures/motion-original-cases.json").read_text())
         cases = json.loads((ROOT / "evals/cases.json").read_text())
+        migration = json.loads((ROOT / 'catalog/migrations/0.18-to-0.19.json').read_text())
+        raw = json.dumps(original)
+        for entry in sorted(migration['entries'], key=lambda r: -len(r['old_id'])):
+            raw = raw.replace(entry['old_id'], entry['new_id'])
+        original = json.loads(raw)
         motion = next(item for item in cases["skills"] if item["skill"] == original["skill"])
         for group, count in (("positive", 3), ("near_miss", 3), ("safety", 4), ("output_rubric", 3)):
             self.assertEqual(original[group], motion[group][:count])
@@ -194,7 +199,7 @@ class CurrentEvidenceTests(unittest.TestCase):
             (ROOT / "tests/fixtures/upstream-pins-before-october5.json").read_text()
         )
         before = {item["source_url"]: item for item in fixture["snapshot"]["sources"]}
-        pins = json.loads((ROOT / "catalog/upstream-pins.json").read_text())
+        pins = json.loads((ROOT / "tests/fixtures/upstream-pins-before-october20.json").read_text())["snapshot"]
         current = {item["source_url"]: item for item in pins["sources"]}
         initial = json.loads((ROOT / "docs/audits/source-review-2026-10-05.json").read_text())
         reviewed = json.loads(

@@ -1,7 +1,0 @@
-interface:
-  display_name: "Workshop Planning and Synthesis"
-  short_description: "Plans or synthesizes a workshop"
-  default_prompt: "Use $measured-operations:workshop-planning-synthesis for this task: Plans or synthesizes a workshop when asked to prepare an agenda or turn session notes into decisions; ties activities to outcomes and leaves unresolved ownership visible."
-policy:
-  allow_implicit_invocation: true
-

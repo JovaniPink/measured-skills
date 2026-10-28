@@ -1,0 +1,1393 @@
+{
+  "source_revision": "352439797ea8902e65d5a56921a2cd5400e3c890",
+  "scope": "Owned repository metadata and Git history, retained authoring messages, and a locally retained owned MIT source revision. No third-party skill text or catalog was obtained or compared. Declarations do not establish current derivation or non-infringement.",
+  "skills": [
+    {
+      "skill": "acceptance-evidence-ledger",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "10bd58fb0ed4f115b3e8c244be83a0053b34e214072b1e3eb3473b2c6eb68134",
+      "earliest_preserved_entrypoint_revision": "ad6bf563715290e337fdc41837abfece7f13dcbc",
+      "method_declarations": [
+        {
+          "revision": "ad6bf563715290e337fdc41837abfece7f13dcbc",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "accessibility-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "eca18fc7a9ccdf023dacf8c4e56788c11adaf871aa335876df7330f82531f96b",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "adobe-aem-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "c95bb0bb682626cd17c33567439130e9d3ed7ac557aa6773b497dab413918cf8",
+      "earliest_preserved_entrypoint_revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+      "method_declarations": [
+        {
+          "revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "agent-context-state-memory-design",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "e6f081d8a960a076afee16a94a71682500032fb80863c6cd1c2dafd6dd0063d9",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "agent-evaluation-design",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "d5c230d39584888d7fa30436390a4abf26ed904e3a566ddb935ede87b8fae211",
+      "earliest_preserved_entrypoint_revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+      "method_declarations": [
+        {
+          "revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "agent-protocol-interoperability-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "5a9a4c81351135ad7a55f17d54eafed6fc21187301bfee41a25917ceaa7bdfce",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "agent-tool-action-boundary-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "846eb8059d2e5fe73a8c251203ebfd0aa4ffa76620b9d7ff9f83a58b1613c15e",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "agentic-system-security-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "c2ae506604e1fb30a689f002663c20f6e30b977bf0c48f142bfcef22d957f0f1",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "alignment-interview",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "1cd6688a052f8fbbaefb1753959877fdcfba2ed0a77343836b1599f1ec2cae4b",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "api-contract-compatibility-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "afc8179fcb57510f59379d6663aed1be1a865ebc01b2dea265186df09c81c1a0",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "application-security-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "70727e32366876481a271507cb1d78baaff38546636164090db17645876005d1",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "authority-boundary-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "94819e92d6b4c14138f4fa3da45fefcc0a60e54955c6f889936189b3ba827049",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "change-adoption-planning",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "6ed9a055adbab3c196207cc55f0991ef2bb2d76c8cd99cc1e9e154ffbac26409",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "change-impact-analysis",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "471e6188169c52b05d50e88728365b18d263fa19ce104348f5e0f78fc0912b5d",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "claim-verification",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "5deb60b56109a28cc022c84854a3e0d250eaa15f2f56406180bc5ccd1e2aa754",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "adapted"
+        },
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": true,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "owned_mit_origin_supported_clean_room_process_unqualified",
+      "relabel_review": {
+        "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+        "parent_revision": "9feca3ae8d9cfc214e8b6a169f758991c1426706",
+        "procedural_body_unchanged": true,
+        "before_body_sha256": "6c0dc54380c0136e47d2321eacf6011dc85f339491efd3ce2e16186bf2d2e943",
+        "after_body_sha256": "6c0dc54380c0136e47d2321eacf6011dc85f339491efd3ce2e16186bf2d2e943",
+        "finding": "Canonical metadata changed from adapted to clean-room without a procedural rewrite. Later provenance metadata adopted the same label. Retained authoring commentary attributes this to source URL accessibility, not a documented process separation."
+      }
+    },
+    {
+      "skill": "code-change-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "3e70856dd160fe0c31c7449b2c65e1ab047f8304ea9862a61dbbf7e564ccc4e7",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "codebase-explanation",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "37b8f099d5d411ff3c29ea15b74f382a04f8f757d8763c22aae493ecfa2f5f49",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "context-reliability-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "43d10b985950f3e9dcee338a1f6e9ca86541fc6f168df26a20aca688b810caf4",
+      "earliest_preserved_entrypoint_revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+      "method_declarations": [
+        {
+          "revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "cross-capability-dependency-mapping",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "df13896c957875e044577a667fcd45ee4b253c39e50c99b497cae8ff46734e77",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "cross-stack-quality-gates",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "f769e4147dc6cafde2042ec4e1dafd762f066ec9154a0fe2827a7de4174e6a8a",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "adapted"
+        },
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": true,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "owned_mit_origin_supported_clean_room_process_unqualified",
+      "relabel_review": {
+        "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+        "parent_revision": "9feca3ae8d9cfc214e8b6a169f758991c1426706",
+        "procedural_body_unchanged": true,
+        "before_body_sha256": "321a9c1ce607d0400ea4002b5e29a83a529c5844f21db0dcbf12de1efd8c7285",
+        "after_body_sha256": "321a9c1ce607d0400ea4002b5e29a83a529c5844f21db0dcbf12de1efd8c7285",
+        "finding": "Canonical metadata changed from adapted to clean-room without a procedural rewrite. Later provenance metadata adopted the same label. Retained authoring commentary attributes this to source URL accessibility, not a documented process separation."
+      }
+    },
+    {
+      "skill": "csharp-dotnet-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "1308ae08d090ca2938e1f46154018ccc63574ac2e70328b2518e2b2df6694d54",
+      "earliest_preserved_entrypoint_revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+      "method_declarations": [
+        {
+          "revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "data-authority-migration-ratification",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "e545217fec302a703097caf55b475286e7865eb40b71f2dbef9c269da440374e",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "data-migration-readiness",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "36eb2d9112154cd1fc6f01b73031b77b1b9a3da84f3558c5856ad82aa8bb4733",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "decision-evidence-trace",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "92de1d19ec2e9305b34c94e417bb63ac1e4a8603c6713efdb50db99932818fc9",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "decision-governance-records",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "77ff5e6c3407d8105385d8966bbe84bac835581abc75805ada4ea0fd7c32bba1",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "dependency-supply-chain-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "971b088ccd0822d1c80d29abb62b7aea1f6ec2991dfdadc86785906919c52792",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "design-rationale-investigation",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "d155fcf54b53a257fcc8102d7645c31c84934520e3a3acc4592d991fa7f1a450",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "domain-vocabulary-modeling",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "9cccf3364959cc08554a5f663892e00a4101fa24f11e4c6d09d844ef07444757",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "finding-consolidation",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "65e962ed7ebac54a195b2f0d14b41a840eda816277ace294f15b8b16e5b82ffa",
+      "earliest_preserved_entrypoint_revision": "60dac45f0ac0779d0aeda685495e4b50f33f7702",
+      "method_declarations": [
+        {
+          "revision": "60dac45f0ac0779d0aeda685495e4b50f33f7702",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "finish-development-branch",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "37ead5070aade1f55dfde530ea21b528f32a24b897c898c6028bd4027a6a6b7b",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "functional-motion-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "634c8d881010e0d8998745d61eb9cfcb77eaee74269b51f0fe4338a9466dc8f7",
+      "earliest_preserved_entrypoint_revision": "61d9f2c7ca0ccca0dbfbca123893ca6bddd71dd0",
+      "method_declarations": [
+        {
+          "revision": "61d9f2c7ca0ccca0dbfbca123893ca6bddd71dd0",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "gcp-data-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "earliest_preserved_entrypoint_revision": "3e1fce2583832cd4df65183f91292ea31715933f",
+      "method_declarations": [
+        {
+          "revision": "3e1fce2583832cd4df65183f91292ea31715933f",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "go-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "89601203e04899d6d036db38939fa9dedc0ea178ea03fc81c4474ac90e38fcc4",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "google-adk-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "ba1d89c9c4ec09dacf762e7b466879231b87afddc597f2dbdfa7a6c155f4fdb9",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "guided-configuration",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "789e57a8926a3dbdc753e8f97ec55c28326664cd0507460a2a1dec0ddcf34c1e",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "high-signal-technical-writing",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "e87ba504ca6afda55162b1bd5e5194ac289a2b22c99f29439a13c972527e68f1",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "implementation-planning",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "98e9474b7d8c88b76742d9e3b1c683ef49edc7722029ca8100374406141ed450",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "ios-journey-verification",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "2125ffbbf4979978b0ba9cec440a29fe8a052ad98d256b2467e7a74b1770b345",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "iteration-postlaunch-learning",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "7a95b4b89738d69786178979873e43935052b28e9bd357e3452fe02eef1f6c1f",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "java-spring-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "ceef84b828a6ec719eb9f856f93864f4d6050289e0f106257d3a5712d24f61b2",
+      "earliest_preserved_entrypoint_revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+      "method_declarations": [
+        {
+          "revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "kpi-outcome-measurement",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "03a32b1c45bea2efd891d6565be368a678c2ed6f41194008ac8db444a327daa4",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "merge-conflict-reconciliation",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "4b84c45a3fcab702d00f797c14ff60e634c021ab0dd7e0e8d3f15b83fa13ac20",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "module-interface-design",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "3c1e3aa7ba85a4a150f3b93a737ca47624f30c9fb8aa48d393f21e39edb99dc6",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "multi-agent-orchestration",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "f5891c585319b7a4b2ec6ad75061d2e864748f843bb820db4514aa6df302af56",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "nextjs-cache-auth-boundary-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "e374c33b4af9a61ff066dc049de8467e4383682279fcc4b3578cc8c353abdeb3",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "nextjs-feature-delivery",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "e31506f819ef062f8722a84148112a7890681162128dcf9d3ba92052635eee31",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "observability-design",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "8e101957599cebeeb75e6d3c4900117956dfd4c0a6b83dd4599aed12780df946",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "operational-readiness-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "512a2271449efb611ab9cbc2348e53cac25420ffcd61647fed030d63be0740d5",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "performance-scalability-diagnosis",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "1d4e80b3a485402fe371c6f9a89d52e77431c4529258ece3660cef72d4073cc2",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "php-drupal-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "fd877d0a70fc5eee452466439859d5a9dc2d55afc3472cabe18cb7e0988e0c0c",
+      "earliest_preserved_entrypoint_revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+      "method_declarations": [
+        {
+          "revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "plan-execution",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "20763fa6b32c4b13b70223168b30b3229400c7d499034de4b8937b2050401206",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "portable-skill-authoring",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "1541f6e89f550d68cffec476db54ffced74cea982bcc04130c916f4d8c3b79fc",
+      "earliest_preserved_entrypoint_revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+      "method_declarations": [
+        {
+          "revision": "0c53d68a552aa475746a85c228c1e063233f8ed4",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "postgresql-sql-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "1c99c5d80bf2fbd789a07404ae4524004ac1add7913f9015b795bae2b1c9e862",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "prelaunch-readiness",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "e9d8acdbb36e71bb35812814da1dd5d4fe9108e03bc5c320a7b0a1d6cc9e5aae",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "adapted"
+        },
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": true,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "owned_mit_origin_supported_clean_room_process_unqualified",
+      "relabel_review": {
+        "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+        "parent_revision": "9feca3ae8d9cfc214e8b6a169f758991c1426706",
+        "procedural_body_unchanged": true,
+        "before_body_sha256": "264548394c008a52fbd0de22f8656c5179bd71ed09fc57b0f8faeed2a6a94abf",
+        "after_body_sha256": "264548394c008a52fbd0de22f8656c5179bd71ed09fc57b0f8faeed2a6a94abf",
+        "finding": "Canonical metadata changed from adapted to clean-room without a procedural rewrite. Later provenance metadata adopted the same label. Retained authoring commentary attributes this to source URL accessibility, not a documented process separation."
+      }
+    },
+    {
+      "skill": "problem-framing",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "472e3e88e9cb67b7cc53830a2be4dde37789aee96879df1dec2b67c059056602",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "production-incident-analysis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "fcf7e6b407c008bbca7e368a2046f966cceb24a6e6ef44e8667f49a5b95dc800",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "prototype-spike",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "7f88470de8562742219b8af87625062b89913f8fed573f7529c0fe5b60dd3d76",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "public-private-boundary-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "43b48a26223d2ea91ebaa8bef12669c47b949eb2b54f02742e4d0030d0ee30b8",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "publish-change-safely",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "daf8eaa4b250a7672f87d2e7407ba26de5914a317b7c3cf4eb932ec7954e850d",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "adapted"
+        },
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": true,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "owned_mit_origin_supported_clean_room_process_unqualified",
+      "relabel_review": {
+        "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+        "parent_revision": "9feca3ae8d9cfc214e8b6a169f758991c1426706",
+        "procedural_body_unchanged": true,
+        "before_body_sha256": "0f4bdd010fc224f3acf7f4c0324a22d4a628a0a840f3086f85fa18bff897471a",
+        "after_body_sha256": "0f4bdd010fc224f3acf7f4c0324a22d4a628a0a840f3086f85fa18bff897471a",
+        "finding": "Canonical metadata changed from adapted to clean-room without a procedural rewrite. Later provenance metadata adopted the same label. Retained authoring commentary attributes this to source URL accessibility, not a documented process separation."
+      }
+    },
+    {
+      "skill": "python-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "9fd5c8b976a175982e45ec9b57460466ebba1dbb74ae55573613c8fdc79705ca",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "react-rendering-performance-diagnosis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "85dd5b949f010f521629e500364f2071d4ad4ca8927053df2edba9310625a5d2",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "request-code-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "77dda44bbf2f015f2b126d2551a1268bf994b912dd44943ff919e2021f139081",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "requirements-synthesis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "1e5500220e190cda6699986483248a84533178659965e346d82798d43ed4b228",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "research-to-publication-lifecycle",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "a77054a7a39e29d7e247da9b5911dcc48163b6f7a9867804dad9481096450818",
+      "earliest_preserved_entrypoint_revision": "1f43f59baf5b82681e5aaa3504af87bc1cf77ad1",
+      "method_declarations": [
+        {
+          "revision": "1f43f59baf5b82681e5aaa3504af87bc1cf77ad1",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "respond-to-code-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "7f3b026fc1d5b977ecbe2b4cd52528a8d58251349e12ecb62448cd2c769c3dce",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "retrieval-grounding-quality-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "7e62001ef5062d0028b1b5f48ddb944b91db055cf1ccc29f9840216a3ddbf03c",
+      "earliest_preserved_entrypoint_revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+      "method_declarations": [
+        {
+          "revision": "e22c00f0104165ce874f873cdbf49f6c706abd45",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "salesforce-apex-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "38ada7c3e79e2dbc5a0653fdfab685e98fa830cacbc5b776b66cd4482224ed7e",
+      "earliest_preserved_entrypoint_revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+      "method_declarations": [
+        {
+          "revision": "1538db41bc2378cfba0fc85945b639db5119c424",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "skill-import-provenance",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "6879b9197c023522f4e0429696a43504595ea1d63df50b3841c969577f2d9870",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "clean-room"
+        },
+        {
+          "revision": "17b174884727aeee469b570b9c29fb2a14a9814a",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "skill-security-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "2266937d2d41dfafac6ad5daf97da11d082a0da86a725d81e36087136792466f",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "source-grounded-research",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "da8a1ae79464e78b5b7472a51ec32b93b2dc60176723c8a7d78428f54234c806",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "source-output-conformance-audit",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "c76bd4d73ce4d27ea15047ba024343c6e1594a6a121cd78b70e259618944c4cc",
+      "earliest_preserved_entrypoint_revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+      "method_declarations": [
+        {
+          "revision": "84c0395c2d7e5291ebe67a97c2fe75d6327fc44f",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "stakeholder-technical-communication",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "6d9b82abf47ff99997d4841388379a5b9597a62a3f7097db66b1c0a4f02f0c5f",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "swift-concurrency-diagnosis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "840fb76a74a411225fb46ea046144f30cc259720a8152129008af2d3344b35f0",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "swift-persistence-contract-review",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "590c5aadb3fc7c7e0f9a546dfd6ac5d6d97fe5235ff91c7263c99261c9682aeb",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "swift-swiftui-engineering-profile",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "da679d0c6a12b3449b1db826693049c0d8887cc0492193ddb3d7b94ffd95ecca",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        },
+        {
+          "revision": "ec03fb8fd14531519b096222add3dbd99105fd06",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "swiftui-feature-delivery",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "5f644758fb6dae6aaf61fed4d30f7db6c505dd1f84ae67ceea23d15127c9580b",
+      "earliest_preserved_entrypoint_revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+      "method_declarations": [
+        {
+          "revision": "46e6a617c6603d2aaf0bc59252dc1c122acec0aa",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "systematic-diagnosis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "bff3243eb73e62a4c155ccd975348707c27ab03c1d7e7e1f0684f5a6d90c7513",
+      "earliest_preserved_entrypoint_revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+      "method_declarations": [
+        {
+          "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "task-handoff",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "f210bfe62fceb22c49dfd50d3d0e19f01456cfef07f31f24c03a4190b4989c1d",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "terraform-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "282f59883a1905420a0ad75ba376b30507ab52e826fb989679c9cbab87e8c31c",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "test-driven-change",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "288c4e1857f9c4b1896142cebacec9b04a884c147c1cbfa0db7ede8e017ddb8d",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "test-quality-review",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "06ef366e81a6aff5c2e76a4c143df4d4cd388a66991d878d7841a8b2701428d5",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "test-strategy",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "3ab4e93e913c481c55ed676de751da5fd36ba231b9b1257db8489505fda7b092",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "typescript-javascript-engineering-profile",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "82b99ce2a68ec49a6f667adf925329a02d9d827171b03e5fd120bba2aa585cea",
+      "earliest_preserved_entrypoint_revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+      "method_declarations": [
+        {
+          "revision": "8bd7c5d3f8497ad0207be31689e5a0198bbf2b7a",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "value-attribution-evidence-maturity",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "8610e6a5554a278eb647b4e17ff531c06840d27204f1ef66d9ebcdcbcfb0ce44",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "workflow-retrospective",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "4fa8badee2e93cd023b59d225e6bc76386123b22c90f6b4d1ab38b9e804556ed",
+      "earliest_preserved_entrypoint_revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+      "method_declarations": [
+        {
+          "revision": "759b3bf9bfca9967144b02d18f0678e3b509e2b3",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    },
+    {
+      "skill": "workshop-planning-synthesis",
+      "current_declared_method": "original",
+      "current_entrypoint_sha256": "75645691e5e7d59c5bd46ec14b760bcc34fdf56fb6deea738146563272a69476",
+      "earliest_preserved_entrypoint_revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+      "method_declarations": [
+        {
+          "revision": "41a14c1346aac7dfb53cf90783cc04d143fef848",
+          "declared_method": "original"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "declared_original_not_independently_attested"
+    },
+    {
+      "skill": "worktree-isolation",
+      "current_declared_method": "clean-room",
+      "current_entrypoint_sha256": "de8230496802e34bdda246be56d4992d17915cff901513c6fab77034fb7d6e9c",
+      "earliest_preserved_entrypoint_revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+      "method_declarations": [
+        {
+          "revision": "17eecd6e04831ed7e13824fb6ca57164d2b633c7",
+          "declared_method": "clean-room"
+        }
+      ],
+      "historical_adaptation_declaration": false,
+      "process_attestation": "not_established_by_git_metadata",
+      "authorship_disposition": "maintainer_review_required"
+    }
+  ],
+  "summary": {
+    "skills": 87,
+    "declared_methods": {
+      "original": 43,
+      "clean-room": 44
+    },
+    "historical_adaptation_declarations": 4
+  },
+  "retained_record_findings": {
+    "foundation_plan": "Required independently written portable workflows from primary authorities and owned MIT work; it permitted owned-work adaptation. Intent alone does not prove execution.",
+    "relabel_commentary": "The retained August 21 authoring message records replacing inaccessible provenance URLs with public-primary clean-room declarations. Git confirms no concurrent procedural rewrite for the four skills.",
+    "later_migration": "A retained August 23 plan required original authoring and prohibited third-party implementation reuse. It adds process intent and aggregate exact-file checks, not an independent current-catalog originality qualification.",
+    "missing_evidence": [
+      "reproducible accepted originality-corpus inventory and threshold",
+      "independent review disposition of current authorship and historical labels",
+      "documented clean-room process for the 44 current declarations"
+    ]
+  },
+  "owned_license_evidence": {
+    "source_revision": "3f8b032c7b08995c0475439a364a27c7d156e7cf",
+    "license": "MIT",
+    "copyright_holder": "Jovani Pink",
+    "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "inspected": "Exact historical LICENSE and the four source entrypoint objects are retained locally. Private source repository names, paths, and capability mappings are omitted.",
+    "limitation": "Supports the recorded license basis of the owned source snapshot; it does not certify absence of third-party expression or current universal originality."
+  }
+}

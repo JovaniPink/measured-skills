@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review dependencies"
+  short_description: "Reviews dependencies and build inputs"
+  default_prompt: "Use $review-dependencies for this task: Reviews dependencies and build inputs when asked whether a package, lockfile update, CI action, or artifact can be trusted; checks provenance and integrity without installing it."
+policy:
+  allow_implicit_invocation: true

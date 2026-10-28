@@ -1,6 +1,0 @@
-interface:
-  display_name: "C# and .NET Engineering Profile"
-  short_description: "Reviews C# and .NET changes"
-  default_prompt: "Use $csharp-dotnet-engineering-profile for this task: Reviews C# and .NET changes when ASP.NET, Entity Framework, async code, packages, or target frameworks need focused checks; follows repository SDK and build contracts."
-policy:
-  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review code changes"
+  short_description: "Review PR diffs for bugs and regressions"
+  default_prompt: "Use $review-code-change to review the supplied PR diff or code snippet for bugs and regressions. Return scoped findings without editing; preserve conditional defects and unrun checks through follow-ups."
+policy:
+  allow_implicit_invocation: true

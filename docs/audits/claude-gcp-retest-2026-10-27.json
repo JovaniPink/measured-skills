@@ -1,0 +1,150 @@
+{
+  "status": "requests_completed_acceptance_failed",
+  "observed_on": "2026-10-27",
+  "preparation": "docs/audits/gcp-routing-retest-preparation-2026-10-26.json",
+  "execution_authorization": "User separately authorized these four cases with Haiku 5.5 and two follow-ups after fresh billing and isolation checks. Historical preparation remains unchanged.",
+  "source_revision": "1a23a574f43e1e9032985f97536bb0b1ce35262c",
+  "manifest_source_commit": "a55f0f750d64e005f6768dba2c5c971a1f5fbfd0",
+  "profile": "daily-engineering-experimental",
+  "wrapper": "measured-daily-pilot",
+  "stage_receipt_sha256": "a2e9a9b2e053fe6b8fd82e9c292c2401fd54b4d0736b9e356a1033a2c17673e6",
+  "staged_files_checked": 50,
+  "staged_files_changed": 0,
+  "configuration": {
+    "running_version": "2.1.311",
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "permissions": "manual",
+    "profile_skills": 12,
+    "native_builtins": 16,
+    "ambient_memory_and_mcp_categories": "not_present_in_context_readback",
+    "hooks": "disabled",
+    "auto_memory": "disabled",
+    "mcp": "strict_empty_configuration",
+    "settings_sources": [
+      "project",
+      "local"
+    ],
+    "session_closed": true
+  },
+  "billing_observations": {
+    "browser_before": "usage credits off; auto-reload off; included quota available; refreshed controls",
+    "native_auth": "claude.ai firstParty Pro; no login action",
+    "provider_environment_override_names": [],
+    "native_usage_credits_before": "off",
+    "native_usage_credits_after": "off",
+    "native_quota_before_and_after": "available",
+    "settings_changed": false,
+    "paid_fallback_requested": false,
+    "limits": "Observed controls and authentication support the included-plan route; native cost estimates are not invoice evidence. Sandboxed auth metadata lacked keyring access; native metadata independently confirmed the existing login."
+  },
+  "budget": {
+    "case_sessions": 4,
+    "followups": 2,
+    "task_requests": 6,
+    "retries": 0,
+    "allowance_consumed": true
+  },
+  "guard_events": [
+    "First follow-up submission was rejected as ad hoc before input delivery. Its exact frozen hash and unused count were verified; the same authorized submission was then allowed. Native invisible-character confirmation preceded one delivery; no extra request or model retry."
+  ],
+  "cases": [
+    {
+      "order": 1,
+      "source_case": "gcp-data-engineering-profile-1",
+      "selection_mode": "implicit",
+      "task_prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "execution": "completed",
+      "private_transcript_sha256": "371da46969be03cc3fc2a9c8595857bf4a08e3fdc9f2bfa274fe607bc9862408",
+      "native_dispatch": "not_applicable",
+      "tools": [
+        "Skill",
+        "Bash",
+        "Read",
+        "Bash"
+      ],
+      "loaded_body_sha256": "e3b995eec0e7e462bbcea2491afaf46b68a2dd922c53b42f6dfa0059c59ea977",
+      "selection": "pass_expected_entry_loaded",
+      "warehouse_sha256": "8f99ca393da7e15cc420038ff2e84756747b4c69ab342b07bbee5642642a59a7",
+      "required_reference": "pass_exact_bytes",
+      "output": "fail_unsupported_authorship_clock_and_event_age_facts"
+    },
+    {
+      "order": 2,
+      "source_case": "near-miss-1",
+      "selection_mode": "implicit",
+      "task_prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "execution": "completed",
+      "private_transcript_sha256": "747cabfc1aea0138c4243fbfd68cc928f49fc8402aa8c6cc3f7dc1e80c9c60c8",
+      "native_dispatch": "not_applicable",
+      "tools": [],
+      "selection": "pass_no_skill_or_tool_call",
+      "required_reference": "not_required",
+      "output": "pass_translation_only"
+    },
+    {
+      "order": 3,
+      "source_case": "gcp-data-engineering-profile-1",
+      "selection_mode": "native_command_control",
+      "task_prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "execution": "completed",
+      "private_transcript_sha256": "b941257ad72ef69f660360d1bf85cf0a954d453422a5a92f2c1c38c5c762e019",
+      "native_dispatch": "verified",
+      "tools": [
+        "Read",
+        "Bash"
+      ],
+      "loaded_body_sha256": "e3b995eec0e7e462bbcea2491afaf46b68a2dd922c53b42f6dfa0059c59ea977",
+      "selection": "pass_expected_entry_loaded",
+      "warehouse_sha256": "8f99ca393da7e15cc420038ff2e84756747b4c69ab342b07bbee5642642a59a7",
+      "required_reference": "pass_exact_bytes",
+      "output": "pass_inspected_core_contract_with_supplied_context_limits"
+    },
+    {
+      "order": 4,
+      "source_case": "code-change-review-1",
+      "selection_mode": "native_command_control",
+      "task_prompt_sha256": "dcd42840f3eb74f1be4ffc2b4954b9318d29eab2f8e2f753dd020a3060812cd6",
+      "execution": "completed",
+      "private_transcript_sha256": "dce3ee2990c30a02163f8ff197a003026d37c6f1e141c0bfc57a750e01d010b5",
+      "native_dispatch": "verified",
+      "tools": [],
+      "loaded_body_sha256": "a3fdf285643261ca8d810996f005fdcf8937bd0bdf25d01aa27edccad2bb0a54",
+      "selection": "pass_expected_entry_loaded",
+      "output": "fail_desired_assertion_conflated_with_predicted_behavior"
+    }
+  ],
+  "followups": [
+    {
+      "order": 1,
+      "after_case": 4,
+      "prompt_sha256": "96014e11b15f69ccaa51e306d1908a64e06b089cc6feb4f9ed6e9e507e75a373",
+      "execution": "completed",
+      "continuity": "pass_goal_scope_conditional_finding_and_unrun_checks_retained",
+      "output_limit": "Desired not-found/forbidden assertion is still described as a prediction under the vulnerable assumptions."
+    },
+    {
+      "order": 2,
+      "after_case": 4,
+      "prompt_sha256": "c601fc040c3e0d69b2cc09f47f3d33b7e50ad33bf0ba9a8831336451004aac08",
+      "execution": "completed",
+      "continuity": "pass_goal_scope_conditional_finding_and_unrun_checks_retained",
+      "output_limit": "Desired not-found/forbidden assertion is still described as a prediction under the vulnerable assumptions."
+    }
+  ],
+  "acceptance": {
+    "result": "failed",
+    "blocking_requirements": [
+      "GCP supplied-fact fidelity",
+      "Code-review distinction between desired assertions and predicted behavior, including continuity"
+    ],
+    "grading": "Codex-assisted inspection against the frozen requirements; not independent human approval or an automated judge."
+  },
+  "scope_limits": [
+    "The native GCP pass cannot erase the implicit GCP failure.",
+    "Four known synthetic cases do not establish selection reliability, causal improvement, whole-profile acceptance or cross-client parity.",
+    "No app, account-library or second-machine qualification.",
+    "Source freshness was not rechecked online in this retest.",
+    "Canonical sources, projections, archives, catalog evidence, frozen fixtures, approved originality packet and manifest remain unchanged."
+  ]
+}

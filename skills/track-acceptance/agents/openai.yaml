@@ -1,0 +1,6 @@
+interface:
+  display_name: "Track acceptance evidence"
+  short_description: "Creates a completion ledger"
+  default_prompt: "Use $track-acceptance for this task: Creates a completion ledger when explicitly asked to track acceptance criteria and current evidence; preserves blocked and abandoned requirements."
+policy:
+  allow_implicit_invocation: false

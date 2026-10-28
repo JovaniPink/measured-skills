@@ -61,7 +61,7 @@ def main() -> int:
     if errors:
         print("\n".join(f"ERROR: {error}" for error in errors))
         return 1
-    print("Canonical, generated, and packaged skill content passed the originality scan.")
+    print("Attribution-pattern scan passed for canonical, generated, and packaged skill content; this does not establish originality qualification.")
     return 0
 
 

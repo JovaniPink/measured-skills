@@ -34,12 +34,16 @@ Maturity is an evidence claim, not a writing-quality score.
 | --- | --- |
 | `incubating` | The workflow is not ready for ordinary discovery or use. |
 | `candidate` | Structure, routing, provenance, and automated checks exist, but repeatable field acceptance is incomplete. |
-| `field-tested` | Named client and task observations exist for the current package and version. |
-| `accepted` | Required automated and manual acceptance has passed repeatably for the claimed surfaces. |
+| `field-tested` | A retained task record shows the exact current package loaded in a named client and produced a useful result within scope, with failures and limits recorded. This does not establish repeatability or benefit over a baseline. |
+| `accepted` | Required automated and manual acceptance has passed repeatably for the claimed client surfaces and tasks under a documented acceptance protocol. Acceptance does not establish comparative benefit. |
 | `deprecated` | The skill remains available during a documented migration period. |
 | `revoked` | Packaging and marketplace advertisement are disabled because the skill is unsafe or invalid. |
 
-Every skill in the current catalog stays at `candidate`. A skill moves up only after two things happen. Someone observes the exact package running in a named client, and a controlled comparison measures it against a baseline. A generated package or a passing schema does not make a skill field-tested.
+Every skill in the current catalog stays at `candidate`. This clarification does not promote any skill or waive a release gate. A generated package, successful selection, or passing schema is not a task observation.
+
+Promotion requires a reviewed evidence record naming the package revision, client and model version, task, successful source/reference loading, result, failures, and coverage limits. `field-tested` records observed use; `accepted` additionally requires repeated passes against the stated acceptance conditions. An observation on one client or older version does not qualify another. Reassess affected claims after material changes; retain historical results as historical.
+
+Comparative benefit is a separate claim, not another maturity state or a prerequisite for recording observed use. It requires a suitable baseline, comparable tasks and conditions, outcome measures, and explicit limits on attribution. Neither a useful task result nor repeatable acceptance alone establishes improved productivity or financial return. Existing release requirements for any claimed benefit remain controlling.
 
 ## Risk classes
 
@@ -57,7 +61,7 @@ Risk metadata never grants a tool or permission. Host policy and separate user a
 
 - [`catalog/packs.json`](../catalog/packs.json) defines plugin packs and small recipes.
 - [`evals/cases.json`](../evals/cases.json) contains routing, safety, output-quality, and baseline records.
-- [`provenance/catalog.json`](../provenance/catalog.json) records public sources and clean-room boundaries.
+- [`provenance/catalog.json`](../provenance/catalog.json) records public authorities, declared methods, owned origins, and review limits.
 - [`catalog/compatibility.json`](../catalog/compatibility.json) points to observed client evidence.
 
 ## Primary resources

@@ -50,41 +50,40 @@ def _require_tracked_source_artifact(relative: str) -> None:
     _git_text(["cat-file", "-e", f"HEAD:{relative}"])
 
 
+def artifact_inventory() -> dict[str, str]:
+    """Return the complete current release inventory, shared with validation."""
+    artifacts: dict[str, str] = {}
+    for client in ("codex", "claude", "antigravity"):
+        groups = antigravity_groups() if client == "antigravity" else skills_by_plugin()
+        for plugin in groups:
+            artifacts[f"plugins/{client}/{plugin}"] = "tree"
+    for relative in (
+        ".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json",
+        ".gemini/plugins/marketplace.json", "catalog/skills.json", "catalog/packs.json",
+        "catalog/plugin-migrations.json", "catalog/profiles.json", "catalog/google-surfaces.json",
+        "catalog/evidence.json", "catalog/compatibility.json", "catalog/deprecations.json",
+        "catalog/revocations.json", "catalog/upstream-reviews.json", "catalog/upstream-pins.json",
+        "evals/cases.json", "evals/daily-engineering/cases.json",
+        "evals/daily-engineering/cli-smoke-2026-10-20.json", "provenance/catalog.json",
+    ):
+        artifacts[relative] = "file"
+    for skill in SKILLS:
+        artifacts[f"dist/claude-ai/{skill}-{VERSION}.zip"] = "zip"
+    artifacts['catalog/migrations/0.18-to-0.19.json'] = 'file'
+    artifacts['catalog/workflows.json'] = 'file'
+    artifacts['dist/discovery'] = 'tree'
+    return dict(sorted(artifacts.items()))
+
+
 def build(source_commit: str, output: Path | None = None, created_on: date | None = None) -> Path:
     if re.fullmatch(r"[0-9a-f]{40}", source_commit) is None:
         raise ValueError("source commit must be a full 40-character lowercase Git SHA")
     _require_clean_source_checkout(source_commit)
     artifacts: list[dict[str, str]] = []
-    for client in ("codex", "claude", "antigravity"):
-        groups = antigravity_groups() if client == "antigravity" else skills_by_plugin()
-        for plugin in groups:
-            path = ROOT / "plugins" / client / plugin
-            artifacts.append({"kind": "tree", "path": path.relative_to(ROOT).as_posix(), "sha256": _tree_hash(path)})
-    for path in (
-        ROOT / ".agents" / "plugins" / "marketplace.json",
-        ROOT / ".claude-plugin" / "marketplace.json",
-        ROOT / ".gemini" / "plugins" / "marketplace.json",
-        ROOT / "catalog" / "skills.json",
-        ROOT / "catalog" / "packs.json",
-        ROOT / "catalog" / "plugin-migrations.json",
-        ROOT / "catalog" / "profiles.json",
-        ROOT / "catalog" / "google-surfaces.json",
-        ROOT / "catalog" / "evidence.json",
-        ROOT / "catalog" / "compatibility.json",
-        ROOT / "catalog" / "deprecations.json",
-        ROOT / "catalog" / "revocations.json",
-        ROOT / "catalog" / "upstream-reviews.json",
-        ROOT / "catalog" / "upstream-pins.json",
-        ROOT / "evals" / "cases.json",
-        ROOT / "evals" / "daily-engineering" / "cases.json",
-        ROOT / "provenance" / "catalog.json",
-    ):
-        artifacts.append({"kind": "file", "path": path.relative_to(ROOT).as_posix(), "sha256": _file_hash(path)})
-    for skill in SKILLS:
-        archive = ROOT / "dist" / "claude-ai" / f"{skill}-{VERSION}.zip"
-        if not archive.is_file():
-            raise FileNotFoundError(f"missing packaged skill: {archive}")
-        artifacts.append({"kind": "zip", "path": archive.relative_to(ROOT).as_posix(), "sha256": _file_hash(archive)})
+    for relative, kind in artifact_inventory().items():
+        path = ROOT / relative
+        digest = _tree_hash(path) if kind == "tree" else _file_hash(path)
+        artifacts.append({"kind": kind, "path": relative, "sha256": digest})
     for artifact in artifacts:
         _require_tracked_source_artifact(artifact["path"])
     value = {

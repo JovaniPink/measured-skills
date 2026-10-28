@@ -10,7 +10,8 @@ import shutil
 from pathlib import Path
 
 from build_distributions import _copy_claude_skill
-from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, directory_hashes
+from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, directory_hashes, license_notice
+from discovery import obsolete_message
 
 
 def check_destination(output: Path) -> None:
@@ -48,7 +49,7 @@ def export(output: Path, client: str, selected: list[str]) -> None:
     if not selected or len(selected) != len(set(selected)):
         raise ValueError("select at least one skill without duplicates")
     if set(selected) - set(SKILLS):
-        raise ValueError("unknown or revoked skill")
+        raise ValueError(obsolete_message(selected) or "unknown or revoked skill")
     if set(selected) & EXPLICIT_SKILLS:
         raise ValueError("explicit-only skills require separately verified plugin activation")
     check_destination(output)
@@ -78,6 +79,7 @@ def export(output: Path, client: str, selected: list[str]) -> None:
             target = output / skill
             if client == "codex":
                 shutil.copytree(source, target)
+                (target / "LICENSE").write_bytes(license_notice(ROOT))
             else:
                 _copy_claude_skill(source, target, explicit=False)
         manifest = {
@@ -101,9 +103,13 @@ def main() -> int:
     selection = parser.add_mutually_exclusive_group(required=True)
     selection.add_argument("--skill", action="append")
     selection.add_argument("--profile")
+    parser.add_argument("--stack", action="append", default=[], help="Optional current stack-* skill; may repeat")
     args = parser.parse_args()
     try:
         selected = profile_skills(args.profile, args.client) if args.profile else args.skill
+        if any(not name.startswith('stack-') or name not in SKILLS for name in args.stack):
+            raise ValueError('unknown stack addition; use a current stack-* identifier')
+        selected = selected + args.stack
         export(args.output, args.client, selected)
     except ValueError as error:
         parser.error(str(error))

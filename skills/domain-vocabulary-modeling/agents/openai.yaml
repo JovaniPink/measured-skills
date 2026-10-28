@@ -1,6 +1,0 @@
-interface:
-  display_name: "Domain Vocabulary Modeling"
-  short_description: "Clarifies domain terms"
-  default_prompt: "Use $domain-vocabulary-modeling for this task: Clarifies domain terms when teams use the same word differently or code and documents disagree; proposes definitions and examples without declaring owner approval."
-policy:
-  allow_implicit_invocation: true

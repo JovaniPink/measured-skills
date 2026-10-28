@@ -1,6 +1,0 @@
-interface:
-  display_name: "Prelaunch Readiness"
-  short_description: "Reviews launch readiness"
-  default_prompt: "Use $measured-skills:prelaunch-readiness for this task: Reviews launch readiness when asked for a go/no-go assessment or public-launch checklist; separates source checks, provider configuration, and live user journeys."
-policy:
-  allow_implicit_invocation: true

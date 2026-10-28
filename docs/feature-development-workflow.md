@@ -1,0 +1,636 @@
+# Build a feature with Measured Skills
+
+**0.19 preview:** [Find your next workflow](start.md). Start with finishing existing work; commands and package identities differ from 0.18. No new client acceptance is implied.
+
+
+After the first push, use [finish and maintain a draft PR](finish-existing-work.md#finish-and-maintain-a-draft-pr)
+for bounded review, CI follow-up, evidence-based repairs, and an honest handoff.
+It preserves the draft state and requires explicit authority for technical replies.
+
+For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+
+Take one feature from an idea to a reviewed change and a draft pull request.
+Start with the next useful step; you do not need to run the entire catalog.
+
+**Frame -> Plan -> Implement -> Validate -> Review -> Verify completion -> Open a draft PR**
+
+Tests belong inside implementation, too. The validation stage is the broader
+checkpoint before review. If review finds a defect, repair it, repeat the
+checks affected by the repair, and review the changed code again.
+
+Use the [Codex prompts](#codex-prompts), [Claude Code prompts](#claude-code-prompts),
+or [Antigravity prompts](#antigravity-prompts). Each section has a step-by-step
+path and a three-request fast path. These are authored prompts, not a claim that
+a client has passed this workflow. The catalog is a 0.19.0 preview; see
+[current release readiness](release-readiness-2026-10-20.md).
+
+## Before you start
+
+1. Open the intended repository and identify the feature, its users, and the
+   outcome they need. Read its instructions before choosing files or commands.
+2. Check the branch, current commit, and uncommitted changes. Preserve work that
+   belongs to someone else or another task. Use the project's isolation policy.
+3. Choose a finish line: a plan, tested local changes, or a draft pull request.
+   A pull request (PR) proposes a change; it does not mean someone approved it.
+4. Check the available skills and their source. The twelve-skill daily profile
+   covers much of this guide, but it does not contain the full lifecycle.
+5. Replace the placeholders in the prompt you will paste. Paste prompts into
+   the assistant's chat input, not a shell. Use one stage at a time.
+
+| Placeholder | What to provide |
+| --- | --- |
+| `[REPOSITORY]` | The exact checkout or repository you authorize the assistant to work in |
+| `[FEATURE]` | The user need, desired behavior, and important constraints |
+| `[PLAN_FILE]` | An existing plan, or a new file chosen using the project's document conventions |
+| `[BRANCH]` | The intended feature branch; use the repository's branch policy |
+| `[BASE_REVISION]` | The branch or commit to compare against; have the assistant resolve and record its exact commit |
+| `[DESTINATION]` | The authorized remote repository and PR base branch |
+| `[PR_TARGET]` | One exact existing draft PR URL, or `new draft PR` |
+
+Do not invent a plan directory for every project. Reuse an issue or specification
+when it already holds the contract. If a saved plan no longer matches the code,
+reconcile the difference before implementing it. For a small, clear change,
+combine framing and planning using the fast path.
+
+If planning mode returns an unsaved plan in chat, approve that exact plan and
+supply it with the implementation request. The assistant may save it in
+`[PLAN_FILE]` before editing code. If neither the file nor the approved text is
+available, recover the plan first; do not reconstruct it from a vague summary.
+
+An existing PR needs an exact target. A repository's open-PR page is a queue,
+not permission to change every PR. Check the target's repository, branch, base,
+and current head. Keep unrelated PRs intact. Choose a feature-workflow skill for
+implementation; an artifact-template skill formats a deliverable and does not
+replace implementation planning, execution, or review.
+
+### A running example
+
+The following task is fictional; it is not a tested feature or client result.
+
+> People need to see only unfinished tasks. Add an All / Open / Done filter to
+> the task list. Keep All as the default. Changing the filter must not change a
+> task's status. Leave sorting and saved preferences unchanged.
+
+Acceptance criteria are observable conditions that show the feature works.
+For this example: All shows every task; Open and Done show only matching tasks;
+no matches show a useful empty state; filtering never edits a task. If the
+interface is graphical, check keyboard use, labels, and focus behavior as well
+as automated tests. Confirm the existing status model before selecting code.
+
+A regression is previously working behavior that breaks after a change. Test
+that existing sorting and task editing still work. CI means continuous
+integration: automated checks run by the repository host on pushed changes.
+Local checks and CI provide evidence for their exact revision; neither proves
+that the feature is deployed or works in production.
+
+## What each stage delivers
+
+| Stage and primary skill | Start with | Finish with |
+| --- | --- | --- |
+| 1. Frame: `frame-problem` | A need and current evidence | A clear problem, users, constraints, non-goals, and success criteria; skip if already settled |
+| 2. Plan: `plan-change` | The agreed outcome and repository | A plan grounded in actual code, complete implementation slices, tests, and recovery steps |
+| 3. Implement: `execute-plan` where available | A named plan and authorization to edit | Complete slices, focused checks, updated progress, and explicit unfinished work |
+| 4. Validate: `run-project-checks` | The changed components | Required check results, including failures and unavailable checks |
+| 5. Review: `review-code-change` | The exact diff and intended behavior | Findings with evidence, impact, and unresolved conditions; no edits in this stage |
+| 6. Verify completion: `verify-claims` | Acceptance criteria and current receipts | What is complete, what is unverified, and which required work remains |
+| 7. Open a draft PR: `publish-change` where available | Reviewed changes and explicit publication authority | Verified commit, remote branch, draft PR, and CI status for the pushed commit |
+
+A slice is a small, self-contained behavior change, including its tests and
+relevant documentation. Prefer slices that can be understood and reviewed on
+their own. Do not separate a change from the tests needed to assess it.
+
+Verification of completion uses evidence; it is not a second name for running
+tests. Keep an unrun test distinct from a missing test and from a failing test.
+Keep a conditional finding conditional in the title and conclusion, too.
+
+### Bring in a specialist when the change needs one
+
+| Situation | Supporting skill |
+| --- | --- |
+| Existing callers, workflows, or data may change | `assess-change-impact` |
+| A module boundary or public interface needs design | `design-module-interface` |
+| Coverage spans several layers or important failure modes | `plan-tests` |
+| You explicitly want a failing-test-first approach | `implement-test-first` |
+| Permissions, sensitive data, or attack paths change | `review-app-security` |
+| Existing API consumers could break | `review-api-compatibility` |
+| A failure needs a cause before a fix | `diagnose-failure` |
+| Language or platform details matter | The matching engineering profile, such as Python, TypeScript, Swift, or GCP |
+
+Test-driven development is a choice: first show a meaningful failing test, then
+implement the behavior and keep it passing while improving the code. Do not
+force this approach onto a prose edit or pretend an unavailable test ran.
+Choose checks based on the change's risks and the repository's requirements.
+Use authorized local checks first. A repository command that accesses providers,
+changes shared data, or incurs cost needs authority for that action. Mark a
+blocked check incomplete instead of bypassing permissions. In the checks-only
+stage, use a nonwriting check mode where available; if a required command can
+rewrite tracked files, report the need for a separate authorized repair step.
+
+A review pass by the author is self-review. A separate reviewer can provide
+independent review, but requesting one, sending messages, and sharing context
+need their own authority. The prompts below do not authorize coordination.
+
+## Select skills without guessing
+
+For the seven-stage path, the relevant packs are `measured-workflows`
+(framing and planning), `measured-workflows` (plan execution),
+`measured-quality` (code review), and `measured-quality` (checks and claim verification). Safe publication is in `measured-workflows`. Optional specialists live in these
+packs or `measured-workflows` and `measured-stacks`.
+
+The daily profile includes five of the seven primary skills. It excludes
+`execute-plan` and `publish-change`. A pack is an installation unit;
+a profile is a selected set. Merely having the profile does not make the missing
+skills available. See [Choose Your Skills](choose-your-skills.md) and the
+[client guides](client-support.md); this guide does not install anything.
+
+Before relying on a named skill, check the client's actual selector and loading
+trace. Distinguish three things: the skill was selected, its instructions loaded,
+and the answer met the task's requirements. An answer that sounds right proves
+none of the preceding loading steps. If a skill is missing or a duplicate name
+has an unclear source, report that fact. Do not install another copy or claim a
+successful invocation. The user can select the correct entry or explicitly
+choose ordinary assistance without that skill.
+
+These examples target the named installed packs. A staged pilot wrapper or a
+project-local skill may have a different name in the selector. Use the actual
+entry from the intended reviewed source. Do not change installations to match
+an example.
+
+## Codex prompts
+
+Type `$` or open the skill picker and select the matching installed entry. The
+namespaced examples below follow this repository's packs. Explicit selection
+and automatic matching are different; duplicate names can expose more than one
+entry. Confirm the source rather than assuming Codex combined them. See
+[OpenAI's skill documentation](https://learn.chatgpt.com/docs/build-skills) and
+[our Codex setup guide](clients/codex.md).
+
+If Codex is in Plan mode, the implementation prompt does not switch modes by
+itself. Move to an execution-capable mode when you decide to authorize editing.
+
+### 1. Frame the feature
+
+```text
+$measured-workflows:frame-problem In [REPOSITORY], frame this feature: [FEATURE].
+Inspect repository instructions and relevant code first. Separate facts from assumptions.
+Identify users, constraints, success criteria, non-goals, and the next useful step. Preserve
+unrelated work. Return a concise proposal with evidence; do not edit or publish.
+```
+
+### 2. Plan the change
+
+```text
+$measured-workflows:plan-change In [REPOSITORY], plan [FEATURE]. Inspect the
+current branch, relevant changes, code, tests, and project document conventions. Save the plan
+in [PLAN_FILE]; only that document may change. Name observable acceptance criteria, affected
+interfaces, self-contained slices, checks, rollout and rollback needs, and material unknowns.
+Use relevant specialists if available. Preserve unrelated work. Do not implement or publish. If
+the current mode prevents saving, return the plan in chat and state that it is unsaved.
+```
+
+### 3. Implement the approved plan
+
+```text
+$measured-workflows:execute-plan Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH].
+If the file is missing, save the exact approved plan supplied in chat there first; if neither
+is available, stop and ask for the plan. Check it against current code and instructions. Complete
+each authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
+Preserve unrelated changes. Resolve routine details within scope; ask before material scope,
+permission, or cost changes. Report failures and unavailable checks. Stop with local changes
+ready for review; do not commit, push, deploy, or release.
+```
+
+### 4. Run the required checks
+
+```text
+$measured-quality:run-project-checks Check the feature changes in [REPOSITORY] against
+[BASE_REVISION]. Inspect repository instructions and CI to find the required commands; do not
+invent substitutes. Run the relevant checks without rewriting tracked files. Preserve unrelated
+work and ordinary permissions. Report PASS, FAIL, or INCOMPLETE with commands, results,
+revision, and unavailable checks. Do not repair failures or publish in this step.
+```
+
+### 5. Review the exact change
+
+```text
+$measured-quality:review-code-change Review the feature change in [REPOSITORY]
+against [BASE_REVISION], including relevant uncommitted changes, using [PLAN_FILE] as intent.
+Record the exact comparison and inspect repository instructions. Check behavior, design,
+regressions, security, compatibility, tests, and documentation as relevant. Return concise
+findings with location, severity, evidence, and conditions that remain unknown. State the review
+limits. Make no edits and do not approve, merge, or publish.
+```
+
+### 6. Verify completion
+
+```text
+$measured-quality:verify-claims In [REPOSITORY], compare [PLAN_FILE] acceptance criteria
+with current code, review findings, and check receipts. Inspect current revision and changes
+before reusing evidence. State which criteria are met, incomplete, or unverified and the next
+required check. Keep test existence, execution, and result separate. Do not treat local success
+as deployment or live acceptance. Return a concise evidence summary; do not edit, run new
+checks, or publish.
+```
+
+### 7. Open a draft pull request
+
+```text
+$measured-workflows:publish-change In [REPOSITORY], commit and push only the reviewed
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
+```
+
+### Three-request fast path
+
+Use this when the feature is already bounded. Each block is a separate request.
+The implementation request authorizes local repairs of confirmed review findings;
+publication remains the third request. It does not grant new scope or permissions.
+
+**1. Define and plan**
+
+```text
+$measured-workflows:plan-change In [REPOSITORY], inspect instructions,
+relevant code, and current changes, then plan [FEATURE]. Use frame-problem if the need is
+unclear and relevant impact, test, or stack skills if available. Save a concise plan in
+[PLAN_FILE] using project conventions, with acceptance criteria, non-goals, interfaces, complete
+slices, checks, and rollback needs. Separate evidence from assumptions and preserve unrelated
+work. Only the plan may change; do not implement or publish. If the current mode prevents
+saving, return the plan in chat and state that it is unsaved.
+```
+
+**2. Implement, check, and review**
+
+```text
+$measured-workflows:execute-plan Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH]
+after checking it against current code and instructions. If the file is missing, first save the
+exact approved chat plan there; if neither is available, stop and ask for the plan. Complete each
+slice with focused tests and documentation; preserve unrelated work. Use run-project-checks,
+then review-code-change against [BASE_REVISION], where available. Keep review findings-only.
+Repair confirmed findings within scope, rerun affected checks, and review the revised diff.
+Only then use verify-claims against the final code, criteria, findings, and current receipts.
+Record actual skill loading, self-review limits, missing checks, deviations, and unfinished work.
+Ask before material scope, permission, or cost changes. Stop before commit, push, deploy, or release.
+```
+
+**3. Publish the reviewed change**
+
+```text
+$measured-workflows:publish-change In [REPOSITORY], commit and push only the reviewed
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
+```
+
+## Claude Code prompts
+
+Paste one leading `/pack:skill` command at a time into Claude Code. Check the
+installed command and its source first. These examples use plugin names, not
+account-upload aliases. Supporting skill names in the text are requests, not
+proof they loaded. The fast path deliberately uses one leading command rather
+than depending on command stacking: terminal and headless handling differ.
+See [Claude's skill documentation](https://code.claude.com/docs/en/skills) and
+[our Claude guide](clients/claude.md).
+
+Switch out of a read-only planning mode when you authorize implementation.
+A prompt cannot override the client's permission mode or managed policy.
+
+### 1. Frame the feature
+
+```text
+/measured-workflows:frame-problem In [REPOSITORY], frame this feature: [FEATURE].
+Inspect repository instructions and relevant code first. Separate facts from assumptions.
+Identify users, constraints, success criteria, non-goals, and the next useful step. Preserve
+unrelated work. Return a concise proposal with evidence; do not edit or publish.
+```
+
+### 2. Plan the change
+
+```text
+/measured-workflows:plan-change In [REPOSITORY], plan [FEATURE]. Inspect the
+current branch, relevant changes, code, tests, and project document conventions. Save the plan
+in [PLAN_FILE]; only that document may change. Name observable acceptance criteria, affected
+interfaces, self-contained slices, checks, rollout and rollback needs, and material unknowns.
+Use relevant specialists if available. Preserve unrelated work. Do not implement or publish. If
+the current mode prevents saving, return the plan in chat and state that it is unsaved.
+```
+
+### 3. Implement the approved plan
+
+```text
+/measured-workflows:execute-plan Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH].
+If the file is missing, save the exact approved plan supplied in chat there first; if neither
+is available, stop and ask for the plan. Check it against current code and instructions. Complete
+each authorized slice, run its focused checks, and update the plan with evidence and unfinished work.
+Preserve unrelated changes. Resolve routine details within scope; ask before material scope,
+permission, or cost changes. Report failures and unavailable checks. Stop with local changes
+ready for review; do not commit, push, deploy, or release.
+```
+
+### 4. Run the required checks
+
+```text
+/measured-quality:run-project-checks Check the feature changes in [REPOSITORY] against
+[BASE_REVISION]. Inspect repository instructions and CI to find the required commands; do not
+invent substitutes. Run the relevant checks without rewriting tracked files. Preserve unrelated
+work and ordinary permissions. Report PASS, FAIL, or INCOMPLETE with commands, results,
+revision, and unavailable checks. Do not repair failures or publish in this step.
+```
+
+### 5. Review the exact change
+
+```text
+/measured-quality:review-code-change Review the feature change in [REPOSITORY]
+against [BASE_REVISION], including relevant uncommitted changes, using [PLAN_FILE] as intent.
+Record the exact comparison and inspect repository instructions. Check behavior, design,
+regressions, security, compatibility, tests, and documentation as relevant. Return concise
+findings with location, severity, evidence, and conditions that remain unknown. State the review
+limits. Make no edits and do not approve, merge, or publish.
+```
+
+### 6. Verify completion
+
+```text
+/measured-quality:verify-claims In [REPOSITORY], compare [PLAN_FILE] acceptance criteria
+with current code, review findings, and check receipts. Inspect current revision and changes
+before reusing evidence. State which criteria are met, incomplete, or unverified and the next
+required check. Keep test existence, execution, and result separate. Do not treat local success
+as deployment or live acceptance. Return a concise evidence summary; do not edit, run new
+checks, or publish.
+```
+
+### 7. Open a draft pull request
+
+```text
+/measured-workflows:publish-change In [REPOSITORY], commit and push only the reviewed
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
+```
+
+### Three-request fast path
+
+Use this when the feature is already bounded. Each block is a separate request.
+The implementation request authorizes local repairs of confirmed review findings;
+publication remains the third request. It does not grant new scope or permissions.
+
+**1. Define and plan**
+
+```text
+/measured-workflows:plan-change In [REPOSITORY], inspect instructions,
+relevant code, and current changes, then plan [FEATURE]. Use frame-problem if the need is
+unclear and relevant impact, test, or stack skills if available. Save a concise plan in
+[PLAN_FILE] using project conventions, with acceptance criteria, non-goals, interfaces, complete
+slices, checks, and rollback needs. Separate evidence from assumptions and preserve unrelated
+work. Only the plan may change; do not implement or publish. If the current mode prevents
+saving, return the plan in chat and state that it is unsaved.
+```
+
+**2. Implement, check, and review**
+
+```text
+/measured-workflows:execute-plan Implement [PLAN_FILE] in [REPOSITORY] on [BRANCH]
+after checking it against current code and instructions. If the file is missing, first save the
+exact approved chat plan there; if neither is available, stop and ask for the plan. Complete each
+slice with focused tests and documentation; preserve unrelated work. Use run-project-checks,
+then review-code-change against [BASE_REVISION], where available. Keep review findings-only.
+Repair confirmed findings within scope, rerun affected checks, and review the revised diff.
+Only then use verify-claims against the final code, criteria, findings, and current receipts.
+Record actual skill loading, self-review limits, missing checks, deviations, and unfinished work.
+Ask before material scope, permission, or cost changes. Stop before commit, push, deploy, or release.
+```
+
+**3. Publish the reviewed change**
+
+```text
+/measured-workflows:publish-change In [REPOSITORY], commit and push only the reviewed
+feature changes on [BRANCH] to [DESTINATION], creating or updating only [PR_TARGET]. Inspect
+instructions, identity, exact diff, checks, and remote state first. Confirm repository and base;
+for an existing PR, verify its head branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated
+work and PRs; no force-push. Stop before commit or push if required local evidence is missing
+or failing, unless I explicitly authorize a draft documenting those gaps. Describe behavior,
+checks, risks, and unverified work. Verify the remote commit and inspect CI for that exact head;
+report pending or failed checks accurately. Keep it draft. Do not send coordination messages,
+request reviews, merge, deploy, tag, or release.
+```
+
+## Antigravity prompts
+
+These prompts use ordinary language and name only eligible skills. If you want
+a native command, select the entry your installed client actually shows.
+[Google documents skill slash commands](https://www.antigravity.google/docs/skills?tab=ide),
+but that does not establish a single plugin namespace spelling across versions
+or prove these packs work on your installation. See [our Antigravity guide](clients/antigravity.md).
+
+All 17 explicit-only workflows remain excluded from this distribution, including
+`execute-plan` and `publish-change`. Steps 3 and 7 below are ordinary
+user requests, not invocations or copies of those held skills. Do not install or
+manually load an excluded skill to follow this guide. Use the client's normal
+permissions and switch out of read-only planning when editing is authorized.
+
+### 1. Frame the feature
+
+```text
+Use the installed frame-problem skill for this task; report if it is unavailable. In
+[REPOSITORY], frame this feature: [FEATURE]. Inspect repository instructions and relevant code
+first. Separate facts from assumptions. Identify users, constraints, success criteria,
+non-goals, and the next useful step. Preserve unrelated work. Return a concise proposal with
+evidence; do not edit or publish.
+```
+
+### 2. Plan the change
+
+```text
+Use the installed plan-change skill for this task; report if it is unavailable. In
+[REPOSITORY], plan [FEATURE]. Inspect the current branch, relevant changes, code, tests, and
+project document conventions. Save the plan in [PLAN_FILE]; only that document may change. Name
+observable acceptance criteria, affected interfaces, self-contained slices, checks, rollout and
+rollback needs, and material unknowns. Use relevant specialists if available. Preserve unrelated
+work. Do not implement or publish. If the current mode prevents saving, return the plan in chat
+and state that it is unsaved.
+```
+
+### 3. Implement the approved plan
+
+```text
+In [REPOSITORY] on [BRANCH], implement the feature described in [PLAN_FILE]. I authorize local
+source, test, and documentation edits for that feature. Inspect project instructions and confirm
+the plan still matches the code. If missing, first save the exact approved chat plan there; if
+neither is available, stop and ask for the plan. Preserve unrelated work. Test the behavior and report
+results, limitations, and unfinished criteria. Ask before expanding scope or permissions. Finish
+with local changes ready for review; do not commit, push, deploy, or release.
+```
+
+### 4. Run the required checks
+
+```text
+Use the installed run-project-checks skill for this task; report if it is unavailable.
+Check the feature changes in [REPOSITORY] against [BASE_REVISION]. Inspect repository
+instructions and CI to find the required commands; do not invent substitutes. Run the relevant
+checks without rewriting tracked files. Preserve unrelated work and ordinary permissions. Report
+PASS, FAIL, or INCOMPLETE with commands, results, revision, and unavailable checks. Do not
+repair failures or publish in this step.
+```
+
+### 5. Review the exact change
+
+```text
+Use the installed review-code-change skill for this task; report if it is unavailable. Review
+the feature change in [REPOSITORY] against [BASE_REVISION], including relevant uncommitted
+changes, using [PLAN_FILE] as intent. Record the exact comparison and inspect repository
+instructions. Check behavior, design, regressions, security, compatibility, tests, and
+documentation as relevant. Return concise findings with location, severity, evidence, and
+conditions that remain unknown. State the review limits. Make no edits and do not approve,
+merge, or publish.
+```
+
+### 6. Verify completion
+
+```text
+Use the installed verify-claims skill for this task; report if it is unavailable. In
+[REPOSITORY], compare [PLAN_FILE] acceptance criteria with current code, review findings, and
+check receipts. Inspect current revision and changes before reusing evidence. State which
+criteria are met, incomplete, or unverified and the next required check. Keep test existence,
+execution, and result separate. Do not treat local success as deployment or live acceptance.
+Return a concise evidence summary; do not edit, run new checks, or publish.
+```
+
+### 7. Open a draft pull request
+
+```text
+In [REPOSITORY], I authorize committing and pushing the reviewed feature on [BRANCH] to
+[DESTINATION], creating or updating only [PR_TARGET]. Inspect instructions, identity, diff,
+checks, and remote state. Confirm repository and base; for an existing PR, verify its head
+branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated work and PRs. Stop before commit
+or push if required local evidence is missing or failing, unless I explicitly authorize a draft
+documenting those gaps. Use a normal push. Describe behavior, checks, risks, and limits. Verify
+the remote commit and CI for that exact head; report pending or failed results accurately.
+Keep it draft. Do not send coordination messages, request reviews, merge, deploy, tag, or release.
+```
+
+### Three-request fast path
+
+Use this when the feature is already bounded. Each block is a separate request.
+The implementation request authorizes local repairs of confirmed review findings;
+publication remains the third request. It does not grant new scope or permissions.
+
+**1. Define and plan**
+
+```text
+Use the installed plan-change skill; report if unavailable. In [REPOSITORY], inspect
+instructions, relevant code, and current changes, then plan [FEATURE]. Use frame-problem if
+the need is unclear and relevant impact, test, or stack skills if available. Save a concise plan
+in [PLAN_FILE] using project conventions, with acceptance criteria, non-goals, interfaces,
+complete slices, checks, and rollback needs. Separate evidence from assumptions and preserve
+unrelated work. Only the plan may change; do not implement or publish. If the current mode
+prevents saving, return the plan in chat and state that it is unsaved.
+```
+
+**2. Implement, check, and review**
+
+```text
+In [REPOSITORY] on [BRANCH], implement [PLAN_FILE]. I authorize local feature, test, and
+documentation changes. Inspect instructions and current code first. If the file is missing,
+first save the exact approved chat plan there; if neither is available, stop and ask for the plan.
+Preserve unrelated work and run focused tests during implementation. Use the available
+run-project-checks, then review-code-change against [BASE_REVISION]. Review without editing,
+fix confirmed findings within scope, and repeat affected checks and review. Only then use
+verify-claims against the final code, criteria, findings, and current receipts. Report actual
+loading, self-review limits, unavailable checks, and unfinished work. Ask before expanding scope,
+permissions, or cost. Stop before commit, push, deployment, or release.
+```
+
+**3. Publish the reviewed change**
+
+```text
+In [REPOSITORY], I authorize committing and pushing the reviewed feature on [BRANCH] to
+[DESTINATION], creating or updating only [PR_TARGET]. Inspect instructions, identity, diff,
+checks, and remote state. Confirm repository and base; for an existing PR, verify its head
+branch and draft status. Stop on a mismatch or ambiguity. Preserve unrelated work and PRs. Stop before commit
+or push if required local evidence is missing or failing, unless I explicitly authorize a draft
+documenting those gaps. Use a normal push. Describe behavior, checks, risks, and limits. Verify
+the remote commit and CI for that exact head; report pending or failed results accurately.
+Keep it draft. Do not send coordination messages, request reviews, merge, deploy, tag, or release.
+```
+
+## Repair findings without losing the review boundary
+
+After the findings-only review, use this separate request if repairs are within
+the intended scope. Rejected findings need evidence, too; do not change code
+merely because a reviewer suggested it.
+
+```text
+In [REPOSITORY], assess the review findings for [PLAN_FILE] against current code and evidence.
+Fix confirmed findings within the approved feature scope, preserving unrelated changes. Explain
+any finding that does not hold. Repeat affected checks and review the revised diff against
+[BASE_REVISION]. Keep unknowns and unavailable checks visible. Update the plan and report what
+remains. Ask before expanding scope, permissions, or cost. Do not commit, push, deploy, or
+release.
+```
+
+## Resume or hand off the feature
+
+Use the saved plan and current repository as the starting point. An old test
+receipt describes the revision it checked; it does not prove later changes pass.
+
+```text
+Resume [PLAN_FILE] in [REPOSITORY] on [BRANCH]. Read repository instructions, the plan, current
+revision, and relevant committed and uncommitted changes. Reconcile completed criteria, actual
+check receipts, review findings, and unfinished work. Correct unsupported earlier claims; do not
+turn an unrun test into a missing or failing test. Preserve unrelated work and the existing
+authorization. State the next authorized action and continue it if its prerequisites hold. Ask
+only for material decisions outside that authority. Do not infer permission to publish, merge,
+deploy, or release from the plan's status.
+```
+
+A fresh review context can reduce reliance on the implementation conversation,
+but it is not automatically an independent review. Provide the exact diff, plan,
+and relevant evidence. Do not send private context to another account or service
+without authorization.
+
+## What ready for a draft PR means
+
+The feature's acceptance criteria have current evidence, required checks have
+results, and review findings have a disposition. Any gap remains visible. The
+PR description explains the user-visible change, how it was checked, and what
+is not yet verified. If CI is pending or fails, report that state rather than
+claiming completion of the publication checks.
+
+A draft PR is a review artifact. It does not mean human approval, merge,
+deployment, or production acceptance. GitHub keeps draft and ready-for-review
+states separate; see its [pull request reference](https://docs.github.com/en/pull-requests/reference/pull-requests).
+
+## Sources and evidence limits
+
+Official documentation checked October 26, 2026:
+
+- [OpenAI: Build skills](https://learn.chatgpt.com/docs/build-skills): selection, discovery, and duplicate names.
+- [Anthropic: Skills](https://code.claude.com/docs/en/skills): plugin commands and invocation behavior.
+- [Anthropic: Development practices](https://code.claude.com/docs/en/best-practices): explore, plan, implement, and give work concrete checks.
+- [Google: Antigravity skills](https://www.antigravity.google/docs/skills?tab=ide): skill discovery and commands by client.
+- [Google Engineering Practices: Small changes](https://google.github.io/eng-practices/review/developer/small-cls.html): self-contained, reviewable changes with related tests.
+- [Google Engineering Practices: Code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html): design, behavior, tests, and documentation.
+- [GitHub: Pull requests](https://docs.github.com/en/pull-requests/reference/pull-requests): draft state, review context, and checks.
+
+This guide applies those practices to our catalog. It does not import an
+upstream workflow implementation or establish measured benefit. Published
+client capabilities and our own observed acceptance are different evidence.
+The prior Claude failures and the [unrun diagnostic proposal](audits/claude-routing-contract-retest-plan-2026-10-21.md)
+remain unchanged. These prompts do not authorize a pilot, paid evaluation,
+billing change, or installation. Account and machine checks belong in the
+operator's runbook; never infer one machine's acceptance from another's.

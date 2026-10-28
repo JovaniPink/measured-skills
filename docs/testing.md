@@ -43,7 +43,7 @@ python3 -m unittest discover -s tests -v
 
 Each command should exit with status 0. `scripts/validate.py` ends with `All deterministic catalog validations passed.` It already runs the public-boundary scan. To run only that scan, use `python3 scripts/check_public_boundary.py`. If a change affects generated files, also refresh the release manifest as described in [Contributing](../CONTRIBUTING.md).
 
-The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, originality, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
+The Linux CI requirements file pins the workflow parser, its type information, and every type and lint dependency by version and wheel hash. It is not a portable local environment. Use PyYAML 6.0.3 with `scripts/check_workflows.py` on other platforms. `scripts/validate.py` reconciles the Linux lock with reviewed provenance and checks canonical metadata, Codex policy mapping, Claude explicit-invocation mapping, trigger coverage, primary-authority provenance, attribution patterns, repository independence, local references, public/private boundary patterns, marketplace structure, ZIP layout, and generated-tree drift.
 
 ## Upstream freshness scope
 
@@ -57,6 +57,14 @@ uses this mode. Keep changed or unavailable sources visible; an offline pass or
 a green catalog job does not clear an online freshness hold. This distinction
 does not change the existing freshness policy or authorize pin replacement.
 
+Content hashes cover complete document bytes after declared HTTP content decoding.
+The fetcher requests identity encoding and also decodes gzip when the publisher
+returns it. Unsupported coding and corrupt gzip fail closed. This is transport
+decoding, not a new normalization rule: whitespace, line endings, and all decoded
+members still affect full-content hashes. Header-based pins retain their existing
+behavior. Official Markdown replacements require individual content/coverage review;
+a later mismatch is still blocking.
+
 ## Antigravity preview checks
 
 The unit suite also checks the offline preview builder: selected source and reference files survive unchanged, explicit-only skills are rejected before output is written, unknown skills are rejected, repeated builds match, and old output cannot be overwritten. Build a review copy with `python3 scripts/build_antigravity.py --output dist/antigravity-review`. Use a new folder for each build. This does not install a plugin or prove client loading.
@@ -67,7 +75,7 @@ When installed, also run the current official tools:
 
 ```sh
 skills-ref validate skills/<skill-name>
-claude plugin validate plugins/claude/measured-skills --strict
+claude plugin validate plugins/claude/measured-workflows --strict
 ```
 
 Run Codex's bundled skill validator for every canonical skill and the bundled plugin validator for the Codex plugin. Tool availability and observed output belong in `docs/validation-evidence.md`; never silently treat an unavailable validator as passing.

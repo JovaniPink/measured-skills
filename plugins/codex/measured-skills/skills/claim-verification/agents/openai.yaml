@@ -1,6 +1,0 @@
-interface:
-  display_name: "Claim Verification"
-  short_description: "Claim verification"
-  default_prompt: "Use $measured-skills:claim-verification for this task: Checks claims such as \"is this done\", \"did that deploy go out\", or \"is the fix live\" against current evidence; keeps local tests, merge, deployment, and live behavior separate."
-policy:
-  allow_implicit_invocation: true

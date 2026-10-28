@@ -1,6 +1,0 @@
-interface:
-  display_name: "Next.js Cache and Auth Boundary Review"
-  short_description: "Reviews Next.js cache and authorization"
-  default_prompt: "Use $measured-nextjs-workflows:nextjs-cache-auth-boundary-review for this task: Reviews Next.js cache and authorization when user data leaks across requests, invalidation is unclear, or server mutations need checks; excludes unrelated UI and authentication installation."
-policy:
-  allow_implicit_invocation: true

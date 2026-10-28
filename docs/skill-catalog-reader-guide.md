@@ -1,522 +1,913 @@
-# Measured Skills Catalog: A Reader Guide
+# Complete skill catalog
 
-The Measured Skills catalog contains 87 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
+Generated from canonical metadata. Start with [the task chooser](start.md).
 
-This guide explains what each plugin is for, what every skill does, and how explicit-only invocation works. It is intended for readers who want to understand the catalog before installing or using it.
+This preview contains 90 portable agent skills. Packs are distribution units, not recommended activation sets.
 
-## How the catalog is organized
+## measured-operations
 
-The 11 plugins separate broad workflow categories so you can install only what you need:
+### Analyze an incident
 
-1. `measured-skills` contains the core verification, research, diagnosis, security, and publication workflows.
-2. `measured-engineering-build` contains problem framing, module and interface design, implementation planning, test strategy, and test-driven change workflows.
-3. `measured-engineering-review` contains accessibility, API-compatibility, application-security, code-change, data-migration, dependency, motion, observability, operational-readiness, performance, and test-quality review workflows.
-4. `measured-engineering-delivery` contains branch, merge-conflict, multi-agent, plan-execution, prototype, and code-review request and response workflows.
-5. `measured-stack-profiles` adds focused guidance for specific programming languages and infrastructure tools.
-6. `measured-operations` contains requirements, governance, measurement, adoption, incident, and stakeholder workflows.
-7. `measured-reasoning` contains alignment, explanation, writing, decision, configuration, and continuity workflows.
-8. `measured-ai-systems` contains optional AI evaluation, context reliability, and source-to-output conformance workflows.
-9. `measured-agent-platforms` contains human-facing Google ADK, agent architecture, tool, protocol, security, and retrieval workflows.
-10. `measured-swift-workflows` contains bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture-backed journey verification.
-11. `measured-nextjs-workflows` contains bounded Next.js delivery, cache and authorization review, and measured React rendering diagnosis.
+[`analyze-incident`](../skills/analyze-incident/SKILL.md)
 
-The counts, groupings, and invocation policies below are reconciled against the [canonical skill sources](../skills/) and the catalog's [metadata parser](../scripts/cataloglib.py). Generated plugin trees are projections, not the inventory authority.
+Analyzes an incident when asked what happened, why recovery took time, or how to prevent recurrence; builds an evidence-backed timeline without assigning unsupported blame.
 
-| Plugin | Skill count | Explicit-only skills |
-| --- | ---: | --- |
-| `measured-skills` | 12 | `publish-change-safely`, `research-to-publication-lifecycle`, `skill-import-provenance` |
-| `measured-engineering-build` | 5 | None |
-| `measured-engineering-review` | 11 | None |
-| `measured-engineering-delivery` | 9 | `acceptance-evidence-ledger`, `finish-development-branch`, `merge-conflict-reconciliation`, `multi-agent-orchestration`, `plan-execution`, `prototype-spike`, `request-code-review` |
-| `measured-stack-profiles` | 12 | None |
-| `measured-operations` | 11 | None |
-| `measured-reasoning` | 11 | `decision-evidence-trace`, `guided-configuration`, `task-handoff`, `workflow-retrospective` |
-| `measured-ai-systems` | 3 | None |
-| `measured-agent-platforms` | 6 | None |
-| `measured-nextjs-workflows` | 3 | `nextjs-feature-delivery` |
-| `measured-swift-workflows` | 4 | `ios-journey-verification`, `swiftui-feature-delivery` |
-| **Total** | **87** | **17 skills** |
+Invocation: implicit. Risk class: read-only.
 
-Most skills can activate implicitly when a request clearly matches their routing description. Skills marked `explicit-only` must be selected directly.
+Historical name: production-incident-analysis.
 
-## What explicit-only means
+### Explain a technical decision
 
-An explicit-only skill requires direct selection. Verify the receiving client's invocation controls before enabling it; unverified surfaces must keep it unavailable. A metadata field or discovery check alone does not establish enforcement.
+[`explain-to-stakeholders`](../skills/explain-to-stakeholders/SKILL.md)
 
-| Client surface | Documented selection form |
-| --- | --- |
-| ChatGPT web, desktop, and mobile | Type `@` and select the installed skill. The displayed selector entry can vary by installation and client version. |
-| Codex CLI and IDE extension | `$measured-engineering-delivery:plan-execution Execute the approved plan. Stop if its scope or authority changes.` |
-| Claude Code CLI and the Code area in Claude Desktop | `/measured-engineering-delivery:plan-execution Execute the approved plan. Stop if its scope or authority changes.` |
-| Claude.ai | No direct command is claimed. Anthropic documents enabling an uploaded custom skill and automatic selection from a matching request; current catalog evidence does not establish explicit-only behavior on this surface. |
+Explains technical evidence when asked for a stakeholder update, decision brief, or plain-language status; preserves the decision needed and material limitations without unnecessary approval requests.
 
-These forms come from client documentation, not from observations of this catalog. The current candidate record says what was actually observed. OpenAI documents `@` selection in ChatGPT and `$` skill mentions in Codex. Anthropic documents `/plugin-name:skill-name` for Claude Code plugin skills. The exact catalog namespaces above are also present in the generated Codex and Claude distributions. See [OpenAI Build skills](https://learn.chatgpt.com/docs/build-skills), [Anthropic Extend Claude with skills](https://code.claude.com/docs/en/slash-commands), and [Anthropic Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+Invocation: implicit. Risk class: read-only.
 
-Explicit-only skills coordinate work that may become consequential, such as executing a plan, publishing a repository change, creating a review request, resolving conflicts, guiding protected configuration, or delegating work to other agents.
+Historical name: stakeholder-technical-communication.
 
-Direct invocation selects the workflow. It does not authorize every action mentioned by that workflow. Push, merge, deletion, publication, deployment, external communication, credential use, and other protected actions still require separate authority.
+### Learn after launch
 
-## Core skills: measured-skills
+[`learn-after-launch`](../skills/learn-after-launch/SKILL.md)
 
-The core plugin contains 12 skills for evidence, diagnosis, security, authority, and safe publication.
+Reviews postlaunch learning when asked what worked, what to change, or which feedback deserves investigation; uses observed outcomes rather than treating deployment as success.
 
-### authority-boundary-review
+Invocation: implicit. Risk class: read-only.
 
-Maps authoritative data stores, exact-byte custody, projections, writers, readers, and reconciliation paths. Use it when a system or migration has unclear source-of-truth boundaries or when proposed contracts must be separated from ratified ones.
+Historical name: iteration-postlaunch-learning.
 
-### claim-verification
+### Map capability dependencies
 
-Checks whether claims such as complete, fixed, merged, deployed, or live are supported by current evidence. It keeps local checks, commits, pull requests, deployments, and public behavior as separate states.
+[`map-capability-dependencies`](../skills/map-capability-dependencies/SKILL.md)
 
-### cross-stack-quality-gates
+Maps cross-team dependencies when asked what blocks delivery, who owns an input, or which decisions must happen first; records ownership and failure paths without inventing commitments.
 
-Discovers and runs the validation commands that the repository actually defines across supported application, language, data, and infrastructure stacks without assuming that every project uses the same commands.
+Invocation: implicit. Risk class: read-only.
 
-### finding-consolidation
+Historical name: cross-capability-dependency-mapping.
 
-Merges findings that several completed reviews already produced into one ranked list. It assigns each root cause a single owner, regrades onto one severity scale, lists every confirmed location inside one finding, and names what was held back and what no review covered. It does not run a review or issue a verdict.
+### Measure outcomes
 
-### prelaunch-readiness
+[`measure-outcomes`](../skills/measure-outcomes/SKILL.md)
 
-Reviews whether a website, service, application, or major relaunch is ready for public use. It separates repository validation from provider configuration, deployment evidence, and observed live behavior.
+Defines outcome measures when asked how to measure success, choose a KPI, or distinguish activity from impact; specifies population, units, baseline, and decision use.
 
-### public-private-boundary-review
+Invocation: implicit. Risk class: read-only.
 
-Examines code, documentation, examples, articles, and release artifacts for secrets, internal identifiers, private operational details, proprietary material, and unsupported public claims. Use it before open-sourcing or publishing work that may combine public and private context.
+Historical name: kpi-outcome-measurement.
 
-### publish-change-safely
+### Plan adoption
 
-Invocation: `explicit-only`.
+[`plan-adoption`](../skills/plan-adoption/SKILL.md)
 
-Verifies GitHub identity, repository, visibility, remote, branch, diff scope, checks, commit, push, and pull request state before publishing a change. Selecting the skill does not automatically authorize a push, PR, merge, or release.
+Plans adoption when a new process or product needs people to change how they work; connects training, incentives, support, and feedback to observable behavior.
 
-### research-to-publication-lifecycle
+Invocation: implicit. Risk class: read-only.
 
-Invocation: `explicit-only`.
+Historical name: change-adoption-planning.
 
-Coordinates existing research, evidence-trace, source-conformance, retrospective, and public-boundary skills into stable knowledge-object handoffs. It keeps forecast cutoffs, observations, evaluations, corrections, visibility, and publication authority distinct and does not write or publish automatically.
+### Plan a workshop
 
-### skill-import-provenance
+[`plan-workshop`](../skills/plan-workshop/SKILL.md)
 
-Invocation: `explicit-only`.
+Plans or synthesizes a workshop when asked to prepare an agenda or turn session notes into decisions; ties activities to outcomes and leaves unresolved ownership visible.
 
-Reviews ownership, license, revision, security posture, local changes, and re-review policy before transferring owned original skill material. Third-party skill catalogs are rejected as implementation sources and are not tracked in Git.
+Invocation: implicit. Risk class: read-only.
 
-### skill-security-review
+Historical name: workshop-planning-synthesis.
 
-Audits an agent skill or plugin for prompt manipulation, unsafe commands, excessive file or network access, dependencies, hooks, permissions, data exposure, and deceptive behavior. This skill reviews agent packages, not application security.
+### Prepare a migration decision
 
-### source-grounded-research
+[`prepare-migration-decision`](../skills/prepare-migration-decision/SKILL.md)
 
-Researches a question using current primary sources while preserving URLs, dates, units, provenance, and uncertainty. Use it for web investigations, comparisons, recommendations, and fact checks where current evidence matters.
+Prepares a migration decision when owners must approve data writers, cutover, reconciliation, and rollback; records a proposal and evidence without granting approval itself.
 
-### systematic-diagnosis
+Invocation: implicit. Risk class: read-only.
 
-Reproduces and narrows a defect, regression, failure, or confusing behavior to establish a causal boundary. It reports evidence and does not silently turn diagnosis into implementation.
+Historical name: data-authority-migration-ratification.
 
-## Engineering build: measured-engineering-build
+### Record decisions and evidence
 
-The engineering-build plugin contains 5 skills for problem framing, module and interface design, implementation planning, and test-driven change.
+[`record-decisions`](../skills/record-decisions/SKILL.md)
 
-### implementation-planning
+Writes or reviews a decision record when asked to document options, rationale, ownership, or approval status; separates a proposal from a ratified decision.
 
-Produces a decision-complete implementation plan grounded in repository and platform evidence. A plan includes interfaces, ordered steps, tests, rollout controls, checkpoints, stopping conditions, and unresolved decisions.
+Invocation: implicit. Risk class: read-only.
 
-### module-interface-design
+Historical name: decision-governance-records.
 
-Designs or reviews module boundaries, vocabulary, interfaces, and hidden implementation details. Use it when callers face unstable contracts, responsibilities are unclear, or concepts leak across layers.
+### Review evidence for value claims
 
-### problem-framing
+[`review-value-evidence`](../skills/review-value-evidence/SKILL.md)
 
-Defines users, desired outcomes, evidence, constraints, unknowns, options, and measurable success before implementation. Use it when a request matters but the actual problem is not yet decision-ready.
+Assesses value claims when asked whether a change saved time, reduced risk, or caused an outcome; separates observed results, estimates, attribution, and unsupported conclusions.
 
-### test-driven-change
+Invocation: implicit. Risk class: read-only.
 
-Guides feature and defect work through red, green, and refactor evidence. It also provides a clear exception path when a test-first approach is unsuitable or cannot represent the behavior responsibly.
+Historical name: value-attribution-evidence-maturity.
 
-### test-strategy
+### Synthesize requirements
 
-Designs risk-proportionate coverage across unit, integration, contract, end-to-end, property, migration, and manual testing. It explains why each layer is or is not needed.
+[`synthesize-requirements`](../skills/synthesize-requirements/SKILL.md)
 
-## Engineering review: measured-engineering-review
+Combines interviews, documents, and issues when asked to turn conflicting inputs into requirements; traces each requirement to evidence and keeps unresolved decisions visible.
 
-The engineering-review plugin contains 11 review skills for accessibility, API compatibility, application security, code changes, data migrations, dependencies, motion, observability, operational readiness, performance, and test quality.
+Invocation: implicit. Risk class: read-only.
 
-### accessibility-review
+Historical name: requirements-synthesis.
 
-Reviews web or application accessibility using WCAG 2.2 success criteria, semantic structure, keyboard behavior, assistive-technology needs, visual presentation, and user impact. It reports evidence without claiming full conformance from incomplete testing.
+## measured-quality
 
-### api-contract-compatibility-review
+### Check launch readiness
 
-Reviews API, event, schema, and client changes for backward, forward, and rollout compatibility. Use it when producers and consumers may update independently or when a change can alter data shape, timing, errors, or meaning.
+[`check-launch-readiness`](../skills/check-launch-readiness/SKILL.md)
 
-### application-security-review
+Reviews launch readiness when asked for a go/no-go assessment or public-launch checklist; separates source checks, provider configuration, and live user journeys.
 
-Reviews application and service security using current threat evidence and verifiable controls. It covers authentication, authorization, input handling, data protection, sessions, errors, configuration, and abuse risks.
+Invocation: implicit. Risk class: bounded-execution.
 
-### code-change-review
+Historical name: prelaunch-readiness.
 
-Reviews an exact diff for correctness, regressions, security, compatibility, test quality, and maintainability. It produces evidence-backed findings rather than silently changing the code under review.
+### Consolidate review findings
 
-### data-migration-readiness
+[`consolidate-findings`](../skills/consolidate-findings/SKILL.md)
 
-Reviews a proposed data or schema migration for authority, compatibility, sequencing, reconciliation, rollback, and operational evidence. It can assess a migration but cannot execute or ratify it without separate authority.
+Consolidates completed reviews when findings overlap or disagree in severity; assigns each root cause one owner and reports discarded duplicates without running another review.
 
-### dependency-supply-chain-review
+Invocation: implicit. Risk class: read-only.
 
-Reviews software dependencies and build inputs for provenance, integrity, maintenance, vulnerability, and compromise risk. It covers manifests, lockfiles, registries, CI actions, artifacts, and update policy.
+Historical name: finding-consolidation.
 
-### functional-motion-review
+### Design agent evaluations
 
-Checks whether motion helps a reader task while preserving evidence labels, static content, keyboard behavior, and user control. It separates WCAG requirements from stricter catalog preferences. It does not implement animation or add analytics.
+[`design-agent-evaluations`](../skills/design-agent-evaluations/SKILL.md)
 
-### observability-design
+Designs AI evaluations when asked how to test an agent, compare prompts, or measure answer quality; requires representative cases and a baseline rather than one favorable response.
 
-Reviews or designs logs, metrics, traces, alerts, and user-impact signals. The goal is to help operators detect, explain, and respond to failures instead of collecting telemetry without a clear operational purpose.
+Invocation: implicit. Risk class: read-only.
 
-### operational-readiness-review
+Historical name: agent-evaluation-design.
 
-Reviews whether a service or application is ready for release and sustained ownership. It examines objectives, dependencies, monitoring, alerts, capacity, failure handling, incidents, runbooks, recovery, and support boundaries.
+### Design agent state and memory
 
-### performance-scalability-diagnosis
+[`design-agent-memory`](../skills/design-agent-memory/SKILL.md)
 
-Diagnoses latency, throughput, resource use, contention, and capacity problems using measurements and competing hypotheses. It does not silently optimize code before the cause is established.
+Designs agent context and memory boundaries when asked where session state belongs, how memory expires, or how tenants stay isolated; distinguishes architecture from a context-packet audit.
 
-### test-quality-review
+Invocation: implicit. Risk class: read-only.
 
-Reviews whether tests contain meaningful assertions, detect relevant defects, remain isolated and deterministic, cover important risks, and have reasonable maintenance cost. Passing tests alone do not prove that the tests are strong.
+Historical name: agent-context-state-memory-design.
 
-## Engineering delivery: measured-engineering-delivery
+### Design useful observability
 
-The engineering-delivery plugin contains 9 skills for branch completion, merge-conflict reconciliation, multi-agent orchestration, plan execution, prototyping, and code-review requests and responses.
+[`design-observability`](../skills/design-observability/SKILL.md)
 
-### acceptance-evidence-ledger
+Designs logs, metrics, traces, and alerts when asked how to detect or explain failures; connects telemetry to user impact and operator actions rather than log volume.
 
-Invocation: `explicit-only`.
+Invocation: implicit. Risk class: read-only.
 
-Creates or updates an inline or explicitly authorized repository-owned acceptance ledger for substantial work. It records observable gates, evidence authorities, receipts, freshness rules, blockers, abandonments, and the next authorized action without executing ledger text or expanding merge, deployment, publication, credential, provider-write, or destructive authority.
+Historical name: observability-design.
 
-### finish-development-branch
+### Diagnose performance problems
 
-Invocation: `explicit-only`.
+[`diagnose-performance`](../skills/diagnose-performance/SKILL.md)
 
-Reconciles a development branch and presents evidence-based choices for creating a PR, merging, retaining the branch, or cleaning it up. It does not assume authority to push, merge, delete, or abandon work.
+Diagnoses a slow or overloaded system when asked why latency, throughput, or resource use changed; compares measurements and hypotheses without silently optimizing code.
 
-### merge-conflict-reconciliation
+Invocation: implicit. Risk class: read-only.
 
-Invocation: `explicit-only`.
+Historical name: performance-scalability-diagnosis.
 
-Reconciles an active Git merge, rebase, or cherry-pick conflict by preserving both sides' intent and validating the combined behavior. Staging, continuing, committing, and pushing remain separately authorized actions.
+### Review accessibility
 
-### multi-agent-orchestration
+[`review-accessibility`](../skills/review-accessibility/SKILL.md)
 
-Invocation: `explicit-only`.
+Reviews accessibility when asked to check keyboard access, screen-reader behavior, focus, contrast, or WCAG requirements; incomplete testing cannot establish conformance.
 
-Coordinates authorized agents on independent, bounded tasks with explicit ownership, evidence contracts, cost awareness, and final reconciliation. It avoids overlapping file ownership, tightly sequential delegation, and irreversible worker decisions.
+Invocation: implicit. Risk class: read-only.
 
-### plan-execution
+Historical name: accessibility-review.
 
-Invocation: `explicit-only`.
+### Review agent protocols
 
-Executes a named and approved implementation plan with checkpoints, validation, deviation tracking, and strict stopping conditions. It stops when a deviation changes scope, interfaces, authority, security, cost, publication, deployment, or destructive behavior.
+[`review-agent-protocols`](../skills/review-agent-protocols/SKILL.md)
 
-### prototype-spike
+Reviews MCP, A2A, and agent protocol integration when tools fail discovery or delegation, streaming, retries, or cancellation cross services; ordinary API changes use API compatibility review.
 
-Invocation: `explicit-only`.
+Invocation: implicit. Risk class: read-only.
 
-Builds a bounded and disposable experiment to answer one named uncertainty. A successful prototype provides learning; it does not prove production readiness or authorize adoption.
+Historical name: agent-protocol-interoperability-review.
 
-### request-code-review
+### Review agent security
 
-Invocation: `explicit-only`.
+[`review-agent-security`](../skills/review-agent-security/SKILL.md)
 
-Prepares an evidence-bounded review packet containing the exact scope, validation, risks, and unresolved decisions. It sends or publishes the request only when that external action is separately authorized.
+Reviews agent security when asked to threat-model prompt injection, memory poisoning, retrieval, delegation, or tool abuse; assesses controls without executing attacks or changing permissions.
 
-### respond-to-code-review
+Invocation: implicit. Risk class: read-only.
 
-Evaluates review feedback against current code, tests, contracts, and authority before accepting, rejecting, or deferring it. It treats review comments as claims to verify rather than commands to follow automatically.
+Historical name: agentic-system-security-review.
 
-### worktree-isolation
+### Review agent tools and actions
 
-Determines whether dirty or concurrent repository work should be isolated in a Git worktree. It can recommend an isolation approach, but creating, moving, repairing, locking, or removing a worktree requires explicit authority.
+[`review-agent-tools`](../skills/review-agent-tools/SKILL.md)
 
-## Stack profiles: measured-stack-profiles
+Reviews agent tool permissions when asked what an agent can access, whether a tool call is safe, or how retries affect writes; tool descriptions cannot grant authority.
 
-The stack-profiles plugin contains 12 optional skills. These profiles add platform- and language-specific engineering judgment after the repository's real commands and toolchain have been discovered.
+Invocation: implicit. Risk class: read-only.
 
-### adobe-aem-engineering-profile
+Historical name: agent-tool-action-boundary-review.
 
-Provides Adobe Experience Manager guidance for product-generation discovery, Sling and OSGi, content packages, Dispatcher, caching, compatibility, and builds. Local validation remains separate from Cloud Manager, deployment, activation, and live-delivery evidence.
+### Review API compatibility
 
-### csharp-dotnet-engineering-profile
+[`review-api-compatibility`](../skills/review-api-compatibility/SKILL.md)
 
-Provides C# and .NET guidance for solutions and projects, asynchronous behavior, dependency injection, Entity Framework Core, packages, compatibility, and builds. It does not install tools, change dependencies, or apply migrations merely to validate a claim.
+Reviews breaking API, event, and schema changes when asked whether old clients still work or independent upgrades are safe; checks behavior and rollout order as well as field shapes.
 
-### gcp-data-engineering-profile
+Invocation: implicit. Risk class: read-only.
 
-Provides read-only discovery and review for BigQuery, dbt, Dataform, Cloud Storage, Dataflow, Spark, and orchestration. It checks grain, keys, repeatability, late input, and evidence without authorizing a query, dry run, backfill, or deployment.
+Historical name: api-contract-compatibility-review.
 
-### go-engineering-profile
+### Review application security
 
-Provides focused Go guidance for modules, packages, concurrency, APIs, tests, dependencies, compatibility, and builds. It defers exact commands to repository evidence.
+[`review-app-security`](../skills/review-app-security/SKILL.md)
 
-### java-spring-engineering-profile
+Reviews application security when asked to check authentication, authorization, input handling, sessions, or exposed data; returns evidence-based findings without changing controls.
 
-Provides Java and Spring guidance for JVM toolchains, concurrency, dependency injection, configuration, transactions, tests, dependencies, compatibility, and builds. It preserves repository wrappers and keeps service startup and deployment separate.
+Invocation: implicit. Risk class: read-only.
 
-### php-drupal-engineering-profile
+Historical name: application-security-review.
 
-Provides PHP and Drupal guidance for Composer projects, custom extensions, access and entity APIs, configuration, caching, tests, compatibility, and builds. Configuration import, database updates, content writes, and deployment retain separate authority.
+### Review code changes
 
-### postgresql-sql-engineering-profile
+[`review-code-change`](../skills/review-code-change/SKILL.md)
 
-Provides PostgreSQL and SQL guidance for schemas, queries, transactions, indexing, migrations, compatibility, and database testing. It does not mutate shared data merely to validate a claim.
+Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging.
 
-### python-engineering-profile
+Invocation: implicit. Risk class: read-only.
 
-Provides Python guidance for packaging, typing, asynchronous behavior, tests, dependencies, compatibility, and builds. It respects the repository's selected tools and configuration.
+Historical name: code-change-review.
 
-### salesforce-apex-engineering-profile
+### Review context and assertions
 
-Provides Salesforce guidance for metadata projects, Apex, Lightning Web Components, permissions, governor limits, tests, package compatibility, and deployment readiness. Credentials, org-backed validation, deployment, permission assignment, and destructive changes retain separate authority.
+[`review-context-evidence`](../skills/review-context-evidence/SKILL.md)
 
-### swift-swiftui-engineering-profile
+Checks supplied agent context when asked whether a claim is stale, conflicting, authorized, or superseded; traces assertion provenance rather than redesigning the system of record.
 
-Provides Swift and SwiftUI guidance for packages, applications, concurrency, UI state, tests, compatibility, and builds. Claims about the Apple toolchain require observed macOS evidence.
+Invocation: implicit. Risk class: read-only.
 
-### terraform-engineering-profile
+Historical name: context-reliability-review.
 
-Provides Terraform guidance for modules, providers, state, plans, upgrades, compatibility, and infrastructure review. Successful validation or planning does not authorize an apply.
+### Review sources of truth
 
-### typescript-javascript-engineering-profile
+[`review-data-authority`](../skills/review-data-authority/SKILL.md)
 
-Provides TypeScript and JavaScript guidance for Node and browser packages, type safety, asynchronous behavior, tests, dependencies, compatibility, and builds. It follows the repository's package manager and scripts.
+Maps sources of truth when asked which database owns a value, which copies are projections, or who may write during migration; distinguishes proposed ownership from approved authority.
 
-## Operations skills: measured-operations
+Invocation: implicit. Risk class: read-only.
 
-The operations plugin contains 11 skills for requirements, decisions, measurement, adoption, incidents, stakeholder communication, and operating-model work.
+Historical name: authority-boundary-review.
 
-### change-adoption-planning
+### Review a data migration
 
-Plans change around affected people, desired behavior, capability, incentives, support, measurement, and feedback. Use it when technical delivery alone will not create the intended outcome.
+[`review-data-migration`](../skills/review-data-migration/SKILL.md)
 
-### cross-capability-dependency-mapping
+Reviews migration readiness when asked if a schema change, backfill, or cutover is safe; checks compatibility, reconciliation, and rollback without executing the migration.
 
-Maps dependencies across products, teams, data, platforms, decisions, and operating capabilities. It makes hidden sequencing, ownership, authority, and failure paths visible.
+Invocation: implicit. Risk class: read-only.
 
-### data-authority-migration-ratification
+Historical name: data-migration-readiness.
 
-Prepares a proposed data-authority and migration decision record covering owners, writers, readers, cutover, reconciliation, rollback, and acceptance. It supports a decision owner but cannot declare the proposal ratified.
+### Review dependencies
 
-### decision-governance-records
+[`review-dependencies`](../skills/review-dependencies/SKILL.md)
 
-Creates or reviews decision records containing context, options, evidence, ownership, status, consequences, and review triggers. It distinguishes proposed, ratified, rejected, superseded, and unresolved decisions.
+Reviews dependencies and build inputs when asked whether a package, lockfile update, CI action, or artifact can be trusted; checks provenance and integrity without installing it.
 
-### iteration-postlaunch-learning
+Invocation: implicit. Risk class: read-only.
 
-Plans and synthesizes learning from observed postlaunch behavior, incidents, feedback, experiments, and outcome measures. It helps decide what to retain, change, investigate, or stop.
+Historical name: dependency-supply-chain-review.
 
-### kpi-outcome-measurement
+### Review interface motion
 
-Defines outcome measures with precise units, populations, baselines, targets, data authority, and decision use. It distinguishes activity, output, outcome, and impact.
+[`review-interface-motion`](../skills/review-interface-motion/SKILL.md)
 
-### production-incident-analysis
+Reviews motion when animations hide content, distract from a data story, or make sample data appear live; checks accessible presentation and evidence rather than routine styling.
 
-Reconstructs a production incident from timestamped evidence, system behavior, contributing conditions, response actions, and recovery. It identifies justified learning and remediation without manufacturing certainty or blame.
+Invocation: implicit. Risk class: read-only.
 
-### requirements-synthesis
+Historical name: functional-motion-review.
 
-Converts interviews, documents, issues, observations, and constraints into traceable requirements. It keeps proposals and preferences separate from ratified scope.
+### Review operational readiness
 
-### stakeholder-technical-communication
+[`review-operational-readiness`](../skills/review-operational-readiness/SKILL.md)
 
-Translates technical evidence for a named stakeholder and decision. It preserves uncertainty, risk, and appropriate detail while avoiding unnecessary implementation depth or unsupported confidence.
+Reviews operational readiness when asked who will support a service or whether alerts, capacity, recovery, and runbooks are sufficient; reports gaps without deploying it.
 
-### value-attribution-evidence-maturity
+Invocation: implicit. Risk class: read-only.
 
-Evaluates claims about value, savings, benefits, risk reduction, and outcomes against an evidence-maturity model. It separates observations, estimates, contribution, attribution, and causal claims.
+Historical name: operational-readiness-review.
 
-### workshop-planning-synthesis
+### Review what is safe to publish
 
-Plans a workshop around a concrete decision or learning objective and records its evidence afterward. It supports agendas, prework, facilitation, participation, decisions, actions, and follow-up without inventing consensus.
+[`review-public-boundary`](../skills/review-public-boundary/SKILL.md)
 
-## Reasoning skills: measured-reasoning
+Reviews material before public exposure when asked to check for secrets, private identifiers, proprietary text, or unsupported claims; keeps private context out of public artifacts.
 
-The reasoning plugin contains 11 skills for shared understanding, code explanation, impact analysis, decision evidence, writing, configuration, and continuity.
+Invocation: implicit. Risk class: read-only.
 
-### alignment-interview
+Historical name: public-private-boundary-review.
 
-Establishes a shared, decision-ready understanding by inspecting available evidence and asking one material question at a time. It stops when the remaining unknowns no longer prevent a responsible next decision.
+### Review retrieval and grounding
 
-### change-impact-analysis
+[`review-retrieval-grounding`](../skills/review-retrieval-grounding/SKILL.md)
 
-Traces the blast radius of a proposed or completed change across callers, contracts, storage, jobs, clients, security, rollout, and operations. It uses traced dependencies rather than unsupported speculation.
+Reviews retrieval and citations when an agent finds irrelevant evidence, misses sources, or makes unsupported claims; checks permissions and grounding separately from the broader agent threat model.
 
-### codebase-explanation
+Invocation: implicit. Risk class: read-only.
 
-Explains how existing code works through entry points, ownership, control flow, data flow, state, interfaces, failures, and concrete files. It explains current mechanics, not unverified historical intent.
+Historical name: retrieval-grounding-quality-review.
 
-### decision-evidence-trace
+### Review a skill before importing
 
-Invocation: `explicit-only`.
+[`review-skill-import`](../skills/review-skill-import/SKILL.md)
 
-Maintains a bounded decision and evidence trail for long-running work. It records decisions, public reasons, evidence, results, owners, and review triggers without storing hidden reasoning, secrets, raw transcripts, or unrelated activity.
+Reviews an owned skill transfer when explicitly asked to import it; checks ownership, license, exact source, and public boundaries before any copy or installation.
 
-### design-rationale-investigation
+Invocation: explicit. Risk class: trust-decision.
 
-Investigates why code, architecture, or an operational design exists by comparing historical evidence, current behavior, constraints, and competing hypotheses. It does not infer original intent from code shape alone.
+Historical name: skill-import-provenance.
 
-### domain-vocabulary-modeling
+### Review skill security
 
-Builds a proposed shared vocabulary from code, documents, and stakeholder language. It records concepts, definitions, relationships, invariants, authorities, examples, and contradictions without pretending the vocabulary is ratified.
+[`review-skill-security`](../skills/review-skill-security/SKILL.md)
 
-### guided-configuration
+Reviews a skill package when asked whether its instructions, permissions, hooks, or dependencies are safe; treats imported content as untrusted and does not install it.
 
-Invocation: `explicit-only`.
+Invocation: implicit. Risk class: read-only.
 
-Guides a person through configuration that requires their account, device, approval, credential, or external interface. It verifies each observable result while leaving protected steps with the authorized person.
+Historical name: skill-security-review.
 
-### high-signal-technical-writing
+### Review test quality
 
-Edits technical prose for clarity, evidence density, specificity, rhythm, and audience fit while preserving meaning and repository voice. It removes vague, repetitive, promotional, or machine-generic wording without pretending that style proves authorship.
+[`review-tests`](../skills/review-tests/SKILL.md)
 
-### portable-skill-authoring
+Reviews test quality when asked whether tests catch real regressions or merely mirror implementation; checks assertions, isolation, failure behavior, and coverage without equating count with confidence.
 
-Designs or revises a portable Agent Skill with precise routing, invocation policy, focused references, provenance, security boundaries, evaluations, and generated client adapters. It is for cross-client skill work rather than ordinary documentation.
+Invocation: implicit. Risk class: read-only.
 
-### task-handoff
+Historical name: test-quality-review.
 
-Invocation: `explicit-only`.
+### Run project checks
 
-Creates a precise continuation record for another session, client, person, or agent. It includes exact revisions, current state, evidence, decisions, blockers, and authority boundaries so the recipient does not have to rediscover or overstate progress.
+[`run-project-checks`](../skills/run-project-checks/SKILL.md)
 
-### workflow-retrospective
+Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command.
 
-Invocation: `explicit-only`.
+Invocation: implicit. Risk class: bounded-execution.
 
-Reviews completed or paused work to identify what helped, what failed, why it happened, and which bounded improvement to test next. It does not mine private history or automatically rewrite policies and skills.
+Historical name: cross-stack-quality-gates.
 
-## AI systems skills: measured-ai-systems
+### Verify claims and completion
 
-The optional AI-systems plugin contains three reliability workflows. Install it when work concerns measured AI behavior, the reliability of context assertions, or evidence from exact source bytes through persisted readback.
+[`verify-claims`](../skills/verify-claims/SKILL.md)
 
-### agent-evaluation-design
+Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct.
 
-Designs a decision-ready evaluation contract for an agent, model-assisted workflow, or prompt-driven system. It defines representative cases, baselines, configurations, oracles, graders, error classes, thresholds, cost, latency, human review, execution authority, and limitations without launching paid or external evaluations.
+Invocation: implicit. Risk class: read-only.
 
-### context-reliability-review
+Historical name: claim-verification.
 
-Reviews context as atomic assertions with provenance, authority, effective and recorded time, freshness, permissions, conflicts, supersession, revocation, status, and behavioral impact. It uses synthetic or redacted public output rather than embedding private facts.
+### Check output against its source
 
-### source-output-conformance-audit
+[`verify-source-output`](../skills/verify-source-output/SKILL.md)
 
-Audits exact source identity through decoding, parsing or extraction, normalization, validation, write preparation, isolated persistence, and readback. It uses source-cited expected values and mutation-sensitive tests while reporting correctness, completeness, storage correctness, reproducibility, and unresolved evidence separately.
+Audits extraction or transformation when asked whether output matches source documents or data; traces exact inputs, expected values, omissions, and mismatches across processing stages.
 
-## Agent platform skills: measured-agent-platforms
+Invocation: implicit. Risk class: bounded-execution.
 
-The optional agent-platform plugin contains six human-facing workflows for designing and reviewing agent systems. They do not become a SaaS runtime bundle, register tools, or authorize authentication, release, infrastructure, or deployment.
+Historical name: source-output-conformance-audit.
 
-### agent-context-state-memory-design
+## measured-stacks
 
-Designs or reviews prompt context, session events, scoped state, long-term memory, retrieval, and artifacts. It maps identity, authority, provenance, freshness, retention, deletion, isolation, and poisoning without treating model summaries as product truth.
+### Deliver a Next.js feature
 
-### agent-protocol-interoperability-review
+[`deliver-nextjs-feature`](../skills/deliver-nextjs-feature/SKILL.md)
 
-Reviews A2A, MCP, or another agent-facing protocol using exact specification and implementation versions. It covers discovery, identity, delegated authority, schemas, task lifecycle, streaming, failure, retry, idempotency, cancellation, and revocation.
+Implements a named Next.js App Router feature when explicitly requested within approved routes and files; follows installed-version docs and repository gates without adding unrequested infrastructure.
 
-### agent-tool-action-boundary-review
+Invocation: explicit. Risk class: bounded-execution.
 
-Reviews the deterministic boundary between an agent and its host-registered tools. It covers principals, permissions, schemas, arguments, data, network reach, effect classes, durable approval, replay protection, recovery, and audit evidence.
+Historical name: nextjs-feature-delivery.
 
-### agentic-system-security-review
+### Deliver a SwiftUI feature
 
-Reviews an agentic system across identity, models, instructions, tools, memory, retrieval, delegation, protocols, supply chain, outputs, resource limits, revocation, and emergency stopping. It is separate from conventional application security and skill-package security.
+[`deliver-swiftui-feature`](../skills/deliver-swiftui-feature/SKILL.md)
 
-### google-adk-engineering-profile
+Implements a named SwiftUI feature when explicitly requested within approved targets and files; follows actual SDK and state ownership and keeps missing required checks visible.
 
-Reviews a Google ADK design using its exact language, package version, model, agents, tools, sessions, memory, retrieval, evaluation, and environment evidence. It treats runtime Agent Skills and tool confirmation as experimental until exact-version tests establish the required behavior.
+Invocation: explicit. Risk class: bounded-execution.
 
-### retrieval-grounding-quality-review
+Historical name: swiftui-feature-delivery.
 
-Reviews whether retrieval selects authorized, current, relevant evidence and whether generated claims remain within that evidence. It covers access isolation, retrieval metrics, claim support, citations, abstention, conflicts, poisoning, injection, and limitations.
+### Diagnose React rendering
 
-## Choosing a skill
+[`diagnose-react-rendering`](../skills/diagnose-react-rendering/SKILL.md)
 
-Start by describing the actual outcome you need. The client can use an implicitly invocable skill when the request matches its routing description.
+Diagnoses React rerenders or request waterfalls when an observed interaction is slow; requires profiler and boundary evidence rather than blanket memoization or speculative speed claims.
 
-Use direct invocation when:
+Invocation: implicit. Risk class: read-only.
 
-- the skill is marked `explicit-only`;
-- you want to guarantee that a specific workflow is selected;
-- several skills have overlapping descriptions; or
-- the work requires an especially clear stopping boundary.
+Historical name: react-rendering-performance-diagnosis.
 
-Installing every plugin is not required. A focused installation reduces discovery overhead and lowers the chance of routing collisions.
+### Diagnose Swift concurrency
 
-## Important authority boundaries
+[`diagnose-swift-concurrency`](../skills/diagnose-swift-concurrency/SKILL.md)
 
-The catalog coordinates judgment and workflow. It does not replace permissions, tests, repository protections, access controls, or human decisions.
+Diagnoses Swift actor, Sendable, task-lifetime, and cancellation issues when compiler errors or runtime behavior indicate concurrency problems; uses exact language and isolation settings.
 
-Keep these states separate:
+Invocation: implicit. Risk class: read-only.
 
-- A local change is not necessarily committed.
-- A commit is not necessarily pushed.
-- A pushed branch is not necessarily represented by a pull request.
-- A pull request is not necessarily reviewed or merged.
-- A merge is not necessarily deployed.
-- A deployment is not necessarily healthy or publicly reachable.
-- A prototype is not production evidence.
-- A proposal is not a ratified decision.
-- A worker report is not verified integration evidence.
+Historical name: swift-concurrency-diagnosis.
 
-## Further reading
+### Review Next.js caching and access
 
-- [Measured Skills repository](https://github.com/JovaniPink/measured-skills)
-- [How to use the catalog](README.md)
-- [Architecture](architecture.md)
-- [Authoring guide](authoring.md)
-- [Editorial style](editorial-style.md)
-- [Security model](security-model.md)
-- [Observed client evidence](manual-smoke-tests.md)
-- [Agent Skills specification](https://agentskills.io/specification)
-- [OpenAI skill-building documentation](https://learn.chatgpt.com/docs/build-skills)
-- [OpenAI plugin documentation](https://developers.openai.com/plugins/build/plugins)
-- [Claude Code skills documentation](https://code.claude.com/docs/en/slash-commands)
+[`review-nextjs-cache-auth`](../skills/review-nextjs-cache-auth/SKILL.md)
 
-## Next.js workflows: measured-nextjs-workflows
+Reviews Next.js cache and authorization when user data leaks across requests, invalidation is unclear, or server mutations need checks; excludes unrelated UI and authentication installation.
 
-### nextjs-cache-auth-boundary-review
+Invocation: implicit. Risk class: read-only.
 
-Review Next.js authorization and cache boundaries across reads, server mutations, cookies, invalidation, and user-specific data. Read-only; do not trigger for unrelated UI, installing authentication, or enabling Cache Components without a requirement.
+Historical name: nextjs-cache-auth-boundary-review.
 
-### nextjs-feature-delivery
+### Review Swift persistence
 
-Invocation: `explicit-only`.
+[`review-swift-persistence`](../skills/review-swift-persistence/SKILL.md)
 
-Deliver an explicitly requested Next.js App Router feature within approved routes and files using installed-version documentation. Use for bounded implementation and repository gates; do not trigger for read-only audits or adding infrastructure without a product requirement.
+Reviews Swift persistence when SwiftData identity, context ownership, deletion, migration, or sync behavior is uncertain; does not assume CloudKit or authorize data mutation.
 
-### react-rendering-performance-diagnosis
+Invocation: implicit. Risk class: read-only.
 
-Diagnose React rendering or request-waterfall costs using an observed interaction, profiler evidence, and actual server/client boundaries. Read-only; do not trigger for speculative blanket memoization, styling, or unmeasured speed claims.
+Historical name: swift-persistence-contract-review.
 
-## Swift workflows: measured-swift-workflows
+### Adobe AEM guidance
 
-### ios-journey-verification
+[`stack-adobe-aem`](../skills/stack-adobe-aem/SKILL.md)
 
-Invocation: `explicit-only`.
+Reviews AEM code, Sling, OSGi, Dispatcher, and content packages when an Adobe Experience Manager change needs stack-specific checks; follows discovered versions and Cloud Manager authority.
 
-Verify an explicitly named iOS user journey with deterministic fixtures, selected schemes, and observable acceptance steps. Use for bounded test execution; do not trigger for inferred live-data journeys, broad simulator resets, or claims of physical-device inference.
+Invocation: implicit. Risk class: read-only.
 
-### swift-concurrency-diagnosis
+Historical name: adobe-aem-engineering-profile.
 
-Diagnose Swift actor isolation, Sendable diagnostics, task lifetime, cancellation, or reentrancy using actual compiler settings. Read-only; do not trigger for formatting, ordinary synchronous logic, or implementation without a concurrency question.
+### C# and .NET guidance
 
-### swift-persistence-contract-review
+[`stack-csharp-dotnet`](../skills/stack-csharp-dotnet/SKILL.md)
 
-Review Swift persistence mutation authority, SwiftData model identity, deletion, migration compatibility, or synchronization contracts. Read-only; do not trigger for visual styling, generic database advice, or executing a migration.
+Reviews C# and .NET changes when ASP.NET, Entity Framework, async code, packages, or target frameworks need focused checks; follows repository SDK and build contracts.
 
-### swiftui-feature-delivery
+Invocation: implicit. Risk class: read-only.
 
-Invocation: `explicit-only`.
+Historical name: csharp-dotnet-engineering-profile.
 
-Deliver an explicitly requested SwiftUI feature within approved files and targets. Use for bounded implementation with state ownership, availability, accessibility, and test evidence; do not trigger for read-only review or generic Swift questions.
+### GCP data guidance
+
+[`stack-gcp-data`](../skills/stack-gcp-data/SKILL.md)
+
+Reviews BigQuery query plans and dbt/Dataform incremental models for partition pruning, late corrections, and data contracts, including supplied snippets without cloud access. Also reviews Dataflow, Spark, and Airflow pipelines; excludes generic SQL questions and does not authorize provider execution or spend.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: gcp-data-engineering-profile.
+
+### Go guidance
+
+[`stack-go`](../skills/stack-go/SKILL.md)
+
+Reviews Go changes when goroutines, modules, APIs, dependencies, or tests need language-specific checks; follows repository toolchain and gate definitions.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: go-engineering-profile.
+
+### Google ADK guidance
+
+[`stack-google-adk`](../skills/stack-google-adk/SKILL.md)
+
+Reviews Google ADK architecture when asked about sessions, tools, models, evaluations, or deployment compatibility; checks exact versions and does not equate framework defaults with safety.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: google-adk-engineering-profile.
+
+### Java and Spring guidance
+
+[`stack-java-spring`](../skills/stack-java-spring/SKILL.md)
+
+Reviews Java and Spring changes when transactions, concurrency, services, dependencies, or JVM compatibility need focused checks; follows repository wrappers and toolchains.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: java-spring-engineering-profile.
+
+### PHP and Drupal guidance
+
+[`stack-php-drupal`](../skills/stack-php-drupal/SKILL.md)
+
+Reviews PHP and Drupal changes when modules, themes, entities, caching, or configuration need focused checks; follows Composer locks, repository tests, and supported versions.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: php-drupal-engineering-profile.
+
+### PostgreSQL and SQL guidance
+
+[`stack-postgresql-sql`](../skills/stack-postgresql-sql/SKILL.md)
+
+Reviews PostgreSQL schemas, queries, indexes, transactions, and migrations when database changes need focused checks; does not mutate shared data merely to validate a proposal.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: postgresql-sql-engineering-profile.
+
+### Python guidance
+
+[`stack-python`](../skills/stack-python/SKILL.md)
+
+Reviews Python changes when typing, async code, packaging, dependencies, or tests need focused checks; follows discovered Python versions and repository commands.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: python-engineering-profile.
+
+### Salesforce and Apex guidance
+
+[`stack-salesforce-apex`](../skills/stack-salesforce-apex/SKILL.md)
+
+Reviews Salesforce Apex changes when governor limits, bulk processing, triggers, sharing, or tests need focused checks; keeps deployment and org writes separately authorized.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: salesforce-apex-engineering-profile.
+
+### Swift and SwiftUI guidance
+
+[`stack-swift-swiftui`](../skills/stack-swift-swiftui/SKILL.md)
+
+Reviews Swift and SwiftUI changes when state, identity, layout, concurrency, or SDK compatibility need focused checks; separates compiler, simulator, device, and release evidence.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: swift-swiftui-engineering-profile.
+
+### Terraform guidance
+
+[`stack-terraform`](../skills/stack-terraform/SKILL.md)
+
+Reviews Terraform changes when plans, state, modules, providers, or drift need focused checks; discovers backend and version constraints without applying or changing shared infrastructure.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: terraform-engineering-profile.
+
+### TypeScript and JavaScript guidance
+
+[`stack-typescript-javascript`](../skills/stack-typescript-javascript/SKILL.md)
+
+Reviews TypeScript and JavaScript changes when async code, modules, types, dependencies, or builds need focused checks; uses repository runtimes, lockfiles, and commands.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: typescript-javascript-engineering-profile.
+
+### Verify an iOS journey
+
+[`verify-ios-journey`](../skills/verify-ios-journey/SKILL.md)
+
+Verifies a named iOS journey when explicitly asked to run fixture-based acceptance steps on selected schemes; excludes inferred live-data journeys, device claims, and broad simulator resets.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: ios-journey-verification.
+
+## measured-workflows
+
+### Address review findings
+
+[`address-review`](../skills/address-review/SKILL.md)
+
+Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it.
+
+Invocation: implicit. Risk class: bounded-execution.
+
+Historical name: respond-to-code-review.
+
+### Agree on the decisions
+
+[`align-on-decisions`](../skills/align-on-decisions/SKILL.md)
+
+Clarifies an underspecified request when the desired result, constraints, or success criteria are unclear; asks only material questions and does not reopen settled decisions.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: alignment-interview.
+
+### Assess the impact of a change
+
+[`assess-change-impact`](../skills/assess-change-impact/SKILL.md)
+
+Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: change-impact-analysis.
+
+### Choose a safe worktree
+
+[`assess-worktree-isolation`](../skills/assess-worktree-isolation/SKILL.md)
+
+Assesses checkout isolation when concurrent edits or dirty files may collide with a new task; reuses safe worktrees and preserves unrelated work rather than creating or deleting blindly.
+
+Invocation: implicit. Risk class: bounded-execution.
+
+Historical name: worktree-isolation.
+
+### Author a portable skill
+
+[`author-skill`](../skills/author-skill/SKILL.md)
+
+Authors portable skills when asked to create or revise SKILL.md workflows and client distributions; preserves routing, provenance, and invocation controls rather than treating ordinary docs as skills.
+
+Invocation: implicit. Risk class: bounded-execution.
+
+Historical name: portable-skill-authoring.
+
+### Build a focused prototype
+
+[`build-spike`](../skills/build-spike/SKILL.md)
+
+Runs an isolated technical experiment when explicitly asked to test feasibility or answer an implementation uncertainty; disposable evidence does not authorize production adoption.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: prototype-spike.
+
+### Choose a workflow
+
+[`choose-workflow`](../skills/choose-workflow/SKILL.md)
+
+Suggests a workflow when a user asks which skill to use, where to start, or how to finish existing work. Returns a route, context needs, and a copyable prompt without executing it.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: new in 0.19.
+
+### Coordinate authorized agents
+
+[`coordinate-agents`](../skills/coordinate-agents/SKILL.md)
+
+Coordinates delegated work when explicitly asked for independent workers or a bounded reviewer; defines ownership, evidence, and budgets without duplicating edits or delegating irreversible decisions.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: multi-agent-orchestration.
+
+### Design a module interface
+
+[`design-module-interface`](../skills/design-module-interface/SKILL.md)
+
+Designs module boundaries when asked to untangle coupling, simplify an API, or clarify ownership; makes caller contracts concrete before implementation.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: module-interface-design.
+
+### Design web motion
+
+[`design-web-motion`](../skills/design-web-motion/SKILL.md)
+
+Designs web motion when asked to animate a design, plan an interaction, or create a product showcase. Specifies choreography, state, responsive behavior, and static alternatives; does not implement or publish.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: new in 0.19.
+
+### Diagnose a failure
+
+[`diagnose-failure`](../skills/diagnose-failure/SKILL.md)
+
+Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix.
+
+Invocation: implicit. Risk class: bounded-execution.
+
+Historical name: systematic-diagnosis.
+
+### Edit technical writing
+
+[`edit-technical-writing`](../skills/edit-technical-writing/SKILL.md)
+
+Edits technical writing when asked to tighten a status update, clarify documentation, or remove vague and repetitive prose; preserves evidence, uncertainty, and the author's meaning.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: high-signal-technical-writing.
+
+### Implement an agreed plan
+
+[`execute-plan`](../skills/execute-plan/SKILL.md)
+
+Executes an identified implementation plan when explicitly authorized to implement it; tracks checkpoints, tests, deviations, and unfinished work without expanding scope.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: plan-execution.
+
+### Understand a codebase
+
+[`explain-codebase`](../skills/explain-codebase/SKILL.md)
+
+Explains existing code when asked how a request flows, where behavior lives, or what a module does; grounds the explanation in current files rather than inferred historical intent.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: codebase-explanation.
+
+### Finish a development branch
+
+[`finish-branch`](../skills/finish-branch/SKILL.md)
+
+Assesses next steps for a finished branch when explicitly asked to wrap up development; presents PR, retention, or cleanup options without assuming merge or deletion authority.
+
+Invocation: explicit. Risk class: external-write.
+
+Historical name: finish-development-branch.
+
+### Define the problem
+
+[`frame-problem`](../skills/frame-problem/SKILL.md)
+
+Frames a feature or problem when asked what to build, which outcome matters, or whether a proposed fix addresses the need; establishes users, constraints, and success before implementation.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: problem-framing.
+
+### Guide a configuration change
+
+[`guide-configuration`](../skills/guide-configuration/SKILL.md)
+
+Guides account or device setup when explicitly asked to help with a protected configuration step; verifies visible results without requesting secrets or claiming unseen completion.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: guided-configuration.
+
+### Hand off unfinished work
+
+[`handoff-work`](../skills/handoff-work/SKILL.md)
+
+Prepares a continuation record when explicitly asked to hand off or resume work elsewhere; records exact state, unfinished work, evidence, and existing authority without transferring new permissions.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: task-handoff.
+
+### Implement with a failing test first
+
+[`implement-test-first`](../skills/implement-test-first/SKILL.md)
+
+Implements a bounded behavior change when explicitly asked to use test-driven development; establishes a meaningful failing test, makes it pass, and refactors within authorized scope.
+
+Invocation: implicit. Risk class: bounded-execution.
+
+Historical name: test-driven-change.
+
+### Investigate why a design exists
+
+[`investigate-design-rationale`](../skills/investigate-design-rationale/SKILL.md)
+
+Investigates why a design exists when asked why code was written that way or which constraint drove it; distinguishes historical evidence from plausible explanations.
+
+Invocation: implicit. Risk class: network-read.
+
+Historical name: design-rationale-investigation.
+
+### Define the domain vocabulary
+
+[`model-domain-vocabulary`](../skills/model-domain-vocabulary/SKILL.md)
+
+Clarifies domain terms when teams use the same word differently or code and documents disagree; proposes definitions and examples without declaring owner approval.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: domain-vocabulary-modeling.
+
+### Plan a change
+
+[`plan-change`](../skills/plan-change/SKILL.md)
+
+Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: implementation-planning.
+
+### Plan test coverage
+
+[`plan-tests`](../skills/plan-tests/SKILL.md)
+
+Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: test-strategy.
+
+### Prepare or maintain a draft PR
+
+[`publish-change`](../skills/publish-change/SKILL.md)
+
+Commits, pushes, or opens a PR only when explicitly requested; verifies identity, destination, diff, and checks while keeping merge, deployment, and release separately authorized.
+
+Invocation: explicit. Risk class: external-write.
+
+Historical name: publish-change-safely.
+
+### Prepare a review request
+
+[`request-review`](../skills/request-review/SKILL.md)
+
+Prepares a review packet when explicitly asked to request review of a change; states scope, tests, and risks, and sends it only when the destination and action are authorized.
+
+Invocation: explicit. Risk class: external-write.
+
+Historical name: request-code-review.
+
+### Research with sources
+
+[`research-sources`](../skills/research-sources/SKILL.md)
+
+Researches a question when asked to look up, compare, or verify current facts; uses primary sources and preserves dates, links, and uncertainty without turning claims into findings.
+
+Invocation: implicit. Risk class: network-read.
+
+Historical name: source-grounded-research.
+
+### Resolve merge conflicts
+
+[`resolve-merge-conflicts`](../skills/resolve-merge-conflicts/SKILL.md)
+
+Resolves a named Git conflict when explicitly asked to reconcile a merge, rebase, or cherry-pick; preserves both intents and keeps continuation, commit, and push authority separate.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: merge-conflict-reconciliation.
+
+### Review an engineering prompt
+
+[`review-engineering-prompt`](../skills/review-engineering-prompt/SKILL.md)
+
+Reviews a request for an engineering assistant when asked to check a prompt, clarify coding instructions, or improve a repair request. Checks outcome, context, scope, permissions, and completion evidence; returns feedback without executing the quoted task.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: engineering-prompt-review.
+
+### Reflect on the workflow
+
+[`review-workflow`](../skills/review-workflow/SKILL.md)
+
+Reviews a completed workflow when explicitly asked what caused friction or what to improve next; uses observed task evidence without diagnosing people or claiming unmeasured benefit.
+
+Invocation: explicit. Risk class: read-only.
+
+Historical name: workflow-retrospective.
+
+### Manage a research workflow
+
+[`run-research-workflow`](../skills/run-research-workflow/SKILL.md)
+
+Coordinates a research lifecycle when explicitly asked to maintain traceable knowledge, evaluation, and corrections; excludes one-off search and never implies automatic publication.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: research-to-publication-lifecycle.
+
+### Trace decisions to evidence
+
+[`trace-decisions`](../skills/trace-decisions/SKILL.md)
+
+Maintains a decision log when explicitly asked to record choices, evidence, and unresolved work across a task; excludes hidden reasoning, raw transcripts, and unrelated private context.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: decision-evidence-trace.
+
+### Track acceptance evidence
+
+[`track-acceptance`](../skills/track-acceptance/SKILL.md)
+
+Creates a completion ledger when explicitly asked to track acceptance criteria and current evidence; preserves blocked and abandoned requirements.
+
+Invocation: explicit. Risk class: bounded-execution.
+
+Historical name: acceptance-evidence-ledger.

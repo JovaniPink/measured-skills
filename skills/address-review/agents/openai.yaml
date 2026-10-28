@@ -1,0 +1,6 @@
+interface:
+  display_name: "Address review findings"
+  short_description: "Evaluates reviewer comments"
+  default_prompt: "Use $address-review for this task: Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it."
+policy:
+  allow_implicit_invocation: true

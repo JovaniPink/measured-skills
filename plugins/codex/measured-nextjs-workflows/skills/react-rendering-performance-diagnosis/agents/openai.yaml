@@ -1,6 +1,0 @@
-interface:
-  display_name: "React Rendering Performance Diagnosis"
-  short_description: "Diagnoses React rerenders or request waterfalls"
-  default_prompt: "Use $measured-nextjs-workflows:react-rendering-performance-diagnosis for this task: Diagnoses React rerenders or request waterfalls when an observed interaction is slow; requires profiler and boundary evidence rather than blanket memoization or speculative speed claims."
-policy:
-  allow_implicit_invocation: true

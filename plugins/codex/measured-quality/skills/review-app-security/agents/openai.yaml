@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review application security"
+  short_description: "Reviews application security"
+  default_prompt: "Use $measured-quality:review-app-security for this task: Reviews application security when asked to check authentication, authorization, input handling, sessions, or exposed data; returns evidence-based findings without changing controls."
+policy:
+  allow_implicit_invocation: true

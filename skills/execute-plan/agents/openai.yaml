@@ -1,0 +1,6 @@
+interface:
+  display_name: "Implement an agreed plan"
+  short_description: "Executes an identified implementation plan"
+  default_prompt: "Use $execute-plan for this task: Executes an identified implementation plan when explicitly authorized to implement it; tracks checkpoints, tests, deviations, and unfinished work without expanding scope."
+policy:
+  allow_implicit_invocation: false

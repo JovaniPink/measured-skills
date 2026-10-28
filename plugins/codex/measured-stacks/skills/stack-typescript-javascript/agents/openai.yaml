@@ -1,0 +1,6 @@
+interface:
+  display_name: "TypeScript and JavaScript guidance"
+  short_description: "Reviews TypeScript and JavaScript changes"
+  default_prompt: "Use $measured-stacks:stack-typescript-javascript for this task: Reviews TypeScript and JavaScript changes when async code, modules, types, dependencies, or builds need focused checks; uses repository runtimes, lockfiles, and commands."
+policy:
+  allow_implicit_invocation: true

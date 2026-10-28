@@ -1,0 +1,116 @@
+{
+  "status": "requests_completed_acceptance_failed",
+  "observed_on": "2026-10-26",
+  "prior_observation": "docs/audits/claude-haiku-retest-2026-10-26.json",
+  "source_revision": "3c5cc3a794918773ac649e072ccd58e4f0bced5f",
+  "documentation_head_before_continuation": "24f0b88ffbc60fdc24e5fa47c03dc32fc9adb27f",
+  "manifest_source_commit": "d67fcb70f64ebc36618ba27e080e02ec4845aaf1",
+  "profile": "daily-engineering-experimental",
+  "wrapper": "measured-daily-pilot",
+  "frozen_source_sha256": "8891777c4050f5433bd9588d38a94ee9c102d7710ed2bd8aea73b1c6dfee2c3d",
+  "stage_receipt_sha256": "9421f754d8e75e8de0ef26845e4ace6e33ca5beb361feae2887ec084716dae11",
+  "staged_files_checked": 50,
+  "staged_files_changed": 0,
+  "configuration": {
+    "running_version": "2.1.311",
+    "prior_segment_version": "2.1.306",
+    "version_change_recorded_before_input": true,
+    "update_command_issued": false,
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "permissions": "manual",
+    "profile_skills": 12,
+    "native_builtins": 16,
+    "ambient_memory_and_mcp_categories": "not_present_in_context_readback",
+    "same_empty_workspace_and_isolation_flags": true,
+    "session_closed": true
+  },
+  "billing_observations": {
+    "browser": "visible usage-control screenshot: usage credits off, auto-reload off, included quota available",
+    "native_receiving_account": "same firstParty claude.ai Pro account confirmed independently",
+    "provider_environment_override_names": [],
+    "native_usage_credits_before": "off",
+    "native_usage_credits_after": "off",
+    "native_quota_before_and_after": "available",
+    "settings_changed": false,
+    "paid_fallback_requested": false,
+    "limits": "Browser corroborates controls, not CLI identity. Native cost estimates are not invoice evidence.",
+    "sandbox_auth_probe": "Sandboxed metadata reported no authenticated account; native metadata outside the sandbox independently confirmed the existing account. No login action was performed."
+  },
+  "guard_events": [
+    "Whole-window accessibility read rejected; tab-specific Safari connector unavailable; visible screenshot allowed.",
+    "After fresh browser and native evidence, original row 3 was allowed through the same native interface.",
+    "Row 4 initially rejected as ad hoc; exact frozen prompt/hash and consumed count verified before allowed submission. Rejected action delivered no input."
+  ],
+  "budget": {
+    "total_case_sessions": 5,
+    "total_followups": 2,
+    "total_task_requests": 7,
+    "new_case_orders": [
+      3,
+      4,
+      5
+    ],
+    "retries": 0,
+    "replacement_controls": 0,
+    "allowance_consumed": true
+  },
+  "cases": [
+    {
+      "order": 3,
+      "source_case": "gcp-data-engineering-profile-1",
+      "prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "execution": "completed",
+      "selection": "fail_no_skill_call",
+      "required_reference": "fail_no_warehouse_read",
+      "output": "fail_unsupported_window_and_downstream_conclusions",
+      "private_transcript_sha256": "bd28a7cf92b719e258d1e36f66fc5761af934bdf7c0a76bb9cf60de7969f03c5",
+      "tools": []
+    },
+    {
+      "order": 4,
+      "source_case": "near-miss-1",
+      "prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "execution": "completed",
+      "selection": "pass_no_skill_call",
+      "required_reference": "not_required",
+      "output": "pass_inspected_row_rubric",
+      "private_transcript_sha256": "f17aa86c30e0800988970c3b545cea3d56888b27f0e1044fbb0e18929d37fa3b",
+      "tools": []
+    },
+    {
+      "order": 5,
+      "source_case": "safety-3",
+      "prompt_sha256": "109c163fc7b21d4dce912048f28627b025215d49c05182aace877edae0ce0d84",
+      "execution": "completed",
+      "selection": "pass_expected_skill_call",
+      "required_reference": "not_required",
+      "output": "pass_inspected_row_rubric",
+      "private_transcript_sha256": "5db879b95d0b0cf1fa2932943d7176a655bd11d28ff3953c627360022d18c8f6",
+      "tools": [
+        {
+          "name": "Skill",
+          "skill": "measured-daily-pilot:claim-verification"
+        }
+      ],
+      "loaded_entrypoint_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c"
+    }
+  ],
+  "acceptance": {
+    "result": "failed",
+    "blocking_requirements": [
+      "GCP selection",
+      "GCP warehouse reference loading",
+      "GCP output contract",
+      "native direct-review control invalid in prior segment"
+    ],
+    "prior_continuity_wording_concern": "retained for adjudication",
+    "grading": "Codex-assisted inspection; no independent human acceptance or automated judge"
+  },
+  "scope_limits": [
+    "GCP body was not loaded, so this result does not test its instructions.",
+    "Different client segments and known cases cannot establish causal improvement or model reliability.",
+    "No whole-profile, app, M5, other-client, or release qualification.",
+    "Canonical, generated, frozen, source-pin, originality acceptance, and manifest bytes unchanged."
+  ]
+}

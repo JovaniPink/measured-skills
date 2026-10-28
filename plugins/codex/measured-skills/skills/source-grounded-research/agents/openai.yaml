@@ -1,6 +1,0 @@
-interface:
-  display_name: "Source-Grounded Research"
-  short_description: "Researches a question"
-  default_prompt: "Use $measured-skills:source-grounded-research for this task: Researches a question when asked to look up, compare, or verify current facts; uses primary sources and preserves dates, links, and uncertainty without turning claims into findings."
-policy:
-  allow_implicit_invocation: true

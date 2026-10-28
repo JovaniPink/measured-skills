@@ -1,6 +1,0 @@
-interface:
-  display_name: "Decision Evidence Trace"
-  short_description: "Maintains a decision log"
-  default_prompt: "Use $measured-reasoning:decision-evidence-trace for this task: Maintains a decision log when explicitly asked to record choices, evidence, and unresolved work across a task; excludes hidden reasoning, raw transcripts, and unrelated private context."
-policy:
-  allow_implicit_invocation: false

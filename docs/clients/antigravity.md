@@ -1,10 +1,12 @@
 # Antigravity setup
 
-Antigravity setup and testing have equal priority with Codex and Claude. Candidate 0.18.0 generates 11 modular packs under `plugins/antigravity/`. Its installed-client behavior remains unqualified; see the [candidate record](../client-candidate-v0.18.0.md). The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked for the nine 0.17.1 packs on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
+**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+
+Antigravity setup and testing have equal priority with Codex and Claude. Preview 0.19.0 generates four modular packs under `plugins/antigravity/`. Its installed-client behavior remains unqualified; see the [preview record](../client-candidate-v0.19.0.md). The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked for the nine 0.17.1 packs on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
 
 A one-skill package passed native install and skill-menu checks in CLI 1.1.26; package and menu checks were repeated on 1.1.27. The [0.12.0 candidate record](../client-candidate-v0.12.0.md) adds a two-skill check on CLI 1.1.27. The motion reference and fixture loaded, but the answer invented evidence. The [0.14.0 record](../client-candidate-v0.14.0.md) adds a four-skill check on CLI 1.1.28. Nine of ten cases met their expectation and no reply invented evidence. That is one partial run on a different version, so the expansion, then 64 skills, remained held. The [0.15.0 candidate record](../client-candidate-v0.15.0.md) adds a five-skill check on CLI 1.2.0 (`accessibility-review`, `code-change-review`, `functional-motion-review`, `performance-scalability-diagnosis`, and `finding-consolidation`). Near-miss case 3 was re-examined under diagnostic bypass flags (`--dangerously-skip-permissions`), confirming routing to `performance-scalability-diagnosis` when commands are permitted, while standard headless permission denial remains a documented non-interactive boundary. The 0.15.0 SARIF finding vocabulary was observed live on `code-change-review`, and `finding-consolidation` passed both multi-review merging and single-review refusal.
 
-The normal packs and preview builder include 70 implicit skills. All 17 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
+The normal packs and preview builder include 73 implicit skills. All 17 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
 
 ## Check what is there
 
@@ -22,29 +24,38 @@ In the desktop app, open **Settings > Customizations** and inspect the skill lis
 Google's [combined plugin guide](https://www.antigravity.google/docs/plugins?tab=cli) documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It also describes an interactive marketplace and inline `/plugin` commands. Clone and review the repository, then install one pack from its folder:
 
 ```sh
-agy plugin install /absolute/path/to/skills/plugins/antigravity/measured-skills
-agy plugin enable measured-skills
+agy plugin install /absolute/path/to/skills/plugins/antigravity/measured-quality
+agy plugin enable measured-quality
 agy plugin list
 ```
 
 Repeat with another folder under `plugins/antigravity/` for each pack you want. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema.
 
-The expected slash commands use the installed plugin namespace. This form has not been observed on agy for these packs:
+For everyday tasks, start with an ordinary request naming an eligible skill:
 
 ```text
-/measured-skills:claim-verification Check which completion claims have evidence.
-/measured-skills:systematic-diagnosis Investigate this failure.
+Use the installed verify-claims skill to check which completion claims have evidence. Report if it is unavailable. Make no changes.
+Use the installed diagnose-failure skill to investigate this failure. Report if it is unavailable. Diagnose before editing.
 ```
+
+Google's [skill guide](https://www.antigravity.google/docs/skills?tab=ide), checked
+October 26, 2026, describes slash commands derived from skill names. Select the
+actual entry shown by your installed client; do not assume one plugin namespace
+spelling applies across versions. The preview observations below retain their
+original command names and dates. They do not establish current behavior for all
+packs. Check actual loading separately from answer quality. The
+[feature workflow](../feature-development-workflow.md#antigravity-prompts)
+provides prompts that preserve the explicit-only exclusions.
 
 ## Prepare a preview
 
 To prepare a self-contained preview directory for inspection or offline testing:
 
 ```sh
-python3 scripts/build_antigravity.py --skill claim-verification --output dist/antigravity-check
+python3 scripts/build_antigravity.py --skill verify-claims --output dist/antigravity-check
 ```
 
-The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 70 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
+The result contains `plugin/` and `bundle.json`. The latter lists selected skills, exclusions, and file hashes. Omit `--skill` to prepare the 73 eligible implicit skills. The builder does not install anything and refuses to overwrite an existing folder.
 
 The preview keeps `skills/<name>/SKILL.md` and linked notes. It omits Codex's `agents/` folder and excludes explicit-only skills. The directory layout loaded correctly on CLI 1.1.28; recheck it on a version you have not tested. Do not flatten files by hand or lose their links.
 

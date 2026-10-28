@@ -1,23 +1,27 @@
 # Work from a documented contract
 
+For the full feature sequence and copy-paste prompts, start with
+[Build a feature with Measured Skills](feature-development-workflow.md).
+This page explains how the plan and evidence stay aligned as work progresses.
+
 Use existing skills and the repository's own documents. There is no new command
 runner, mandatory plan directory, or automatic release sequence.
 
-1. Use `implementation-planning` to compare intended behavior with code, tests,
+1. Use `plan-change` to compare intended behavior with code, tests,
    and relevant uncommitted changes. Name acceptance criteria and documents that
    must be reconciled. Keep proposals distinct from verified facts.
-2. When the user authorizes a named plan, explicitly select `plan-execution`.
+2. When the user authorizes a named plan, explicitly select `execute-plan`.
    Implement complete slices, verify them, and update the authorized plan record.
-3. Use `claim-verification` to check completion claims against current evidence.
+3. Use `verify-claims` to check completion claims against current evidence.
    Documentation, commits, and test receipts support different claims.
 
-For Codex, select `$measured-engineering-build:implementation-planning` and
-`$measured-engineering-delivery:plan-execution`. Claude Code uses the same plugin
+For Codex, select `$measured-workflows:plan-change` and
+`$measured-workflows:execute-plan`. Claude Code uses the same plugin
 names with `/` instead of `$`. Both generated execution skills restrict implicit
 invocation. Test the installed controls before relying on them.
 
 Antigravity packages include planning and claim verification. They exclude
-`plan-execution` because its explicit-only control is not verified there. Do not
+`execute-plan` because its explicit-only control is not verified there. Do not
 remove that policy or copy its canonical folder into an automatically selected
 skill directory. Ordinary implementation explicitly requested by the user can
 still proceed under the client's own rules; this does not qualify the excluded

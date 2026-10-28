@@ -13,10 +13,12 @@ from evaluate_gate_fixtures import evaluate as evaluate_gate_fixtures
 from check_upstream_freshness import check as check_upstream_freshness
 from sync_private_overlay import sync as check_private_overlay
 from validate_catalog import validate_all
+from discovery import check as check_discovery
 
 
 def run() -> list[str]:
     errors = validate_all(require_packages=True)
+    errors.extend(check_discovery())
     errors.extend(scan_public_boundary())
     errors.extend(check_generated())
     errors.extend(check_originality())
