@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "466a4fde4f6184224fe0a85f286f6aa88aacb99e",
+  "source_commit": "ba6676318f78ee826432e7824d97ce3135620209",
   "created_on": "2026-10-28",
   "artifacts": [
     {
@@ -72,17 +72,17 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "0cf6b933294e4b8de32bd3b7f03868c034854986e56314d2c439bb5d77c59d0a"
+      "sha256": "e0f4d879b0efb2ec96affab8dcd4907f741f4dbf9105ab91dbb28dfd213fe87f"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "6ba75387c4caa6812a29c3a720c400009bc75f65c3da16404302ae83a1f6b05a"
+      "sha256": "a55006ecc65a92250f8170bd9e80f89a1efa9e4a319e5e5091cc4277ca11929c"
     },
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "f493a0e4ec1041388fa1f1850b1cab8f023883c7aecce2d4ac20bef1f496cfce"
+      "sha256": "f8f826ed48e40181a29305e5c86c046fdff8a8b8a11af8313fa631c6fa9ca54a"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "36577047d6920c1ea691248a3f8b8916319b350fa0552ab576e42566c9c0c573"
+      "sha256": "563c6961768fdf54407ccf523e9843d7b3aceae74773ee5669ec470cf967bcb9"
     },
     {
       "kind": "zip",
@@ -162,7 +162,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/design-module-interface-0.19.0.zip",
-      "sha256": "09165bbc62ad493a201ee65d3f5ce44c51e83901bf0606c530919e647bd8f1c4"
+      "sha256": "481cc04039c96d006e381bc5264d81ce0ba36e1cf63562733884a6db5ff31ca0"
     },
     {
       "kind": "zip",
@@ -207,7 +207,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/explain-codebase-0.19.0.zip",
-      "sha256": "82d9b83bff13e716c9d89a14e4e69ab58c936cf87c15368f18862f659b2c8d56"
+      "sha256": "789c7d456d136f7e22fde8d56b563dfa49518d13507b3bfdecf7586b3199c8b1"
     },
     {
       "kind": "zip",
@@ -272,7 +272,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-change-0.19.0.zip",
-      "sha256": "741e83e0887d6c757af165508887c91df619e4001b643dc5871cf07a5205380c"
+      "sha256": "97535e7e2256442787d99f224affa3e78bef3f4410b3a069f1e16654449657ed"
     },
     {
       "kind": "zip",
@@ -452,7 +452,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-gcp-data-0.19.0.zip",
-      "sha256": "f76ad8d18e09ef93f521481bf4febd08fff4d7d0b84cce5b6934525f66c2bf51"
+      "sha256": "d8933c1f3ceaef5f839dc23ed17b34000dc092e4547ae9f7168618bb5ca9bd8b"
     },
     {
       "kind": "zip",
@@ -477,7 +477,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-postgresql-sql-0.19.0.zip",
-      "sha256": "38986db3e751487f36f64c9c17e9886c80f3495719e049d890d1d41f0fb11c9d"
+      "sha256": "b3d1fd99cc1e004d7ede99370a69392073bbc530b06add7571e1721305eb5552"
     },
     {
       "kind": "zip",
@@ -492,7 +492,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-swift-swiftui-0.19.0.zip",
-      "sha256": "42f40e31e722345c0ad6e2a40766a53ec9528b8e285adbad5e381929643961d9"
+      "sha256": "c2206a26cb0acc95322b5c5674da0be7ac5226d8dcd45895ecde95810a214c34"
     },
     {
       "kind": "zip",
@@ -522,7 +522,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/verify-claims-0.19.0.zip",
-      "sha256": "6ed9ce2423379c2193b78bc34915053d0fec034c746b37062bbaf06fd6fc48d3"
+      "sha256": "3a1e8d420856f9115f2e74dc79bde0970367b9f7d4abd9ed518b612da63d156d"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "853b5198bbc2f93bf250baa85fff6b67f90857a41726c579645b831af5bd02ac"
+      "sha256": "d33bb895d0d3e4667fed274cd9615ff861055ed413ffa341cb34030f3fe4d317"
     },
     {
       "kind": "file",
@@ -562,17 +562,17 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "0f601e5bbcab0b3eadb6b7dad6a030ff5cb4309e99f8ced5638d6c6aec8031de"
+      "sha256": "c580c02ff65c967ff7c38a9ade205cc3f7d925ae90d20c201ee66d9bec6f45dd"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stacks",
-      "sha256": "ebe215ac67635eaae33d30c20e9a4904420c9ecbb6332c151525c7ce021c0077"
+      "sha256": "7df474acca0bdc8d6a921cf81238c03b51b8228de41e4d996b53095840765811"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "85ee61fbd5ea563ac94839ab60241213ea923a170ea52d660ca39c7e1ae7e699"
+      "sha256": "f43ef5d321b394f8e6305aa8a4332d99cecf881f6cf4c04961397a6bce95afe3"
     },
     {
       "kind": "tree",
@@ -582,17 +582,17 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "3306b033f3d45629c75a0be6176ba26f4a3ac13e40b29c844aca14f52a764f2a"
+      "sha256": "c4ff25a25fcfefbad95cae8785370c152dcb06dda1d78c4ae2010e0d5730d137"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stacks",
-      "sha256": "5953fccb8010fdfe5240856ceca10a7352e2b2fa86c18b4aac62337a2b5c31f4"
+      "sha256": "d0a694ba1d455f12867b2ddb7f04ad06cc86bfb55443c99b58ef2a1a8f58fb00"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "6f4e977b158ca8cc908b2771efc9e221d8839742876158f3a320e21234a0ea1e"
+      "sha256": "a626b75f0b76332b3e650de4dd193b2fefb7ac70f4e13783bd89d944b754cc16"
     },
     {
       "kind": "tree",
@@ -602,22 +602,22 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "231dbfe61825d29644d1ce14376bc8eaa453c87bbce9de175fc07a5a55beb2d0"
+      "sha256": "be489b89df2b0b7294a04426733bff28e99cd904e7e2b226bdf019e8184458a7"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stacks",
-      "sha256": "124b5e60dd077819969922f312aa8fc035a5f235af7832737b2930cdc51e9642"
+      "sha256": "029e18327db899b3774567e687c17dba8167e0a4f3e3c44609712c0c8ae6fea9"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "8c085bd7f0702d25c7784fdc0e2ee701ab6cbe8fd0640a1cc0142f03d948cf6b"
+      "sha256": "5a008f206660081980e70ffb0e6ee9fbee1d06089e4298dabecb2b8ec702ea8e"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "567332f15c7db17502c4a73dfba1afa18b98293032c565187cd274f197af751d"
+      "sha256": "9c600bd3e605dd727e38946a607257d687706f343e433010849bf92358f3c4ff"
     }
   ]
 }
