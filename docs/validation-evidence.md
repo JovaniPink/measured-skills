@@ -11,7 +11,21 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 311 regression tests.
+Current test suite: 312 regression tests.
+
+## October 28: action-specific availability
+
+The chooser now derives each action's package, invocation policy, core-profile
+membership and request path for the selected client. Static and interactive views
+share these records. The taxonomy separates observed use, repeatable acceptance
+and comparative benefit; all maturity labels remain candidate.
+
+The first full unit run found a stale suite-size receipt (311 versus 312), which
+is corrected here. Deterministic validation, strict typing, Ruff, workflow checks,
+all 90 bundled skill format checks and four Claude strict plugin checks passed.
+Two archive builds matched. Standalone skills-ref and a separate Codex plugin
+validator remain unavailable. The human exercise and client trials remain unrun.
+Final suite and hosted results must be read with the draft's exact revision.
 
 ## October 28: workflow depth within the 0.19 preview
 
