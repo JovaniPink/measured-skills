@@ -1032,23 +1032,23 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "2d4d51c444f011b1948b5ac278097bff6d9a1815e7f49239192648f254bd4293",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "d9dbb9c035e0a68779afdeb2e0547b1b8331dc846e49e6c8f103ac847f80b447",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "a66864bd0d56d9cce2bfbbc645590ec36d95a93263be736099fe769fd7b24b15",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "190cde3b92d6a598e1e897d7a97dd78669341098205579b9c4222410949f8890",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "7ffbf8c96e27bbd2b2d6e2cbd1afdf092c20a34545fe514e4ae9ba7a504be9f9",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "5f8e2ef7667f68cebe6f7d98a3700ec55a813477bb16b5b3642b80d5078bf323",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "09a32438a8726e4d14463946ced72cfd38d1b4a53c3d85bb509a4083721c36d7",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "029aeafc944c31bd0a5206edd95de209d0f13ccfd7ae8cd2a1fe34eece4ff3e2",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",

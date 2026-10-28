@@ -567,7 +567,7 @@
       ]
     }
   ],
-  "source_revision": "c0cd0b06061944c09e7738b702d059d3308fe567",
+  "source_revision": "ba9519b8f946162ac5124e448e85762f2cc5bca4",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
@@ -576,8 +576,8 @@
     "catalog/skills.json": "199c0c51fc45bbda27277e1664d5f55646aa0b24ecfe0f2dbae299d4469941a2",
     "catalog/workflows.json": "f493a0e4ec1041388fa1f1850b1cab8f023883c7aecce2d4ac20bef1f496cfce",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
-    "scripts/discovery-ui.js": "5fd210ef1f287dd67505e2734b6d29ea0a89cd6061b9d0a02626e298a091d43e",
-    "scripts/discovery.py": "351033fa0f8e7dd1b664502f30671ff312bb848ef69f107e0e045eb849d3d042",
+    "scripts/discovery-ui.js": "376cb8efa37832d43952b9c27d82e80bb2e8632f09ef622325d05fb9c74f2308",
+    "scripts/discovery.py": "f0af229ed5b62ccd408f342d4d21aeff7fd07101499c3b4df1482264daa2d273",
     "skills/AGENTS.md": "8f95b31d79420e93e53b891b00812085c51bd3cc28a88a0a6e955c2e0e43e377",
     "skills/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
     "skills/address-review/SKILL.md": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
