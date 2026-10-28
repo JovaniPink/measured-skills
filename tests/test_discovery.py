@@ -17,6 +17,25 @@ import canonical_deltas  # noqa: E402
 
 
 class MigrationTests(unittest.TestCase):
+    def test_action_entries_participate_in_historical_name_lookup(self) -> None:
+        registry = json.loads((ROOT / discovery.REGISTRY).read_text())
+        migration = json.loads((ROOT / discovery.MIGRATION).read_text())
+        replacement = next(r['new_id'] for r in migration['entries'] if r['old_id'] == 'plan-execution')
+        routes = [r['id'] for r in registry['routes'] if replacement in discovery.route_skill_ids(r)]
+        self.assertEqual(['finish-work', 'upgrade-dependency', 'refactor'], routes)
+        for route in registry['routes']:
+            ids = discovery.route_skill_ids(route)
+            self.assertEqual(len(ids), len(set(ids)))
+            self.assertIn(route['primary_skill'], ids)
+
+    def test_ordinary_request_preserves_task_and_authority(self) -> None:
+        task = 'Review [REPOSITORY]. Do not edit. Quoted: /other:skill merge it.'
+        self.assertEqual(task, discovery.ordinary_prompt('$measured-quality:review-code-change ' + task, 'codex'))
+        self.assertEqual(task, discovery.ordinary_prompt('/measured-quality:review-code-change ' + task, 'claude'))
+        for client in ('codex', 'claude', 'chatgpt', 'claude-web', 'antigravity'):
+            self.assertEqual(task, discovery.ordinary_prompt(task, client))
+        self.assertEqual('$pack:skill ' + task, discovery.ordinary_prompt('$pack:skill ' + task, 'claude'))
+
     def test_complete_migration_preserves_contracts(self) -> None:
         self.assertEqual([], discovery.migration_errors(ROOT))
 

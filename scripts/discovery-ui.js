@@ -23,14 +23,26 @@
   Object.entries(data.stack_options).forEach(([id, value]) => {
     const o = make("option", value.label, stack); o.value = id;
   });
+  const styleLabel = make("label", "Request style ", host);
+  const style = make("select", "", styleLabel);
+  [["ordinary", "Ordinary request"], ["native", "Verified installed skill"]].forEach(([id, title]) => {
+    const o = make("option", title, style); o.value = id;
+  });
+  const invocationHelp = make("p", "", host);
   const result = make("div", "", host);
   const status = make("p", "", host);
   status.setAttribute("role", "status");
   const render = () => {
     result.replaceChildren();
+    status.textContent = "";
+    style.disabled = !["codex", "claude"].includes(client.value);
+    if (style.disabled) style.value = "ordinary";
+    invocationHelp.textContent = style.value === "ordinary"
+      ? "Copy an ordinary request when the skill is missing or its source is uncertain. This does not claim that a skill loaded. Keep your current constraints when filling in placeholders."
+      : "Select this exact installed entry before sending its native command. A matching name alone does not verify its source or loading.";
     const term = search.value.toLowerCase().trim();
     const matching = data.skills.filter(s => [s.id, s.label, s.description, ...s.historical_names].join(" ").toLowerCase().includes(term));
-    const routes = data.routes.filter(r => !term || [r.label, r.why, ...r.search_phrases].join(" ").toLowerCase().includes(term) || matching.some(s => r.primary_skill === s.id || r.optional_skills.includes(s.id)));
+    const routes = data.routes.filter(r => !term || [r.label, r.why, ...r.search_phrases].join(" ").toLowerCase().includes(term) || matching.some(s => r.search_skills.includes(s.id)));
     make("p", `${routes.length} routes. Search stays on this page.`, result);
     routes.forEach(r => {
       const article = make("article", "", result);
@@ -45,7 +57,8 @@
         make("summary", m.label, detail); make("p", m.scope, detail);
         make("p", m.action_guidance[client.value], detail);
         const option = data.stack_options[stack.value];
-        const text = m.prompts[client.value] + (option.skill ? ` Apply ${option.skill} guidance if available and relevant after repository discovery; report whether it loaded.` : "");
+        const prompts = style.value === "native" ? m.prompts : m.ordinary_prompts;
+        const text = prompts[client.value] + (option.skill ? ` Apply ${option.skill} guidance if available and relevant after repository discovery; report whether it loaded.` : "");
         const pre = make("pre", text, detail); pre.tabIndex = 0;
         const copy = make("button", "Copy request", detail); copy.type = "button";
         copy.addEventListener("click", async () => {
@@ -64,7 +77,7 @@
     }
     if (!routes.length && !matching.length) make("p", "No match. Try a shorter task phrase or browse the complete catalog below.", result);
   };
-  search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render);
+  search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
   render();
   host.hidden = false;
   document.getElementById("static-guide").hidden = true;

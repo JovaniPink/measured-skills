@@ -24,10 +24,16 @@ exists. Check the [name and pack migration](migration-0.19.md); do not combine a
 old pack name with a new skill name or install an alias to make a prompt work.
 
 Before sending a Codex or Claude Code prompt, select the exact installed entry.
-If the requested entry is missing or ambiguous, remove the leading `$pack:skill`
-or `/pack:skill` token and send the remaining ordinary request. Say that skill
-loading is unverified. The fallback sentence inside a prompt cannot make a client
-accept an unknown native command. Preserve the same action scope and stopping point.
+The interactive chooser defaults to **Ordinary request**, which works without
+selecting a skill. Choose **Verified installed skill** only after checking its
+source; the resulting prompt includes the native command. The text-only guide
+also gives ordinary requests and identifies the optional native entry. Neither
+request style proves that a skill loaded.
+
+If you use another example whose entry is missing or ambiguous, remove its leading
+`$pack:skill` or `/pack:skill` token before sending the ordinary request. Say that
+skill loading is unverified. The fallback sentence inside a prompt cannot make a
+client accept an unknown native command. Preserve the same scope and finish line.
 
 The core profile supplies assessment, diagnosis, review, and verification. It
 does not include `execute-plan` or `publish-change`. The action card identifies

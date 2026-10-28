@@ -1,7 +1,7 @@
 # Post-merge Skills review
 
 Reviewed source: `b4200af067fe696d5e9e41bc3413cf4938d18c64` (merged main).
-Method: owner self-review, source and control-flow tracing, read-only metadata
+Initial method: owner self-review, source and control-flow tracing, read-only metadata
 inventory, and GitHub state readback. No independent reviewer, model trial,
 installation, test rerun, generator, dependency audit, or client-control change.
 This is not comprehensive validation of every skill's engineering guidance.
@@ -54,12 +54,42 @@ reconciliation, refactoring, upgrades, query plans and replay. Query inspection
 does not authorize EXPLAIN ANALYZE, provider reads or backfills. Reviewing a prompt
 does not execute the quoted task. Self-review is not independent review.
 
-No additional actionable code defect survived this bounded source inspection.
+No additional actionable code defect survived the initial bounded source inspection.
 That is not a guarantee about runtime behavior, browser usability, every export
 failure path, or all engineering advice in the catalog. Existing regression test
 sources were read for coverage; none was executed. No new prose-mirroring tests
 were added. Canonical skills, catalog selections, generators, exports, archives,
-source pins and manifests are outside this documentation change.
+source pins and manifests were outside that initial documentation change.
+
+## Follow-up source trace and repairs
+
+The existing draft at `ee71f2f5253d9007e6f63bf6f894fcc804e7964f` received a
+successful automatic hosted validation. That result was read, not rerun.
+Further review of the selector's actual data path found a warning missed by
+the initial inventory review: search considered primary and optional skills,
+but not action-specific entries. `execute-plan`, or its historical name
+`plan-execution`, could fail to return Finish existing work, Upgrade a dependency,
+and Refactor, even though each route has an execution action. Search now uses
+a generated union of primary, optional and action entries; the same alias
+matching feeds that index. This changes route lookup, not skill selection policy.
+
+The missing-entry clarification now also reaches the actual copy control. The
+chooser defaults to an ordinary request, with a separate native-command option
+for verified installed Codex or Claude entries. Antigravity and web-account
+requests remain ordinary. Text-only and no-JavaScript guides include the same
+fallback. Only a leading recognized native selector is removed; quoted commands,
+scope and permissions are preserved. Client changes clear stale copy-success
+messages. These are prepared behavior changes, not observed browser or human
+acceptance results.
+
+Focused regression definitions cover action-entry lookup through a historical
+name and preservation of task authority while removing a leading native token.
+They were not executed locally under the user's no-test-rerun instruction.
+No validator was weakened or changed. Deterministic generation is needed to
+carry the new data and controls into the offline guide, bundled index, projections
+and affected archive. The 0.19 manifest is rebound in its separate commit; the
+preserved 0.18 manifest remains untouched. No model call, installation or release
+is part of this repair.
 
 ## Human acceptance and follow-through
 
