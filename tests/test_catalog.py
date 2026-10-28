@@ -86,7 +86,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_reasoning_plugin_keeps_discovery_scope_focused(self) -> None:
         reasoning = skills_by_plugin()["measured-reasoning"]
-        self.assertEqual(11, len(reasoning))
+        self.assertEqual(12, len(reasoning))
         descriptions = [
             read_skill_metadata(ROOT / "skills" / skill)["description"]
             for skill in reasoning
@@ -700,23 +700,22 @@ class CatalogTests(unittest.TestCase):
             "https://agentskills.io/specification",
             "https://developer.hashicorp.com/terraform/language",
             "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
-            "https://docs.python.org/3/",
-            "https://docs.python.org/3/library/unittest.html",
+            "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+            "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
             "https://git-scm.com/docs/git-merge",
             "https://git-scm.com/docs/git-worktree",
-            "https://learn.chatgpt.com/docs/agent-configuration/subagents",
-            "https://genai.owasp.org/initiatives/agentic-security-initiative/",
-            "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+            "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+            "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+            "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
             "https://opentelemetry.io/docs/concepts/signals/",
             "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-            "https://antigravity.google/docs/skills/",
-            "https://www.antigravity.google/docs/cli/plugins/",
+            "https://antigravity.google/docs/skills.md",
             "https://agent-plugins.org/specification",
-            "https://antigravity.google/docs/cli/headless/",
+            "https://antigravity.google/docs/cli/headless.md",
             "https://ai.google.dev/gemini-api/docs/agents",
             "https://docs.cloud.google.com/data-agent-kit/overview",
             "https://ai.google.dev/gemini-api/docs/latest-model",
-            "https://www.antigravity.google/docs/sdk/overview",
+            "https://antigravity.google/docs/sdk/overview.md",
             "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
             "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
         }
@@ -725,7 +724,7 @@ class CatalogTests(unittest.TestCase):
             "https://learn.microsoft.com/en-us/dotnet/",
             "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
             "https://www.drupal.org/docs/develop",
-            "https://www.swift.org/documentation/",
+            "https://docs.swift.org/latest/data/documentation.json",
             "https://www.typescriptlang.org/docs/",
             "https://docs.swift.org/latest/documentation/",
             "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
@@ -734,14 +733,14 @@ class CatalogTests(unittest.TestCase):
             "https://adk-labs.github.io/adk-docs/safety/",
             "https://adk-labs.github.io/adk-docs/sessions/",
             "https://docs.spring.io/spring-boot/",
-            "https://owasp.org/www-project-application-security-verification-standard/",
+            "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
             "https://slsa.dev/spec/v1.2/provenance",
             "https://www.postgresql.org/docs/current/",
-            "https://www.antigravity.google/docs/plugins?tab=cli",
+            "https://antigravity.google/docs/plugins.md",
         })
         expected.update({
-            "https://nextjs.org/docs/app/guides/ai-agents",
-            "https://nextjs.org/docs/app/guides/authentication",
+            "https://nextjs.org/docs/app/guides/ai-agents.md",
+            "https://nextjs.org/docs/app/guides/authentication.md",
             "https://react.dev/learn/you-might-not-need-an-effect",
         })
         expected.update({
@@ -753,6 +752,15 @@ class CatalogTests(unittest.TestCase):
             'https://docs.cloud.google.com/storage/docs/metadata',
             'https://docs.getdbt.com/docs/build/incremental-models',
             'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
+        })
+        expected.update({
+            'https://developers.openai.com/api/docs/guides/prompt-engineering.md',
+            'https://www.swift.org/swift-evolution/',
+            'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md',
+        })
+        expected.update({
+            'https://experienceleague.adobe.com/en/docs/experience-manager',
+            'https://go.dev/doc/',
         })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
@@ -1129,7 +1137,7 @@ class CatalogTests(unittest.TestCase):
             "google-adk-engineering-profile": "adk-version-boundaries.md",
             "retrieval-grounding-quality-review": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(87, len(SKILLS))
+        self.assertEqual(88, len(SKILLS))
         self.assertEqual(11, len(skills_by_plugin()))
         self.assertEqual(
             set(new_skills), set(skills_by_plugin()["measured-agent-platforms"])
@@ -1150,7 +1158,7 @@ class CatalogTests(unittest.TestCase):
             metadata = read_skill_metadata(root)
             self.assertEqual("measured-agent-platforms", metadata["plugin"])
             self.assertEqual("implicit", metadata["invocation"])
-            self.assertEqual("clean-room", metadata["provenance"])
+            self.assertEqual("original", metadata["provenance"])
             self.assertEqual("read-only", metadata["risk_class"])
 
         security = (

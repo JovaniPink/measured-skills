@@ -4,7 +4,7 @@ Antigravity setup and testing have equal priority with Codex and Claude. Candida
 
 A one-skill package passed native install and skill-menu checks in CLI 1.1.26; package and menu checks were repeated on 1.1.27. The [0.12.0 candidate record](../client-candidate-v0.12.0.md) adds a two-skill check on CLI 1.1.27. The motion reference and fixture loaded, but the answer invented evidence. The [0.14.0 record](../client-candidate-v0.14.0.md) adds a four-skill check on CLI 1.1.28. Nine of ten cases met their expectation and no reply invented evidence. That is one partial run on a different version, so the expansion, then 64 skills, remained held. The [0.15.0 candidate record](../client-candidate-v0.15.0.md) adds a five-skill check on CLI 1.2.0 (`accessibility-review`, `code-change-review`, `functional-motion-review`, `performance-scalability-diagnosis`, and `finding-consolidation`). Near-miss case 3 was re-examined under diagnostic bypass flags (`--dangerously-skip-permissions`), confirming routing to `performance-scalability-diagnosis` when commands are permitted, while standard headless permission denial remains a documented non-interactive boundary. The 0.15.0 SARIF finding vocabulary was observed live on `code-change-review`, and `finding-consolidation` passed both multi-review merging and single-review refusal.
 
-The normal packs and preview builder include 70 implicit skills. All 17 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
+The normal packs and preview builder include 71 implicit skills. All 17 explicit-only workflows are excluded until native automatic-selection controls are verified for the exact surface and version. Google's documented fields do not establish that control. No installable preview override is provided. Selecting an excluded workflow fails before writing output. Codex and Claude adapters remain separate.
 
 ## Check what is there
 
@@ -29,12 +29,21 @@ agy plugin list
 
 Repeat with another folder under `plugins/antigravity/` for each pack you want. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema.
 
-The expected slash commands use the installed plugin namespace. This form has not been observed on agy for these packs:
+For everyday tasks, start with an ordinary request naming an eligible skill:
 
 ```text
-/measured-skills:claim-verification Check which completion claims have evidence.
-/measured-skills:systematic-diagnosis Investigate this failure.
+Use the installed claim-verification skill to check which completion claims have evidence. Report if it is unavailable. Make no changes.
+Use the installed systematic-diagnosis skill to investigate this failure. Report if it is unavailable. Diagnose before editing.
 ```
+
+Google's [skill guide](https://www.antigravity.google/docs/skills?tab=ide), checked
+October 26, 2026, describes slash commands derived from skill names. Select the
+actual entry shown by your installed client; do not assume one plugin namespace
+spelling applies across versions. The preview observations below retain their
+original command names and dates. They do not establish current behavior for all
+packs. Check actual loading separately from answer quality. The
+[feature workflow](../feature-development-workflow.md#antigravity-prompts)
+provides prompts that preserve the explicit-only exclusions.
 
 ## Prepare a preview
 

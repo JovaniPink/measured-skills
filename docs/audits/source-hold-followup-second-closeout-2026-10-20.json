@@ -1,0 +1,385 @@
+{
+  "catalog_version": "0.18.0",
+  "checked_on": "2026-10-20",
+  "online": true,
+  "result": "fail",
+  "records": [
+    {
+      "source_url": "https://a2a-protocol.org/v1.0.0/specification/",
+      "expected_marker": "content-sha256:f5d15f00006b7e25b8a3a2766b309b661fff36dbd4330933ed61bfc8d435f05b",
+      "observed_marker": "content-sha256:f5d15f00006b7e25b8a3a2766b309b661fff36dbd4330933ed61bfc8d435f05b",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/",
+      "expected_marker": "etag:\"6ad5eace-1ffe1\"",
+      "observed_marker": "etag:\"6ad5eace-1ffe1\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "expected_marker": "etag:\"6ad5eacf-3d838\"",
+      "observed_marker": "etag:\"6ad5eacf-3d838\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "expected_marker": "content-sha256:4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add",
+      "observed_marker": "content-sha256:4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://agent-plugins.org/specification",
+      "expected_marker": "etag:\"039ae40592d1ac679e5762817f7863e6\"",
+      "observed_marker": "etag:\"039ae40592d1ac679e5762817f7863e6\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "expected_marker": "content-sha256:e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2",
+      "observed_marker": "content-sha256:e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/agents",
+      "expected_marker": "last-modified:Fri, 09 Oct 2026 22:11:39 GMT",
+      "observed_marker": "last-modified:Fri, 09 Oct 2026 22:11:39 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "expected_marker": "last-modified:Fri, 16 Oct 2026 23:01:21 GMT",
+      "observed_marker": "last-modified:Fri, 16 Oct 2026 23:01:21 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://airc.nist.gov/",
+      "expected_marker": "normalized-content-sha256:5fe18c7731a3c3c12a040994f7f4ca07ed8b59ac31d884825b88926f12b76f46",
+      "observed_marker": "normalized-content-sha256:5fe18c7731a3c3c12a040994f7f4ca07ed8b59ac31d884825b88926f12b76f46",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+      "expected_marker": "etag:\"331bcba1c60861647bddb4fdba75e1f3\"",
+      "observed_marker": "etag:\"331bcba1c60861647bddb4fdba75e1f3\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/cli/headless/",
+      "expected_marker": "etag:\"wE2o6g\"",
+      "observed_marker": "etag:\"wE2o6g\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/skills/",
+      "expected_marker": "etag:\"wE2o6g\"",
+      "observed_marker": "etag:\"wE2o6g\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
+      "expected_marker": "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+      "observed_marker": "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftui/managing-model-data-in-your-app.json",
+      "expected_marker": "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+      "observed_marker": "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/testing/migratingfromxctest.json",
+      "expected_marker": "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+      "observed_marker": "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "expected_marker": "etag:\"75533pg6gn4r3l\"",
+      "observed_marker": "etag:\"75533pg6gn4r3l\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "expected_marker": "normalized-content-sha256:7abaac9957c374c79789eaf3813f82e24ca8c078495b51353dadbe630cf275d7",
+      "observed_marker": "normalized-content-sha256:7abaac9957c374c79789eaf3813f82e24ca8c078495b51353dadbe630cf275d7",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "expected_marker": "normalized-content-sha256:6084a4e22781ef798671f33f64a62c65d0cf22e3437846522cecb3a6fecb8130",
+      "observed_marker": "normalized-content-sha256:6084a4e22781ef798671f33f64a62c65d0cf22e3437846522cecb3a6fecb8130",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "expected_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "observed_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "expected_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "observed_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+      "expected_marker": "last-modified:Wed, 14 Oct 2026 21:04:02 GMT",
+      "observed_marker": "last-modified:Wed, 14 Oct 2026 21:04:02 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "expected_marker": "last-modified:Wed, 14 Oct 2026 05:50:38 GMT",
+      "observed_marker": "last-modified:Wed, 14 Oct 2026 05:50:38 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "expected_marker": "last-modified:Fri, 16 Oct 2026 02:49:57 GMT",
+      "observed_marker": "last-modified:Fri, 16 Oct 2026 02:49:57 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+      "expected_marker": "last-modified:Fri, 16 Oct 2026 03:18:40 GMT",
+      "observed_marker": "last-modified:Fri, 16 Oct 2026 03:18:40 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+      "expected_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "observed_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "expected_marker": "etag:\"c5088f115dd80ccd3cd780e7eec364a8\"",
+      "observed_marker": "etag:\"c5088f115dd80ccd3cd780e7eec364a8\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
+      "expected_marker": "content-sha256:40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98",
+      "observed_marker": "content-sha256:40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+      "expected_marker": "last-modified:Sun, 05 Apr 2026 14:01:15 GMT",
+      "observed_marker": "last-modified:Sun, 05 Apr 2026 14:01:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.python.org/3/",
+      "expected_marker": "etag:\"6ad7a282-4ca9\"",
+      "observed_marker": "etag:\"6ad7a282-4ca9\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.python.org/3/library/unittest.html",
+      "expected_marker": "etag:\"6ad7a283-5243a\"",
+      "observed_marker": "etag:\"6ad7a283-5243a\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.spring.io/spring-boot/",
+      "expected_marker": "last-modified:Tue, 20 Oct 2026 16:09:11 GMT",
+      "observed_marker": "last-modified:Tue, 20 Oct 2026 16:09:11 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/data/documentation.json",
+      "expected_marker": "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055",
+      "observed_marker": "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "expected_marker": "etag:\"f63-65c3036923100\"",
+      "observed_marker": "etag:\"f63-65c3036923100\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+      "expected_marker": "last-modified:Wed, 02 Sep 2026 14:04:07 GMT",
+      "observed_marker": "last-modified:Wed, 02 Sep 2026 14:04:07 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "expected_marker": "normalized-content-sha256:296e9799d5740063725b37da0d9ebfc58d852433852b422a8186015f03b09dae",
+      "observed_marker": "normalized-content-sha256:4afa43b86a1c970b80a90c493b3ac5fc74572c5abe6ebaa909027a2237f6414d",
+      "result": "changed"
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "expected_marker": "content-sha256:6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12",
+      "observed_marker": "content-sha256:6fae69335bc3c1224e8a9c8da88b9a4279ad6aed1aec0e23d1a212d2a97ecf12",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "expected_marker": "last-modified:Tue, 20 Oct 2026 04:47:18 GMT",
+      "observed_marker": "last-modified:Tue, 20 Oct 2026 04:47:18 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "expected_marker": "last-modified:Tue, 20 Oct 2026 04:47:16 GMT",
+      "observed_marker": "last-modified:Tue, 20 Oct 2026 04:47:16 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://go.dev/doc/",
+      "expected_marker": "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+      "observed_marker": "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "expected_marker": "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+      "observed_marker": "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "expected_marker": "etag:\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\"",
+      "observed_marker": "etag:\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "expected_marker": "content-sha256:7d58768a805c3a5a132a2bf32b406591ef933ed687c3070a469c03eb2c1ba724",
+      "observed_marker": "content-sha256:5d86bf45fdb9ccadd9b07d30bdef92a7e596ebe34ade42041535c2625708d703",
+      "result": "changed"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/authentication",
+      "expected_marker": "content-sha256:0fdfd7ab2880a8a2ef9d7446c0c6152da4ffbd253666d3ce9c6e90606c56094b",
+      "observed_marker": "content-sha256:e36428074b4f43f7e5083aa3c3140e211e2c9e494447b0281dcdd3a3424d46d5",
+      "result": "changed"
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "expected_marker": "etag:\"f60049a82dce58cae45aaa4eea299ba5-ssl\"",
+      "observed_marker": "etag:\"f60049a82dce58cae45aaa4eea299ba5-ssl\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
+      "expected_marker": "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+      "observed_marker": "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "expected_marker": "content-sha256:2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c",
+      "observed_marker": "content-sha256:2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "expected_marker": "etag:\"27dad4a2986b62556008d5c97970945a-ssl\"",
+      "observed_marker": "etag:\"27dad4a2986b62556008d5c97970945a-ssl\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+      "expected_marker": "etag:\"dd85-6569aa5054e49\"",
+      "observed_marker": "etag:\"dd85-6569aa5054e49\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "expected_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://sre.google/sre-book/postmortem-culture/",
+      "expected_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "expected_marker": "normalized-content-sha256:d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417",
+      "observed_marker": "normalized-content-sha256:d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "expected_marker": "etag:\"wE2o6g\"",
+      "observed_marker": "etag:\"wE2o6g\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/sdk/overview",
+      "expected_marker": "etag:\"wE2o6g\"",
+      "observed_marker": "etag:\"wE2o6g\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "expected_marker": "normalized-content-sha256:98c142ceba75f0335277c32642f23339e6fa8ac279f1c46f6f1e2885bdf124d3",
+      "observed_marker": "normalized-content-sha256:98c142ceba75f0335277c32642f23339e6fa8ac279f1c46f6f1e2885bdf124d3",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/current/",
+      "expected_marker": "content-sha256:0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2",
+      "observed_marker": "content-sha256:0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.txt",
+      "expected_marker": "content-sha256:21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a",
+      "observed_marker": "content-sha256:21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.swift.org/swift-evolution/",
+      "expected_marker": "content-sha256:efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+      "observed_marker": "content-sha256:efdc1ee5ba673bfdcaa1bc91f2219f07074bc78e130bffdc5737f82556052022",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "expected_marker": "etag:\"6ad60f0b-29a5d\"",
+      "observed_marker": "etag:\"6ad60f0b-29a5d\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/TR/WCAG22/",
+      "expected_marker": "last-modified:Thu, 12 Dec 2024 10:36:22 GMT",
+      "observed_marker": "last-modified:Thu, 12 Dec 2024 10:36:22 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/TR/prov-n/",
+      "expected_marker": "last-modified:Mon, 02 Oct 2017 10:47:12 GMT",
+      "observed_marker": "last-modified:Mon, 02 Oct 2017 10:47:12 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "observed_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "observed_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "result": "pass"
+    }
+  ],
+  "errors": [
+    "upstream content changed: https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+    "upstream content changed: https://nextjs.org/docs/app/guides/ai-agents",
+    "upstream content changed: https://nextjs.org/docs/app/guides/authentication"
+  ]
+}

@@ -68,11 +68,11 @@
         "respond-to-code-review",
         "worktree-isolation"
       ],
-      "description_characters": 1583,
+      "description_characters": 1592,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 2536,
-        "claude": 2545
+        "codex": 2545,
+        "claude": 2554
       }
     },
     {
@@ -91,11 +91,11 @@
         "performance-scalability-diagnosis",
         "test-quality-review"
       ],
-      "description_characters": 1939,
+      "description_characters": 2020,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3162,
-        "claude": 3173
+        "codex": 3243,
+        "claude": 3254
       }
     },
     {
@@ -131,17 +131,18 @@
         "decision-evidence-trace",
         "design-rationale-investigation",
         "domain-vocabulary-modeling",
+        "engineering-prompt-review",
         "guided-configuration",
         "high-signal-technical-writing",
         "portable-skill-authoring",
         "task-handoff",
         "workflow-retrospective"
       ],
-      "description_characters": 1974,
+      "description_characters": 2230,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3040,
-        "claude": 3051
+        "codex": 3398,
+        "claude": 3410
       }
     },
     {
@@ -161,11 +162,11 @@
         "source-grounded-research",
         "systematic-diagnosis"
       ],
-      "description_characters": 2101,
+      "description_characters": 2144,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3249,
-        "claude": 3261
+        "codex": 3292,
+        "claude": 3304
       }
     },
     {
@@ -185,11 +186,11 @@
         "terraform-engineering-profile",
         "typescript-javascript-engineering-profile"
       ],
-      "description_characters": 2127,
+      "description_characters": 2219,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 3553,
-        "claude": 3565
+        "codex": 3645,
+        "claude": 3657
       }
     },
     {
@@ -256,7 +257,7 @@
         "claim-verification",
         "acceptance-evidence-ledger"
       ],
-      "description_characters": 328,
+      "description_characters": 371,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -291,7 +292,7 @@
         "systematic-diagnosis",
         "claim-verification"
       ],
-      "description_characters": 354,
+      "description_characters": 397,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -340,6 +341,41 @@
         "production-incident-analysis"
       ],
       "description_characters": 515,
+      "budget_status": "within-budget",
+      "installation_claim": "composition-only"
+    },
+    {
+      "id": "review-an-engineering-request",
+      "purpose": "Check a request before planning its implementation.",
+      "skills": [
+        "engineering-prompt-review",
+        "implementation-planning"
+      ],
+      "description_characters": 453,
+      "budget_status": "within-budget",
+      "installation_claim": "composition-only"
+    },
+    {
+      "id": "repair-reviewed-work",
+      "purpose": "Assess review findings and plan evidence for a repair.",
+      "skills": [
+        "respond-to-code-review",
+        "systematic-diagnosis",
+        "test-strategy"
+      ],
+      "description_characters": 512,
+      "budget_status": "within-budget",
+      "installation_claim": "composition-only"
+    },
+    {
+      "id": "verify-a-repaired-change",
+      "purpose": "Run checks, review the exact diff, and reconcile completion.",
+      "skills": [
+        "cross-stack-quality-gates",
+        "code-change-review",
+        "claim-verification"
+      ],
+      "description_characters": 649,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     }

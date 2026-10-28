@@ -322,6 +322,17 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "engineering-prompt-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "finding-consolidation",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",

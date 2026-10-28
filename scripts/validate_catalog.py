@@ -429,6 +429,40 @@ def validate_evals(errors: list[str]) -> None:
                     errors.append(f"evals/cases.json: {case.get('id')} must explicitly invoke {skill}")
 
 
+def _validate_owned_origin(entry: dict[str, object], errors: list[str]) -> None:
+    """Verify a declared owned adaptation against retained public Git objects."""
+    origin = entry.get("owned_origin")
+    if entry.get("implementation_method") != "adapted":
+        if origin is not None:
+            errors.append("owned_origin is only valid for an adapted implementation")
+        return
+    if not isinstance(origin, dict):
+        errors.append(f"provenance/catalog.json: {entry.get('skill')} adaptation requires owned_origin")
+        return
+    skill = entry.get("skill")
+    revision = origin.get("revision")
+    entrypoint = origin.get("entrypoint")
+    if (not isinstance(revision, str) or re.fullmatch(r"[0-9a-f]{40}", revision) is None or
+            revision != entry.get("pinned_revision") or
+            not isinstance(skill, str) or re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", skill) is None or
+            entrypoint != f"skills/{skill}/SKILL.md" or origin.get("license") != "MIT"):
+        errors.append(f"provenance/catalog.json: {skill} has an invalid owned origin identity")
+        return
+    try:
+        _git_output(ROOT, ["merge-base", "--is-ancestor", revision, "HEAD"])
+        payload = _git_output(ROOT, ["show", f"{revision}:{entrypoint}"])
+        license_bytes = _git_output(ROOT, ["show", f"{revision}:LICENSE"])
+    except ValueError as error:
+        errors.append(f"provenance/catalog.json: {skill} owned origin is unavailable: {error}")
+        return
+    if hashlib.sha256(payload).hexdigest() != origin.get("entrypoint_sha256"):
+        errors.append(f"provenance/catalog.json: {skill} owned origin content hash differs")
+    if (hashlib.sha256(license_bytes).hexdigest() != origin.get("license_sha256") or
+            not license_bytes.startswith(b"MIT License\n") or
+            b"Copyright (c) 2026 Jovani Pink" not in license_bytes):
+        errors.append(f"provenance/catalog.json: {skill} owned MIT license evidence differs")
+
+
 def validate_provenance(errors: list[str]) -> None:
     document = _validate_json_schema(
         ROOT / "provenance" / "catalog.json",
@@ -453,6 +487,7 @@ def validate_provenance(errors: list[str]) -> None:
             revision = str(entry.get("pinned_revision", ""))
             if not re.fullmatch(r"[0-9a-f]{40}", revision):
                 errors.append(f"provenance/catalog.json: {entry.get('skill')} requires a 40-character pinned revision")
+        _validate_owned_origin(entry, errors)
         skill = entry.get("skill")
         if skill in ALL_SKILLS:
             metadata = read_skill_metadata(ROOT / "skills" / skill)
@@ -986,8 +1021,32 @@ def validate_packages(errors: list[str]) -> None:
         digest = hashlib.sha256(archive_path.read_bytes()).hexdigest()
         if checksums.get(archive_path.name) != digest:
             errors.append(f"dist/claude-ai/SHA256SUMS: digest mismatch for {archive_path.name}")
+        plugin = read_skill_metadata(ROOT / "skills" / skill)["plugin"]
+        source = ROOT / "plugins" / "claude" / plugin / "skills" / skill
+        notice_path = ROOT / "LICENSE"
+        notice = notice_path.read_bytes() if notice_path.is_file() and not notice_path.is_symlink() else b""
+        generated_notice = source / "LICENSE"
+        if not notice or generated_notice.is_symlink() or not generated_notice.is_file() or generated_notice.read_bytes() != notice:
+            errors.append(f"{skill}: generated license notice differs from canonical LICENSE")
+        expected = {f"{skill}/{item.relative_to(source).as_posix()}": item.read_bytes()
+                    for item in source.rglob("*") if item.is_file()}
+        if not expected:
+            errors.append(f"{archive_path.name}: generated Claude source is missing")
         with zipfile.ZipFile(archive_path) as archive:
             names = archive.namelist()
+            notice_name = f"{skill}/LICENSE"
+            if notice_name not in names or archive.read(notice_name) != notice:
+                errors.append(f"{archive_path.name}: license notice differs from canonical LICENSE")
+            if len(names) != len(set(names)):
+                errors.append(f"{archive_path.name}: duplicate archive members")
+            if set(names) != set(expected):
+                errors.append(f"{archive_path.name}: archive members differ from generated Claude source")
+            for info in archive.infolist():
+                mode = info.external_attr >> 16
+                if mode & 0o170000 not in (0, 0o100000) or mode & 0o111:
+                    errors.append(f"{archive_path.name}: non-regular or executable archive member: {info.filename}")
+                if info.filename in expected and archive.read(info) != expected[info.filename]:
+                    errors.append(f"{archive_path.name}: noncanonical archive content: {info.filename}")
             if f"{skill}/SKILL.md" not in names:
                 errors.append(f"{archive_path.name}: missing nested {skill}/SKILL.md")
             for name in names:
@@ -1125,6 +1184,26 @@ def validate_release_manifest(errors: list[str]) -> None:
         return
     if document.get("catalog_version") != VERSION:
         errors.append(f"{manifest.relative_to(ROOT)}: catalog version does not match {VERSION}")
+    from build_release_manifest import artifact_inventory
+
+    expected = artifact_inventory()
+    artifacts = document.get("artifacts")
+    if isinstance(artifacts, list):
+        actual: dict[str, str] = {}
+        invalid = False
+        for item in artifacts:
+            if not isinstance(item, dict):
+                invalid = True
+                continue
+            relative, kind = item.get("path"), item.get("kind")
+            if not isinstance(relative, str) or not isinstance(kind, str):
+                invalid = True
+                continue
+            if relative in actual:
+                invalid = True
+            actual[relative] = kind
+        if invalid or actual != expected:
+            errors.append(f"{manifest.relative_to(ROOT)}: artifact inventory must contain each required path and kind exactly once")
     for error in release_manifest_source_errors(document):
         errors.append(f"{manifest.relative_to(ROOT)}: {error}")
     for error in release_manifest_current_errors(document):

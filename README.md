@@ -1,6 +1,8 @@
 # Measured Skills
 
-This repository holds 87 Agent Skills for AI coding assistants.
+For unfinished changes and repairs, use [Finish existing work](docs/finish-existing-work.md).
+
+This repository holds 88 Agent Skills for AI coding assistants.
 
 A skill is a short set of written instructions for one kind of task. Reviewing a code change is one kind of task. Checking whether a claim has evidence is another. Your assistant reads the matching skill and follows its steps.
 
@@ -9,6 +11,8 @@ A skill is only text. It installs no programs and grants no new permissions. It 
 Maintained by [Measured Studios](https://measuredstudios.com). This is the 0.18.0 workflow candidate; see the [migration guide](docs/measured-migration.md) before changing an existing install.
 
 Start with the [daily-work guide](docs/daily-agent-operating-model.md) for a small selection and five example requests.
+
+Building a feature? Follow the [feature-development workflow](docs/feature-development-workflow.md), with step-by-step prompts and a shorter three-request path for Codex, Claude Code, and Antigravity.
 
 ## Install one pack
 
@@ -30,7 +34,7 @@ codex plugin add measured-skills@measured-skills
 codex plugin list --json
 ```
 
-For Antigravity:
+For Antigravity, this repository's reviewed local-folder route is:
 
 ```sh
 agy plugin install /absolute/path/to/measured-skills/plugins/antigravity/measured-skills
@@ -38,7 +42,7 @@ agy plugin enable measured-skills
 agy plugin list
 ```
 
-Antigravity installs a pack from a local folder in a reviewed checkout; Google documents no `agy` marketplace command. Explicit-only skill controls are unverified on Antigravity. See its setup guide for the generated pack contents and explicit-only exclusions.
+Google also documents native marketplace discovery. That does not qualify this repository's generated marketplace preview or establish its installed behavior. Explicit-only skill controls remain unverified on Antigravity. See its setup guide for the generated pack contents and explicit-only exclusions.
 
 For Claude and Codex, the install name has the form `plugin@marketplace`. A marketplace is a place your client looks for packs. This repository is the marketplace, and it is named `measured-skills`. One pack carries that same name. So `measured-skills@measured-skills` is correct, not a repeated word. Every other pack reads like `measured-engineering-build@measured-skills`.
 
@@ -85,13 +89,13 @@ Install the smallest pack that covers your work.
 | `measured-swift-workflows` | Bounded SwiftUI delivery, concurrency and persistence review, fixture journeys |
 | `measured-nextjs-workflows` | Bounded Next.js delivery, cache/auth review and measured React diagnosis |
 
-The [skill cheatsheet](docs/skill-cheatsheet.md) lists all 87 skills with one line each. [Choose Your Skills](docs/choose-your-skills.md) helps you pick. The [skill catalog reader guide](docs/skill-catalog-reader-guide.md) explains every skill in full.
+The [skill cheatsheet](docs/skill-cheatsheet.md) lists all 88 skills with one line each. [Choose Your Skills](docs/choose-your-skills.md) helps you pick. The [skill catalog reader guide](docs/skill-catalog-reader-guide.md) explains every skill in full.
 
 ## How a skill gets picked
 
 Every skill is marked implicit or explicit-only.
 
-Implicit means your client may pick the skill on its own when your request matches it. You can still name it directly. 70 skills are implicit.
+Implicit means your client may pick the skill on its own when your request matches it. You can still name it directly. 71 skills are implicit.
 
 Explicit-only means you must name the skill before using it. Naming it does not authorize a push, merge, deletion, release, or deployment. You still approve those yourself. 17 skills are explicit-only.
 
@@ -103,9 +107,9 @@ Codex, Claude Code, and Antigravity get equal attention here. Equal attention do
 
 | Client | What we ship | Setup guide |
 | --- | --- | --- |
-| Codex CLI and ChatGPT desktop | Native packs with all 87 skills | [Codex setup](docs/clients/codex.md) |
-| Claude Code | Native packs with all 87 skills, plus separate ZIP files for account uploads | [Claude setup](docs/clients/claude.md) |
-| Antigravity CLI and IDE | Native packs with 70 implicit skills; 17 explicit-only workflows held | [Antigravity setup](docs/clients/antigravity.md) |
+| Codex CLI and ChatGPT desktop | Native packs with all 88 skills | [Codex setup](docs/clients/codex.md) |
+| Claude Code | Native packs with all 88 skills, plus separate ZIP files for account uploads | [Claude setup](docs/clients/claude.md) |
+| Antigravity CLI and IDE | Native packs with 71 implicit skills; 17 explicit-only workflows held | [Antigravity setup](docs/clients/antigravity.md) |
 
 Claude Code packs and Claude account uploads are two separate installs. Updating your Code packs does not update the skill library that Chat uses. Check both.
 
@@ -123,11 +127,11 @@ Authored means we wrote it. It says what the instructions intend.
 
 Observed means we ran it and wrote down what happened, with the exact client, version, and date.
 
-The current candidate is 0.18.0: 87 skills in 11 packs. The [candidate record](docs/client-candidate-v0.18.0.md) separates structural checks from behavior still requiring observation.
+The current candidate is 0.18.0: 88 skills in 11 packs. The [candidate record](docs/client-candidate-v0.18.0.md) separates structural checks from behavior still requiring observation.
 
 Historical engineering checks retain their original versions. They do not establish behavior for renamed packs or edited skills. No 0.18.0 installed-client benefit is claimed.
 
-One limit is worth knowing before you test. Every result we have recorded was taken at the first turn of a fresh session. We have not measured whether a skill still shapes replies later in a long working session, and published research suggests instructions lose force as a conversation grows. The [study design](docs/turn-depth-study.md) says how we plan to find out.
+The October 20 pilot and [October 21 retest](docs/audits/claude-retest-observations-2026-10-21.json) include continuity follow-ups. They found review-selection and evidence errors; the later GCP answer also exceeded its supplied contract. These bounded observations do not establish long-session reliability or qualify the profile. The [next diagnostic plan](docs/audits/claude-routing-contract-retest-plan-2026-10-21.md) remains unrun, and the broader [turn-depth study](docs/turn-depth-study.md) remains separate. Read the [readiness record](docs/release-readiness-2026-10-26.md) for current decisions and dated evidence.
 
 We do not claim that these skills improve your results. That claim would need a separate study with complete runs and human review. That study has not been run.
 
@@ -143,7 +147,7 @@ Read the [security policy](SECURITY.md) and the [security model](docs/security-m
 
 ## License and origin
 
-This is an independent work under the [MIT license](LICENSE). It does not copy or redistribute anyone else's skill text. The skills are written from the author's own practice and from primary sources, such as standards and official platform documentation.
+The repository offers its owned contributions under the [MIT license](LICENSE). [Provenance records](provenance/catalog.json) distinguish original declarations from four owned adaptations. The maintainer [accepted the scoped originality decision](docs/audits/originality-acceptance-0.18.0.json), `originality-018-owned-inventory-20261020`, for exact revision `36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7`, including its candidate gate change. The [preserved proposal](docs/audits/originality-approval-2026-10-20.md) records prior exposure, AI assistance, and review limits. Later changes have a [scoped delta review](docs/audits/post-acceptance-delta-2026-10-20.json), not automatic new acceptance. This decision does not certify universal originality, independent legal clearance, client acceptance, or release readiness.
 
 Private product facts stay out of this catalog. [Private overlays](docs/private-overlays.md) explains how they are kept apart.
 
@@ -159,6 +163,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before you open a pull request. [Reposit
 
 - [Five-minute quickstart](docs/quickstart.md): install and test one skill
 - [Glossary](docs/glossary.md): what the terms mean
-- [Skill cheatsheet](docs/skill-cheatsheet.md): all 87 skills at a glance
+- [Skill cheatsheet](docs/skill-cheatsheet.md): all 88 skills at a glance
 - [Client support checklist](docs/client-support.md): what to test in each app and CLI
 - [How to use Measured Skills](docs/README.md): the full guide

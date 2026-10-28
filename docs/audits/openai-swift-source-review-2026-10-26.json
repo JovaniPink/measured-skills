@@ -1,0 +1,225 @@
+{
+  "reviewed_on": "2026-10-26",
+  "reviewed_revision": "115b65085efa472584e9ae1be23b0f2737e68c9c",
+  "scope": "Two retained source holds only; no normalization, transport, invocation, canonical, generated, billing, installation, or behavioral-evidence change.",
+  "prior_hold_receipt": "docs/audits/antigravity-source-closeout-2026-10-26.json",
+  "prior_hold_receipt_sha256": "4ba7485d375eacd62704658ae94ba3f0e89c2f6e5a1496487c94eb18da030e6f",
+  "records": [
+    {
+      "old_source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+      "before": {
+        "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "marker_kind": "content-sha256",
+        "marker_value": "b6cbd1d254f4c4230584e56fa7ea2fb75b742af80e9ef29355b130a5e06bd8e9"
+      },
+      "after": {
+        "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d"
+      },
+      "decision": "reviewed_official_markdown_replacement",
+      "observations": [
+        {
+          "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "content_encoding": "identity",
+          "observed_at": "2026-10-27T00:05:30.295252+00:00",
+          "decoded_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "raw_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "decoded_bytes": 37414
+        },
+        {
+          "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "content_encoding": "identity",
+          "observed_at": "2026-10-27T00:05:30.492249+00:00",
+          "decoded_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "raw_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "decoded_bytes": 37414
+        },
+        {
+          "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "content_encoding": "identity",
+          "observed_at": "2026-10-27T00:05:30.699486+00:00",
+          "decoded_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "raw_sha256": "3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+          "decoded_bytes": 37414
+        }
+      ],
+      "affected_skills": [
+        "engineering-prompt-review"
+      ],
+      "finding": "The retained and current HTML differ only in 26 site-asset URL hunks; the authority article is unchanged. The publisher explicitly advertises a complete Markdown representation. Reviewed all sections and examples, including instruction roles, context, evaluation limits, and API-specific caveats. Model recommendations, embedded example commands, and persistent-loop examples are not portable requirements or task authority.",
+      "instruction_consequence": "Bind the complete official Markdown bytes, with no extraction or normalization. Keep the human-facing HTML reference. Preserve prompt review as non-executing analysis; source examples do not authorize API calls, spending, or indefinite work. No canonical change is needed.",
+      "comparison": {
+        "old_body_sha256": "b6cbd1d254f4c4230584e56fa7ea2fb75b742af80e9ef29355b130a5e06bd8e9",
+        "current_html_observations": [
+          {
+            "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "content_encoding": "identity",
+            "observed_at": "2026-10-27T00:05:30.461020+00:00",
+            "decoded_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "raw_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "decoded_bytes": 718459
+          },
+          {
+            "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "content_encoding": "identity",
+            "observed_at": "2026-10-27T00:05:30.819507+00:00",
+            "decoded_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "raw_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "decoded_bytes": 718459
+          },
+          {
+            "requested_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "final_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+            "status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "content_encoding": "identity",
+            "observed_at": "2026-10-27T00:05:31.282924+00:00",
+            "decoded_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "raw_sha256": "5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+            "decoded_bytes": 718459
+          }
+        ],
+        "changed_hunks": 26,
+        "scope": "Only Astro asset URL paths and deployment query values differ. This inspection comparison is not used by the freshness checker. Full official Markdown bytes are the new fingerprint.",
+        "coverage": {
+          "html_headings": [
+            "Choosing a model",
+            "Prompt engineering",
+            "Message roles and instruction following",
+            "Version prompts in code",
+            "Message formatting with Markdown and XML",
+            "Save on cost and latency with prompt caching",
+            "Few-shot learning",
+            "Include relevant context information",
+            "Planning for the context window",
+            "Prompting current models",
+            "Prompting best practices for the latest model",
+            "Coding",
+            "Prompting reasoning models",
+            "Next steps",
+            "Other resources"
+          ],
+          "markdown_headings": [
+            "Prompt engineering",
+            "Choosing a model",
+            "Prompt engineering",
+            "Message roles and instruction following",
+            "Version prompts in code",
+            "Message formatting with Markdown and XML",
+            "Save on cost and latency with prompt caching",
+            "Few-shot learning",
+            "Include relevant context information",
+            "Planning for the context window",
+            "Prompting current models",
+            "Prompting best practices for the latest model",
+            "Coding",
+            "Coding",
+            "Front-end engineering",
+            "Agentic tasks",
+            "Prompting reasoning models",
+            "Next steps",
+            "Other resources"
+          ],
+          "html_article_text_sha256": "6a8fd02f0d49b24e6be7f352d9abf32669cc35a3832e5a1f28592a3f603b35e1"
+        },
+        "coverage_limit": "Markdown includes the page title, additional component sections, and all language examples. Heading inclusion is supporting evidence; manual content review determines suitability. Examples are source material, never live instructions."
+      }
+    },
+    {
+      "old_source_url": "https://www.swift.org/swift-evolution/",
+      "source_url": "https://www.swift.org/swift-evolution/",
+      "before": {
+        "source_url": "https://www.swift.org/swift-evolution/",
+        "marker_kind": "content-sha256",
+        "marker_value": "a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2"
+      },
+      "after": {
+        "source_url": "https://www.swift.org/swift-evolution/",
+        "marker_kind": "content-sha256",
+        "marker_value": "0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b"
+      },
+      "decision": "reviewed_current_document_repin",
+      "observations": [
+        {
+          "requested_url": "https://www.swift.org/swift-evolution/",
+          "final_url": "https://www.swift.org/swift-evolution/",
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "content_encoding": "gzip",
+          "observed_at": "2026-10-27T00:05:30.427473+00:00",
+          "decoded_sha256": "0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b",
+          "raw_sha256": "a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2",
+          "decoded_bytes": 21193
+        },
+        {
+          "requested_url": "https://www.swift.org/swift-evolution/",
+          "final_url": "https://www.swift.org/swift-evolution/",
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "content_encoding": "gzip",
+          "observed_at": "2026-10-27T00:05:30.551986+00:00",
+          "decoded_sha256": "0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b",
+          "raw_sha256": "a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2",
+          "decoded_bytes": 21193
+        },
+        {
+          "requested_url": "https://www.swift.org/swift-evolution/",
+          "final_url": "https://www.swift.org/swift-evolution/",
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "content_encoding": "gzip",
+          "observed_at": "2026-10-27T00:05:30.661377+00:00",
+          "decoded_sha256": "0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b",
+          "raw_sha256": "a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2",
+          "decoded_bytes": 21193
+        }
+      ],
+      "affected_skills": [
+        "swift-concurrency-diagnosis",
+        "swift-swiftui-engineering-profile"
+      ],
+      "finding": "The current official landing document distinguishes proposal approval from a future release goal and links to the proposal process. The proposal list is loaded by JavaScript, so its HTML fingerprint is not a binding for every proposal or compiler behavior. The prior exact response body was not retained; no claim that this change is cosmetic or textually equivalent is made.",
+      "instruction_consequence": "Accept a new full-response pin after current-content review and three identical observations. Retain per-module toolchain/language/isolation discovery and direct proposal checks for technical claims. Historical compiler tests remain dated; neither landing-page freshness nor a proposal status establishes current local execution. No canonical change is needed.",
+      "comparison": {
+        "old_body_available": false,
+        "limit": "Searched retained source-response snapshots; only the previous hash and failed receipts are available. The decision is a current-authority review, not a reconstructed historical diff.",
+        "reviewed_scope": "Complete landing HTML and its primary process/discovery links. Linked proposal guidance confirms that per-module settings and exact toolchain availability remain necessary; no fresh runtime acceptance was performed.",
+        "excluded_claim": "The current HTML contains an empty proposal-list container populated by an external script. Its fingerprint does not establish transitive proposal-data freshness."
+      }
+    }
+  ],
+  "authority_allowance": {
+    "url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+    "scope": "One exact official document URL; queries, descendants, and sibling documents remain rejected. Existing HTML allowance remains for the human-facing reference.",
+    "red_test": "test_official_openai_markdown_allowance_is_exact failed for the valid Markdown URL before the allowance was added. Invalid neighbors stayed rejected.",
+    "red_log_sha256": "1841687c275aa0ed8ce697bdff86d9317074669cfd6567a6183e532c363f70c4"
+  },
+  "access_limit": "Web text retrieval rejects text/markdown. Direct HTTPS retrieval returned the complete official body; three raw/decoded response hashes are retained. Swift historical response bytes were unavailable. No publisher bodies or examples are imported into the public tree.",
+  "closeout": {
+    "path": "docs/audits/openai-swift-source-closeout-2026-10-26.json",
+    "sha256": "d3007296be34cb80606f1ad54fae097f2388f7c00697958123e8e2f16047c802",
+    "pins_sha256": "0cf6b933294e4b8de32bd3b7f03868c034854986e56314d2c439bb5d77c59d0a",
+    "counts": {
+      "pass": 64
+    },
+    "remaining_holds": [],
+    "limit": "Point-in-time online source check only. Future drift still blocks; source correspondence does not establish installed-client acceptance or release readiness."
+  }
+}

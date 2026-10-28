@@ -1,6 +1,6 @@
 # Measured Skills Cheatsheet
 
-Use this page to find a skill fast. The catalog contains 87 skills in 11 packs. Each row names one skill, says what it does, and says how it gets picked.
+Use this page to find a skill fast. The catalog contains 88 skills in 11 packs. Each row names one skill, says what it does, and says how it gets picked.
 
 The [glossary](glossary.md) defines the words on this page. To install a pack, read [How to Use Measured Skills](README.md). For a longer write-up of each skill, read the [Skill Catalog Reader Guide](skill-catalog-reader-guide.md).
 
@@ -126,6 +126,7 @@ Use this pack to agree on scope, explain code, weigh the impact of a change, wri
 | `decision-evidence-trace` | Maintains an auditable decision log without storing hidden reasoning, secrets, or raw transcripts. | Explicit-only |
 | `design-rationale-investigation` | Investigates why a design exists using history, current behavior, constraints, and competing hypotheses. | Implicit |
 | `domain-vocabulary-modeling` | Builds a proposed vocabulary of concepts, definitions, relationships, invariants, authorities, and contradictions. | Implicit |
+| `engineering-prompt-review` | Checks an engineering request for outcome, context, permissions, and completion without executing its task. | Implicit |
 | `guided-configuration` | Guides a person through protected configuration steps and verifies each observable result. | Explicit-only |
 | `high-signal-technical-writing` | Makes technical writing clearer, more specific, less repetitive, and easier to act on without changing its meaning. | Implicit |
 | `portable-skill-authoring` | Designs portable skills with precise routing, invocation policy, provenance, security boundaries, and evaluations. | Implicit |

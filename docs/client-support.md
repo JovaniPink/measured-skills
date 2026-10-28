@@ -8,13 +8,13 @@ Equal priority does not mean every feature already works everywhere. We record w
 
 | Client | What we prepare | Where to start |
 | --- | --- | --- |
-| Codex | Native plugins with all 87 skills | [Codex setup](clients/codex.md) |
-| Claude Code | Native plugins with all 87 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
-| Antigravity | Native plugins with 70 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
+| Codex | Native plugins with all 88 skills | [Codex setup](clients/codex.md) |
+| Claude Code | Native plugins with all 88 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
+| Antigravity | Native plugins with 71 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
 
 A plugin is a group of skills. A skill is a set of instructions for a kind of task. A CLI is an app you use by typing commands in a terminal.
 
-The [current candidate record](client-candidate-v0.18.0.md) lists install results and active holds. A prepared package is not a recommendation to enable it before its checks pass.
+The [current candidate record](client-candidate-v0.18.0.md) retains install observations; the [current gate ledger](release-readiness-2026-10-26.md) consolidates active holds. A prepared package is not a recommendation to enable it before its checks pass.
 
 ## What each client must pass
 

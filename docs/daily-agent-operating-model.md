@@ -1,9 +1,23 @@
 # Use the skills in daily work
 
+After the first push, use [finish and maintain a draft PR](finish-existing-work.md#finish-and-maintain-a-draft-pr)
+for bounded review, CI follow-up, evidence-based repairs, and an honest handoff.
+It preserves the draft state and requires explicit authority for technical replies.
+
+For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+
 Start with one task and the smallest useful selection. The 0.18.0 candidate
 includes `daily-engineering-experimental`, a 12-skill selection for planning,
-diagnosis, review, tests, Python, and GCP data work. It is prepared for trials;
-its activation and benefit have not been measured in a client.
+diagnosis, review, tests, Python, and GCP data work. Bounded Claude trials found
+selection and output errors. Those observations do not qualify the profile or
+establish measured benefit. See the dated evidence in
+[release readiness](release-readiness-2026-10-20.md).
+
+To build a feature, follow the [feature-development workflow](feature-development-workflow.md):
+frame the need, plan, implement, check, review, verify completion, and open a
+draft PR when authorized. It includes prompts for all three clients and a
+shorter path for a well-defined change. Use the examples below for individual
+tasks rather than treating every request as a full feature project.
 
 ## Prepare a selection
 

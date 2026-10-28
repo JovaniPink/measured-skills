@@ -18,3 +18,5 @@ Consider repository scripts, formatting, linting, static typing, unit and integr
 
 Check supported Python versions, packaging metadata, public imports, typing behavior, platform wheels, database drivers, and deprecations. Record unavailable tools and environments explicitly; never manufacture a passing result.
 
+
+Content binding: [official 3.15-branch documentation contents](https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst). This index does not bind all linked guides or establish the project's interpreter version. Use the installed version's specific documentation for API and compatibility decisions.

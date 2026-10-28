@@ -1,0 +1,991 @@
+{
+  "reviewed_on": "2026-10-20",
+  "source_revision": "7aff03434476a7141384775aac2521ee73dd5553",
+  "scope": "Current-content review against bounded guidance; not a reconstruction of all historical upstream edits. HTML shells were checked with official documentation data and remain held. No broad normalization or global review-clock reset.",
+  "checked_sources": 63,
+  "changed_sources_reviewed": 43,
+  "reviewed_fingerprints_refreshed": 34,
+  "held_sources": 9,
+  "global_review_age_date": "2026-10-05",
+  "records": [
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/",
+      "expected_marker": "etag:\"6abd19f6-1fabb\"",
+      "initial_observed_marker": "etag:\"6ad5eace-1ffe1\"",
+      "body_sha256_samples": [
+        "db5200960a9786ee483359aa99c34f4ee3c75ace6feaeb32a7ee0543ef614cb2",
+        "db5200960a9786ee483359aa99c34f4ee3c75ace6feaeb32a7ee0543ef614cb2"
+      ],
+      "resampled_markers": [
+        "etag:\"6ad5eace-1ffe1\"",
+        "etag:\"6ad5eace-1ffe1\""
+      ],
+      "final_url": "https://adk-labs.github.io/adk-docs/",
+      "affected_skills": [
+        "google-adk-engineering-profile"
+      ],
+      "finding": "ADK still separates framework, language, runtime, evaluation, and deployment choices. The overview does not establish a working installed system.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "expected_marker": "etag:\"6abd19f6-3d317\"",
+      "initial_observed_marker": "etag:\"6ad5eacf-3d838\"",
+      "body_sha256_samples": [
+        "b976820deef9b80664e97aed57d1f134a0506f29c181abcd1cb43447585d6dd7",
+        "b976820deef9b80664e97aed57d1f134a0506f29c181abcd1cb43447585d6dd7"
+      ],
+      "resampled_markers": [
+        "etag:\"6ad5eacf-3d838\"",
+        "etag:\"6ad5eacf-3d838\""
+      ],
+      "final_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "affected_skills": [
+        "agent-tool-action-boundary-review"
+      ],
+      "finding": "ADK safety still distinguishes validation callbacks and runner-level security plugins; suggested integrations do not authorize enabling services or tool access.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "expected_marker": "content-sha256:718b25ddcb4988ec680cd0b0fecaa3c568cb28fbe2e9d47297a164f58633b9aa",
+      "initial_observed_marker": "content-sha256:4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add",
+      "body_sha256_samples": [
+        "4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add",
+        "4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add"
+      ],
+      "resampled_markers": [
+        "content-sha256:4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add",
+        "content-sha256:4b85f3621bf24c732900a5dbe194a566b1d8b66f7db3adca39aea6eeda281add"
+      ],
+      "final_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "affected_skills": [
+        "agent-context-state-memory-design"
+      ],
+      "finding": "Session history, session state, and longer-lived memory remain separate concepts; in-memory examples do not establish durable retention or tenant isolation.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "expected_marker": "content-sha256:82d348e8e9c1b61e28034d7bf8ca6561532abf055d2a8bc97b306f1c15531644",
+      "initial_observed_marker": "content-sha256:e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2",
+      "body_sha256_samples": [
+        "e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2",
+        "e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2"
+      ],
+      "resampled_markers": [
+        "content-sha256:e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2",
+        "content-sha256:e56deb33ccc4918f5acf734ae4559f0aeade7c5cf2c7a0ff3a08e4b775880ce2"
+      ],
+      "final_url": "https://agentskills.io/specification",
+      "affected_skills": [
+        "acceptance-evidence-ledger",
+        "alignment-interview",
+        "authority-boundary-review",
+        "change-adoption-planning",
+        "change-impact-analysis",
+        "claim-verification",
+        "codebase-explanation",
+        "cross-capability-dependency-mapping",
+        "cross-stack-quality-gates",
+        "data-authority-migration-ratification",
+        "decision-evidence-trace",
+        "decision-governance-records",
+        "design-rationale-investigation",
+        "domain-vocabulary-modeling",
+        "guided-configuration",
+        "high-signal-technical-writing",
+        "implementation-planning",
+        "iteration-postlaunch-learning",
+        "kpi-outcome-measurement",
+        "module-interface-design",
+        "plan-execution",
+        "portable-skill-authoring",
+        "prelaunch-readiness",
+        "problem-framing",
+        "production-incident-analysis",
+        "prototype-spike",
+        "public-private-boundary-review",
+        "publish-change-safely",
+        "requirements-synthesis",
+        "research-to-publication-lifecycle",
+        "skill-import-provenance",
+        "skill-security-review",
+        "source-grounded-research",
+        "stakeholder-technical-communication",
+        "systematic-diagnosis",
+        "task-handoff",
+        "test-driven-change",
+        "test-strategy",
+        "value-attribution-evidence-maturity",
+        "workshop-planning-synthesis"
+      ],
+      "finding": "The specification retains named SKILL.md frontmatter, descriptions, optional metadata, and on-demand references; experimental tool declarations are not portable authority grants.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/agents",
+      "expected_marker": "last-modified:Thu, 17 Sep 2026 17:06:46 GMT",
+      "initial_observed_marker": "last-modified:Fri, 09 Oct 2026 22:11:39 GMT",
+      "body_sha256_samples": [
+        "b0448048266f5a6789348d37791d3b8c140f5ede2d2db8a06aebb29d6f612fa1",
+        "07036a55d163e3b7a9540eda700f147d18fcbde54b77fd05058ea4f773a3f4f4"
+      ],
+      "resampled_markers": [
+        "last-modified:Fri, 09 Oct 2026 22:11:39 GMT",
+        "last-modified:Fri, 09 Oct 2026 22:11:39 GMT"
+      ],
+      "final_url": "https://ai.google.dev/gemini-api/docs/agents",
+      "affected_skills": [
+        "agent-evaluation-design",
+        "agentic-system-security-review"
+      ],
+      "finding": "The managed agent overview describes sandboxed execution, scoped external tools, and token/tool-based billing; it does not qualify local CLI behavior or authorize spend.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "expected_marker": "last-modified:Wed, 23 Sep 2026 17:59:42 GMT",
+      "initial_observed_marker": "last-modified:Fri, 16 Oct 2026 23:01:21 GMT",
+      "body_sha256_samples": [
+        "6089bf66a7365a1991f107608c8d85b7d4bcf1769a61cc8760c00f73b3b46577",
+        "088cbdfd7ac815a575c19b3ae0fa5492c0c2537f894bd855b5a49da476fcb700"
+      ],
+      "resampled_markers": [
+        "last-modified:Fri, 16 Oct 2026 23:01:21 GMT",
+        "last-modified:Fri, 16 Oct 2026 23:01:21 GMT"
+      ],
+      "final_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "affected_skills": [
+        "agent-evaluation-design",
+        "google-adk-engineering-profile"
+      ],
+      "finding": "The latest-model guide is mutable and now describes Gemini 4 Argon. Exact runtime model discovery remains required; a documentation model name is not an installed-client receipt.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://antigravity.google/docs/cli/headless/",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "initial_observed_marker": "etag:\"wE2o6g\"",
+      "body_sha256_samples": [
+        "26bc1a7f862bfc08f5482a458b9c0915fbf7d1433c347a4273fedeb746465b5d",
+        "26bc1a7f862bfc08f5482a458b9c0915fbf7d1433c347a4273fedeb746465b5d"
+      ],
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "final_url": "https://antigravity.google/docs/cli/headless/",
+      "affected_skills": [
+        "agent-evaluation-design",
+        "claim-verification"
+      ],
+      "finding": "Headless permission denials can coexist with an apparently successful terminal result. Per-request marker availability differed; hold this fingerprint and preserve the distinction between outcome and exit status.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://antigravity.google/docs/skills/",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "initial_observed_marker": "etag:\"wE2o6g\"",
+      "body_sha256_samples": [
+        "dfc5e710f0bc181e8be4b4f13e5af0a88c61ce791c8f431ae8ff32156759644c",
+        "dfc5e710f0bc181e8be4b4f13e5af0a88c61ce791c8f431ae8ff32156759644c"
+      ],
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "final_url": "https://antigravity.google/docs/skills/",
+      "affected_skills": [
+        "portable-skill-authoring",
+        "skill-security-review"
+      ],
+      "finding": "The decoded skills guide documents descriptions, workspace/global discovery, and plugin skills. It does not establish an observed explicit-only control on this installed version.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/swiftdata/modelactor",
+      "expected_marker": "content-sha256:22eb6b9dad5ea17f7bd75d4dce787222e81943067d62e24666c083287cef5406",
+      "initial_observed_marker": "content-sha256:d97f6907e4e0f733fbeb72e24a99e1fe722de97d3fca5decc6d586de8fc3f1bd",
+      "body_sha256_samples": [
+        "d97f6907e4e0f733fbeb72e24a99e1fe722de97d3fca5decc6d586de8fc3f1bd",
+        "d97f6907e4e0f733fbeb72e24a99e1fe722de97d3fca5decc6d586de8fc3f1bd"
+      ],
+      "resampled_markers": [
+        "content-sha256:d97f6907e4e0f733fbeb72e24a99e1fe722de97d3fca5decc6d586de8fc3f1bd",
+        "content-sha256:d97f6907e4e0f733fbeb72e24a99e1fe722de97d3fca5decc6d586de8fc3f1bd"
+      ],
+      "final_url": "https://developer.apple.com/documentation/swiftdata/modelactor",
+      "affected_skills": [
+        "swift-persistence-contract-review"
+      ],
+      "finding": "Apple documentation data identifies ModelActor as providing mutually exclusive model access. The pinned HTML is only a renderer shell; hold until the content-binding gap is separately repaired.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
+      "expected_marker": "content-sha256:4b230d88255754f2f9a19aecc5fc11c14c80cd619da637071c8b9a95a2dde960",
+      "initial_observed_marker": "content-sha256:72b90b193b23692646fceaf8484c37ac5df2574610d5a5281c177eb84c0ff281",
+      "body_sha256_samples": [
+        "72b90b193b23692646fceaf8484c37ac5df2574610d5a5281c177eb84c0ff281",
+        "72b90b193b23692646fceaf8484c37ac5df2574610d5a5281c177eb84c0ff281"
+      ],
+      "resampled_markers": [
+        "content-sha256:72b90b193b23692646fceaf8484c37ac5df2574610d5a5281c177eb84c0ff281",
+        "content-sha256:72b90b193b23692646fceaf8484c37ac5df2574610d5a5281c177eb84c0ff281"
+      ],
+      "final_url": "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
+      "affected_skills": [
+        "swiftui-feature-delivery"
+      ],
+      "finding": "Apple documentation data describes model/view separation and Observation dependencies. The pinned HTML is only a renderer shell; hold until content-binding repair.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/testing/migratingfromxctest",
+      "expected_marker": "content-sha256:cd6282a9f54246eeb2c2033ecd0ff647e6d4c454cdd686727ed0ac3a2d5ed0db",
+      "initial_observed_marker": "content-sha256:68ae62346d02c391841aadd9e382eb48615cfeb6571ec6192a4a1b53e3f43674",
+      "body_sha256_samples": [
+        "68ae62346d02c391841aadd9e382eb48615cfeb6571ec6192a4a1b53e3f43674",
+        "68ae62346d02c391841aadd9e382eb48615cfeb6571ec6192a4a1b53e3f43674"
+      ],
+      "resampled_markers": [
+        "content-sha256:68ae62346d02c391841aadd9e382eb48615cfeb6571ec6192a4a1b53e3f43674",
+        "content-sha256:68ae62346d02c391841aadd9e382eb48615cfeb6571ec6192a4a1b53e3f43674"
+      ],
+      "final_url": "https://developer.apple.com/documentation/testing/migratingfromxctest",
+      "affected_skills": [
+        "ios-journey-verification"
+      ],
+      "finding": "Apple documentation data distinguishes XCTest and Testing modules and supports incremental migration. The pinned HTML is only a renderer shell; hold until content-binding repair.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "expected_marker": "etag:\"ybbyd6n9xu4gfv\"",
+      "initial_observed_marker": "etag:\"c2a70c088e5fd3b33fc5fccbc6d7af17\"",
+      "body_sha256_samples": [
+        "fce7d2788fb06041a37ae97d05510782fe92f2ae3f523f6aff91516ed5672dcd",
+        "fce7d2788fb06041a37ae97d05510782fe92f2ae3f523f6aff91516ed5672dcd"
+      ],
+      "resampled_markers": [
+        "etag:\"c2a70c088e5fd3b33fc5fccbc6d7af17\"",
+        "etag:\"c2a70c088e5fd3b33fc5fccbc6d7af17\""
+      ],
+      "final_url": "https://developer.hashicorp.com/terraform/language",
+      "affected_skills": [
+        "terraform-engineering-profile"
+      ],
+      "finding": "Terraform remains a declarative language for resources and dependencies. Language documentation does not grant plan execution, state mutation, or apply authority.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "expected_marker": "normalized-content-sha256:f5fdb09e2d3f1c53771a95966f87422dad0ab254f02370fc5dba13f4f8ad9c83",
+      "initial_observed_marker": "normalized-content-sha256:a6d8bb0d3770bd1580c4974730d6b8d18e25ac618cd9e8571abf5e6459a7900b",
+      "body_sha256_samples": [
+        "9857532ae83a5cdd81654361b7b3cc827587a0d959caeac94a08dd1265955536",
+        "c49efa357df27cc351fdf4ca200abb8a36dca8624c98745b24717712da8f5e95"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:7abaac9957c374c79789eaf3813f82e24ca8c078495b51353dadbe630cf275d7",
+        "normalized-content-sha256:7abaac9957c374c79789eaf3813f82e24ca8c078495b51353dadbe630cf275d7"
+      ],
+      "final_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "affected_skills": [
+        "google-adk-engineering-profile",
+        "publish-change-safely"
+      ],
+      "finding": "The official Agents CLI announcement spans scaffolding, evaluation, and deployment. Product features do not authorize running that CLI, buying inference, or creating cloud resources.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "expected_marker": "normalized-content-sha256:5e67e7ad92119a4618d5d6d6e57bd4a63c99d78e1523d86d39ea1f830618eae4",
+      "initial_observed_marker": "normalized-content-sha256:c05eccbfd9dee48e24969f67855661a4acfa6c5bc3b699bbc4f7758b00e02ad4",
+      "body_sha256_samples": [
+        "8a6e308ac8743506329c1358c7dd20ba205e49e99b25b4bb5840ee524b41ae41",
+        "1170828fe7edaf5afbe1b78599d1a71e593e1acf7d36acbd3ec1b9e92e0acfcd"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:6084a4e22781ef798671f33f64a62c65d0cf22e3437846522cecb3a6fecb8130",
+        "normalized-content-sha256:6084a4e22781ef798671f33f64a62c65d0cf22e3437846522cecb3a6fecb8130"
+      ],
+      "final_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "affected_skills": [
+        "google-adk-engineering-profile",
+        "portable-skill-authoring"
+      ],
+      "finding": "The migration announcement explicitly distinguishes Antigravity from legacy Gemini CLI and warns of incomplete parity. Keep licensing, distribution, and observed receiving behavior separate.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "expected_marker": "last-modified:Wed, 30 Sep 2026 20:40:23 GMT",
+      "initial_observed_marker": "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+      "body_sha256_samples": [
+        "ff7c161fa0bcddb528a947a3a6901d5137ebe2dae757890c127344e65afdf576",
+        "2c75d05eebae845bba9fc92691072d3574bd810e956e7666519cb153f881f17d"
+      ],
+      "resampled_markers": [
+        "last-modified:Tue, 13 Oct 2026 22:08:34 GMT",
+        "last-modified:Tue, 13 Oct 2026 22:08:34 GMT"
+      ],
+      "final_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "affected_skills": [
+        "agent-tool-action-boundary-review",
+        "retrieval-grounding-quality-review"
+      ],
+      "finding": "Data Agent Kit describes editor and coding-agent integrations across data services. Availability does not establish local installation or permission to query, execute jobs, or deploy.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "expected_marker": "last-modified:Thu, 01 Oct 2026 19:18:45 GMT",
+      "initial_observed_marker": "last-modified:Fri, 16 Oct 2026 02:49:57 GMT",
+      "body_sha256_samples": [
+        "37a457a927c89a4fe33a57cc466c6e3cbf663474cc3d67c19dc2be6249333ca4",
+        "cf2668a3b5b6df24881af61bf074dcd879387e90850f13808eaac8377d546148"
+      ],
+      "resampled_markers": [
+        "last-modified:Fri, 16 Oct 2026 02:49:57 GMT",
+        "last-modified:Fri, 16 Oct 2026 02:49:57 GMT"
+      ],
+      "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "affected_skills": [
+        "agent-context-state-memory-design",
+        "agentic-system-security-review",
+        "google-adk-engineering-profile"
+      ],
+      "finding": "Agent Platform separates development, runtime, tools, evaluation, and governance. Framework support does not establish deployed-agent acceptance or replace scoped authorization.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
+      "expected_marker": "content-sha256:c44c52d5951bb6a5690df953455d69caf26df9f13c531d17c10898bd733129f9",
+      "initial_observed_marker": "content-sha256:40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98",
+      "body_sha256_samples": [
+        "40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98",
+        "40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98"
+      ],
+      "resampled_markers": [
+        "content-sha256:40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98",
+        "content-sha256:40fc6a3e3f0a0e313b3a7763c071f36e1cfb69221ce29c928120cf8804f60e98"
+      ],
+      "final_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
+      "affected_skills": [
+        "code-change-review",
+        "request-code-review",
+        "respond-to-code-review"
+      ],
+      "finding": "GitHub retains comment, approval, and requested-change review states. A review is separate from permission or readiness to merge.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.python.org/3/",
+      "expected_marker": "etag:\"6ac37bec-4cb3\"",
+      "initial_observed_marker": "etag:\"6ad77096-4ca9\"",
+      "body_sha256_samples": [
+        "7a2b145c196d7b9452106093402cf40f1a34210bb98f292305e3c395d41ed5f1",
+        "7a2b145c196d7b9452106093402cf40f1a34210bb98f292305e3c395d41ed5f1"
+      ],
+      "resampled_markers": [
+        "etag:\"6ad77096-4ca9\"",
+        "etag:\"6ad77096-4ca9\""
+      ],
+      "final_url": "https://docs.python.org/3/",
+      "affected_skills": [
+        "python-engineering-profile"
+      ],
+      "finding": "The mutable Python index now identifies Python 3.15.0. Continue discovering repository interpreter and dependency versions rather than adopting the newest documentation version.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.python.org/3/library/unittest.html",
+      "expected_marker": "etag:\"6ac37bec-51995\"",
+      "initial_observed_marker": "etag:\"6ad77097-5243a\"",
+      "body_sha256_samples": [
+        "39210e3d8fc2279788200744c67b36f66004d4809c33d1d18c91e16e53fb22bd",
+        "39210e3d8fc2279788200744c67b36f66004d4809c33d1d18c91e16e53fb22bd"
+      ],
+      "resampled_markers": [
+        "etag:\"6ad77097-5243a\"",
+        "etag:\"6ad77097-5243a\""
+      ],
+      "final_url": "https://docs.python.org/3/library/unittest.html",
+      "affected_skills": [
+        "test-quality-review"
+      ],
+      "finding": "Unittest retains assertion, fixture, discovery, and asynchronous testing interfaces. Use the project interpreter; current documentation does not prove an executed test.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.spring.io/spring-boot/",
+      "expected_marker": "last-modified:Thu, 01 Oct 2026 10:11:07 GMT",
+      "initial_observed_marker": "last-modified:Tue, 20 Oct 2026 14:45:31 GMT",
+      "body_sha256_samples": [
+        "59d025b4e71ab022e51a8bbad3d32e7190d8c515f32896833beef9afdaa11c44",
+        "59d025b4e71ab022e51a8bbad3d32e7190d8c515f32896833beef9afdaa11c44"
+      ],
+      "resampled_markers": [
+        "last-modified:Tue, 20 Oct 2026 16:09:11 GMT",
+        "last-modified:Tue, 20 Oct 2026 16:09:11 GMT"
+      ],
+      "final_url": "https://docs.spring.io/spring-boot/",
+      "affected_skills": [
+        "java-spring-engineering-profile"
+      ],
+      "finding": "Spring Boot lists multiple stable, preview, and snapshot trains. Wrapper, JVM, and dependency evidence must select applicable behavior; do not infer a project upgrade.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "expected_marker": "normalized-content-sha256:4e9b6fd81b9ab34e2edacab3b9b4963bd402ba18290bafcca81ec5453c691301",
+      "initial_observed_marker": "normalized-content-sha256:202d703737377b632f755c9786c1a11d65a5efb7e81594e69c2072178d52f1b8",
+      "body_sha256_samples": [
+        "604cc8122e739d52b6e610ec402c76622f5f50dfbcc24a84415adff5306a4dc5",
+        "bd8b1f7bd9fccd00787e049f430ec80828507b8c3a8eb2fa1719eb0c50e8a2c3"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:bd8b1f7bd9fccd00787e049f430ec80828507b8c3a8eb2fa1719eb0c50e8a2c3",
+        "normalized-content-sha256:bd8b1f7bd9fccd00787e049f430ec80828507b8c3a8eb2fa1719eb0c50e8a2c3"
+      ],
+      "final_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "affected_skills": [
+        "agentic-system-security-review"
+      ],
+      "finding": "The agentic initiative describes agent-specific security risks. Repeated body/normalized markers differed; preserve the source hold rather than masking content churn.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "expected_marker": "normalized-content-sha256:44a36ed5f01b69261088a74ad8cab855ec4de28a1cc146d03a6f534f17808511",
+      "initial_observed_marker": "normalized-content-sha256:5fe5e19e200a7289c9d53ab8bd54efb2abed9bf010006d2340480541a762806a",
+      "body_sha256_samples": [
+        "72509ae84e8afa3359b378881567412d3fd39192180ca9eb54441fe0061097aa",
+        "72509ae84e8afa3359b378881567412d3fd39192180ca9eb54441fe0061097aa"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:65e9bfeaa04f897e5c50c2a6dc2d8374f9a1f0e90d62edb0565c685eaa70b1a0",
+        "normalized-content-sha256:65e9bfeaa04f897e5c50c2a6dc2d8374f9a1f0e90d62edb0565c685eaa70b1a0"
+      ],
+      "final_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "affected_skills": [
+        "retrieval-grounding-quality-review"
+      ],
+      "finding": "The retrieval-risk page addresses permission-aware stores, cross-context leakage, poisoning, and source conflicts. Normalized markers differed across samples; retain the hold.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "expected_marker": "last-modified:Mon, 28 Sep 2026 20:56:48 GMT",
+      "initial_observed_marker": "last-modified:Tue, 20 Oct 2026 04:47:18 GMT",
+      "body_sha256_samples": [
+        "e41a264c82ef0423e260bdd372d83ed40792d32b31298b4299b7853570ef0773",
+        "e41a264c82ef0423e260bdd372d83ed40792d32b31298b4299b7853570ef0773"
+      ],
+      "resampled_markers": [
+        "last-modified:Tue, 20 Oct 2026 04:47:18 GMT",
+        "last-modified:Tue, 20 Oct 2026 04:47:18 GMT"
+      ],
+      "final_url": "https://git-scm.com/docs/git-merge",
+      "affected_skills": [
+        "merge-conflict-reconciliation"
+      ],
+      "finding": "Git merge preserves distinct merge behavior, conflict handling, and ancestry choices. A merge operation remains separately authorized; do not replace an ancestry-preserving merge with squash.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "expected_marker": "last-modified:Mon, 28 Sep 2026 20:56:49 GMT",
+      "initial_observed_marker": "last-modified:Tue, 20 Oct 2026 04:47:16 GMT",
+      "body_sha256_samples": [
+        "a1227c197ccc6fde12a5e15ab2a3c351ad2d3e328fdf6f1934efe05a0a84afeb",
+        "a1227c197ccc6fde12a5e15ab2a3c351ad2d3e328fdf6f1934efe05a0a84afeb"
+      ],
+      "resampled_markers": [
+        "last-modified:Tue, 20 Oct 2026 04:47:16 GMT",
+        "last-modified:Tue, 20 Oct 2026 04:47:16 GMT"
+      ],
+      "final_url": "https://git-scm.com/docs/git-worktree",
+      "affected_skills": [
+        "finish-development-branch",
+        "worktree-isolation"
+      ],
+      "finding": "Git worktree documents linked checkout state, branch use, locks, and recovery. Protect dirty and ambiguous checkouts; isolation is not disposal authority.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://go.dev/doc/",
+      "expected_marker": "content-sha256:97b9515232aa1f34c5e46b758005079356d85fbd41a2900572998c65d63c0de1",
+      "initial_observed_marker": "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+      "body_sha256_samples": [
+        "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+        "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509"
+      ],
+      "resampled_markers": [
+        "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+        "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509"
+      ],
+      "final_url": "https://go.dev/doc/",
+      "affected_skills": [
+        "go-engineering-profile"
+      ],
+      "finding": "The Go index covers modules, testing, diagnostics, concurrency, and database access. Discover the module toolchain and local gates instead of assuming one universal command.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "expected_marker": "normalized-content-sha256:9655fb7da8bd1b4237fc6e5ea4b709e4d4b88c8884f34c998440bc9576160cf6",
+      "initial_observed_marker": "normalized-content-sha256:018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a",
+      "body_sha256_samples": [
+        "018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a",
+        "018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a",
+        "normalized-content-sha256:018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a"
+      ],
+      "final_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "affected_skills": [
+        "multi-agent-orchestration"
+      ],
+      "finding": "OpenAI subagent guidance distinguishes roles, inherited context, configuration, and tool scope. It neither guarantees context isolation nor authorizes delegation in this task.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "expected_marker": "etag:\"Ybj7LFP8pWLhNFCRqO2dBS41g3E=\"",
+      "initial_observed_marker": "etag:\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\"",
+      "body_sha256_samples": [
+        "f8a8766d68cae55101d8c59c1ba7baad920d7159a281237bc5395b0e9d202ce4",
+        "f8a8766d68cae55101d8c59c1ba7baad920d7159a281237bc5395b0e9d202ce4"
+      ],
+      "resampled_markers": [
+        "etag:\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\"",
+        "etag:\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\""
+      ],
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "affected_skills": [
+        "csharp-dotnet-engineering-profile"
+      ],
+      "finding": "The .NET index provides versioned platform and framework guidance. Repository SDK, target framework, and build wrappers remain the authority for exact checks.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "expected_marker": "content-sha256:7509bda3aefadb7859cee3e060321ff48a734a0d6ebb17aeff58d70db25ac4e6",
+      "initial_observed_marker": "content-sha256:99b4f9e635a022808aadaf1df879d035fa68652ddebded8caaf3b8a89547271c",
+      "body_sha256_samples": [
+        "61af6e8cb17d471597013e7361e5984081b27a7105723f691d295f57db55c2b2",
+        "61af6e8cb17d471597013e7361e5984081b27a7105723f691d295f57db55c2b2"
+      ],
+      "resampled_markers": [
+        "content-sha256:6ed2cc7386976aa1bb5ebbc7c5979f47b3b156a42d52226d5b1ec93c59a16ece",
+        "content-sha256:6ed2cc7386976aa1bb5ebbc7c5979f47b3b156a42d52226d5b1ec93c59a16ece"
+      ],
+      "final_url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "affected_skills": [
+        "nextjs-feature-delivery"
+      ],
+      "finding": "Next.js agent guidance now includes additional migration workflows. Do not import those skills or enable framework features; discover the installed Next.js version and requested scope.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/authentication",
+      "expected_marker": "content-sha256:32db418afcbef61db5cc0370da25f8270a415f6a595cadd8b041a9da5fe46a09",
+      "initial_observed_marker": "content-sha256:c7ca52ecbdc20c271a510cc3fedfb8b8df4f8a3599771bfcb08fff0d660073e8",
+      "body_sha256_samples": [
+        "87fb3a8d2ebcb6bb43a7f15bbb9caf5d85933e7fd5085141174b65c5b4e917d9",
+        "87fb3a8d2ebcb6bb43a7f15bbb9caf5d85933e7fd5085141174b65c5b4e917d9"
+      ],
+      "resampled_markers": [
+        "content-sha256:1d742fdc2b6822724bb7875bf46722bc4e4a66bd16aa418a60811662c5de2d26",
+        "content-sha256:1d742fdc2b6822724bb7875bf46722bc4e4a66bd16aa418a60811662c5de2d26"
+      ],
+      "final_url": "https://nextjs.org/docs/app/guides/authentication",
+      "affected_skills": [
+        "nextjs-cache-auth-boundary-review"
+      ],
+      "finding": "Next.js authentication guidance retains server-side session and role checks, data access boundaries, and safe client projections. UI visibility and cached shells are not authorization controls.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "expected_marker": "etag:\"cf9bbc3ab06f67fc8e2509a720ecebdc-ssl\"",
+      "initial_observed_marker": "etag:\"f60049a82dce58cae45aaa4eea299ba5-ssl\"",
+      "body_sha256_samples": [
+        "092fd062d7931f8aff6e397ac9d5f781705335fab72b8a814831880e6ca18fe1",
+        "092fd062d7931f8aff6e397ac9d5f781705335fab72b8a814831880e6ca18fe1"
+      ],
+      "resampled_markers": [
+        "etag:\"f60049a82dce58cae45aaa4eea299ba5-ssl\"",
+        "etag:\"f60049a82dce58cae45aaa4eea299ba5-ssl\""
+      ],
+      "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "affected_skills": [
+        "observability-design"
+      ],
+      "finding": "OpenTelemetry separates traces, metrics, logs, and propagated context. Instrumentation availability does not prove operational coverage or acceptable cardinality.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 16:00:59 GMT",
+      "initial_observed_marker": "content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+      "body_sha256_samples": [
+        "46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+        "82b7f1e1ef55fc78f0563439621f259a1ee1b758d6d053a5f3a1106ce7395284"
+      ],
+      "resampled_markers": [
+        "content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+        "content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99"
+      ],
+      "final_url": "https://owasp.org/projects/asvs",
+      "affected_skills": [
+        "application-security-review"
+      ],
+      "finding": "The ASVS URL redirects to the official project page, which identifies version 5.0.0 and version-sensitive requirement identifiers. Preserve versioned mappings and avoid compliance claims.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "expected_marker": "content-sha256:470913c5b3f755ae78f6120523cf1e02adb815809d60ffb78fffc49877bf9857",
+      "initial_observed_marker": "content-sha256:2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c",
+      "body_sha256_samples": [
+        "2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c",
+        "2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c"
+      ],
+      "resampled_markers": [
+        "content-sha256:2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c",
+        "content-sha256:2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c"
+      ],
+      "final_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "affected_skills": [
+        "react-rendering-performance-diagnosis"
+      ],
+      "finding": "React distinguishes derived render data and user events from Effects for external synchronization. Measure the actual interaction and retain race/cleanup concerns; avoid blanket optimization.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "expected_marker": "etag:\"37cdaf7a2205c51c395640b3d51edc24-ssl\"",
+      "initial_observed_marker": "etag:\"27dad4a2986b62556008d5c97970945a-ssl\"",
+      "body_sha256_samples": [
+        "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+        "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44"
+      ],
+      "resampled_markers": [
+        "etag:\"27dad4a2986b62556008d5c97970945a-ssl\"",
+        "etag:\"27dad4a2986b62556008d5c97970945a-ssl\""
+      ],
+      "final_url": "https://slsa.dev/spec/v1.2/provenance",
+      "affected_skills": [
+        "dependency-supply-chain-review"
+      ],
+      "finding": "The versioned SLSA page describes verifiable provenance and links its predicate definition. The index does not independently verify a build level or artifact origin.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "expected_marker": "last-modified:Mon, 12 May 2025 07:08:00 GMT",
+      "initial_observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "body_sha256_samples": [
+        "3117d94aca6d7422db18b210a4142718388523a4ea2082df539ffe9a8c4c2a75",
+        "3117d94aca6d7422db18b210a4142718388523a4ea2082df539ffe9a8c4c2a75"
+      ],
+      "resampled_markers": [
+        "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+        "last-modified:Thu, 08 Oct 2026 04:48:00 GMT"
+      ],
+      "final_url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "affected_skills": [
+        "data-migration-readiness",
+        "operational-readiness-review",
+        "performance-scalability-diagnosis"
+      ],
+      "finding": "The SRE chapter distinguishes user-visible monitoring, alerting, and diagnostic detail. Signals do not by themselves prove release readiness or runtime success.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://sre.google/sre-book/postmortem-culture/",
+      "expected_marker": "last-modified:Mon, 01 Sep 2025 09:58:00 GMT",
+      "initial_observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "body_sha256_samples": [
+        "ef876f0a0f09a88f3acc3294ec24eb922751b0059cba8be271aa6fe8474656c5",
+        "ef876f0a0f09a88f3acc3294ec24eb922751b0059cba8be271aa6fe8474656c5"
+      ],
+      "resampled_markers": [
+        "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+        "last-modified:Thu, 08 Oct 2026 04:48:00 GMT"
+      ],
+      "final_url": "https://sre.google/sre-book/postmortem-culture/",
+      "affected_skills": [
+        "workflow-retrospective"
+      ],
+      "finding": "The postmortem chapter focuses on contributing conditions, impact, response, and blameless learning. A documented review is not evidence that follow-up changes worked.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "expected_marker": "normalized-content-sha256:254e8e237c8b4ff89355907b17b0cc4746774c1ce8b0b7683182b2697616473c",
+      "initial_observed_marker": "normalized-content-sha256:d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417",
+      "body_sha256_samples": [
+        "ea02d66958cb770733460961eb0d7e8d287df44b5804581e86e05337316137da",
+        "22af9178395b0770f80b89e1eceffcb9cda736d47fdcb719bd945e252985794d"
+      ],
+      "resampled_markers": [
+        "normalized-content-sha256:d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417",
+        "normalized-content-sha256:d74d8f101369a6b380023e458a3481bbac594af4bd57489dc84fb925f0e8f417"
+      ],
+      "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "affected_skills": [
+        "salesforce-apex-engineering-profile"
+      ],
+      "finding": "Trailhead describes multitenant limits, transactional data access, and testing. Discovery of Apex APIs does not authorize anonymous execution or changing shared records.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/cli/plugins/",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "initial_observed_marker": "etag:\"wE2o6g\"",
+      "body_sha256_samples": [
+        "edda04ad5d42b687951866b7a49d80f05a719a5a404b8cf343ee3b75d7ad1575",
+        "edda04ad5d42b687951866b7a49d80f05a719a5a404b8cf343ee3b75d7ad1575"
+      ],
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "final_url": "https://www.antigravity.google/docs/cli/plugins/",
+      "affected_skills": [
+        "portable-skill-authoring",
+        "skill-security-review"
+      ],
+      "finding": "The legacy CLI plugin URL returns an insufficient page for review. Hold its pin; use the separately reviewed combined plugin guide for current packaging discovery.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "initial_observed_marker": "etag:\"wE2o6g\"",
+      "body_sha256_samples": [
+        "8abc69612a9b053aa4bcd32e0598899cd49e2da35c6247a38787ae09faf529d6",
+        "8abc69612a9b053aa4bcd32e0598899cd49e2da35c6247a38787ae09faf529d6"
+      ],
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "final_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "affected_skills": [
+        "portable-skill-authoring",
+        "skill-security-review"
+      ],
+      "finding": "The combined plugin guide describes manifests, component directories, native lifecycle commands, and synchronization. Those documented capabilities require separate installed-version observations.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.antigravity.google/docs/sdk/overview",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "initial_observed_marker": "etag:\"wE2o6g\"",
+      "body_sha256_samples": [
+        "f891c0cf37e50910042ab84c2543e02bb32da987b7c640cce39665c72202a01b",
+        "f891c0cf37e50910042ab84c2543e02bb32da987b7c640cce39665c72202a01b"
+      ],
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "final_url": "https://www.antigravity.google/docs/sdk/overview",
+      "affected_skills": [
+        "agent-evaluation-design",
+        "google-adk-engineering-profile"
+      ],
+      "finding": "The SDK guide describes a separate stateful harness and tool policies. Samples varied, so retain this fingerprint hold; no SDK runtime or model use was tested.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/current/",
+      "expected_marker": "content-sha256:52564df5d059a7809bdbb1044f68dfbc37644d1c7dc5e0497a8530a2d8045840",
+      "initial_observed_marker": "content-sha256:0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2",
+      "body_sha256_samples": [
+        "0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2",
+        "0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2"
+      ],
+      "resampled_markers": [
+        "content-sha256:0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2",
+        "content-sha256:0d06a7cb2e1aaa3f5c142a54c92be0dbed698ed0fdafa4d65c09a0ef8563fce2"
+      ],
+      "final_url": "https://www.postgresql.org/docs/current/",
+      "affected_skills": [
+        "postgresql-sql-engineering-profile"
+      ],
+      "finding": "The PostgreSQL current index spans SQL, server operations, transactions, and testing. Discover server version and mutation authority; the current index does not identify a deployment.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.swift.org/documentation/",
+      "expected_marker": "etag:\"209-65cef4d3c4ac0\"",
+      "initial_observed_marker": "etag:\"209-65e3c7d547680\"",
+      "body_sha256_samples": [
+        "daca4b8d0b5594840481b1dd96f9433f2b232f88b193bec97462374c19ef9d85",
+        "daca4b8d0b5594840481b1dd96f9433f2b232f88b193bec97462374c19ef9d85"
+      ],
+      "resampled_markers": [
+        "etag:\"209-65e3c7d547680\"",
+        "etag:\"209-65e3c7d547680\""
+      ],
+      "final_url": "https://www.swift.org/documentation/",
+      "affected_skills": [
+        "swift-swiftui-engineering-profile"
+      ],
+      "finding": "The Swift URL provides only a redirect/shell; official documentation data was read separately. Retain this pin until the reviewed content has a meaningful binding.",
+      "historical_response_bodies_available": false,
+      "decision": "held",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.swift.org/swift-evolution/",
+      "expected_marker": "content-sha256:86eec9fc78d79de455558156d85d38e30b1b2c507c7966ca83c42264224dfb89",
+      "initial_observed_marker": "content-sha256:9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac",
+      "body_sha256_samples": [
+        "9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac",
+        "9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac"
+      ],
+      "resampled_markers": [
+        "content-sha256:9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac",
+        "content-sha256:9998a3b2c95ac9497f4cf8ee8bd420844925851ab359f71a6519dce09d9869ac"
+      ],
+      "final_url": "https://www.swift.org/swift-evolution/",
+      "affected_skills": [
+        "swift-concurrency-diagnosis"
+      ],
+      "finding": "The decoded Swift Evolution page distinguishes reviewed proposals from installed language behavior. Compiler version, language mode, and enabled features remain required evidence.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "expected_marker": "etag:\"6ac39afa-29a5d\"",
+      "initial_observed_marker": "etag:\"6ad60f0b-29a5d\"",
+      "body_sha256_samples": [
+        "48566bbfa37f06df72426ca19216421df7e08de8664cfcfda100726823d8d598",
+        "48566bbfa37f06df72426ca19216421df7e08de8664cfcfda100726823d8d598"
+      ],
+      "resampled_markers": [
+        "etag:\"6ad60f0b-29a5d\"",
+        "etag:\"6ad60f0b-29a5d\""
+      ],
+      "final_url": "https://www.typescriptlang.org/docs/",
+      "affected_skills": [
+        "typescript-javascript-engineering-profile"
+      ],
+      "finding": "The TypeScript index covers compiler configuration, module interoperability, and declaration files. Current release notes do not establish a project compiler version or safe upgrade.",
+      "historical_response_bodies_available": false,
+      "decision": "repin_reviewed_current_content",
+      "instruction_change_required": false
+    }
+  ],
+  "additional_changed_sources_reviewed": 1,
+  "total_reviewed_fingerprints_refreshed": 35,
+  "additional_reviews": [
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "expected_marker": "etag:\"6d40389ac983db31f3c9889c338ad702\"",
+      "resampled_markers": [
+        "etag:\"c5088f115dd80ccd3cd780e7eec364a8\"",
+        "etag:\"c5088f115dd80ccd3cd780e7eec364a8\""
+      ],
+      "body_sha256": "583aaa17c6395e4c0739487f3c936bd63c006ed86c1451d51d0ebec8f321de4f",
+      "affected_skills": [
+        "gcp-data-engineering-profile"
+      ],
+      "decision": "repin_reviewed_current_content",
+      "finding": "The page retains incremental filtering, grain and unique-key contracts, null/duplicate-key risks, schema-change limits, and full-refresh consequences. It also describes adapter-specific compatibility constraints. Existing guidance requires discovering exact adapter versions and reviewing those contracts; no warehouse execution or automatic upgrade is authorized.",
+      "historical_response_bodies_available": false,
+      "instruction_change_required": false
+    }
+  ]
+}

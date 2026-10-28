@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-delivery"
   invocation: "explicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "external-write"
 ---
 
@@ -24,6 +24,22 @@ Give reviewers a precise packet that separates proposed code from checks, decisi
 5. Provide a short review focus with concrete questions and high-risk files or paths.
 6. Confirm whether the user authorized only preparing the packet or also sending it through a named external channel.
 7. After an authorized send, read back the created request, URL, revision, reviewer state, and checks.
+
+## Review identity and coverage
+
+A packet for uncommitted work includes relevant staged, unstaged, and untracked
+files as well as base/head revisions. Bind relevant file contents with path and
+SHA-256, labeling index, working-tree, and untracked representations. Retain both
+versions when the same path differs in the index and working tree, plus deletions
+and file modes; exclude unrelated or sensitive files.
+A committed diff alone cannot represent that working tree. Recheck the snapshot
+before sending and reconcile any concurrent changes.
+
+For repeated review, retain stable finding IDs and prior dispositions. Report the
+reviewed revision or snapshot, review mode, actual reviewer identity when known,
+rounds consumed and remaining, unresolved findings, and coverage limits. Do not
+turn self-review into an independent-review claim or a model verdict into human
+approval. Preparing this packet does not launch a reviewer or send a request.
 
 ## Boundaries
 

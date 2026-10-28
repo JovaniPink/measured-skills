@@ -1,5 +1,9 @@
 # Work from a documented contract
 
+For the full feature sequence and copy-paste prompts, start with
+[Build a feature with Measured Skills](feature-development-workflow.md).
+This page explains how the plan and evidence stay aligned as work progresses.
+
 Use existing skills and the repository's own documents. There is no new command
 runner, mandatory plan directory, or automatic release sequence.
 

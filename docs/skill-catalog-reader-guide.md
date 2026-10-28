@@ -1,6 +1,6 @@
 # Measured Skills Catalog: A Reader Guide
 
-The Measured Skills catalog contains 87 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
+The Measured Skills catalog contains 88 portable agent skills organized into 11 focused plugins. One canonical skill source produces client-specific distributions for Codex and Claude. Compatible distributions do not establish equivalent behavior across clients.
 
 This guide explains what each plugin is for, what every skill does, and how explicit-only invocation works. It is intended for readers who want to understand the catalog before installing or using it.
 
@@ -30,12 +30,12 @@ The counts, groupings, and invocation policies below are reconciled against the 
 | `measured-engineering-delivery` | 9 | `acceptance-evidence-ledger`, `finish-development-branch`, `merge-conflict-reconciliation`, `multi-agent-orchestration`, `plan-execution`, `prototype-spike`, `request-code-review` |
 | `measured-stack-profiles` | 12 | None |
 | `measured-operations` | 11 | None |
-| `measured-reasoning` | 11 | `decision-evidence-trace`, `guided-configuration`, `task-handoff`, `workflow-retrospective` |
+| `measured-reasoning` | 12 | `decision-evidence-trace`, `guided-configuration`, `task-handoff`, `workflow-retrospective` |
 | `measured-ai-systems` | 3 | None |
 | `measured-agent-platforms` | 6 | None |
 | `measured-nextjs-workflows` | 3 | `nextjs-feature-delivery` |
 | `measured-swift-workflows` | 4 | `ios-journey-verification`, `swiftui-feature-delivery` |
-| **Total** | **87** | **17 skills** |
+| **Total** | **88** | **17 skills** |
 
 Most skills can activate implicitly when a request clearly matches their routing description. Skills marked `explicit-only` must be selected directly.
 
@@ -369,6 +369,10 @@ Investigates why code, architecture, or an operational design exists by comparin
 ### domain-vocabulary-modeling
 
 Builds a proposed shared vocabulary from code, documents, and stakeholder language. It records concepts, definitions, relationships, invariants, authorities, examples, and contradictions without pretending the vocabulary is ratified.
+
+### engineering-prompt-review
+
+Reviews requests addressed to engineering assistants, preserving scope and authorization without executing the quoted task. Returns a short assessment and a revision only when useful. Missing context or tools remain explicit. See [finish existing work](finish-existing-work.md) for usage and limits.
 
 ### guided-configuration
 

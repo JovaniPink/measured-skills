@@ -7,7 +7,7 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-build"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 

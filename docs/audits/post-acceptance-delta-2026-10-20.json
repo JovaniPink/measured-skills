@@ -1,0 +1,739 @@
+{
+  "accepted_revision": "36a4e56c7fcde0411d2b3c7052c9f2b889d05aa7",
+  "previous_head": "0bc4edcb91078ceb3eff238c396e2c17ded9c730",
+  "integrated_main": "f1b0c35134a5591fa792543d379bcae1ccdf1a78",
+  "reviewed_on": "2026-10-26",
+  "status": "scoped_technical_delta_review",
+  "reviewer": "Codex-assisted technical review",
+  "new_maintainer_acceptance": false,
+  "review_method": "Retain prior per-file delta reviews and accepted snapshot bytes. Review the five existing skill changes, two self-contained references, bounded-maintenance prompts, primary-source ledger, twelve prepared scenarios, generated projections/archives, and export regressions. See bounded-pr-maintenance-2026-10-26.md and bounded-maintenance-followup-2026-10-26.md. The follow-up repairs index/working snapshot identity, dispatch accounting and shutdown, and exact head-repository/draft-state checks; it adds four prepared scenarios and a local Git fixture, not model execution. No model trial, installation, new maintainer acceptance, or release qualification is inferred. October 26 source follow-up: review each of 33 changed authorities against canonical guidance, record repeated response hashes and individual decisions, preserve unresolved Antigravity holds, consolidate dated release gates, and bind regressions to historical pin checkpoints. See source-review-2026-10-26.json and release-readiness-2026-10-26.md. No new maintainer acceptance, client execution, or release qualification. October 26 Antigravity representation follow-up: individually review complete official Markdown for four held sources; preserve rejected candidates and failed receipts; correct declared HTTP gzip decoding after failing regressions without adding normalization; retain two newly changed unrelated sources as holds. See antigravity-source-resolution-2026-10-26.json. No new maintainer acceptance, client execution, or release qualification. October 26 OpenAI and Swift follow-up: review the two retained source holds, replace OpenAI HTML with its complete official Markdown after comparison, review current Swift authority while preserving the missing historical-body limit, retain prior failed receipts, and bind all 64 results. No source normalization, bulk repin, new maintainer acceptance, model execution, or release qualification. October 26 client-control follow-up: reviewed sanitized native account and isolation evidence, staged bytes, frozen inputs, preparation-only permissions, and remaining acceptance limits. No new maintainer acceptance, model request, source pin, or artifact change. October 26 partial Haiku diagnostic: reviewed sanitized authorized Haiku observations, exact staged and input bytes, invalid direct-control submission, evidence ambiguity, blocked remaining cases, and unchanged safety boundaries. No new maintainer acceptance, source pin, or artifact change. October 26 Haiku continuation: reviewed sanitized continuation controls and outputs, exact staged/input bytes, failed GCP selection/reference/output, consumed allowance, preserved invalid control and historical records, and unchanged boundaries. No new maintainer acceptance, source pin, or artifact change. October 26 GCP routing repair: reviewed request-focused description, supplied-context and routing boundaries, native-control preparation, unchanged frozen inputs, all three exports, repeated deterministic archives and source bindings. The warehouse reference and historical results remain unchanged. No model execution, new acceptance or release qualification. October 27 bounded Claude retest: reviewed sanitized execution evidence, native dispatch, exact bodies/references, consumed allowance and unresolved output defects. Raw private receipts remain outside the public tree. Historical and accepted records remain unchanged; no new acceptance. October 27 GCP/review contract repair: reviewed owned expression separating illustrative assumptions from case facts and desired assertions from predicted/observed results. Two safety cases, complete three-client exports, deterministic archives and preparation-only hashes are covered. Prior failures and exact acceptance packet remain unchanged; no new behavioral or originality acceptance. October 27 completed Claude contract retest: reviewed sanitized execution evidence, native dispatch, exact bodies/references, consumed allowance and targeted contract passes and separate remaining qualification gaps. Raw private receipts remain outside the public tree. Historical and accepted records remain unchanged; no new acceptance.",
+  "limits": "This records the delta review required by the accepted contract; it is not a new maintainer acceptance, independent legal review, independent human grading, catalog qualification, or release authorization. Credible conflicting expression/licensing evidence reopens the affected scope.",
+  "self_exclusion": "This review envelope and the preexisting proposal/acceptance/current-manifest envelopes are excluded from the self-referential payload hash check. All other paths remain accounted for.",
+  "changes": {
+    "README.md": {
+      "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
+      "after_sha256": "0588efe6d32533ed2477cfa6ba6af89a92b51a0d6c8e37343ef72c2e87dc75a2",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 source-review follow-up: Update the current release-ledger entry point; retain candidate status and exact scoped acceptance limits."
+    },
+    "catalog/evidence.json": {
+      "before_sha256": "7f63f6aabbbd6a6369b86bf0c750dfc66b6cc2f7c1a7e9007fa05b38f39c0ab9",
+      "after_sha256": "67207e876adc8008003df16dadea1c507f9333df314ef6d543951b4cf8418bd1",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+    },
+    "catalog/packs.json": {
+      "before_sha256": "da1913d9b56893d25430fb8236a4b1798c2bbf20fe9e03e0be3ff6ad7f4f3966",
+      "after_sha256": "0293e623c4dbf45a291cedbf460f25358a59c976672d27801328a93f9a24a7f4",
+      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Recompute pack/recipe/profile discovery measurements after the orchestration description update. No selections, invocation classes, or behavioral evidence change. October 26 GCP routing repair: Recompute description measurements only; no profile, pack, recipe selection or behavioral evidence changes."
+    },
+    "catalog/profiles.json": {
+      "before_sha256": "20670199b1ebe47fec81ceb37c7495c6e12045d3bc541902f193c6abea8c5c8e",
+      "after_sha256": "7b4bf8a5552adf2f861c5eea5cf838e43b18dbaaddfc898173b00b987f79f550",
+      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 GCP routing repair: Recompute description measurements only; no profile, pack, recipe selection or behavioral evidence changes."
+    },
+    "catalog/skills.json": {
+      "before_sha256": "56fbdcf0fd1817da8e69f0657db8b7289ee5205105316f90ac0abd9d7df97a25",
+      "after_sha256": "6f0a586b714beb2ddd07a2d84076936842c93b70362c8e76d3bc9183939d1f23",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged."
+    },
+    "catalog/upstream-pins.json": {
+      "before_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
+      "after_sha256": "0cf6b933294e4b8de32bd3b7f03868c034854986e56314d2c439bb5d77c59d0a",
+      "expression_and_license_review": "Fourteen individually reviewed official-source fingerprints only. URLs, marker kinds, age policy, and all canonical expression/licenses are unchanged; see the source review ledger. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 Antigravity representation follow-up: Individually reviewed source bindings and current authority summaries only. Replace only four individually reviewed official Antigravity representations; retain all other pins and new source holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 OpenAI and Swift follow-up: Only the two reviewed source decisions change. OpenAI uses complete official Markdown; Swift uses a current-content full-body pin with unavailable historical bytes explicit. Other bindings, marker strength, review clock, and behavior limits remain."
+    },
+    "catalog/upstream-reviews.json": {
+      "before_sha256": "3b837ec11614e30daa3c409936efe156ab97de2a18fd7a77d24c833c8b298a53",
+      "after_sha256": "b8d314a3d30f61885ec1312e456cc215006f9f07d282d2a3a8e8a16e90796b7d",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 source-review follow-up: Individually reviewed source bindings and current authority summaries only. Retain four unstable response holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 Antigravity representation follow-up: Individually reviewed source bindings and current authority summaries only. Replace only four individually reviewed official Antigravity representations; retain all other pins and new source holds, global review-age dates, existing normalization policy, catalog version, invocation classes, and all behavioral evidence. October 26 OpenAI and Swift follow-up: Only the two reviewed source decisions change. OpenAI uses complete official Markdown; Swift uses a current-content full-body pin with unavailable historical bytes explicit. Other bindings, marker strength, review clock, and behavior limits remain."
+    },
+    "dist/claude-ai/SHA256SUMS": {
+      "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
+      "after_sha256": "9f04d703edbee73059dd67e3a3645a8a552f013f8a7ff222d1f0c3d191dd28b0",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 finish-work increment: Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 GCP routing repair: All 88 archives rebuilt twice with identical checksums. Only GCP archive bytes change; required references and notices remain exact. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained."
+    },
+    "dist/claude-ai/claim-verification-0.18.0.zip": {
+      "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
+      "after_sha256": "70dd3765e39e96667e42aa91e59eea6e83677f976783e554f0c0ec381561d3c5",
+      "expression_and_license_review": "Mechanical projection/archive of the three reviewed canonical workflow repairs; compare generated bytes and exact archive members with source. MIT notices and invocation exclusions are retained; no external implementation, artwork, or executable added."
+    },
+    "dist/claude-ai/code-change-review-0.18.0.zip": {
+      "before_sha256": "ae6a75f2f8a8a16d8f40785078d5839730a602dfcbf5319e47fbc3b8f2cb2296",
+      "after_sha256": "20a4e58a4f15746d68331587de4d4271466f236e751bb72c7fbadea55ce4a788",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained."
+    },
+    "dist/claude-ai/engineering-prompt-review-0.18.0.zip": {
+      "before_sha256": null,
+      "after_sha256": "ed0d24620e0fe2d58756289803825b51a09764b0e9d825e0edc57fe37e362a96",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "dist/claude-ai/gcp-data-engineering-profile-0.18.0.zip": {
+      "before_sha256": "cad6ca14bf74841ebd5d5eb4c91caa2561cd51984d7c5dfa40330ad4f82188d9",
+      "after_sha256": "5de084edb7c39aaf540b561ceb16bd87e4097cd18f7d1f2033e58c1d436ca606",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 GCP routing repair: All 88 archives rebuilt twice with identical checksums. Only GCP archive bytes change; required references and notices remain exact. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained."
+    },
+    "docs/audits/claude-post-retest-repairs-2026-10-21.json": {
+      "before_sha256": null,
+      "after_sha256": "cbe3e2238c09bd01627eb73703a67c66dba8c056c2b371a09aaf15b26d75093b",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority."
+    },
+    "docs/audits/claude-retest-observations-2026-10-21.json": {
+      "before_sha256": null,
+      "after_sha256": "740f2ed0e33da48b3b17d0f03546845bd10668ac96b02f58d935509468326c39",
+      "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The original retest plan remains a frozen prepared record; the separately authorized observation records executed cases, failed acceptance, and a consumed allowance. No private raw sessions or machine inventories were imported."
+    },
+    "docs/audits/claude-retest-plan-2026-10-21.md": {
+      "before_sha256": null,
+      "after_sha256": "17c9139ee91905c71b559ec61a9644629e2b31104c29570d14c087741ce0385b",
+      "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The retest plan remains prepared and unrun."
+    },
+    "docs/audits/claude-routing-contract-retest-plan-2026-10-21.md": {
+      "before_sha256": null,
+      "after_sha256": "7e7ea2eb0db2e512d5a673e446a507f076463abc682777ff559284b936935284",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority."
+    },
+    "docs/audits/claude-source-repairs-2026-10-21.json": {
+      "before_sha256": null,
+      "after_sha256": "79c909fa70c028c43bb00c97a2190b2b089de44fce896fca576863e0b378a29f",
+      "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The retest plan remains prepared and unrun."
+    },
+    "docs/audits/cli-pilot-observations-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "96446ac1d7e1e45d35506a8ab15b182c915fc207fca98d7022b5335330029a67",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/audits/client-controls-2026-10-21.md": {
+      "before_sha256": null,
+      "after_sha256": "4c547d729e83d2778dd81d4eaab03bf72541cca76719a54d38e88693c446702a",
+      "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The retest plan remains prepared and unrun."
+    },
+    "docs/audits/client-preflight-2026-10-20.md": {
+      "before_sha256": null,
+      "after_sha256": "07121fb8c93f8d05785f041c1a2ea3ac19d418feb39bce55729eec343438cec8",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority."
+    },
+    "docs/audits/finish-work-coverage-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "5144267d824c32cc3f2910b3b7ccb71d938da9e39cd9be53ae21d74c669959ee",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/audits/finish-work-source-pins-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "b0df91ca175d54f8d98e7e1929de021005214aca5cacbd120b8399592b6077b6",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/audits/source-refresh-closeout-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "80cafdce4d4ffe1bc70d66d4029b370dcafa71a1b6041ab2e393a6c52fbdab5a",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/audits/source-refresh-post-acceptance-2026-10-20.json": {
+      "before_sha256": null,
+      "after_sha256": "1d7478a58af51bc835e7556a142c4a37a395010d9936d181ec9810e58e5976bb",
+      "expression_and_license_review": "Original Codex-assisted factual review prose or mechanically recorded public-source metadata. Targeted review found no copied publisher prose, private identifiers, new implementation imports, or license changes. Frozen historical records are untouched; the current readiness text separates historical pending statements from the recorded acceptance."
+    },
+    "docs/clients/antigravity.md": {
+      "before_sha256": "15a779160f21f2b01a5e5ff40459dc30eb7b037ecabf06737ce67dc6bd2df45e",
+      "after_sha256": "da698ade57dd2885f47de8ed999d64918c6d49e223bc0459263df4c5e215e5aa",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/clients/claude.md": {
+      "before_sha256": "1aa304f29251e41f8e5f4c18590c10938a8e1c70cfe1c9d2e3ac4dbd1411ea33",
+      "after_sha256": "5729a19922e792b73d126019bcaceefff1ee77dec124c97b4f8fbe41ce571256",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/clients/codex.md": {
+      "before_sha256": "84602dec8a77a675286d1d96196fc426690a0088a292e567d0788ec5d463a069",
+      "after_sha256": "d4ab6f86a69a6869a86f5f9cb2b7e0be14a783d4a11e174d20815dbe9e94abbf",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/daily-agent-operating-model.md": {
+      "before_sha256": "b2eeb216162c1847f37e01e2b0e717243b5851940ac470ebdc9b43ab9b8dbf72",
+      "after_sha256": "125bca7457d33543df75c8f61e2c31e7db4eec62968e43deca7742a4bee61952",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "docs/document-driven-workflow.md": {
+      "before_sha256": "566b941372b09cd63b17e1c2e50aa3997d3d150fceb76e76b502b2a1be8fb719",
+      "after_sha256": "53083c92eb7966321279ef36bf1ef194321c8815fa46248e305dba9e48ca07b1",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance."
+    },
+    "docs/feature-development-workflow.md": {
+      "before_sha256": null,
+      "after_sha256": "be29c2338a70de305726af778a9249150293e3d3e4638c88ba2ec9dc8b8024d4",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. Follow-up wording is original local documentation; it narrows ambiguous actions and preserves unavailable evidence rather than asserting new client behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "docs/finish-existing-work.md": {
+      "before_sha256": null,
+      "after_sha256": "15edc2daf73041be59be6e4891743447187546107d88065dd368ad14f3ca5d26",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance follow-up: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "docs/provenance.md": {
+      "before_sha256": "d6d5d2a80b3ebe036f83a7377328f9e3ed21b30e9a40e76aaca3c4029d2aa165",
+      "after_sha256": "96b8ab879eaebbea071954b824bcab0bc232888f93c8202ff79d1d931a9e4638",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/quickstart.md": {
+      "before_sha256": "d2e9520c94df63e41d319517534e3ad638839ce7e74e598fcb1246d0c59b6a23",
+      "after_sha256": "28bbcdb20f52b2ddba9134c0fb6d2de49f66595da033ee52a844e96becede5a5",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/release-readiness-2026-10-20.md": {
+      "before_sha256": "0f91b44f27372e452a3afd9171d4db3dbd26295308afe4458daa08df8ca51ed9",
+      "after_sha256": "df1a416c56f16b9d91c33a6aec9252bac29aa3d868891e247f93db692278390b",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/skill-catalog-reader-guide.md": {
+      "before_sha256": "01739e2d857116314c972d257099e816a63f295f642a2cc03d10df854dd3ff88",
+      "after_sha256": "d55343649b991a5947f7856656c2a191b22b21a53dc904ac46763cf96156b28c",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/skill-cheatsheet.md": {
+      "before_sha256": "95336348d147f690075815f0f6597e5ea1aa7efd16e1f4492c5213159ee4e215",
+      "after_sha256": "a11c180bf74dbf77148cc4b03493db65d04a37cb7d93ed6b35e2e5b59200d12d",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior."
+    },
+    "docs/validation-evidence.md": {
+      "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
+      "after_sha256": "f3c7298a8b513a05db6641059e8023daa1ec09c0e52ece201556a557fb8b5c15",
+      "expression_and_license_review": "Original Codex-assisted repair analysis, readiness prose, or prepared diagnostic plan. No new model result, raw session, private account/machine inventory, publisher prose, or licensing grant is imported. Prior failed observations and consumed ceilings are preserved; any retest needs separate execution authority. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed. October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 OpenAI and Swift follow-up: Original current-source review, complete-response observations, release-gate status, and retained evidence limits. No publisher body, example implementation, new acceptance, or client qualification is imported or claimed. October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed. October 26 partial Haiku diagnostic: Original sanitized bounded diagnostic observations and gate status, including an invalid native control, ambiguous output, execution-guard rejection, unrun cases, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed. October 26 Haiku continuation: Original sanitized continuation evidence, fresh controls, client-version segmentation, failed GCP routing/output, passing near-miss and stale-receipt rows, consumed budgets, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed. October 26 GCP routing repair: Original evidence-based diagnosis and preparation-only control protocol, fixed case payloads and source hashes. Preserves historical failures, consumed allowances, uncertain causation and separate future authority. No new acceptance or behavioral result. October 27 bounded Claude retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves failed outputs, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion. October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance. October 27 completed Claude contract retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves earlier failed outputs and the new scoped passes, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    },
+    "evals/cases.json": {
+      "before_sha256": "5db02bc0bf883c1bf19b5bff66c24430b7149e2990828991a993a41edc837344",
+      "after_sha256": "8af0259ddcfc41955d028ffd35b8c98c6670b353d9b406b310520ddb9b218e8a",
+      "expression_and_license_review": "Append four independently written public synthetic safety cases and two output rubrics for review/GCP evidence and contract limits. Existing case records, frozen daily/CLI inputs, and historical studies are preserved. Added cases remain unrun. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 27 GCP/review contract repair: Two original safety cases and output criteria cover example leakage and assertion/prediction confusion. Existing daily fixtures and prior observations remain frozen; no new model execution or benefit result."
+    },
+    "plugins/antigravity/measured-engineering-review/skills/code-change-review/SKILL.md": {
+      "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "after_sha256": "c7c6bec0feafea6fb49946bfc245996940a3ed8f3f01601ef25628db491279c5",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/antigravity/measured-reasoning/skills/engineering-prompt-review/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/antigravity/measured-reasoning/skills/engineering-prompt-review/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "dc714424ba12011d6a1a5037683d03dfaf0b7e93a01321624ae31271edfdac5e",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/antigravity/measured-skills/skills/claim-verification/SKILL.md": {
+      "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "after_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c",
+      "expression_and_license_review": "Mechanical projection/archive of the three reviewed canonical workflow repairs; compare generated bytes and exact archive members with source. MIT notices and invocation exclusions are retained; no external implementation, artwork, or executable added."
+    },
+    "plugins/antigravity/measured-stack-profiles/skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "after_sha256": "e4928efbfa28f81c4082ca2df48469e07070bb5dec3ac1dd7c9ccb87ee7092c6",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 GCP routing repair: Generated GCP projections match canonical source and preserve native controls and all explicit-only exclusions. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/antigravity/measured-stack-profiles/skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+      "after_sha256": "d56d5b80dfc2333e787f67ffc9e4474bcc7c7da3378f5495289d041d9328589f",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/claude/measured-engineering-review/skills/code-change-review/SKILL.md": {
+      "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "after_sha256": "c7c6bec0feafea6fb49946bfc245996940a3ed8f3f01601ef25628db491279c5",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/claude/measured-reasoning/skills/engineering-prompt-review/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/claude/measured-reasoning/skills/engineering-prompt-review/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "dc714424ba12011d6a1a5037683d03dfaf0b7e93a01321624ae31271edfdac5e",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/claude/measured-skills/skills/claim-verification/SKILL.md": {
+      "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "after_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c",
+      "expression_and_license_review": "Mechanical projection/archive of the three reviewed canonical workflow repairs; compare generated bytes and exact archive members with source. MIT notices and invocation exclusions are retained; no external implementation, artwork, or executable added."
+    },
+    "plugins/claude/measured-stack-profiles/skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "after_sha256": "e4928efbfa28f81c4082ca2df48469e07070bb5dec3ac1dd7c9ccb87ee7092c6",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 GCP routing repair: Generated GCP projections match canonical source and preserve native controls and all explicit-only exclusions. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/claude/measured-stack-profiles/skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+      "after_sha256": "d56d5b80dfc2333e787f67ffc9e4474bcc7c7da3378f5495289d041d9328589f",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/codex/measured-engineering-review/skills/code-change-review/SKILL.md": {
+      "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "after_sha256": "c7c6bec0feafea6fb49946bfc245996940a3ed8f3f01601ef25628db491279c5",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/codex/measured-engineering-review/skills/code-change-review/agents/openai.yaml": {
+      "before_sha256": "e854ee640fe78f91b783eaf3158dda3f67965ed2ea684768fbf4ac9013597e47",
+      "after_sha256": "aa3bdf53290a5110c0a26140cb86877323350a658758c76027b5044176c0aee4",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced."
+    },
+    "plugins/codex/measured-reasoning/skills/engineering-prompt-review/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/codex/measured-reasoning/skills/engineering-prompt-review/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "dc714424ba12011d6a1a5037683d03dfaf0b7e93a01321624ae31271edfdac5e",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/codex/measured-reasoning/skills/engineering-prompt-review/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "d3e05217b02da53e8d986e51b7c6d6b66bd04a87a31241010314a2f0e6386b6f",
+      "expression_and_license_review": "Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result."
+    },
+    "plugins/codex/measured-skills/skills/claim-verification/SKILL.md": {
+      "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "after_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c",
+      "expression_and_license_review": "Mechanical projection/archive of the three reviewed canonical workflow repairs; compare generated bytes and exact archive members with source. MIT notices and invocation exclusions are retained; no external implementation, artwork, or executable added."
+    },
+    "plugins/codex/measured-skills/skills/claim-verification/agents/openai.yaml": {
+      "before_sha256": "84488660bf4d3ff9047c78dee2a960fc1fd7885788a514325a7ef3921261a8e3",
+      "after_sha256": "697b366e012fad36a706f0d33406c07509702564854a707ba3a7e5be75f7fd47",
+      "expression_and_license_review": "Mechanical projection/archive of the three reviewed canonical workflow repairs; compare generated bytes and exact archive members with source. MIT notices and invocation exclusions are retained; no external implementation, artwork, or executable added."
+    },
+    "plugins/codex/measured-stack-profiles/skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "after_sha256": "e4928efbfa28f81c4082ca2df48469e07070bb5dec3ac1dd7c9ccb87ee7092c6",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 GCP routing repair: Generated GCP projections match canonical source and preserve native controls and all explicit-only exclusions. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "plugins/codex/measured-stack-profiles/skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+      "after_sha256": "d56d5b80dfc2333e787f67ffc9e4474bcc7c7da3378f5495289d041d9328589f",
+      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 27 GCP/review contract repair: Regenerated three-client projections of both repaired skills and GCP reference; native invocation controls and all 17 exclusions unchanged."
+    },
+    "provenance/catalog.json": {
+      "before_sha256": "24faeb3e66d1950b112e0d47734246a6a58d5c96dd7f217585b4c0eea0e4c9fa",
+      "after_sha256": "d93a08319da8fd1ea49e60916800c2d880734e39edfe24852c08280bd579d28c",
+      "expression_and_license_review": "Append original Codex-assisted disclosure for the two post-retest source repairs. Historical authorship records, owned lineage, methods, licenses, sources, pins, review clocks, and exact prior acceptance remain unchanged. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Append scoped authoring evidence for five existing skills without changing historical labels, source pins, or owned adaptation ancestry. October 26 bounded-maintenance increment: Append scoped authoring evidence for five existing skills without changing historical labels, source pins, or owned adaptation ancestry. October 26 OpenAI and Swift follow-up: Record the reviewed official Markdown representation for engineering-prompt-review without changing authorship, license, security, implementation expression, or acceptance. All other entries are unchanged. October 26 GCP routing repair: Append original routing-repair authoring evidence; retain historical source pins, ownership, license limits and accepted packet. October 27 GCP/review contract repair: Append original output-contract repair authoring evidence; source pins, owned lineage, license limits and accepted packet unchanged."
+    },
+    "renovate.json": {
+      "before_sha256": null,
+      "after_sha256": "e80b4e42a3043bc12fa0640db4bac392d2bf770acf841360d7c8ceeeac2ec1a9",
+      "expression_and_license_review": "Exact six-line configuration from upstream main commit 6b3b9cbd4bcde23a2f19d6f3268ff5020f70a498, authored by the Renovate bot and merged in PR 69. Official schema URL and config:recommended preset only; no bundled implementation, secrets, or license change."
+    },
+    "scripts/check_repository_independence.py": {
+      "before_sha256": "904d540fa7e0c9a1ee2ab8de3a2f1061fbc94daafc26ed3cb5dc5e451f8cfc47",
+      "after_sha256": "7413a790835a44da5036644da2f684f7170060dff26ff38ac931bbbfc86035b8",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 OpenAI and Swift follow-up: One exact reviewed primary-document URL allowance, covered by failing-first regression and rejected neighboring URLs. No host-wide grant, freshness algorithm, normalization, provider access, or evaluation change."
+    },
+    "skills/claim-verification/SKILL.md": {
+      "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "after_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c",
+      "expression_and_license_review": "Original Codex-assisted October 21 routing/evidence refinement of the owned workflow, documented in claude-source-repairs-2026-10-21.json. Existing original/adapted classification and MIT notice retained. Platform semantics informed independent prose; no copied skill implementation or clean-room assertion. Behavioral retest is unrun."
+    },
+    "skills/claim-verification/agents/openai.yaml": {
+      "before_sha256": "00e9d44e63c82e173678a3e49227e54f3f69ba92560624b37fa9404d07bc0337",
+      "after_sha256": "2e7859c4377531f49ea6ffd74b283824b44290d8359410318474924a27514ac1",
+      "expression_and_license_review": "Original Codex-assisted October 21 routing/evidence refinement of the owned workflow, documented in claude-source-repairs-2026-10-21.json. Existing original/adapted classification and MIT notice retained. Platform semantics informed independent prose; no copied skill implementation or clean-room assertion. Behavioral retest is unrun."
+    },
+    "skills/code-change-review/SKILL.md": {
+      "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "after_sha256": "c7c6bec0feafea6fb49946bfc245996940a3ed8f3f01601ef25628db491279c5",
+      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 27 GCP/review contract repair: Original owned-text repair separates task facts from hypothetical examples and desired assertions from predicted responses and observed outcomes. Preserves read-only scope, provider authority, severity and continuity requirements; no outside implementation imported. October 27 GCP/review contract repair: Original owned-text repair separates task facts from hypothetical examples and desired assertions from predicted responses and observed outcomes. Preserves read-only scope, provider authority, severity and continuity requirements; no outside implementation imported."
+    },
+    "skills/code-change-review/agents/openai.yaml": {
+      "before_sha256": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5",
+      "after_sha256": "62fcbb90f6fb0fa2407ebdab09bae46f9b4465650ef9cf847e6d0909522c1745",
+      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim."
+    },
+    "skills/engineering-prompt-review/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "dc714424ba12011d6a1a5037683d03dfaf0b7e93a01321624ae31271edfdac5e",
+      "expression_and_license_review": "New Codex-assisted original engineering-request review and interface text. Scoped expression review in finish-work-coverage-2026-10-26.md; quoted tasks are data, existing authority is preserved, and private details are excluded. No clean-room process or new maintainer acceptance claimed."
+    },
+    "skills/engineering-prompt-review/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "0d6929cf882c0efe2fe45675bb3e59335bdc79a8d9fcc67c609063da0bb5e9fb",
+      "expression_and_license_review": "New Codex-assisted original engineering-request review and interface text. Scoped expression review in finish-work-coverage-2026-10-26.md; quoted tasks are data, existing authority is preserved, and private details are excluded. No clean-room process or new maintainer acceptance claimed."
+    },
+    "skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "after_sha256": "e4928efbfa28f81c4082ca2df48469e07070bb5dec3ac1dd7c9ccb87ee7092c6",
+      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim. October 26 GCP routing repair: Original GCP request-focused routing and Codex presentation; supplied-context review and general SQL/ADK exclusions retain read-only authority and existing warehouse safeguards. No external skill expression imported. October 27 GCP/review contract repair: Original owned-text repair separates task facts from hypothetical examples and desired assertions from predicted responses and observed outcomes. Preserves read-only scope, provider authority, severity and continuity requirements; no outside implementation imported."
+    },
+    "skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+      "after_sha256": "d56d5b80dfc2333e787f67ffc9e4474bcc7c7da3378f5495289d041d9328589f",
+      "expression_and_license_review": "Original Codex-assisted post-retest revision of owned review/GCP guidance: task-focused review routing, continuity evidence states, conditional verdicts, and correction-contract discovery before optimization. New prose and synthetic examples are reviewed in claude-post-retest-repairs-2026-10-21.json. Existing lineage and notices remain; no clean-room or improved-behavior claim. October 27 GCP/review contract repair: Original owned-text repair separates task facts from hypothetical examples and desired assertions from predicted responses and observed outcomes. Preserves read-only scope, provider authority, severity and continuity requirements; no outside implementation imported."
+    },
+    "tests/test_catalog.py": {
+      "before_sha256": "a6bc0c40605ae1fd2f389c5aabdee6ca380dfc81fe6415d0f325a27ad9f95cde",
+      "after_sha256": "5407c995368ace13232d517dac654f5fc51645bdd216d52ea557784e442f692d",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 source-review follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; production validators are unchanged. October 26 Antigravity representation follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; transport failures and meaningful decoded-byte changes remain blocking. October 26 OpenAI and Swift follow-up: Original exact-source transition, historical-checkpoint, and tamper regressions. The exact Markdown authority allowance was tested failing before the production edit; unreviewed neighbors remain rejected."
+    },
+    "tests/test_distribution_licensing.py": {
+      "before_sha256": "ec67144681f1709596ede554f633f401e75712bb17a10d3e4a57f8e3b026590f",
+      "after_sha256": "86b045732904bdd42ebcade68e653c713af44010deaa33a7c862f1f088847142",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
+    "tests/test_expression_disposition.py": {
+      "before_sha256": "75f02904eec8a7242acfff6b5f819589b444efe4ed007dd86eb157cc81cdb547",
+      "after_sha256": "cac2646877cc7d0655778c8dd942e6e708e1eec6f176a0ee1ce6b36c69324ec5",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
+    "tests/test_finish_work.py": {
+      "before_sha256": null,
+      "after_sha256": "387e60a5673ee0bf3b7157a71975962de321b047ba24e28ff7fadfc1e306c3c4",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. October 26 source-review follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; production validators are unchanged. October 26 OpenAI and Swift follow-up: Original exact-source transition, historical-checkpoint, and tamper regressions. The exact Markdown authority allowance was tested failing before the production edit; unreviewed neighbors remain rejected."
+    },
+    "tests/test_measured_release.py": {
+      "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
+      "after_sha256": "30ee69bf25094a80a7565264b01feeece01daf8f0f1824368ab3f01c743ad899",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
+    "tests/test_noncanonical_disposition.py": {
+      "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",
+      "after_sha256": "2c5425985622e34cd3cd77781d14496d51220121d55fda4730a4fa3f401c67aa",
+      "expression_and_license_review": "Original local test adaptation binds the frozen approved inventory to the accepted ancestor and separately enforces every current payload byte against the recorded delta. No third-party implementation or license changes. Reproduced the old current-byte failure before adapting the historical contract."
+    },
+    "tests/test_release_integrity.py": {
+      "before_sha256": "1f629c1596ec1cfbf5adf218bec2ff07685033ffe3c7982d304eaa18285fd565",
+      "after_sha256": "553842e517e26840beb745f9e967cd4f53ed7d75f58663efecef9692ce0bf63f",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage."
+    },
+    "dist/claude-ai/multi-agent-orchestration-0.18.0.zip": {
+      "before_sha256": "e83c6187b349625cb430fcbb7cd92f010825022dff825b686e31bf7bd50e0a37",
+      "after_sha256": "3364af853b68c183181685e50f246764364441083b511ec67d6c384c80837ce1",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/publish-change-safely-0.18.0.zip": {
+      "before_sha256": "00191a1d638d0ea9e263335faf917dee19ace3a89f96692cd308cfdc92d15bfd",
+      "after_sha256": "ffcd20b0d62ef92d8bf3e4892e93dd46e5044a8522f581fdaaad5ad5b6f4ffc6",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/request-code-review-0.18.0.zip": {
+      "before_sha256": "60986a2af55778b6afcaca8e4171606d643860860af8d7edc70f90da0f8433b1",
+      "after_sha256": "0f4a4671f8f680171305baddfc00690219dc468527d866bf6f16cd36808608e4",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "dist/claude-ai/respond-to-code-review-0.18.0.zip": {
+      "before_sha256": "ff323872ec4e126d3ddf0f0148ffe08be8838f55c391a25cf2d3aac765c46895",
+      "after_sha256": "c298373c4bd78258b3b5507177078b5582cbcbd0ecdcbd3dcc688965234ce09e",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls."
+    },
+    "docs/audits/bounded-pr-maintenance-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "6a0d9485a2953423a704b18860d1521ea46befc3f2eab47593e5c08373b35c37",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "plugins/antigravity/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "71785b43e8fcb3790ccbcdd686b6fa4d830abeb7f927d25eb469f338cbe24166",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/antigravity/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "e123889210db40d1660faadcc20f8e83ec4f823bdcac4ee4976d8bd7a85f5565",
+      "after_sha256": "b7dd6cc381de4ff5dd2dd9a301024c79eb108e2b2c2e1ab296ebc41f86e04fd0",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/request-code-review/SKILL.md": {
+      "before_sha256": "04133aa9fcf192ddc986ec0ace26dc6ff33ceb363935017dbda019ddcacbf45b",
+      "after_sha256": "0801eb1d9ced75747b0ed90d8bc288f455fc58920477a67c3b7504cda485da3e",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "71785b43e8fcb3790ccbcdd686b6fa4d830abeb7f927d25eb469f338cbe24166",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-skills/skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "1cf69f1aa75bc689dff665c27339c34514b1285f2768e7be17c8bc253baa95da",
+      "after_sha256": "4f94169991117bdf9ee2d6c1bea089dc949c58f7ec2677ec41bf8eb5d5b68c8f",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/claude/measured-skills/skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "b3b4b3240966345f26cb56600346cfcd4d81da1692553586281beaf19a04c7ec",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "53ae06e8aa1a025342e53ca06774ecf070b39db63b33bafd4662f59600634613",
+      "after_sha256": "cc64432060f3e8a4b33d451d9069e54064065cbbbfeaf1f7e70a3e2bb9ac169e",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/multi-agent-orchestration/agents/openai.yaml": {
+      "before_sha256": "6791dbe57592a892cd9b01ef17e04d834a3b5e9aad273fb40be924cdb1fd609f",
+      "after_sha256": "eaddca83f761bc9a9f374f8d03a6f05835729b59b1cfacbec998eecf77743cac",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/request-code-review/SKILL.md": {
+      "before_sha256": "15b6e2428f0c91821dd4085404469d2b505541f069a35c5bea6c9e224bfce6b0",
+      "after_sha256": "d45f0a5e8f9367724649f2a6b0831e0654c7c3b3b519ac704946d4601d0c970f",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-delivery/skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "71785b43e8fcb3790ccbcdd686b6fa4d830abeb7f927d25eb469f338cbe24166",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-engineering-review/skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-skills/skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+      "after_sha256": "dac4f8cf60426254944cd90ef048a7fedb197764ec64d5dc7adcf3e7004bb8b5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "plugins/codex/measured-skills/skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "b3b4b3240966345f26cb56600346cfcd4d81da1692553586281beaf19a04c7ec",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved. October 26 bounded-maintenance increment: Regenerated from reviewed canonical skills. Standalone references, notices, native invocation controls, and Antigravity explicit-only exclusions are preserved."
+    },
+    "skills/code-change-review/references/bounded-review.md": {
+      "before_sha256": null,
+      "after_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/multi-agent-orchestration/SKILL.md": {
+      "before_sha256": "53ae06e8aa1a025342e53ca06774ecf070b39db63b33bafd4662f59600634613",
+      "after_sha256": "cc64432060f3e8a4b33d451d9069e54064065cbbbfeaf1f7e70a3e2bb9ac169e",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/multi-agent-orchestration/agents/openai.yaml": {
+      "before_sha256": "cd07e1b35dc7d13ed09644f11c43f76ea10e20169162664a2e874564654a883d",
+      "after_sha256": "450ddc0b91c7a9d395187f1257f743e21a9dc31fc8930b24dab3a1c5fa28803b",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/publish-change-safely/SKILL.md": {
+      "before_sha256": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+      "after_sha256": "dac4f8cf60426254944cd90ef048a7fedb197764ec64d5dc7adcf3e7004bb8b5",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/publish-change-safely/references/pr-maintenance.md": {
+      "before_sha256": null,
+      "after_sha256": "b3b4b3240966345f26cb56600346cfcd4d81da1692553586281beaf19a04c7ec",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/request-code-review/SKILL.md": {
+      "before_sha256": "15b6e2428f0c91821dd4085404469d2b505541f069a35c5bea6c9e224bfce6b0",
+      "after_sha256": "d45f0a5e8f9367724649f2a6b0831e0654c7c3b3b519ac704946d4601d0c970f",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "skills/respond-to-code-review/SKILL.md": {
+      "before_sha256": "7311c5c538f3520be59f640a6a4deaac1b0bf1bca4b439edd73a59309a9432c3",
+      "after_sha256": "71785b43e8fcb3790ccbcdd686b6fa4d830abeb7f927d25eb469f338cbe24166",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported. October 26 bounded-maintenance increment: Original scoped bounded-review/maintenance guidance and directly linked standalone references; preserves findings-only review, existing invocation classes, owned adaptation lineage, and task-specific authority. No external implementation or executable imported."
+    },
+    "tests/test_bounded_review_exports.py": {
+      "before_sha256": null,
+      "after_sha256": "4f2b76d44af5cfad8e98f40113d225f9836779ffdcfb7dd48c31c3f7416ce3ca",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original integration tests exercise temporary exports and ZIP contents against canonical bytes, invocation metadata, and explicit-only exclusions. No model calls or validator behavior changes. October 26 bounded-maintenance increment: Original integration tests exercise temporary exports and ZIP contents against canonical bytes, invocation metadata, and explicit-only exclusions. No model calls or validator behavior changes."
+    },
+    "docs/audits/bounded-maintenance-followup-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "fc9210a1bb7c3bd594b015a7ead0391bd7f0fdc1a6abcade43c7f638a492dc32",
+      "expression_and_license_review": "October 26 bounded-maintenance increment: Original workflow documentation and primary-source assessment with synthetic prepared scenarios, explicit authority, finite budgets, and observed static-check limits. No new behavioral or maintainer acceptance is claimed."
+    },
+    "docs/audits/source-check-closeout-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "57abfa1046fb8319fdc5df3227a279261796d8b88d921045bffb16045d1f26ff",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-initial-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "b908c56650e1b1da3b6d8e8c021d902542a3fef00030d4f6a4f4b3170f6c5e08",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "624c010ac17f3f097a2d7cee35680458e8d4965d023edcd19652351ce80ad99a",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-second-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "238fc69a06701185e86af3b9f519755bf84021ba8aa22b9cd00d60ac1a6d4fd7",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-check-third-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "8244db8309556f221d5e58f71f34d9da0b548406e9ea04ba8c7fa6dea3ad7ae6",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/source-review-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "68fee06733bd2a7dbd2df58b9bf920b8d22d4079201f50a14149337c25e21311",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/client-candidate-v0.18.0.md": {
+      "before_sha256": "9bfd37b720229abada4cf6024a598670ae30961b9a917f4f460a4665c6e3afea",
+      "after_sha256": "12bd295bb52d13aa4f9030cb6012e305925201bdc6430d8c43767c1a1cfa61dc",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/client-support.md": {
+      "before_sha256": "83bf82c86d4426033718ec0c5a74c7f788428a59270e033058eb83c52325bbdc",
+      "after_sha256": "a939a8de033a704ee6168ab569ecbb28ec4460e7a715c0911400844decfc71cb",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/release-readiness-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "ca2663b3516ad141bbac60485f94427539de56702c9e28abcaab20ac56aa9762",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 26 OpenAI and Swift follow-up: Original current-source review, complete-response observations, release-gate status, and retained evidence limits. No publisher body, example implementation, new acceptance, or client qualification is imported or claimed. October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed. October 26 partial Haiku diagnostic: Original sanitized bounded diagnostic observations and gate status, including an invalid native control, ambiguous output, execution-guard rejection, unrun cases, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed. October 26 Haiku continuation: Original sanitized continuation evidence, fresh controls, client-version segmentation, failed GCP routing/output, passing near-miss and stale-receipt rows, consumed budgets, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed. October 26 GCP routing repair: Original evidence-based diagnosis and preparation-only control protocol, fixed case payloads and source hashes. Preserves historical failures, consumed allowances, uncertain causation and separate future authority. No new acceptance or behavioral result. October 27 bounded Claude retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves failed outputs, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion. October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance. October 27 completed Claude contract retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves earlier failed outputs and the new scoped passes, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    },
+    "tests/test_source_review_checkpoint.py": {
+      "before_sha256": null,
+      "after_sha256": "98d1927f0ad032557ad54dc8ff7184152378fef9110c140a07d0bcb40753c3fa",
+      "expression_and_license_review": "October 26 source-review follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; production validators are unchanged. October 26 Antigravity representation follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; transport failures and meaningful decoded-byte changes remain blocking."
+    },
+    "docs/audits/antigravity-source-closeout-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "4ba7485d375eacd62704658ae94ba3f0e89c2f6e5a1496487c94eb18da030e6f",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/antigravity-source-intermediate-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "c40cd43eeeb0343390f237ca67390c7210da45f599e646763ac331c51acbae6c",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/audits/antigravity-source-resolution-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "6cecff7989b9ba8450cfbd4d2535160b278439246c2687d9d4bdcc8395638113",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "docs/testing.md": {
+      "before_sha256": "0fcc49ce9e29c0787b25461209eb89dad007679eddf4963dd7d143d45d1ca1ca",
+      "after_sha256": "9678162d5033ee35864b79947bf92db12bc8d8ec515a27ee66a4476e09188975",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed."
+    },
+    "scripts/check_upstream_freshness.py": {
+      "before_sha256": "7f6cbf8da1295a1fa2c2dad94c39e5fc71beb8873abbcea556301a599b658fc9",
+      "after_sha256": "12343a5e869fe1de9017c0bf2e78be1aba26be7ebd9c0924a6d8ddc82f661677",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original standards-based HTTP content-decoding repair. Failing regressions precede the change; complete document bytes remain hashed, corrupt or unsupported codings fail closed, and existing normalization and header-pin policy remain unchanged."
+    },
+    "tests/test_antigravity_source_resolution.py": {
+      "before_sha256": null,
+      "after_sha256": "60235ac68c4bf98c1079a1a939fcbb5ee2109a64c04221d24ea0154055e4e850",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; transport failures and meaningful decoded-byte changes remain blocking. October 26 OpenAI and Swift follow-up: Original exact-source transition, historical-checkpoint, and tamper regressions. The exact Markdown authority allowance was tested failing before the production edit; unreviewed neighbors remain rejected."
+    },
+    "tests/test_freshness_transport.py": {
+      "before_sha256": null,
+      "after_sha256": "b8db15f76fe5fc2b0ad41b02e6d30cb2412340024e7231643398eb5056c999ba",
+      "expression_and_license_review": "October 26 Antigravity representation follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; transport failures and meaningful decoded-byte changes remain blocking."
+    },
+    "docs/audits/openai-swift-source-closeout-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "d3007296be34cb80606f1ad54fae097f2388f7c00697958123e8e2f16047c802",
+      "expression_and_license_review": "October 26 OpenAI and Swift follow-up: Original current-source review, complete-response observations, release-gate status, and retained evidence limits. No publisher body, example implementation, new acceptance, or client qualification is imported or claimed."
+    },
+    "docs/audits/openai-swift-source-review-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "c2be39074a97eca805634e9abf917164a0bf638c452d9e3b4e8a0bbc90bfae9c",
+      "expression_and_license_review": "October 26 OpenAI and Swift follow-up: Original current-source review, complete-response observations, release-gate status, and retained evidence limits. No publisher body, example implementation, new acceptance, or client qualification is imported or claimed."
+    },
+    "tests/test_openai_swift_source_review.py": {
+      "before_sha256": null,
+      "after_sha256": "699c35b4cb754d8e00f3ba3932c4e27584da2060e13df1cfac1d6e242d8cb373",
+      "expression_and_license_review": "October 26 OpenAI and Swift follow-up: Original exact-source transition, historical-checkpoint, and tamper regressions. The exact Markdown authority allowance was tested failing before the production edit; unreviewed neighbors remain rejected. October 26 GCP routing repair: Original standalone export and prepared-input binding regressions exercise all projections, references, hashes and command/payload separation without model execution or validator policy changes. Historical source-transition provenance is checked at its retained commit; current provenance remains bound by existing delta tests."
+    },
+    "docs/audits/claude-retest-preparation-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "6adf0c49fed4dc30b8d495d75c4bd87bc56a2e2ecf6dbfb59d9203bad4939a76",
+      "expression_and_license_review": "October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed."
+    },
+    "docs/audits/claude-routing-contract-retest-plan-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "8619f6011b4d383972ae3303b7667dc5a98f08d39d58d4fcb8493ec5f0d23a88",
+      "expression_and_license_review": "October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed."
+    },
+    "docs/audits/client-controls-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "1fedcb6f72322b1de03b2adad008f503431b540d33c31269bf9cadf0bd37d63a",
+      "expression_and_license_review": "October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed."
+    },
+    "docs/audits/client-controls-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "e14c97f4fd080852f084b3d02b69cde05501241311f15056402d7df9a8801b67",
+      "expression_and_license_review": "October 26 client-control follow-up: Original sanitized native-control observations, exact staged-file and frozen-input bindings, bounded retest preparation, and gate status. No raw account data, publisher prose, new acceptance, or behavioral qualification is imported or claimed."
+    },
+    "docs/audits/claude-haiku-retest-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "eb09155cf9d867ddcbaa375b4784c02abc970c378e7d63dd740ae98a39e77acf",
+      "expression_and_license_review": "October 26 partial Haiku diagnostic: Original sanitized bounded diagnostic observations and gate status, including an invalid native control, ambiguous output, execution-guard rejection, unrun cases, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed."
+    },
+    "docs/audits/claude-haiku-retest-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "b71ba509834d7e5ba73eb54de61872e58482e49347a9c3fe2b4f2303fc0c5c39",
+      "expression_and_license_review": "October 26 partial Haiku diagnostic: Original sanitized bounded diagnostic observations and gate status, including an invalid native control, ambiguous output, execution-guard rejection, unrun cases, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed."
+    },
+    "docs/audits/claude-haiku-continuation-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "1b8593dad8ab20cfeb6eda8a43f52de8bdd8cd7b9f91c2d9721d3917577e7560",
+      "expression_and_license_review": "October 26 Haiku continuation: Original sanitized continuation evidence, fresh controls, client-version segmentation, failed GCP routing/output, passing near-miss and stale-receipt rows, consumed budgets, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed."
+    },
+    "docs/audits/claude-haiku-continuation-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "185a57a8fab10bb09a42f1c48dbab2eaeadb3428f2d70e0370a0294f16cd7da3",
+      "expression_and_license_review": "October 26 Haiku continuation: Original sanitized continuation evidence, fresh controls, client-version segmentation, failed GCP routing/output, passing near-miss and stale-receipt rows, consumed budgets, and exact private evidence hashes. No raw account data, publisher prose, new acceptance, or profile qualification is imported or claimed."
+    },
+    "docs/audits/gcp-routing-repair-2026-10-26.md": {
+      "before_sha256": null,
+      "after_sha256": "c7cb2fa138bc5411cfcd84d17320ed0596af2e8ef3e2f00cde1093a96262f186",
+      "expression_and_license_review": "October 26 GCP routing repair: Original evidence-based diagnosis and preparation-only control protocol, fixed case payloads and source hashes. Preserves historical failures, consumed allowances, uncertain causation and separate future authority. No new acceptance or behavioral result. October 26 GCP routing repair: Original evidence-based diagnosis and preparation-only control protocol, fixed case payloads and source hashes. Preserves historical failures, consumed allowances, uncertain causation and separate future authority. No new acceptance or behavioral result."
+    },
+    "docs/audits/gcp-routing-retest-preparation-2026-10-26.json": {
+      "before_sha256": null,
+      "after_sha256": "8a37ec141f5f0ba2a3ba0351a5bb7c9da151b7509688a41878b3c596133fd8c4",
+      "expression_and_license_review": "October 26 GCP routing repair: Original evidence-based diagnosis and preparation-only control protocol, fixed case payloads and source hashes. Preserves historical failures, consumed allowances, uncertain causation and separate future authority. No new acceptance or behavioral result."
+    },
+    "plugins/codex/measured-stack-profiles/skills/gcp-data-engineering-profile/agents/openai.yaml": {
+      "before_sha256": "111ae4ed37c6e515b348a434908f202c7d21b820a6ecc99145ea67c7fc1cd385",
+      "after_sha256": "bde30d0ab5d9587852db65d4ad244fb61a7783bd088e6e624a66f50134108d81",
+      "expression_and_license_review": "October 26 GCP routing repair: Generated GCP projections match canonical source and preserve native controls and all explicit-only exclusions."
+    },
+    "skills/gcp-data-engineering-profile/agents/openai.yaml": {
+      "before_sha256": "58324f3e8a0dc45f675859ad1daf37de66d67a93c19acf1d1f84ba04dc98ac5d",
+      "after_sha256": "e03081cd36c77d0f42fb281a329697a2e798200ad667c3ca5e374ad155a54ea8",
+      "expression_and_license_review": "October 26 GCP routing repair: Original GCP request-focused routing and Codex presentation; supplied-context review and general SQL/ADK exclusions retain read-only authority and existing warehouse safeguards. No external skill expression imported."
+    },
+    "tests/test_gcp_routing_packet.py": {
+      "before_sha256": null,
+      "after_sha256": "72028bd2021333fd75748f5ccbba1fc3acac34d0c3d3d6499f912665d3e9ca6a",
+      "expression_and_license_review": "October 26 GCP routing repair: Original standalone export and prepared-input binding regressions exercise all projections, references, hashes and command/payload separation without model execution or validator policy changes. October 27 GCP/review contract repair: Standalone export byte/control coverage extended to both skills. New packet binds current complete source files and unchanged frozen inputs; historical packet hashes bind its exact retained tested revision. No validator policy changes or behavioral claim. October 27 GCP/review contract repair: Standalone export byte/control coverage extended to both skills. New packet binds current complete source files and unchanged frozen inputs; historical packet hashes bind its exact retained tested revision. No validator policy changes or behavioral claim."
+    },
+    "docs/audits/claude-gcp-retest-2026-10-27.json": {
+      "before_sha256": null,
+      "after_sha256": "f8e0e06089fc301b64d6950fe0faeef90e3110c020099aa62bfc771e66ed28a4",
+      "expression_and_license_review": "October 27 bounded Claude retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves failed outputs, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    },
+    "docs/audits/claude-gcp-retest-2026-10-27.md": {
+      "before_sha256": null,
+      "after_sha256": "ddb07cda6336c98b855c50dfbf8ef65c241fc85ae971b5a4dc61de05d4bbcbe1",
+      "expression_and_license_review": "October 27 bounded Claude retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves failed outputs, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    },
+    "docs/audits/gcp-review-contract-repair-2026-10-27.md": {
+      "before_sha256": null,
+      "after_sha256": "bde696cb0b91897a1be5bae305fe4e09ccb39d81de58607de8f8140d11e67201",
+      "expression_and_license_review": "October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance. October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance."
+    },
+    "docs/audits/gcp-review-contract-retest-preparation-2026-10-27.json": {
+      "before_sha256": null,
+      "after_sha256": "bfbc81f690d659ec2c6cef8a4f8fa78e1bd8b7190459b91263878b8c9e84fe4f",
+      "expression_and_license_review": "October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance. October 27 GCP/review contract repair: Original repair rationale and preparation-only four-case/two-follow-up protocol with exact source/input hashes. Retains failed observations, consumed allowances and separate execution authority. No new acceptance."
+    },
+    "docs/audits/claude-contract-retest-2026-10-27.json": {
+      "before_sha256": null,
+      "after_sha256": "979255e29f1a808033b6fed6bd83b1f919485b0f4303a798f31db66ecb2e51c9",
+      "expression_and_license_review": "October 27 completed Claude contract retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves earlier failed outputs and the new scoped passes, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    },
+    "docs/audits/claude-contract-retest-2026-10-27.md": {
+      "before_sha256": null,
+      "after_sha256": "d539c364ddf064b973ded305574fdd2bff9c63f8d99dc68dd465eea5d8cb7f99",
+      "expression_and_license_review": "October 27 completed Claude contract retest: Original sanitized observation and current release-gate reconciliation for the separately authorized four-case Claude retest and two follow-ups. Preserves earlier failed outputs and the new scoped passes, exact input/source hashes, billing and isolation limits, historical preparation and accepted packet. No new acceptance or licensing conclusion."
+    }
+  }
+}

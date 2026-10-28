@@ -1,0 +1,48 @@
+{
+  "checked_on": "2026-10-26",
+  "kind": "native_metadata_and_staging_only",
+  "model_requests": 0,
+  "codex": {
+    "version": "0.161.0",
+    "account_type": "chatgpt",
+    "has_credits": true,
+    "spend_control_reached": false,
+    "no_paid_fallback_verified": false,
+    "native_receipt_sha256": "210de8172f626ccebf9b73bbac6e87f2912119c63d2a60a7ec3308e957d422f3",
+    "thread_start_schema_sha256": "80a40a7fac15b4bf70efb7f893fb353acc0a0d30c68f54aee4f01923deca85de",
+    "turn_start_schema_sha256": "f4a07f33f33d5962bf5a770d1c1bb6a6de1412ccef9fb62705c4d9a83a956dbf",
+    "model_execution": "blocked"
+  },
+  "antigravity": {
+    "initial_version": "1.4.4",
+    "native_observation_version": "1.4.7",
+    "explicit_update_command_issued": false,
+    "version_change_cause": "not_established; executable changed during native inspection",
+    "default_workspace_skill_inventory_count": 111,
+    "custom_agent_skill_inventory_count": 111,
+    "custom_agent_selected": true,
+    "custom_agent_inherit_customizations": false,
+    "custom_agent_config_sha256": "4930396a63ee8babfda1c602faa137dec9910e26868e8e151ce1ca2188e149c4",
+    "global_instruction_file_reported_auto_loaded_in_both": true,
+    "pre_generation_user_response_tool_tokens": 0,
+    "credits_panel": "AI Credits not enabled",
+    "billing_settings_changed": false,
+    "trust_prompt": "accepted only after explicit scoped user approval; initial automatic approval rejection was respected",
+    "isolation_verified": false,
+    "model_execution": "blocked",
+    "limits": "Discovery inventory is not proof of the exact prompt sent to a model. No generation was requested. The native context display still reports a global instruction file."
+  },
+  "claude": {
+    "version": "2.1.306",
+    "status": "prepared_not_run",
+    "staged_source": "3c5cc3a794918773ac649e072ccd58e4f0bced5f",
+    "skills": 12,
+    "receipt_files_verified": 50,
+    "plugin_files_verified": 38,
+    "manifest_strict_validation": "passed",
+    "native_skill_body_validation": "not_established; report contains zero content checks",
+    "directory_submission": "not_requested; informational findings do not establish directory qualification",
+    "fresh_account_billing_isolation_checks": "required_before_execution",
+    "retest_plan": "claude-routing-contract-retest-plan-2026-10-26.md"
+  }
+}

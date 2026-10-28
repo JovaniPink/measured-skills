@@ -1,5 +1,9 @@
 # Codex setup
 
+For everyday feature work, use the [step-by-step prompts and fast path](../feature-development-workflow.md#codex-prompts).
+Check the installed skill entry before using a prompt. Dated observations below
+apply to their recorded versions, not every current installation.
+
 Use the generated Codex plugin for terminal or desktop code work. Check ChatGPT Work and web separately. They may have different loading and file access.
 
 Check the [current candidate record](../client-candidate-v0.18.0.md) before enabling an update. The former engineering pack was held from 0.12.0, when an original motion safety case failed. That hold was lifted on 2026-09-10 after all ten original cases met their expectation on CLI 0.153.2 at 0.14.0. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps that history. It does not carry over to the three packs that replaced the former pack. Codex CLI 0.154.0 copies each added plugin into `plugins/cache/<marketplace>/<plugin>/<version>/` under its home folder, and `codex plugin remove` deletes that copy. A changed checkout is therefore not the installed version until the plugin is added again. Compare the cached files, not the checkout.

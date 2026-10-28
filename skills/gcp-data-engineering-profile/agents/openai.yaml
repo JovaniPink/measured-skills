@@ -1,6 +1,6 @@
 interface:
   display_name: "GCP Data Engineering Profile"
-  short_description: "Review GCP data contracts and pipeline risks"
-  default_prompt: "Use $gcp-data-engineering-profile to review this data change against its discovered stack and authority boundaries."
+  short_description: "Review BigQuery, incremental models, and GCP pipelines"
+  default_prompt: "Use $gcp-data-engineering-profile to review the supplied BigQuery plan, incremental model, or GCP pipeline for its data contracts and evidence gaps without assuming cloud access."
 policy:
   allow_implicit_invocation: true

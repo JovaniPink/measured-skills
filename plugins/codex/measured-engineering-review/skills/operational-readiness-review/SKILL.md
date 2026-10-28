@@ -7,13 +7,13 @@ metadata:
   version: "0.18.0"
   plugin: "measured-engineering-review"
   invocation: "implicit"
-  provenance: "clean-room"
+  provenance: "original"
   risk_class: "read-only"
 ---
 
 # Operational Readiness Review
 
-Use current primary guidance as a review baseline, then report only what the available evidence supports. Primary authority: [official reference](https://sre.google/sre-book/monitoring-distributed-systems/).
+Use [Google SRE monitoring guidance](https://sre.google/sre-book/monitoring-distributed-systems/) for signal and alerting concepts. The broader ownership, recovery, and readiness checks below are this catalog's review contract; they require separate system evidence.
 
 ## Workflow
 

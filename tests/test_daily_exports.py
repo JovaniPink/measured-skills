@@ -220,7 +220,7 @@ class DailyExports(unittest.TestCase):
     def fixture(self, base: Path) -> Path:
         source = base / 'source'
         source.mkdir()
-        for relative in ('catalog/profiles.json', 'catalog/revocations.json', 'evals/daily-engineering/cases.json'):
+        for relative in ('LICENSE', 'catalog/profiles.json', 'catalog/revocations.json', 'evals/daily-engineering/cases.json'):
             target = source / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, target)
@@ -237,6 +237,10 @@ class DailyExports(unittest.TestCase):
             source = self.fixture(base)
             a, b = base / 'a', base / 'b'
             export_trigger_evals.export(a, source=source)
+            for client in ('codex', 'claude'):
+                self.assertEqual((source / 'LICENSE').read_bytes(), (a / client / 'LICENSE').read_bytes())
+                for name in export_selected.profile_skills('daily-engineering-experimental', 'codex'):
+                    self.assertEqual((source / 'LICENSE').read_bytes(), (a / client / 'skills' / name / 'LICENSE').read_bytes())
             export_trigger_evals.export(b, source=source)
             def files(root: Path) -> dict[str, bytes]:
                 return {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}

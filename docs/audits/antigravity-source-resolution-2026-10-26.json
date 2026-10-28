@@ -1,0 +1,750 @@
+{
+  "reviewed_on": "2026-10-26",
+  "reviewed_revision": "13c3e4e36c82782c17b197fdeb1159b3d388d6d0",
+  "scope": "Four remaining Antigravity HTML source holds only. Preserve all other source bindings and global review-age policy. No canonical, generated, invocation, installation, billing, or behavioral-evidence change.",
+  "prior_hold_receipt": "docs/audits/source-check-closeout-2026-10-26.json",
+  "prior_hold_receipt_sha256": "57abfa1046fb8319fdc5df3227a279261796d8b88d921045bffb16045d1f26ff",
+  "discovery": [
+    {
+      "url": "https://antigravity.google/llms.txt",
+      "final_url": "https://antigravity.google/llms.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "etag": "\"Drk8uA\"",
+      "last_modified": null,
+      "sha256": "712cbb2d2df845c85846c9306675346ec8eff73036c78cb3497071c30108b5e1",
+      "length": 12036,
+      "observed_at": "2026-10-26T23:22:30.879464+00:00",
+      "sample_id": "6ca70f5a3c38"
+    },
+    {
+      "url": "https://antigravity.google/llms-full.txt",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://antigravity.google/robots.txt",
+      "final_url": "https://antigravity.google/robots.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "etag": "\"LqI4hQ\"",
+      "last_modified": null,
+      "sha256": "66beb28fc8a96596a542160aa66ee792e94cd60bbc0166f0945df15dfe2740c9",
+      "length": 126,
+      "observed_at": "2026-10-26T23:22:30.926447+00:00",
+      "sample_id": "ea6d7aac4c92"
+    }
+  ],
+  "access_limit": "The web reader rejected text/markdown responses; direct standard-library HTTPS retrieval supplied the complete official documents. Raw publisher bodies and scripts stay outside the public tree.",
+  "records": [
+    {
+      "old_source_url": "https://antigravity.google/docs/cli/headless/",
+      "source_url": "https://antigravity.google/docs/cli/headless.md",
+      "decision": "replace_html_with_official_markdown",
+      "before": {
+        "source_url": "https://antigravity.google/docs/cli/headless/",
+        "marker_kind": "etag",
+        "marker_value": "\"IlmsFA\""
+      },
+      "after": {
+        "source_url": "https://antigravity.google/docs/cli/headless.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9"
+      },
+      "observations": [
+        {
+          "requested_url": "https://antigravity.google/docs/cli/headless.md",
+          "final_url": "https://antigravity.google/docs/cli/headless.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.129199+00:00",
+          "raw_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "decoded_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "raw_bytes": 27743,
+          "decoded_bytes": 27743
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/cli/headless.md",
+          "final_url": "https://antigravity.google/docs/cli/headless.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.403781+00:00",
+          "raw_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "decoded_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "raw_bytes": 27743,
+          "decoded_bytes": 27743
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/cli/headless.md",
+          "final_url": "https://antigravity.google/docs/cli/headless.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.598259+00:00",
+          "raw_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "decoded_sha256": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9",
+          "raw_bytes": 27743,
+          "decoded_bytes": 27743
+        }
+      ],
+      "affected_skills": [
+        "agent-evaluation-design",
+        "claim-verification"
+      ],
+      "finding": "The official Markdown retains headless output formats, stream events and cumulative counters, continuation, permission soft-denial, terminal status, timeout, and errors. A zero exit can accompany a denied action; a response is not proof that the action ran.",
+      "instruction_consequence": "Retain actual-action and diagnostic evidence, exact installed-version discovery, and separate authorization. No runner, permission bypass, authentication, or model request is introduced.",
+      "representation_review": {
+        "publisher": "Google Antigravity",
+        "authority_evidence": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
+        "document_heading_count": 24,
+        "html_document_headings": [
+          "Headless mode",
+          "Run a single prompt",
+          "Output formats",
+          "Text",
+          "JSON",
+          "Structured output with a schema",
+          "Streaming JSON",
+          "Tool calls in the stream",
+          "Structured output in the stream",
+          "Parse output with jq",
+          "Continue a conversation",
+          "Stream prompts from stdin",
+          "Send a prompt",
+          "Read the results",
+          "Drive a session programmatically",
+          "End a session",
+          "Unsupported messages",
+          "Common mistakes",
+          "Select a model, effort, or agent",
+          "Permissions in headless mode",
+          "Handle exit codes and errors",
+          "Flag reference",
+          "Example: run the agent in CI",
+          "Next steps"
+        ],
+        "markdown_document_headings": [
+          "Headless mode",
+          "Run a single prompt",
+          "Output formats",
+          "Text",
+          "JSON",
+          "Structured output with a schema",
+          "Streaming JSON",
+          "Tool calls in the stream",
+          "Structured output in the stream",
+          "Parse output with jq",
+          "Continue a conversation",
+          "Stream prompts from stdin",
+          "Send a prompt",
+          "Read the results",
+          "Drive a session programmatically",
+          "End a session",
+          "Unsupported messages",
+          "Common mistakes",
+          "Select a model, effort, or agent",
+          "Permissions in headless mode",
+          "Handle exit codes and errors",
+          "Flag reference",
+          "Example: run the agent in CI",
+          "Next steps"
+        ],
+        "excluded_html_heading": "How did you hear about us? (feedback survey, not product guidance)",
+        "limit": "Heading correspondence supports section coverage; the manual content review, not headings alone, supports the stated consequences. Full official Markdown bytes are hashed after declared transport decoding; no text extraction or normalization is used as a fingerprint."
+      }
+    },
+    {
+      "old_source_url": "https://antigravity.google/docs/skills/",
+      "source_url": "https://antigravity.google/docs/skills.md",
+      "decision": "replace_html_with_official_markdown",
+      "before": {
+        "source_url": "https://antigravity.google/docs/skills/",
+        "marker_kind": "etag",
+        "marker_value": "\"IlmsFA\""
+      },
+      "after": {
+        "source_url": "https://antigravity.google/docs/skills.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2"
+      },
+      "observations": [
+        {
+          "requested_url": "https://antigravity.google/docs/skills.md",
+          "final_url": "https://antigravity.google/docs/skills.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:23.969462+00:00",
+          "raw_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "decoded_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "raw_bytes": 6547,
+          "decoded_bytes": 6547
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/skills.md",
+          "final_url": "https://antigravity.google/docs/skills.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.162634+00:00",
+          "raw_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "decoded_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "raw_bytes": 6547,
+          "decoded_bytes": 6547
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/skills.md",
+          "final_url": "https://antigravity.google/docs/skills.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.402985+00:00",
+          "raw_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "decoded_sha256": "4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+          "raw_bytes": 6547,
+          "decoded_bytes": 6547
+        }
+      ],
+      "affected_skills": [
+        "portable-skill-authoring",
+        "skill-security-review"
+      ],
+      "finding": "The official Markdown retains discovery/activation, metadata, and App/CLI/IDE locations, including manual slash selection and autonomous activation. It does not document a verified explicit-only enforcement control.",
+      "instruction_consequence": "Retain all 17 exclusions and independent loading checks. A publisher claim that naming a skill ensures use does not establish this catalog's observed routing or isolation.",
+      "representation_review": {
+        "publisher": "Google Antigravity",
+        "authority_evidence": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
+        "document_heading_count": 21,
+        "html_document_headings": [
+          "Agent skills",
+          "What are skills?",
+          "Anatomy of a skill",
+          "Manifest format (SKILL.md)",
+          "Frontmatter fields",
+          "How the agent uses skills",
+          "Best practices",
+          "Keep skills focused",
+          "Write clear descriptions",
+          "Use scripts as black boxes",
+          "Include decision trees",
+          "Skills by surface",
+          "Antigravity App",
+          "Antigravity App skill locations",
+          "Invoking skills in the Antigravity App",
+          "Antigravity CLI",
+          "CLI skill locations",
+          "Slash command conversion",
+          "Managing skills with plugins",
+          "Antigravity IDE",
+          "Antigravity IDE skill locations"
+        ],
+        "markdown_document_headings": [
+          "Agent skills",
+          "What are skills?",
+          "Anatomy of a skill",
+          "Manifest format (SKILL.md)",
+          "Frontmatter fields",
+          "How the agent uses skills",
+          "Best practices",
+          "Keep skills focused",
+          "Write clear descriptions",
+          "Use scripts as black boxes",
+          "Include decision trees",
+          "Skills by surface",
+          "Antigravity App",
+          "Antigravity App skill locations",
+          "Invoking skills in the Antigravity App",
+          "Antigravity CLI",
+          "CLI skill locations",
+          "Slash command conversion",
+          "Managing skills with plugins",
+          "Antigravity IDE",
+          "Antigravity IDE skill locations"
+        ],
+        "excluded_html_heading": "How did you hear about us? (feedback survey, not product guidance)",
+        "limit": "Heading correspondence supports section coverage; the manual content review, not headings alone, supports the stated consequences. Full official Markdown bytes are hashed after declared transport decoding; no text extraction or normalization is used as a fingerprint."
+      }
+    },
+    {
+      "old_source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "source_url": "https://antigravity.google/docs/plugins.md",
+      "decision": "replace_html_with_official_markdown",
+      "before": {
+        "source_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+        "marker_kind": "etag",
+        "marker_value": "\"IlmsFA\""
+      },
+      "after": {
+        "source_url": "https://antigravity.google/docs/plugins.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c"
+      },
+      "observations": [
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:18.810957+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        },
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:19.002076+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        },
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:19.155911+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        }
+      ],
+      "affected_skills": [
+        "portable-skill-authoring",
+        "skill-security-review"
+      ],
+      "finding": "The official selector-free Markdown retains the complete manifest, component schema, all three client sections, inventories, and installation/synchronization guidance. Six responses match. Compared with the rejected tab-selected candidate, its only line change uses Automations as the adjacent app navigation label. No corresponding canonical navigation instruction needs repair.",
+      "instruction_consequence": "Retain the current instruction-only package boundaries. Do not add hooks, servers, or scripts because the platform supports them; documentation is not proof of installed synchronization or isolation. Use the complete selector-free publisher document, not a filtered excerpt. Retain future mismatches as blocking; this bounded sample is not a stability guarantee.",
+      "representation_review": {
+        "publisher": "Google Antigravity",
+        "authority_evidence": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
+        "document_heading_count": 18,
+        "html_document_headings": [
+          "Plugins",
+          "Directory structure",
+          "Manifest file (plugin.json)",
+          "Field reference",
+          "Automatic validation",
+          "Full JSON schema",
+          "Supported components",
+          "Managing plugins by surface",
+          "Antigravity App",
+          "Marketplace and bundled plugins",
+          "Manual plugin installation",
+          "Antigravity CLI",
+          "Interactive plugins manager (/plugin)",
+          "CLI shell subcommands (agy plugin)",
+          "CLI filesystem location",
+          "Next steps",
+          "Antigravity IDE",
+          "Standalone IDE plugin installation"
+        ],
+        "markdown_document_headings": [
+          "Plugins",
+          "Directory structure",
+          "Manifest file (plugin.json)",
+          "Field reference",
+          "Automatic validation",
+          "Full JSON schema",
+          "Supported components",
+          "Managing plugins by surface",
+          "Antigravity App",
+          "Marketplace and bundled plugins",
+          "Manual plugin installation",
+          "Antigravity CLI",
+          "Interactive plugins manager (/plugin)",
+          "CLI shell subcommands (agy plugin)",
+          "CLI filesystem location",
+          "Next steps",
+          "Antigravity IDE",
+          "Standalone IDE plugin installation"
+        ],
+        "excluded_html_heading": "How did you hear about us? (feedback survey, not product guidance)",
+        "limit": "Heading correspondence supports section coverage; the manual content review, not headings alone, supports the stated consequences. Full official Markdown bytes are hashed after declared transport decoding; no text extraction or normalization is used as a fingerprint."
+      },
+      "rejected_candidate": {
+        "source_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+        "initial_observations": [
+          {
+            "requested_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "etag": "\"LqI4hQ\"",
+            "observed_at": "2026-10-26T23:26:23.970941+00:00",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "raw_bytes": 9939,
+            "decoded_bytes": 9939
+          },
+          {
+            "requested_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "etag": "\"LqI4hQ\"",
+            "observed_at": "2026-10-26T23:26:24.129089+00:00",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "raw_bytes": 9939,
+            "decoded_bytes": 9939
+          },
+          {
+            "requested_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "etag": "\"LqI4hQ\"",
+            "observed_at": "2026-10-26T23:26:24.390796+00:00",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "raw_bytes": 9939,
+            "decoded_bytes": 9939
+          }
+        ],
+        "followup_observations": [
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "observed_at": "2026-10-26T23:32:02.960195+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:03.113227+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "observed_at": "2026-10-26T23:32:03.299110+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "observed_at": "2026-10-26T23:32:03.442352+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:03.587774+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:03.733617+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:03.875945+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:04.035608+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "decoded_sha256": "0d619e7f8ee0586d0f984ceefc824e537aee5927bf7699eb48a0c118755fc790",
+            "observed_at": "2026-10-26T23:32:04.195215+00:00"
+          },
+          {
+            "url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "final_url": "https://antigravity.google/docs/plugins.md?tab=cli",
+            "status": 200,
+            "content_type": "text/markdown",
+            "content_encoding": "identity",
+            "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+            "observed_at": "2026-10-26T23:32:04.343991+00:00"
+          }
+        ],
+        "decision": "Do not pin the tab-selected URL: repeated responses alternate between two complete document bodies. Their only line difference renames the app navigation label from Scheduled Tasks to Automations. Neither variant proves installed app state."
+      },
+      "additional_observations": [
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:19.306042+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        },
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:19.521594+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        },
+        {
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "raw_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "decoded_sha256": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c",
+          "observed_at": "2026-10-26T23:32:19.753818+00:00",
+          "requested_url": "https://antigravity.google/docs/plugins.md",
+          "decoded_bytes": 9935,
+          "raw_bytes": 9935
+        }
+      ]
+    },
+    {
+      "old_source_url": "https://www.antigravity.google/docs/sdk/overview",
+      "source_url": "https://antigravity.google/docs/sdk/overview.md",
+      "decision": "replace_html_with_official_markdown",
+      "before": {
+        "source_url": "https://www.antigravity.google/docs/sdk/overview",
+        "marker_kind": "etag",
+        "marker_value": "\"IlmsFA\""
+      },
+      "after": {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      "observations": [
+        {
+          "requested_url": "https://antigravity.google/docs/sdk/overview.md",
+          "final_url": "https://antigravity.google/docs/sdk/overview.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:23.897378+00:00",
+          "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "raw_bytes": 6717,
+          "decoded_bytes": 6717
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/sdk/overview.md",
+          "final_url": "https://antigravity.google/docs/sdk/overview.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.038410+00:00",
+          "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "raw_bytes": 6717,
+          "decoded_bytes": 6717
+        },
+        {
+          "requested_url": "https://antigravity.google/docs/sdk/overview.md",
+          "final_url": "https://antigravity.google/docs/sdk/overview.md",
+          "status": 200,
+          "content_type": "text/markdown",
+          "content_encoding": "identity",
+          "etag": "\"LqI4hQ\"",
+          "observed_at": "2026-10-26T23:26:24.294167+00:00",
+          "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+          "raw_bytes": 6717,
+          "decoded_bytes": 6717
+        }
+      ],
+      "affected_skills": [
+        "agent-evaluation-design",
+        "google-adk-engineering-profile"
+      ],
+      "finding": "The official Markdown retains SDK setup, stateful agent lifecycle, enterprise routing, and linked examples, while separating the managed API from the local Python SDK.",
+      "instruction_consequence": "Retain SDK/CLI separation, provider access and spend boundaries. Examples require credentials and may spend; they were inspected as text and not executed.",
+      "representation_review": {
+        "publisher": "Google Antigravity",
+        "authority_evidence": "Direct HTTPS response on the official documentation host with text/markdown Content-Type. The official llms.txt index identifies the corresponding product documents; no mirror or third-party reconstruction is used.",
+        "document_heading_count": 6,
+        "html_document_headings": [
+          "Google Antigravity SDK",
+          "Quickstart",
+          "Gemini Enterprise",
+          "Core agent foundations",
+          "Next steps",
+          "Sample code and examples"
+        ],
+        "markdown_document_headings": [
+          "Google Antigravity SDK",
+          "Quickstart",
+          "Gemini Enterprise",
+          "Core agent foundations",
+          "Next steps",
+          "Sample code and examples"
+        ],
+        "excluded_html_heading": "How did you hear about us? (feedback survey, not product guidance)",
+        "limit": "Heading correspondence supports section coverage; the manual content review, not headings alone, supports the stated consequences. Full official Markdown bytes are hashed after declared transport decoding; no text extraction or normalization is used as a fingerprint."
+      }
+    }
+  ],
+  "transport_review": {
+    "finding": "The SDK endpoint alternated identity and declared gzip coding even with Accept-Encoding: identity. All six diagnostic responses decode to exactly the same document SHA-256. This is transport variation, not a license to remove document content.",
+    "observations": [
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:18.347056+00:00",
+        "content_encoding": "gzip",
+        "raw_bytes": 2270,
+        "raw_sha256": "8afbf8e594a5119cfdfb60af7eea69bb6855726bcd961cf53d6f90efcd93f388",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:18.564575+00:00",
+        "content_encoding": "identity",
+        "raw_bytes": 6717,
+        "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:18.771107+00:00",
+        "content_encoding": "gzip",
+        "raw_bytes": 2270,
+        "raw_sha256": "8afbf8e594a5119cfdfb60af7eea69bb6855726bcd961cf53d6f90efcd93f388",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:18.974918+00:00",
+        "content_encoding": "identity",
+        "raw_bytes": 6717,
+        "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:19.161794+00:00",
+        "content_encoding": "identity",
+        "raw_bytes": 6717,
+        "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      },
+      {
+        "source_url": "https://antigravity.google/docs/sdk/overview.md",
+        "observed_at": "2026-10-26T23:24:19.430960+00:00",
+        "content_encoding": "identity",
+        "raw_bytes": 6717,
+        "raw_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+        "decoded_sha256": "6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38"
+      }
+    ],
+    "repair": "Request identity encoding; before content hashing decode only declared identity or gzip. Unknown/stacked coding and corrupt gzip fail closed. No byte sniffing, line-ending change, whitespace stripping, or normalization rule is added. Header-only pin behavior remains unchanged.",
+    "regression_before": "Five test methods run before the production change: seven failing subcases and one error exposed encoded-byte hashing and absent decoding failure handling. An additional report-level regression then checked pass, changed, and blocked outcomes.",
+    "red_log_sha256": "3abe525e165cb62c4428412bd12cb26fd46cb6a82c94c98a2a61d20d97b9d5e8",
+    "primary_sources": [
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-content-encoding",
+        "retrieved_on": "2026-10-26",
+        "conclusion": "Content-Encoding identifies coding applied to a representation; decode that declared coding to obtain the underlying document bytes."
+      },
+      {
+        "url": "https://docs.python.org/3/library/gzip.html#gzip.decompress",
+        "retrieved_on": "2026-10-26",
+        "conclusion": "The standard-library decoder handles concatenated gzip members and rejects invalid gzip. This implementation rejects unsupported codings rather than guessing."
+      }
+    ]
+  },
+  "intermediate_check": {
+    "path": "docs/audits/antigravity-source-intermediate-2026-10-26.json",
+    "sha256": "c40cd43eeeb0343390f237ca67390c7210da45f599e646763ac331c51acbae6c",
+    "limit": "The tab-selected plugin candidate drifted, alongside OpenAI prompting and Swift Evolution. This failed observation is retained rather than replaced by a later success."
+  },
+  "closeout": {
+    "path": "docs/audits/antigravity-source-closeout-2026-10-26.json",
+    "sha256": "4ba7485d375eacd62704658ae94ba3f0e89c2f6e5a1496487c94eb18da030e6f",
+    "pins_sha256": "a5745c9cce7d10ae2c6996f7c5b2f7dfd54836eb93efdb249f8d6d43d7b2854b",
+    "counts": {
+      "pass": 62,
+      "changed": 2
+    },
+    "antigravity_result": "All four reviewed full-document bindings match. The rejected tab-selected plugin candidate is not an active pin. Future content drift remains blocking.",
+    "remaining_holds": [
+      {
+        "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "expected_marker": "content-sha256:b6cbd1d254f4c4230584e56fa7ea2fb75b742af80e9ef29355b130a5e06bd8e9",
+        "observed_marker": "content-sha256:5f5dc90c4654b3c47df42f017076556902a9808f3879f7bbf7c86b9345a56044",
+        "result": "changed"
+      },
+      {
+        "source_url": "https://www.swift.org/swift-evolution/",
+        "expected_marker": "content-sha256:a7a83097bfa84633a4b8272844f58bb94374155b8906b9b0d8811a6cd743d3f2",
+        "observed_marker": "content-sha256:0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b",
+        "result": "changed"
+      }
+    ],
+    "remaining_action": "Review the new OpenAI prompting and Swift Evolution changes individually. Their pins remain unchanged; no semantic classification or clearance is asserted here."
+  }
+}
