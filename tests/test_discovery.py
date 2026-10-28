@@ -132,6 +132,30 @@ class MigrationTests(unittest.TestCase):
                 (root / 'dist/discovery/guide.md').write_text('changed')
                 self.assertIn('discovery output drift: dist/discovery/guide.md', discovery.check(root))
 
+    def test_action_availability_tracks_client_and_scope(self) -> None:
+        data = json.loads((ROOT / discovery.EXPORT).read_text())
+        route = next(r for r in data['routes'] if r['id'] == 'finish-work')
+        expected = {'assess': 'plan-change', 'repair': 'execute-plan', 'maintain': 'publish-change'}
+        for mode in route['modes']:
+            for client in data['clients']:
+                with self.subTest(mode=mode['id'], client=client):
+                    text = discovery.action_guidance(data, route, mode, client)
+                    self.assertIn(':' + expected[mode['id']] + '.', text)
+                    self.assertIn('unobserved for 0.19', text)
+                    if mode['id'] != 'assess':
+                        self.assertIn('Outside finish-work-core', text)
+                        self.assertIn('Invocation policy: explicit', text)
+                        if client == 'antigravity':
+                            self.assertIn('excluded: explicit-only control unverified', text)
+                        if client in ('chatgpt', 'claude-web'):
+                            self.assertIn('archive prepared;', text)
+                    else:
+                        self.assertIn('Included in finish-work-core', text)
+                    self.assertIn('Native command when installed' if client in ('codex', 'claude') else 'Ordinary request:', text)
+        # Implicit does not mean included: the refactor specialist is an addition.
+        route = next(r for r in data['routes'] if r['id'] == 'refactor')
+        self.assertIn('Outside finish-work-core', discovery.action_guidance(data, route, route['modes'][0], 'codex'))
+
     def test_finish_profile_exports_deterministically_with_controls(self) -> None:
         from export_selected import export, profile_skills
         from cataloglib import directory_hashes

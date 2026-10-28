@@ -38,15 +38,12 @@
       make("h3", r.label, article); make("p", r.why, article);
       make("p", `Start here: ${r.primary_skill}. Provide: ${r.required_inputs.join(", ")}.`, article);
       make("p", `Synthetic output: ${r.output_example}`, article);
-      const primary = data.skills.find(s => s.id === r.primary_skill);
-      make("p", `Package: ${primary.availability[client.value]}. Invocation: ${primary.invocation}. Behavior: unobserved for 0.19.`, article);
+      make("p", "Availability follows the action below. Verify its source and loading separately.", article);
       r.modes.forEach(m => {
         const detail = make("details", "", article);
+        detail.dataset.actionScope = m.id;
         make("summary", m.label, detail); make("p", m.scope, detail);
-        if (m.command_skill) {
-          const entry = data.skills.find(s => s.id === m.command_skill);
-          make("p", `Native entry for Codex/Claude Code: ${entry.pack}:${entry.id} (${entry.invocation}). ${entry.invocation === "explicit" ? "Outside the implicit core profile. " : ""}Other clients use ordinary requests; verify available source and loading.`, detail);
-        }
+        make("p", m.action_guidance[client.value], detail);
         const option = data.stack_options[stack.value];
         const text = m.prompts[client.value] + (option.skill ? ` Apply ${option.skill} guidance if available and relevant after repository discovery; report whether it loaded.` : "");
         const pre = make("pre", text, detail); pre.tabIndex = 0;

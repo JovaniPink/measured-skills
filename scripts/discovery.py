@@ -158,6 +158,20 @@ def input_hashes(root: Path = ROOT) -> dict[str, str]:
     return {p: sha((root / p).read_bytes()) for p in sorted(paths)}
 
 
+def action_guidance(data: dict[str, Any], route: dict[str, Any], mode: dict[str, Any], client: str) -> str:
+    """Describe the selected action, never infer installation or authorization."""
+    entry = next(s for s in data['skills'] if s['id'] == (mode.get('command_skill') or route['primary_skill']))
+    core = next(p['skills'] for p in data['profiles'] if p['id'] == 'finish-work-core')
+    profile = 'Included in finish-work-core.' if entry['id'] in core else 'Outside finish-work-core; verify this additional source separately.'
+    identity = f"{entry['pack']}:{entry['id']}"
+    package = f"Action skill: {identity}. Package for this client: {entry['availability'][client]}. Invocation policy: {entry['invocation']}. {profile}"
+    if client in ('codex', 'claude'):
+        path = 'Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded.'
+    else:
+        path = 'Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission.'
+    return f"{package} {path} Observed behavior: unobserved for 0.19. Sending the request authorizes only its stated scope."
+
+
 def build_data(revision: str, root: Path = ROOT, verify_source: bool = True) -> dict[str, Any]:
     registry = json.loads((root / REGISTRY).read_text())
     catalog = json.loads((root / 'catalog/skills.json').read_text())['skills']
@@ -189,8 +203,12 @@ def build_data(revision: str, root: Path = ROOT, verify_source: bool = True) -> 
                            description=meta['description'], invocation=meta['invocation'], risk_class=meta['risk_class'],
                            historical_names=[aliases[name]] if name in aliases else [], availability=available,
                            client_evidence='not_observed_for_0.19', evidence_reference='docs/client-candidate-v0.19.0.md'))
-    return dict(**registry, source_revision=revision, input_files=inputs, skills=skills,
+    data = dict(**registry, source_revision=revision, input_files=inputs, skills=skills,
                 migration=migration, profiles=json.loads((root / 'catalog/profiles.json').read_text())['profiles'])
+    for route in data['routes']:
+        for mode in route['modes']:
+            mode['action_guidance'] = {client: action_guidance(data, route, mode, client) for client in data['clients']}
+    return data
 
 
 def markdown(data: dict[str, Any], bundled: bool = False) -> str:
@@ -215,7 +233,7 @@ def markdown(data: dict[str, Any], bundled: bool = False) -> str:
             for client, label in data['clients'].items():
                 if bundled and client != 'antigravity':
                     continue
-                lines += [label, '', '```text', mode['prompts'][client], '```', '']
+                lines += [label, '', mode['action_guidance'][client], '', '```text', mode['prompts'][client], '```', '']
     lines += ['## Catalog and historical names', '', '| Skill | Former name | Invocation |', '| --- | --- | --- |']
     for skill in data['skills']:
         lines += [f"| {skill['label']} (`{skill['id']}`) | {', '.join(skill['historical_names']) or 'New'} | {skill['invocation']} |"]
@@ -242,7 +260,7 @@ def offline_html(data: dict[str, Any], root: Path = ROOT) -> str:
     cards = []
     for r in data['routes']:
         modes = ''.join('<details><summary>' + e(m['label']) + '</summary><p>' + e(m['scope']) + '</p>' +
-                        ''.join('<h4>' + e(data['clients'][c]) + '</h4><pre tabindex="0">' + e(p) + '</pre>' for c, p in m['prompts'].items()) + '</details>' for m in r['modes'])
+                        ''.join('<h4>' + e(data['clients'][c]) + '</h4><p>' + e(m['action_guidance'][c]) + '</p><pre tabindex="0">' + e(p) + '</pre>' for c, p in m['prompts'].items()) + '</details>' for m in r['modes'])
         cards.append('<article id="' + e(r['id']) + '"><h2>' + e(r['label']) + '</h2><p>' + e(r['why']) + '</p><p>Start here: ' + e(r['primary_skill']) + '</p><p>Provide: ' + e(', '.join(r['required_inputs'])) + '</p><p>Synthetic output: ' + e(r['output_example']) + '</p>' + modes + '</article>')
     nav = ''.join('<a href="#' + e(r['id']) + '">' + e(r['label']) + '</a> ' for r in data['routes'][:7])
     catalog = ''.join('<li><strong>' + e(s['label']) + '</strong>: ' + e(s['id']) + ' (formerly ' + e(', '.join(s['historical_names']) or 'new') + '). ' + e(s['description']) + ' Invocation: ' + e(s['invocation']) + '.</li>' for s in data['skills'])
