@@ -11,7 +11,17 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 312 regression tests.
+Current test suite: 314 regression tests.
+
+## October 28: post-merge chooser repair
+
+The automatic hosted run for `fba22e6` ran 314 tests and reported one failure:
+this document still listed 312 after two regression definitions were added.
+The receipt is corrected without claiming that failed run passed. Its preceding
+workflow, typing, lint, distribution and deterministic steps completed; local
+test suites were not rerun under the user's source-review-only instruction.
+Final hosted results belong to the exact subsequent head. Human chooser and
+installed-client acceptance remain unrun.
 
 ## October 28: action-specific availability
 
