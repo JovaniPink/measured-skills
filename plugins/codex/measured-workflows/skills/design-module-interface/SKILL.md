@@ -15,6 +15,8 @@ metadata:
 
 Propose a coherent boundary that reduces caller knowledge without hiding important authority or failure behavior.
 
+Read [behavior-preserving refactoring](references/behavior-preserving-refactoring.md) when untangling existing code without intentionally changing its contract.
+
 ## Workflow
 
 1. Establish the user outcome, current modules, callers, dependencies, vocabulary, invariants, and change pressure.

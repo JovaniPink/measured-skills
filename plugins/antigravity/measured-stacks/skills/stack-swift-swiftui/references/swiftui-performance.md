@@ -24,3 +24,19 @@ A small simulator experiment found that mutating an unread observed property did
 not reevaluate the measured child, whereas a read property did. Preserve this
 bounded result: it is not an Instruments trace or a claim about a whole app.
 [verified: simulator, Xcode 27.0 / iOS 27.0]
+
+## Read an Instruments capture before choosing a repair
+
+The official [Markdown guide](https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md)
+was inspected on 2026-10-28. Locate the affected interaction on the SwiftUI track,
+then distinguish a slow update from many individually cheap updates. Use Time
+Profiler samples to inspect synchronous work and the cause graph to inspect update
+triggers. A displayed dependency is evidence about that capture, not all possible
+causes. If samples are insufficient, retain uncertainty rather than invent a stack.
+[documented]
+
+Synthetic fixture, not a captured run: a search edit precedes repeated list updates,
+while a supplied sample points to synchronous formatting. Investigate both update
+frequency and formatting cost, preserve the search/error behavior, and recapture
+the same interaction after a change. This fixture proves neither a performance
+improvement nor device acceptance. [unverified: synthetic example]

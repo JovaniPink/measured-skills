@@ -21,6 +21,8 @@ Read [warehouse and transformations](references/warehouse.md) for BigQuery,
 dbt, and Dataform. Read [pipeline execution boundaries](references/pipelines.md)
 for storage, streaming, Spark, and orchestration concerns.
 
+Read [replay and backfill review](references/replay-review.md) when assessing repeated processing, late corrections, or partial-run recovery.
+
 ## Workflow
 
 1. Identify SQL dialect, Apache Beam SDK, framework and adapter versions, job definitions, dependency locks, and repository checks. Record which source files and supplied observations were inspected.

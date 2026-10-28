@@ -142,8 +142,8 @@
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "1dd0dd6cf73a186ac7fae2c8e046d23bc4aed7b037f4f5d075c04ac8faf355aa",
-      "expression_and_license_review": "Mechanical projection/archive of the post-retest review and GCP contract repairs. Canonical/generated and ZIP member bytes are compared; original/adapted metadata, MIT notices, implicit controls, and explicit-only exclusions remain. No external executable, dependency, asset, or permission is introduced. October 26 finish-work increment: Mechanical generation of the new original prompt-review skill; inspect canonical correspondence, native implicit controls, exact ZIP members, and owned MIT notice. No executable, tool grant, new pack, or installed-client result. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 bounded-maintenance increment: Deterministic Claude projection archives and checksums, rebuilt twice with identical bytes; retains standalone references, notices, and explicit invocation controls. October 26 GCP routing repair: All 88 archives rebuilt twice with identical checksums. Only GCP archive bytes change; required references and notices remain exact. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained. October 27 GCP/review contract repair: All 88 archives generated twice with identical checksums. Only the two repaired skill archives change; canonical/reference correspondence retained. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "dd7cf3b0640d9a94564260dd9a0ee64af0d1a6eeb6a2e614123b90f22906227b",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/acceptance-evidence-ledger-0.18.0.zip": {
       "before_sha256": "245859664d7c070e72520343ef479c559d7ecd81fc2a36c07eacdca394bcc4c3",
@@ -257,8 +257,8 @@
     },
     "dist/claude-ai/choose-workflow-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "36577047d6920c1ea691248a3f8b8916319b350fa0552ab576e42566c9c0c573",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "563c6961768fdf54407ccf523e9843d7b3aceae74773ee5669ec470cf967bcb9",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/claim-verification-0.18.0.zip": {
       "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
@@ -352,8 +352,8 @@
     },
     "dist/claude-ai/design-module-interface-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "09165bbc62ad493a201ee65d3f5ce44c51e83901bf0606c530919e647bd8f1c4",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "481cc04039c96d006e381bc5264d81ce0ba36e1cf63562733884a6db5ff31ca0",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/design-observability-0.19.0.zip": {
       "before_sha256": null,
@@ -407,8 +407,8 @@
     },
     "dist/claude-ai/explain-codebase-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "82d9b83bff13e716c9d89a14e4e69ab58c936cf87c15368f18862f659b2c8d56",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "789c7d456d136f7e22fde8d56b563dfa49518d13507b3bfdecf7586b3199c8b1",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/explain-to-stakeholders-0.19.0.zip": {
       "before_sha256": null,
@@ -582,8 +582,8 @@
     },
     "dist/claude-ai/plan-change-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "741e83e0887d6c757af165508887c91df619e4001b643dc5871cf07a5205380c",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "97535e7e2256442787d99f224affa3e78bef3f4410b3a069f1e16654449657ed",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/plan-execution-0.18.0.zip": {
       "before_sha256": "a7d4437c0e6f579d77355bdbccb77fae1ca53edf1efaa8dd1fdc488b2b7288c7",
@@ -867,8 +867,8 @@
     },
     "dist/claude-ai/stack-gcp-data-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "f76ad8d18e09ef93f521481bf4febd08fff4d7d0b84cce5b6934525f66c2bf51",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "d8933c1f3ceaef5f839dc23ed17b34000dc092e4547ae9f7168618bb5ca9bd8b",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/stack-go-0.19.0.zip": {
       "before_sha256": null,
@@ -892,8 +892,8 @@
     },
     "dist/claude-ai/stack-postgresql-sql-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "38986db3e751487f36f64c9c17e9886c80f3495719e049d890d1d41f0fb11c9d",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "b3d1fd99cc1e004d7ede99370a69392073bbc530b06add7571e1721305eb5552",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/stack-python-0.19.0.zip": {
       "before_sha256": null,
@@ -907,8 +907,8 @@
     },
     "dist/claude-ai/stack-swift-swiftui-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "42f40e31e722345c0ad6e2a40766a53ec9528b8e285adbad5e381929643961d9",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "c2206a26cb0acc95322b5c5674da0be7ac5226d8dcd45895ecde95810a214c34",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/stack-terraform-0.19.0.zip": {
       "before_sha256": null,
@@ -1002,8 +1002,8 @@
     },
     "dist/claude-ai/verify-claims-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "6ed9ce2423379c2193b78bc34915053d0fec034c746b37062bbaf06fd6fc48d3",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "3a1e8d420856f9115f2e74dc79bde0970367b9f7d4abd9ed518b612da63d156d",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/claude-ai/verify-ios-journey-0.19.0.zip": {
       "before_sha256": null,
@@ -1032,23 +1032,23 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "d9dbb9c035e0a68779afdeb2e0547b1b8331dc846e49e6c8f103ac847f80b447",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "312846f955e64be4ee2ab097eb23db81e49bd458917edd59ba1f2e939ab36807",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "190cde3b92d6a598e1e897d7a97dd78669341098205579b9c4222410949f8890",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "e64759fe767fbc0b13bba05767fb75d6f81413a8828dfb2697995b6cf5d91487",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "5f8e2ef7667f68cebe6f7d98a3700ec55a813477bb16b5b3642b80d5078bf323",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "155d7515088d569dae8dedc63a573b93ba94f1dea95dbeb8f638a6106a8a4daa",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "029aeafc944c31bd0a5206edd95de209d0f13ccfd7ae8cd2a1fe34eece4ff3e2",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. 0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "21fcd954488be7c0c83214b261d68eb2da7e3918d33dfe867f68c0136fc66afd",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
@@ -2352,8 +2352,8 @@
     },
     "plugins/antigravity/measured-quality/skills/verify-claims/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-quality/skills/verify-claims/references/continuity-example.md": {
       "before_sha256": null,
@@ -2987,8 +2987,8 @@
     },
     "plugins/antigravity/measured-stacks/skills/stack-gcp-data/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-stacks/skills/stack-gcp-data/references/pipelines.md": {
       "before_sha256": null,
@@ -3067,8 +3067,8 @@
     },
     "plugins/antigravity/measured-stacks/skills/stack-postgresql-sql/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-stacks/skills/stack-postgresql-sql/references/checks.md": {
       "before_sha256": null,
@@ -3112,8 +3112,8 @@
     },
     "plugins/antigravity/measured-stacks/skills/stack-swift-swiftui/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-stacks/skills/stack-swift-swiftui/references/adaptive-layout.md": {
       "before_sha256": null,
@@ -3187,8 +3187,8 @@
     },
     "plugins/antigravity/measured-stacks/skills/stack-swift-swiftui/references/swiftui-performance.md": {
       "before_sha256": null,
-      "after_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-stacks/skills/stack-swift-swiftui/references/swiftui.md": {
       "before_sha256": null,
@@ -3362,8 +3362,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "5b90ad8a00d77846b31632b633039793d80f97fc316d8d932333ef6dc604fdc5",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "035f60883bc4353c04d3dfb291a3bbb68f0781c623640885ecda91ab26a761ca",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-workflows/skills/design-module-interface/LICENSE": {
       "before_sha256": null,
@@ -3372,8 +3372,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/design-module-interface/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-workflows/skills/design-web-motion/LICENSE": {
       "before_sha256": null,
@@ -3432,8 +3432,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/explain-codebase/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-workflows/skills/frame-problem/LICENSE": {
       "before_sha256": null,
@@ -3482,8 +3482,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/plan-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/antigravity/measured-workflows/skills/plan-change/references/decision-map.md": {
       "before_sha256": null,
@@ -4647,8 +4647,8 @@
     },
     "plugins/claude/measured-quality/skills/verify-claims/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-quality/skills/verify-claims/references/continuity-example.md": {
       "before_sha256": null,
@@ -5437,8 +5437,8 @@
     },
     "plugins/claude/measured-stacks/skills/stack-gcp-data/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-stacks/skills/stack-gcp-data/references/pipelines.md": {
       "before_sha256": null,
@@ -5517,8 +5517,8 @@
     },
     "plugins/claude/measured-stacks/skills/stack-postgresql-sql/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-stacks/skills/stack-postgresql-sql/references/checks.md": {
       "before_sha256": null,
@@ -5562,8 +5562,8 @@
     },
     "plugins/claude/measured-stacks/skills/stack-swift-swiftui/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-stacks/skills/stack-swift-swiftui/references/adaptive-layout.md": {
       "before_sha256": null,
@@ -5637,8 +5637,8 @@
     },
     "plugins/claude/measured-stacks/skills/stack-swift-swiftui/references/swiftui-performance.md": {
       "before_sha256": null,
-      "after_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-stacks/skills/stack-swift-swiftui/references/swiftui.md": {
       "before_sha256": null,
@@ -5892,8 +5892,8 @@
     },
     "plugins/claude/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "5b90ad8a00d77846b31632b633039793d80f97fc316d8d932333ef6dc604fdc5",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "035f60883bc4353c04d3dfb291a3bbb68f0781c623640885ecda91ab26a761ca",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -5927,8 +5927,8 @@
     },
     "plugins/claude/measured-workflows/skills/design-module-interface/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-workflows/skills/design-web-motion/LICENSE": {
       "before_sha256": null,
@@ -6007,8 +6007,8 @@
     },
     "plugins/claude/measured-workflows/skills/explain-codebase/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-workflows/skills/finish-branch/LICENSE": {
       "before_sha256": null,
@@ -6097,8 +6097,8 @@
     },
     "plugins/claude/measured-workflows/skills/plan-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/claude/measured-workflows/skills/plan-change/references/decision-map.md": {
       "before_sha256": null,
@@ -7747,8 +7747,8 @@
     },
     "plugins/codex/measured-quality/skills/verify-claims/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-quality/skills/verify-claims/agents/openai.yaml": {
       "before_sha256": null,
@@ -8742,8 +8742,8 @@
     },
     "plugins/codex/measured-stacks/skills/stack-gcp-data/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-stacks/skills/stack-gcp-data/agents/openai.yaml": {
       "before_sha256": null,
@@ -8847,8 +8847,8 @@
     },
     "plugins/codex/measured-stacks/skills/stack-postgresql-sql/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-stacks/skills/stack-postgresql-sql/agents/openai.yaml": {
       "before_sha256": null,
@@ -8907,8 +8907,8 @@
     },
     "plugins/codex/measured-stacks/skills/stack-swift-swiftui/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-stacks/skills/stack-swift-swiftui/agents/openai.yaml": {
       "before_sha256": null,
@@ -8987,8 +8987,8 @@
     },
     "plugins/codex/measured-stacks/skills/stack-swift-swiftui/references/swiftui-performance.md": {
       "before_sha256": null,
-      "after_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-stacks/skills/stack-swift-swiftui/references/swiftui.md": {
       "before_sha256": null,
@@ -9302,8 +9302,8 @@
     },
     "plugins/codex/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "5b90ad8a00d77846b31632b633039793d80f97fc316d8d932333ef6dc604fdc5",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "035f60883bc4353c04d3dfb291a3bbb68f0781c623640885ecda91ab26a761ca",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -9342,8 +9342,8 @@
     },
     "plugins/codex/measured-workflows/skills/design-module-interface/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-workflows/skills/design-module-interface/agents/openai.yaml": {
       "before_sha256": null,
@@ -9447,8 +9447,8 @@
     },
     "plugins/codex/measured-workflows/skills/explain-codebase/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-workflows/skills/explain-codebase/agents/openai.yaml": {
       "before_sha256": null,
@@ -9577,8 +9577,8 @@
     },
     "plugins/codex/measured-workflows/skills/plan-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "plugins/codex/measured-workflows/skills/plan-change/agents/openai.yaml": {
       "before_sha256": null,
@@ -10137,8 +10137,8 @@
     },
     "skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "5b90ad8a00d77846b31632b633039793d80f97fc316d8d932333ef6dc604fdc5",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended."
+      "after_sha256": "035f60883bc4353c04d3dfb291a3bbb68f0781c623640885ecda91ab26a761ca",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
     "skills/claim-verification/SKILL.md": {
       "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
@@ -12543,6 +12543,126 @@
     "tests/test_workflow_depth.py": {
       "before_sha256": null,
       "after_sha256": "aff6b658654eb510bd813738e5e106090398e5508f317ccef00af6eafb75e2ce",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-quality/skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-stacks/skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-stacks/skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-stacks/skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-workflows/skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-workflows/skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-workflows/skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/antigravity/measured-workflows/skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-quality/skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-stacks/skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-stacks/skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-stacks/skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-workflows/skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-workflows/skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-workflows/skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/claude/measured-workflows/skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-quality/skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-stacks/skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-stacks/skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-stacks/skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-workflows/skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-workflows/skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-workflows/skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
+    },
+    "plugins/codex/measured-workflows/skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     }
   },
