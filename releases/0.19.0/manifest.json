@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "87b9741ba3dc8133974bd0ba38b74338fad9ead5",
+  "source_commit": "d12559f1f4fb798fc81c1dc697088673ed03f0aa",
   "created_on": "2026-10-28",
   "artifacts": [
     {
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "86b027f29a710711324db625802ed5f75cc40ae701f62857ada3c3826ff7b5fd"
+      "sha256": "d24073ad6ca7e47725d4905987b781d72d68d1d1201a6252a5eace94f720d677"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "cc10a7eb96eea9025c9c5980ca802e261180b621c8f2aab7c9fafc95d37eefae"
+      "sha256": "d536b0a779d64c2403162b319894e1f67a4e40b7909771f876b460dfc976a71b"
     },
     {
       "kind": "file",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "1143fac643c22561b75d1c39a9522fbff451c878e357594e3188e19ba94959ee"
+      "sha256": "607711e17dda35612d142f72fc6385c4cb7888923ab3454de985ca56635e26cb"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "23ac35ccca8a85d14d0b4649a40917bc10d5fa0776645d6bddc4df5985411e37"
+      "sha256": "f6b7c51810fd39f3bd169e144aa3d88f89050f0488ab5ca4a81e9d79ae348010"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "ec923c75513512e3e0e40634654180c9dd0b513000a4a390feff877a6c717f4a"
+      "sha256": "175a061228c09b37144d3d5b45d7a8bf300252a0d53209c53d04b5b6087d95c6"
     },
     {
       "kind": "file",
