@@ -11,7 +11,25 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 303 regression tests.
+Current test suite: 311 regression tests.
+
+## October 28: workflow depth within the 0.19 preview
+
+Four new task routes and focused references retain 90 skills, four packs and all
+17 explicit-only exclusions. The original rename guarantee is bound to checkpoint
+62af7d1; separate before/after hashes cover intentional canonical improvements.
+The first full run exposed historical source-pin tests and suite-size expectations
+that still assumed the older inventory. Historical closeout tests now read their
+recorded source revision; a separate check requires exactly five reviewed source
+additions and unchanged prior pins. Old receipts and tamper cases remain intact.
+
+Two package generations produced identical checksums for 90 archives. Available
+format checks accepted all 90 canonical skills and four packs on each of Claude
+and Antigravity. Standalone skills-ref and a separate Codex plugin validator remain
+unavailable. These checks do not demonstrate loading or useful behavior. The 24
+new scenarios, original human exercise and five additional task cards are prepared,
+not run. Final deterministic/unit results and exact revisions belong to the draft
+PR receipt. No installation, model trial, billing change or release occurred.
 
 ## October 28: separate 0.19 discovery preview
 

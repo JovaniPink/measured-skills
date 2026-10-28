@@ -678,6 +678,13 @@ class CatalogTests(unittest.TestCase):
             'https://experienceleague.adobe.com/en/docs/experience-manager',
             'https://go.dev/doc/',
         })
+        expected.update({
+            'https://martinfowler.com/bliki/DefinitionOfRefactoring.html',
+            'https://nextjs.org/docs/app/guides/upgrading/version-16',
+            'https://www.postgresql.org/docs/18/sql-explain.html',
+            'https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md',
+            'https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md',
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():

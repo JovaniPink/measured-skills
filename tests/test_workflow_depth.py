@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import subprocess
 import tempfile
 import unittest
 
@@ -41,6 +42,22 @@ class WorkflowDepthTests(unittest.TestCase):
                         self.assertEqual(path.read_bytes(), (dest / name / 'references' / path.name).read_bytes())
                     for relative in re.findall(r'\]\((references/[^)]+)\)', (dest / name / 'SKILL.md').read_text()):
                         self.assertTrue((dest / name / relative).is_file(), relative)
+
+    def test_new_source_pins_extend_without_changing_existing_sources(self) -> None:
+        before = json.loads(subprocess.check_output(
+            ['git', 'show', '62af7d15431c9b3e653523888cd574b7319d7171:catalog/upstream-pins.json'], cwd=ROOT))
+        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        added = json.loads((ROOT / 'docs/audits/workflow-depth-sources-2026-10-28.json').read_text())
+        expected = {r['source_url']: r for r in before['sources']}
+        self.assertEqual(5, len(added['sources']))
+        for row in added['sources']:
+            self.assertNotIn(row['url'], expected)
+            self.assertEqual(2, row['identical_retrievals'])
+            self.assertRegex(row['sha256'], r'^[0-9a-f]{64}$')
+            expected[row['url']] = dict(source_url=row['url'], marker_kind='content-sha256', marker_value=row['sha256'])
+        self.assertEqual(expected, {r['source_url']: r for r in current['sources']})
+        self.assertEqual({k: v for k, v in before.items() if k != 'sources'},
+                         {k: v for k, v in current.items() if k != 'sources'})
 
     def test_scenario_inventory_has_distinct_evidence_cases(self) -> None:
         data = json.loads((ROOT / 'evals/workflow-depth/cases.json').read_text())

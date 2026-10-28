@@ -19,7 +19,10 @@ SWIFT = 'https://www.swift.org/swift-evolution/'
 class OpenAISwiftSourceReviewTests(unittest.TestCase):
     def setUp(self) -> None:
         self.ledger = json.loads((ROOT / 'docs/audits/openai-swift-source-review-2026-10-26.json').read_text())
-        self.pins = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        # Preserve the exact two-hold closeout; later additions have separate coverage.
+        self.pin_bytes = subprocess.check_output(
+            ['git', 'show', REVIEWED_SOURCE + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.pins = json.loads(self.pin_bytes)
         self.before = json.loads(subprocess.check_output(
             ['git', 'show', BASE + ':catalog/upstream-pins.json'], cwd=ROOT))
 
@@ -103,7 +106,7 @@ class OpenAISwiftSourceReviewTests(unittest.TestCase):
         payload = (ROOT / closeout['path']).read_bytes()
         self.assertEqual(closeout['sha256'], hashlib.sha256(payload).hexdigest())
         self.assertEqual(closeout['pins_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+                         hashlib.sha256(self.pin_bytes).hexdigest())
         report = json.loads(payload)
         self.assertTrue(report['online'])
         self.assertEqual(64, len(report['records']))
