@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review Next.js caching and access"
+  short_description: "Reviews Next.js cache and authorization"
+  default_prompt: "Use $measured-stacks:review-nextjs-cache-auth for this task: Reviews Next.js cache and authorization when user data leaks across requests, invalidation is unclear, or server mutations need checks; excludes unrelated UI and authentication installation."
+policy:
+  allow_implicit_invocation: true

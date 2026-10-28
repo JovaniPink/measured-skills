@@ -1,14 +1,67 @@
 # Validation Evidence
 
-Current refinement inventory: 88 canonical skills in 11 packs. The October 20
-candidate adds offline cases and authored guidance; validation receipts for this
-revision are recorded after checks complete. Earlier counts below are historical.
+Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
+
+
+Current preview inventory: 90 canonical skills in four packs. The 0.19 discovery
+and identity migration retains the 0.18 candidate as historical source. Validation
+results for this change are recorded separately; earlier counts below are historical.
 
 See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 292 regression tests.
+Current test suite: 312 regression tests.
+
+## October 28: action-specific availability
+
+The chooser now derives each action's package, invocation policy, core-profile
+membership and request path for the selected client. Static and interactive views
+share these records. The taxonomy separates observed use, repeatable acceptance
+and comparative benefit; all maturity labels remain candidate.
+
+The first full unit run found a stale suite-size receipt (311 versus 312), which
+is corrected here. Deterministic validation, strict typing, Ruff, workflow checks,
+all 90 bundled skill format checks and four Claude strict plugin checks passed.
+Two archive builds matched. Standalone skills-ref and a separate Codex plugin
+validator remain unavailable. The human exercise and client trials remain unrun.
+Final suite and hosted results must be read with the draft's exact revision.
+
+## October 28: workflow depth within the 0.19 preview
+
+Four new task routes and focused references retain 90 skills, four packs and all
+17 explicit-only exclusions. The original rename guarantee is bound to checkpoint
+62af7d1; separate before/after hashes cover intentional canonical improvements.
+The first full run exposed historical source-pin tests and suite-size expectations
+that still assumed the older inventory. Historical closeout tests now read their
+recorded source revision; a separate check requires exactly five reviewed source
+additions and unchanged prior pins. Old receipts and tamper cases remain intact.
+
+Two package generations produced identical checksums for 90 archives. Available
+format checks accepted all 90 canonical skills and four packs on each of Claude
+and Antigravity. Standalone skills-ref and a separate Codex plugin validator remain
+unavailable. These checks do not demonstrate loading or useful behavior. The 24
+new scenarios, original human exercise and five additional task cards are prepared,
+not run. Final deterministic/unit results and exact revisions belong to the draft
+PR receipt. No installation, model trial, billing change or release occurred.
+
+## October 28: separate 0.19 discovery preview
+
+The 88 existing capabilities migrate once into four packs; chooser and motion
+design bring the total to 90. A mechanical contract comparison accounted for all
+162 existing Markdown bodies under identifier substitution. All 17 explicit-only
+controls remain. Two package generations produced identical checksums for all
+90 archives; discovery pins its committed input files and hashes.
+
+Codex's bundled skill format validator accepted 90 skills. Claude Code 2.1.311 and
+Antigravity 1.4.7 strict native validation accepted all four respective packs.
+Standalone skills-ref is unavailable on PATH; a standalone Codex plugin validator
+is not available in this environment. These are format checks, not loading or
+behavior observations. No installation or model trial ran.
+
+Final deterministic and unit results are recorded with the source/manifest heads
+in the draft PR. The prepared human usability exercise remains unrun. Historical
+0.18 receipts, including failures and scoped originality acceptance, remain exact.
 
 ## October 27 completed output-contract diagnostic
 

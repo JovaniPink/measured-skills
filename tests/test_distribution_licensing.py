@@ -38,11 +38,11 @@ class DistributionLicensingTests(unittest.TestCase):
         for client in ('codex', 'claude', 'antigravity'):
             with self.subTest(client=client), tempfile.TemporaryDirectory() as raw:
                 output = Path(raw).resolve() / 'skills'
-                export_selected.export(output, client, ['claim-verification'])
-                self.assertTrue((output / 'claim-verification/LICENSE').is_file())
-                self.assertEqual(notice, (output / 'claim-verification/LICENSE').read_bytes())
+                export_selected.export(output, client, ['verify-claims'])
+                self.assertTrue((output / 'verify-claims/LICENSE').is_file())
+                self.assertEqual(notice, (output / 'verify-claims/LICENSE').read_bytes())
                 receipt = json.loads((output / 'export-manifest.json').read_text())
-                self.assertEqual(hashlib.sha256(notice).hexdigest(), receipt['files']['claim-verification/LICENSE'])
+                self.assertEqual(hashlib.sha256(notice).hexdigest(), receipt['files']['verify-claims/LICENSE'])
 
     def test_scoped_disposition_binds_inventory_without_accepting_it(self) -> None:
         import subprocess
@@ -55,7 +55,7 @@ class DistributionLicensingTests(unittest.TestCase):
         self.assertEqual((33, 244, 87), (repair['generated_pack_notices'], repair['generated_skill_notices'], repair['upload_archives']))
 
         self.assertEqual({'status': 'pending', 'accepted_by': None, 'accepted_on': None, 'accepted_revision': None}, audit['maintainer_decision'])
-        profile = next(r for r in json.loads((ROOT / 'catalog/profiles.json').read_text())['profiles'] if r['id'] == 'daily-engineering-experimental')
+        profile = next(r for r in json.loads(subprocess.check_output(['git', 'show', accepted['accepted_revision'] + ':catalog/profiles.json'], cwd=ROOT))['profiles'] if r['id'] == 'daily-engineering-experimental')
         selected = set(profile['skills']) | {'claim-verification', 'cross-stack-quality-gates', 'prelaunch-readiness', 'publish-change-safely'}
         self.assertEqual(14, len(selected))
         self.assertEqual(selected, {r['skill'] for r in audit['skills']})
@@ -113,16 +113,16 @@ class DistributionLicensingTests(unittest.TestCase):
         notice = (ROOT / 'LICENSE').read_bytes()
         with tempfile.TemporaryDirectory() as raw:
             output = Path(raw).resolve() / 'preview'
-            build(output, ['claim-verification'])
+            build(output, ['verify-claims'])
             receipt = json.loads((output / 'bundle.json').read_text())
-            for relative in ('LICENSE', 'skills/claim-verification/LICENSE'):
+            for relative in ('LICENSE', 'skills/verify-claims/LICENSE'):
                 path = output / 'plugin' / relative
                 self.assertTrue(path.is_file(), str(path))
                 self.assertEqual(notice, path.read_bytes())
                 self.assertEqual(hashlib.sha256(notice).hexdigest(), receipt['plugin_sha256'][relative])
 
     def test_archive_validation_rejects_coordinated_notice_loss(self) -> None:
-        skill = 'claim-verification'
+        skill = 'verify-claims'
         metadata = read_skill_metadata(ROOT / 'skills' / skill)
         source = ROOT / 'plugins/claude' / metadata['plugin'] / 'skills' / skill
         for replacement in (None, b'MIT metadata without the owned notice.\n'):
@@ -138,7 +138,7 @@ class DistributionLicensingTests(unittest.TestCase):
                     (target / 'LICENSE').write_bytes(replacement)
                 packages = root / 'dist/claude-ai'
                 packages.mkdir(parents=True)
-                archive_path = packages / (skill + '-0.18.0.zip')
+                archive_path = packages / (skill + '-0.19.0.zip')
                 with zipfile.ZipFile(archive_path, 'w') as archive:
                     for item in target.rglob('*'):
                         if item.is_file():

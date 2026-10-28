@@ -133,8 +133,9 @@ class ExpressionDispositionTests(unittest.TestCase):
     def test_new_skills_are_separate_from_accepted_history(self) -> None:
         historical = {r['skill'] for r in self.audit['skills']}
         current = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
-        additions = set(current) - historical
-        self.assertEqual({'engineering-prompt-review'}, additions)
+        mapping = {r['old_id']: r['new_id'] for r in json.loads((ROOT / 'catalog/migrations/0.18-to-0.19.json').read_text())['entries']}
+        additions = set(current) - {mapping[n] for n in historical}
+        self.assertEqual({'review-engineering-prompt', 'choose-workflow', 'design-web-motion'}, additions)
         delta = json.loads((ROOT / 'docs/audits/post-acceptance-delta-2026-10-20.json').read_text())
         self.assertFalse(delta['new_maintainer_acceptance'])
         for name in additions:

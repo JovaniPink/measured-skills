@@ -46,13 +46,13 @@ class AntigravityBundleTests(unittest.TestCase):
     def test_focused_bundle_and_deterministic_output(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             first, second = Path(temporary) / "first", Path(temporary) / "second"
-            build(first, ["claim-verification"])
-            build(second, ["claim-verification"])
+            build(first, ["verify-claims"])
+            build(second, ["verify-claims"])
             self.assertEqual(directory_hashes(first), directory_hashes(second))
 
     def test_unknown_and_duplicate_selection_fail_without_writes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
-            for selected in (["unknown"], ["claim-verification"] * 2):
+            for selected in (["unknown"], ["verify-claims"] * 2):
                 target = Path(temporary) / "candidate"
                 with self.assertRaises(ValueError):
                     build(target, selected)
@@ -62,7 +62,7 @@ class AntigravityBundleTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "candidate"
             with self.assertRaisesRegex(ValueError, "explicit-only"):
-                build(target, ["publish-change-safely"])
+                build(target, ["publish-change"])
             self.assertFalse(target.exists())
 
     def test_existing_output_is_never_overwritten(self) -> None:

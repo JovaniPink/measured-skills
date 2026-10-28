@@ -1,7 +1,7 @@
 {
   "$schema": "./roadmap-schema.json",
   "roadmap_version": 1,
-  "updated_on": "2026-10-07",
+  "updated_on": "2026-10-28",
   "tracks": [
     {
       "id": "engineering-lifecycle",
@@ -202,15 +202,15 @@
     {
       "id": "agent-platform-foundations",
       "target_release": "v0.9",
-      "plugin": "jovanipink-agent-platforms",
+      "plugin": "measured-quality",
       "status": "incubating",
       "skills": [
-        "google-adk-engineering-profile",
-        "agent-context-state-memory-design",
-        "agent-tool-action-boundary-review",
-        "agent-protocol-interoperability-review",
-        "agentic-system-security-review",
-        "retrieval-grounding-quality-review"
+        "stack-google-adk",
+        "design-agent-memory",
+        "review-agent-tools",
+        "review-agent-protocols",
+        "review-agent-security",
+        "review-retrieval-grounding"
       ],
       "entry_criteria": [
         "each workflow is independently authored from current primary platform, protocol, evaluation, and security authorities",
@@ -218,16 +218,17 @@
         "routing separates application security, skill security, agentic-system security, general evaluation, and framework-specific composition",
         "every skill has taxonomy, provenance, positive, near-miss, safety, output-quality, baseline, and focused-reference evidence",
         "generated artifacts and small recipes pass discovery-budget, security, originality, repository-independence, and deterministic checks",
-        "defer proposed trajectory, grounding and environmental-outcome evaluation refinements until independent grader and native evidence review; no release is assigned"
+        "defer proposed trajectory, grounding and environmental-outcome evaluation refinements until independent grader and native evidence review; no release is assigned",
+        "2026-10-28 routing note: this historical track groups six capabilities; current ADK guidance belongs to measured-stacks and the other five belong to measured-quality. Track status is not a new release claim."
       ]
     },
     {
       "id": "web-journey-verification",
-      "target_release": "v0.19",
-      "plugin": "measured-nextjs-workflows",
-      "status": "planned",
+      "target_release": "unassigned",
+      "plugin": "measured-stacks",
+      "status": "deferred",
       "skills": [
-        "web-journey-verification"
+        "verify-web-journey"
       ],
       "entry_criteria": [
         "the workflow is independently authored from current primary browser-automation and web-platform documentation pinned in provenance",
@@ -236,16 +237,17 @@
         "an acceptance fixture fails when the application never reaches the expected state, and a passing run whose assertions never reach the success state is rejected",
         "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
         "generated artifacts pass originality, repository-independence, security, determinism, package-boundary, and client-observation checks",
-        "include authenticated role/record context, durable refusal, reload recovery and current artifact identity without treating API-only checks as rendered-browser evidence"
+        "include authenticated role/record context, durable refusal, reload recovery and current artifact identity without treating API-only checks as rendered-browser evidence",
+        "2026-10-28 decision: defer the former 0.19 commitment to an unassigned follow-up; this increment retains 90 skills. See docs/workflow-depth-0.19.md."
       ]
     },
     {
       "id": "ci-workflow-review",
-      "target_release": "v0.19",
-      "plugin": "measured-engineering-review",
-      "status": "planned",
+      "target_release": "unassigned",
+      "plugin": "measured-quality",
+      "status": "deferred",
       "skills": [
-        "ci-workflow-review"
+        "review-ci-workflow"
       ],
       "entry_criteria": [
         "the workflow is independently authored from current primary CI platform documentation pinned in provenance",
@@ -254,13 +256,14 @@
         "an acceptance fixture contains a deliberately broken job dependency or unsafe trigger that the review must find, and a clean workflow produces no invented finding",
         "positive, near-miss, safety, output-quality, and baseline evaluations pass and any regression is reported",
         "generated artifacts pass originality, repository-independence, security, determinism, and package-boundary checks",
-        "review permissions, fork/trusted triggers, reusable inputs, caches and combined release compatibility; green component jobs alone cannot establish release readiness"
+        "review permissions, fork/trusted triggers, reusable inputs, caches and combined release compatibility; green component jobs alone cannot establish release readiness",
+        "2026-10-28 decision: defer the former 0.19 commitment to an unassigned follow-up; this increment retains 90 skills. See docs/workflow-depth-0.19.md."
       ]
     },
     {
       "id": "firestore-engineering-profile",
       "target_release": "unassigned",
-      "plugin": "measured-stack-profiles",
+      "plugin": "measured-stacks",
       "status": "planned",
       "skills": [
         "firestore-engineering-profile"
@@ -275,7 +278,7 @@
     {
       "id": "selected-engineering-learning",
       "target_release": "unassigned",
-      "plugin": "measured-reasoning",
+      "plugin": "measured-workflows",
       "status": "deferred",
       "skills": [
         "engineering-learning-workflow"

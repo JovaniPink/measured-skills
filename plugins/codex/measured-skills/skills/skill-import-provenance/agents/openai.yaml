@@ -1,6 +1,0 @@
-interface:
-  display_name: "Skill Import Provenance"
-  short_description: "Reviews an owned skill transfer"
-  default_prompt: "Use $measured-skills:skill-import-provenance for this task: Reviews an owned skill transfer when explicitly asked to import it; checks ownership, license, exact source, and public boundaries before any copy or installation."
-policy:
-  allow_implicit_invocation: false

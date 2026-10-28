@@ -1,0 +1,6 @@
+interface:
+  display_name: "Coordinate authorized agents"
+  short_description: "Coordinates bounded delegated work"
+  default_prompt: "Use $measured-workflows:coordinate-agents for this task: Coordinates delegated work when explicitly asked for independent workers or a bounded reviewer; defines ownership, evidence, and budgets without duplicating edits or delegating irreversible decisions."
+policy:
+  allow_implicit_invocation: false

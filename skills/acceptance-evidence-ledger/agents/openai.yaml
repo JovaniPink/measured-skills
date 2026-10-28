@@ -1,6 +1,0 @@
-interface:
-  display_name: "Acceptance Evidence Ledger"
-  short_description: "Creates a completion ledger"
-  default_prompt: "Use $acceptance-evidence-ledger for this task: Creates a completion ledger when explicitly asked to track acceptance criteria and current evidence; preserves blocked and abandoned requirements."
-policy:
-  allow_implicit_invocation: false

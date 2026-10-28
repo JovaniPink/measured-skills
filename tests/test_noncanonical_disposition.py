@@ -60,9 +60,14 @@ class NoncanonicalDispositionTests(unittest.TestCase):
             self.assertTrue(record['expression_and_license_review'], path)
             expected_current[path] = record['after_sha256']
         for path, expected in expected_current.items():
-            self.assertEqual(digest((ROOT / path).read_bytes()), expected, path)
+            if expected is None:
+                self.assertFalse((ROOT / path).exists(), path)
+            else:
+                self.assertEqual(digest((ROOT / path).read_bytes()), expected, path)
         self.assertEqual(set(paths) - {p for p in paths if p.startswith('skills/')}, set(audit['noncanonical_classes']))
-        known = set(expected_current) | set(audit['payload_exclusions']) | {DELTA}
+        # The new manifest is a separately validated envelope, not part of its own source hash.
+        self.assertEqual(['releases/0.19.0/manifest.json'], delta['additional_payload_exclusions'])
+        known = set(expected_current) | set(audit['payload_exclusions']) | {DELTA, 'releases/0.19.0/manifest.json'}
         # Accepted decisions are separate envelopes, never retroactive edits to this proposal.
         current = set(git('ls-files').decode().splitlines())
         self.assertFalse(current - known, sorted(current - known))
@@ -79,7 +84,7 @@ class NoncanonicalDispositionTests(unittest.TestCase):
         self.assertEqual(payload, git('show', icon['creation_revision'] + ':' + icon['path']))
         self.assertEqual(11, len(icon['generated_copies']))
         for path in icon['generated_copies']:
-            self.assertEqual(payload, (ROOT / path).read_bytes())
+            self.assertEqual(payload, git('show', 'cd9ff2417a5b6ca468642fad2da179dbebd99cbd:' + path))
         self.assertEqual('not_executed_infrastructure_approval_failure', icon['retained_events'][0]['result'])
         self.assertTrue(any(r['result'] == 'retained_tool_reports_completion' for r in icon['retained_events']))
         for source, record in audit['preserved_packets'].items():

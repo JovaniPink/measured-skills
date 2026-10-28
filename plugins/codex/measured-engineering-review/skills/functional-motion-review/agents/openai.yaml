@@ -1,6 +1,0 @@
-interface:
-  display_name: "Functional Motion Review"
-  short_description: "Reviews motion"
-  default_prompt: "Use $measured-engineering-review:functional-motion-review for this task: Reviews motion when animations hide content, distract from a data story, or make sample data appear live; checks accessible presentation and evidence rather than routine styling."
-policy:
-  allow_implicit_invocation: true

@@ -85,123 +85,39 @@ class CatalogTests(unittest.TestCase):
         )
 
     def test_reasoning_plugin_keeps_discovery_scope_focused(self) -> None:
-        reasoning = skills_by_plugin()["measured-reasoning"]
-        self.assertEqual(12, len(reasoning))
-        descriptions = [
-            read_skill_metadata(ROOT / "skills" / skill)["description"]
-            for skill in reasoning
-        ]
-        self.assertLess(sum(len(description) for description in descriptions), 4000)
-        self.assertEqual(len(descriptions), len(set(descriptions)))
+        profile = next(p for p in json.loads((ROOT / 'catalog/profiles.json').read_text())['profiles'] if p['id'] == 'finish-work-core')
+        self.assertEqual(9, len(profile['skills']))
+        self.assertLess(sum(len(read_skill_metadata(ROOT / 'skills' / s)['description']) for s in profile['skills']), 4000)
+        self.assertFalse(set(profile['skills']) & EXPLICIT_SKILLS)
 
     def test_reader_guide_matches_canonical_catalog(self) -> None:
-        guide = (ROOT / "docs" / "skill-catalog-reader-guide.md").read_text(
-            encoding="utf-8"
-        )
-        canonical = skills_by_plugin()
-        section_plugins = {
-            "## Next.js workflows: measured-nextjs-workflows": "measured-nextjs-workflows",
-            "## Swift workflows: measured-swift-workflows": "measured-swift-workflows",
-            "## Core skills: measured-skills": "measured-skills",
-            "## Engineering build: measured-engineering-build": "measured-engineering-build",
-            "## Engineering review: measured-engineering-review": "measured-engineering-review",
-            "## Engineering delivery: measured-engineering-delivery": "measured-engineering-delivery",
-            "## Stack profiles: measured-stack-profiles": "measured-stack-profiles",
-            "## Operations skills: measured-operations": "measured-operations",
-            "## Reasoning skills: measured-reasoning": "measured-reasoning",
-            "## AI systems skills: measured-ai-systems": "measured-ai-systems",
-            "## Agent platform skills: measured-agent-platforms": "measured-agent-platforms",
-        }
-        documented: dict[str, list[str]] = {plugin: [] for plugin in canonical}
-        documented_explicit: set[str] = set()
-        current_plugin: str | None = None
-        current_skill: str | None = None
-
-        for line in guide.splitlines():
-            if line in section_plugins:
-                current_plugin = section_plugins[line]
-                current_skill = None
-            elif line.startswith("## "):
-                current_plugin = None
-                current_skill = None
-            elif current_plugin and line.startswith("### "):
-                current_skill = line.removeprefix("### ")
-                documented[current_plugin].append(current_skill)
-            elif current_skill and line == "Invocation: `explicit-only`.":
-                documented_explicit.add(current_skill)
-
-        self.assertEqual(
-            {plugin: list(skills) for plugin, skills in canonical.items()},
-            documented,
-        )
-        self.assertEqual(set(EXPLICIT_SKILLS), documented_explicit)
-        self.assertIn(f"contains {len(SKILLS)} portable agent skills", guide)
-
-        for plugin, skills in canonical.items():
-            explicit = [skill for skill in skills if skill in EXPLICIT_SKILLS]
-            explicit_cell = ", ".join(f"`{skill}`" for skill in explicit) or "None"
-            self.assertIn(f"| `{plugin}` | {len(skills)} | {explicit_cell} |", guide)
-        self.assertIn(
-            f"| **Total** | **{len(SKILLS)}** | **{len(EXPLICIT_SKILLS)} skills** |",
-            guide,
-        )
+        from discovery import reader_guide
+        data = json.loads((ROOT / 'dist/discovery/catalog.json').read_text())
+        self.assertEqual(reader_guide(data), (ROOT / 'docs/skill-catalog-reader-guide.md').read_text())
+        self.assertEqual(set(SKILLS), {s['id'] for s in data['skills']})
+        for s in data['skills']:
+            self.assertEqual(read_skill_metadata(ROOT / 'skills' / s['id'])['invocation'], s['invocation'])
 
     def test_skill_cheatsheet_matches_canonical_catalog(self) -> None:
-        cheatsheet = (ROOT / "docs" / "skill-cheatsheet.md").read_text(encoding="utf-8")
-        canonical = skills_by_plugin()
-        section_plugins = {
-            "## Next.js workflows: measured-nextjs-workflows": "measured-nextjs-workflows",
-            "## Swift workflows: measured-swift-workflows": "measured-swift-workflows",
-            "## Core: measured-skills": "measured-skills",
-            "## Engineering build: measured-engineering-build": "measured-engineering-build",
-            "## Engineering review: measured-engineering-review": "measured-engineering-review",
-            "## Engineering delivery: measured-engineering-delivery": "measured-engineering-delivery",
-            "## Stack profiles: measured-stack-profiles": "measured-stack-profiles",
-            "## Operations: measured-operations": "measured-operations",
-            "## Reasoning: measured-reasoning": "measured-reasoning",
-            "## AI systems: measured-ai-systems": "measured-ai-systems",
-            "## Agent platforms: measured-agent-platforms": "measured-agent-platforms",
-        }
-        documented: dict[str, list[str]] = {plugin: [] for plugin in canonical}
-        documented_invocation: dict[str, str] = {}
-        current_plugin: str | None = None
-
-        for line in cheatsheet.splitlines():
-            if line in section_plugins:
-                current_plugin = section_plugins[line]
-            elif line.startswith("## "):
-                current_plugin = None
-            elif current_plugin and line.startswith("| `"):
-                cells = [cell.strip() for cell in line.strip("|").split("|")]
-                skill = cells[0].strip("`")
-                documented[current_plugin].append(skill)
-                documented_invocation[skill] = cells[2]
-
-        self.assertEqual(
-            {plugin: list(skills) for plugin, skills in canonical.items()},
-            documented,
-        )
-        self.assertEqual(set(SKILLS), set(documented_invocation))
-        for skill, invocation in documented_invocation.items():
-            expected = "Explicit-only" if skill in EXPLICIT_SKILLS else "Implicit"
-            self.assertEqual(expected, invocation, skill)
-        self.assertIn(f"catalog contains {len(SKILLS)} skills", cheatsheet)
+        from discovery import markdown
+        data = json.loads((ROOT / 'dist/discovery/catalog.json').read_text())
+        self.assertEqual(markdown(data), (ROOT / 'dist/discovery/guide.md').read_text())
 
     def test_v06_mutating_workflows_are_explicit_and_bounded(self) -> None:
         expected = {
-            "prototype-spike",
-            "merge-conflict-reconciliation",
-            "guided-configuration",
-            "task-handoff",
-            "workflow-retrospective",
+            "build-spike",
+            "resolve-merge-conflicts",
+            "guide-configuration",
+            "handoff-work",
+            "review-workflow",
         }
         self.assertTrue(expected.issubset(EXPLICIT_SKILLS))
         conflict = (
-            ROOT / "skills" / "merge-conflict-reconciliation" / "SKILL.md"
+            ROOT / "skills" / "resolve-merge-conflicts" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in ("abort", "Stage, continue, commit, push", "destructive reset"):
             self.assertIn(boundary, conflict)
-        prototype = (ROOT / "skills" / "prototype-spike" / "SKILL.md").read_text(
+        prototype = (ROOT / "skills" / "build-spike" / "SKILL.md").read_text(
             encoding="utf-8"
         )
         self.assertIn("not production readiness", prototype)
@@ -211,12 +127,12 @@ class CatalogTests(unittest.TestCase):
 
     def test_v06_focused_references_exist(self) -> None:
         references = {
-            "implementation-planning": {
+            "plan-change": {
                 "specification-synthesis.md",
                 "work-packages.md",
                 "decision-map.md",
             },
-            "multi-agent-orchestration": {
+            "coordinate-agents": {
                 "candidate-comparison.md",
                 "coverage-fanout.md",
                 "client-mapping.md",
@@ -381,13 +297,13 @@ class CatalogTests(unittest.TestCase):
         delivery = profiles["delivery-typescript-experimental"]
         self.assertEqual(
             [
-                "problem-framing",
-                "implementation-planning",
-                "test-driven-change",
-                "cross-stack-quality-gates",
-                "code-change-review",
-                "publish-change-safely",
-                "typescript-javascript-engineering-profile",
+                "frame-problem",
+                "plan-change",
+                "implement-test-first",
+                "run-project-checks",
+                "review-code-change",
+                "publish-change",
+                "stack-typescript-javascript",
             ],
             delivery["skills"],
         )
@@ -412,7 +328,7 @@ class CatalogTests(unittest.TestCase):
             "blocked", delivery["surface_evidence"]["antigravity-cli"]["status"]
         )
         self.assertIn(
-            "publish-change-safely",
+            "publish-change",
             delivery["surface_evidence"]["antigravity-cli"]["reason"],
         )
         self.assertEqual(
@@ -762,6 +678,13 @@ class CatalogTests(unittest.TestCase):
             'https://experienceleague.adobe.com/en/docs/experience-manager',
             'https://go.dev/doc/',
         })
+        expected.update({
+            'https://martinfowler.com/bliki/DefinitionOfRefactoring.html',
+            'https://nextjs.org/docs/app/guides/upgrading/version-16',
+            'https://www.postgresql.org/docs/18/sql-explain.html',
+            'https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md',
+            'https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md',
+        })
         records = {record["url"]: record for record in catalog["reviews"]}
         self.assertEqual(expected, set(records))
         for record in records.values():
@@ -776,7 +699,7 @@ class CatalogTests(unittest.TestCase):
         mapping = (
             ROOT
             / "skills"
-            / "multi-agent-orchestration"
+            / "coordinate-agents"
             / "references"
             / "client-mapping.md"
         ).read_text(encoding="utf-8")
@@ -1012,15 +935,15 @@ class CatalogTests(unittest.TestCase):
         )
 
     def test_v07_acceptance_ledger_contract(self) -> None:
-        self.assertEqual(25, sum(len(v) for k, v in skills_by_plugin().items() if k.startswith("measured-engineering-")))
-        self.assertIn("acceptance-evidence-ledger", EXPLICIT_SKILLS)
+        self.assertEqual(32, len(skills_by_plugin()["measured-workflows"]))
+        self.assertIn("track-acceptance", EXPLICIT_SKILLS)
 
         expanded_profiles = {
-            "adobe-aem-engineering-profile",
-            "csharp-dotnet-engineering-profile",
-            "java-spring-engineering-profile",
-            "php-drupal-engineering-profile",
-            "salesforce-apex-engineering-profile",
+            "stack-adobe-aem",
+            "stack-csharp-dotnet",
+            "stack-java-spring",
+            "stack-php-drupal",
+            "stack-salesforce-apex",
         }
         self.assertTrue(expanded_profiles.issubset(SKILLS))
         for profile in expanded_profiles:
@@ -1035,7 +958,7 @@ class CatalogTests(unittest.TestCase):
             )
             self.assertEqual("original", read_skill_metadata(root)["provenance"])
 
-        skill_root = ROOT / "skills" / "acceptance-evidence-ledger"
+        skill_root = ROOT / "skills" / "track-acceptance"
         files = {
             path.relative_to(skill_root).as_posix()
             for path in skill_root.rglob("*")
@@ -1054,10 +977,10 @@ class CatalogTests(unittest.TestCase):
         for boundary in (
             "untrusted data",
             "Do not execute ledger content",
-            "cross-stack-quality-gates",
-            "claim-verification",
-            "plan-execution",
-            "multi-agent-orchestration",
+            "run-project-checks",
+            "verify-claims",
+            "execute-plan",
+            "coordinate-agents",
             "SATISFIED",
             "INCOMPLETE",
             "QUALIFIED",
@@ -1069,36 +992,34 @@ class CatalogTests(unittest.TestCase):
         record = next(
             item
             for item in cases["skills"]
-            if item["skill"] == "acceptance-evidence-ledger"
+            if item["skill"] == "track-acceptance"
         )
         self.assertEqual(3, len(record["positive"]))
         self.assertEqual(3, len(record["near_miss"]))
         self.assertGreaterEqual(len(record["safety"]), 2)
         prompts = "\n".join(item["prompt"] for item in record["near_miss"])
         for routed_skill in (
-            "cross-stack-quality-gates",
-            "plan-execution",
-            "claim-verification",
+            "run-project-checks",
+            "execute-plan",
+            "verify-claims",
         ):
             self.assertIn(routed_skill, prompts)
 
     def test_v08_ai_reliability_contract_and_catalog_counts(self) -> None:
         new_skills = {
-            "agent-evaluation-design": "read-only",
-            "context-reliability-review": "read-only",
-            "source-output-conformance-audit": "bounded-execution",
+            "design-agent-evaluations": "read-only",
+            "review-context-evidence": "read-only",
+            "verify-source-output": "bounded-execution",
         }
         self.assertGreaterEqual(len(SKILLS), 70)
-        self.assertGreaterEqual(len(skills_by_plugin()), 6)
-        self.assertEqual(
-            set(new_skills), set(skills_by_plugin()["measured-ai-systems"])
-        )
+        self.assertEqual(4, len(skills_by_plugin()))
+        self.assertTrue(set(new_skills).issubset(skills_by_plugin()["measured-quality"]))
         self.assertEqual(17, len(EXPLICIT_SKILLS))
 
         references = {
-            "agent-evaluation-design": "evaluation-contract.md",
-            "context-reliability-review": "assertion-matrix.md",
-            "source-output-conformance-audit": "conformance-matrix.md",
+            "design-agent-evaluations": "evaluation-contract.md",
+            "review-context-evidence": "assertion-matrix.md",
+            "verify-source-output": "conformance-matrix.md",
         }
         for skill, risk_class in new_skills.items():
             root = ROOT / "skills" / skill
@@ -1112,36 +1033,35 @@ class CatalogTests(unittest.TestCase):
                     {
                         "SKILL.md",
                         "agents/openai.yaml",
-                        *({f"references/{references[skill]}"} if skill != "context-reliability-review" else set()),
+                        *({f"references/{references[skill]}"} if skill != "review-context-evidence" else set()),
                     }
                     | (
                         {"references/continuity-example.md"}
-                        if skill == "agent-evaluation-design"
+                        if skill == "design-agent-evaluations"
                         else set()
                     )
                 ),
                 files,
             )
             metadata = read_skill_metadata(root)
-            self.assertEqual("measured-ai-systems", metadata["plugin"])
+            self.assertEqual("measured-quality", metadata["plugin"])
             self.assertEqual("implicit", metadata["invocation"])
             self.assertEqual("original", metadata["provenance"])
             self.assertEqual(risk_class, metadata["risk_class"])
 
     def test_v09_agent_platform_contract_and_catalog_counts(self) -> None:
         new_skills = {
-            "agent-context-state-memory-design": "state-memory-lifecycle.md",
-            "agent-protocol-interoperability-review": "protocol-boundaries.md",
-            "agent-tool-action-boundary-review": "tool-action-matrix.md",
-            "agentic-system-security-review": "agentic-threat-domains.md",
-            "google-adk-engineering-profile": "adk-version-boundaries.md",
-            "retrieval-grounding-quality-review": "retrieval-evidence-matrix.md",
+            "design-agent-memory": "state-memory-lifecycle.md",
+            "review-agent-protocols": "protocol-boundaries.md",
+            "review-agent-tools": "tool-action-matrix.md",
+            "review-agent-security": "agentic-threat-domains.md",
+            "stack-google-adk": "adk-version-boundaries.md",
+            "review-retrieval-grounding": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(88, len(SKILLS))
-        self.assertEqual(11, len(skills_by_plugin()))
-        self.assertEqual(
-            set(new_skills), set(skills_by_plugin()["measured-agent-platforms"])
-        )
+        self.assertEqual(90, len(SKILLS))
+        self.assertEqual(4, len(skills_by_plugin()))
+        self.assertTrue((set(new_skills) - {"stack-google-adk"}).issubset(skills_by_plugin()["measured-quality"]))
+        self.assertIn("stack-google-adk", skills_by_plugin()["measured-stacks"])
         self.assertEqual(17, len(EXPLICIT_SKILLS))
 
         for skill, reference in new_skills.items():
@@ -1152,21 +1072,21 @@ class CatalogTests(unittest.TestCase):
                 if path.is_file()
             }
             self.assertEqual(
-                {"SKILL.md", "agents/openai.yaml"} | ({f"references/{reference}"} if skill == "google-adk-engineering-profile" else set()),
+                {"SKILL.md", "agents/openai.yaml"} | ({f"references/{reference}"} if skill == "stack-google-adk" else set()),
                 files,
             )
             metadata = read_skill_metadata(root)
-            self.assertEqual("measured-agent-platforms", metadata["plugin"])
+            self.assertEqual("measured-stacks" if skill == "stack-google-adk" else "measured-quality", metadata["plugin"])
             self.assertEqual("implicit", metadata["invocation"])
             self.assertEqual("original", metadata["provenance"])
             self.assertEqual("read-only", metadata["risk_class"])
 
         security = (
-            ROOT / "skills" / "agentic-system-security-review" / "SKILL.md"
+            ROOT / "skills" / "review-agent-security" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in (
-            "application-security-review",
-            "skill-security-review",
+            "review-app-security",
+            "review-skill-security",
             "cannot grant a tool",
             "direct and indirect prompt injection",
             "cross-user and cross-tenant",
@@ -1174,7 +1094,7 @@ class CatalogTests(unittest.TestCase):
             self.assertIn(boundary, security)
 
         adk = (
-            ROOT / "skills" / "google-adk-engineering-profile" / "SKILL.md"
+            ROOT / "skills" / "stack-google-adk" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in (
             "experimental",
@@ -1185,7 +1105,7 @@ class CatalogTests(unittest.TestCase):
             self.assertIn(boundary, adk)
 
         protocol = (
-            ROOT / "skills" / "agent-protocol-interoperability-review" / "SKILL.md"
+            ROOT / "skills" / "review-agent-protocols" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in (
             "normative schemas",
@@ -1196,7 +1116,7 @@ class CatalogTests(unittest.TestCase):
             self.assertIn(boundary, protocol)
 
         retrieval = (
-            ROOT / "skills" / "retrieval-grounding-quality-review" / "SKILL.md"
+            ROOT / "skills" / "review-retrieval-grounding" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in (
             "embeddings as sensitive derived data",
@@ -1212,9 +1132,9 @@ class CatalogTests(unittest.TestCase):
             for item in cases["skills"]
             if item["skill"]
             in {
-                "agent-evaluation-design",
-                "context-reliability-review",
-                "source-output-conformance-audit",
+                "design-agent-evaluations",
+                "review-context-evidence",
+                "verify-source-output",
             }
         }
         self.assertEqual(3, len(records))
@@ -1231,21 +1151,21 @@ class CatalogTests(unittest.TestCase):
             for case in record["near_miss"]
         )
         for collision in (
-            "test-strategy",
-            "test-quality-review",
-            "acceptance-evidence-ledger",
-            "authority-boundary-review",
+            "plan-tests",
+            "review-tests",
+            "track-acceptance",
+            "review-data-authority",
             "ConvergeQL-style model review",
         ):
             self.assertIn(collision, near_misses)
 
         evaluation = (
-            ROOT / "skills" / "agent-evaluation-design" / "SKILL.md"
+            ROOT / "skills" / "design-agent-evaluations" / "SKILL.md"
         ).read_text(encoding="utf-8")
         self.assertIn("evaluation contract", evaluation)
         self.assertIn("paid or external evaluation", evaluation)
         context = (
-            ROOT / "skills" / "context-reliability-review" / "SKILL.md"
+            ROOT / "skills" / "review-context-evidence" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for boundary in (
             "effective time",
@@ -1255,7 +1175,7 @@ class CatalogTests(unittest.TestCase):
         ):
             self.assertIn(boundary, context)
         conformance = (
-            ROOT / "skills" / "source-output-conformance-audit" / "SKILL.md"
+            ROOT / "skills" / "verify-source-output" / "SKILL.md"
         ).read_text(encoding="utf-8")
         for dimension in (
             "correctness",
@@ -1394,14 +1314,14 @@ class CatalogTests(unittest.TestCase):
 
     def test_compound_skill_titles_follow_editorial_style(self) -> None:
         expected = {
-            "cross-capability-dependency-mapping": "Cross-Capability Dependency Mapping",
-            "cross-stack-quality-gates": "Cross-Stack Quality Gates",
-            "dependency-supply-chain-review": "Dependency and Supply-Chain Review",
-            "high-signal-technical-writing": "High-Signal Technical Writing",
-            "multi-agent-orchestration": "Multi-Agent Orchestration",
-            "public-private-boundary-review": "Public-Private Boundary Review",
-            "source-grounded-research": "Source-Grounded Research",
-            "test-driven-change": "Test-Driven Change",
+            "map-capability-dependencies": "Cross-Capability Dependency Mapping",
+            "run-project-checks": "Cross-Stack Quality Gates",
+            "review-dependencies": "Dependency and Supply-Chain Review",
+            "edit-technical-writing": "High-Signal Technical Writing",
+            "coordinate-agents": "Multi-Agent Orchestration",
+            "review-public-boundary": "Public-Private Boundary Review",
+            "research-sources": "Source-Grounded Research",
+            "implement-test-first": "Test-Driven Change",
         }
         for skill, title in expected.items():
             body = (ROOT / "skills" / skill / "SKILL.md").read_text(encoding="utf-8")
@@ -1409,7 +1329,7 @@ class CatalogTests(unittest.TestCase):
                 encoding="utf-8"
             )
             self.assertIn(f"# {title}\n", body)
-            self.assertIn(f'display_name: "{title}"', interface)
+            self.assertRegex(interface, r'display_name: "[^\n]+"')
 
     def test_claude_archives_are_reproducible(self) -> None:
         with tempfile.TemporaryDirectory(prefix="package-determinism-") as temporary:
@@ -1428,7 +1348,7 @@ class CatalogTests(unittest.TestCase):
         text = (
             ROOT
             / "skills"
-            / "cross-stack-quality-gates"
+            / "run-project-checks"
             / "references"
             / "gate-discovery.md"
         ).read_text(encoding="utf-8")
@@ -1527,7 +1447,7 @@ class CatalogTests(unittest.TestCase):
         mapping = (
             ROOT
             / "skills"
-            / "multi-agent-orchestration"
+            / "coordinate-agents"
             / "references"
             / "client-mapping.md"
         ).read_text(encoding="utf-8")

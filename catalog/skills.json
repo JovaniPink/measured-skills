@@ -1,107 +1,314 @@
 {
   "$schema": "./skills-schema.json",
-  "catalog_version": "0.18.0",
+  "catalog_version": "0.19.0",
   "skills": [
     {
-      "skill": "acceptance-evidence-ledger",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "evidence",
+      "skill": "address-review",
+      "plugin": "measured-workflows",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review",
+        "build",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-code-change",
+        "implement-test-first"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "align-on-decisions",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "discover",
+        "frame"
+      ],
+      "targets": [
+        "organization",
+        "repository"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "frame-problem",
+        "model-domain-vocabulary"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "analyze-incident",
+      "plugin": "measured-operations",
+      "capability_family": "operations",
+      "lifecycle_stages": [
+        "operate",
+        "learn"
+      ],
+      "targets": [
+        "service",
+        "organization"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "design-observability",
+        "learn-after-launch"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "assess-change-impact",
+      "plugin": "measured-workflows",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-code-change",
+        "review-api-compatibility"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "assess-worktree-isolation",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "design",
+        "build"
+      ],
+      "targets": [
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "plan-change",
+        "coordinate-agents"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "author-skill",
+      "plugin": "measured-workflows",
+      "capability_family": "ai-engineering",
+      "lifecycle_stages": [
+        "design",
+        "build",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "agent",
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-skill-security",
+        "design-agent-evaluations"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "build-spike",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "design",
+        "build",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "frame-problem",
+        "plan-tests"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "check-launch-readiness",
+      "plugin": "measured-quality",
+      "capability_family": "review",
       "lifecycle_stages": [
         "test",
         "review",
         "release"
       ],
       "targets": [
+        "service",
+        "publication"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-operational-readiness",
+        "verify-claims"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "choose-workflow",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "discover",
+        "design"
+      ],
+      "targets": [
         "repository",
-        "service"
+        "agent"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "plan-change",
+        "review-engineering-prompt"
+      ],
+      "conflicts_with": [
+        "plan-change"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "consolidate-findings",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review",
+        "release"
+      ],
+      "targets": [
+        "repository",
+        "code"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-code-change",
+        "review-app-security",
+        "review-skill-security"
+      ],
+      "conflicts_with": [
+        "run-project-checks"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "coordinate-agents",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "build",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "agent",
+        "repository"
       ],
       "risk_class": "bounded-execution",
       "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "claim-verification",
-        "cross-stack-quality-gates"
+        "plan-change",
+        "track-acceptance"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "accessibility-review",
-      "plugin": "measured-engineering-review",
-      "capability_family": "review",
+      "skill": "deliver-nextjs-feature",
+      "plugin": "measured-stacks",
+      "capability_family": "execution",
       "lifecycle_stages": [
-        "review",
+        "build",
         "test"
       ],
       "targets": [
         "code",
-        "service"
+        "repository",
+        "data"
       ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "test-strategy",
-        "code-change-review"
+        "stack-typescript-javascript",
+        "run-project-checks"
       ],
-      "conflicts_with": [],
+      "conflicts_with": [
+        "execute-plan"
+      ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "adobe-aem-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
+      "skill": "deliver-swiftui-feature",
+      "plugin": "measured-stacks",
+      "capability_family": "execution",
       "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
+        "build",
+        "test"
       ],
       "targets": [
         "code",
         "repository",
-        "service"
+        "data"
       ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "agent-context-state-memory-design",
-      "plugin": "measured-agent-platforms",
-      "capability_family": "ai-engineering",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "operate"
-      ],
-      "targets": [
-        "data",
-        "agent",
-        "model",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "context-reliability-review",
-        "retrieval-grounding-quality-review",
-        "agentic-system-security-review"
+        "stack-swift-swiftui",
+        "run-project-checks"
       ],
       "conflicts_with": [
-        "context-reliability-review"
+        "execute-plan"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "agent-evaluation-design",
-      "plugin": "measured-ai-systems",
+      "skill": "design-agent-evaluations",
+      "plugin": "measured-quality",
       "capability_family": "ai-engineering",
       "lifecycle_stages": [
         "design",
@@ -116,290 +323,254 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "context-reliability-review",
-        "test-strategy"
+        "review-context-evidence",
+        "plan-tests"
       ],
       "conflicts_with": [
-        "test-strategy"
+        "plan-tests"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "agent-protocol-interoperability-review",
-      "plugin": "measured-agent-platforms",
+      "skill": "design-agent-memory",
+      "plugin": "measured-quality",
       "capability_family": "ai-engineering",
       "lifecycle_stages": [
         "design",
         "review",
-        "release"
-      ],
-      "targets": [
-        "agent",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "api-contract-compatibility-review",
-        "agent-tool-action-boundary-review",
-        "agentic-system-security-review"
-      ],
-      "conflicts_with": [
-        "api-contract-compatibility-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "agent-tool-action-boundary-review",
-      "plugin": "measured-agent-platforms",
-      "capability_family": "ai-engineering",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "release",
         "operate"
       ],
       "targets": [
-        "agent",
-        "service",
-        "data"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "application-security-review",
-        "agentic-system-security-review",
-        "operational-readiness-review"
-      ],
-      "conflicts_with": [
-        "application-security-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "agentic-system-security-review",
-      "plugin": "measured-agent-platforms",
-      "capability_family": "ai-engineering",
-      "lifecycle_stages": [
-        "design",
-        "test",
-        "review",
-        "release",
-        "operate"
-      ],
-      "targets": [
+        "data",
         "agent",
         "model",
-        "service",
-        "data"
+        "service"
       ],
       "risk_class": "read-only",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "application-security-review",
-        "skill-security-review",
-        "dependency-supply-chain-review"
+        "review-context-evidence",
+        "review-retrieval-grounding",
+        "review-agent-security"
       ],
       "conflicts_with": [
-        "application-security-review",
-        "skill-security-review"
+        "review-context-evidence"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "alignment-interview",
-      "plugin": "measured-reasoning",
+      "skill": "design-module-interface",
+      "plugin": "measured-workflows",
       "capability_family": "planning",
       "lifecycle_stages": [
-        "discover",
-        "frame"
-      ],
-      "targets": [
-        "organization",
-        "repository"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "problem-framing",
-        "domain-vocabulary-modeling"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "api-contract-compatibility-review",
-      "plugin": "measured-engineering-review",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "release"
-      ],
-      "targets": [
-        "code",
-        "data",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "change-impact-analysis",
-        "test-strategy"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "application-security-review",
-      "plugin": "measured-engineering-review",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "dependency-supply-chain-review",
-        "operational-readiness-review"
-      ],
-      "conflicts_with": [
-        "skill-security-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "authority-boundary-review",
-      "plugin": "measured-skills",
-      "capability_family": "evidence",
-      "lifecycle_stages": [
-        "discover",
         "design",
         "review"
       ],
       "targets": [
-        "data",
+        "code",
         "service"
       ],
       "risk_class": "read-only",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "data-migration-readiness",
-        "data-authority-migration-ratification"
+        "model-domain-vocabulary",
+        "review-api-compatibility"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "design-observability",
+      "plugin": "measured-quality",
+      "capability_family": "operations",
+      "lifecycle_stages": [
+        "design",
+        "build",
+        "operate"
+      ],
+      "targets": [
+        "service",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-operational-readiness",
+        "analyze-incident"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "design-web-motion",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "discover",
+        "design"
+      ],
+      "targets": [
+        "repository",
+        "agent"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-interface-motion",
+        "review-accessibility"
       ],
       "conflicts_with": [
-        "context-reliability-review"
+        "review-interface-motion"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "change-adoption-planning",
-      "plugin": "measured-operations",
-      "capability_family": "planning",
+      "skill": "diagnose-failure",
+      "plugin": "measured-workflows",
+      "capability_family": "review",
       "lifecycle_stages": [
-        "design",
-        "release",
+        "discover",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "service"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "diagnose-performance",
+        "implement-test-first"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "diagnose-performance",
+      "plugin": "measured-quality",
+      "capability_family": "operations",
+      "lifecycle_stages": [
+        "test",
         "operate",
         "learn"
       ],
       "targets": [
-        "organization"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "stakeholder-technical-communication",
-        "kpi-outcome-measurement"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "change-impact-analysis",
-      "plugin": "measured-reasoning",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "release"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "code-change-review",
-        "api-contract-compatibility-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "claim-verification",
-      "plugin": "measured-skills",
-      "capability_family": "evidence",
-      "lifecycle_stages": [
-        "review",
-        "release",
-        "operate"
-      ],
-      "targets": [
-        "repository",
         "service",
-        "publication"
+        "code"
       ],
       "risk_class": "read-only",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "acceptance-evidence-ledger",
-        "source-grounded-research"
+        "design-observability",
+        "diagnose-failure"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "code-change-review",
-      "plugin": "measured-engineering-review",
+      "skill": "diagnose-react-rendering",
+      "plugin": "measured-stacks",
       "capability_family": "review",
       "lifecycle_stages": [
         "review"
       ],
       "targets": [
         "code",
+        "repository",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "stack-typescript-javascript",
+        "run-project-checks"
+      ],
+      "conflicts_with": [
+        "review-code-change"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "diagnose-swift-concurrency",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "stack-swift-swiftui",
+        "run-project-checks"
+      ],
+      "conflicts_with": [
+        "review-code-change"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "edit-technical-writing",
+      "plugin": "measured-workflows",
+      "capability_family": "communication",
+      "lifecycle_stages": [
+        "review"
+      ],
+      "targets": [
+        "publication",
         "repository"
       ],
       "risk_class": "read-only",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "change-impact-analysis",
-        "test-quality-review"
+        "explain-to-stakeholders",
+        "review-public-boundary"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "codebase-explanation",
-      "plugin": "measured-reasoning",
+      "skill": "execute-plan",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "build",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "plan-change",
+        "implement-test-first",
+        "align-on-decisions"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "explain-codebase",
+      "plugin": "measured-workflows",
       "capability_family": "communication",
       "lifecycle_stages": [
         "discover"
@@ -412,99 +583,67 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "domain-vocabulary-modeling"
+        "model-domain-vocabulary"
       ],
       "conflicts_with": [
-        "design-rationale-investigation"
+        "investigate-design-rationale"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "context-reliability-review",
-      "plugin": "measured-ai-systems",
-      "capability_family": "evidence",
+      "skill": "explain-to-stakeholders",
+      "plugin": "measured-operations",
+      "capability_family": "communication",
       "lifecycle_stages": [
-        "design",
         "review",
+        "release",
         "operate"
       ],
       "targets": [
-        "agent",
-        "data"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "agent-evaluation-design",
-        "source-grounded-research"
-      ],
-      "conflicts_with": [
-        "authority-boundary-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "cross-capability-dependency-mapping",
-      "plugin": "measured-operations",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "release"
-      ],
-      "targets": [
         "organization",
-        "data",
-        "service"
+        "publication"
       ],
       "risk_class": "read-only",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "requirements-synthesis",
-        "implementation-planning"
+        "edit-technical-writing",
+        "record-decisions"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "cross-stack-quality-gates",
-      "plugin": "measured-skills",
+      "skill": "finish-branch",
+      "plugin": "measured-workflows",
       "capability_family": "execution",
       "lifecycle_stages": [
-        "test",
         "review",
         "release"
       ],
       "targets": [
-        "code",
         "repository"
       ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
+      "risk_class": "external-write",
+      "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "test-quality-review",
-        "claim-verification"
+        "verify-claims",
+        "publish-change"
       ],
-      "conflicts_with": [
-        "test-quality-review"
-      ],
+      "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "csharp-dotnet-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
+      "skill": "frame-problem",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
       "lifecycle_stages": [
         "discover",
-        "design",
-        "test",
-        "review"
+        "frame"
       ],
       "targets": [
-        "code",
+        "organization",
         "repository",
         "service"
       ],
@@ -512,63 +651,38 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "cross-stack-quality-gates"
+        "align-on-decisions",
+        "synthesize-requirements"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "data-authority-migration-ratification",
-      "plugin": "measured-operations",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "release"
-      ],
-      "targets": [
-        "data",
-        "organization"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "authority-boundary-review",
-        "data-migration-readiness"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "data-migration-readiness",
-      "plugin": "measured-engineering-review",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "design",
-        "review",
-        "release"
-      ],
-      "targets": [
-        "data",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "authority-boundary-review",
-        "operational-readiness-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "decision-evidence-trace",
-      "plugin": "measured-reasoning",
-      "capability_family": "communication",
+      "skill": "guide-configuration",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
       "lifecycle_stages": [
         "build",
+        "operate"
+      ],
+      "targets": [
+        "repository",
+        "service"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "verify-claims"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "handoff-work",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
         "review",
         "learn"
       ],
@@ -580,63 +694,37 @@
       "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "acceptance-evidence-ledger",
-        "task-handoff"
+        "track-acceptance",
+        "trace-decisions"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "decision-governance-records",
-      "plugin": "measured-operations",
-      "capability_family": "communication",
+      "skill": "implement-test-first",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
       "lifecycle_stages": [
-        "frame",
-        "design",
-        "review",
-        "learn"
-      ],
-      "targets": [
-        "organization",
-        "repository"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "source-grounded-research",
-        "stakeholder-technical-communication"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "dependency-supply-chain-review",
-      "plugin": "measured-engineering-review",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "review",
-        "release",
-        "operate"
+        "build",
+        "test"
       ],
       "targets": [
         "code",
-        "repository",
-        "service"
+        "repository"
       ],
-      "risk_class": "read-only",
+      "risk_class": "bounded-execution",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "application-security-review",
-        "skill-security-review"
+        "review-tests",
+        "run-project-checks"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "design-rationale-investigation",
-      "plugin": "measured-reasoning",
+      "skill": "investigate-design-rationale",
+      "plugin": "measured-workflows",
       "capability_family": "evidence",
       "lifecycle_stages": [
         "discover",
@@ -651,17 +739,87 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "codebase-explanation",
-        "source-grounded-research"
+        "explain-codebase",
+        "research-sources"
       ],
       "conflicts_with": [
-        "codebase-explanation"
+        "explain-codebase"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "domain-vocabulary-modeling",
-      "plugin": "measured-reasoning",
+      "skill": "learn-after-launch",
+      "plugin": "measured-operations",
+      "capability_family": "operations",
+      "lifecycle_stages": [
+        "operate",
+        "learn"
+      ],
+      "targets": [
+        "service",
+        "organization"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "measure-outcomes",
+        "analyze-incident"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "map-capability-dependencies",
+      "plugin": "measured-operations",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "release"
+      ],
+      "targets": [
+        "organization",
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "synthesize-requirements",
+        "plan-change"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "measure-outcomes",
+      "plugin": "measured-operations",
+      "capability_family": "operations",
+      "lifecycle_stages": [
+        "design",
+        "operate",
+        "learn"
+      ],
+      "targets": [
+        "data",
+        "organization",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-value-evidence",
+        "learn-after-launch"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "model-domain-vocabulary",
+      "plugin": "measured-workflows",
       "capability_family": "planning",
       "lifecycle_stages": [
         "discover",
@@ -677,15 +835,524 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "alignment-interview",
-        "requirements-synthesis"
+        "align-on-decisions",
+        "synthesize-requirements"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "engineering-prompt-review",
-      "plugin": "measured-reasoning",
+      "skill": "plan-adoption",
+      "plugin": "measured-operations",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "design",
+        "release",
+        "operate",
+        "learn"
+      ],
+      "targets": [
+        "organization"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "explain-to-stakeholders",
+        "measure-outcomes"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "plan-change",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "design",
+        "build",
+        "test",
+        "release"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "frame-problem",
+        "plan-tests"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "plan-tests",
+      "plugin": "measured-workflows",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "design",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "plan-change",
+        "review-tests"
+      ],
+      "conflicts_with": [
+        "design-agent-evaluations"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "plan-workshop",
+      "plugin": "measured-operations",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "frame",
+        "design",
+        "learn"
+      ],
+      "targets": [
+        "organization"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "synthesize-requirements",
+        "record-decisions"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "prepare-migration-decision",
+      "plugin": "measured-operations",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "data",
+        "organization"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-data-authority",
+        "review-data-migration"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "publish-change",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "review",
+        "release"
+      ],
+      "targets": [
+        "repository",
+        "publication"
+      ],
+      "risk_class": "external-write",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-public-boundary",
+        "run-project-checks",
+        "request-review"
+      ],
+      "conflicts_with": [
+        "request-review"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "record-decisions",
+      "plugin": "measured-operations",
+      "capability_family": "communication",
+      "lifecycle_stages": [
+        "frame",
+        "design",
+        "review",
+        "learn"
+      ],
+      "targets": [
+        "organization",
+        "repository"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "research-sources",
+        "explain-to-stakeholders"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "request-review",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository"
+      ],
+      "risk_class": "external-write",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-code-change",
+        "verify-claims",
+        "publish-change"
+      ],
+      "conflicts_with": [
+        "publish-change"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "research-sources",
+      "plugin": "measured-workflows",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "discover",
+        "frame"
+      ],
+      "targets": [
+        "publication",
+        "repository"
+      ],
+      "risk_class": "network-read",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "verify-claims",
+        "record-decisions"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "resolve-merge-conflicts",
+      "plugin": "measured-workflows",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "build",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks",
+        "review-code-change"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-accessibility",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "plan-tests",
+        "review-code-change"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-agent-protocols",
+      "plugin": "measured-quality",
+      "capability_family": "ai-engineering",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "agent",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-api-compatibility",
+        "review-agent-tools",
+        "review-agent-security"
+      ],
+      "conflicts_with": [
+        "review-api-compatibility"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-agent-security",
+      "plugin": "measured-quality",
+      "capability_family": "ai-engineering",
+      "lifecycle_stages": [
+        "design",
+        "test",
+        "review",
+        "release",
+        "operate"
+      ],
+      "targets": [
+        "agent",
+        "model",
+        "service",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-app-security",
+        "review-skill-security",
+        "review-dependencies"
+      ],
+      "conflicts_with": [
+        "review-app-security",
+        "review-skill-security"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-agent-tools",
+      "plugin": "measured-quality",
+      "capability_family": "ai-engineering",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release",
+        "operate"
+      ],
+      "targets": [
+        "agent",
+        "service",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-app-security",
+        "review-agent-security",
+        "review-operational-readiness"
+      ],
+      "conflicts_with": [
+        "review-app-security"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-api-compatibility",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "code",
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "assess-change-impact",
+        "plan-tests"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-app-security",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-dependencies",
+        "review-operational-readiness"
+      ],
+      "conflicts_with": [
+        "review-skill-security"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-code-change",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "assess-change-impact",
+        "review-tests"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-context-evidence",
+      "plugin": "measured-quality",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "operate"
+      ],
+      "targets": [
+        "agent",
+        "data"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "design-agent-evaluations",
+        "research-sources"
+      ],
+      "conflicts_with": [
+        "review-data-authority"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-data-authority",
+      "plugin": "measured-quality",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "review"
+      ],
+      "targets": [
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-data-migration",
+        "prepare-migration-decision"
+      ],
+      "conflicts_with": [
+        "review-context-evidence"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-data-migration",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "design",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-data-authority",
+        "review-operational-readiness"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-dependencies",
+      "plugin": "measured-quality",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "review",
+        "release",
+        "operate"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-app-security",
+        "review-skill-security"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "review-engineering-prompt",
+      "plugin": "measured-workflows",
       "capability_family": "review",
       "lifecycle_stages": [
         "discover",
@@ -700,66 +1367,20 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "implementation-planning",
-        "claim-verification"
+        "plan-change",
+        "verify-claims"
       ],
       "conflicts_with": [
-        "high-signal-technical-writing",
-        "problem-framing",
-        "context-reliability-review",
-        "agent-evaluation-design"
+        "edit-technical-writing",
+        "frame-problem",
+        "review-context-evidence",
+        "design-agent-evaluations"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "finding-consolidation",
-      "plugin": "measured-skills",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "review",
-        "release"
-      ],
-      "targets": [
-        "repository",
-        "code"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "code-change-review",
-        "application-security-review",
-        "skill-security-review"
-      ],
-      "conflicts_with": [
-        "cross-stack-quality-gates"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "finish-development-branch",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "review",
-        "release"
-      ],
-      "targets": [
-        "repository"
-      ],
-      "risk_class": "external-write",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "claim-verification",
-        "publish-change-safely"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "functional-motion-review",
-      "plugin": "measured-engineering-review",
+      "skill": "review-interface-motion",
+      "plugin": "measured-quality",
       "capability_family": "review",
       "lifecycle_stages": [
         "design",
@@ -776,331 +1397,20 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "accessibility-review",
-        "performance-scalability-diagnosis",
-        "api-contract-compatibility-review",
-        "authority-boundary-review"
+        "review-accessibility",
+        "diagnose-performance",
+        "review-api-compatibility",
+        "review-data-authority"
       ],
       "conflicts_with": [
-        "accessibility-review",
-        "performance-scalability-diagnosis"
+        "review-accessibility",
+        "diagnose-performance"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "gcp-data-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "data",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates",
-        "python-engineering-profile",
-        "data-migration-readiness"
-      ],
-      "conflicts_with": [
-        "postgresql-sql-engineering-profile",
-        "google-adk-engineering-profile"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "go-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "google-adk-engineering-profile",
-      "plugin": "measured-agent-platforms",
-      "capability_family": "ai-engineering",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "build",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "agent",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "agentic-system-security-review",
-        "agent-evaluation-design",
-        "observability-design"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "guided-configuration",
-      "plugin": "measured-reasoning",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "operate"
-      ],
-      "targets": [
-        "repository",
-        "service"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "claim-verification"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "high-signal-technical-writing",
-      "plugin": "measured-reasoning",
-      "capability_family": "communication",
-      "lifecycle_stages": [
-        "review"
-      ],
-      "targets": [
-        "publication",
-        "repository"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "stakeholder-technical-communication",
-        "public-private-boundary-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "implementation-planning",
-      "plugin": "measured-engineering-build",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "design",
-        "build",
-        "test",
-        "release"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "problem-framing",
-        "test-strategy"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "ios-journey-verification",
-      "plugin": "measured-swift-workflows",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "data"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "swift-swiftui-engineering-profile",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [
-        "plan-execution"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "iteration-postlaunch-learning",
-      "plugin": "measured-operations",
-      "capability_family": "operations",
-      "lifecycle_stages": [
-        "operate",
-        "learn"
-      ],
-      "targets": [
-        "service",
-        "organization"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "kpi-outcome-measurement",
-        "production-incident-analysis"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "java-spring-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "kpi-outcome-measurement",
-      "plugin": "measured-operations",
-      "capability_family": "operations",
-      "lifecycle_stages": [
-        "design",
-        "operate",
-        "learn"
-      ],
-      "targets": [
-        "data",
-        "organization",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "value-attribution-evidence-maturity",
-        "iteration-postlaunch-learning"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "merge-conflict-reconciliation",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates",
-        "code-change-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "module-interface-design",
-      "plugin": "measured-engineering-build",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "design",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "domain-vocabulary-modeling",
-        "api-contract-compatibility-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "multi-agent-orchestration",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "agent",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "implementation-planning",
-        "acceptance-evidence-ledger"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "nextjs-cache-auth-boundary-review",
-      "plugin": "measured-nextjs-workflows",
+      "skill": "review-nextjs-cache-auth",
+      "plugin": "measured-stacks",
       "capability_family": "review",
       "lifecycle_stages": [
         "review"
@@ -1114,65 +1424,17 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "typescript-javascript-engineering-profile",
-        "cross-stack-quality-gates"
+        "stack-typescript-javascript",
+        "run-project-checks"
       ],
       "conflicts_with": [
-        "code-change-review"
+        "review-code-change"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "nextjs-feature-delivery",
-      "plugin": "measured-nextjs-workflows",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "data"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "typescript-javascript-engineering-profile",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [
-        "plan-execution"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "observability-design",
-      "plugin": "measured-engineering-review",
-      "capability_family": "operations",
-      "lifecycle_stages": [
-        "design",
-        "build",
-        "operate"
-      ],
-      "targets": [
-        "service",
-        "data"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "operational-readiness-review",
-        "production-incident-analysis"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "operational-readiness-review",
-      "plugin": "measured-engineering-review",
+      "skill": "review-operational-readiness",
+      "plugin": "measured-quality",
       "capability_family": "operations",
       "lifecycle_stages": [
         "review",
@@ -1187,226 +1449,15 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "observability-design",
-        "prelaunch-readiness"
+        "design-observability",
+        "check-launch-readiness"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "performance-scalability-diagnosis",
-      "plugin": "measured-engineering-review",
-      "capability_family": "operations",
-      "lifecycle_stages": [
-        "test",
-        "operate",
-        "learn"
-      ],
-      "targets": [
-        "service",
-        "code"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "observability-design",
-        "systematic-diagnosis"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "php-drupal-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "plan-execution",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "implementation-planning",
-        "test-driven-change",
-        "alignment-interview"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "portable-skill-authoring",
-      "plugin": "measured-reasoning",
-      "capability_family": "ai-engineering",
-      "lifecycle_stages": [
-        "design",
-        "build",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "agent",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "skill-security-review",
-        "agent-evaluation-design"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "postgresql-sql-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "prelaunch-readiness",
-      "plugin": "measured-skills",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "test",
-        "review",
-        "release"
-      ],
-      "targets": [
-        "service",
-        "publication"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "operational-readiness-review",
-        "claim-verification"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "problem-framing",
-      "plugin": "measured-engineering-build",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "discover",
-        "frame"
-      ],
-      "targets": [
-        "organization",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "alignment-interview",
-        "requirements-synthesis"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "production-incident-analysis",
-      "plugin": "measured-operations",
-      "capability_family": "operations",
-      "lifecycle_stages": [
-        "operate",
-        "learn"
-      ],
-      "targets": [
-        "service",
-        "organization"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "observability-design",
-        "iteration-postlaunch-learning"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "prototype-spike",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "design",
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "problem-framing",
-        "test-strategy"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "public-private-boundary-review",
-      "plugin": "measured-skills",
+      "skill": "review-public-boundary",
+      "plugin": "measured-quality",
       "capability_family": "review",
       "lifecycle_stages": [
         "review",
@@ -1420,188 +1471,15 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "high-signal-technical-writing",
-        "publish-change-safely"
+        "edit-technical-writing",
+        "publish-change"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "publish-change-safely",
-      "plugin": "measured-skills",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "review",
-        "release"
-      ],
-      "targets": [
-        "repository",
-        "publication"
-      ],
-      "risk_class": "external-write",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "public-private-boundary-review",
-        "cross-stack-quality-gates",
-        "request-code-review"
-      ],
-      "conflicts_with": [
-        "request-code-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "python-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "react-rendering-performance-diagnosis",
-      "plugin": "measured-nextjs-workflows",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "data"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "typescript-javascript-engineering-profile",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [
-        "code-change-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "request-code-review",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository"
-      ],
-      "risk_class": "external-write",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "code-change-review",
-        "claim-verification",
-        "publish-change-safely"
-      ],
-      "conflicts_with": [
-        "publish-change-safely"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "requirements-synthesis",
-      "plugin": "measured-operations",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "discover",
-        "frame",
-        "design"
-      ],
-      "targets": [
-        "organization",
-        "repository"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "domain-vocabulary-modeling",
-        "problem-framing"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "research-to-publication-lifecycle",
-      "plugin": "measured-skills",
-      "capability_family": "evidence",
-      "lifecycle_stages": [
-        "discover",
-        "frame",
-        "test",
-        "review",
-        "release",
-        "learn"
-      ],
-      "targets": [
-        "data",
-        "publication",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "source-grounded-research",
-        "decision-evidence-trace",
-        "source-output-conformance-audit",
-        "workflow-retrospective",
-        "public-private-boundary-review"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "respond-to-code-review",
-      "plugin": "measured-engineering-delivery",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "review",
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "code-change-review",
-        "test-driven-change"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "retrieval-grounding-quality-review",
-      "plugin": "measured-agent-platforms",
+      "skill": "review-retrieval-grounding",
+      "plugin": "measured-quality",
       "capability_family": "ai-engineering",
       "lifecycle_stages": [
         "design",
@@ -1618,43 +1496,19 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "agent-evaluation-design",
-        "context-reliability-review",
-        "source-grounded-research"
+        "design-agent-evaluations",
+        "review-context-evidence",
+        "research-sources"
       ],
       "conflicts_with": [
-        "source-grounded-research",
-        "source-output-conformance-audit"
+        "research-sources",
+        "verify-source-output"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "salesforce-apex-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "skill-import-provenance",
-      "plugin": "measured-skills",
+      "skill": "review-skill-import",
+      "plugin": "measured-quality",
       "capability_family": "review",
       "lifecycle_stages": [
         "discover",
@@ -1669,15 +1523,15 @@
       "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "skill-security-review",
-        "public-private-boundary-review"
+        "review-skill-security",
+        "review-public-boundary"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "skill-security-review",
-      "plugin": "measured-skills",
+      "skill": "review-skill-security",
+      "plugin": "measured-quality",
       "capability_family": "review",
       "lifecycle_stages": [
         "review",
@@ -1691,86 +1545,17 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "dependency-supply-chain-review",
-        "public-private-boundary-review"
+        "review-dependencies",
+        "review-public-boundary"
       ],
       "conflicts_with": [
-        "application-security-review"
+        "review-app-security"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "source-grounded-research",
-      "plugin": "measured-skills",
-      "capability_family": "evidence",
-      "lifecycle_stages": [
-        "discover",
-        "frame"
-      ],
-      "targets": [
-        "publication",
-        "repository"
-      ],
-      "risk_class": "network-read",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "claim-verification",
-        "decision-governance-records"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "source-output-conformance-audit",
-      "plugin": "measured-ai-systems",
-      "capability_family": "evidence",
-      "lifecycle_stages": [
-        "test",
-        "review"
-      ],
-      "targets": [
-        "data",
-        "service"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "authority-boundary-review",
-        "test-quality-review"
-      ],
-      "conflicts_with": [
-        "test-quality-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "stakeholder-technical-communication",
-      "plugin": "measured-operations",
-      "capability_family": "communication",
-      "lifecycle_stages": [
-        "review",
-        "release",
-        "operate"
-      ],
-      "targets": [
-        "organization",
-        "publication"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "high-signal-technical-writing",
-        "decision-governance-records"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "swift-concurrency-diagnosis",
-      "plugin": "measured-swift-workflows",
+      "skill": "review-swift-persistence",
+      "plugin": "measured-stacks",
       "capability_family": "review",
       "lifecycle_stages": [
         "review"
@@ -1784,181 +1569,17 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "swift-swiftui-engineering-profile",
-        "cross-stack-quality-gates"
+        "stack-swift-swiftui",
+        "run-project-checks"
       ],
       "conflicts_with": [
-        "code-change-review"
+        "review-code-change"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "swift-persistence-contract-review",
-      "plugin": "measured-swift-workflows",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "data"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "swift-swiftui-engineering-profile",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [
-        "code-change-review"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "swift-swiftui-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "swiftui-feature-delivery",
-      "plugin": "measured-swift-workflows",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "data"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "swift-swiftui-engineering-profile",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [
-        "plan-execution"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "systematic-diagnosis",
-      "plugin": "measured-skills",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "service"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "performance-scalability-diagnosis",
-        "test-driven-change"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "task-handoff",
-      "plugin": "measured-reasoning",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "review",
-        "learn"
-      ],
-      "targets": [
-        "repository",
-        "organization"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "explicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "acceptance-evidence-ledger",
-        "decision-evidence-trace"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "terraform-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "test-driven-change",
-      "plugin": "measured-engineering-build",
-      "capability_family": "execution",
-      "lifecycle_stages": [
-        "build",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "repository"
-      ],
-      "risk_class": "bounded-execution",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "test-quality-review",
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "test-quality-review",
-      "plugin": "measured-engineering-review",
+      "skill": "review-tests",
+      "plugin": "measured-quality",
       "capability_family": "review",
       "lifecycle_stages": [
         "test",
@@ -1972,65 +1593,17 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "test-strategy",
-        "code-change-review"
+        "plan-tests",
+        "review-code-change"
       ],
       "conflicts_with": [
-        "cross-stack-quality-gates",
-        "source-output-conformance-audit"
+        "run-project-checks",
+        "verify-source-output"
       ],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "test-strategy",
-      "plugin": "measured-engineering-build",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "design",
-        "test"
-      ],
-      "targets": [
-        "code",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "implementation-planning",
-        "test-quality-review"
-      ],
-      "conflicts_with": [
-        "agent-evaluation-design"
-      ],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "typescript-javascript-engineering-profile",
-      "plugin": "measured-stack-profiles",
-      "capability_family": "review",
-      "lifecycle_stages": [
-        "discover",
-        "design",
-        "test",
-        "review"
-      ],
-      "targets": [
-        "code",
-        "repository",
-        "service"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "cross-stack-quality-gates"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "value-attribution-evidence-maturity",
+      "skill": "review-value-evidence",
       "plugin": "measured-operations",
       "capability_family": "operations",
       "lifecycle_stages": [
@@ -2046,15 +1619,15 @@
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "kpi-outcome-measurement",
-        "source-grounded-research"
+        "measure-outcomes",
+        "research-sources"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "workflow-retrospective",
-      "plugin": "measured-reasoning",
+      "skill": "review-workflow",
+      "plugin": "measured-workflows",
       "capability_family": "communication",
       "lifecycle_stages": [
         "review",
@@ -2068,53 +1641,528 @@
       "invocation": "explicit",
       "maturity": "candidate",
       "composes_with": [
-        "decision-evidence-trace",
-        "iteration-postlaunch-learning"
+        "trace-decisions",
+        "learn-after-launch"
       ],
       "conflicts_with": [],
       "maturity_evidence": "evals/cases.json"
     },
     {
-      "skill": "workshop-planning-synthesis",
-      "plugin": "measured-operations",
-      "capability_family": "planning",
-      "lifecycle_stages": [
-        "frame",
-        "design",
-        "learn"
-      ],
-      "targets": [
-        "organization"
-      ],
-      "risk_class": "read-only",
-      "invocation": "implicit",
-      "maturity": "candidate",
-      "composes_with": [
-        "requirements-synthesis",
-        "decision-governance-records"
-      ],
-      "conflicts_with": [],
-      "maturity_evidence": "evals/cases.json"
-    },
-    {
-      "skill": "worktree-isolation",
-      "plugin": "measured-engineering-delivery",
+      "skill": "run-project-checks",
+      "plugin": "measured-quality",
       "capability_family": "execution",
       "lifecycle_stages": [
-        "design",
-        "build"
+        "test",
+        "review",
+        "release"
       ],
       "targets": [
+        "code",
         "repository"
       ],
       "risk_class": "bounded-execution",
       "invocation": "implicit",
       "maturity": "candidate",
       "composes_with": [
-        "implementation-planning",
-        "multi-agent-orchestration"
+        "review-tests",
+        "verify-claims"
+      ],
+      "conflicts_with": [
+        "review-tests"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "run-research-workflow",
+      "plugin": "measured-workflows",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "discover",
+        "frame",
+        "test",
+        "review",
+        "release",
+        "learn"
+      ],
+      "targets": [
+        "data",
+        "publication",
+        "repository"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "research-sources",
+        "trace-decisions",
+        "verify-source-output",
+        "review-workflow",
+        "review-public-boundary"
       ],
       "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-adobe-aem",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-csharp-dotnet",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-gcp-data",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "data",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks",
+        "stack-python",
+        "review-data-migration"
+      ],
+      "conflicts_with": [
+        "stack-postgresql-sql",
+        "stack-google-adk"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-go",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-google-adk",
+      "plugin": "measured-stacks",
+      "capability_family": "ai-engineering",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "build",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "agent",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-agent-security",
+        "design-agent-evaluations",
+        "design-observability"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-java-spring",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-php-drupal",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-postgresql-sql",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-python",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-salesforce-apex",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-swift-swiftui",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-terraform",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "stack-typescript-javascript",
+      "plugin": "measured-stacks",
+      "capability_family": "review",
+      "lifecycle_stages": [
+        "discover",
+        "design",
+        "test",
+        "review"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "service"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "synthesize-requirements",
+      "plugin": "measured-operations",
+      "capability_family": "planning",
+      "lifecycle_stages": [
+        "discover",
+        "frame",
+        "design"
+      ],
+      "targets": [
+        "organization",
+        "repository"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "model-domain-vocabulary",
+        "frame-problem"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "trace-decisions",
+      "plugin": "measured-workflows",
+      "capability_family": "communication",
+      "lifecycle_stages": [
+        "build",
+        "review",
+        "learn"
+      ],
+      "targets": [
+        "repository",
+        "organization"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "track-acceptance",
+        "handoff-work"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "track-acceptance",
+      "plugin": "measured-workflows",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "test",
+        "review",
+        "release"
+      ],
+      "targets": [
+        "repository",
+        "service"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "verify-claims",
+        "run-project-checks"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "verify-claims",
+      "plugin": "measured-quality",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "review",
+        "release",
+        "operate"
+      ],
+      "targets": [
+        "repository",
+        "service",
+        "publication"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "track-acceptance",
+        "research-sources"
+      ],
+      "conflicts_with": [],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "verify-ios-journey",
+      "plugin": "measured-stacks",
+      "capability_family": "execution",
+      "lifecycle_stages": [
+        "build",
+        "test"
+      ],
+      "targets": [
+        "code",
+        "repository",
+        "data"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "explicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "stack-swift-swiftui",
+        "run-project-checks"
+      ],
+      "conflicts_with": [
+        "execute-plan"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
+      "skill": "verify-source-output",
+      "plugin": "measured-quality",
+      "capability_family": "evidence",
+      "lifecycle_stages": [
+        "test",
+        "review"
+      ],
+      "targets": [
+        "data",
+        "service"
+      ],
+      "risk_class": "bounded-execution",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-data-authority",
+        "review-tests"
+      ],
+      "conflicts_with": [
+        "review-tests"
+      ],
       "maturity_evidence": "evals/cases.json"
     }
   ]

@@ -1,47 +1,34 @@
-# Quickstart
+# Start with one useful request
 
-For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
+This is the unreleased **0.19.0 preview**. The preserved 0.18 candidate and its
+acceptance work remain separate.
 
-Choose one task, one client, and a small set of skills. This is the unreleased
-0.18.0 candidate; use a reviewed source revision and keep its identity with your
-installation. Historical release checks do not qualify a changed candidate.
+1. Open [Find your next workflow](start.md). Pick a task, client, and optional stack.
+   Start with **Finish existing work** if a change or review is unfinished.
+2. Choose the finish line: **assess and plan**, **repair and verify locally**, or
+   **maintain this draft PR**. Read the stated scope before copying the prompt.
+3. Replace the placeholders with your repository, task, comparison revision, plan,
+   and PR where needed. Let the assistant discover real paths and commands.
+4. Check which installed entry matches. If absent, use ordinary task wording and
+   record that no skill loaded. Do not invent a command or install a replacement
+   merely to continue authorized work.
+5. Inspect the result against the expected output. A selected skill, a successfully
+   loaded reference, and a useful answer are three separate observations.
 
-## 1. Choose a small set
+The [offline chooser](../dist/discovery/index.html) works when saved locally, with
+no server or account. [Markdown](../dist/discovery/guide.md) remains readable in a
+terminal. [Migration guidance](migration-0.19.md) covers focused staging and old
+names. The full catalog is a reference, not a required reading list.
 
-Start with the [daily-work guide](daily-agent-operating-model.md) for five example
-requests and an experimental profile, or [choose one pack](choose-your-skills.md).
-A pack is an installation unit; a profile is a selection of skills for a task.
-Do not install every pack merely to try one skill.
+For longer work use [finish existing work](finish-existing-work.md) or the
+[feature workflow](feature-development-workflow.md). The explicit execution,
+handoff, and publication skills are outside the implicit core profile. Their
+selection never supplies missing authority.
 
-For a new feature, use the [feature-development workflow](feature-development-workflow.md).
-It explains the order, what each step delivers, and which prompt to paste into
-your client. The daily profile does not include the explicit execution and
-publication skills; the workflow explains those choices without installing them.
+Installation is a separate action: review the exact source and your
+[client guide](client-support.md). Preserve old packages and receipts before an
+upgrade. Do not transfer caches, credentials, or acceptance results between machines.
 
-## 2. Follow your client's setup
-
-| Client | Guide |
-| --- | --- |
-| Codex | [Codex setup and checks](clients/codex.md) |
-| Claude Code and account uploads | [Claude setup and checks](clients/claude.md) |
-| Antigravity CLI and IDE | [Antigravity setup and limits](clients/antigravity.md) |
-
-Use a reviewed local checkout when exact source control matters. The
-[current candidate record](client-candidate-v0.18.0.md) states what has and has
-not been observed. Do not substitute an older differently named release.
-
-## 3. Try one request and inspect the result
-
-Ask for a concrete task, such as "Review this PR diff; do not edit it." Inspect
-which skill actually loaded and whether the response addresses the task with
-evidence. Keep invocation and answer quality as separate observations.
-
-If a skill fails to appear, check the installed inventory, duplicate uploads,
-version, and discovery budget for that exact client before changing its text.
-
-## For contributors
-
-Maintainers regenerate distributions and run the full checks in
-[Testing and validation](testing.md). The [contribution guide](../CONTRIBUTING.md)
-explains the separate source and manifest commits. These are authoring checks,
-not a prerequisite to every end-user request.
+Maintainers use [testing](testing.md) and [CONTRIBUTING.md](../CONTRIBUTING.md).
+Those checks establish repository consistency, not that the package helped a person
+complete their work.

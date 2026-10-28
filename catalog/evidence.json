@@ -1,9 +1,9 @@
 {
   "$schema": "./evidence-schema.json",
-  "catalog_version": "0.18.0",
+  "catalog_version": "0.19.0",
   "skills": [
     {
-      "skill": "acceptance-evidence-ledger",
+      "skill": "address-review",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -14,7 +14,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "accessibility-review",
+      "skill": "align-on-decisions",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -25,7 +25,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "adobe-aem-engineering-profile",
+      "skill": "analyze-incident",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -36,7 +36,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "agent-context-state-memory-design",
+      "skill": "assess-change-impact",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -47,7 +47,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "agent-evaluation-design",
+      "skill": "assess-worktree-isolation",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -58,7 +58,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "agent-protocol-interoperability-review",
+      "skill": "author-skill",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -69,7 +69,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "agent-tool-action-boundary-review",
+      "skill": "build-spike",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -80,7 +80,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "agentic-system-security-review",
+      "skill": "check-launch-readiness",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -91,7 +91,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "alignment-interview",
+      "skill": "choose-workflow",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -102,238 +102,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "api-contract-compatibility-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "application-security-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "authority-boundary-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "change-adoption-planning",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "change-impact-analysis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "claim-verification",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "code-change-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable",
-      "historical_observations": [
-        {
-          "record_file": "docs/client-observations-v0.15.json",
-          "case_id": "V0150-ANTIGRAVITYCLI-CODE-CHANGE-REVIEW-POSITIVE-1",
-          "client_version": "1.2.0",
-          "surface": "Antigravity CLI",
-          "observed_at": "2026-09-10",
-          "catalog_version": "0.15.0",
-          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
-        }
-      ]
-    },
-    {
-      "skill": "codebase-explanation",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "context-reliability-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "cross-capability-dependency-mapping",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "cross-stack-quality-gates",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "csharp-dotnet-engineering-profile",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "data-authority-migration-ratification",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "data-migration-readiness",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "decision-evidence-trace",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "decision-governance-records",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "dependency-supply-chain-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "design-rationale-investigation",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "domain-vocabulary-modeling",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "engineering-prompt-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "finding-consolidation",
+      "skill": "consolidate-findings",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -364,7 +133,7 @@
       ]
     },
     {
-      "skill": "finish-development-branch",
+      "skill": "coordinate-agents",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -375,7 +144,546 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "functional-motion-review",
+      "skill": "deliver-nextjs-feature",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "deliver-swiftui-feature",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "design-agent-evaluations",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "design-agent-memory",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "design-module-interface",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "design-observability",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "design-web-motion",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "diagnose-failure",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "diagnose-performance",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable",
+      "historical_observations": [
+        {
+          "record_file": "docs/client-observations-v0.15.json",
+          "case_id": "V0150-ANTIGRAVITYCLI-MOTION-NEAR-MISS-3",
+          "client_version": "1.2.0",
+          "surface": "Antigravity CLI",
+          "observed_at": "2026-09-10",
+          "catalog_version": "0.15.0",
+          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
+        }
+      ]
+    },
+    {
+      "skill": "diagnose-react-rendering",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "diagnose-swift-concurrency",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "edit-technical-writing",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "execute-plan",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "explain-codebase",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "explain-to-stakeholders",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "finish-branch",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "frame-problem",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "guide-configuration",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "handoff-work",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "implement-test-first",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "investigate-design-rationale",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "learn-after-launch",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "map-capability-dependencies",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "measure-outcomes",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "model-domain-vocabulary",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "plan-adoption",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "plan-change",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "plan-tests",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "plan-workshop",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "prepare-migration-decision",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "publish-change",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "record-decisions",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "request-review",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "research-sources",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "resolve-merge-conflicts",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-accessibility",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-agent-protocols",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-agent-security",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-agent-tools",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-api-compatibility",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-app-security",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-code-change",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable",
+      "historical_observations": [
+        {
+          "record_file": "docs/client-observations-v0.15.json",
+          "case_id": "V0150-ANTIGRAVITYCLI-CODE-CHANGE-REVIEW-POSITIVE-1",
+          "client_version": "1.2.0",
+          "surface": "Antigravity CLI",
+          "observed_at": "2026-09-10",
+          "catalog_version": "0.15.0",
+          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
+        }
+      ]
+    },
+    {
+      "skill": "review-context-evidence",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-data-authority",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-data-migration",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-dependencies",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-engineering-prompt",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
+      "skill": "review-interface-motion",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -568,7 +876,7 @@
       ]
     },
     {
-      "skill": "gcp-data-engineering-profile",
+      "skill": "review-nextjs-cache-auth",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -579,7 +887,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "go-engineering-profile",
+      "skill": "review-operational-readiness",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -590,7 +898,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "google-adk-engineering-profile",
+      "skill": "review-public-boundary",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -601,7 +909,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "guided-configuration",
+      "skill": "review-retrieval-grounding",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -612,7 +920,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "high-signal-technical-writing",
+      "skill": "review-skill-import",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -623,7 +931,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "implementation-planning",
+      "skill": "review-skill-security",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -634,7 +942,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "ios-journey-verification",
+      "skill": "review-swift-persistence",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -645,7 +953,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "iteration-postlaunch-learning",
+      "skill": "review-tests",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -656,7 +964,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "java-spring-engineering-profile",
+      "skill": "review-value-evidence",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -667,7 +975,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "kpi-outcome-measurement",
+      "skill": "review-workflow",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -678,7 +986,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "merge-conflict-reconciliation",
+      "skill": "run-project-checks",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -689,7 +997,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "module-interface-design",
+      "skill": "run-research-workflow",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -700,7 +1008,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "multi-agent-orchestration",
+      "skill": "stack-adobe-aem",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -711,7 +1019,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "nextjs-cache-auth-boundary-review",
+      "skill": "stack-csharp-dotnet",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -722,7 +1030,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "nextjs-feature-delivery",
+      "skill": "stack-gcp-data",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -733,7 +1041,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "observability-design",
+      "skill": "stack-go",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -744,7 +1052,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "operational-readiness-review",
+      "skill": "stack-google-adk",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -755,29 +1063,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "performance-scalability-diagnosis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable",
-      "historical_observations": [
-        {
-          "record_file": "docs/client-observations-v0.15.json",
-          "case_id": "V0150-ANTIGRAVITYCLI-MOTION-NEAR-MISS-3",
-          "client_version": "1.2.0",
-          "surface": "Antigravity CLI",
-          "observed_at": "2026-09-10",
-          "catalog_version": "0.15.0",
-          "limit": "Historical fresh-single-turn observation on this client only; no 0.17.0 acceptance or comparative benefit is established."
-        }
-      ]
-    },
-    {
-      "skill": "php-drupal-engineering-profile",
+      "skill": "stack-java-spring",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -788,7 +1074,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "plan-execution",
+      "skill": "stack-php-drupal",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -799,7 +1085,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "portable-skill-authoring",
+      "skill": "stack-postgresql-sql",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -810,7 +1096,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "postgresql-sql-engineering-profile",
+      "skill": "stack-python",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -821,7 +1107,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "prelaunch-readiness",
+      "skill": "stack-salesforce-apex",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -832,227 +1118,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "problem-framing",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "production-incident-analysis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "prototype-spike",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "public-private-boundary-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "publish-change-safely",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "python-engineering-profile",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "react-rendering-performance-diagnosis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "request-code-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "requirements-synthesis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "research-to-publication-lifecycle",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "respond-to-code-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "retrieval-grounding-quality-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "salesforce-apex-engineering-profile",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "skill-import-provenance",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "skill-security-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "source-grounded-research",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "source-output-conformance-audit",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "stakeholder-technical-communication",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "swift-concurrency-diagnosis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "swift-persistence-contract-review",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "swift-swiftui-engineering-profile",
+      "skill": "stack-swift-swiftui",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1063,7 +1129,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "swiftui-feature-delivery",
+      "skill": "stack-terraform",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1074,7 +1140,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "systematic-diagnosis",
+      "skill": "stack-typescript-javascript",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1085,7 +1151,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "task-handoff",
+      "skill": "synthesize-requirements",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1096,7 +1162,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "terraform-engineering-profile",
+      "skill": "trace-decisions",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1107,7 +1173,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "test-driven-change",
+      "skill": "track-acceptance",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1118,7 +1184,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "test-quality-review",
+      "skill": "verify-claims",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1129,7 +1195,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "test-strategy",
+      "skill": "verify-ios-journey",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {
@@ -1140,51 +1206,7 @@
       "runtime_eligibility": "not_applicable"
     },
     {
-      "skill": "typescript-javascript-engineering-profile",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "value-attribution-evidence-maturity",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "workflow-retrospective",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "workshop-planning-synthesis",
-      "workflow_maturity": "candidate",
-      "workflow_maturity_evidence": "evals/cases.json",
-      "behavioral_evidence": {
-        "status": "none",
-        "verified_against_version": null,
-        "observed_at": null
-      },
-      "runtime_eligibility": "not_applicable"
-    },
-    {
-      "skill": "worktree-isolation",
+      "skill": "verify-source-output",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",
       "behavioral_evidence": {

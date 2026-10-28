@@ -1,0 +1,719 @@
+{
+  "format_version": 1,
+  "from_version": "0.18.0",
+  "to_version": "0.19.0",
+  "source_revision": "cd9ff2417a5b6ca468642fad2da179dbebd99cbd",
+  "marketplace": "measured-skills",
+  "installed_aliases": false,
+  "entries": [
+    {
+      "old_id": "acceptance-evidence-ledger",
+      "new_id": "track-acceptance",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "accessibility-review",
+      "new_id": "review-accessibility",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "adobe-aem-engineering-profile",
+      "new_id": "stack-adobe-aem",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "agent-context-state-memory-design",
+      "new_id": "design-agent-memory",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "agent-evaluation-design",
+      "new_id": "design-agent-evaluations",
+      "old_pack": "measured-ai-systems",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "agent-protocol-interoperability-review",
+      "new_id": "review-agent-protocols",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "agent-tool-action-boundary-review",
+      "new_id": "review-agent-tools",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "agentic-system-security-review",
+      "new_id": "review-agent-security",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "alignment-interview",
+      "new_id": "align-on-decisions",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "api-contract-compatibility-review",
+      "new_id": "review-api-compatibility",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "application-security-review",
+      "new_id": "review-app-security",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "authority-boundary-review",
+      "new_id": "review-data-authority",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "change-adoption-planning",
+      "new_id": "plan-adoption",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "change-impact-analysis",
+      "new_id": "assess-change-impact",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "claim-verification",
+      "new_id": "verify-claims",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "code-change-review",
+      "new_id": "review-code-change",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "codebase-explanation",
+      "new_id": "explain-codebase",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "context-reliability-review",
+      "new_id": "review-context-evidence",
+      "old_pack": "measured-ai-systems",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "cross-capability-dependency-mapping",
+      "new_id": "map-capability-dependencies",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "cross-stack-quality-gates",
+      "new_id": "run-project-checks",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "csharp-dotnet-engineering-profile",
+      "new_id": "stack-csharp-dotnet",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "data-authority-migration-ratification",
+      "new_id": "prepare-migration-decision",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "data-migration-readiness",
+      "new_id": "review-data-migration",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "decision-evidence-trace",
+      "new_id": "trace-decisions",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "decision-governance-records",
+      "new_id": "record-decisions",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "dependency-supply-chain-review",
+      "new_id": "review-dependencies",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "design-rationale-investigation",
+      "new_id": "investigate-design-rationale",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "network-read"
+    },
+    {
+      "old_id": "domain-vocabulary-modeling",
+      "new_id": "model-domain-vocabulary",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "engineering-prompt-review",
+      "new_id": "review-engineering-prompt",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "finding-consolidation",
+      "new_id": "consolidate-findings",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "finish-development-branch",
+      "new_id": "finish-branch",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "external-write"
+    },
+    {
+      "old_id": "functional-motion-review",
+      "new_id": "review-interface-motion",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "gcp-data-engineering-profile",
+      "new_id": "stack-gcp-data",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "go-engineering-profile",
+      "new_id": "stack-go",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "google-adk-engineering-profile",
+      "new_id": "stack-google-adk",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "guided-configuration",
+      "new_id": "guide-configuration",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "high-signal-technical-writing",
+      "new_id": "edit-technical-writing",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "implementation-planning",
+      "new_id": "plan-change",
+      "old_pack": "measured-engineering-build",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "ios-journey-verification",
+      "new_id": "verify-ios-journey",
+      "old_pack": "measured-swift-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "iteration-postlaunch-learning",
+      "new_id": "learn-after-launch",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "java-spring-engineering-profile",
+      "new_id": "stack-java-spring",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "kpi-outcome-measurement",
+      "new_id": "measure-outcomes",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "merge-conflict-reconciliation",
+      "new_id": "resolve-merge-conflicts",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "module-interface-design",
+      "new_id": "design-module-interface",
+      "old_pack": "measured-engineering-build",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "multi-agent-orchestration",
+      "new_id": "coordinate-agents",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "nextjs-cache-auth-boundary-review",
+      "new_id": "review-nextjs-cache-auth",
+      "old_pack": "measured-nextjs-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "nextjs-feature-delivery",
+      "new_id": "deliver-nextjs-feature",
+      "old_pack": "measured-nextjs-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "observability-design",
+      "new_id": "design-observability",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "operational-readiness-review",
+      "new_id": "review-operational-readiness",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "performance-scalability-diagnosis",
+      "new_id": "diagnose-performance",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "php-drupal-engineering-profile",
+      "new_id": "stack-php-drupal",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "plan-execution",
+      "new_id": "execute-plan",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "portable-skill-authoring",
+      "new_id": "author-skill",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "postgresql-sql-engineering-profile",
+      "new_id": "stack-postgresql-sql",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "prelaunch-readiness",
+      "new_id": "check-launch-readiness",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "problem-framing",
+      "new_id": "frame-problem",
+      "old_pack": "measured-engineering-build",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "production-incident-analysis",
+      "new_id": "analyze-incident",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "prototype-spike",
+      "new_id": "build-spike",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "public-private-boundary-review",
+      "new_id": "review-public-boundary",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "publish-change-safely",
+      "new_id": "publish-change",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "external-write"
+    },
+    {
+      "old_id": "python-engineering-profile",
+      "new_id": "stack-python",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "react-rendering-performance-diagnosis",
+      "new_id": "diagnose-react-rendering",
+      "old_pack": "measured-nextjs-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "request-code-review",
+      "new_id": "request-review",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "external-write"
+    },
+    {
+      "old_id": "requirements-synthesis",
+      "new_id": "synthesize-requirements",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "research-to-publication-lifecycle",
+      "new_id": "run-research-workflow",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "respond-to-code-review",
+      "new_id": "address-review",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "retrieval-grounding-quality-review",
+      "new_id": "review-retrieval-grounding",
+      "old_pack": "measured-agent-platforms",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "salesforce-apex-engineering-profile",
+      "new_id": "stack-salesforce-apex",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "skill-import-provenance",
+      "new_id": "review-skill-import",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "explicit",
+      "risk_class": "trust-decision"
+    },
+    {
+      "old_id": "skill-security-review",
+      "new_id": "review-skill-security",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "source-grounded-research",
+      "new_id": "research-sources",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "network-read"
+    },
+    {
+      "old_id": "source-output-conformance-audit",
+      "new_id": "verify-source-output",
+      "old_pack": "measured-ai-systems",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "stakeholder-technical-communication",
+      "new_id": "explain-to-stakeholders",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "swift-concurrency-diagnosis",
+      "new_id": "diagnose-swift-concurrency",
+      "old_pack": "measured-swift-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "swift-persistence-contract-review",
+      "new_id": "review-swift-persistence",
+      "old_pack": "measured-swift-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "swift-swiftui-engineering-profile",
+      "new_id": "stack-swift-swiftui",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "swiftui-feature-delivery",
+      "new_id": "deliver-swiftui-feature",
+      "old_pack": "measured-swift-workflows",
+      "new_pack": "measured-stacks",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "systematic-diagnosis",
+      "new_id": "diagnose-failure",
+      "old_pack": "measured-skills",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "task-handoff",
+      "new_id": "handoff-work",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "terraform-engineering-profile",
+      "new_id": "stack-terraform",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "test-driven-change",
+      "new_id": "implement-test-first",
+      "old_pack": "measured-engineering-build",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    },
+    {
+      "old_id": "test-quality-review",
+      "new_id": "review-tests",
+      "old_pack": "measured-engineering-review",
+      "new_pack": "measured-quality",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "test-strategy",
+      "new_id": "plan-tests",
+      "old_pack": "measured-engineering-build",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "typescript-javascript-engineering-profile",
+      "new_id": "stack-typescript-javascript",
+      "old_pack": "measured-stack-profiles",
+      "new_pack": "measured-stacks",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "value-attribution-evidence-maturity",
+      "new_id": "review-value-evidence",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "workflow-retrospective",
+      "new_id": "review-workflow",
+      "old_pack": "measured-reasoning",
+      "new_pack": "measured-workflows",
+      "invocation": "explicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "workshop-planning-synthesis",
+      "new_id": "plan-workshop",
+      "old_pack": "measured-operations",
+      "new_pack": "measured-operations",
+      "invocation": "implicit",
+      "risk_class": "read-only"
+    },
+    {
+      "old_id": "worktree-isolation",
+      "new_id": "assess-worktree-isolation",
+      "old_pack": "measured-engineering-delivery",
+      "new_pack": "measured-workflows",
+      "invocation": "implicit",
+      "risk_class": "bounded-execution"
+    }
+  ],
+  "additions": [
+    "choose-workflow",
+    "design-web-motion"
+  ],
+  "upgrade_guide": "docs/migration-0.19.md"
+}

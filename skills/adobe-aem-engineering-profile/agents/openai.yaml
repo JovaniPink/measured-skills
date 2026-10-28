@@ -1,6 +1,0 @@
-interface:
-  display_name: "Adobe AEM Engineering Profile"
-  short_description: "Reviews AEM code, Sling, OSGi, Dispatcher, and content packages"
-  default_prompt: "Use $adobe-aem-engineering-profile for this task: Reviews AEM code, Sling, OSGi, Dispatcher, and content packages when an Adobe Experience Manager change needs stack-specific checks; follows discovered versions and Cloud Manager authority."
-policy:
-  allow_implicit_invocation: true

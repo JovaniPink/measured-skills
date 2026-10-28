@@ -1,7 +1,0 @@
-interface:
-  display_name: "Requirements Synthesis"
-  short_description: "Combines interviews, documents, and issues"
-  default_prompt: "Use $requirements-synthesis for this task: Combines interviews, documents, and issues when asked to turn conflicting inputs into requirements; traces each requirement to evidence and keeps unresolved decisions visible."
-policy:
-  allow_implicit_invocation: true
-

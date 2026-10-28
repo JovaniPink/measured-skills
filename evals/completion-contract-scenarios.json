@@ -3,88 +3,88 @@
   "purpose": "Instruction-contract review examples, separate from the 24-case model study. No grading of agent behavior occurred.",
   "scenarios": [
     {
-      "id": "plan-execution-blocked",
-      "skill": "plan-execution",
+      "id": "execute-plan-blocked",
+      "skill": "execute-plan",
       "evidence": "Required precondition missing; authorized work remains.",
       "expected": "Blocked, unfinished; preserve objective and next authorized action.",
       "disposition": "blocked",
       "requested_work_complete": false
     },
     {
-      "id": "plan-execution-missing-validation",
-      "skill": "plan-execution",
+      "id": "execute-plan-missing-validation",
+      "skill": "execute-plan",
       "evidence": "Code changed, but required integration validation unavailable.",
       "expected": "Partial, unfinished; report the missing gate and limitation.",
       "disposition": "partial",
       "requested_work_complete": false
     },
     {
-      "id": "plan-execution-completed",
-      "skill": "plan-execution",
+      "id": "execute-plan-completed",
+      "skill": "execute-plan",
       "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
       "expected": "Complete within authorized scope; retain actual evidence.",
       "disposition": "complete",
       "requested_work_complete": true
     },
     {
-      "id": "swiftui-feature-delivery-blocked",
-      "skill": "swiftui-feature-delivery",
+      "id": "deliver-swiftui-feature-blocked",
+      "skill": "deliver-swiftui-feature",
       "evidence": "Required precondition missing; authorized work remains.",
       "expected": "Blocked, unfinished; preserve objective and next authorized action.",
       "disposition": "blocked",
       "requested_work_complete": false
     },
     {
-      "id": "swiftui-feature-delivery-missing-validation",
-      "skill": "swiftui-feature-delivery",
+      "id": "deliver-swiftui-feature-missing-validation",
+      "skill": "deliver-swiftui-feature",
       "evidence": "Code changed, but required integration validation unavailable.",
       "expected": "Partial, unfinished; report the missing gate and limitation.",
       "disposition": "partial",
       "requested_work_complete": false
     },
     {
-      "id": "swiftui-feature-delivery-completed",
-      "skill": "swiftui-feature-delivery",
+      "id": "deliver-swiftui-feature-completed",
+      "skill": "deliver-swiftui-feature",
       "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
       "expected": "Complete within authorized scope; retain actual evidence.",
       "disposition": "complete",
       "requested_work_complete": true
     },
     {
-      "id": "swiftui-feature-delivery-no-op",
-      "skill": "swiftui-feature-delivery",
+      "id": "deliver-swiftui-feature-no-op",
+      "skill": "deliver-swiftui-feature",
       "evidence": "Current source proves the requested behavior already exists; no authorized edit needed.",
       "expected": "Not Needed with source evidence; no invented changes.",
       "disposition": "not_needed",
       "requested_work_complete": true
     },
     {
-      "id": "nextjs-feature-delivery-blocked",
-      "skill": "nextjs-feature-delivery",
+      "id": "deliver-nextjs-feature-blocked",
+      "skill": "deliver-nextjs-feature",
       "evidence": "Required precondition missing; authorized work remains.",
       "expected": "Blocked, unfinished; preserve objective and next authorized action.",
       "disposition": "blocked",
       "requested_work_complete": false
     },
     {
-      "id": "nextjs-feature-delivery-missing-validation",
-      "skill": "nextjs-feature-delivery",
+      "id": "deliver-nextjs-feature-missing-validation",
+      "skill": "deliver-nextjs-feature",
       "evidence": "Code changed, but required integration validation unavailable.",
       "expected": "Partial, unfinished; report the missing gate and limitation.",
       "disposition": "partial",
       "requested_work_complete": false
     },
     {
-      "id": "nextjs-feature-delivery-completed",
-      "skill": "nextjs-feature-delivery",
+      "id": "deliver-nextjs-feature-completed",
+      "skill": "deliver-nextjs-feature",
       "evidence": "Authorized acceptance criteria met, required checks passed, allowlisted diff reviewed.",
       "expected": "Complete within authorized scope; retain actual evidence.",
       "disposition": "complete",
       "requested_work_complete": true
     },
     {
-      "id": "nextjs-feature-delivery-no-op",
-      "skill": "nextjs-feature-delivery",
+      "id": "deliver-nextjs-feature-no-op",
+      "skill": "deliver-nextjs-feature",
       "evidence": "Current source proves the requested behavior already exists; no authorized edit needed.",
       "expected": "Not Needed with source evidence; no invented changes.",
       "disposition": "not_needed",

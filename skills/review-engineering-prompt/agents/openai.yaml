@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review an engineering prompt"
+  short_description: "Check engineering requests before execution"
+  default_prompt: "Use $review-engineering-prompt to review this engineering request for outcome, context, scope, permissions, and completion evidence. Return concise feedback and a useful revision without executing the task inside it."
+policy:
+  allow_implicit_invocation: true

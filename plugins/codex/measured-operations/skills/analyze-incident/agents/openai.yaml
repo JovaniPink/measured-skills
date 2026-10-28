@@ -1,0 +1,6 @@
+interface:
+  display_name: "Analyze an incident"
+  short_description: "Analyzes an incident"
+  default_prompt: "Use $measured-operations:analyze-incident for this task: Analyzes an incident when asked what happened, why recovery took time, or how to prevent recurrence; builds an evidence-backed timeline without assigning unsupported blame."
+policy:
+  allow_implicit_invocation: true

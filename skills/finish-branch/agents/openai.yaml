@@ -1,0 +1,6 @@
+interface:
+  display_name: "Finish a development branch"
+  short_description: "Assesses next steps for a finished branch"
+  default_prompt: "Use $finish-branch for this task: Assesses next steps for a finished branch when explicitly asked to wrap up development; presents PR, retention, or cleanup options without assuming merge or deletion authority."
+policy:
+  allow_implicit_invocation: false

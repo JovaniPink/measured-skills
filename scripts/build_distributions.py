@@ -22,6 +22,9 @@ from cataloglib import (
     skills_by_plugin,
 )
 
+LEGACY_PLUGINS = frozenset(['measured-agent-platforms', 'measured-ai-systems', 'measured-engineering-build', 'measured-engineering-delivery', 'measured-engineering-review', 'measured-nextjs-workflows', 'measured-operations', 'measured-reasoning', 'measured-skills', 'measured-stack-profiles', 'measured-swift-workflows'])
+OWNED_PLUGINS = frozenset(PLUGIN_SPECS) | LEGACY_PLUGINS
+
 PLUGIN_ICON = ROOT / ".claude-plugin" / "icon.svg"
 
 
@@ -164,7 +167,7 @@ def _validate_generated_parent(parent: Path) -> None:
         raise ValueError(f"unsafe distribution parent: {parent}")
     if parent.exists():
         for child in parent.iterdir():
-            if child.name not in PLUGIN_SPECS or child.is_symlink() or not child.is_dir():
+            if child.name not in OWNED_PLUGINS or child.is_symlink() or not child.is_dir():
                 raise ValueError(f"unowned or unsafe distribution entry: {child}")
 
 
@@ -172,7 +175,7 @@ def _remove_obsolete(parent: Path, expected: set[str]) -> None:
     for child in parent.iterdir():
         if child.name not in expected:
             # The complete set of parents and children was validated before any reset.
-            if child.is_symlink() or not child.is_dir() or child.name not in PLUGIN_SPECS:
+            if child.is_symlink() or not child.is_dir() or child.name not in OWNED_PLUGINS:
                 raise ValueError(f"unsafe obsolete distribution: {child}")
             shutil.rmtree(child)
 

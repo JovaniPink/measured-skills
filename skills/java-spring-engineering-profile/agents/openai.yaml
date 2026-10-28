@@ -1,6 +1,0 @@
-interface:
-  display_name: "Java and Spring Engineering Profile"
-  short_description: "Reviews Java and Spring changes"
-  default_prompt: "Use $java-spring-engineering-profile for this task: Reviews Java and Spring changes when transactions, concurrency, services, dependencies, or JVM compatibility need focused checks; follows repository wrappers and toolchains."
-policy:
-  allow_implicit_invocation: true

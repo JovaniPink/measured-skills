@@ -1,6 +1,0 @@
-interface:
-  display_name: "Multi-Agent Orchestration"
-  short_description: "Coordinates bounded delegated work"
-  default_prompt: "Use $multi-agent-orchestration for this task: Coordinates delegated work when explicitly asked for independent workers or a bounded reviewer; defines ownership, evidence, and budgets without duplicating edits or delegating irreversible decisions."
-policy:
-  allow_implicit_invocation: false

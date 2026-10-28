@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review accessibility"
+  short_description: "Reviews accessibility"
+  default_prompt: "Use $measured-quality:review-accessibility for this task: Reviews accessibility when asked to check keyboard access, screen-reader behavior, focus, contrast, or WCAG requirements; incomplete testing cannot establish conformance."
+policy:
+  allow_implicit_invocation: true

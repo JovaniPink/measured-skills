@@ -1,12 +1,14 @@
 # Codex setup
 
+**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+
 For everyday feature work, use the [step-by-step prompts and fast path](../feature-development-workflow.md#codex-prompts).
 Check the installed skill entry before using a prompt. Dated observations below
 apply to their recorded versions, not every current installation.
 
 Use the generated Codex plugin for terminal or desktop code work. Check ChatGPT Work and web separately. They may have different loading and file access.
 
-Check the [current candidate record](../client-candidate-v0.18.0.md) before enabling an update. The former engineering pack was held from 0.12.0, when an original motion safety case failed. That hold was lifted on 2026-09-10 after all ten original cases met their expectation on CLI 0.153.2 at 0.14.0. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps that history. It does not carry over to the three packs that replaced the former pack. Codex CLI 0.154.0 copies each added plugin into `plugins/cache/<marketplace>/<plugin>/<version>/` under its home folder, and `codex plugin remove` deletes that copy. A changed checkout is therefore not the installed version until the plugin is added again. Compare the cached files, not the checkout.
+Check the [0.19 preview record](../client-candidate-v0.19.0.md) before enabling an update. The former engineering pack was held from 0.12.0, when an original motion safety case failed. That hold was lifted on 2026-09-10 after all ten original cases met their expectation on CLI 0.153.2 at 0.14.0. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps that history. It does not carry over to the three packs that replaced the former pack. Codex CLI 0.154.0 copies each added plugin into `plugins/cache/<marketplace>/<plugin>/<version>/` under its home folder, and `codex plugin remove` deletes that copy. A changed checkout is therefore not the installed version until the plugin is added again. Compare the cached files, not the checkout.
 
 ## Check what is there
 
@@ -25,14 +27,14 @@ Replace the example path with your local checkout. These commands change your in
 
 ```sh
 codex plugin marketplace add /absolute/path/to/skills
-codex plugin add measured-skills@measured-skills
+codex plugin add measured-quality@measured-skills
 codex plugin list --json
 ```
 
 Open a fresh task after the install. Select a skill by its full plugin name:
 
 ```text
-$measured-skills:claim-verification Check which completion claims have evidence. Make no changes.
+$measured-quality:verify-claims Check which completion claims have evidence. Make no changes.
 ```
 
 For skills that require direct selection, the generated `agents/openai.yaml` sets `allow_implicit_invocation: false`. Test that behavior before relying on it.

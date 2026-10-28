@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review what is safe to publish"
+  short_description: "Reviews material before public exposure"
+  default_prompt: "Use $measured-quality:review-public-boundary for this task: Reviews material before public exposure when asked to check for secrets, private identifiers, proprietary text, or unsupported claims; keeps private context out of public artifacts."
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "GCP Data Engineering Profile"
-  short_description: "Review BigQuery, incremental models, and GCP pipelines"
-  default_prompt: "Use $measured-stack-profiles:gcp-data-engineering-profile to review the supplied BigQuery plan, incremental model, or GCP pipeline for its data contracts and evidence gaps without assuming cloud access."
-policy:
-  allow_implicit_invocation: true

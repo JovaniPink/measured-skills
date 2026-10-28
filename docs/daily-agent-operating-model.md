@@ -1,12 +1,15 @@
 # Use the skills in daily work
 
+**0.19 preview:** [Find your next workflow](start.md). Start with finishing existing work; commands and package identities differ from 0.18. No new client acceptance is implied.
+
+
 After the first push, use [finish and maintain a draft PR](finish-existing-work.md#finish-and-maintain-a-draft-pr)
 for bounded review, CI follow-up, evidence-based repairs, and an honest handoff.
 It preserves the draft state and requires explicit authority for technical replies.
 
 For unfinished changes and repairs, use [Finish existing work](finish-existing-work.md).
 
-Start with one task and the smallest useful selection. The 0.18.0 candidate
+Start with one task and the smallest useful selection. The 0.19.0 preview
 includes `daily-engineering-experimental`, a 12-skill selection for planning,
 diagnosis, review, tests, Python, and GCP data work. Bounded Claude trials found
 selection and output errors. Those observations do not qualify the profile or

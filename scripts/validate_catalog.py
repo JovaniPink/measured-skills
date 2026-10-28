@@ -440,12 +440,19 @@ def _validate_owned_origin(entry: dict[str, object], errors: list[str]) -> None:
         errors.append(f"provenance/catalog.json: {entry.get('skill')} adaptation requires owned_origin")
         return
     skill = entry.get("skill")
+    origin_skill = skill
+    migration_path = ROOT / 'catalog/migrations/0.18-to-0.19.json'
+    if migration_path.is_file():
+        migration = json.loads(migration_path.read_text())
+        matches = [r for r in migration['entries'] if r['new_id'] == skill]
+        if len(matches) == 1:
+            origin_skill = matches[0]['old_id']
     revision = origin.get("revision")
     entrypoint = origin.get("entrypoint")
     if (not isinstance(revision, str) or re.fullmatch(r"[0-9a-f]{40}", revision) is None or
             revision != entry.get("pinned_revision") or
             not isinstance(skill, str) or re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", skill) is None or
-            entrypoint != f"skills/{skill}/SKILL.md" or origin.get("license") != "MIT"):
+            entrypoint != f"skills/{origin_skill}/SKILL.md" or origin.get("license") != "MIT"):
         errors.append(f"provenance/catalog.json: {skill} has an invalid owned origin identity")
         return
     try:

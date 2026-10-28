@@ -1,6 +1,0 @@
-interface:
-  display_name: "Retrieval Grounding Quality Review"
-  short_description: "Reviews retrieval and citations"
-  default_prompt: "Use $measured-agent-platforms:retrieval-grounding-quality-review for this task: Reviews retrieval and citations when an agent finds irrelevant evidence, misses sources, or makes unsupported claims; checks permissions and grounding separately from the broader agent threat model."
-policy:
-  allow_implicit_invocation: true

@@ -10,7 +10,7 @@ from typing import TypedDict
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.18.0"
+VERSION = "0.19.0"
 CATALOG_NAME = "measured-skills"
 PLUGIN_CATEGORY = "Developer Tools"
 
@@ -23,75 +23,7 @@ class PluginSpec(TypedDict):
     keywords: list[str]
 
 
-PLUGIN_SPECS: dict[str, PluginSpec] = {
-    "measured-nextjs-workflows": {
-        "display_name": "Measured Next.js Workflows",
-        "description": "Bounded Next.js delivery, cache and authorization review, and measured React performance diagnosis.",
-        "short_description": "Focused Next.js workflows",
-        "keywords": ["skills", "nextjs", "verification"],
-    },
-    "measured-swift-workflows": {
-        "display_name": "Measured Swift Workflows",
-        "description": "Bounded SwiftUI delivery, concurrency diagnosis, persistence review, and fixture journey verification.",
-        "short_description": "Focused Swift workflows",
-        "keywords": ["skills", "swift", "verification"],
-    },
-    "measured-skills": {
-        "display_name": "Measured Skills",
-        "description": "Portable evidence, diagnosis, quality, publication, and skill-security workflows.",
-        "short_description": "Evidence-oriented workflows for Codex",
-        "keywords": ["skills", "research", "diagnosis", "quality", "security"],
-    },
-    "measured-engineering-build": {
-        "display_name": "Measured Engineering Build",
-        "description": "Frame outcomes, design interfaces, plan vertical slices, and test behavior.",
-        "short_description": "Design and build cohesive software",
-        "keywords": ["skills", "engineering", "architecture", "testing"],
-    },
-    "measured-engineering-review": {
-        "display_name": "Measured Engineering Review",
-        "description": "Review correctness, compatibility, security, operations, and test quality.",
-        "short_description": "Risk-focused engineering review",
-        "keywords": ["skills", "review", "security", "quality"],
-    },
-    "measured-engineering-delivery": {
-        "display_name": "Measured Engineering Delivery",
-        "description": "Coordinate bounded execution, isolated work, review handoffs, and delivery evidence.",
-        "short_description": "Bounded execution and delivery workflows",
-        "keywords": ["skills", "delivery", "git", "execution"],
-    },
-    "measured-stack-profiles": {
-        "display_name": "Measured Stack Profiles",
-        "description": "Optional language and infrastructure engineering profiles.",
-        "short_description": "Stack-specific engineering guidance for Codex",
-        "keywords": ["skills", "engineering", "languages", "infrastructure"],
-    },
-    "measured-operations": {
-        "display_name": "Measured Operations",
-        "description": "Portable requirements, decision, measurement, adoption, and incident workflows.",
-        "short_description": "Operating and decision workflows for Codex",
-        "keywords": ["skills", "operations", "decisions", "measurement"],
-    },
-    "measured-reasoning": {
-        "display_name": "Measured Reasoning",
-        "description": "Portable alignment, explanation, impact, writing, evidence, and skill-authoring workflows.",
-        "short_description": "Reasoning and communication workflows for Codex",
-        "keywords": ["skills", "reasoning", "writing", "architecture", "evidence"],
-    },
-    "measured-ai-systems": {
-        "display_name": "Measured AI Systems",
-        "description": "Optional AI evaluation, context reliability, and source-to-output conformance workflows.",
-        "short_description": "AI reliability workflows for Codex",
-        "keywords": ["skills", "ai", "evaluation", "context", "conformance"],
-    },
-    "measured-agent-platforms": {
-        "display_name": "Measured Agent Platforms",
-        "description": "Human-facing agent architecture, security, tooling, context, protocol, retrieval, and Google ADK workflows.",
-        "short_description": "Agent platform engineering workflows for Codex",
-        "keywords": ["skills", "agents", "adk", "security", "retrieval"],
-    },
-}
-
+PLUGIN_SPECS: dict[str, PluginSpec] = {'measured-workflows': {'display_name': 'Measured Workflows', 'description': 'Find a route, understand the work, plan, repair, and deliver within authority.', 'short_description': 'Workflows for focused engineering work', 'keywords': ['skills', 'workflows', 'engineering']}, 'measured-quality': {'display_name': 'Measured Quality', 'description': 'Check behavior, evidence, compatibility, security, and operational boundaries.', 'short_description': 'Quality for focused engineering work', 'keywords': ['skills', 'quality', 'engineering']}, 'measured-stacks': {'display_name': 'Measured Stacks', 'description': 'Apply language and platform guidance after discovering the project.', 'short_description': 'Stacks for focused engineering work', 'keywords': ['skills', 'stacks', 'engineering']}, 'measured-operations': {'display_name': 'Measured Operations', 'description': 'Clarify requirements, decisions, adoption, measurement, and incident learning.', 'short_description': 'Operations for focused engineering work', 'keywords': ['skills', 'operations', 'engineering']}}
 
 def split_frontmatter(text: str) -> tuple[str, str]:
     if not text.startswith("---\n"):

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Implementation Planning"
-  short_description: "Plans a change"
-  default_prompt: "Use $implementation-planning for this task: Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization."
-policy:
-  allow_implicit_invocation: true

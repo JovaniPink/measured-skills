@@ -1,7 +1,0 @@
-interface:
-  display_name: "Python Engineering Profile"
-  short_description: "Reviews Python changes"
-  default_prompt: "Use $python-engineering-profile for this task: Reviews Python changes when typing, async code, packaging, dependencies, or tests need focused checks; follows discovered Python versions and repository commands."
-policy:
-  allow_implicit_invocation: true
-
