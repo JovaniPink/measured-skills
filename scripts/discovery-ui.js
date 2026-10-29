@@ -59,6 +59,7 @@
       r.modes.forEach(m => {
         const detail = make("details", "", article);
         detail.dataset.actionScope = m.id;
+        detail.open = r.id === data.default_route && m.id === "assess";
         const summary = make("summary", m.label, detail);
         summary.addEventListener("click", () => { copyVersion += 1; status.textContent = ""; });
         make("p", m.scope, detail);

@@ -229,7 +229,7 @@ def build_data(revision: str, root: Path = ROOT, verify_source: bool = True) -> 
 
 def markdown(data: dict[str, Any], bundled: bool = False) -> str:
     lines = ['# Find your next workflow', '', 'Generated from one shared workflow registry. 0.19.0 preview, not released.', '',
-             'Start with **Finish existing work**. Choose a task and action scope; then use the prompt for your client.', '',
+             'Start with **Finish existing work**, then **Find out what remains - no edits** if you need to recover the state. Provide the repository and unfinished task or PR. The assistant discovers the branch and any saved plan. Repair and publication are separate choices.', '',
              'Selection is not execution. Check the installed version and entry first. If missing, use ordinary task wording and report that no skill loaded.', '',
              'Codex: select the matching installed entry; duplicate names require source checks. Claude Code: one leading command is portable across interfaces. Antigravity: ordinary requests preserve all explicit-only exclusions.', '',
              'Web accounts require their own uploaded source and loading checks; local installation does not establish web availability.', '',
@@ -277,7 +277,7 @@ def offline_html(data: dict[str, Any], root: Path = ROOT) -> str:
     e = html.escape
     cards = []
     for r in data['routes']:
-        modes = ''.join('<details><summary>' + e(m['label']) + '</summary><p>' + e(m['scope']) + '</p>' +
+        modes = ''.join('<details data-action-scope="' + e(m['id']) + '"' + (' open' if r['id'] == data['default_route'] and m['id'] == 'assess' else '') + '><summary>' + e(m['label']) + '</summary><p>' + e(m['scope']) + '</p>' +
                         ''.join('<h4>' + e(data['clients'][c]) + '</h4><p>' + e(m['action_guidance'][c]) + '</p><p>Ordinary request; no skill loading is implied.</p><pre tabindex="0">' + e(m['ordinary_prompts'][c]) + '</pre>' +
                                 ('<details><summary>Use a verified installed entry</summary><pre tabindex="0">' + e(p) + '</pre></details>' if p != m['ordinary_prompts'][c] else '')
                                 for c, p in m['prompts'].items()) + '</details>' for m in r['modes'])

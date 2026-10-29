@@ -5,16 +5,34 @@ Start with [the offline chooser](../dist/discovery/index.html) or its
 locally; GitHub shows its source. It needs no server, login, network or installation.
 The Studio's `/skills` page uses the same revision-pinned records when published.
 
-**Finish existing work** is the first route. Choose the finish line you mean:
+## Start with the unfinished task
 
-- Assess and plan: inspect current state and recommend the next repair.
-- Repair and verify locally: edit the scoped change and run relevant checks.
-- Maintain this draft PR: commit, push normally, update the named draft and reply
-  technically to existing findings within the stated three-round/30-minute limits.
+Choose **Finish existing work**. If you need to know where things stand, use
+**Find out what remains - no edits**, which is already expanded in the chooser.
+You only need the repository and the task or PR. You do not need to know the
+branch, comparison revision, skill name, or plan filename: the assistant discovers
+those from the project and asks if it cannot identify the target safely.
 
-Selecting a card executes nothing. Sending the copied request grants only its
-stated scope. Replace placeholders, verify the checkout, and check the installed
-entry before relying on a command. A familiar response does not prove a skill loaded.
+For example, a fictional half-finished PR might produce: "The API repair is
+present; the browser recovery path is unverified. Next, inspect that path before
+choosing a repair." That is an assessment, not a claim that the feature works.
+
+Choose another finish line only when you want it:
+
+| Choice | What you receive | What it permits |
+| --- | --- | --- |
+| Find out what remains - no edits | Done, unfinished, uncertain and blocked work, with evidence and one next step | Inspection of existing evidence; no edits or test runs |
+| Finish a local repair - no push | A scoped repair, relevant check results and remaining gaps | Local edits and checks; no commits or external writes |
+| Update this draft PR - no merge | Scoped commits, draft updates and an exact-revision handoff | Ordinary pushes and technical replies to existing findings on the named PR, within three review rounds and 30 minutes of cumulative waiting |
+
+Select your client and leave **Ordinary request** selected unless you have verified
+the installed skill entry. Copy the request, replace its placeholders, and send it
+to your assistant. The chooser does not run anything. The request's scope takes
+effect when you send it; preserve any narrower constraints you already set.
+
+You can stop after the assessment. If you choose repair, use its identified next
+step as context; do not restart a planning exercise for an already clear change.
+A familiar response does not prove that a skill loaded or that work is complete.
 
 ## Use the guide with the skills you actually have
 

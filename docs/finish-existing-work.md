@@ -18,6 +18,20 @@ The prompts use 0.19 names. Check [the installed-entry guidance](start.md#use-th
 before sending a native command, and preserve current constraints when adapting
 a request. Missing skills do not authorize installation or new external actions.
 
+## Start without knowing the skill names
+
+Use [the chooser's first action](../dist/discovery/index.html#finish-work),
+**Find out what remains - no edits**, when you need an assessment. Provide the
+repository and unfinished task or PR; let the assistant discover the branch and
+any saved plan. Expect a short list of done, unfinished, uncertain and blocked
+work, evidence, and one next step. This action does not run tests or change files.
+
+**Finish a local repair - no push** authorizes local edits and relevant checks.
+**Update this draft PR - no merge** also permits the named draft's scoped commits,
+ordinary pushes, updates and technical replies, within its existing budgets.
+See [the short starting guide](start.md#start-with-the-unfinished-task) before
+using the more detailed editing prompts below.
+
 ## Choose the next useful step
 
 | Situation | Start with | Result needed before moving on |
@@ -142,7 +156,7 @@ requests below are ordinary user instructions; they do not invoke or reproduce a
 excluded skill. Use actual commands shown by the installed client for eligible
 skills rather than inventing a portable slash spelling.
 
-## Full finish-work prompts
+## Full local-repair prompts (editing authorized)
 
 Replace `[REPOSITORY]`, `[CHANGE]`, `[PLAN_FILE_OR_APPROVED_TEXT]`, and
 `[BASE_REVISION]`. A missing plan can be recovered from supplied approved text or

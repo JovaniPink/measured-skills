@@ -17,6 +17,44 @@ import canonical_deltas  # noqa: E402
 
 
 class MigrationTests(unittest.TestCase):
+    def test_only_default_assessment_is_expanded_without_javascript(self) -> None:
+        from html.parser import HTMLParser
+
+        class Disclosures(HTMLParser):
+            def __init__(self) -> None:
+                super().__init__()
+                self.open_scopes: list[str | None] = []
+
+            def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+                values = dict(attrs)
+                if tag == 'details' and 'open' in values:
+                    self.open_scopes.append(values.get('data-action-scope'))
+
+        data = json.loads((ROOT / discovery.EXPORT).read_text())
+        parser = Disclosures()
+        parser.feed(discovery.offline_html(data))
+        self.assertEqual(['assess'], parser.open_scopes)
+        # Reordering modes cannot silently recommend a write action.
+        data['routes'][0]['modes'].reverse()
+        parser = Disclosures()
+        parser.feed(discovery.offline_html(data))
+        self.assertEqual(['assess'], parser.open_scopes)
+
+    def test_finish_assessment_needs_no_git_or_plan_placeholder(self) -> None:
+        data = json.loads((ROOT / discovery.REGISTRY).read_text())
+        route = next(r for r in data['routes'] if r['id'] == 'finish-work')
+        mode = next(m for m in route['modes'] if m['id'] == 'assess')
+        for client, prompt in mode['prompts'].items():
+            with self.subTest(client=client):
+                self.assertEqual({'REPOSITORY', 'TASK or PR_URL'}, set(re.findall(r'\[([^]]+)\]', prompt)))
+                ordinary = discovery.ordinary_prompt(prompt, client)
+                self.assertFalse(ordinary.startswith(('$', '/')))
+                self.assertIn('Do not edit files or run tests, builds, installs', ordinary)
+                self.assertIn('do not commit, push, post replies', ordinary)
+        maintained = next(m for m in route['modes'] if m['id'] == 'maintain')
+        separate = next(r for r in data['routes'] if r['id'] == 'maintain-pr')
+        self.assertEqual(maintained['prompts'], next(m for m in separate['modes'] if m['id'] == 'maintain')['prompts'])
+
     def test_action_entries_participate_in_historical_name_lookup(self) -> None:
         registry = json.loads((ROOT / discovery.REGISTRY).read_text())
         migration = json.loads((ROOT / discovery.MIGRATION).read_text())
