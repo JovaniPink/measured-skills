@@ -11,7 +11,101 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 312 regression tests.
+Current test suite: 316 regression tests.
+
+## October 29: fresh review of draft 79
+
+At `c819241`, workflow checks, strict mypy, Ruff, generated distributions,
+deterministic validation, all 316 regression tests, and whitespace checks passed
+locally. Two independent builds of all 90 Claude archives matched each other and
+the tracked bytes. Environment: macOS arm64, Python 3.14.7, mypy 1.20.2 and
+Ruff 0.15.12. This does not duplicate hosted Linux/Python 3.12.
+
+The review input head `263a1fc` had passing
+[hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/40945878086).
+Paginated inline and discussion comments were empty at that observation. The two
+[review findings](audits/post-merge-review-2026-10-28.md#october-29-visible-copy-feedback-and-local-verification-scope)
+were repaired: local checks are explicit in copied finish-work requests, and copy
+feedback appears beside the clicked button. In the in-app browser over loopback,
+feedback moved from about 5,115 pixels below the viewport to about 408 pixels from
+its top, in a 720-pixel-high viewport. Copy succeeded for assessment and repair;
+changing clients cleared feedback. The Antigravity repair boundary stayed visible.
+Clipboard rejection and delayed completion were traced, not simulated in this pass.
+
+Discovery inputs are `5bdf108`; source/artifact commit `34be842` is bound by the
+separate manifest commit `c819241`. Inventory, profiles, invocation policy,
+Antigravity exclusions and the preserved 0.18 manifest remain unchanged. A subsequent
+evidence-only commit records these results without changing the tested implementation.
+Hosted validation must be read for its own exact head. Human selection, installed
+client behavior, file-URL automation, Safari, mobile and M5 acceptance remain separate.
+No model trial, billing change, installation, merge, deployment or release occurred.
+
+## October 29: finish-work starting point
+
+At `9cf4c71`, workflow checks, strict mypy, Ruff, generated distributions,
+deterministic validation, all 316 regression tests, and whitespace checks passed
+locally. The two added regressions first failed against the prior behavior: the
+assessment was not expanded, and its request required comparison/plan placeholders.
+They now cover the read-only default even when actions are reordered, the two-input
+assessment across five clients, and identical maintenance prompts at both entry points.
+
+The discovery input commit is `c2c8f27`; source/artifact commit `32bad2e` is bound
+by the separate manifest commit `9cf4c71`. Two independent builds of all 90 Claude
+archives matched the tracked bytes. Skill inventory, profiles, invocation policies,
+Antigravity exclusions, and the preserved 0.18 manifest are unchanged.
+
+The in-app browser over loopback showed the expanded assessment, ordinary-request
+default, "what remains" lookup, Antigravity repair availability, Claude native
+selection, successful copying, and task navigation. The static-markup regression
+covers the non-JavaScript disclosure; no JavaScript-disabled browser run is claimed.
+These are operator observations, not uncoached participant or installed-client
+acceptance. File-URL automation, Safari, mobile and the second Mac remain unverified.
+
+The environment remains macOS arm64 with Python 3.14.7, mypy 1.20.2 and Ruff 0.15.12;
+local execution does not duplicate hosted Linux/Python 3.12. Website snapshots and
+installed copies retain their own identities. The subsequent evidence-only commit
+does not change the tested implementation or artifact binding. No new online-source
+scan, model trial, billing change, installation, merge, deployment or release occurred.
+
+## October 29: local qualification of the chooser repair
+
+At `fd4a45a6f282643ca114a41ceb99e39cb822c0c8`, workflow syntax, strict mypy,
+Ruff, generated-distribution checks, deterministic catalog validation, all 314
+unit/integration regression tests, and whitespace checks passed locally. The
+suite includes export, migration, packaging, authority and failure-path fixtures.
+Two independent generations of all 90 Claude archives matched each other and
+the tracked archive bytes; generation used temporary directories.
+
+Environment: macOS arm64, Python 3.14.7, mypy 1.20.2 and Ruff 0.15.12. This
+executes the repository's checks locally; it does not reproduce the hosted
+Python 3.12/Linux environment or its hash-locked installation step. The existing
+[hosted run for the same head](https://github.com/JovaniPink/measured-skills/actions/runs/40798672285)
+also passed; it was read, not rerun.
+
+In the in-app browser, the same discovery files served on loopback demonstrated
+historical-name lookup for `plan-execution`, the three corresponding routes,
+Antigravity's ordinary-request and explicit-only boundary, Claude native-command
+selection, successful copying, clearing copy feedback after a client change, and
+restoring the `#finish-work` bookmark after reload. This was an operator check,
+not an installed-client trial or participant acceptance. Direct file navigation
+was unavailable to the browser tool; the loopback observation does not establish
+file-URL behavior, Safari, mobile, or second-Mac acceptance.
+
+No new implementation defect was established in this bounded pass. Human chooser
+acceptance remains incomplete: no independent selection or timing result was
+recorded. No model evaluation, installation, billing change, merge, deployment
+or release occurred. The evidence documentation update is separate from the
+tested implementation revision; package and manifest identities are unchanged.
+
+## October 28: post-merge chooser repair
+
+The automatic hosted run for `fba22e6` ran 314 tests and reported one failure:
+this document still listed 312 after two regression definitions were added.
+The receipt is corrected without claiming that failed run passed. Its preceding
+workflow, typing, lint, distribution and deterministic steps completed; local
+test suites were not rerun under the user's source-review-only instruction.
+Final hosted results belong to the exact subsequent head. Human chooser and
+installed-client acceptance remain unrun.
 
 ## October 28: action-specific availability
 

@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "87b9741ba3dc8133974bd0ba38b74338fad9ead5",
-  "created_on": "2026-10-28",
+  "source_commit": "34be842a94aa2411a4a4844274e98df196ff4d61",
+  "created_on": "2026-10-29",
   "artifacts": [
     {
       "kind": "file",
@@ -82,7 +82,7 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "f8f826ed48e40181a29305e5c86c046fdff8a8b8a11af8313fa631c6fa9ca54a"
+      "sha256": "a39dc8a72e248dd9a7a7513b36ffd48b3d603c3e5c7ef9b8df3764f91c1bb047"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "86b027f29a710711324db625802ed5f75cc40ae701f62857ada3c3826ff7b5fd"
+      "sha256": "49bfc41c4204ae7eba8d0d20a8df656e1a2c4c9eb8a01b49f0b08682e0c5e9df"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "cc10a7eb96eea9025c9c5980ca802e261180b621c8f2aab7c9fafc95d37eefae"
+      "sha256": "8b60c6f46a240f4f4474c8b00b5a9c2b399d91a4af2840d6cde5228044589779"
     },
     {
       "kind": "file",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "1143fac643c22561b75d1c39a9522fbff451c878e357594e3188e19ba94959ee"
+      "sha256": "d4125540bba8a6fba32c8e4b3c786f6ce2fee5646c7b95aab5440170ec74e8e0"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "23ac35ccca8a85d14d0b4649a40917bc10d5fa0776645d6bddc4df5985411e37"
+      "sha256": "15b9a12ca74d82a9a1a1045ce52c4096acdea1462ab8a8c89a1d42c233f4f10d"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "ec923c75513512e3e0e40634654180c9dd0b513000a4a390feff877a6c717f4a"
+      "sha256": "cd923921ad88ff0f6dbb26a7c08eb4470da821574f41571f1999d0751b794f36"
     },
     {
       "kind": "file",

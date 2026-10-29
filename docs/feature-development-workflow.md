@@ -22,7 +22,7 @@ Use the [Codex prompts](#codex-prompts), [Claude Code prompts](#claude-code-prom
 or [Antigravity prompts](#antigravity-prompts). Each section has a step-by-step
 path and a three-request fast path. These are authored prompts, not a claim that
 a client has passed this workflow. The catalog is a 0.19.0 preview; see
-[current release readiness](release-readiness-2026-10-20.md).
+[current release status](release-status.md).
 
 ## Before you start
 
@@ -148,8 +148,10 @@ trace. Distinguish three things: the skill was selected, its instructions loaded
 and the answer met the task's requirements. An answer that sounds right proves
 none of the preceding loading steps. If a skill is missing or a duplicate name
 has an unclear source, report that fact. Do not install another copy or claim a
-successful invocation. The user can select the correct entry or explicitly
-choose ordinary assistance without that skill.
+successful invocation. Select the correct installed entry or remove an unavailable
+command prefix and use ordinary assistance within the already authorized scope.
+Follow the [missing-entry guidance](start.md#use-the-guide-with-the-skills-you-actually-have);
+do not manufacture a new approval requirement for work the user already requested.
 
 These examples target the named installed packs. A staged pilot wrapper or a
 project-local skill may have a different name in the selector. Use the actual

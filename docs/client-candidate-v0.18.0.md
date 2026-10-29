@@ -1,6 +1,11 @@
 # Measured Skills owned workflow candidate
 
-## Current planning checkpoint, October 26
+## Preserved candidate, reconciled October 28
+
+PR #72 merged; this candidate is not a published release. Its final branch head is
+`cd9ff2417a5b6ca468642fad2da179dbebd99cbd`. Current `main` contains the 0.19 redesign,
+so counts below describe this preserved candidate rather than the current tree.
+See [merged state and remaining gates](release-status.md) before selecting a source.
 
 The candidate contains 88 skills in 11 packs: 88 Codex and Claude skills and
 71 implicit Antigravity skills, with 17 explicit-only exclusions. Read the

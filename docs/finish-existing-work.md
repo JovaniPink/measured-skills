@@ -12,7 +12,25 @@ next useful repair, and show what remains. For a new idea, use the
 
 These are prepared workflows, not observed client results. The catalog remains
 a 0.19.0 preview. See the [coverage assessment and twelve worked cases](audits/finish-work-coverage-2026-10-26.md)
-and [release limits](release-readiness-2026-10-20.md).
+and [current release limits](release-status.md).
+
+The prompts use 0.19 names. Check [the installed-entry guidance](start.md#use-the-guide-with-the-skills-you-actually-have)
+before sending a native command, and preserve current constraints when adapting
+a request. Missing skills do not authorize installation or new external actions.
+
+## Start without knowing the skill names
+
+Use [the chooser's first action](../dist/discovery/index.html#finish-work),
+**Find out what remains - no edits**, when you need an assessment. Provide the
+repository and unfinished task or PR; let the assistant discover the branch and
+any saved plan. Expect a short list of done, unfinished, uncertain and blocked
+work, evidence, and one next step. This action does not run tests or change files.
+
+**Finish a local repair - no push** authorizes local edits and relevant checks.
+**Update this draft PR - no merge** also permits the named draft's scoped commits,
+ordinary pushes, updates and technical replies, within its existing budgets.
+See [the short starting guide](start.md#start-with-the-unfinished-task) before
+using the more detailed editing prompts below.
 
 ## Choose the next useful step
 
@@ -138,12 +156,13 @@ requests below are ordinary user instructions; they do not invoke or reproduce a
 excluded skill. Use actual commands shown by the installed client for eligible
 skills rather than inventing a portable slash spelling.
 
-## Full finish-work prompts
+## Full local-repair prompts (editing authorized)
 
 Replace `[REPOSITORY]`, `[CHANGE]`, `[PLAN_FILE_OR_APPROVED_TEXT]`, and
 `[BASE_REVISION]`. A missing plan can be recovered from supplied approved text or
 current requirements; do not invent a previous decision. Paste into chat, not a shell.
 These requests authorize scoped repair and local checks, stopping before publication.
+Provider-backed verification and production access need separate authorization.
 
 ### Codex
 
@@ -154,7 +173,8 @@ files, and resolve [BASE_REVISION]. Reconcile completed, unfinished, uncertain,
 and unrelated work with current evidence. Preserve existing authorization and
 unrelated changes. Diagnose unexplained failures and assess review feedback before
 editing. Plan only what remains, then implement the understood repairs and run
-relevant local checks. Use the applicable stack profile when available. Review the
+relevant local checks. Provider-backed checks, production access and additional
+model calls require separate authorization for this task. Use the applicable stack profile when available. Review the
 exact diff in a findings-only pass, repair confirmed findings within scope, rerun
 affected checks, and verify every acceptance condition. Keep unavailable checks
 and blockers explicit. Leave concise evidence and continuation notes; do not
@@ -174,6 +194,8 @@ dirty files, and [BASE_REVISION]. Reconcile the plan with current evidence and
 preserve unrelated work and existing authorization. Diagnose unexplained failures,
 assess review findings, and plan only the remaining repairs. Then implement those
 repairs and run the relevant local checks using the applicable stack guidance.
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task.
 Review the exact diff without edits during that pass; repair confirmed findings
 within scope, rerun affected checks, and verify the acceptance conditions. Return
 concise evidence, unresolved blockers, and continuation notes. Do not commit, push,
@@ -188,7 +210,8 @@ In [REPOSITORY], finish [CHANGE] from [PLAN_FILE_OR_APPROVED_TEXT] against
 plan first. Preserve unrelated work and existing authorization. Use available
 plan-change, diagnose-failure, address-review, and the
 relevant engineering profile as needed. Plan only what remains; I authorize the
-scoped repairs and local checks. Review the resulting diff in a findings-only pass,
+scoped repairs and local checks. Provider-backed checks, production access and
+additional model calls require separate authorization for this task. Review the resulting diff in a findings-only pass,
 repair confirmed findings within scope, rerun affected checks, and verify each
 acceptance condition. Keep missing evidence and unavailable checks explicit.
 Leave continuation notes. Do not load excluded explicit-only workflows, change
@@ -220,8 +243,9 @@ its exact text if writing is unavailable. Do not implement or publish yet.
 
 ```text
 Implement the identified repairs in [PLAN_FILE_OR_APPROVED_TEXT] in [REPOSITORY].
-I authorize scoped edits and relevant local checks. Preserve unrelated work and
-existing constraints. Use diagnosis and review-response guidance where needed.
+I authorize scoped edits and relevant local checks. Provider-backed checks,
+production access and additional model calls require separate authorization for
+this task. Preserve unrelated work and existing constraints. Use diagnosis and review-response guidance where needed.
 Review the exact diff without editing during review; repair confirmed findings,
 rerun affected checks, then verify all acceptance conditions. Report current
 revision and uncommitted state, evidence, and unfinished work. Do not commit,
@@ -251,7 +275,8 @@ evidence, and propose the smallest repair. Do not edit or call providers yet."
 **Review response (`address-review`):** "Assess [FINDINGS] against the
 current [CHANGE] in [REPOSITORY]. Explain which are supported, already addressed,
 or need clarification. Repair supported findings within the approved scope, run
-affected checks, and review the revised diff. Do not post replies or push."
+affected local checks, and review the revised diff. Provider-backed checks, production
+access and additional model calls need separate task authorization. Do not post replies or push."
 
 **Journey verification (`verify-claims` plus the relevant profile):**
 "Check whether [JOURNEY] meets [ACCEPTANCE_CONDITIONS] at the current revision.
@@ -367,7 +392,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.
@@ -397,7 +423,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.
@@ -428,7 +455,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.

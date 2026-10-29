@@ -6,15 +6,23 @@ Equal priority does not mean every feature already works everywhere. We record w
 
 ## Start with your client
 
+These are 0.19 preview package counts, not installed-client acceptance. Start
+with [the task chooser](start.md); verify the installed version and entry before
+using a command.
+
 | Client | What we prepare | Where to start |
 | --- | --- | --- |
-| Codex | Native plugins with all 88 skills | [Codex setup](clients/codex.md) |
-| Claude Code | Native plugins with all 88 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
-| Antigravity | Native plugins with 71 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
+| Codex | Native plugins with all 90 skills | [Codex setup](clients/codex.md) |
+| Claude Code | Native plugins with all 90 skills; separate ZIP files for account uploads | [Claude setup](clients/claude.md) |
+| Antigravity | Native plugins with 73 implicit skills; 17 explicit-only workflows are excluded pending verified controls | [Antigravity setup](clients/antigravity.md) |
 
 A plugin is a group of skills. A skill is a set of instructions for a kind of task. A CLI is an app you use by typing commands in a terminal.
 
-The [current candidate record](client-candidate-v0.18.0.md) retains install observations; the [current gate ledger](release-readiness-2026-10-26.md) consolidates active holds. A prepared package is not a recommendation to enable it before its checks pass.
+The [0.19 preview record](client-candidate-v0.19.0.md) has no receiving-client
+acceptance. The [preserved 0.18 record](client-candidate-v0.18.0.md) retains its
+dated observations; [release status](release-status.md) separates the versions
+and remaining gates. A prepared package is not a recommendation to enable it
+before its checks pass.
 
 ## What each client must pass
 

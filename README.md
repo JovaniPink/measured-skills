@@ -15,6 +15,10 @@ from the preserved [0.18 candidate](docs/client-candidate-v0.18.0.md). New names
 packages have no inherited client acceptance. No installation or model call is
 needed to read the guide. [Preview status](docs/client-candidate-v0.19.0.md).
 
+**[Merged work and remaining release gates](docs/release-status.md):** the 0.18
+preparation and 0.19 redesign are merged. Neither version has a published GitHub
+Release. Human usability and receiving-client acceptance remain separate work.
+
 ## Choose work, not a catalog
 
 - [Open the offline chooser](dist/discovery/index.html) after saving the file locally.
