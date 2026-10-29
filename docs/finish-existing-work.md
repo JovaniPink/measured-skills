@@ -162,6 +162,7 @@ Replace `[REPOSITORY]`, `[CHANGE]`, `[PLAN_FILE_OR_APPROVED_TEXT]`, and
 `[BASE_REVISION]`. A missing plan can be recovered from supplied approved text or
 current requirements; do not invent a previous decision. Paste into chat, not a shell.
 These requests authorize scoped repair and local checks, stopping before publication.
+Provider-backed verification and production access need separate authorization.
 
 ### Codex
 
@@ -172,7 +173,8 @@ files, and resolve [BASE_REVISION]. Reconcile completed, unfinished, uncertain,
 and unrelated work with current evidence. Preserve existing authorization and
 unrelated changes. Diagnose unexplained failures and assess review feedback before
 editing. Plan only what remains, then implement the understood repairs and run
-relevant local checks. Use the applicable stack profile when available. Review the
+relevant local checks. Provider-backed checks, production access and additional
+model calls require separate authorization for this task. Use the applicable stack profile when available. Review the
 exact diff in a findings-only pass, repair confirmed findings within scope, rerun
 affected checks, and verify every acceptance condition. Keep unavailable checks
 and blockers explicit. Leave concise evidence and continuation notes; do not
@@ -192,6 +194,8 @@ dirty files, and [BASE_REVISION]. Reconcile the plan with current evidence and
 preserve unrelated work and existing authorization. Diagnose unexplained failures,
 assess review findings, and plan only the remaining repairs. Then implement those
 repairs and run the relevant local checks using the applicable stack guidance.
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task.
 Review the exact diff without edits during that pass; repair confirmed findings
 within scope, rerun affected checks, and verify the acceptance conditions. Return
 concise evidence, unresolved blockers, and continuation notes. Do not commit, push,
@@ -206,7 +210,8 @@ In [REPOSITORY], finish [CHANGE] from [PLAN_FILE_OR_APPROVED_TEXT] against
 plan first. Preserve unrelated work and existing authorization. Use available
 plan-change, diagnose-failure, address-review, and the
 relevant engineering profile as needed. Plan only what remains; I authorize the
-scoped repairs and local checks. Review the resulting diff in a findings-only pass,
+scoped repairs and local checks. Provider-backed checks, production access and
+additional model calls require separate authorization for this task. Review the resulting diff in a findings-only pass,
 repair confirmed findings within scope, rerun affected checks, and verify each
 acceptance condition. Keep missing evidence and unavailable checks explicit.
 Leave continuation notes. Do not load excluded explicit-only workflows, change

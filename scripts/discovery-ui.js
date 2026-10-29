@@ -36,6 +36,8 @@
   let copyVersion = 0;
   const render = () => {
     const currentView = ++viewVersion;
+    // Keep the live region when replacing cards after a selection change.
+    host.append(status);
     result.replaceChildren();
     status.textContent = "";
     style.disabled = !["codex", "claude"].includes(client.value);
@@ -71,6 +73,7 @@
         const copy = make("button", "Copy request", detail); copy.type = "button";
         copy.addEventListener("click", async () => {
           const currentCopy = ++copyVersion;
+          copy.after(status);
           status.textContent = "";
           const stillCurrent = () => currentView === viewVersion && currentCopy === copyVersion;
           try {

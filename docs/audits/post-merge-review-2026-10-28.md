@@ -127,3 +127,32 @@ The source review traced current caller and event paths. Browser regression
 cases are prepared in the website draft; no local test suite or model evaluation
 was run. Generation updates only the derived discovery artifacts and their exact
 source binding. Human rediscovery and receiving-client acceptance remain pending.
+
+## October 29: visible copy feedback and local verification scope
+
+Review baseline: draft #79 at `263a1fc`, compared with merged `b4200af`.
+Hosted validation passed at that head. Paginated inline and discussion comments
+were empty at this observation. Self-review traced the finish-work prompts,
+static/enhanced chooser, client adaptation, copy handlers and generated consumers.
+
+Two findings survived inspection:
+
+- Warning, new: the local-repair card promised local checks, but its copied
+  request said only "run affected checks". A provider-backed integration command
+  could exceed that boundary. Finish-work repair and maintenance requests now
+  specify local checks and require separate task authorization for provider-backed
+  checks, production access or additional model calls. The detailed local-repair
+  examples carry the same boundary. Existing permission for named PR writes is
+  preserved; unavailable checks remain visible.
+- Note, new: clipboard feedback was a live region after all route cards. After
+  copying the first request, its top was about 5,115 pixels below the viewport;
+  that viewport was 720 pixels high. The message now appears beside the clicked
+  button. The live region returns to its empty host position before cards are
+  replaced, retaining client-change invalidation and asynchronous identity guards.
+
+These are original repairs to owned workflow text and browser behavior. No new
+skill, profile, installation, independent reviewer or approval policy is added.
+The dated measurements describe one operator observation, not participant usability
+or an installed-client result. Final local checks and browser results belong in
+[validation evidence](../validation-evidence.md); source and artifact identities
+remain distinct from website pins and installed caches.

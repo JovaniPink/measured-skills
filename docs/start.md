@@ -32,6 +32,9 @@ effect when you send it; preserve any narrower constraints you already set.
 
 You can stop after the assessment. If you choose repair, use its identified next
 step as context; do not restart a planning exercise for an already clear change.
+Local repair uses local checks. Provider-backed checks, production access and
+additional model calls need separate authorization for the task. If those checks
+are unavailable, keep the gap visible and continue the authorized local work.
 A familiar response does not prove that a skill loaded or that work is complete.
 
 ## Use the guide with the skills you actually have
