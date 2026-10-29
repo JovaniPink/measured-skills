@@ -243,8 +243,9 @@ its exact text if writing is unavailable. Do not implement or publish yet.
 
 ```text
 Implement the identified repairs in [PLAN_FILE_OR_APPROVED_TEXT] in [REPOSITORY].
-I authorize scoped edits and relevant local checks. Preserve unrelated work and
-existing constraints. Use diagnosis and review-response guidance where needed.
+I authorize scoped edits and relevant local checks. Provider-backed checks,
+production access and additional model calls require separate authorization for
+this task. Preserve unrelated work and existing constraints. Use diagnosis and review-response guidance where needed.
 Review the exact diff without editing during review; repair confirmed findings,
 rerun affected checks, then verify all acceptance conditions. Report current
 revision and uncommitted state, evidence, and unfinished work. Do not commit,
@@ -274,7 +275,8 @@ evidence, and propose the smallest repair. Do not edit or call providers yet."
 **Review response (`address-review`):** "Assess [FINDINGS] against the
 current [CHANGE] in [REPOSITORY]. Explain which are supported, already addressed,
 or need clarification. Repair supported findings within the approved scope, run
-affected checks, and review the revised diff. Do not post replies or push."
+affected local checks, and review the revised diff. Provider-backed checks, production
+access and additional model calls need separate task authorization. Do not post replies or push."
 
 **Journey verification (`verify-claims` plus the relevant profile):**
 "Check whether [JOURNEY] meets [ACCEPTANCE_CONDITIONS] at the current revision.
@@ -390,7 +392,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.
@@ -420,7 +423,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.
@@ -451,7 +455,8 @@ base/head, dirty files, identity, history rules, and existing authorization firs
 Preserve unrelated work. I authorize scoped repairs, relevant local checks,
 committing reviewed changes, normal pushes to this PR's verified head repository
 and branch, updating its description, and technical replies to existing findings on this PR.
-Keep review findings-only; the owner repairs accepted findings and reruns affected
+Provider-backed checks, production access and additional model calls require
+separate authorization for this task. Keep review findings-only; the owner repairs accepted findings and reruns affected
 checks. Use self-review by default, at most three review rounds total, and at most
 30 cumulative minutes waiting for CI/reviews. Preserve used budgets across pushes
 and resumes. Record rounds before starting them; retain uncertain attempts.
