@@ -13,6 +13,33 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 316 regression tests.
 
+## October 29: finish-work starting point
+
+At `9cf4c71`, workflow checks, strict mypy, Ruff, generated distributions,
+deterministic validation, all 316 regression tests, and whitespace checks passed
+locally. The two added regressions first failed against the prior behavior: the
+assessment was not expanded, and its request required comparison/plan placeholders.
+They now cover the read-only default even when actions are reordered, the two-input
+assessment across five clients, and identical maintenance prompts at both entry points.
+
+The discovery input commit is `c2c8f27`; source/artifact commit `32bad2e` is bound
+by the separate manifest commit `9cf4c71`. Two independent builds of all 90 Claude
+archives matched the tracked bytes. Skill inventory, profiles, invocation policies,
+Antigravity exclusions, and the preserved 0.18 manifest are unchanged.
+
+The in-app browser over loopback showed the expanded assessment, ordinary-request
+default, "what remains" lookup, Antigravity repair availability, Claude native
+selection, successful copying, and task navigation. The static-markup regression
+covers the non-JavaScript disclosure; no JavaScript-disabled browser run is claimed.
+These are operator observations, not uncoached participant or installed-client
+acceptance. File-URL automation, Safari, mobile and the second Mac remain unverified.
+
+The environment remains macOS arm64 with Python 3.14.7, mypy 1.20.2 and Ruff 0.15.12;
+local execution does not duplicate hosted Linux/Python 3.12. Website snapshots and
+installed copies retain their own identities. The subsequent evidence-only commit
+does not change the tested implementation or artifact binding. No new online-source
+scan, model trial, billing change, installation, merge, deployment or release occurred.
+
 ## October 29: local qualification of the chooser repair
 
 At `fd4a45a6f282643ca114a41ceb99e39cb822c0c8`, workflow syntax, strict mypy,
