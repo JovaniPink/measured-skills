@@ -1,0 +1,1529 @@
+{
+  "reviewed_on": "2026-10-29",
+  "reviewed_revision": "97ac9bbd1fac67fc6f027f20051c51a8fcbc7805",
+  "initial_report": "docs/audits/upstream-freshness-2026-10-29.json",
+  "initial_report_sha256": "67bfe72aadf04cfce455f64e6059dd3c626aa1f053a04b61860e0655ba179742",
+  "pins_before_sha256": "e0f4d879b0efb2ec96affab8dcd4907f741f4dbf9105ab91dbb28dfd213fe87f",
+  "pins_after_sha256": "4687ea079c759618c452a5e871c698a2ba29fb21d440d1fa087fcb354d78f709",
+  "scope": "Individual review of all 29 changed sources. Original summaries only; publisher bodies remain outside the public tree. No canonical instruction defect established. Retain all source URLs, marker kinds, unchanged source pins, global review date and maximum age. No validator change, model call, installation, billing or release. Matching visible text is not proof of byte equality or installed-client behavior. Three newly changed NIST/OWASP authorities found on closeout are individually reviewed in supplementary_records.",
+  "records": [
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/",
+      "publisher": "adk-labs.github.io",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/",
+        "marker_kind": "content-sha256",
+        "marker_value": "a866479d19190f60875881d458ec04e744855aba4f66d3dc0ef615a3b020aec4"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:24.698800+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/",
+          "raw_sha256": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47",
+          "marker_kind": "content-sha256",
+          "marker_value": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47",
+          "body_bytes": 133254
+        },
+        {
+          "observed_at": "2026-10-29T20:40:24.897808+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/",
+          "raw_sha256": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47",
+          "marker_kind": "content-sha256",
+          "marker_value": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47",
+          "body_bytes": 133254
+        }
+      ],
+      "historical_body_sha256": "a866479d19190f60875881d458ec04e744855aba4f66d3dc0ef615a3b020aec4",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "navigation",
+      "finding": "ADK adds Speech-to-speech and Cascade architecture links; retained visible guidance is otherwise unchanged.",
+      "affected_skills": [
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/stack-google-adk/references/adk-version-boundaries.md"
+      ],
+      "instruction_consequence": "Retain exact installed-language/package discovery and optional developer CLI boundaries. An index is not deployment acceptance.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/",
+        "marker_kind": "content-sha256",
+        "marker_value": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47"
+      }
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "publisher": "adk-labs.github.io",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+        "marker_kind": "content-sha256",
+        "marker_value": "48666b6f1c264c5ea8ce4ca98eabae1d678de16dee51711268ee91a0498f5e40"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:25.264481+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/safety/",
+          "raw_sha256": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08",
+          "marker_kind": "content-sha256",
+          "marker_value": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08",
+          "body_bytes": 254185
+        },
+        {
+          "observed_at": "2026-10-29T20:40:25.489112+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/safety/",
+          "raw_sha256": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08",
+          "marker_kind": "content-sha256",
+          "marker_value": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08",
+          "body_bytes": 254185
+        }
+      ],
+      "historical_body_sha256": "48666b6f1c264c5ea8ce4ca98eabae1d678de16dee51711268ee91a0498f5e40",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "navigation",
+      "finding": "The same architecture navigation additions appear in ADK safety. Tool guardrails, identity, callbacks and network controls remain the relevant guidance.",
+      "affected_skills": [
+        "review-agent-tools"
+      ],
+      "reviewed_local_files": [
+        "skills/review-agent-tools/SKILL.md"
+      ],
+      "instruction_consequence": "Existing tool inventory, host policy, replay, isolation and external-action boundaries remain appropriate.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+        "marker_kind": "content-sha256",
+        "marker_value": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08"
+      }
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "publisher": "adk-labs.github.io",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+        "marker_kind": "content-sha256",
+        "marker_value": "d704d9a53f82aa5f33498b5d1559198d8eb6b421b156d7c1f2235b4e5822ddf8"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:24.758017+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/sessions/",
+          "raw_sha256": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51",
+          "marker_kind": "content-sha256",
+          "marker_value": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51",
+          "body_bytes": 125344
+        },
+        {
+          "observed_at": "2026-10-29T20:40:24.930787+00:00",
+          "final_url": "https://adk-labs.github.io/adk-docs/sessions/",
+          "raw_sha256": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51",
+          "marker_kind": "content-sha256",
+          "marker_value": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51",
+          "body_bytes": 125344
+        }
+      ],
+      "historical_body_sha256": "d704d9a53f82aa5f33498b5d1559198d8eb6b421b156d7c1f2235b4e5822ddf8",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "navigation",
+      "finding": "ADK session page gains architecture navigation; session, state and memory distinctions remain.",
+      "affected_skills": [
+        "design-agent-memory"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-memory/SKILL.md"
+      ],
+      "instruction_consequence": "Retain explicit persistence, scope, tenant, writer and retention discovery.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+        "marker_kind": "content-sha256",
+        "marker_value": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51"
+      }
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "publisher": "agentskills.io",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "2f2741be6de504c185f10e8c0408fb60ccc1637f14a57743d91abaeebf378e46"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:24.832528+00:00",
+          "final_url": "https://agentskills.io/specification",
+          "raw_sha256": "38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75",
+          "marker_kind": "content-sha256",
+          "marker_value": "38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75",
+          "body_bytes": 248967
+        },
+        {
+          "observed_at": "2026-10-29T20:40:25.188686+00:00",
+          "final_url": "https://agentskills.io/specification",
+          "raw_sha256": "38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75",
+          "marker_kind": "content-sha256",
+          "marker_value": "38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75",
+          "body_bytes": 248967
+        }
+      ],
+      "historical_body_sha256": "2f2741be6de504c185f10e8c0408fb60ccc1637f14a57743d91abaeebf378e46",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-shell",
+      "finding": "Article text matches the retained rendering; assistant placement and serialized page configuration differ outside it.",
+      "affected_skills": [
+        "align-on-decisions",
+        "analyze-incident",
+        "assess-change-impact",
+        "author-skill",
+        "build-spike",
+        "check-launch-readiness",
+        "choose-workflow",
+        "design-module-interface",
+        "diagnose-failure",
+        "edit-technical-writing",
+        "execute-plan",
+        "explain-codebase",
+        "explain-to-stakeholders",
+        "frame-problem",
+        "guide-configuration",
+        "handoff-work",
+        "implement-test-first",
+        "investigate-design-rationale",
+        "learn-after-launch",
+        "map-capability-dependencies",
+        "measure-outcomes",
+        "model-domain-vocabulary",
+        "plan-adoption",
+        "plan-change",
+        "plan-tests",
+        "plan-workshop",
+        "prepare-migration-decision",
+        "publish-change",
+        "record-decisions",
+        "research-sources",
+        "review-data-authority",
+        "review-public-boundary",
+        "review-skill-import",
+        "review-skill-security",
+        "review-value-evidence",
+        "run-project-checks",
+        "run-research-workflow",
+        "synthesize-requirements",
+        "trace-decisions",
+        "track-acceptance",
+        "verify-claims"
+      ],
+      "reviewed_local_files": [
+        "skills/author-skill/SKILL.md",
+        "skills/author-skill/references/client-adapters.md"
+      ],
+      "instruction_consequence": "Canonical directory identity, string metadata and self-contained references remain compatible. Optional tools in the format do not authorize new grants.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75"
+      }
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "publisher": "ai.google.dev",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+        "marker_kind": "last-modified",
+        "marker_value": "Fri, 16 Oct 2026 23:01:21 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:24.940706+00:00",
+          "final_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+          "raw_sha256": "16c07c4dcc9185f7ef1997b0eebf323ae34dbfb36406fd2c43c34d28c51a966a",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 07:23:07 GMT",
+          "body_bytes": 156842
+        },
+        {
+          "observed_at": "2026-10-29T20:40:25.578714+00:00",
+          "final_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+          "raw_sha256": "19be642e290039d7a017eeff0b7436a443eed7e0f4476b9adeeb205715f32470",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 07:23:07 GMT",
+          "body_bytes": 156842
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "Current latest-model page describes Gemini 4 Argon, thinking/output limits, background generation and separately billed token/tool usage. No matching historical body was located.",
+      "affected_skills": [
+        "design-agent-evaluations",
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/design-agent-evaluations/SKILL.md"
+      ],
+      "instruction_consequence": "No model ID or token budget is hardcoded in the affected profile. Preserve exact model/configuration and evaluation discovery; do not run examples or infer included-plan billing.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+        "marker_kind": "last-modified",
+        "marker_value": "Tue, 27 Oct 2026 07:23:07 GMT"
+      }
+    },
+    {
+      "source_url": "https://antigravity.google/docs/plugins.md",
+      "publisher": "antigravity.google",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://antigravity.google/docs/plugins.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "43649a1ddc41ffb3a2534cb5557f005753e800b6e0a702a557b74229c9ba2f1c"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:25.279791+00:00",
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "raw_sha256": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db",
+          "marker_kind": "content-sha256",
+          "marker_value": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db",
+          "body_bytes": 13867
+        },
+        {
+          "observed_at": "2026-10-29T20:40:25.594807+00:00",
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "raw_sha256": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db",
+          "marker_kind": "content-sha256",
+          "marker_value": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db",
+          "body_bytes": 13867
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "Current plugin Markdown describes automatic name/description loading, manual invocation, app/CLI synchronization, workspace/global paths, imports and optional hooks/agents/MCP. No matching historical body was located.",
+      "affected_skills": [
+        "author-skill",
+        "review-skill-security"
+      ],
+      "reviewed_local_files": [
+        "skills/author-skill/references/client-adapters.md",
+        "skills/review-skill-security/SKILL.md",
+        "docs/clients/antigravity.md"
+      ],
+      "instruction_consequence": "Keep all 17 explicit-only exclusions: manual commands do not prove automatic-selection suppression. Published synchronization and component options do not qualify local isolation or authorize installation.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://antigravity.google/docs/plugins.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db"
+      }
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "publisher": "developer.hashicorp.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"e826c7c210456e9dc2c13d0d4eee86ee\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:25.720522+00:00",
+          "final_url": "https://developer.hashicorp.com/terraform/language",
+          "raw_sha256": "7dc6bbe6f8d98db6a6d2bef05ea01dc4332d49af50c19b6b64d6a3cb3b87235c",
+          "marker_kind": "etag",
+          "marker_value": "\"cafae05bd353bd266d6d6a5e9411c67b\"",
+          "body_bytes": 221478
+        },
+        {
+          "observed_at": "2026-10-29T20:40:26.137446+00:00",
+          "final_url": "https://developer.hashicorp.com/terraform/language",
+          "raw_sha256": "7dc6bbe6f8d98db6a6d2bef05ea01dc4332d49af50c19b6b64d6a3cb3b87235c",
+          "marker_kind": "etag",
+          "marker_value": "\"cafae05bd353bd266d6d6a5e9411c67b\"",
+          "body_bytes": 221478
+        }
+      ],
+      "historical_body_sha256": "64447b04e135f671653a8776872c927d1c66e9b81c2a7b415c234bd2e250f062",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "navigation",
+      "finding": "Terraform language article text matches; navigation drops the BETA suffix from Terraform Policy. The ETag also differs from the initial check.",
+      "affected_skills": [
+        "stack-terraform"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-terraform/references/checks.md"
+      ],
+      "instruction_consequence": "No Terraform Policy release state is hardcoded. Retain repository-pinned providers, backend and state/plan boundaries.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"cafae05bd353bd266d6d6a5e9411c67b\""
+      }
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "publisher": "developers.googleblog.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "3f9e542ecbfb315886106d5f293a64325649a2d426e2424502272c121329c510"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:26.117604+00:00",
+          "final_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+          "raw_sha256": "a52060debb30f74dff324667fa799a312fa56a37d404e1612788d0627be1cb99",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "057a1b9776b647e8470bba40273c66e688a7090530ed400aad24dbfe9ae43fb6",
+          "body_bytes": 47202
+        },
+        {
+          "observed_at": "2026-10-29T20:40:27.468493+00:00",
+          "final_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+          "raw_sha256": "cc17d35107ba4a2a0ce61594c134a38d3945fa52c300c1d8b530d00828b28bac",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "057a1b9776b647e8470bba40273c66e688a7090530ed400aad24dbfe9ae43fb6",
+          "body_bytes": 47202
+        }
+      ],
+      "historical_body_sha256": "77700c3c05364946896f363ecef2504fb79593a46399406b1417a1f2a74d1187",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "related-content",
+      "finding": "Agents CLI article body matches; related-post links and dates change.",
+      "affected_skills": [
+        "publish-change",
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/publish-change/SKILL.md"
+      ],
+      "instruction_consequence": "Keep Agents CLI optional and separate scaffolding/evaluation/deployment authority. No CLI command is run.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "057a1b9776b647e8470bba40273c66e688a7090530ed400aad24dbfe9ae43fb6"
+      }
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "publisher": "developers.googleblog.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "a7bd06b3663066fc86c64737ca3ffe45c3442463f17c4502468a68b00c383bbd"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:26.524331+00:00",
+          "final_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "raw_sha256": "c5d9f5ad80839b0f5d026367695a5a22c48bd9439d188296b3fe207be42a6f35",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "10a808b2e672469dbc23b800642a6d5b392f8783d77ae11346cb1e7cd17dcaab",
+          "body_bytes": 39108
+        },
+        {
+          "observed_at": "2026-10-29T20:40:27.351398+00:00",
+          "final_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "raw_sha256": "783cdbbe1f2423a9e0c539f1e5a1aed778bbbf005e1ef31bc5fa6d3fe36636c1",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "10a808b2e672469dbc23b800642a6d5b392f8783d77ae11346cb1e7cd17dcaab",
+          "body_bytes": 39108
+        }
+      ],
+      "historical_body_sha256": "7c8647209d731a8eb9751f3669dc15e42fc751ab74419debfadc02816ef63bee",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "related-content",
+      "finding": "Gemini-to-Antigravity article body matches; related-post links and dates change. The article itself explicitly does not promise initial one-to-one parity.",
+      "affected_skills": [
+        "author-skill",
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/author-skill/SKILL.md"
+      ],
+      "instruction_consequence": "Retain surface/version acceptance and migration limits. No existing exclusion is removed.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "10a808b2e672469dbc23b800642a6d5b392f8783d77ae11346cb1e7cd17dcaab"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:26.371431+00:00",
+          "final_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+          "raw_sha256": "4428c73bf6ba9fd9b5c1216451d505fc9c249e11eb1f449ac7d935846af4b63e",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 23:55:45 GMT",
+          "body_bytes": 346090
+        },
+        {
+          "observed_at": "2026-10-29T20:40:27.088071+00:00",
+          "final_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+          "raw_sha256": "755e39e5bc6e8cfe0c4c01685a66d5f17871d09fd6cc22dba1d3d9927d3b9523",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 23:55:45 GMT",
+          "body_bytes": 345904
+        }
+      ],
+      "historical_body_sha256": "632627e7bff88a8febe7e0410ea1e95ce4f6c6d6934330726159b35c716b4a79",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-metadata",
+      "finding": "BigQuery article text matches; last-updated and feedback metadata advance.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/warehouse.md"
+      ],
+      "instruction_consequence": "Partition, join cardinality, scan correctness and provider-access boundaries remain applicable.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+        "marker_kind": "last-modified",
+        "marker_value": "Tue, 27 Oct 2026 23:55:45 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:26.278475+00:00",
+          "final_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+          "raw_sha256": "18294a30fd33ec4da850f685ed35cdbb308cd0f5cd5e61eb4d66e1b662f02452",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 14:10:35 GMT",
+          "body_bytes": 122637
+        },
+        {
+          "observed_at": "2026-10-29T20:40:26.855751+00:00",
+          "final_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+          "raw_sha256": "5deffeb6e03fad8aadd9844a529b32ee009c4757fcc6d2470324a8c82ebcafe1",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 27 Oct 2026 14:10:35 GMT",
+          "body_bytes": 122633
+        }
+      ],
+      "historical_body_sha256": "1dfd514742cec555e970e61b96e3e7c0a9150968aa7de30ffb4f90431a509e8f",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "capability-list",
+      "finding": "Data Agent Kit adds Managed Service for Apache Airflow to its unified-workflow list.",
+      "affected_skills": [
+        "review-agent-tools",
+        "review-retrieval-grounding"
+      ],
+      "reviewed_local_files": [
+        "skills/review-agent-tools/SKILL.md",
+        "skills/review-retrieval-grounding/SKILL.md"
+      ],
+      "instruction_consequence": "Existing inventory-first tool and retrieval reviews cover discovered services without promising an exhaustive supported-product list. New provider access is not authorized.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Tue, 27 Oct 2026 14:10:35 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:26.830577+00:00",
+          "final_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+          "raw_sha256": "4d26d205f0b9b900a197622f38e0df4747c21c2a7205abbe41349f48f3ae6c37",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 191841
+        },
+        {
+          "observed_at": "2026-10-29T20:40:27.487812+00:00",
+          "final_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+          "raw_sha256": "4290c1d53bff3ee555a9b8f384cd0573bda3eba4f12ef77b96a6bdf93463bc98",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 191655
+        }
+      ],
+      "historical_body_sha256": "8e44167da962990a5ab71215ad5cea19334c6a4f7767536ce6c4287f6ea8fa4c",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-metadata",
+      "finding": "Dataflow exactly-once article text matches; update/feedback dates advance.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/pipelines.md"
+      ],
+      "instruction_consequence": "Retain separation of processing guarantees from external side effects, retries, late data and sink semantics.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:27.726051+00:00",
+          "final_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+          "raw_sha256": "6556cf010110b8a56d4ae48ea0ddcde97115a6c386e80655794f932a8c58a4e2",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 222463
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.391545+00:00",
+          "final_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+          "raw_sha256": "fbeacf3a1c05a83fbd98739947043c71b523d93dd7b926b8ec7da893cd2d9876",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 222459
+        }
+      ],
+      "historical_body_sha256": "8ade40c58f7e925442b6019a0154017e9a506a3af4f86bf870b30b80c577792d",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-metadata",
+      "finding": "Dataform table article text matches; update/feedback dates advance.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/warehouse.md"
+      ],
+      "instruction_consequence": "Retain incremental filters, unique keys, assertions and full-refresh review; no SQL execution or dataset mutation.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 21:40:28 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:27.956335+00:00",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+          "raw_sha256": "bc8f0fcad356d74086e906f1f9b238b0818d894d1dbe66840e007ca9dfdd8212",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 28 Oct 2026 22:43:06 GMT",
+          "body_bytes": 158052
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.613266+00:00",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+          "raw_sha256": "4ee3af00ee345b82eff499b427a176d979a187bb7be8dd20a56ddefb753e4bc7",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 28 Oct 2026 22:43:06 GMT",
+          "body_bytes": 157914
+        }
+      ],
+      "historical_body_sha256": "19f8ead4a439377f88dedc86591c2193f9c0c778243b41df4d241dc29b065832",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "product-label",
+      "finding": "Agent-platform overview expands the RAG Engine label and changes Semantic governance capitalization; publication metadata also advances.",
+      "affected_skills": [
+        "design-agent-memory",
+        "review-agent-security",
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-memory/SKILL.md",
+        "skills/review-agent-security/SKILL.md",
+        "skills/stack-google-adk/SKILL.md"
+      ],
+      "instruction_consequence": "No affected skill hardcodes the old product label. Memory, identity, grounding and evaluation remain separate observed contracts.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Wed, 28 Oct 2026 22:43:06 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:27.953812+00:00",
+          "final_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+          "raw_sha256": "f12ea327bb0b279e8a68bea68b7886ea076a0eaacf614aecb5471a3b6592f7ce",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 216527
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.576223+00:00",
+          "final_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+          "raw_sha256": "552f539add9e5e4bb81a38c347caef97115f02175d7eabdcb04b29eaaef8b20d",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 216523
+        }
+      ],
+      "historical_body_sha256": "6c7d610602d7821a5f7a90064d100e110956fe4d4af6f7f0827415ebefa806c7",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "navigation-and-metadata",
+      "finding": "Managed Spark image table text matches; navigation adds cluster pages and update/feedback dates advance.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/pipelines.md"
+      ],
+      "instruction_consequence": "Retain exact image/component discovery and support checking. Do not prescribe current defaults to old clusters or authorize cluster replacement.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 17:06:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:28.022332+00:00",
+          "final_url": "https://docs.cloud.google.com/storage/docs/metadata",
+          "raw_sha256": "4caa39488e435513f7215ed5d84e022127c43449cbaa3f523ef4a9e11f43611f",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 227947
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.961297+00:00",
+          "final_url": "https://docs.cloud.google.com/storage/docs/metadata",
+          "raw_sha256": "322aa339de462a3f46e98d427670317e23332fb07ec586e75f69768f3a12604f",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT",
+          "body_bytes": 227757
+        }
+      ],
+      "historical_body_sha256": "f8bf25e94cf7c8629fd245e1c32c8d00aee736cec29adb3f17201eaac35f2444",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-metadata",
+      "finding": "Storage metadata article text matches; update/feedback dates advance.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/pipelines.md"
+      ],
+      "instruction_consequence": "Generation identifies an object version; metageneration is meaningful with generation. Existing source-identity guidance retains this distinction.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "publisher": "docs.getdbt.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"056edfbb3ebe5461b3b8bd45fbb163cc\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:27.801823+00:00",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models",
+          "raw_sha256": "121a4579f736f682d24ada680c9684458095d8d2a3947c7efa8478cd7eaae729",
+          "marker_kind": "etag",
+          "marker_value": "\"46e5a8de7402feb09aa948d21f3cb809\"",
+          "body_bytes": 129020
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.110247+00:00",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models",
+          "raw_sha256": "121a4579f736f682d24ada680c9684458095d8d2a3947c7efa8478cd7eaae729",
+          "marker_kind": "etag",
+          "marker_value": "\"46e5a8de7402feb09aa948d21f3cb809\"",
+          "body_bytes": 129020
+        }
+      ],
+      "historical_body_sha256": "484cdc5740811c9ca45c56dfb7799a3ea0c37e3fcbf2c23995ae61a6ff7bb59f",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible dbt page text matches the retained response despite the changed ETag.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/references/warehouse.md"
+      ],
+      "instruction_consequence": "Retain adapter-specific incremental strategy, uniqueness testing, correction windows and full-refresh effects. A configured unique key is not a proved invariant.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"46e5a8de7402feb09aa948d21f3cb809\""
+      }
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "publisher": "git-scm.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 14:52:02 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:28.410027+00:00",
+          "final_url": "https://git-scm.com/docs/git-merge",
+          "raw_sha256": "fb4058d9d9ada2bc53b9bb219507ed724c2a563eba75620b4466905b7f3a9338",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 14:52:03 GMT",
+          "body_bytes": 142116
+        },
+        {
+          "observed_at": "2026-10-29T20:40:28.613468+00:00",
+          "final_url": "https://git-scm.com/docs/git-merge",
+          "raw_sha256": "fb4058d9d9ada2bc53b9bb219507ed724c2a563eba75620b4466905b7f3a9338",
+          "marker_kind": "last-modified",
+          "marker_value": "Mon, 26 Oct 2026 14:52:03 GMT",
+          "body_bytes": 142116
+        }
+      ],
+      "historical_body_sha256": "fb4058d9d9ada2bc53b9bb219507ed724c2a563eba75620b4466905b7f3a9338",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible git-merge page matches; Last-Modified differs by one second.",
+      "affected_skills": [
+        "resolve-merge-conflicts"
+      ],
+      "reviewed_local_files": [
+        "skills/resolve-merge-conflicts/SKILL.md"
+      ],
+      "instruction_consequence": "Existing conflict reconciliation preserves repository history and separates merging authority. No generic rebase or force-push rule is introduced.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 14:52:03 GMT"
+      }
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "publisher": "learn.microsoft.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+        "marker_kind": "etag",
+        "marker_value": "\"k/vGh+hRvJleV9mHmJ32WoOw1FY=\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:28.931658+00:00",
+          "final_url": "https://learn.microsoft.com/en-us/dotnet/",
+          "raw_sha256": "b804d5a3cae8713c5dbb737bfe62a9c7498b1f249c97368c0de6b75de844f54f",
+          "marker_kind": "etag",
+          "marker_value": "\"OpPNnOT7tbvDxZQ2IF8u6HE8vuY=\"",
+          "body_bytes": 71166
+        },
+        {
+          "observed_at": "2026-10-29T20:40:29.125955+00:00",
+          "final_url": "https://learn.microsoft.com/en-us/dotnet/",
+          "raw_sha256": "b804d5a3cae8713c5dbb737bfe62a9c7498b1f249c97368c0de6b75de844f54f",
+          "marker_kind": "etag",
+          "marker_value": "\"OpPNnOT7tbvDxZQ2IF8u6HE8vuY=\"",
+          "body_bytes": 71166
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "The .NET documentation hub links language, runtime, ASP.NET and API guidance. No matching historical body was located; the hub alone cannot validate every detailed framework claim.",
+      "affected_skills": [
+        "stack-csharp-dotnet"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-csharp-dotnet/SKILL.md"
+      ],
+      "instruction_consequence": "Retain project SDK/target/runtime discovery and specific authoritative API checks. No SDK or dependency upgrade is implied.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+        "marker_kind": "etag",
+        "marker_value": "\"OpPNnOT7tbvDxZQ2IF8u6HE8vuY=\""
+      }
+    },
+    {
+      "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "publisher": "martinfowler.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+        "marker_kind": "content-sha256",
+        "marker_value": "33929f42959c859164e841bc71057e57766abf15a1643449b8b884142c8084e1"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:28.804182+00:00",
+          "final_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+          "raw_sha256": "6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+          "marker_kind": "content-sha256",
+          "marker_value": "6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+          "body_bytes": 12765
+        },
+        {
+          "observed_at": "2026-10-29T20:40:29.062993+00:00",
+          "final_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+          "raw_sha256": "6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+          "marker_kind": "content-sha256",
+          "marker_value": "6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+          "body_bytes": 12765
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "Fowler defines refactoring by internal restructuring with preserved observable behavior. No matching historical body was located.",
+      "affected_skills": [
+        "design-module-interface"
+      ],
+      "reviewed_local_files": [
+        "skills/design-module-interface/references/behavior-preserving-refactoring.md"
+      ],
+      "instruction_consequence": "The existing reference preserves this definition and explicitly limits finite tests and characterization snapshots; no content repair needed.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+        "marker_kind": "content-sha256",
+        "marker_value": "6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4"
+      }
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "publisher": "nextjs.org",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "3534904cc85ee092fb4d3a6371b299969fa1a43757ef582edccee1e077e7a71d"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:29.466088+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "raw_sha256": "5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0",
+          "marker_kind": "content-sha256",
+          "marker_value": "5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0",
+          "body_bytes": 1851277
+        },
+        {
+          "observed_at": "2026-10-29T20:40:30.095927+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "raw_sha256": "5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0",
+          "marker_kind": "content-sha256",
+          "marker_value": "5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0",
+          "body_bytes": 1851277
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "Next.js 16 migration guide includes agent-assisted latest/canary commands, version-matched docs, async request API codemods, Node/TypeScript requirements and Turbopack defaults. No matching historical body was located.",
+      "affected_skills": [
+        "plan-change"
+      ],
+      "reviewed_local_files": [
+        "skills/plan-change/references/dependency-upgrade.md"
+      ],
+      "instruction_consequence": "Existing upgrade reference requires exact starting/target versions, reviewed transformations, script/network effects and representative behavior. Do not adopt unpinned execution examples or treat one codemod as complete migration.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0"
+      }
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "publisher": "opentelemetry.io",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"095d75c204c58e078b1807988e469023-ssl\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:29.466238+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "raw_sha256": "071e4b0d14d8f64646aa367f1dcc30abe99618e5d351490fe92df21c93a965da",
+          "marker_kind": "etag",
+          "marker_value": "\"1a4ed345edd73053f8b0b31957c3c865-ssl\"",
+          "body_bytes": 405262
+        },
+        {
+          "observed_at": "2026-10-29T20:40:29.869985+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "raw_sha256": "071e4b0d14d8f64646aa367f1dcc30abe99618e5d351490fe92df21c93a965da",
+          "marker_kind": "etag",
+          "marker_value": "\"1a4ed345edd73053f8b0b31957c3c865-ssl\"",
+          "body_bytes": 405262
+        }
+      ],
+      "historical_body_sha256": "60010bb38dc8e3c483c8f092b3ecec4de4e7a97e2385a46e6e71700b53770e96",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible OpenTelemetry signals page matches; supported and developing signal categories remain distinct.",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "reviewed_local_files": [
+        "skills/design-observability/SKILL.md"
+      ],
+      "instruction_consequence": "Existing observability guidance separates correlation, emitted signals and observed evidence. No added tracing service or production access.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"1a4ed345edd73053f8b0b31957c3c865-ssl\""
+      }
+    },
+    {
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "publisher": "platform.claude.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "68fa2aeb65250f259c1acd2c1d00fcb0024368e867f26f1614b1b09f4e69355f"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:29.536064+00:00",
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+          "raw_sha256": "539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db",
+          "marker_kind": "content-sha256",
+          "marker_value": "539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db",
+          "body_bytes": 74660
+        },
+        {
+          "observed_at": "2026-10-29T20:40:30.096080+00:00",
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+          "raw_sha256": "539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db",
+          "marker_kind": "content-sha256",
+          "marker_value": "539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db",
+          "body_bytes": 74660
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "Claude guidance separates model-specific recommendations and general clarity/context examples, and covers autonomy, overengineering, subagent overuse and test hardcoding. No matching historical body was located.",
+      "affected_skills": [
+        "review-engineering-prompt"
+      ],
+      "reviewed_local_files": [
+        "skills/review-engineering-prompt/SKILL.md"
+      ],
+      "instruction_consequence": "Existing prompt review preserves task authority, avoids executing quoted requests and makes no untested performance claim. Model-specific examples and delegation advice are not universal instructions.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db"
+      }
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+      "publisher": "raw.githubusercontent.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+        "marker_kind": "content-sha256",
+        "marker_value": "3bdf26061ab3655763b6f5a7d3487d81ad103400cca54febf84f08c52032b849"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:29.787743+00:00",
+          "final_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+          "raw_sha256": "2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6",
+          "marker_kind": "content-sha256",
+          "marker_value": "2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6",
+          "body_bytes": 108268
+        },
+        {
+          "observed_at": "2026-10-29T20:40:29.980009+00:00",
+          "final_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+          "raw_sha256": "2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6",
+          "marker_kind": "content-sha256",
+          "marker_value": "2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6",
+          "body_bytes": 108268
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "CPython 3.15 unittest documentation covers fixture failures/cleanup, assertions, skipping, discovery and asynchronous test cases. No matching historical body was located.",
+      "affected_skills": [
+        "review-tests"
+      ],
+      "reviewed_local_files": [
+        "skills/review-tests/SKILL.md"
+      ],
+      "instruction_consequence": "Keep framework/version discovery and defect-sensitive assertions; skipping is not passing and test counts are not behavioral coverage. No unsupported 3.15 API is prescribed to older runners.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+        "marker_kind": "content-sha256",
+        "marker_value": "2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6"
+      }
+    },
+    {
+      "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "publisher": "react.dev",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+        "marker_kind": "content-sha256",
+        "marker_value": "2d87dac382e5f18788b467ed994c66cf19521a3542e931ac129edc645de3af0c"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:29.729011+00:00",
+          "final_url": "https://react.dev/learn/you-might-not-need-an-effect",
+          "raw_sha256": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830",
+          "marker_kind": "content-sha256",
+          "marker_value": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830",
+          "body_bytes": 434498
+        },
+        {
+          "observed_at": "2026-10-29T20:40:30.159794+00:00",
+          "final_url": "https://react.dev/learn/you-might-not-need-an-effect",
+          "raw_sha256": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830",
+          "marker_kind": "content-sha256",
+          "marker_value": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830",
+          "body_bytes": 434498
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "No matching historical body located. Review supports current content against the listed local contracts, not semantic equivalence to the old body.",
+      "change_class": "current-content-review",
+      "finding": "React guidance distinguishes derived render state, event handlers and external-system Effects; it discusses cleanup/races and measured optimization. No matching historical body was located.",
+      "affected_skills": [
+        "diagnose-react-rendering"
+      ],
+      "reviewed_local_files": [
+        "skills/diagnose-react-rendering/SKILL.md",
+        "skills/diagnose-react-rendering/references/measurement.md"
+      ],
+      "instruction_consequence": "Existing rendering diagnosis rejects blanket memoization and requires comparable runtime evidence. No new effect-removal rule overrides actual synchronization needs.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+        "marker_kind": "content-sha256",
+        "marker_value": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830"
+      }
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "publisher": "slsa.dev",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://slsa.dev/spec/v1.2/provenance",
+        "marker_kind": "etag",
+        "marker_value": "\"f4cc733acd94d0eab2cf1db99a9471b9-ssl\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:31.144708+00:00",
+          "final_url": "https://slsa.dev/spec/v1.2/provenance",
+          "raw_sha256": "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+          "marker_kind": "etag",
+          "marker_value": "\"0ad2785c0fcff93f158ece4f94ffabd9-ssl\"",
+          "body_bytes": 17253
+        },
+        {
+          "observed_at": "2026-10-29T20:40:31.332702+00:00",
+          "final_url": "https://slsa.dev/spec/v1.2/provenance",
+          "raw_sha256": "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+          "marker_kind": "etag",
+          "marker_value": "\"0ad2785c0fcff93f158ece4f94ffabd9-ssl\"",
+          "body_bytes": 17253
+        }
+      ],
+      "historical_body_sha256": "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible SLSA 1.2 provenance page matches; it separates source and build provenance.",
+      "affected_skills": [
+        "review-dependencies"
+      ],
+      "reviewed_local_files": [
+        "skills/review-dependencies/SKILL.md"
+      ],
+      "instruction_consequence": "Existing dependency review treats provenance as evidence of origin/build, not complete security or vulnerability clearance.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://slsa.dev/spec/v1.2/provenance",
+        "marker_kind": "etag",
+        "marker_value": "\"0ad2785c0fcff93f158ece4f94ffabd9-ssl\""
+      }
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "publisher": "trailhead.salesforce.com",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "1101530b1d70fe1c8be470a821e8c6cb0593023922f72adfc98db1cc18bc2447"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:30.649336+00:00",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+          "raw_sha256": "c03cd572971d28480a49a4a6da615c3111f513f888ddb01ea238d577904abe3c",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "049794fb47b6a389ce7e879647230afa1ebcc3689ab096d22d224f61f8441f0e",
+          "body_bytes": 210803
+        },
+        {
+          "observed_at": "2026-10-29T20:40:31.268044+00:00",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+          "raw_sha256": "846b9b1fcbca32529e0e1c2d98d55cada80cbb1593047bab22e0caef4d5ba591",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "049794fb47b6a389ce7e879647230afa1ebcc3689ab096d22d224f61f8441f0e",
+          "body_bytes": 210803
+        }
+      ],
+      "historical_body_sha256": "a6533d3023bae8a067419377b2b2ff31a3dbbf74eebf7a742d7461533de39a4a",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "page-shell",
+      "finding": "Trailhead help link changes from a response-time promise to Explore Community; the retained full extracted instructional text matches.",
+      "affected_skills": [
+        "stack-salesforce-apex"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-salesforce-apex/references/checks.md"
+      ],
+      "instruction_consequence": "The Apex profile already distinguishes foundational tutorials from full language/LWC authorities and separates org-backed validation authority.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "049794fb47b6a389ce7e879647230afa1ebcc3689ab096d22d224f61f8441f0e"
+      }
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "publisher": "www.drupal.org",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "79ff293e7caa2d0ece096711dee7d15b7a11cbdd4489c08d7b6f9d80322581b4"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:31.663692+00:00",
+          "final_url": "https://www.drupal.org/docs/develop",
+          "raw_sha256": "b8988543a44cc539250155db9e1b7773e230d7c72c4e939a8b317dbf05cda6a5",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "6033490e7073a98247d2588b695265358aeb9817ea9a5804c5fdda365593f263",
+          "body_bytes": 59684
+        },
+        {
+          "observed_at": "2026-10-29T20:40:31.842012+00:00",
+          "final_url": "https://www.drupal.org/docs/develop",
+          "raw_sha256": "b8988543a44cc539250155db9e1b7773e230d7c72c4e939a8b317dbf05cda6a5",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "6033490e7073a98247d2588b695265358aeb9817ea9a5804c5fdda365593f263",
+          "body_bytes": 59684
+        }
+      ],
+      "historical_body_sha256": "95f6d6f9a1031e2b8846f913da1ae8b58406fdd98aeaa9472a58f8f7c92e3ee4",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible Drupal developer index matches despite the normalized full-response change.",
+      "affected_skills": [
+        "stack-php-drupal"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-php-drupal/references/checks.md"
+      ],
+      "instruction_consequence": "Retain exact PHP/core/extension versions, configuration/state/content separation and separately authorized database updates.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "6033490e7073a98247d2588b695265358aeb9817ea9a5804c5fdda365593f263"
+      }
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "publisher": "www.typescriptlang.org",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "etag",
+        "marker_value": "\"6adfb161-2a3b3\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:40:30.338459+00:00",
+          "final_url": "https://www.typescriptlang.org/docs/",
+          "raw_sha256": "8ac5629de7733bb0ca0a67809e4aec8aed3967c478c97506c728ab998ce7c3de",
+          "marker_kind": "etag",
+          "marker_value": "\"6ae284a8-2a652\"",
+          "body_bytes": 173650
+        },
+        {
+          "observed_at": "2026-10-29T20:40:30.531910+00:00",
+          "final_url": "https://www.typescriptlang.org/docs/",
+          "raw_sha256": "8ac5629de7733bb0ca0a67809e4aec8aed3967c478c97506c728ab998ce7c3de",
+          "marker_kind": "etag",
+          "marker_value": "\"6ae284a8-2a652\"",
+          "body_bytes": 173650
+        }
+      ],
+      "historical_body_sha256": "c15803f2acdce57709ce360116bb15a714ce08554e8de6ee0a04c6cf2c536327",
+      "comparison_limit": "Visible-text comparisons are a review aid, not the freshness algorithm; no HTML is discarded by the actual fingerprint check. A retained October 26 body supports this comparison.",
+      "change_class": "representation",
+      "finding": "Extracted full visible TypeScript docs index matches despite its changed ETag.",
+      "affected_skills": [
+        "stack-typescript-javascript"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-typescript-javascript/references/checks.md"
+      ],
+      "instruction_consequence": "Retain repository TypeScript/runtime/module settings; a docs index is not proof of all version-sensitive language behavior.",
+      "decision": "repin_individually_reviewed_current_content",
+      "after_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "etag",
+        "marker_value": "\"6ae284a8-2a652\""
+      }
+    }
+  ],
+  "supplementary_records": [
+    {
+      "source_url": "https://airc.nist.gov/",
+      "publisher": "airc.nist.gov",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://airc.nist.gov/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "a50458b3adfeb8491ad83a05837d6c3a21ae60e4423e611da8b9a1307a1f2a42"
+      },
+      "after_pin": {
+        "source_url": "https://airc.nist.gov/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "1031f2ad6d75f1acdf05b154bb405e03e63a63059cc0523d5add6197da5c34c3"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:45:25.936119+00:00",
+          "final_url": "https://airc.nist.gov/",
+          "raw_sha256": "963ee2e6a27cac668c522ddba1a1e11977bd606045ad8fb0c8f2f620144cc82c",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "1031f2ad6d75f1acdf05b154bb405e03e63a63059cc0523d5add6197da5c34c3",
+          "body_bytes": 34804
+        },
+        {
+          "observed_at": "2026-10-29T20:45:26.380543+00:00",
+          "final_url": "https://airc.nist.gov/",
+          "raw_sha256": "0ff88b4409637cd2f3dff9b56c6ee26bdf63de8c91d933b5c26f5ed464c363bd",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "1031f2ad6d75f1acdf05b154bb405e03e63a63059cc0523d5add6197da5c34c3",
+          "body_bytes": 34804
+        }
+      ],
+      "historical_body_sha256": "867c113617515eb682bbb40dfc3715b2e7ee978d2d85817da8ce1a4b3e26712c",
+      "comparison_limit": "Visible-text comparison is a review aid only; unchanged full-response fingerprint algorithms remain authoritative. No exact historical body means no claim of semantic equivalence.",
+      "change_class": "navigation",
+      "finding": "NIST changes AI Metrology Center to Metrology Center in two navigation entries; retained visible article guidance matches.",
+      "affected_skills": [
+        "design-agent-evaluations",
+        "verify-source-output"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-evaluations/SKILL.md",
+        "skills/verify-source-output/SKILL.md"
+      ],
+      "instruction_consequence": "Retain scoped evaluation questions, evidence identity and limitations; the resource index does not establish a completed evaluation.",
+      "decision": "repin_individually_reviewed_current_content"
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+      "publisher": "genai.owasp.org",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+        "marker_kind": "content-sha256",
+        "marker_value": "46595a553b00caf99e46272992834f03b58b564cfaa5cbfacba42ee35ce3a303"
+      },
+      "after_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+        "marker_kind": "content-sha256",
+        "marker_value": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:45:25.704303+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+          "raw_sha256": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371",
+          "marker_kind": "content-sha256",
+          "marker_value": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371",
+          "body_bytes": 30892
+        },
+        {
+          "observed_at": "2026-10-29T20:45:25.871665+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+          "raw_sha256": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371",
+          "marker_kind": "content-sha256",
+          "marker_value": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371",
+          "body_bytes": 30892
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_limit": "Visible-text comparison is a review aid only; unchanged full-response fingerprint algorithms remain authoritative. No exact historical body means no claim of semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "Current OWASP LLM08:2025 covers unauthorized embedding access, cross-context leaks, inversion, poisoning, behavioral shifts and permission-aware retrieval. No exact previous JSON body was located.",
+      "affected_skills": [
+        "review-retrieval-grounding"
+      ],
+      "reviewed_local_files": [
+        "skills/review-retrieval-grounding/SKILL.md"
+      ],
+      "instruction_consequence": "Existing retrieval review explicitly covers each risk and distinguishes guidance from observed isolation. No instruction defect established.",
+      "decision": "repin_individually_reviewed_current_content"
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "publisher": "genai.owasp.org",
+      "reviewed_on": "2026-10-29",
+      "before_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+        "marker_kind": "content-sha256",
+        "marker_value": "a41e32a88651f2a26e7330188df083b509a31768305317644dd3ae38828ea7ce"
+      },
+      "after_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+        "marker_kind": "content-sha256",
+        "marker_value": "c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-10-29T20:45:25.889911+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+          "raw_sha256": "c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7",
+          "marker_kind": "content-sha256",
+          "marker_value": "c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7",
+          "body_bytes": 601885
+        },
+        {
+          "observed_at": "2026-10-29T20:45:26.171254+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+          "raw_sha256": "c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7",
+          "marker_kind": "content-sha256",
+          "marker_value": "c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7",
+          "body_bytes": 601885
+        }
+      ],
+      "historical_body_sha256": "a41e32a88651f2a26e7330188df083b509a31768305317644dd3ae38828ea7ce",
+      "comparison_limit": "Visible-text comparison is a review aid only; unchanged full-response fingerprint algorithms remain authoritative. No exact historical body means no claim of semantic equivalence.",
+      "change_class": "page-metadata",
+      "finding": "OWASP initiative JSON changes content and SEO fields; extracted article differs in ordering of audience labels on two entries.",
+      "affected_skills": [
+        "review-agent-security"
+      ],
+      "reviewed_local_files": [
+        "skills/review-agent-security/SKILL.md"
+      ],
+      "instruction_consequence": "Retain index-as-discovery limits and require exact primary control documents; no new security assurance is inferred.",
+      "decision": "repin_individually_reviewed_current_content"
+    }
+  ],
+  "intermediate_report": "docs/audits/source-check-intermediate-2026-10-29.json",
+  "final_report": "docs/audits/source-check-final-2026-10-29.json",
+  "final_report_sha256": "1389690dd0de60f457c9452780a82293195bdc5abda99f46b7ae5aca4e3365ac",
+  "final_counts": {
+    "pass": 69,
+    "changed": 0,
+    "blocked": 0
+  },
+  "validation_repair": {
+    "initial_full_suite": "316 tests executed; one failure in test_workflow_depth.test_new_source_pins_extend_without_changing_existing_sources. The historical addition assertion compared its old pins with current reviewed repins.",
+    "repair": "Bind the five-source historical assertion to 3f3cbe34019f0edeaaf620631332c4b1a6d1e4b6, independently verified against its original five additions. Add separate transition and mutation coverage for the 32 reviewed repins, unchanged policy and closeout report. No freshness validator or historical receipt changed.",
+    "tests": [
+      "tests/test_workflow_depth.py",
+      "tests/test_source_review_october29.py"
+    ]
+  }
+}

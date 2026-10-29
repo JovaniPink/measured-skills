@@ -592,7 +592,8 @@ class CatalogTests(unittest.TestCase):
         evidence = (ROOT / "docs" / "validation-evidence.md").read_text(
             encoding="utf-8"
         )
-        observed_test_count = unittest.defaultTestLoader.discover(
+        # Count the full suite even when this test is selected with unittest -k.
+        observed_test_count = unittest.TestLoader().discover(
             str(ROOT / "tests")
         ).countTestCases()
         self.assertIn("## v0.10 behavioral-evidence candidate", evidence)
