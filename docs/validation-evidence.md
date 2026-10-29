@@ -13,6 +13,36 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 314 regression tests.
 
+## October 29: local qualification of the chooser repair
+
+At `fd4a45a6f282643ca114a41ceb99e39cb822c0c8`, workflow syntax, strict mypy,
+Ruff, generated-distribution checks, deterministic catalog validation, all 314
+unit/integration regression tests, and whitespace checks passed locally. The
+suite includes export, migration, packaging, authority and failure-path fixtures.
+Two independent generations of all 90 Claude archives matched each other and
+the tracked archive bytes; generation used temporary directories.
+
+Environment: macOS arm64, Python 3.14.7, mypy 1.20.2 and Ruff 0.15.12. This
+executes the repository's checks locally; it does not reproduce the hosted
+Python 3.12/Linux environment or its hash-locked installation step. The existing
+[hosted run for the same head](https://github.com/JovaniPink/measured-skills/actions/runs/40798672285)
+also passed; it was read, not rerun.
+
+In the in-app browser, the same discovery files served on loopback demonstrated
+historical-name lookup for `plan-execution`, the three corresponding routes,
+Antigravity's ordinary-request and explicit-only boundary, Claude native-command
+selection, successful copying, clearing copy feedback after a client change, and
+restoring the `#finish-work` bookmark after reload. This was an operator check,
+not an installed-client trial or participant acceptance. Direct file navigation
+was unavailable to the browser tool; the loopback observation does not establish
+file-URL behavior, Safari, mobile, or second-Mac acceptance.
+
+No new implementation defect was established in this bounded pass. Human chooser
+acceptance remains incomplete: no independent selection or timing result was
+recorded. No model evaluation, installation, billing change, merge, deployment
+or release occurred. The evidence documentation update is separate from the
+tested implementation revision; package and manifest identities are unchanged.
+
 ## October 28: post-merge chooser repair
 
 The automatic hosted run for `fba22e6` ran 314 tests and reported one failure:
