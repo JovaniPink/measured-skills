@@ -13,6 +13,33 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 316 regression tests.
 
+## October 29: fresh review of draft 79
+
+At `c819241`, workflow checks, strict mypy, Ruff, generated distributions,
+deterministic validation, all 316 regression tests, and whitespace checks passed
+locally. Two independent builds of all 90 Claude archives matched each other and
+the tracked bytes. Environment: macOS arm64, Python 3.14.7, mypy 1.20.2 and
+Ruff 0.15.12. This does not duplicate hosted Linux/Python 3.12.
+
+The review input head `263a1fc` had passing
+[hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/40945878086).
+Paginated inline and discussion comments were empty at that observation. The two
+[review findings](audits/post-merge-review-2026-10-28.md#october-29-visible-copy-feedback-and-local-verification-scope)
+were repaired: local checks are explicit in copied finish-work requests, and copy
+feedback appears beside the clicked button. In the in-app browser over loopback,
+feedback moved from about 5,115 pixels below the viewport to about 408 pixels from
+its top, in a 720-pixel-high viewport. Copy succeeded for assessment and repair;
+changing clients cleared feedback. The Antigravity repair boundary stayed visible.
+Clipboard rejection and delayed completion were traced, not simulated in this pass.
+
+Discovery inputs are `5bdf108`; source/artifact commit `34be842` is bound by the
+separate manifest commit `c819241`. Inventory, profiles, invocation policy,
+Antigravity exclusions and the preserved 0.18 manifest remain unchanged. A subsequent
+evidence-only commit records these results without changing the tested implementation.
+Hosted validation must be read for its own exact head. Human selection, installed
+client behavior, file-URL automation, Safari, mobile and M5 acceptance remain separate.
+No model trial, billing change, installation, merge, deployment or release occurred.
+
 ## October 29: finish-work starting point
 
 At `9cf4c71`, workflow checks, strict mypy, Ruff, generated distributions,
