@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "cc5747a196d0f85fa08f976a776656057a0e9dd9",
+  "source_commit": "9871d202bc02754e5809f1dfb5ea8a5b30124884",
   "created_on": "2026-10-29",
   "artifacts": [
     {
@@ -82,7 +82,7 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "a39dc8a72e248dd9a7a7513b36ffd48b3d603c3e5c7ef9b8df3764f91c1bb047"
+      "sha256": "c192286a4727ba85a71286dcb44b6bd8c8530a511d88cb9dd01ba345e2b24274"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "8b60c6f46a240f4f4474c8b00b5a9c2b399d91a4af2840d6cde5228044589779"
+      "sha256": "f4cf431d44cd3926aff50b4457fb934a145ef7bea1722b8dc11fcdc016a2ae19"
     },
     {
       "kind": "file",
