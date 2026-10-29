@@ -21,8 +21,8 @@ package distributions or claim they were qualified on every client.
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
 Read the current 0.19 artifact source from `source_commit` in
-[its manifest](../releases/0.19.0/manifest.json); it is `34be842a94aa2411a4a4844274e98df196ff4d61`, bound by
-the separate manifest commit. Read the discovery input source from `source_revision` in
+[its manifest](../releases/0.19.0/manifest.json); the reviewed source-pin follow-up rebinds it from its clean source
+commit in a separate manifest-only commit. Read the discovery input source from `source_revision` in
 [its catalog](../dist/discovery/catalog.json).
 These identities have different jobs. Do not replace them with a merge SHA just
 to make the labels match. A website can also retain a separately pinned export;
@@ -39,7 +39,7 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | --- | --- | --- |
 | Source and metadata | Merged inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
 | Automated repository evidence | October 29 fresh-review checks and all 316 regression tests passed locally at `c819241`; [PR-head validation](https://github.com/JovaniPink/measured-skills/actions/runs/40947528430) passed for `f8e03f9`, and [merged-main validation](https://github.com/JovaniPink/measured-skills/actions/runs/40948173931) passed for `4a35cde` | See [local environment and browser limits](validation-evidence.md#october-29-fresh-review-of-draft-79). Local qualification advances work without waiting on other repositories' hosted jobs; it does not bypass merge controls or establish receiving-client behavior |
-| Online authorities | October 29 0.19 online check at `4a35cde`: 69 sources, 40 matching, 29 changed, zero unavailable; overall result failed | [Full fingerprint report](audits/upstream-freshness-2026-10-29.json). Review each changed source against the affected instructions before deciding whether to repair or repin. Changed fingerprints do not establish incorrect instructions. No pins or freshness rules changed; the October 26 0.18 result remains historical |
+| Online authorities | October 29 0.19 closeout: 69 matching sources, zero changed or unavailable | [Individual review](audits/source-review-2026-10-29.json) covers the initial 29 changes and three later NIST/OWASP changes; [final receipt](audits/source-check-final-2026-10-29.json). Source URLs, marker kinds, global review age and validator behavior are unchanged. Preserve the [initial failure](audits/upstream-freshness-2026-10-29.json) and [intermediate failure](audits/source-check-intermediate-2026-10-29.json). No canonical instruction defect was established by this source review; current-content review does not prove historical equivalence where old bodies are missing. Recheck before release |
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
 | Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | Let the user select routes and prompts without coaching. Record time, errors, help, intended output and scope; do not score code inspection as human success |
 | 0.18 Claude diagnostic | Four cases and two continuity follow-ups passed at the recorded October 27 source | Keep that diagnostic closed. Distinct installation lifecycle, invocation-control, changed-goal and remaining profile acceptance are not complete |
@@ -58,8 +58,9 @@ merge used the reviewed head as a guard, no admin override, and no settings
 change. Its two parents are `b4200af` and `f8e03f9`. The artifact source and
 discovery source `5bdf10844d34fc738766a5a56be59542deba8bfd` remain ancestors.
 
-1. Review the 29 changed authorities individually. Preserve unavailable historical
-   bodies and unresolved decisions; do not bulk-repin to obtain a passing result.
+1. Keep the reviewed source decisions and their limits with the candidate. All 69
+   sources matched on the final October 29 pass. Recheck near release and review
+   any new drift individually; this snapshot is not a permanent freshness pass.
 2. Complete the prepared human chooser exercise. The user's reported uncertainty
    is a reason to improve clarity, not a completed task result or acceptance score.
 3. Separately authorize the bounded 0.19 real-work trial after account, isolation,
@@ -70,8 +71,10 @@ discovery source `5bdf10844d34fc738766a5a56be59542deba8bfd` remain ancestors.
    gates have evidence. A fresh source check is a release checkpoint, not a
    permanent guarantee about mutable upstream pages.
 
-This follow-up changes only documentation and its evidence inventory. It does
-not rebuild packages, replace the manifest source, or claim a new client result.
+The source follow-up changes reviewed fingerprints and their evidence inventory.
+All 90 package archives matched across two builds; canonical instructions and
+client projections are unchanged. The manifest is rebound to the new source
+commit without rewriting history. No new client result is claimed.
 
 ## Use what is available now
 
