@@ -69,7 +69,7 @@ if (typeof document !== "undefined") (() => {
       : "Select this exact installed entry before sending its native command. A matching name alone does not verify its source or loading.";
     const term = search.value.toLowerCase().trim();
     const {matching, routes} = searchDiscovery(data, term);
-    make("p", `${routes.length} possible routes. Choose the action scope below; matching words do not grant permission. Search stays on this page.`, result);
+    make("p", `${routes.length} possible ${routes.length === 1 ? "route" : "routes"}. Choose the action scope below; matching words do not grant permission. Search stays on this page.`, result);
     routes.forEach(r => {
       const article = make("article", "", result);
       article.id = "choice-" + r.id;

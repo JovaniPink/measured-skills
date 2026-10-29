@@ -13,6 +13,31 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 319 regression tests.
 
+## October 29 sentence search and acceptance preparation
+
+The original matcher returned no routes for the full reviewer-claim sentence,
+an unfinished-PR sentence and a build-failure question. A behavioral regression
+reproduced these failures before the repair; it now exercises the actual browser
+matcher through Node with no dependencies or model calls. It also covers old
+identifiers with hyphens or spaces and unrelated wording. The test explicitly
+skips when Node is unavailable, so that environment cannot claim search execution
+coverage. Local Node was 24.19.0.
+
+In the in-app browser, the repaired reviewer-claim search showed one finish-work
+route with the no-edit assessment expanded. Copy displayed success. Switching to
+Antigravity and opening local repair retained the explicit-only exclusion notice,
+ordinary wording and no-push boundary. These are agent-operated browser
+observations, not human usability results or receiving-client model acceptance.
+The file-URL automation path was unavailable; this observation used a loopback
+HTTP preview of the same generated files. Safari, mobile and clipboard-denial
+behavior were not newly exercised in this pass.
+
+Discovery output and all 90 archives were regenerated twice with identical
+checksums. No canonical skill body, packaged skill or source pin changed.
+The fresh-review receipt for merged #80 remains below; the follow-up's full gate
+results and exact source/manifest identities belong to its PR.
+
+
 ## October 29: reviewed source freshness for draft 80
 
 The [individual source review](audits/source-review-2026-10-29.json) covers 29
