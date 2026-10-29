@@ -1428,4 +1428,4 @@ Use stack-gcp-data if the matching skill is available. In [REPOSITORY], inspect 
 
 Package availability, invocation policy, and observed behavior are separate. All 0.19 installed-client behavior remains unobserved. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `5bdf10844d34fc738766a5a56be59542deba8bfd`. File hashes: `catalog.json` alongside this guide.
+Source revision: `06f95108544707d7770209dcdf769375c54f7199`. File hashes: `catalog.json` alongside this guide.
