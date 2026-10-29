@@ -20,8 +20,8 @@ package distributions or claim they were qualified on every client.
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
 Read the current 0.19 artifact source from `source_commit` in
 [its manifest](../releases/0.19.0/manifest.json); the chooser repair rebinds it in
-the separate manifest commit. The discovery export names input source
-`82115567df98d85fbc70a2e26b82c8adb5b48fa1`.
+the separate manifest commit. Read the discovery input source from `source_revision` in
+[its catalog](../dist/discovery/catalog.json).
 These identities have different jobs. Do not replace them with a merge SHA just
 to make the labels match. A website can also retain a separately pinned export;
 merging a repository does not update that website or an installed client cache.
@@ -36,7 +36,7 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | Gate | Retained evidence | Next action and boundary |
 | --- | --- | --- |
 | Source and metadata | October 28 inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
-| Automated repository evidence | [Merged-main validate job](https://github.com/JovaniPink/measured-skills/actions/runs/40753511774/job/123046173473) succeeded for `b4200af` | Existing remote evidence was read, not rerun. It does not validate later documentation changes or receiving-client behavior |
+| Automated repository evidence | Merged-main validation passed for `b4200af`; [follow-up validation](https://github.com/JovaniPink/measured-skills/actions/runs/40790192313/job/123173214386) passed for `5b787a4` | Existing remote evidence was read, not rerun. Later bookmark/copy repairs require their own exact-head hosted result; neither result establishes receiving-client behavior |
 | Online authorities | October 26 0.18 closeout: 64 matching sources | Dated evidence only. A new online check and individual drift decisions remain required for a later release; no freshness run or repinning occurred in this audit |
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
 | Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | Let the user select routes and prompts without coaching. Record time, errors, help, intended output and scope; do not score code inspection as human success |

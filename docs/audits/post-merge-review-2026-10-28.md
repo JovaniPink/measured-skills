@@ -104,3 +104,26 @@ authorization and billing/isolation prerequisites.
 See [release status](../release-status.md) for actual completed boundaries and
 next actions. The [post-acceptance delta](post-acceptance-delta-2026-10-20.json)
 records this owned documentation revision without extending originality acceptance.
+
+## Second follow-up: bookmarks and asynchronous copy results
+
+A fresh source review at `5b787a4` found two further user-path defects. The
+offline enhancement replaced plain-HTML task anchors with `choice-` anchors and
+hid the original targets. A bookmark such as `#finish-work` could therefore land
+on hidden content. The enhancement now moves the original IDs into the visible
+route, retains earlier `choice-` links, and restores a known task on initial load
+or hash navigation. Only known route IDs affect navigation; private search text
+is not written to the URL or storage.
+
+Clipboard completion was also asynchronous without an identity guard. A request
+could complete after changing the displayed client, stack, search or request
+style, overwriting the cleared status with a success for the previous prompt.
+The offline UI now scopes completion to its rendered view and latest copy attempt.
+The website uses an invalidated copy-attempt identity for the same boundary.
+Stale failures cannot move focus back to an obsolete prompt either. Copying still
+does not execute a task or establish skill loading.
+
+The source review traced current caller and event paths. Browser regression
+cases are prepared in the website draft; no local test suite or model evaluation
+was run. Generation updates only the derived discovery artifacts and their exact
+source binding. Human rediscovery and receiving-client acceptance remain pending.

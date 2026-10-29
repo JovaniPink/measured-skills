@@ -32,7 +32,10 @@
   const result = make("div", "", host);
   const status = make("p", "", host);
   status.setAttribute("role", "status");
+  let viewVersion = 0;
+  let copyVersion = 0;
   const render = () => {
+    const currentView = ++viewVersion;
     result.replaceChildren();
     status.textContent = "";
     style.disabled = !["codex", "claude"].includes(client.value);
@@ -47,6 +50,8 @@
     routes.forEach(r => {
       const article = make("article", "", result);
       article.id = "choice-" + r.id;
+      // Preserve plain-HTML bookmarks as well as earlier enhanced links.
+      make("span", "", article).id = r.id;
       make("h3", r.label, article); make("p", r.why, article);
       make("p", `Start here: ${r.primary_skill}. Provide: ${r.required_inputs.join(", ")}.`, article);
       make("p", `Synthetic output: ${r.output_example}`, article);
@@ -54,7 +59,9 @@
       r.modes.forEach(m => {
         const detail = make("details", "", article);
         detail.dataset.actionScope = m.id;
-        make("summary", m.label, detail); make("p", m.scope, detail);
+        const summary = make("summary", m.label, detail);
+        summary.addEventListener("click", () => { copyVersion += 1; status.textContent = ""; });
+        make("p", m.scope, detail);
         make("p", m.action_guidance[client.value], detail);
         const option = data.stack_options[stack.value];
         const prompts = style.value === "native" ? m.prompts : m.ordinary_prompts;
@@ -62,8 +69,16 @@
         const pre = make("pre", text, detail); pre.tabIndex = 0;
         const copy = make("button", "Copy request", detail); copy.type = "button";
         copy.addEventListener("click", async () => {
-          try { await navigator.clipboard.writeText(text); status.textContent = "Copied. Sending the request authorizes its stated scope."; }
-          catch { status.textContent = "Clipboard unavailable. Select and copy the request text above."; pre.focus(); }
+          const currentCopy = ++copyVersion;
+          const stillCurrent = () => currentView === viewVersion && currentCopy === copyVersion;
+          try {
+            await navigator.clipboard.writeText(text);
+            if (stillCurrent()) status.textContent = "Copied. Sending the request authorizes its stated scope.";
+          } catch {
+            if (!stillCurrent()) return;
+            status.textContent = "Clipboard unavailable. Select and copy the request text above.";
+            pre.focus();
+          }
         });
       });
     });
@@ -78,9 +93,21 @@
     if (!routes.length && !matching.length) make("p", "No match. Try a shorter task phrase or browse the complete catalog below.", result);
   };
   search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
+  const fallback = document.getElementById("static-guide");
+  // The visible enhancement owns these IDs once the static guide is hidden.
+  fallback.querySelectorAll("article[id]").forEach(article => article.removeAttribute("id"));
   render();
   host.hidden = false;
-  document.getElementById("static-guide").hidden = true;
+  fallback.hidden = true;
+  const restoreTask = () => {
+    const route = data.routes.find(r => location.hash === "#" + r.id || location.hash === "#choice-" + r.id);
+    if (!route) return;
+    search.value = "";
+    render();
+    document.getElementById("choice-" + route.id)?.scrollIntoView();
+  };
+  window.addEventListener("hashchange", restoreTask);
+  restoreTask();
   document.querySelectorAll('nav[aria-label="Tasks"] a').forEach(link => {
     const id = link.getAttribute("href").slice(1);
     link.href = "#choice-" + id;
