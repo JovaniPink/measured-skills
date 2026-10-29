@@ -355,7 +355,8 @@
       ],
       "required_inputs": [
         "REPOSITORY",
-        "PR_URL"
+        "TASK or existing PR_URL",
+        "authorized remote and target branch for a new draft"
       ],
       "steps": [
         "Confirm authority and identity",
