@@ -11,7 +11,31 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 316 regression tests.
+Current test suite: 318 regression tests.
+
+## October 29: reviewed source freshness for draft 80
+
+The [individual source review](audits/source-review-2026-10-29.json) covers 29
+initial changes and three later NIST/OWASP changes. Two observations per source
+support each reviewed pin. The final online check matched all 69 sources. Nine
+sources lacked a matching historical body; current-content review does not
+establish historical semantic equivalence. Publisher bodies remain private.
+
+The first 316-test run found a historical test comparing October 28's five-source
+addition with current pins. It now checks the exact original checkpoint. Two
+new regression tests protect reviewed transitions and reject unreviewed pins,
+method/URL changes, review-age changes, missing decisions and disagreeing
+observations. The next 318-test run passed 317 tests and caught the stale suite
+count in this document. The count is corrected here; prior failures remain
+recorded rather than being treated as source or client acceptance. A focused
+rerun also exposed that the counter inherited unittest selection filters; a
+fresh test loader now counts the full suite even when this check runs alone.
+
+Workflow, strict typing, lint, generated-output and deterministic checks passed.
+All 90 archives matched across two builds. `skills-ref` was unavailable locally.
+Read exact-head hosted CI separately from local evidence. Canonical instructions,
+client projections, invocation policies and freshness algorithms are unchanged.
+No model trial, install, billing change or release occurred.
 
 ## October 29: fresh review of draft 79
 
