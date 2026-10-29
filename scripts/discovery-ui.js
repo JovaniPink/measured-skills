@@ -70,6 +70,7 @@
         const copy = make("button", "Copy request", detail); copy.type = "button";
         copy.addEventListener("click", async () => {
           const currentCopy = ++copyVersion;
+          status.textContent = "";
           const stillCurrent = () => currentView === viewVersion && currentCopy === copyVersion;
           try {
             await navigator.clipboard.writeText(text);
