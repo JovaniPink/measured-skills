@@ -1159,7 +1159,7 @@
       ]
     }
   ],
-  "source_revision": "82115567df98d85fbc70a2e26b82c8adb5b48fa1",
+  "source_revision": "e263ea84332cc76d8c29a38b835d946f5be3fbdd",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
@@ -1170,7 +1170,7 @@
     "docs/audits/workflow-depth-2026-10-28.json": "1b91596559ad3db49b0d16e74a89e77a11e8d58d58035ff4d321680cdd2744da",
     "scripts/canonical_deltas.py": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
-    "scripts/discovery-ui.js": "eb4017758a27fe19ddc273892c6bd9bcfed920d3d63a2fded31cfc902d930f50",
+    "scripts/discovery-ui.js": "0c149d3c714a2b22984527b77cd155fcfda7d48b704ec694960213e24a6f8957",
     "scripts/discovery.py": "ddf4744752e557df62e621244514f915e5afa163b8d10f1d8e1be25f4ea1c492",
     "skills/AGENTS.md": "8f95b31d79420e93e53b891b00812085c51bd3cc28a88a0a6e955c2e0e43e377",
     "skills/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
