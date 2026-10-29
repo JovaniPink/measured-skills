@@ -1517,5 +1517,13 @@
     "pass": 69,
     "changed": 0,
     "blocked": 0
+  },
+  "validation_repair": {
+    "initial_full_suite": "316 tests executed; one failure in test_workflow_depth.test_new_source_pins_extend_without_changing_existing_sources. The historical addition assertion compared its old pins with current reviewed repins.",
+    "repair": "Bind the five-source historical assertion to 3f3cbe34019f0edeaaf620631332c4b1a6d1e4b6, independently verified against its original five additions. Add separate transition and mutation coverage for the 32 reviewed repins, unchanged policy and closeout report. No freshness validator or historical receipt changed.",
+    "tests": [
+      "tests/test_workflow_depth.py",
+      "tests/test_source_review_october29.py"
+    ]
   }
 }

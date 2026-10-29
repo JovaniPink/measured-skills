@@ -46,7 +46,9 @@ class WorkflowDepthTests(unittest.TestCase):
     def test_new_source_pins_extend_without_changing_existing_sources(self) -> None:
         before = json.loads(subprocess.check_output(
             ['git', 'show', '62af7d15431c9b3e653523888cd574b7319d7171:catalog/upstream-pins.json'], cwd=ROOT))
-        current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        # This assertion protects the historical five-source addition, not later reviewed repins.
+        current = json.loads(subprocess.check_output(
+            ['git', 'show', '3f3cbe34019f0edeaaf620631332c4b1a6d1e4b6:catalog/upstream-pins.json'], cwd=ROOT))
         added = json.loads((ROOT / 'docs/audits/workflow-depth-sources-2026-10-28.json').read_text())
         expected = {r['source_url']: r for r in before['sources']}
         self.assertEqual(5, len(added['sources']))

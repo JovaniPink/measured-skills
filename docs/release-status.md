@@ -55,8 +55,11 @@ PR #79 merged October 29 at 20:20:37 UTC after exact-head validation passed.
 GitHub reported no effective branch rules, no classic branch protection, and no
 unresolved review threads. There was no required human approval to bypass. The
 merge used the reviewed head as a guard, no admin override, and no settings
-change. Its two parents are `b4200af` and `f8e03f9`. The artifact source and
-discovery source `5bdf10844d34fc738766a5a56be59542deba8bfd` remain ancestors.
+change. Its two parents are `b4200af` and `f8e03f9`. At that merge, artifact
+source `34be842a94aa2411a4a4844274e98df196ff4d61` and discovery source
+`5bdf10844d34fc738766a5a56be59542deba8bfd` were verified ancestors. The later
+source-pin follow-up retains those anchors and records its new source in the
+current manifest.
 
 1. Keep the reviewed source decisions and their limits with the candidate. All 69
    sources matched on the final October 29 pass. Recheck near release and review
