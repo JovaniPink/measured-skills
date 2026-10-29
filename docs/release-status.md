@@ -1,11 +1,12 @@
 # Merged work and remaining release gates
 
-Snapshot: October 28, 2026. Repository baseline:
-`b4200af067fe696d5e9e41bc3413cf4938d18c64`.
+Snapshot: October 29, 2026. Merged repository baseline:
+`4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f`.
 
 The implementation and two-Mac tooling are merged. Neither 0.18 nor 0.19 is a
-published release. GitHub's release list was empty at this observation; its tag
-list contained `v0.16.0`, with no 0.18 or 0.19 tag. This does not erase older
+published release. GitHub's release list was empty at this observation. The October 28 tag
+inspection contained `v0.16.0`, with no 0.18 or 0.19 tag; tags were not rechecked
+in this pass. This does not erase older
 package distributions or claim they were qualified on every client.
 
 ## Which source means what
@@ -15,11 +16,12 @@ package distributions or claim they were qualified on every client.
 | [0.18 preparation, PR #72](https://github.com/JovaniPink/measured-skills/pull/72) | Candidate head `cd9ff2417a5b6ca468642fad2da179dbebd99cbd`; merge `5235afe681a8814d667d5e070f6deac997f7ebf7` | Preserved 88-skill, 11-pack candidate; merged, not promoted |
 | [Motion proposal, PR #77](https://github.com/JovaniPink/measured-skills/pull/77) | Merge `f3f9739bf2af69b51246d32009f0e6da3eaaa1d4` | Preserved proposal and pilot evidence, not portable-skill acceptance |
 | [0.19 redesign, PR #78](https://github.com/JovaniPink/measured-skills/pull/78) | Head `aa1d85981ecec017c53db27b209fb850317dae66`; merge `b4200af067fe696d5e9e41bc3413cf4938d18c64` | Merged 90-skill, four-pack preview |
+| [Chooser usability and boundary repairs, PR #79](https://github.com/JovaniPink/measured-skills/pull/79) | Reviewed head `f8e03f99ab6ec39f3c1b80572217519867c51258`; merge `4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f` | Merged with both parents preserved; no release or installation |
 | Two-Mac tooling | Dotfiles #35 and #37 merged October 28 | Staging and receipt support, not an installed update or M5 qualification |
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
 Read the current 0.19 artifact source from `source_commit` in
-[its manifest](../releases/0.19.0/manifest.json); the chooser repair rebinds it in
+[its manifest](../releases/0.19.0/manifest.json); it is `34be842a94aa2411a4a4844274e98df196ff4d61`, bound by
 the separate manifest commit. Read the discovery input source from `source_revision` in
 [its catalog](../dist/discovery/catalog.json).
 These identities have different jobs. Do not replace them with a merge SHA just
@@ -35,17 +37,41 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 
 | Gate | Retained evidence | Next action and boundary |
 | --- | --- | --- |
-| Source and metadata | October 28 inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
-| Automated repository evidence | October 29 fresh-review checks and all 316 regression tests passed locally at `c819241`; [hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/40945878086) passed for review input `263a1fc` | See [local environment and browser limits](validation-evidence.md#october-29-fresh-review-of-draft-79). Local qualification advances work without waiting on other repositories' hosted jobs; it does not bypass merge controls or establish receiving-client behavior |
-| Online authorities | October 26 0.18 closeout: 64 matching sources | Dated evidence only. A new online check and individual drift decisions remain required for a later release; no freshness run or repinning occurred in this audit |
+| Source and metadata | Merged inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
+| Automated repository evidence | October 29 fresh-review checks and all 316 regression tests passed locally at `c819241`; [PR-head validation](https://github.com/JovaniPink/measured-skills/actions/runs/40947528430) passed for `f8e03f9`, and [merged-main validation](https://github.com/JovaniPink/measured-skills/actions/runs/40948173931) passed for `4a35cde` | See [local environment and browser limits](validation-evidence.md#october-29-fresh-review-of-draft-79). Local qualification advances work without waiting on other repositories' hosted jobs; it does not bypass merge controls or establish receiving-client behavior |
+| Online authorities | October 29 0.19 online check at `4a35cde`: 69 sources, 40 matching, 29 changed, zero unavailable; overall result failed | [Full fingerprint report](audits/upstream-freshness-2026-10-29.json). Review each changed source against the affected instructions before deciding whether to repair or repin. Changed fingerprints do not establish incorrect instructions. No pins or freshness rules changed; the October 26 0.18 result remains historical |
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
 | Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | Let the user select routes and prompts without coaching. Record time, errors, help, intended output and scope; do not score code inspection as human success |
 | 0.18 Claude diagnostic | Four cases and two continuity follow-ups passed at the recorded October 27 source | Keep that diagnostic closed. Distinct installation lifecycle, invocation-control, changed-goal and remaining profile acceptance are not complete |
 | 0.19 receiving-client behavior | No retained receiving-client acceptance | Prepare the separate bounded real-work trial only after actual account, isolation, permission and no-paid-fallback checks. No new model calls in this pass |
 | Codex and Antigravity controls | October 26 records leave Codex paid fallback and Antigravity isolation unresolved | Re-inspect actual controls before any later model trial. Do not substitute another account, proxy, billing route or permission bypass |
 | Apps and second Mac | No new qualification recorded | Verify each receiving surface independently; do not transfer credentials, caches or acceptance results |
-| Public discovery | Studio chooser and personal guidance remain in their website draft sequence | Complete existing website approval and deployment gates separately. Local guide use does not require website publication |
-| Release | No 0.18/0.19 tag or GitHub Release at the snapshot | Select an exact version and qualified revision, satisfy its applicable gates, and obtain the separate release decision. Merge alone is insufficient |
+| Public discovery | Studio #141 and personal #164 are open drafts as of October 29 | Complete existing website approval and deployment gates separately. Local guide use does not require website publication |
+| Release | No GitHub Release at this observation; prior tag inspection dated October 28 | Select an exact version and qualified revision, satisfy its applicable gates, and obtain the separate release decision. Merge alone is insufficient |
+
+## Merge checkpoint and next sequence
+
+PR #79 merged October 29 at 20:20:37 UTC after exact-head validation passed.
+GitHub reported no effective branch rules, no classic branch protection, and no
+unresolved review threads. There was no required human approval to bypass. The
+merge used the reviewed head as a guard, no admin override, and no settings
+change. Its two parents are `b4200af` and `f8e03f9`. The artifact source and
+discovery source `5bdf10844d34fc738766a5a56be59542deba8bfd` remain ancestors.
+
+1. Review the 29 changed authorities individually. Preserve unavailable historical
+   bodies and unresolved decisions; do not bulk-repin to obtain a passing result.
+2. Complete the prepared human chooser exercise. The user's reported uncertainty
+   is a reason to improve clarity, not a completed task result or acceptance score.
+3. Separately authorize the bounded 0.19 real-work trial after account, isolation,
+   permission and billing-route checks. Keep 0.18 diagnostics separate.
+4. Complete the website publication sequence under its own approvals. This does
+   not prevent using the local guide now.
+5. Decide the release version and exact qualified revision only when its required
+   gates have evidence. A fresh source check is a release checkpoint, not a
+   permanent guarantee about mutable upstream pages.
+
+This follow-up changes only documentation and its evidence inventory. It does
+not rebuild packages, replace the manifest source, or claim a new client result.
 
 ## Use what is available now
 
