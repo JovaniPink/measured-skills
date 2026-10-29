@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "e76f20260fcde783c83bfe8eb0a8fc8689e5a6bc",
-  "created_on": "2026-10-28",
+  "source_commit": "32bad2e9b4d1ea2b55caf9a8f55260e5bdf9fedc",
+  "created_on": "2026-10-29",
   "artifacts": [
     {
       "kind": "file",
@@ -82,7 +82,7 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "f8f826ed48e40181a29305e5c86c046fdff8a8b8a11af8313fa631c6fa9ca54a"
+      "sha256": "2e7818ac0a5ebbe51a064f470ba2e8d860b3b8023dafeb36f8ad00c5ccba9383"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "d24073ad6ca7e47725d4905987b781d72d68d1d1201a6252a5eace94f720d677"
+      "sha256": "c2f213883983d2613d90574154f8fbaac4e251aab6ecab77c80c2e71f23ac974"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "fdbead3ae869bb9a149f5b37f4a010935541689b9f54f0e13c14cb9df7f7dcc1"
+      "sha256": "4dc53951be3189c27d4fd0e583c2260cf7f618cc6eae02c0b58a5db3680f24ef"
     },
     {
       "kind": "file",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "607711e17dda35612d142f72fc6385c4cb7888923ab3454de985ca56635e26cb"
+      "sha256": "8020cbae4a5106c5aa3e14f4f91cc1ac088e0aae578fde57a67e8b96f078a34c"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "f6b7c51810fd39f3bd169e144aa3d88f89050f0488ab5ca4a81e9d79ae348010"
+      "sha256": "1350b4707066b96e4b03739fdac8acfde36202d889fee88bc2d3a26d1f4fe67a"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "175a061228c09b37144d3d5b45d7a8bf300252a0d53209c53d04b5b6087d95c6"
+      "sha256": "125285f3bbd67ad5464170e72f6374df14817688ad2df6e0a1c38b3b391f5318"
     },
     {
       "kind": "file",
