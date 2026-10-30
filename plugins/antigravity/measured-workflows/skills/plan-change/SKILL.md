@@ -17,7 +17,7 @@ Create an executable plan that another engineer can follow without reopening mat
 
 Read [specification synthesis](references/specification-synthesis.md) when multiple evidence sources must become one behavioral contract. Read [work packages](references/work-packages.md) when the plan needs independently reviewable units. Read [decision map](references/decision-map.md) when unresolved choices or multiple sessions control sequencing.
 
-Read [document lifecycle](references/document-lifecycle.md) before recovering unfinished document work, reconciling evidence, or preparing a handoff. Read [decision map](references/decision-map.md) as well when unresolved choices control the next slice. Report a failed or unavailable reference read rather than implying it was loaded.
+Read [document lifecycle](references/document-lifecycle.md) when a specification or README drives implementation, or before recovering unfinished document work, reconciling evidence, or preparing a handoff. Read [decision map](references/decision-map.md) as well when unresolved choices control the next slice. Report a failed or unavailable reference read rather than implying it was loaded.
 
 Read [design review](references/design-review.md) when assessing a design document, RFC, or specification before implementation.
 

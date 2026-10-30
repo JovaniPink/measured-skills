@@ -27,7 +27,7 @@
     },
     "skills/plan-change/SKILL.md": {
       "before_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "after_sha256": "d8f2ba04e852915d29036b5ba10376d933f17ee5a13d04beb73bc98f6353da7f",
+      "after_sha256": "9e8625084351e17d616d18483176e9703093c7602c70cf69df8e27380f05dc01",
       "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
     },
     "skills/plan-change/references/dependency-upgrade.md": {
@@ -93,7 +93,7 @@
     "skills/address-review/SKILL.md": {
       "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
       "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
-      "after_sha256": "ef7acd40edf3d733c1d29fb78129eca73f0e590839d45eb65b6e7cb9341dd17c"
+      "after_sha256": "c9180edd5e3de5fb296922844680a29721fd8431b429f40ff94612026fc2b513"
     }
   }
 }

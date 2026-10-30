@@ -246,7 +246,10 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
                 with self.subTest(mode=mode['id'], client=client):
                     text = discovery.action_guidance(data, route, mode, client)
                     self.assertIn(':' + expected[mode['id']] + '.', text)
-                    self.assertIn('unobserved for 0.19', text)
+                    self.assertIn('Current source is not client-qualified', text)
+                    self.assertIn('docs/client-candidate-v0.19.0.md', text)
+                    skill = next(s for s in data['skills'] if s['id'] == expected[mode['id']])
+                    self.assertEqual('not_qualified_for_current_source', skill['client_evidence'])
                     if mode['id'] != 'assess':
                         self.assertIn('Outside finish-work-core', text)
                         self.assertIn('Invocation policy: explicit', text)
