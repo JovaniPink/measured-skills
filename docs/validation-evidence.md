@@ -15,6 +15,15 @@ Current test suite: 319 regression tests.
 
 ## October 29 sentence search and acceptance preparation
 
+A later fresh review of `9ff1162` found that whole-word lookup had lost partial
+queries such as `plan-exec` and `refact`, while punctuation-only input exposed
+all routes. The same behavioral regression first failed for all three cases.
+The repair restores partial task/name lookup, keeps complete-word boundaries
+when finding reviewed phrases inside sentences, and treats punctuation-only
+input as unmatched. Empty input still shows all routes. No prompt authority,
+profile, skill body, source pin or client invocation rule changes.
+
+
 The original matcher returned no routes for the full reviewer-claim sentence,
 an unfinished-PR sentence and a build-failure question. A behavioral regression
 reproduced these failures before the repair; it now exercises the actual browser

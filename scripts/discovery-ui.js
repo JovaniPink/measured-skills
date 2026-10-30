@@ -2,6 +2,7 @@
 function searchDiscovery(data, query) {
   const normalize = value => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
   const term = normalize(query);
+  if (!term) return {matching: [], routes: query.trim() ? [] : data.routes};
   const contains = (text, phrase) => (` ${text} `).includes(` ${phrase} `);
   // Only reviewed multiword phrases and names match inside longer requests.
   // This is literal lookup, not intent detection or authorization analysis.
@@ -9,12 +10,14 @@ function searchDiscovery(data, query) {
     const phrase = normalize(value);
     return phrase.includes(" ") && contains(term, phrase);
   });
+  // Preserve partial typing for task and skill lookup. Reverse matching of
+  // phrases inside sentences still requires complete words.
   const matching = data.skills.filter(s => {
     const names = [s.id, s.label, ...s.historical_names];
-    return contains(normalize([...names, s.description].join(" ")), term) || mentioned(names);
+    return normalize([...names, s.description].join(" ")).includes(term) || mentioned(names);
   });
   const routes = data.routes.filter(r => !term ||
-    contains(normalize([r.label, r.why, ...r.search_phrases].join(" ")), term) ||
+    normalize([r.label, r.why, ...r.search_phrases].join(" ")).includes(term) ||
     mentioned([r.label, ...r.search_phrases]) || matching.some(s => r.search_skills.includes(s.id)));
   return {matching, routes};
 }

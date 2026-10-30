@@ -37,6 +37,11 @@ class MigrationTests(unittest.TestCase):
             ('Please investigate why is the build failing?', ['diagnose']),
             ('plan-execution', ['finish-work', 'upgrade-dependency', 'refactor']),
             ('plan execution', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('plan-exec', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('refact', ['refactor']),
+            ('???', []),
+            ('   ', [r['id'] for r in registry['routes']]),
+            ('I already checked something else.', []),
             ('There is a reviewer waiting elsewhere.', []),
             ('unrelated aardvark', []),
         ]
