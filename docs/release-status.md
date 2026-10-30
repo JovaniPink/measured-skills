@@ -1,7 +1,7 @@
 # Merged work and remaining release gates
 
 Snapshot: October 29, 2026. Merged repository baseline:
-`4d8205c4f569a4dd4096d9daea413b2219ced4e9`.
+`7cc619503c04cac2f178118830e7b0f82901587c`.
 
 The implementation and two-Mac tooling are merged. Neither 0.18 nor 0.19 is a
 published release. GitHub's release list was empty at this observation. The October 28 tag
@@ -18,6 +18,7 @@ package distributions or claim they were qualified on every client.
 | [0.19 redesign, PR #78](https://github.com/JovaniPink/measured-skills/pull/78) | Head `aa1d85981ecec017c53db27b209fb850317dae66`; merge `b4200af067fe696d5e9e41bc3413cf4938d18c64` | Merged 90-skill, four-pack preview |
 | [Chooser usability and boundary repairs, PR #79](https://github.com/JovaniPink/measured-skills/pull/79) | Reviewed head `f8e03f99ab6ec39f3c1b80572217519867c51258`; merge `4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f` | Merged with both parents preserved; no release or installation |
 | [Source freshness, PR #80](https://github.com/JovaniPink/measured-skills/pull/80) | Reviewed head `978437939c47340f1c5af1f0b11d700db9520de0`; merge `4d8205c4f569a4dd4096d9daea413b2219ced4e9` | Merged source decisions and retained receipts; no release or client acceptance |
+| [Task-sentence search and acceptance preparation, PR #81](https://github.com/JovaniPink/measured-skills/pull/81) | Reviewed head `8e9cb09e6a40cb2b8f2d4f45ae001fe12c1cebf4`; merge `7cc619503c04cac2f178118830e7b0f82901587c` | Merged chooser repair; later disposable trial edits are not part of this PR |
 | Two-Mac tooling | Dotfiles #35 and #37 merged October 28 | Staging and receipt support, not an installed update or M5 qualification |
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
@@ -74,8 +75,10 @@ current manifest.
    any new drift individually; this snapshot is not a permanent freshness pass.
 2. Complete the prepared human chooser exercise. The user's reported uncertainty
    is a reason to improve clarity, not a completed task result or acceptance score.
-3. Separately authorize the bounded 0.19 real-work trial after account, isolation,
-   permission and billing-route checks. Keep 0.18 diagnostics separate.
+3. Review the retained Claude findings and proposed one-session/one-continuation
+   retest. Its execution requires new authorization and fresh account, isolation,
+   permission and billing-route checks. The original Claude allowance is consumed;
+   other client lanes and the closed 0.18 diagnostic remain separate.
 4. Complete the website publication sequence under its own approvals. This does
    not prevent using the local guide now.
 5. Decide the release version and exact qualified revision only when its required
