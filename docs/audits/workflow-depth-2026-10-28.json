@@ -27,8 +27,8 @@
     },
     "skills/plan-change/SKILL.md": {
       "before_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "after_sha256": "7755cf91dd9046fd99c943a57db29aaf387c6428481c9ae3c2a3bef7c8ab9339",
-      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+      "after_sha256": "d8f2ba04e852915d29036b5ba10376d933f17ee5a13d04beb73bc98f6353da7f",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
     },
     "skills/plan-change/references/dependency-upgrade.md": {
       "before_sha256": null,
@@ -77,13 +77,23 @@
     },
     "skills/verify-claims/SKILL.md": {
       "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "after_sha256": "12451084b670dd9b4f2c86182e8abc7b1d4cb98e7c35f0bd5b574639deaf75eb",
-      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained."
+      "after_sha256": "62bd76f368bcb3748acceb36e4c3878756b2c7068d604f49056212bde5f179ac",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
     },
     "skills/verify-claims/references/document-reconciliation.md": {
       "before_sha256": null,
       "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
       "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained."
+    },
+    "skills/plan-change/references/document-lifecycle.md": {
+      "before_sha256": "a31f2b59083154c8c98403a1a0acaf6ee0bc53c6f090f397bcaff87ff6068f92",
+      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
+      "after_sha256": "ef53b1734eb29003f189ec1b9ccf458b454f2c28be1cdae5d0130692bb38e89e"
+    },
+    "skills/address-review/SKILL.md": {
+      "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
+      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
+      "after_sha256": "ef7acd40edf3d733c1d29fb78129eca73f0e590839d45eb65b6e7cb9341dd17c"
     }
   }
 }

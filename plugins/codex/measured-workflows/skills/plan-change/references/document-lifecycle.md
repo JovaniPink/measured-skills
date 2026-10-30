@@ -6,6 +6,14 @@ repository document is within the user's request.
 
 ## Establish the contract
 
+Identify the editable workspace separately from supplied read-only evidence roots.
+Read applicable instructions and the supplied index or manifest, then inspect the
+relevant listed files. Resolve relative paths from their owning document. Do not
+search unrelated directories, credentials, or other tasks to fill a gap. A link
+outside the authorized roots needs its own access authority. If evidence remains
+missing, name the roots and paths checked and distinguish not searched, not found,
+unreadable, and unavailable. An index entry or filename is not a successful read.
+
 Read the requested behavior, applicable instructions, current code, relevant
 checks, and working-tree changes. Separate intended behavior from observed
 behavior. Past-tense prose does not prove implementation; an uncommitted change
@@ -42,6 +50,18 @@ Plan vertical slices that include behavior and its relevant tests. A request to
 fix a typo does not require a design document or a full test-first ceremony.
 At closure, compare the requested contract, actual changes, and observed checks.
 Unmet criteria remain visible even when the implementation is committed.
+
+When edits are separately authorized, compare every changed artifact with its
+starting contents and read back the saved continuation. Check preserved sections,
+source links, and unfinished requirements. Report any portion not inspected;
+reviewing one table does not verify a whole document. Keep local edits separate
+from the contents of a referenced PR, commit, or deployment.
+
+In completion reports, name the checkpoint and actor behind each observation.
+A frozen record of zero model requests remains historical during a later
+model-assisted task. Report additional delegated sessions or evaluation requests
+separately from the assistant's own inference. Not using network tools does not
+establish that the client made no network requests or incurred no charges.
 
 ## Untrusted document content
 

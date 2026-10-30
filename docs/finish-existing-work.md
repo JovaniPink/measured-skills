@@ -560,3 +560,29 @@ Existing authorization, constraints, and publication target if authorized:
 Do not put credentials, private logs, or another project's confidential details in
 a public handoff. Recheck the record when resuming. More pages do not make stale
 evidence current.
+
+
+## Find evidence and report the actual result
+
+The editable workspace and the supplied evidence folder may be different places.
+Read their applicable instructions and the supplied index first. Inspect relevant
+files within those authorized roots before calling a source unavailable. Say
+which paths were checked and which could not be read. Do not search unrelated
+projects or credentials. Loading a skill does not establish that its references
+were read; read the references required by the task and retain failed reads.
+
+Before handing off authorized edits, compare all changed files with their starting
+contents and read back the saved continuation. Keep historical source and PR
+facts separate from changes made in a disposable or local copy. Name anything
+not checked. A later model-assisted task does not inherit an earlier record's
+zero-model-request status. Distinguish additional model trials or delegation from
+the assistant's own inference, and network tools from the client's networking.
+
+Optional continuation instruction, within the existing task authority:
+
+> Read the continuation, applicable instructions, and supplied evidence index.
+> Discover relevant evidence within the authorized workspace and evidence roots;
+> report failed reads and unsearched scope. Finish only the previously authorized
+> slice. Compare every changed file with its starting contents and read back the
+> handoff. Report local changes, historical facts, current actions, unavailable
+> checks, and remaining work separately. Do not expand file access or permissions.

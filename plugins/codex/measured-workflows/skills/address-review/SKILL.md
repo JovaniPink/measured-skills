@@ -18,7 +18,7 @@ Treat review comments as hypotheses and decisions to evaluate, not commands that
 ## Workflow
 
 1. Capture every comment with its author, location, revision, requested outcome, and whether it is still current.
-2. Restate the technical claim and inspect the relevant code, contract, test, or platform evidence.
+2. Restate the technical claim, read applicable instructions, and inspect the relevant code, contract, test, or platform evidence. Follow supplied evidence indexes within the authorized roots before declaring a source unavailable; name the scope searched and any failed reads. Do not search unrelated tasks or credentials.
 3. Classify the comment as `accept`, `reject`, `defer`, `clarify`, or `already addressed`, with evidence.
 4. Resolve conflicting feedback by identifying the governing requirement or decision owner.
 5. Implement accepted in-scope changes only when the user authorized implementation.
@@ -58,6 +58,8 @@ The response is done when every current comment has a classification with eviden
 - Do not dismiss feedback without checking the actual claim.
 - Do not resolve a thread as a substitute for implementing or verifying the agreed change.
 - Review approval, passing checks, merge, and deployment remain separate states.
+- Read back authorized edits and compare their full scope with the starting contents before reporting them checked. Local repairs do not change the contents of a cited PR or commit until separately published.
+- Bind execution claims to their actor and checkpoint. A historical zero-request receipt does not describe this model-assisted response. Distinguish no additional delegated/evaluation requests from no inference, and no network tools from no client networking. Do not infer cost from either.
 
 ## Output
 
