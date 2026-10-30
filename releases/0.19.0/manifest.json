@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "923b7ff1c06c819d859ffb4aace7ff8379dd2f76",
+  "source_commit": "f9d750fc430734a474c7ccd91da900057817e7c3",
   "created_on": "2026-10-29",
   "artifacts": [
     {
@@ -87,7 +87,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/address-review-0.19.0.zip",
-      "sha256": "a89211394a9c52e4bbf50e1af44c4b175bed71c54141534e86b0a9908bc4a6d7"
+      "sha256": "1fd5a4b0ae5d524bfa0565ddfe2fdd47b00ca5bd0af588e4351e86ac19eef0cc"
     },
     {
       "kind": "zip",
@@ -272,7 +272,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-change-0.19.0.zip",
-      "sha256": "9e3c0af190b553f7b19659b4ded2ad3668055ebbd447dc0c107e31f87c5ba77b"
+      "sha256": "72ca0af1a1cc1013863ab3854247962019ed0ab71635f423a62e9ae1462f25dd"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "0e363918f3cdac09d05b6144a71ada76406181805595fde531471003c51e7216"
+      "sha256": "591de14aa52377439de58ae17f94d8bc1eed87066e0928e831177706618b21b1"
     },
     {
       "kind": "file",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "da7d8301b44d7744baf2f0622d4f4c2201975da3e40b3edb500abb4f7146ca94"
+      "sha256": "b9a10da647f5315f636f7ac8edc0ae90876ffc3f70cd0b8f8f020a7461fe9361"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "ebd62b9e1e7247e68f94ae40f89d3d54fbae5bf9a40aae7ef48593636dac7249"
+      "sha256": "48030925d97818912fa841b7bb7ba5ccfa333f416feb995e0bb91aaf736c61a3"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "61b059c52bed77d090021b693dd99d1014520e1b08617081d83a28af12828e02"
+      "sha256": "4a60dd6d3e60340de35112d33c81a7be109f00bd2ca30182eb261eba6eddec0d"
     },
     {
       "kind": "file",
