@@ -1426,6 +1426,6 @@ Use stack-gcp-data if the matching skill is available. In [REPOSITORY], inspect 
 | Verify an iOS journey (`verify-ios-journey`) | ios-journey-verification | explicit |
 | Check output against its source (`verify-source-output`) | source-output-conformance-audit | implicit |
 
-Package availability, invocation policy, and observed behavior are separate. All 0.19 installed-client behavior remains unobserved. Historical names are lookup terms, never extra installed copies.
+Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `1d624df226876789bfeaa0b8a91a935a1f23fd7c`. File hashes: `catalog.json` alongside this guide.
+Source revision: `e9ff5110405e126ecf55aaff377c9e1455ccc39a`. File hashes: `catalog.json` alongside this guide.

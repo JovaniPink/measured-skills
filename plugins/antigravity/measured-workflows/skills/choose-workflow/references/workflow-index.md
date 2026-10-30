@@ -626,4 +626,4 @@ Use stack-gcp-data if the matching skill is available. In [REPOSITORY], inspect 
 | Verify an iOS journey (`verify-ios-journey`) | ios-journey-verification | explicit |
 | Check output against its source (`verify-source-output`) | source-output-conformance-audit | implicit |
 
-Package availability, invocation policy, and observed behavior are separate. All 0.19 installed-client behavior remains unobserved. Historical names are lookup terms, never extra installed copies.
+Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
