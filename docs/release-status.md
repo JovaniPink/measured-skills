@@ -1,7 +1,7 @@
 # Merged work and remaining release gates
 
 Snapshot: October 29, 2026. Merged repository baseline:
-`4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f`.
+`4d8205c4f569a4dd4096d9daea413b2219ced4e9`.
 
 The implementation and two-Mac tooling are merged. Neither 0.18 nor 0.19 is a
 published release. GitHub's release list was empty at this observation. The October 28 tag
@@ -17,6 +17,7 @@ package distributions or claim they were qualified on every client.
 | [Motion proposal, PR #77](https://github.com/JovaniPink/measured-skills/pull/77) | Merge `f3f9739bf2af69b51246d32009f0e6da3eaaa1d4` | Preserved proposal and pilot evidence, not portable-skill acceptance |
 | [0.19 redesign, PR #78](https://github.com/JovaniPink/measured-skills/pull/78) | Head `aa1d85981ecec017c53db27b209fb850317dae66`; merge `b4200af067fe696d5e9e41bc3413cf4938d18c64` | Merged 90-skill, four-pack preview |
 | [Chooser usability and boundary repairs, PR #79](https://github.com/JovaniPink/measured-skills/pull/79) | Reviewed head `f8e03f99ab6ec39f3c1b80572217519867c51258`; merge `4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f` | Merged with both parents preserved; no release or installation |
+| [Source freshness, PR #80](https://github.com/JovaniPink/measured-skills/pull/80) | Reviewed head `978437939c47340f1c5af1f0b11d700db9520de0`; merge `4d8205c4f569a4dd4096d9daea413b2219ced4e9` | Merged source decisions and retained receipts; no release or client acceptance |
 | Two-Mac tooling | Dotfiles #35 and #37 merged October 28 | Staging and receipt support, not an installed update or M5 qualification |
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
@@ -38,10 +39,10 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | Gate | Retained evidence | Next action and boundary |
 | --- | --- | --- |
 | Source and metadata | Merged inventory: 90 skills, four packs, 73 implicit and 17 explicit-only; all remain candidates | [Follow-up source tracing](audits/post-merge-review-2026-10-28.md#follow-up-source-trace-and-repairs) repairs action-entry search and adds copyable ordinary requests. No new skill or rename is justified by this pass |
-| Automated repository evidence | October 29 fresh-review checks and all 316 regression tests passed locally at `c819241`; [PR-head validation](https://github.com/JovaniPink/measured-skills/actions/runs/40947528430) passed for `f8e03f9`, and [merged-main validation](https://github.com/JovaniPink/measured-skills/actions/runs/40948173931) passed for `4a35cde` | See [local environment and browser limits](validation-evidence.md#october-29-fresh-review-of-draft-79). Local qualification advances work without waiting on other repositories' hosted jobs; it does not bypass merge controls or establish receiving-client behavior |
+| Automated repository evidence | October 29 source-review checks and all 318 regression tests passed locally; [exact PR-head validation](https://github.com/JovaniPink/measured-skills/actions/runs/40953581963) passed for `9784379`. Fresh merge review also passed deterministic validation and three focused source regressions | See [validation evidence](validation-evidence.md). Local and hosted checks do not establish receiving-client behavior. Later chooser work has its own source and validation record |
 | Online authorities | October 29 0.19 closeout: 69 matching sources, zero changed or unavailable | [Individual review](audits/source-review-2026-10-29.json) covers the initial 29 changes and three later NIST/OWASP changes; [final receipt](audits/source-check-final-2026-10-29.json). Source URLs, marker kinds, global review age and validator behavior are unchanged. Preserve the [initial failure](audits/upstream-freshness-2026-10-29.json) and [intermediate failure](audits/source-check-intermediate-2026-10-29.json). No canonical instruction defect was established by this source review; current-content review does not prove historical equivalence where old bodies are missing. Recheck before release |
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
-| Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | Let the user select routes and prompts without coaching. Record time, errors, help, intended output and scope; do not score code inspection as human success |
+| Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | The October 29 reply repeated the task without a route, scope or time; it remains unscored. Sentence lookup is a separate engineering finding. Record actual human selections without coaching |
 | 0.18 Claude diagnostic | Four cases and two continuity follow-ups passed at the recorded October 27 source | Keep that diagnostic closed. Distinct installation lifecycle, invocation-control, changed-goal and remaining profile acceptance are not complete |
 | 0.19 receiving-client behavior | No retained receiving-client acceptance | Prepare the separate bounded real-work trial only after actual account, isolation, permission and no-paid-fallback checks. No new model calls in this pass |
 | Codex and Antigravity controls | October 26 records leave Codex paid fallback and Antigravity isolation unresolved | Re-inspect actual controls before any later model trial. Do not substitute another account, proxy, billing route or permission bypass |
@@ -50,6 +51,13 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | Release | No GitHub Release at this observation; prior tag inspection dated October 28 | Select an exact version and qualified revision, satisfy its applicable gates, and obtain the separate release decision. Merge alone is insufficient |
 
 ## Merge checkpoint and next sequence
+
+PR #80 merged October 29 at 23:13:55 UTC with parents `4a35cde` and
+`9784379`. Exact-head validation passed; all review threads were inspected and
+none remained. Effective branch rules were empty and classic protection reported
+"Branch not protected". No required approval was bypassed. The merge used an
+exact-head guard and the merge-commit method without changing repository settings.
+
 
 PR #79 merged October 29 at 20:20:37 UTC after exact-head validation passed.
 GitHub reported no effective branch rules, no classic branch protection, and no

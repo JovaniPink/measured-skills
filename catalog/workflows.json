@@ -52,7 +52,11 @@
         "where was i",
         "what remains",
         "what is left",
-        "pick up where I left off"
+        "pick up where I left off",
+        "reviewer says",
+        "assess review feedback",
+        "evaluate a review finding",
+        "disputed review finding"
       ],
       "required_inputs": [
         "REPOSITORY",

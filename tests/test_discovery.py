@@ -17,6 +17,54 @@ import canonical_deltas  # noqa: E402
 
 
 class MigrationTests(unittest.TestCase):
+    def test_sentence_search_keeps_scope_and_name_lookup(self) -> None:
+        import shutil
+        import subprocess
+
+        node = shutil.which('node')
+        if node is None:
+            self.skipTest('Node unavailable: browser search execution was not checked')
+        registry = json.loads((ROOT / discovery.REGISTRY).read_text())
+        data = json.loads((ROOT / discovery.EXPORT).read_text())
+        # Exercise current registry inputs before regeneration as well as the
+        # same matcher used by the browser. No network or browser state needed.
+        for route in registry['routes']:
+            route['search_skills'] = discovery.route_skill_ids(route)
+        data['routes'] = registry['routes']
+        cases = [
+            ('A reviewer says my retry code can lose data. I want to assess that claim before editing.', ['finish-work']),
+            ('I have a half-finished draft PR and want to know what remains, without editing files.', ['finish-work', 'verify']),
+            ('Please investigate why is the build failing?', ['diagnose']),
+            ('plan-execution', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('plan execution', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('plan-exec', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('refact', ['refactor']),
+            ('???', []),
+            ('   ', [r['id'] for r in registry['routes']]),
+            ('I already checked something else.', []),
+            ('There is a reviewer waiting elsewhere.', []),
+            ('unrelated aardvark', []),
+        ]
+        program = """
+const fs = require('node:fs');
+const {searchDiscovery} = require(process.argv[1]);
+const {data, cases} = JSON.parse(fs.readFileSync(0, 'utf8'));
+process.stdout.write(JSON.stringify(cases.map(([query]) =>
+  searchDiscovery(data, query).routes.map(route => route.id))));
+"""
+        result = subprocess.run(
+            [node, '-e', program, str(ROOT / 'scripts/discovery-ui.js')],
+            input=json.dumps({'data': data, 'cases': cases}), text=True,
+            capture_output=True, check=True,
+        )
+        for (query, expected), actual in zip(cases, json.loads(result.stdout), strict=True):
+            with self.subTest(query=query):
+                self.assertEqual(expected, actual)
+        # Search only selects candidate cards: the assessment remains read-only.
+        assess = next(m for m in data['routes'][0]['modes'] if m['id'] == 'assess')
+        for prompt in assess['prompts'].values():
+            self.assertIn('Do not edit files or run tests, builds, installs', prompt)
+
     def test_only_default_assessment_is_expanded_without_javascript(self) -> None:
         from html.parser import HTMLParser
 

@@ -52,7 +52,11 @@
         "where was i",
         "what remains",
         "what is left",
-        "pick up where I left off"
+        "pick up where I left off",
+        "reviewer says",
+        "assess review feedback",
+        "evaluate a review finding",
+        "disputed review finding"
       ],
       "required_inputs": [
         "REPOSITORY",
@@ -1158,18 +1162,18 @@
       ]
     }
   ],
-  "source_revision": "5bdf10844d34fc738766a5a56be59542deba8bfd",
+  "source_revision": "b6986841bb03cd926071f40057ef0c8d9075c5b2",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
     "catalog/migrations/0.18-to-0.19.json": "b11f13c7ba4a6cd811386e3586a3452aee43b94334d702adafc1c6c80d4918c5",
     "catalog/profiles.json": "50af0bc61c0532a68312ae7ac65bc6bdc7e63cce604716b81cf3f268a4159d75",
     "catalog/skills.json": "199c0c51fc45bbda27277e1664d5f55646aa0b24ecfe0f2dbae299d4469941a2",
-    "catalog/workflows.json": "a39dc8a72e248dd9a7a7513b36ffd48b3d603c3e5c7ef9b8df3764f91c1bb047",
+    "catalog/workflows.json": "c192286a4727ba85a71286dcb44b6bd8c8530a511d88cb9dd01ba345e2b24274",
     "docs/audits/workflow-depth-2026-10-28.json": "1b91596559ad3db49b0d16e74a89e77a11e8d58d58035ff4d321680cdd2744da",
     "scripts/canonical_deltas.py": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
-    "scripts/discovery-ui.js": "39ed6cb01c8ea27af9bcb8b2dcdcb0ded3ad7b1871a772bbd2e69485d5f3fdb3",
+    "scripts/discovery-ui.js": "2827bd64808afcf1f0e0b362513ac91f39218a5c2e3132e4710c677ff4c09920",
     "scripts/discovery.py": "a2a20fd2b247471ab769bf2e96ddbfb24de43a055ee5b7ea5836b5660764ec7b",
     "skills/AGENTS.md": "8f95b31d79420e93e53b891b00812085c51bd3cc28a88a0a6e955c2e0e43e377",
     "skills/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",

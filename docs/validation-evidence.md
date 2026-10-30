@@ -11,7 +11,48 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 318 regression tests.
+Current test suite: 319 regression tests.
+
+## October 29 sentence search and acceptance preparation
+
+A later fresh review of `9ff1162` found that whole-word lookup had lost partial
+queries such as `plan-exec` and `refact`, while punctuation-only input exposed
+all routes. The same behavioral regression first failed for all three cases.
+The repair restores partial task/name lookup, keeps complete-word boundaries
+when finding reviewed phrases inside sentences, and treats punctuation-only
+input as unmatched. Empty input still shows all routes. No prompt authority,
+profile, skill body, source pin or client invocation rule changes.
+
+At repair head `ec04f5d`, all 319 local tests passed in 164.796 seconds;
+workflow checks, strict typing, lint, generated-output comparison, deterministic
+validation and whitespace checks passed. Discovery generation was repeated with
+identical bytes. Discovery inputs are `b698684`; artifact source `ac7edf8` is
+bound by manifest-only commit `ec04f5d`. Later evidence-only updates retain those
+artifact identities and require their own exact-head hosted check.
+
+
+The original matcher returned no routes for the full reviewer-claim sentence,
+an unfinished-PR sentence and a build-failure question. A behavioral regression
+reproduced these failures before the repair; it now exercises the actual browser
+matcher through Node with no dependencies or model calls. It also covers old
+identifiers with hyphens or spaces and unrelated wording. The test explicitly
+skips when Node is unavailable, so that environment cannot claim search execution
+coverage. Local Node was 24.19.0.
+
+In the in-app browser, the repaired reviewer-claim search showed one finish-work
+route with the no-edit assessment expanded. Copy displayed success. Switching to
+Antigravity and opening local repair retained the explicit-only exclusion notice,
+ordinary wording and no-push boundary. These are agent-operated browser
+observations, not human usability results or receiving-client model acceptance.
+The file-URL automation path was unavailable; this observation used a loopback
+HTTP preview of the same generated files. Safari, mobile and clipboard-denial
+behavior were not newly exercised in this pass.
+
+Discovery output and all 90 archives were regenerated twice with identical
+checksums. No canonical skill body, packaged skill or source pin changed.
+The fresh-review receipt for merged #80 remains below; the follow-up's full gate
+results and exact source/manifest identities belong to its PR.
+
 
 ## October 29: reviewed source freshness for draft 80
 

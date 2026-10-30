@@ -1,5 +1,30 @@
+/* Pure local lookup shared by the page and regression checks. */
+function searchDiscovery(data, query) {
+  const normalize = value => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const term = normalize(query);
+  if (!term) return {matching: [], routes: query.trim() ? [] : data.routes};
+  const contains = (text, phrase) => (` ${text} `).includes(` ${phrase} `);
+  // Only reviewed multiword phrases and names match inside longer requests.
+  // This is literal lookup, not intent detection or authorization analysis.
+  const mentioned = phrases => phrases.some(value => {
+    const phrase = normalize(value);
+    return phrase.includes(" ") && contains(term, phrase);
+  });
+  // Preserve partial typing for task and skill lookup. Reverse matching of
+  // phrases inside sentences still requires complete words.
+  const matching = data.skills.filter(s => {
+    const names = [s.id, s.label, ...s.historical_names];
+    return normalize([...names, s.description].join(" ")).includes(term) || mentioned(names);
+  });
+  const routes = data.routes.filter(r => !term ||
+    normalize([r.label, r.why, ...r.search_phrases].join(" ")).includes(term) ||
+    mentioned([r.label, ...r.search_phrases]) || matching.some(s => r.search_skills.includes(s.id)));
+  return {matching, routes};
+}
+if (typeof module !== "undefined" && module.exports) module.exports = {searchDiscovery};
+
 /* Local enhancement. The complete task guide remains readable without this script. */
-(() => {
+if (typeof document !== "undefined") (() => {
   const data = JSON.parse(document.getElementById("catalog-data").textContent);
   const host = document.getElementById("interactive");
   const make = (tag, text, parent) => {
@@ -9,7 +34,7 @@
     return node;
   };
   make("h2", "Find a route", host);
-  const label = make("label", "Search tasks or old skill names ", host);
+  const label = make("label", "Search a task or skill name ", host);
   const search = make("input", "", label);
   search.type = "search";
   search.autocomplete = "off";
@@ -46,9 +71,8 @@
       ? "Copy an ordinary request when the skill is missing or its source is uncertain. This does not claim that a skill loaded. Keep your current constraints when filling in placeholders."
       : "Select this exact installed entry before sending its native command. A matching name alone does not verify its source or loading.";
     const term = search.value.toLowerCase().trim();
-    const matching = data.skills.filter(s => [s.id, s.label, s.description, ...s.historical_names].join(" ").toLowerCase().includes(term));
-    const routes = data.routes.filter(r => !term || [r.label, r.why, ...r.search_phrases].join(" ").toLowerCase().includes(term) || matching.some(s => r.search_skills.includes(s.id)));
-    make("p", `${routes.length} routes. Search stays on this page.`, result);
+    const {matching, routes} = searchDiscovery(data, term);
+    make("p", `${routes.length} possible ${routes.length === 1 ? "route" : "routes"}. Choose the action scope below; matching words do not grant permission. Search stays on this page.`, result);
     routes.forEach(r => {
       const article = make("article", "", result);
       article.id = "choice-" + r.id;
