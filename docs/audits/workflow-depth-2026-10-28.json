@@ -94,6 +94,21 @@
       "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
       "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
       "after_sha256": "c9180edd5e3de5fb296922844680a29721fd8431b429f40ff94612026fc2b513"
+    },
+    "skills/coordinate-agents/SKILL.md": {
+      "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
+      "after_sha256": "f84b85358312ac90f7daf532aeccc9e466ff03f548333e0e1cbae481bd8cb24b"
+    },
+    "skills/coordinate-agents/references/client-mapping.md": {
+      "before_sha256": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
+      "after_sha256": "c4d5f0b2ad23ae07312ad1be4e6ca9b42c18760a4edb06571552250a39669d15"
+    },
+    "skills/design-agent-evaluations/SKILL.md": {
+      "before_sha256": "6fd4bd20e3730db436a11ef615a2abb248c899c9fc3834497c9bebea683c67f4",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
+      "after_sha256": "2b7bfe3618281d3e3c0a58faf71f33fb1754683799b5e418bbb77710ea9e9f3d"
     }
   }
 }

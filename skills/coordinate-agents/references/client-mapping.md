@@ -22,4 +22,22 @@ Current Codex documentation also describes project or personal custom-agent file
 
 Claude Code can expose subagents, and some versions can expose experimental agent teams with different coordination behavior. Consult the current [Claude subagent documentation](https://code.claude.com/docs/en/sub-agents) and [Claude agent team documentation](https://code.claude.com/docs/en/agent-teams). Record unsupported behavior as unsupported rather than inferring parity.
 
+Client-managed model work can occur outside visible worker messages. A session
+count, selected model, transcript, or matching skill hash is not a complete usage
+account. Record the observation window, client version, configuration sources,
+and accounting coverage before attributing overhead or savings. Distinguish
+request categories and cache usage where observed; do not invent missing counts.
+Subscription allowance, estimated token cost, and actual billed spend are separate.
+
+Use supported controls only within existing authority. A control that disables
+background execution can also remove useful capabilities and may leave other
+background mechanisms active. It is not proof of zero auxiliary inference.
+Do not inject runtime patches, replace launchers, restart shared daemons, or
+silently change model or billing routes to reduce overhead.
+
+If usage observation is separately authorized, collect only needed metadata to
+an approved destination. Check identifier exposure and retention as well as
+prompt, response, tool-content, and raw-body logging. Preserve unknown coverage;
+do not export private session contents to make a cost claim more precise.
+
 Content binding: [official subagent Markdown](https://learn.chatgpt.com/docs/agent-configuration/subagents.md). Read exact installed-version and managed-policy evidence before selecting a supported role or capability. This documentation does not authorize delegation or override inherited permissions.

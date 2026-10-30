@@ -34,6 +34,13 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 
 ## One optional reviewer
 
+Worker and session limits bound authorized work, not every inference request made
+by the client. Allow for client-managed summaries, retries, and other overhead
+when estimating usage; leave unmeasured amounts unknown. Distinguish planned work,
+observed requests and tokens, and account billing or allowance evidence. A token
+estimate is not a bill or a verified spending cap. Do not enable telemetry, alter
+runtime controls, or launch a measurement task merely to fill an evidence gap.
+
 For a bounded review of one change, the owner keeps implementation responsibility.
 Before launching, verify the actual host, effective custom-agent permissions,
 model configuration, data exposure, and absence of paid fallback. Use one read-only
