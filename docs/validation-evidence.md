@@ -13,6 +13,36 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 319 regression tests.
 
+## October 29 Haiku evidence-discovery repair
+
+At `69ca5cfc2fe1bddeb2586ed53c10c04e968812a6`, all 319 local tests passed
+in 162.675 seconds on Python 3.14.7. Workflow checks, strict mypy, Ruff,
+generated-output checks, deterministic catalog validation, public-boundary and
+whitespace checks passed. The first full run retained 15 failing subcases in one
+discovery test because it still required the now-false blanket statement that
+0.19 behavior was unobserved. Its updated assertion checks current-source
+qualification status and the dated evidence pointer; action, invocation, profile,
+and Antigravity-exclusion assertions remain. No validator was weakened.
+
+Two final generations matched across 955 files, including all 90 Claude archives.
+Discovery inputs are `cb6ffd33`; artifact source is
+`f9d750fc430734a474c7ccd91da900057817e7c3`, bound by the separate manifest-only
+commit `69ca5cfc`. The later documentation receipt does not change those inputs.
+
+Bundled Codex skill-format validation passed for all 90 skills. Claude Code
+2.1.312 strict native plugin validation passed for the two affected packs; these
+are manifest/directory checks, not model behavior or independent safety/policy
+review. Standalone `skills-ref` remains unavailable. Hosted CI was not run for
+this local follow-up, and local Python differs from CI's Python 3.12.
+
+All 170 retained private trial files remained byte-identical. Canonical metadata,
+profiles, compatibility, source pins, frozen cases, and original acceptance
+records remained unchanged. The revised nine-skill private stage matches generated
+Claude bytes and is not installed. A new one-session/one-continuation packet is
+prepared and hashed, not executed. No receiving-client model request, account
+switch, billing change, merge, deployment, or release occurred in this repair.
+See [the scoped findings and retest contract](audits/haiku-evidence-followup-2026-10-29.md).
+
 ## October 29 sentence search and acceptance preparation
 
 A later fresh review of `9ff1162` found that whole-word lookup had lost partial
