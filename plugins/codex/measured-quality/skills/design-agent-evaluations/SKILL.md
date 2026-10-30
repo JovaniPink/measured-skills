@@ -32,6 +32,14 @@ Identify the system version, decision owner, intended users, operating environme
 9. Document sampling limits, grader limitations, contamination risks, nonindependence, and what the evaluation cannot establish.
 10. Produce the evaluation contract. Do not run a paid or external evaluation without separate authority for the provider, data, budget, and network action.
 
+For usage measurements, distinguish user task requests, delegated work, and
+client-managed inference. Record the observation window, request categories,
+models, input/output and cache usage where available, and gaps in collection.
+Do not equate session counts with API calls or estimated token cost with billed
+spend or subscription allowance. Compare task outcomes and elapsed time alongside
+usage; fewer requests alone do not establish improvement. Instrumentation is a
+separate configuration and data-export decision, not implicit evaluation authority.
+
 ## Routing Boundaries
 
 - Use `plan-tests` to select software test layers for deterministic application behavior.

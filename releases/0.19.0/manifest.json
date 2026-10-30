@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "ac7edf80df91cbbe9a9c572ada6080ba083a2e25",
-  "created_on": "2026-10-29",
+  "source_commit": "b8ef2d073a0ebaca87fb5b01efd9b38694a542d2",
+  "created_on": "2026-10-30",
   "artifacts": [
     {
       "kind": "file",
@@ -87,7 +87,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/address-review-0.19.0.zip",
-      "sha256": "1ae9350a9d70a132aa7a773dbe4056910cbff8913c092e31414d256ca325e8fa"
+      "sha256": "1fd5a4b0ae5d524bfa0565ddfe2fdd47b00ca5bd0af588e4351e86ac19eef0cc"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "49bfc41c4204ae7eba8d0d20a8df656e1a2c4c9eb8a01b49f0b08682e0c5e9df"
+      "sha256": "5791077e272b7d8c5ef94ad4653dfa3007d68ec2cb9fab19a316b0d8b4abdf73"
     },
     {
       "kind": "zip",
@@ -137,7 +137,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/coordinate-agents-0.19.0.zip",
-      "sha256": "059a3bfb14831b5a3d207b7a10e67cd7089d716e16319f7d6b0ba430be502e4e"
+      "sha256": "221b22f9304b9e592d977605b7d4c28a6b989bc84a4f1bab2bb0da8242aa69b2"
     },
     {
       "kind": "zip",
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/design-agent-evaluations-0.19.0.zip",
-      "sha256": "1595803d1ef8bab0995c37974f02e3f502aac125d3aae31956612dd7f52c4a68"
+      "sha256": "3d7c4932ec85adc48c59a04dfec598fa15a9d4cb72136f4b0fa84bb76ad095ea"
     },
     {
       "kind": "zip",
@@ -272,7 +272,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-change-0.19.0.zip",
-      "sha256": "97535e7e2256442787d99f224affa3e78bef3f4410b3a069f1e16654449657ed"
+      "sha256": "72ca0af1a1cc1013863ab3854247962019ed0ab71635f423a62e9ae1462f25dd"
     },
     {
       "kind": "zip",
@@ -522,7 +522,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/verify-claims-0.19.0.zip",
-      "sha256": "3a1e8d420856f9115f2e74dc79bde0970367b9f7d4abd9ed518b612da63d156d"
+      "sha256": "c8542ddb18bb06affdcb7c3b88e0fc2c931b1e65c96a2a4b0ee1ffc833f6b30d"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "e5d4f9a7fc2e406e696103fa78a7ce422decd3a7dafd9ce8df49940888e65ba7"
+      "sha256": "4a654e1a80215bfb3a2b9d048a5c3ab3e4da592018e556552c10dfdbe324b62d"
     },
     {
       "kind": "file",
@@ -562,7 +562,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "c580c02ff65c967ff7c38a9ade205cc3f7d925ae90d20c201ee66d9bec6f45dd"
+      "sha256": "c164171a1cca7efd4ba45fce81149c53dd7f3ca4706798554587813d231cab8e"
     },
     {
       "kind": "tree",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "d4125540bba8a6fba32c8e4b3c786f6ce2fee5646c7b95aab5440170ec74e8e0"
+      "sha256": "ca9254b26cd4750fe4d5862982acf1d5c3345470cdb77a6a9f0655105c837e8d"
     },
     {
       "kind": "tree",
@@ -582,7 +582,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "c4ff25a25fcfefbad95cae8785370c152dcb06dda1d78c4ae2010e0d5730d137"
+      "sha256": "8a7585aa29e7854445268c7e4498d4ad2f9410f869ba85af3fae2b0828c7a961"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "15b9a12ca74d82a9a1a1045ce52c4096acdea1462ab8a8c89a1d42c233f4f10d"
+      "sha256": "9355f477d00b81cbef0ff58fd20c1510fa19482e6e24ad6b988c722248f14062"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "be489b89df2b0b7294a04426733bff28e99cd904e7e2b226bdf019e8184458a7"
+      "sha256": "028c5989a8b9f50da8e3dd06fa1a81714b2ec5c1062dd59ce74268c9b7e82d18"
     },
     {
       "kind": "tree",
@@ -612,12 +612,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "cd923921ad88ff0f6dbb26a7c08eb4470da821574f41571f1999d0751b794f36"
+      "sha256": "321a5005052d980adc0c91bdf4b7636926405beaf1702ded7db7d43640dc00c3"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "9c600bd3e605dd727e38946a607257d687706f343e433010849bf92358f3c4ff"
+      "sha256": "1d95d76ccfe01ddb6eb0c13e98a42b5db8eab8c6a6b869e086b4228924eaf2b0"
     }
   ]
 }

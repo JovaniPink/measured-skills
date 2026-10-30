@@ -111,3 +111,20 @@ that choice and its actual controls are verified. Do not switch accounts, reuse
 the other account's credit observation, or send a model request as a probe.
 No login, billing toggle, installation or model run occurred in this inspection.
 The existing human chooser results remain unscored.
+
+
+## Later October 29 bounded Claude execution and repair preparation
+
+The earlier account mismatch and blocked preparation above remain dated records.
+After the user selected the existing CLI account and explicitly authorized disabling
+its usage credits and auto-reload, matching-account controls and effective session
+isolation were observed. Exactly two Haiku task sessions and one continuation ran.
+That allowance is consumed. No account was switched.
+
+The trial demonstrated selected-skill loading and scoped work, with evidence
+lookup and completion-reporting defects. It is not a full acceptance pass. The
+[execution summary and correction plan](audits/haiku-evidence-followup-2026-10-29.md)
+preserve those findings and define a narrower, unrun retest. The original task
+inputs, outputs, and receipts remain unchanged. No new model request is authorized
+by preparing the repair. Human chooser results remain unscored; Codex, Antigravity,
+other surfaces, and other machines retain their separate gates.

@@ -1,7 +1,7 @@
 # Merged work and remaining release gates
 
 Snapshot: October 29, 2026. Merged repository baseline:
-`4d8205c4f569a4dd4096d9daea413b2219ced4e9`.
+`7cc619503c04cac2f178118830e7b0f82901587c`.
 
 The implementation and two-Mac tooling are merged. Neither 0.18 nor 0.19 is a
 published release. GitHub's release list was empty at this observation. The October 28 tag
@@ -18,6 +18,7 @@ package distributions or claim they were qualified on every client.
 | [0.19 redesign, PR #78](https://github.com/JovaniPink/measured-skills/pull/78) | Head `aa1d85981ecec017c53db27b209fb850317dae66`; merge `b4200af067fe696d5e9e41bc3413cf4938d18c64` | Merged 90-skill, four-pack preview |
 | [Chooser usability and boundary repairs, PR #79](https://github.com/JovaniPink/measured-skills/pull/79) | Reviewed head `f8e03f99ab6ec39f3c1b80572217519867c51258`; merge `4a35cdef387f9b90c6b1e32dc03d4f96ba34b06f` | Merged with both parents preserved; no release or installation |
 | [Source freshness, PR #80](https://github.com/JovaniPink/measured-skills/pull/80) | Reviewed head `978437939c47340f1c5af1f0b11d700db9520de0`; merge `4d8205c4f569a4dd4096d9daea413b2219ced4e9` | Merged source decisions and retained receipts; no release or client acceptance |
+| [Task-sentence search and acceptance preparation, PR #81](https://github.com/JovaniPink/measured-skills/pull/81) | Reviewed head `8e9cb09e6a40cb2b8f2d4f45ae001fe12c1cebf4`; merge `7cc619503c04cac2f178118830e7b0f82901587c` | Merged chooser repair; later disposable trial edits are not part of this PR |
 | Two-Mac tooling | Dotfiles #35 and #37 merged October 28 | Staging and receipt support, not an installed update or M5 qualification |
 
 The 0.18 manifest names source `f209dcf26047edc35c7d5c3489198826ddd136a0`.
@@ -44,7 +45,7 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | Originality | Exact scoped acceptance at `36a4e56`, plus subsequent technical delta records | Preserve that acceptance and record this documentation delta. Do not reopen the closed undefined hold or imply new maintainer acceptance |
 | Human chooser usability | [Ten-card protocol](acceptance-0.19.md) prepared; no participant results recorded | The October 29 reply repeated the task without a route, scope or time; it remains unscored. Sentence lookup is a separate engineering finding. Record actual human selections without coaching |
 | 0.18 Claude diagnostic | Four cases and two continuity follow-ups passed at the recorded October 27 source | Keep that diagnostic closed. Distinct installation lifecycle, invocation-control, changed-goal and remaining profile acceptance are not complete |
-| 0.19 receiving-client behavior | No retained receiving-client acceptance | Prepare the separate bounded real-work trial only after actual account, isolation, permission and no-paid-fallback checks. No new model calls in this pass |
+| 0.19 receiving-client behavior | Two Claude Haiku tasks and one continuation observed at the October 29 source, with evidence-discovery and reporting findings; no full acceptance | Original results retained in the [follow-up record](audits/haiku-evidence-followup-2026-10-29.md). Revised contracts and one-session/one-continuation retest are preparation only; fresh controls and new execution authorization remain required |
 | Codex and Antigravity controls | October 26 records leave Codex paid fallback and Antigravity isolation unresolved | Re-inspect actual controls before any later model trial. Do not substitute another account, proxy, billing route or permission bypass |
 | Apps and second Mac | No new qualification recorded | Verify each receiving surface independently; do not transfer credentials, caches or acceptance results |
 | Public discovery | Studio #141 and personal #164 are open drafts as of October 29 | Complete existing website approval and deployment gates separately. Local guide use does not require website publication |
@@ -74,8 +75,10 @@ current manifest.
    any new drift individually; this snapshot is not a permanent freshness pass.
 2. Complete the prepared human chooser exercise. The user's reported uncertainty
    is a reason to improve clarity, not a completed task result or acceptance score.
-3. Separately authorize the bounded 0.19 real-work trial after account, isolation,
-   permission and billing-route checks. Keep 0.18 diagnostics separate.
+3. Review the retained Claude findings and proposed one-session/one-continuation
+   retest. Its execution requires new authorization and fresh account, isolation,
+   permission and billing-route checks. The original Claude allowance is consumed;
+   other client lanes and the closed 0.18 diagnostic remain separate.
 4. Complete the website publication sequence under its own approvals. This does
    not prevent using the local guide now.
 5. Decide the release version and exact qualified revision only when its required

@@ -17,7 +17,7 @@ Create an executable plan that another engineer can follow without reopening mat
 
 Read [specification synthesis](references/specification-synthesis.md) when multiple evidence sources must become one behavioral contract. Read [work packages](references/work-packages.md) when the plan needs independently reviewable units. Read [decision map](references/decision-map.md) when unresolved choices or multiple sessions control sequencing.
 
-Read [document lifecycle](references/document-lifecycle.md) when a specification or README drives implementation, or a plan must survive a handoff.
+Read [document lifecycle](references/document-lifecycle.md) when a specification or README drives implementation, or before recovering unfinished document work, reconciling evidence, or preparing a handoff. Read [decision map](references/decision-map.md) as well when unresolved choices control the next slice. Report a failed or unavailable reference read rather than implying it was loaded.
 
 Read [design review](references/design-review.md) when assessing a design document, RFC, or specification before implementation.
 
@@ -26,7 +26,7 @@ Read [dependency upgrades](references/dependency-upgrade.md) when planning a dep
 ## Workflow
 
 1. Confirm the approved problem, desired outcome, scope, non-goals, and decision owner.
-2. Inspect the current repository and relevant external authority before naming files, interfaces, or commands.
+2. Read applicable repository instructions and inspect the current repository and relevant authorized evidence before naming files, interfaces, or commands. Follow the supplied evidence index within the authorized roots; a failed search in the working directory does not establish absence from the supplied packet.
 3. Describe the target behavior and every public interface, data contract, state transition, or compatibility promise that changes.
 4. Name the existing module to extend and its ownership boundary. Break work into behaviorally complete vertical slices with exact locations and dependencies, not test or PR tranches.
 5. Define tests by risk: unit, integration, contract, migration, end-to-end, property, and manual observation as applicable.
