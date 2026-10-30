@@ -91,3 +91,23 @@ before inference when its controls are uncertain; do not replace it with a proxy
 API, alternate account or different client. Preserve the total ceiling above and
 record loading, reference access, useful progress and limits separately. These
 prepared tasks do not establish execution, acceptance or release readiness.
+
+## Later October 29 receiving-account check
+
+A fresh Safari inspection showed usage credits disabled for the browser's Claude
+account. Native Claude Code authentication reported a logged-in, first-party
+Claude account with a Pro subscription. Comparing the returned account identity
+with the visible browser identity showed that they were different accounts.
+Therefore the browser control does not qualify the CLI receiving account.
+
+No API-key, auth-token, base-URL override or Bedrock/Vertex/Foundry provider flag
+was present among the six environment variables inspected. This limited check
+cannot rule out every configuration route, and does not replace same-account
+billing controls or effective isolation. Raw identities, credit balances and
+account inventories are omitted from this public record.
+
+The next decision is which receiving account to use. Keep the trial blocked until
+that choice and its actual controls are verified. Do not switch accounts, reuse
+the other account's credit observation, or send a model request as a probe.
+No login, billing toggle, installation or model run occurred in this inspection.
+The existing human chooser results remain unscored.

@@ -23,6 +23,13 @@ when finding reviewed phrases inside sentences, and treats punctuation-only
 input as unmatched. Empty input still shows all routes. No prompt authority,
 profile, skill body, source pin or client invocation rule changes.
 
+At repair head `ec04f5d`, all 319 local tests passed in 164.796 seconds;
+workflow checks, strict typing, lint, generated-output comparison, deterministic
+validation and whitespace checks passed. Discovery generation was repeated with
+identical bytes. Discovery inputs are `b698684`; artifact source `ac7edf8` is
+bound by manifest-only commit `ec04f5d`. Later evidence-only updates retain those
+artifact identities and require their own exact-head hosted check.
+
 
 The original matcher returned no routes for the full reviewer-claim sentence,
 an unfinished-PR sentence and a build-failure question. A behavioral regression
