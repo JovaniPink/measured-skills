@@ -255,7 +255,7 @@ def markdown(data: dict[str, Any], bundled: bool = False) -> str:
     lines += ['## Catalog and historical names', '', '| Skill | Former name | Invocation |', '| --- | --- | --- |']
     for skill in data['skills']:
         lines += [f"| {skill['label']} (`{skill['id']}`) | {', '.join(skill['historical_names']) or 'New'} | {skill['invocation']} |"]
-    lines += ['', 'Package availability, invocation policy, and observed behavior are separate. All 0.19 installed-client behavior remains unobserved. Historical names are lookup terms, never extra installed copies.', '']
+    lines += ['', 'Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.', '']
     if not bundled:
         lines += ['Source revision: `' + data['source_revision'] + '`. File hashes: `catalog.json` alongside this guide.', '']
     return '\n'.join(lines)

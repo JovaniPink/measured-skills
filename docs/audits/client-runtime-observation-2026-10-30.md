@@ -60,3 +60,14 @@ These are source-review scenarios, not executed model cases:
 Existing reference, canonical-delta, export, invocation, and boundary checks cover
 packaging. No tests merely asserting this prose are added. Local validation and
 GitHub status are recorded in the delivery PR; neither establishes client behavior.
+
+
+## Fresh review follow-up
+
+A warning-level finding in draft 82: the shared Markdown renderer still described
+all 0.19 behavior as unobserved, contradicting the retained dated observations.
+The same renderer supplies the offline guide and bundled chooser reference.
+Align its qualification boundary with the HTML chooser; retain the historical
+results and current-source qualification gap. A failing cross-format regression
+preceded the repair. No task prompt, skill contract, source pin, trial result, or
+prepared retest changed. Regenerate derived copies and rebind the manifest.

@@ -237,6 +237,18 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
                 (root / 'dist/discovery/guide.md').write_text('changed')
                 self.assertIn('discovery output drift: dist/discovery/guide.md', discovery.check(root))
 
+    def test_discovery_formats_preserve_partial_observation_status(self) -> None:
+        data = json.loads((ROOT / discovery.EXPORT).read_text())
+        for label, rendered in (
+            ('offline Markdown', discovery.markdown(data)),
+            ('bundled index', discovery.markdown(data, bundled=True)),
+            ('offline HTML', discovery.offline_html(data)),
+        ):
+            with self.subTest(format=label):
+                self.assertFalse('All 0.19 installed-client behavior remains unobserved' in rendered)
+                self.assertIn('docs/client-candidate-v0.19.0.md', rendered)
+                self.assertIn('not client-qualified', rendered)
+
     def test_action_availability_tracks_client_and_scope(self) -> None:
         data = json.loads((ROOT / discovery.EXPORT).read_text())
         route = next(r for r in data['routes'] if r['id'] == 'finish-work')
