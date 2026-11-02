@@ -1562,4 +1562,4 @@ In [REPOSITORY], inspect applicable instructions, current branch, comparison [BA
 
 Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `e3e4815dc11ece5a8b73e1ea646c56d3bdbfe13c`. File hashes: `catalog.json` alongside this guide.
+Source revision: `74b228ff87426d106cc4b71a479fc30ece61a592`. File hashes: `catalog.json` alongside this guide.
