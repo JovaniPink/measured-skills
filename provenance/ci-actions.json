@@ -22,8 +22,8 @@
       "name": "actions/upload-artifact",
       "source_url": "https://github.com/actions/upload-artifact",
       "license": "MIT",
-      "pinned_revision": "ea165f8d65b6e75b540449e92b4886f43607fa02",
-      "reviewed_on": "2026-08-21",
+      "pinned_revision": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "reviewed_on": "2026-11-02",
       "use": "Upload the read-only upstream freshness report even when the comparison fails."
     }
   ]

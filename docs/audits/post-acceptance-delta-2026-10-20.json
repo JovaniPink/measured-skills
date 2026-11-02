@@ -12822,13 +12822,13 @@
     },
     ".github/workflows/upstream-freshness.yml": {
       "before_sha256": "8a6ef450e099485d9b54cc4c1af7ce59de169b5534c69cbb5e3fefe0f1d78b2e",
-      "after_sha256": "071d72e3e7cf768f71bafb3e880b8a4f66aa5a16030bd87310f42cef39b2ac53",
-      "expression_and_license_review": "November 2 CI maintenance: Reviewed the same setup-python pin in the scheduled freshness lane; preserve online evidence checks, cadence, report path and failure behavior. No source URL, source fingerprint, freshness age or artifact-upload behavior changes in this PR."
+      "after_sha256": "1f0fb68f497a42a6587a78cebc169155cd8c3557d5423a85f929d2c710001d89",
+      "expression_and_license_review": "November 2 CI maintenance: Reviewed the same setup-python pin in the scheduled freshness lane; preserve online evidence checks, cadence, report path and failure behavior. No source URL, source fingerprint, freshness age or artifact-upload behavior changes in this PR. November 2 artifact-action follow-up: reviewed immutable upload-artifact v7 entry. Node 24 and archive=true defaults preserve the single visible JSON report upload. Existing name/path, always behavior and missing-file policy are retained. No source-freshness method, age, URL, permissions or schedule change. PR validation does not execute the scheduled upload path."
     },
     "provenance/ci-actions.json": {
       "before_sha256": "c94204275694ce4f303033e0742ff987b1ca8d90299bb6e669a076d73a577fec",
-      "after_sha256": "1421a15b7154b4310e0131990bd83f796986291f142a32c442841f3583d1149c",
-      "expression_and_license_review": "November 2 CI maintenance: Bind current setup-python use to reviewed immutable revision 6d4fd22b20465ccc0f7354476588e8df7c9ca0e0. Its MIT LICENSE SHA-256 is 7d070f6b64d9bcc530fe99cc21eaaa4b3c364e0b2d367d7735671fa202a03b32 from that revision's LICENSE file. Unchanged action records retain their prior review dates; no action code is bundled."
+      "after_sha256": "309b0af3fbb72a0784354822d3c63423ae0672a09fb82cd940a0262e081ea97e",
+      "expression_and_license_review": "November 2 CI maintenance: Bind current setup-python use to reviewed immutable revision 6d4fd22b20465ccc0f7354476588e8df7c9ca0e0. Its MIT LICENSE SHA-256 is 7d070f6b64d9bcc530fe99cc21eaaa4b3c364e0b2d367d7735671fa202a03b32 from that revision's LICENSE file. Unchanged action records retain their prior review dates; no action code is bundled. November 2 artifact-action follow-up: bind current use to cf430e030ddbb5b0abf93d22962f4752f3646cd9. Reviewed MIT LICENSE SHA-256 is 3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5. Accepted historical license receipts remain unchanged; no action code is bundled."
     }
   },
   "additional_payload_exclusions": [
