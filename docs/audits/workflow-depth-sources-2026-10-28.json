@@ -1,0 +1,66 @@
+{
+  "reviewed_on": "2026-10-28",
+  "method": "Two direct read-only GETs per URL with identity content encoding. Both payloads byte-identical; no normalization. Bodies inspected as primary documentation, no implementation imported.",
+  "sources": [
+    {
+      "url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "skills": [
+        "design-module-interface"
+      ],
+      "finding": "The author defines refactoring around preserving observable behavior; finite characterization tests provide bounded evidence, not equivalence proof.",
+      "sha256": "33929f42959c859164e841bc71057e57766abf15a1643449b8b884142c8084e1",
+      "resolved": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "content_type": "text/html",
+      "bytes": 12765,
+      "identical_retrievals": 2
+    },
+    {
+      "url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "skills": [
+        "plan-change"
+      ],
+      "finding": "Official major-version guide includes runtime, API, bundler, and codemod changes. Its floating installer examples are not authorization to run them.",
+      "sha256": "3534904cc85ee092fb4d3a6371b299969fa1a43757ef582edccee1e077e7a71d",
+      "resolved": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1851277,
+      "identical_retrievals": 2
+    },
+    {
+      "url": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "skills": [
+        "stack-postgresql-sql"
+      ],
+      "finding": "PostgreSQL 18 distinguishes estimated cost from actual execution. ANALYZE executes the statement; rollback is not universal side-effect recovery.",
+      "sha256": "2b0fcd555487d48d8c59065b4ba682c9a53760eb64ef8352ea9face07daa2f56",
+      "resolved": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 34872,
+      "identical_retrievals": 2
+    },
+    {
+      "url": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
+      "skills": [
+        "stack-swift-swiftui"
+      ],
+      "finding": "Apple describes memory graphs, allocation stacks and generations. Simulator memory indicators do not qualify physical-device limits.",
+      "sha256": "85f785f00741d67f386a4fc70056f5e1c2f0ba5ee8ad7bd4e4270272a604e421",
+      "resolved": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 5438,
+      "identical_retrievals": 2
+    },
+    {
+      "url": "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md",
+      "skills": [
+        "stack-swift-swiftui"
+      ],
+      "finding": "Apple describes slow versus frequent updates and combined SwiftUI/Time Profiler inspection. No local trace or device acceptance follows from reading it.",
+      "sha256": "10c91224352ebdb11060e1029c7d03c6c9dc14257138678ebe55e6cace96f7b3",
+      "resolved": "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "bytes": 13206,
+      "identical_retrievals": 2
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "measured-stacks",
+  "version": "0.19.0",
+  "description": "Apply language and platform guidance after discovering the project.",
+  "author": {
+    "name": "Measured Studios",
+    "url": "https://measuredstudios.com"
+  },
+  "homepage": "https://measuredstudios.com/skills",
+  "repository": "https://github.com/JovaniPink/measured-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Measured Stacks",
+    "shortDescription": "Stacks for focused engineering work",
+    "longDescription": "Apply language and platform guidance after discovering the project.",
+    "developerName": "Measured Studios",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Help me choose and use a Measured Stacks workflow skill."
+    ]
+  }
+}

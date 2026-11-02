@@ -1,6 +1,0 @@
-interface:
-  display_name: "Codebase Explanation"
-  short_description: "Explains existing code"
-  default_prompt: "Use $codebase-explanation for this task: Explains existing code when asked how a request flows, where behavior lives, or what a module does; grounds the explanation in current files rather than inferred historical intent."
-policy:
-  allow_implicit_invocation: true

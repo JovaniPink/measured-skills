@@ -24,7 +24,7 @@ In your report, name the skill or script, the revision, and the client you used.
 
 The catalog ships instructions and reference notes. It ships no skill-level programs, hooks, MCP servers, install scripts, output styles, or broad tool grants.
 
-Output styles matter here. A plugin is allowed to ship one that applies as soon as the plugin is enabled, which replaces your own setting for every later reply without asking. This catalog ships none. Each pack contains a `skills` folder and nothing else.
+Output styles matter here. A plugin is allowed to ship one that applies as soon as the plugin is enabled, which replaces your own setting for every later reply without asking. This catalog ships none. Each pack contains generated metadata, license notices, and a `skills` folder; Claude packs also carry the shared SVG artwork. Those packaging files do not add executable skill behavior.
 
 This matters because a skill you install can shape every later task. Keeping it to text means you can read the whole thing before you trust it.
 

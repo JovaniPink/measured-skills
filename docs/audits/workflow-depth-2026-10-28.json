@@ -1,0 +1,134 @@
+{
+  "format_version": 1,
+  "baseline_revision": "62af7d15431c9b3e653523888cd574b7319d7171",
+  "reviewed_on": "2026-10-28",
+  "status": "scoped_technical_delta_review",
+  "new_maintainer_acceptance": false,
+  "changes": {
+    "skills/design-module-interface/SKILL.md": {
+      "before_sha256": "9fcb1d80777ce06764d260ef1455bdcfa9d7e37548101a57d16793aa52783d14",
+      "after_sha256": "0eaa317d9141a99640f8d411231f4f2a7f215e21e856cc5612a0f6d0292fd481",
+      "review_reason": "Reviewed characterization and observable-behavior preservation; known defects and intentional changes remain distinct, with finite coverage limits."
+    },
+    "skills/design-module-interface/references/behavior-preserving-refactoring.md": {
+      "before_sha256": null,
+      "after_sha256": "1a6e3687cfa1b9334242bb8db5d97e900b905bd1c29761980bc3c38e74c1003f",
+      "review_reason": "Reviewed characterization and observable-behavior preservation; known defects and intentional changes remain distinct, with finite coverage limits."
+    },
+    "skills/explain-codebase/SKILL.md": {
+      "before_sha256": "3e951736baaef946a209553a81b03f2a0cbaa0cf57cff0447258966a6ed68f54",
+      "after_sha256": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "review_reason": "Reviewed bounded source-linked context map; persistence follows existing authority; no recursive instructions or token-saving claim."
+    },
+    "skills/explain-codebase/references/context-map.md": {
+      "before_sha256": null,
+      "after_sha256": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "review_reason": "Reviewed bounded source-linked context map; persistence follows existing authority; no recursive instructions or token-saving claim."
+    },
+    "skills/plan-change/SKILL.md": {
+      "before_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
+      "after_sha256": "9e8625084351e17d616d18483176e9703093c7602c70cf69df8e27380f05dc01",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
+    },
+    "skills/plan-change/references/dependency-upgrade.md": {
+      "before_sha256": null,
+      "after_sha256": "1df16bc5a9d41f0e558b3983e0dfa5c9af5d5051e9a351a72e9fe3ee24a15bc0",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+    },
+    "skills/plan-change/references/design-review.md": {
+      "before_sha256": null,
+      "after_sha256": "6e08b6257ef2c4d2231e8575c73117329de157a2c562045d5a1172915b3ce00c",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation."
+    },
+    "skills/stack-gcp-data/SKILL.md": {
+      "before_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
+      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
+      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary."
+    },
+    "skills/stack-gcp-data/references/replay-review.md": {
+      "before_sha256": null,
+      "after_sha256": "e2375189048e0cdb03ffc25b9737f354f7becd765d28b63d992d79b261578f30",
+      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary."
+    },
+    "skills/stack-postgresql-sql/SKILL.md": {
+      "before_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
+      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
+      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority."
+    },
+    "skills/stack-postgresql-sql/references/query-plans.md": {
+      "before_sha256": null,
+      "after_sha256": "c8609a67bfee28514a263c59716b768ba680f30e3daa0000a8cad4a272a4342a",
+      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority."
+    },
+    "skills/stack-swift-swiftui/SKILL.md": {
+      "before_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
+      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/stack-swift-swiftui/references/memory-diagnosis.md": {
+      "before_sha256": null,
+      "after_sha256": "5ccc2268e83f5b584472237dc07f9ab1d0348d957e7d628411199e9faefafe09",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/stack-swift-swiftui/references/swiftui-performance.md": {
+      "before_sha256": "1314124a71a2ee03cd4f438e65cb8bebc037805edad609366f8cbb751ebebede",
+      "after_sha256": "6980862f8c35aadd338c8e827396e6231464d2271041670f04baf46833d46e91",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+    },
+    "skills/verify-claims/SKILL.md": {
+      "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
+      "after_sha256": "62bd76f368bcb3748acceb36e4c3878756b2c7068d604f49056212bde5f179ac",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
+    },
+    "skills/verify-claims/references/document-reconciliation.md": {
+      "before_sha256": null,
+      "after_sha256": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained."
+    },
+    "skills/plan-change/references/document-lifecycle.md": {
+      "before_sha256": "a31f2b59083154c8c98403a1a0acaf6ee0bc53c6f090f397bcaff87ff6068f92",
+      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
+      "after_sha256": "ef53b1734eb29003f189ec1b9ccf458b454f2c28be1cdae5d0130692bb38e89e"
+    },
+    "skills/address-review/SKILL.md": {
+      "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
+      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
+      "after_sha256": "c9180edd5e3de5fb296922844680a29721fd8431b429f40ff94612026fc2b513"
+    },
+    "skills/coordinate-agents/SKILL.md": {
+      "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
+      "after_sha256": "93eff329ecb538d51889acb4c4b960e64965acd9c34a62e4dfb232c6f7891dc4"
+    },
+    "skills/coordinate-agents/references/client-mapping.md": {
+      "before_sha256": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
+      "after_sha256": "30943d6457b21767b9672c9c399e2af6601548610e8756c4c222b5477e96d5bc"
+    },
+    "skills/design-agent-evaluations/SKILL.md": {
+      "before_sha256": "6fd4bd20e3730db436a11ef615a2abb248c899c9fc3834497c9bebea683c67f4",
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
+      "after_sha256": "2b7bfe3618281d3e3c0a58faf71f33fb1754683799b5e418bbb77710ea9e9f3d"
+    },
+    "skills/diagnose-failure/SKILL.md": {
+      "before_sha256": "c3d5934ebb5f558d4c2fcf830c9e8292398428260f30d914b8c2b3574b4170b9",
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "e60052ac868a5a56a9d936ccf1b8503cbf0aad473f0e7983517720b2316fa0d9"
+    },
+    "skills/diagnose-failure/references/nondeterministic-failures.md": {
+      "before_sha256": null,
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "71312fc60268847d718e6f987842e32187a8ee70c8ff9b35ca138af81090d935"
+    },
+    "skills/record-decisions/SKILL.md": {
+      "before_sha256": "52f44131d192a77fec918d4cc6f66c6ac3dc050d5a0651f056de84059ebfec07",
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "2a4615bbca369c36e82b6505132f44e3eb882a15f22c2110c38c4b7b08693158"
+    },
+    "skills/record-decisions/references/conflicting-reviews.md": {
+      "before_sha256": null,
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "36d541f914582b554649817b3ab91a8144c0ef08ec3a03222c8f2cd4df292a57"
+    }
+  }
+}

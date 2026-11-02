@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define the domain vocabulary"
+  short_description: "Clarifies domain terms"
+  default_prompt: "Use $measured-workflows:model-domain-vocabulary for this task: Clarifies domain terms when teams use the same word differently or code and documents disagree; proposes definitions and examples without declaring owner approval."
+policy:
+  allow_implicit_invocation: true

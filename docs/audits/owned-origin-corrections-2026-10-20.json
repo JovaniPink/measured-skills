@@ -1,0 +1,66 @@
+{
+  "reviewed_source": "b23a058110bcd24c15cf79a68febfffc197c5d02",
+  "reviewed_on": "2026-10-20",
+  "disposition": "owned_adaptation_labels_corrected_broader_qualification_held",
+  "release_acceptance": "not_accepted",
+  "changes": [
+    {
+      "skill": "claim-verification",
+      "previous_method": "clean-room",
+      "corrected_method": "adapted",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/claim-verification/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "7af532ccdd1936dbbbf5efca6328e35b8576afda2e6c6ca9ead5883d1d6cda0e",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "corrected_entrypoint_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "finding": "Historical owned adaptation is supported; no process-separated rewrite accompanied the later clean-room label."
+    },
+    {
+      "skill": "cross-stack-quality-gates",
+      "previous_method": "clean-room",
+      "corrected_method": "adapted",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/cross-stack-quality-gates/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "92cab23ce4df6ef4703c39db73554d70a7ba17b5e2f3adbdb1c776fbc8241dc1",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "corrected_entrypoint_sha256": "8bc687666e1c2cbf3aa92bdd7032c81b41a91d211549a696e6dad3f5fe2cdf97",
+      "finding": "Historical owned adaptation is supported; no process-separated rewrite accompanied the later clean-room label."
+    },
+    {
+      "skill": "prelaunch-readiness",
+      "previous_method": "clean-room",
+      "corrected_method": "adapted",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/prelaunch-readiness/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "e7566287cf0f8ed63d5cd12599d2f7be0bba083ad61481c1ef35777d75a43531",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "corrected_entrypoint_sha256": "beda909aecf900a729b7ebc476227f73c950839af075eb751e2d72c2630588d0",
+      "finding": "Historical owned adaptation is supported; no process-separated rewrite accompanied the later clean-room label."
+    },
+    {
+      "skill": "publish-change-safely",
+      "previous_method": "clean-room",
+      "corrected_method": "adapted",
+      "owned_origin": {
+        "revision": "5593d89f8a9b2d30509244fb82d9c16666423151",
+        "entrypoint": "skills/publish-change-safely/SKILL.md",
+        "license": "MIT",
+        "entrypoint_sha256": "a2b69a9c9bf976a76132e8cd789c530ca53c6e374e83d3bd01348378ae2fc33d",
+        "license_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b"
+      },
+      "corrected_entrypoint_sha256": "2aaab853289dd457007d0526d80aba2721a420df17bea016e86be1e30c706d8c",
+      "finding": "Historical owned adaptation is supported; no process-separated rewrite accompanied the later clean-room label."
+    }
+  ],
+  "remaining_clean_room_declarations": 40,
+  "limitation": "The public owned baseline and its MIT license establish the recorded lineage. They do not prove universal originality, no prior exposure, or independent qualification. Historical audit snapshots are unchanged."
+}

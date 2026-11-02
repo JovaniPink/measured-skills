@@ -1,0 +1,6 @@
+interface:
+  display_name: "Run project checks"
+  short_description: "Finds and runs repository checks"
+  default_prompt: "Use $run-project-checks for this task: Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command."
+policy:
+  allow_implicit_invocation: true

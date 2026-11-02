@@ -18,8 +18,12 @@ from cataloglib import (
     VERSION,
     add_claude_explicit_control,
     read_skill_metadata,
+    license_notice,
     skills_by_plugin,
 )
+
+LEGACY_PLUGINS = frozenset(['measured-agent-platforms', 'measured-ai-systems', 'measured-engineering-build', 'measured-engineering-delivery', 'measured-engineering-review', 'measured-nextjs-workflows', 'measured-operations', 'measured-reasoning', 'measured-skills', 'measured-stack-profiles', 'measured-swift-workflows'])
+OWNED_PLUGINS = frozenset(PLUGIN_SPECS) | LEGACY_PLUGINS
 
 PLUGIN_ICON = ROOT / ".claude-plugin" / "icon.svg"
 
@@ -163,7 +167,7 @@ def _validate_generated_parent(parent: Path) -> None:
         raise ValueError(f"unsafe distribution parent: {parent}")
     if parent.exists():
         for child in parent.iterdir():
-            if child.name not in PLUGIN_SPECS or child.is_symlink() or not child.is_dir():
+            if child.name not in OWNED_PLUGINS or child.is_symlink() or not child.is_dir():
                 raise ValueError(f"unowned or unsafe distribution entry: {child}")
 
 
@@ -171,13 +175,15 @@ def _remove_obsolete(parent: Path, expected: set[str]) -> None:
     for child in parent.iterdir():
         if child.name not in expected:
             # The complete set of parents and children was validated before any reset.
-            if child.is_symlink() or not child.is_dir() or child.name not in PLUGIN_SPECS:
+            if child.is_symlink() or not child.is_dir() or child.name not in OWNED_PLUGINS:
                 raise ValueError(f"unsafe obsolete distribution: {child}")
             shutil.rmtree(child)
 
 
 def _copy_codex_skill(source: Path, target: Path, skill: str, plugin: str) -> None:
+    notice = license_notice(ROOT)
     shutil.copytree(source, target)
+    (target / "LICENSE").write_bytes(notice)
     interface_path = target / "agents" / "openai.yaml"
     interface = interface_path.read_text(encoding="utf-8")
     interface_path.write_text(
@@ -187,7 +193,9 @@ def _copy_codex_skill(source: Path, target: Path, skill: str, plugin: str) -> No
 
 
 def _copy_claude_skill(source: Path, target: Path, explicit: bool) -> None:
+    notice = license_notice(ROOT)
     target.mkdir(parents=True)
+    (target / "LICENSE").write_bytes(notice)
     for item in sorted(source.iterdir()):
         if item.name == "agents":
             continue
@@ -207,6 +215,7 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
     if PLUGIN_ICON.is_symlink() or not PLUGIN_ICON.is_file():
         raise ValueError("shared plugin icon must be a regular source file")
     icon = PLUGIN_ICON.read_bytes()
+    notice = license_notice(ROOT)
     for path in (output_root.absolute(), *output_root.absolute().parents):
         if path in (Path("/tmp"), Path("/var")) and path.resolve() == Path("/private") / path.name:
             continue
@@ -250,6 +259,9 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
             if not is_explicit and antigravity_plugin is not None:
                 _copy_claude_skill(source, antigravity_plugin / "skills" / skill, False)
 
+        for pack in (codex_plugin, claude_plugin, antigravity_plugin):
+            if pack is not None:
+                (pack / "LICENSE").write_bytes(notice)
         spec = PLUGIN_SPECS[plugin]
         _write_json(
             codex_plugin / ".codex-plugin" / "plugin.json",

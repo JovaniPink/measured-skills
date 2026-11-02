@@ -1,6 +1,0 @@
-interface:
-  display_name: "Publish Change Safely"
-  short_description: "Commits, pushes, or opens a PR only"
-  default_prompt: "Use $measured-skills:publish-change-safely for this task: Commits, pushes, or opens a PR only when explicitly requested; verifies identity, destination, diff, and checks while keeping merge, deployment, and release separately authorized."
-policy:
-  allow_implicit_invocation: false

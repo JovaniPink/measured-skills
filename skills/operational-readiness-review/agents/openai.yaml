@@ -1,7 +1,0 @@
-interface:
-  display_name: "Operational Readiness Review"
-  short_description: "Reviews operational readiness"
-  default_prompt: "Use $operational-readiness-review for this task: Reviews operational readiness when asked who will support a service or whether alerts, capacity, recovery, and runbooks are sufficient; reports gaps without deploying it."
-policy:
-  allow_implicit_invocation: true
-

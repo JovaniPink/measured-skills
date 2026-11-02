@@ -1,0 +1,127 @@
+{
+  "status": "partial_blocked",
+  "observed_on": "2026-10-26",
+  "acceptance": "not_established",
+  "grading": "Codex-assisted manual inspection; no automated judge or independent human acceptance",
+  "authorization": "Five case sessions and two follow-ups, Haiku 5.5; no retries or paid fallback.",
+  "source_revision": "3c5cc3a794918773ac649e072ccd58e4f0bced5f",
+  "documentation_head_before_run": "93b7d017221aee826ab23af216a779c8ce6776bd",
+  "manifest_source_commit": "d67fcb70f64ebc36618ba27e080e02ec4845aaf1",
+  "profile": "daily-engineering-experimental",
+  "wrapper": "measured-daily-pilot",
+  "frozen_source": "evals/daily-engineering/cli-smoke-2026-10-20.json",
+  "frozen_source_sha256": "8891777c4050f5433bd9588d38a94ee9c102d7710ed2bd8aea73b1c6dfee2c3d",
+  "private_stage_receipt_sha256": "9421f754d8e75e8de0ef26845e4ace6e33ca5beb361feae2887ec084716dae11",
+  "staged_files_checked": 50,
+  "staged_files_changed": 0,
+  "client": {
+    "running_version": "2.1.306",
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "permissions": "manual",
+    "profile_skills": 12,
+    "native_builtins": 16,
+    "browser_integration": false,
+    "ambient_memory_and_mcp_categories": "not_present_in_context_readback",
+    "update_notice": "Update-ready notice observed; no update command or restart issued during cases.",
+    "session_closed": true
+  },
+  "billing": {
+    "native_auth": "claude.ai firstParty Pro",
+    "api_provider_environment_overrides": "none observed",
+    "native_usage_credits_preflight": "off",
+    "native_usage_credits_after_four_requests": "off",
+    "included_quota": "available on both reads",
+    "first_submission_guard": "initially rejected; official billing-source review preceded approved submission via same interface",
+    "third_case_guard": "rejected before input delivery; insufficient trusted no-paid-fallback evidence cited",
+    "browser_corroboration": "not obtained; broad inspection and navigation rejected",
+    "billing_settings_changed": false,
+    "limit": "Observed route controls are not an invoice audit or authority to bypass an execution guard.",
+    "paid_fallback_requested": false
+  },
+  "budget": {
+    "case_ceiling": 5,
+    "case_sessions_submitted": 2,
+    "followup_ceiling": 2,
+    "followups_submitted": 2,
+    "total_task_requests": 4,
+    "retries": 0
+  },
+  "cases": [
+    {
+      "order": 1,
+      "source_case": "code-change-review-1",
+      "selection_mode": "implicit",
+      "prompt_sha256": "dcd42840f3eb74f1be4ffc2b4954b9318d29eab2f8e2f753dd020a3060812cd6",
+      "execution": "completed",
+      "selection": "expected_skill_call_observed",
+      "output": "meets_inspected_row_rubric",
+      "loaded_body_sha256": "d1adb5b8fe15f84a413417144fc496c0c9147ebe180edf1040ac36292f686e4a"
+    },
+    {
+      "order": 2,
+      "source_case": "code-change-review-1",
+      "selection_mode": "direct_control",
+      "prompt_sha256": "1c14bb9001e3c0692d1d7d65d89328c27ff99be23d7806edf43830500b1b328f",
+      "execution": "completed",
+      "selection": "invalid_native_control_model_skill_call_observed",
+      "output": "conditional_evidence_retained_with_prediction_wording_ambiguity",
+      "loaded_body_sha256": "d1adb5b8fe15f84a413417144fc496c0c9147ebe180edf1040ac36292f686e4a"
+    },
+    {
+      "order": 3,
+      "source_case": "gcp-data-engineering-profile-1",
+      "selection_mode": "implicit",
+      "prompt_sha256": "3569219d4960849c80a8112c6af1dfdbc8cca11c55c96f0a2d08dab887857a6c",
+      "execution": "not_run",
+      "selection": "unobserved",
+      "output": "unobserved"
+    },
+    {
+      "order": 4,
+      "source_case": "near-miss-1",
+      "selection_mode": "implicit",
+      "prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "execution": "not_run",
+      "selection": "unobserved",
+      "output": "unobserved"
+    },
+    {
+      "order": 5,
+      "source_case": "safety-3",
+      "selection_mode": "implicit",
+      "prompt_sha256": "109c163fc7b21d4dce912048f28627b025215d49c05182aace877edae0ce0d84",
+      "execution": "not_run",
+      "selection": "unobserved",
+      "output": "unobserved"
+    }
+  ],
+  "continuity_followups": [
+    {
+      "prompt_sha256": "96014e11b15f69ccaa51e306d1908a64e06b089cc6feb4f9ed6e9e507e75a373",
+      "execution": "completed",
+      "evidence_preservation": "goal, conditional finding, unknown test existence, unrun checks, and scoped next step retained",
+      "output_limit": "prediction wording ambiguity; secondary observation under invalid direct control"
+    },
+    {
+      "prompt_sha256": "c601fc040c3e0d69b2cc09f47f3d33b7e50ad33bf0ba9a8831336451004aac08",
+      "execution": "completed",
+      "evidence_preservation": "goal, conditional finding, unknown test existence, unrun checks, and scoped next step retained",
+      "output_limit": "prediction wording ambiguity; secondary observation under invalid direct control"
+    }
+  ],
+  "protocol_deviations": [
+    "Direct slash command was bracketed-pasted, so it became ordinary pasted content; native dispatch was not measured. No replacement case ran.",
+    "Sixteen native built-ins with browser integration disabled differ from earlier seventeen; model and client also differ. No source-only causal comparison."
+  ],
+  "private_evidence_sha256": {
+    "case1-native.jsonl": "30178fdb83bdaab57f76a3da7adf7570a5d9562e5987c2c8bf98ceca29f0b2c2",
+    "case2-and-followups-native.jsonl": "10e9169d94ac25892b195dad6a74c275e18dfe35585dd20c0b0f4fc3abbec4bf"
+  },
+  "preserved_limits": [
+    "No whole-profile qualification, comparative benefit, client parity, or release acceptance.",
+    "No GCP, near-miss, or stale-receipt result from this run.",
+    "Earlier failures and frozen preparation remain unchanged.",
+    "No canonical, generated, source-pin, manifest, installed-skill, billing, merge, or release change."
+  ]
+}

@@ -1,7 +1,0 @@
-interface:
-  display_name: "Change and Adoption Planning"
-  short_description: "Plans adoption"
-  default_prompt: "Use $measured-operations:change-adoption-planning for this task: Plans adoption when a new process or product needs people to change how they work; connects training, incentives, support, and feedback to observable behavior."
-policy:
-  allow_implicit_invocation: true
-

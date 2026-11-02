@@ -1,7 +1,0 @@
-interface:
-  display_name: "PostgreSQL and SQL Engineering Profile"
-  short_description: "Reviews PostgreSQL schemas, queries, indexes, transactions, and migrations"
-  default_prompt: "Use $measured-stack-profiles:postgresql-sql-engineering-profile for this task: Reviews PostgreSQL schemas, queries, indexes, transactions, and migrations when database changes need focused checks; does not mutate shared data merely to validate a proposal."
-policy:
-  allow_implicit_invocation: true
-

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Guided Configuration"
-  short_description: "Guides account or device setup"
-  default_prompt: "Use $measured-reasoning:guided-configuration for this task: Guides account or device setup when explicitly asked to help with a protected configuration step; verifies visible results without requesting secrets or claiming unseen completion."
-policy:
-  allow_implicit_invocation: false

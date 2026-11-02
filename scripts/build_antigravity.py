@@ -8,8 +8,9 @@ import json
 import shutil
 from pathlib import Path
 
-from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, add_claude_explicit_control, directory_hashes
+from cataloglib import EXPLICIT_SKILLS, ROOT, SKILLS, VERSION, add_claude_explicit_control, directory_hashes, license_notice
 
+from discovery import obsolete_message
 
 def build(output: Path, selected: list[str] | None = None) -> Path:
     """Copy skills into a new Antigravity bundle with explicit controls applied."""
@@ -17,18 +18,22 @@ def build(output: Path, selected: list[str] | None = None) -> Path:
     if not included or len(included) != len(set(included)):
         raise ValueError("choose at least one skill without duplicate names")
     if set(included) - set(SKILLS):
-        raise ValueError("selection contains an unknown skill")
+        raise ValueError(obsolete_message(included) or "selection contains an unknown skill")
     if set(included) & EXPLICIT_SKILLS:
         raise ValueError("explicit-only skills are held on Antigravity until invocation controls are verified")
     # Refuse existing paths, including dangling symlinks. Never reset evidence or settings.
     if output.exists() or output.is_symlink():
         raise FileExistsError(f"output already exists: {output}")
+    notice = license_notice(ROOT)
     output.mkdir(parents=True)
     plugin = output / "plugin"
+    plugin.mkdir()
+    (plugin / "LICENSE").write_bytes(notice)
     for skill in included:
         source = ROOT / "skills" / skill
         target = plugin / "skills" / skill
         target.mkdir(parents=True)
+        (target / "LICENSE").write_bytes(notice)
         explicit = skill in EXPLICIT_SKILLS
         for item in sorted(source.iterdir()):
             if item.name == "agents":

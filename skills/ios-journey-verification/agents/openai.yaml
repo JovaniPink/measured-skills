@@ -1,6 +1,0 @@
-interface:
-  display_name: "iOS Journey Verification"
-  short_description: "Verifies a named iOS journey"
-  default_prompt: "Use $ios-journey-verification for this task: Verifies a named iOS journey when explicitly asked to run fixture-based acceptance steps on selected schemes; excludes inferred live-data journeys, device claims, and broad simulator resets."
-policy:
-  allow_implicit_invocation: false

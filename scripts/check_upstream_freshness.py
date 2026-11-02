@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import re
@@ -93,33 +94,49 @@ def _load(path: Path) -> dict[str, object]:
     return value
 
 
+def _decode_content(payload: bytes, encoding: str | None) -> bytes:
+    """Decode declared HTTP content coding without normalizing document bytes."""
+
+    coding = (encoding or "identity").strip().lower()
+    if coding == "identity":
+        return payload
+    if coding == "gzip":
+        return gzip.decompress(payload)
+    raise ValueError(f"unsupported HTTP Content-Encoding: {encoding}")
+
+
 def _fetch_marker(url: str, preferred_kind: str | None = None) -> tuple[str, str]:
-    request = urllib.request.Request(url, headers={"User-Agent": "JovaniPink-skills-freshness/0.8"})
+    request = urllib.request.Request(
+        url, headers={"User-Agent": "JovaniPink-skills-freshness/0.8", "Accept-Encoding": "identity"}
+    )
     with urllib.request.urlopen(request, timeout=30) as response:
+        def read_content() -> bytes:
+            return _decode_content(response.read(), response.headers.get("Content-Encoding"))
+
         etag = response.headers.get("ETag")
         last_modified = response.headers.get("Last-Modified")
         host = (urlparse(url).hostname or "").casefold()
         if preferred_kind == "normalized-content-sha256":
             return "normalized-content-sha256", _normalized_content_sha256(
-                response.read(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
+                read_content(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
             )
         if preferred_kind == "content-sha256":
-            return "content-sha256", hashlib.sha256(response.read()).hexdigest()
+            return "content-sha256", hashlib.sha256(read_content()).hexdigest()
         if preferred_kind == "etag" and etag and not etag.startswith("W/"):
             return "etag", etag
         if preferred_kind == "last-modified" and last_modified:
             return "last-modified", last_modified
         if preferred_kind is not None:
-            return "content-sha256", hashlib.sha256(response.read()).hexdigest()
+            return "content-sha256", hashlib.sha256(read_content()).hexdigest()
         if host in NORMALIZED_HTML_HOSTS:
             return "normalized-content-sha256", _normalized_content_sha256(
-                response.read(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
+                read_content(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
             )
         if etag and not etag.startswith("W/"):
             return "etag", etag
         if last_modified:
             return "last-modified", last_modified
-        return "content-sha256", hashlib.sha256(response.read()).hexdigest()
+        return "content-sha256", hashlib.sha256(read_content()).hexdigest()
 
 
 def source_urls() -> list[str]:

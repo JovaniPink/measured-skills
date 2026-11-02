@@ -1,0 +1,315 @@
+{
+  "prepared_on": "2026-10-28",
+  "status": "source_review_not_behavioral_trial",
+  "attachments": [
+    {
+      "id": "A",
+      "sha256": "24d6d6c314e29cdb0a40109e6b0907ca3aeff8bfc0e49538c6d3c595cf7401e8",
+      "newline_count": 390,
+      "logical_lines": 391
+    },
+    {
+      "id": "B",
+      "sha256": "69b6e4934d326c80174c6e3075b6174c39d9f447cf1f3338231a84f760cc6340",
+      "newline_count": 217,
+      "logical_lines": 218
+    },
+    {
+      "id": "C",
+      "sha256": "412dbd836c20aa662715b911fb7fc22e8ee71d15d577815e4716af291eeb29bb",
+      "newline_count": 66,
+      "logical_lines": 67
+    }
+  ],
+  "dispositions": [
+    {
+      "source": "A",
+      "start": 1,
+      "end": 20,
+      "disposition": "unverified",
+      "reason": "Source-access claims in the paste are not our receipts. Compressed archives can be read with ZIP tools; tree-only analysis is insufficient."
+    },
+    {
+      "source": "A",
+      "start": 21,
+      "end": 40,
+      "disposition": "adapt",
+      "reason": "Record EGM architecture as a dated design example; seven menu entries are not seven lightweight independent prompts."
+    },
+    {
+      "source": "A",
+      "start": 41,
+      "end": 60,
+      "disposition": "adapt",
+      "reason": "Learn from staged review and contested findings, without mandatory delegation, fan-out, checkpoints or new model calls."
+    },
+    {
+      "source": "A",
+      "start": 61,
+      "end": 64,
+      "disposition": "reject",
+      "reason": "The inspected drift skill asks an agent to compare documents and code; it is not an AST scanner."
+    },
+    {
+      "source": "A",
+      "start": 65,
+      "end": 89,
+      "disposition": "adapt",
+      "reason": "Task-oriented wording helps recognition; replace incorrect 71/10 counts with candidate 88/11 and measure actual lengths separately."
+    },
+    {
+      "source": "A",
+      "start": 90,
+      "end": 140,
+      "disposition": "adapt",
+      "reason": "Adopt clearer consistent action/object labels. Do not infer that overlapping words mean interchangeable contracts or universal memory failure."
+    },
+    {
+      "source": "A",
+      "start": 141,
+      "end": 187,
+      "disposition": "adapt",
+      "reason": "Regroup into four packs, retain distinguishing domain words, and remove catch-all plugin ambiguity. The list contains 11 packs, not 10."
+    },
+    {
+      "source": "A",
+      "start": 188,
+      "end": 203,
+      "disposition": "reject",
+      "reason": "Profiles and specialist reviews remain useful standalone capabilities; routing fixtures are not evidence that their existence causes errors."
+    },
+    {
+      "source": "A",
+      "start": 204,
+      "end": 215,
+      "disposition": "reject",
+      "reason": "Do not collapse specialists into orchestrators. Explicit-only loading costs are client-dependent; no universal zero-cost claim."
+    },
+    {
+      "source": "A",
+      "start": 216,
+      "end": 224,
+      "disposition": "reject",
+      "reason": "Fresh-context review remains optional and authorized. Self-review remains useful; isolation is not correctness."
+    },
+    {
+      "source": "A",
+      "start": 225,
+      "end": 231,
+      "disposition": "reject",
+      "reason": "No automatic synthesis agent or nested delegation. Existing consolidation remains separately usable."
+    },
+    {
+      "source": "A",
+      "start": 232,
+      "end": 240,
+      "disposition": "adapt",
+      "reason": "Add comprehension and plan/code routes using existing capabilities. Investigate failed reads and reviewer error as well as document gaps."
+    },
+    {
+      "source": "A",
+      "start": 241,
+      "end": 249,
+      "disposition": "adopt",
+      "reason": "Evidence-based rejection and repair already exist; preserve dispositions and permit reopening on new evidence."
+    },
+    {
+      "source": "A",
+      "start": 250,
+      "end": 267,
+      "disposition": "adopt",
+      "reason": "Preserve self-contained references and deterministic generated agreement; avoid broad superiority claims."
+    },
+    {
+      "source": "A",
+      "start": 268,
+      "end": 276,
+      "disposition": "unverified",
+      "reason": "Fixture counts and compiler evidence do not establish comparative behavioral quality."
+    },
+    {
+      "source": "A",
+      "start": 277,
+      "end": 290,
+      "disposition": "adapt",
+      "reason": "Action/object names and four packs adopted; reject arbitrary 20-character limit and domain-word removal."
+    },
+    {
+      "source": "A",
+      "start": 291,
+      "end": 308,
+      "disposition": "adapt",
+      "reason": "Use stack-* while keeping contracts; verification is evidence work, not necessarily deterministic. No mandatory zero-context review."
+    },
+    {
+      "source": "A",
+      "start": 309,
+      "end": 333,
+      "disposition": "adapt",
+      "reason": "One-to-one map retains alignment, framing and test planning/execution separately; proposed alternate spellings superseded by approved map."
+    },
+    {
+      "source": "A",
+      "start": 334,
+      "end": 351,
+      "disposition": "reject",
+      "reason": "Keep review, reviewer request, consolidation, data authority, public boundary and security contracts separate."
+    },
+    {
+      "source": "A",
+      "start": 352,
+      "end": 374,
+      "disposition": "adapt",
+      "reason": "Rename research, claims, governance, publication and diagnosis without merging different permissions or contracts."
+    },
+    {
+      "source": "A",
+      "start": 375,
+      "end": 391,
+      "disposition": "reject",
+      "reason": "Do not fold migration decisions or value-evidence review into other skills. Keep old migration record; add a versioned map. No orchestrator import."
+    },
+    {
+      "source": "B",
+      "start": 1,
+      "end": 24,
+      "disposition": "adopt",
+      "reason": "Retain explicit evidence scope, candidate identity and qualifications; dated source inspection is not installed behavior."
+    },
+    {
+      "source": "B",
+      "start": 25,
+      "end": 49,
+      "disposition": "adapt",
+      "reason": "Separate navigation quality from catalog breadth and different EGM responsibilities."
+    },
+    {
+      "source": "B",
+      "start": 50,
+      "end": 69,
+      "disposition": "adopt",
+      "reason": "Recognizable labels matter; format compliance alone does not make names usable. Preserve improved descriptions."
+    },
+    {
+      "source": "B",
+      "start": 70,
+      "end": 89,
+      "disposition": "superseded",
+      "reason": "User selected full canonical migration rather than labels first; retain useful display wording."
+    },
+    {
+      "source": "B",
+      "start": 90,
+      "end": 114,
+      "disposition": "adopt",
+      "reason": "Separate identifiers, labels, descriptions, pack membership and task entry points; preserve invocation controls."
+    },
+    {
+      "source": "B",
+      "start": 115,
+      "end": 116,
+      "disposition": "superseded",
+      "reason": "Motion identity becomes design-web-motion under the approved action/object contract; design and review stay separate."
+    },
+    {
+      "source": "B",
+      "start": 117,
+      "end": 140,
+      "disposition": "adapt",
+      "reason": "Add a comprehension recipe, diagnosing document, context, read and reviewer failures separately."
+    },
+    {
+      "source": "B",
+      "start": 141,
+      "end": 157,
+      "disposition": "adopt",
+      "reason": "Reuse existing lifecycle guidance for reconciliation rather than another scanner skill."
+    },
+    {
+      "source": "B",
+      "start": 158,
+      "end": 176,
+      "disposition": "adopt",
+      "reason": "Budget exhaustion is not acceptance; new evidence may reopen findings; large orchestration is not required for small work."
+    },
+    {
+      "source": "B",
+      "start": 177,
+      "end": 186,
+      "disposition": "adopt",
+      "reason": "Preserve standalone references and host-specific capability evidence; no runtime import."
+    },
+    {
+      "source": "B",
+      "start": 187,
+      "end": 202,
+      "disposition": "superseded",
+      "reason": "Task-first chooser retained; labels-first incremental alternative superseded by approved 0.19 redesign."
+    },
+    {
+      "source": "B",
+      "start": 203,
+      "end": 218,
+      "disposition": "adapt",
+      "reason": "Add two recipes and migration coverage; human usability first, bounded model trial separately authorized. Prior no-change statement remains historical."
+    },
+    {
+      "source": "C",
+      "start": 1,
+      "end": 27,
+      "disposition": "unverified",
+      "reason": "Progress logs describe another session; retain its named audit branch as evidence, not proof of current source state."
+    },
+    {
+      "source": "C",
+      "start": 28,
+      "end": 32,
+      "disposition": "reject",
+      "reason": "Neutral-ID routing tests cannot decide human naming usability; do not make them a prerequisite."
+    },
+    {
+      "source": "C",
+      "start": 33,
+      "end": 41,
+      "disposition": "adapt",
+      "reason": "Use exact EGM revision and client-specific name mapping; reported adoption numbers remain unverified."
+    },
+    {
+      "source": "C",
+      "start": 42,
+      "end": 46,
+      "disposition": "adopt",
+      "reason": "Keep brand in packs, matching folder/name identities and historical marketplace migration."
+    },
+    {
+      "source": "C",
+      "start": 47,
+      "end": 55,
+      "disposition": "adapt",
+      "reason": "Address ambiguity, long profile suffixes and catch-all meaning; counts are older snapshot findings. No arbitrary reserved-word or suffix policy imported."
+    },
+    {
+      "source": "C",
+      "start": 56,
+      "end": 60,
+      "disposition": "adapt",
+      "reason": "Names and routing need distinct evidence; historical routing findings are not current universal guarantees."
+    },
+    {
+      "source": "C",
+      "start": 61,
+      "end": 65,
+      "disposition": "superseded",
+      "reason": "Approved action/object migration replaces proposed object/mode scheme and routing-first prerequisite."
+    },
+    {
+      "source": "C",
+      "start": 66,
+      "end": 67,
+      "disposition": "unverified",
+      "reason": "The cloud session could not inspect all issue/history evidence; retain its limitations."
+    }
+  ],
+  "egm_revision": "05f8984cb6e0077b072ba034f66d95ffdde200ee",
+  "preserved_naming_audit_branch": "claude/skills-naming-conventions-x1f6q7"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define the problem"
+  short_description: "Frames a feature or problem"
+  default_prompt: "Use $frame-problem for this task: Frames a feature or problem when asked what to build, which outcome matters, or whether a proposed fix addresses the need; establishes users, constraints, and success before implementation."
+policy:
+  allow_implicit_invocation: true

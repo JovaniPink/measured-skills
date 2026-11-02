@@ -1,0 +1,63 @@
+---
+name: run-project-checks
+description: "Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command."
+license: MIT
+metadata:
+  author: "Measured Studios"
+  version: "0.19.0"
+  plugin: "measured-quality"
+  invocation: "implicit"
+  provenance: "adapted"
+  risk_class: "bounded-execution"
+---
+
+# Cross-Stack Quality Gates
+
+Discover the project's contract before running validation. Read [gate discovery](references/gate-discovery.md) only for the stacks present in the target scope.
+
+## Workflow
+
+1. Inspect repository instructions, manifests, CI configuration, and documented scripts.
+2. Determine which components changed and which gate owns each relevant invariant.
+3. If an installed stack profile matches the component, use it for stack-specific hazards, compatibility, and gate judgment. The profile does not override repository instructions.
+4. Choose the narrowest useful sequence, normally fast static checks before slower tests and builds.
+5. Run commands exactly as the repository defines them. Do not silently substitute package managers, add flags, rewrite snapshots, format files, apply Terraform, or update dependencies.
+6. Record command, working directory, exit status, duration when material, and the first actionable failure.
+7. Distinguish a missing gate from a passing gate. Do not skip an unavailable command and report the suite green.
+8. Report environment restrictions separately from product failures.
+
+## Done when
+
+The run is done when every required gate for the changed components has a recorded result or is reported as unavailable, and the verdict is PASS, FAIL, or INCOMPLETE as the output rule defines. An unavailable gate makes the verdict INCOMPLETE; it is not a reason to stop. Stop and ask only when a gate needs a mutating step or credentials the task did not authorize.
+
+## Scope rules
+
+- A monorepo may require multiple component-specific gates; do not run every workspace blindly.
+- Builds may create ignored artifacts or caches but must not rewrite tracked source.
+- SQL validation must state whether it was syntax/static only or executed against a real engine.
+- Terraform validation is not an apply. Plans are proposals and must not be reported as deployed state.
+- Simulator or preview checks do not prove device, production, or provider behavior.
+
+## Output
+
+Lead with PASS, FAIL, or INCOMPLETE as derived from the required gates. Keep the
+complete gate table with component, command, result, and evidence. Include
+unavailable checks, coverage gaps, and the first actionable failure. A missing
+required gate cannot become a pass through summarization.
+
+Read [the original acceptance example](references/continuity-example.md) when checking this behavior.
+
+## Example
+
+Synthetic example; not an observed client result.
+
+Input: At synthetic revision B, the supplied unit-test receipt records 12 passes. The repository requires an integration check, but its service is unavailable.
+
+Output: INCOMPLETE at B.
+
+| Component | Command | Result | Evidence |
+| --- | --- | --- | --- |
+| Unit | `python3 -m unittest discover -s tests/unit` | PASS | Supplied receipt at B: 12 passes |
+| Integration | `python3 -m unittest discover -s tests/integration` | NOT RUN | Required service unavailable |
+
+The integration gate is the first actionable blocker. Its behavior remains unverified; repeat that gate when the service is available. No completion claim is supported yet.

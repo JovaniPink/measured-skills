@@ -1,0 +1,6 @@
+interface:
+  display_name: "Choose a workflow"
+  short_description: "Finds a route and next request"
+  default_prompt: "Use $choose-workflow for the supplied request. Preserve its scope and return concise guidance without executing the proposed task."
+policy:
+  allow_implicit_invocation: true

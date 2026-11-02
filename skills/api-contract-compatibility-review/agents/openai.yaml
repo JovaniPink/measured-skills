@@ -1,7 +1,0 @@
-interface:
-  display_name: "API Contract Compatibility Review"
-  short_description: "Reviews breaking API, event, and schema changes"
-  default_prompt: "Use $api-contract-compatibility-review for this task: Reviews breaking API, event, and schema changes when asked whether old clients still work or independent upgrades are safe; checks behavior and rollout order as well as field shapes."
-policy:
-  allow_implicit_invocation: true
-

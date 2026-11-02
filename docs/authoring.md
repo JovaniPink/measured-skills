@@ -4,7 +4,7 @@
 
 One skill should express one reusable capability. Put activation context in the frontmatter description and procedural content in the body. Keep `SKILL.md` concise; move substantial lookup material into focused `references/` files.
 
-Use lowercase, hyphenated names that are no longer than 64 characters. The directory name and frontmatter `name` must match.
+Use action-and-object identifiers for workflows and `stack-<technology>` for supporting profiles. Keep distinguishing domain words and globally recognizable names; do not impose an arbitrary 20-character limit. Display labels use approachable English, not mechanical title-casing. Descriptions remain third-person and state concrete selection conditions. Naming does not change invocation policy, risk class or authority. Use lowercase, hyphenated names that are no longer than 64 characters. The directory name and frontmatter `name` must match.
 
 Use ASCII, US English, and approachable language in canonical skills, references, comments, evaluations, and documentation. Follow the [editorial style guide](editorial-style.md). Edit canonical sources and regenerate client distributions instead of hand-editing generated files.
 
@@ -17,8 +17,8 @@ description: What the skill does and the concrete situations that should activat
 license: MIT
 metadata:
   author: "Measured Studios"
-  version: "0.18.0"
-  plugin: "measured-skills"
+  version: "0.19.0"
+  plugin: "measured-workflows"
   invocation: "implicit"
   provenance: "original"
   risk_class: "read-only"
@@ -40,7 +40,7 @@ policy:
   allow_implicit_invocation: true
 ```
 
-The canonical default prompt must mention the skill with `$skill-name`. Set the policy to `false` for explicit-only skills. Generation rewrites that prompt to `$measured-skills:skill-name` for the installed plugin namespace.
+The canonical default prompt must mention the skill with `$skill-name`. Set the policy to `false` for explicit-only skills. Generation rewrites that prompt to `$pack-name:skill-name` for the installed plugin namespace.
 
 ## Workflow rules
 

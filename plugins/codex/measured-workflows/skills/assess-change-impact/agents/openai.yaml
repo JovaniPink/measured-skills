@@ -1,0 +1,6 @@
+interface:
+  display_name: "Assess the impact of a change"
+  short_description: "Traces a change's blast radius"
+  default_prompt: "Use $measured-workflows:assess-change-impact for this task: Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses."
+policy:
+  allow_implicit_invocation: true

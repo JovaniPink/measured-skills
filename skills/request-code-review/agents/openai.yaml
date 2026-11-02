@@ -1,6 +1,0 @@
-interface:
-  display_name: "Request Code Review"
-  short_description: "Prepares a review packet"
-  default_prompt: "Use $request-code-review for this task: Prepares a review packet when explicitly asked to request review of a change; states scope, tests, and risks, and sends it only when the destination and action are authorized."
-policy:
-  allow_implicit_invocation: false

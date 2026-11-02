@@ -1,0 +1,6 @@
+interface:
+  display_name: "Reflect on the workflow"
+  short_description: "Reviews a completed workflow"
+  default_prompt: "Use $review-workflow for this task: Reviews a completed workflow when explicitly asked what caused friction or what to improve next; uses observed task evidence without diagnosing people or claiming unmeasured benefit."
+policy:
+  allow_implicit_invocation: false

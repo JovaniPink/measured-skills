@@ -1,0 +1,26 @@
+{
+  "name": "measured-workflows",
+  "version": "0.19.0",
+  "description": "Find a route, understand the work, plan, repair, and deliver within authority.",
+  "author": {
+    "name": "Measured Studios",
+    "url": "https://measuredstudios.com"
+  },
+  "homepage": "https://measuredstudios.com/skills",
+  "repository": "https://github.com/JovaniPink/measured-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Measured Workflows",
+    "shortDescription": "Workflows for focused engineering work",
+    "longDescription": "Find a route, understand the work, plan, repair, and deliver within authority.",
+    "developerName": "Measured Studios",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Help me choose and use a Measured Workflows workflow skill."
+    ]
+  }
+}

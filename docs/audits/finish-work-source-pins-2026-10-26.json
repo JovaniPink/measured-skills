@@ -1,0 +1,45 @@
+{
+  "reviewed_on": "2026-10-26",
+  "reviewed_revision": "0bc4edcb91078ceb3eff238c396e2c17ded9c730",
+  "scope": "Two new prompt authorities only. Retained source fingerprints and historical receipts are unchanged; this is not a new whole-catalog online check.",
+  "records": [
+    {
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "decision": "reviewed_new_source",
+      "marker_kind": "content-sha256",
+      "marker_value": "32e2e03c432789431b2bf519249d880ca313d86c2068c44c892e58941a8aed75",
+      "observations": [
+        {
+          "raw_sha256": "32e2e03c432789431b2bf519249d880ca313d86c2068c44c892e58941a8aed75"
+        },
+        {
+          "raw_sha256": "32e2e03c432789431b2bf519249d880ca313d86c2068c44c892e58941a8aed75"
+        }
+      ],
+      "affected_skills": [
+        "engineering-prompt-review"
+      ],
+      "finding": "Official provider prompt guidance reviewed for clarity, context, and evaluation limits. Independently authored instructions and synthetic examples; no behavior trial or publisher expression imported.",
+      "representation": "Official HTML response; no normalization."
+    },
+    {
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "decision": "reviewed_new_source",
+      "marker_kind": "content-sha256",
+      "marker_value": "68fa2aeb65250f259c1acd2c1d00fcb0024368e867f26f1614b1b09f4e69355f",
+      "observations": [
+        {
+          "raw_sha256": "68fa2aeb65250f259c1acd2c1d00fcb0024368e867f26f1614b1b09f4e69355f"
+        },
+        {
+          "raw_sha256": "68fa2aeb65250f259c1acd2c1d00fcb0024368e867f26f1614b1b09f4e69355f"
+        }
+      ],
+      "affected_skills": [
+        "engineering-prompt-review"
+      ],
+      "finding": "Official provider prompt guidance reviewed for clarity, context, and evaluation limits. Independently authored instructions and synthetic examples; no behavior trial or publisher expression imported.",
+      "representation": "Official Markdown response, selected after differing HTML responses; no normalization."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "source_revision": "352439797ea8902e65d5a56921a2cd5400e3c890",
+  "reviewed_on": "2026-10-20",
+  "scope": "Fresh review of the nine retained holds and newly observed subagent-documentation drift. No policy relaxation, broad normalization, or global review-clock reset. Three samples per source were planned before retrieval; prior instability remains historical evidence. A subsequent full closeout found additional ASVS drift; its three planned samples disagree, so the existing pin is retained and the gate remains failing.",
+  "initial_active_sources": 63,
+  "current_active_sources": 62,
+  "decisions": [
+    {
+      "old_url": "https://developer.apple.com/documentation/swiftdata/modelactor",
+      "current_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
+      "decision": "replace_renderer_shell_with_official_content",
+      "expected_marker": "content-sha256:22eb6b9dad5ea17f7bd75d4dce787222e81943067d62e24666c083287cef5406",
+      "reviewed_marker": "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+      "resampled_markers": [
+        "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+        "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+        "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f"
+      ],
+      "finding": "Official documentation data was read for the same named documentation topic; its full JSON bytes now bind substantive content rather than a page shell. Historical HTML receipts remain unchanged."
+    },
+    {
+      "old_url": "https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app",
+      "current_url": "https://developer.apple.com/tutorials/data/documentation/swiftui/managing-model-data-in-your-app.json",
+      "decision": "replace_renderer_shell_with_official_content",
+      "expected_marker": "content-sha256:4b230d88255754f2f9a19aecc5fc11c14c80cd619da637071c8b9a95a2dde960",
+      "reviewed_marker": "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+      "resampled_markers": [
+        "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+        "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+        "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc"
+      ],
+      "finding": "Official documentation data was read for the same named documentation topic; its full JSON bytes now bind substantive content rather than a page shell. Historical HTML receipts remain unchanged."
+    },
+    {
+      "old_url": "https://developer.apple.com/documentation/testing/migratingfromxctest",
+      "current_url": "https://developer.apple.com/tutorials/data/documentation/testing/migratingfromxctest.json",
+      "decision": "replace_renderer_shell_with_official_content",
+      "expected_marker": "content-sha256:cd6282a9f54246eeb2c2033ecd0ff647e6d4c454cdd686727ed0ac3a2d5ed0db",
+      "reviewed_marker": "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+      "resampled_markers": [
+        "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+        "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+        "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347"
+      ],
+      "finding": "Official documentation data was read for the same named documentation topic; its full JSON bytes now bind substantive content rather than a page shell. Historical HTML receipts remain unchanged."
+    },
+    {
+      "old_url": "https://www.swift.org/documentation/",
+      "current_url": "https://docs.swift.org/latest/data/documentation.json",
+      "decision": "replace_renderer_shell_with_official_content",
+      "expected_marker": "etag:\"209-65cef4d3c4ac0\"",
+      "reviewed_marker": "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055",
+      "resampled_markers": [
+        "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055",
+        "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055",
+        "content-sha256:9c299b3fc605538e622817f73d66ff685b335fcb425302052f8f013f30675055"
+      ],
+      "finding": "Official documentation data was read for the same named documentation topic; its full JSON bytes now bind substantive content rather than a page shell. Historical HTML receipts remain unchanged."
+    },
+    {
+      "old_url": "https://www.antigravity.google/docs/cli/plugins/",
+      "current_url": "https://www.antigravity.google/docs/plugins?tab=cli",
+      "decision": "retire_obsolete_duplicate",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "finding": "The former page is a redirect shell. The existing combined official guide already supplies the affected packaging authority; its review retains the union of affected skills."
+    },
+    {
+      "old_url": "https://antigravity.google/docs/cli/headless/",
+      "current_url": "https://antigravity.google/docs/cli/headless/",
+      "decision": "repin_reviewed_stable_content",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "reviewed_marker": "etag:\"wE2o6g\"",
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "body_sha256_samples": [
+        "26bc1a7f862bfc08f5482a458b9c0915fbf7d1433c347a4273fedeb746465b5d",
+        "26bc1a7f862bfc08f5482a458b9c0915fbf7d1433c347a4273fedeb746465b5d",
+        "26bc1a7f862bfc08f5482a458b9c0915fbf7d1433c347a4273fedeb746465b5d"
+      ],
+      "finding": "Current headless documentation retains permission-denial and outcome distinctions. Three planned raw-body and preferred-kind samples agree; no normalizer change is used."
+    },
+    {
+      "old_url": "https://www.antigravity.google/docs/sdk/overview",
+      "current_url": "https://www.antigravity.google/docs/sdk/overview",
+      "decision": "repin_reviewed_stable_content",
+      "expected_marker": "etag:\"tAIKDw\"",
+      "reviewed_marker": "etag:\"wE2o6g\"",
+      "resampled_markers": [
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\"",
+        "etag:\"wE2o6g\""
+      ],
+      "body_sha256_samples": [
+        "f891c0cf37e50910042ab84c2543e02bb32da987b7c640cce39665c72202a01b",
+        "f891c0cf37e50910042ab84c2543e02bb32da987b7c640cce39665c72202a01b",
+        "f891c0cf37e50910042ab84c2543e02bb32da987b7c640cce39665c72202a01b"
+      ],
+      "finding": "Current SDK documentation still separates its stateful runtime and tool policies from local CLI acceptance. Three planned body samples agree; no SDK execution was performed."
+    },
+    {
+      "old_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "current_url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "decision": "repin_reviewed_stable_content",
+      "expected_marker": "normalized-content-sha256:4e9b6fd81b9ab34e2edacab3b9b4963bd402ba18290bafcca81ec5453c691301",
+      "reviewed_marker": "normalized-content-sha256:87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+      "resampled_markers": [
+        "normalized-content-sha256:87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+        "normalized-content-sha256:87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+        "normalized-content-sha256:87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928"
+      ],
+      "body_sha256_samples": [
+        "87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+        "87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928",
+        "87d715c656710e452430b7596d82e504b25b24defd9eb1559f15f8ff9c1b7928"
+      ],
+      "finding": "Current initiative content still identifies agent-specific trust, tool, and governance risks. Three planned body samples agree; this review does not erase earlier volatile observations."
+    },
+    {
+      "old_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "current_url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "decision": "repin_reviewed_stable_content",
+      "expected_marker": "normalized-content-sha256:44a36ed5f01b69261088a74ad8cab855ec4de28a1cc146d03a6f534f17808511",
+      "reviewed_marker": "normalized-content-sha256:d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5",
+      "resampled_markers": [
+        "normalized-content-sha256:d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5",
+        "normalized-content-sha256:d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5",
+        "normalized-content-sha256:d6192f14f16d8e01645959f3bd8be74c58e5da4397f3892aa76413aceca30fd5"
+      ],
+      "body_sha256_samples": [
+        "fbfb11ad02e8c9d8bd0ecf0b226abe7d29f03bc1566470f60a29c302bac01574",
+        "fbfb11ad02e8c9d8bd0ecf0b226abe7d29f03bc1566470f60a29c302bac01574",
+        "fbfb11ad02e8c9d8bd0ecf0b226abe7d29f03bc1566470f60a29c302bac01574"
+      ],
+      "finding": "Current guidance retains permission-aware retrieval, isolation, poisoning, and source conflicts. Three planned bodies agree; full-page hashing and existing normalization remain unchanged."
+    },
+    {
+      "old_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "current_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "decision": "repin_reviewed_stable_content",
+      "expected_marker": "normalized-content-sha256:018675ac3c1de476af76097311225f696f246f2a92f2f5f1ad60de32d6c5755a",
+      "reviewed_marker": "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+      "resampled_markers": [
+        "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+        "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+        "normalized-content-sha256:4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a"
+      ],
+      "body_sha256_samples": [
+        "4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+        "4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a",
+        "4bacb2f2f6465fc2fba416952591e3240d2395851560591b168be1f8221ef29a"
+      ],
+      "finding": "Current subagent guidance still distinguishes roles, inherited context, tool/configuration scope, and managed requirements. A definition is not a measured isolation or delegation guarantee."
+    },
+    {
+      "old_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "current_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "decision": "retain_hold_inconsistent_samples",
+      "expected_marker": "content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+      "resampled_markers": [
+        "normalized-content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+        "normalized-content-sha256:46eb832c2f36f89f65feca1b2c1c6a62c1951ba5b4614e0a8ecb3351c133db99",
+        "normalized-content-sha256:82b7f1e1ef55fc78f0563439621f259a1ee1b758d6d053a5f3a1106ce7395284"
+      ],
+      "finding": "The redirect reaches the official ASVS project page, still identifying stable 5.0.0 and version-qualified requirement IDs. Three planned full-body samples disagree. No broad normalization or repin is accepted; use a separately reviewed stable primary content binding before release."
+    }
+  ],
+  "remaining_holds": [
+    "https://owasp.org/www-project-application-security-verification-standard/"
+  ],
+  "post_push_observation": {
+    "source_revision": "d2633f2e3ba0434b1958b31133d4852e6b32ce37",
+    "receipt": "pr72-pushed-head-source-closeout-2026-10-20.json",
+    "matching": 59,
+    "changed": [
+      "https://developer.hashicorp.com/terraform/language"
+    ],
+    "unavailable": [
+      "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+      "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/"
+    ],
+    "finding": "The later gate remains failing. New Terraform drift is not reviewed or repinned. OWASP HTTP 403 responses prevent current verification even though the earlier reviewed samples agreed. ASVS matches its existing pin on this request, which does not revoke the inconsistent-sample hold. No pin or policy changes follow from this observation."
+  }
+}
