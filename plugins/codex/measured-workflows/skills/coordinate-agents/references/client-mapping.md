@@ -36,7 +36,7 @@ Codex can expose subagents and inspectable threads depending on the surface and 
 
 Each subagent performs its own model and tool work, so parallel work uses more tokens than a comparable single-agent run. Use the smallest useful fanout and keep write-heavy work isolated; verify the actual configuration instead of assuming it.
 
-Current Codex documentation describes custom agents that change supported model settings or instructions, or disable supported capabilities. They inherit the parent session's permissions, provider, and MCP servers; a custom-agent file cannot replace those settings. A read-only instruction does not create a read-only sandbox. Inspect the actual host version, effective parent permissions, registered tools, and managed requirements before assigning work; published behavior is not proof that an installed version enforces it.
+Current Codex documentation describes custom agents that change supported model settings or instructions, or disable supported capabilities. They inherit the parent session's permissions, provider, and MCP servers; a custom-agent file cannot replace those settings. A read-only instruction does not create a read-only sandbox. Inspect the actual host version, effective parent permissions, custom-agent configuration, registered tools, active trust boundary, and managed requirements before assigning work. A role label is not permission to broaden the parent's authority; published behavior is not proof that an installed version enforces it.
 
 When enabled, Codex can generate memories from eligible prior chats in the
 background. Memory extraction/consolidation and reading existing memory are

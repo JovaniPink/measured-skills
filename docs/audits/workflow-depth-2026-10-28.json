@@ -103,7 +103,7 @@
     "skills/coordinate-agents/references/client-mapping.md": {
       "before_sha256": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
       "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
-      "after_sha256": "bf7ae48104c03c0e83fcde093ddab7eb8be8bc380c5d100b9efeb85e2ea43bfa"
+      "after_sha256": "30943d6457b21767b9672c9c399e2af6601548610e8756c4c222b5477e96d5bc"
     },
     "skills/design-agent-evaluations/SKILL.md": {
       "before_sha256": "6fd4bd20e3730db436a11ef615a2abb248c899c9fc3834497c9bebea683c67f4",
