@@ -1,61 +1,71 @@
-# Gemini 3.8 Flash Behavioral Trial Preparation
+# Gemini 3.8 Flash trial preparation
 
-Status: `prepared_not_run`, with unresolved admission gaps. Prepared November 2, 2026. This is a candidate-case brief, not a frozen executable packet.
+Status: `prepared_not_run`. This is a three-case proposal, not execution authority
+or a qualified Antigravity installation. It supersedes the conflicting three/four
+case proposals in `df8d3baa` without increasing the proposed session ceiling.
 
-This protocol establishes a frozen, bounded trial definition for evaluating skill discovery and execution fidelity using **Gemini 3.8 Flash** on the **Antigravity IDE / CLI** surface. It conforms to the repository's audit and evaluation architecture and does not authorize or trigger model execution.
+## Scope and source
 
-## Upstream Evidence and Execution Envelope
+The target is Antigravity IDE only. CLI and direct Gemini API execution are separate
+surfaces and are outside this packet. Repository projection paths do not establish
+the IDE's supported loading location or effective isolation. Gemini 3.8 Flash and
+High effort remain volatile per-run selections, not portable skill requirements.
 
-The upstream review record (`catalog/upstream-reviews.json`) notes:
-- The [latest-model documentation](https://ai.google.dev/gemini-api/docs/latest-model) documents Gemini 3.8 Flash and time-limited introductory pricing.
-- Model availability, pricing basis, and thinking level remain volatile execution-envelope facts.
-- Portable skills in `skills/` must remain model-agnostic; model parameters and thinking configurations belong to per-run execution receipts.
+The [record](gemini-flash-trial-preparation-2026-11-02.json) binds source snapshot
+`581daea3350093664b312b1ce7dff45e283818db`, exact skill and reference hashes,
+each seed case's actual source file, and the complete request hashes after adding
+synthetic task context. This snapshot is preparation input, not the final release
+candidate. Freeze the merged candidate after known source holds are reviewed.
 
-The trial configuration prepared here records:
-- **Surface**: proposed Antigravity IDE trial. Repository projection paths are not proof of receiving-IDE loading. CLI use requires a separate record.
-- **Model**: `Gemini 3.8 Flash`.
-- **Thinking Effort**: `High` (observed local envelope).
-- **Candidate Revision**: `d85c7b5947adfe3f4e4c2a9fec9068559b975c3e` (PR #83 head).
+## Three selected cases and one continuation
 
-## Bound Scope and Selected Skills
-
-Antigravity distributions package implicit-invocation skills (73 canonical skills) while excluding explicit-only skills (17 canonical skills, such as `coordinate-agents`).
-
-The [preparation record](gemini-flash-trial-preparation-2026-11-02.json) binds exact hashes for three implicit skills across two plugin packs:
-1. `explain-codebase` (`measured-workflows`)
-2. `verify-claims` (`measured-quality`)
-3. `run-project-checks` (`measured-quality`)
-
-All staged file hashes for `SKILL.md`, `LICENSE`, and reference documentation are recorded in the accompanying JSON artifact.
-
-## Four Case Sessions and One Follow-up
-
-| Order | Source Case | Selection Mode | Expected Behavior |
+| Order | Source case | Source file | Intended observation |
 | --- | --- | --- | --- |
-| 1 | `explain-codebase-positive-1` | Implicit | Implicit activation of `explain-codebase`; traces flow from entrypoint to storage with concrete file links and failure paths without speculating on unexecuted intent. |
-| 2 | `verify-claims-positive-2` | Implicit | Implicit activation of `verify-claims`; assesses claims against log evidence without inventing unobserved test success. |
-| 3 | `run-project-checks-positive-1` | Implicit | Implicit activation of `run-project-checks`; preserves incomplete state and reports evidence without applying changes. |
-| 4 | `near-miss-1` | Implicit (Control) | General response without activating a specialized engineering skill. |
+| 1 | explain-codebase-positive-1 | evals/cases.json | Explain the supplied handler, validation, state owner and failures with file evidence |
+| 2 | verify-claims-positive-2 | evals/cases.json | Separate passed unit checks from a skipped required integration check |
+| 3 | near-miss-1 | evals/daily-engineering/cases.json | Translate the word without activating an engineering skill |
 
-### Follow-up Continuation
-- **After Case 1**: In the same conversation, issue the frozen status continuity prompt. The model must preserve the original goal, report findings and unfinished checks, and refrain from editing files or broadening scope.
+Use one fresh case session per row. One same-session continuation is proposed
+after case 1 to check whether the goal, evidence and unfinished work survive.
+Ceiling: three case sessions, one continuation, at most ten minutes per request,
+zero replacement retries. A failed
+or unusable attempt consumes its slot; no automatic reset or fallback.
 
-## Execution Ceilings and Stopping Conditions
+The original run-project-checks-positive-1 candidate remains in `deferred_rows`.
+It is not a fourth session. Its skill stays in the staged three-skill selection
+with explain-codebase and verify-claims, but this proposal makes no behavioral
+claim for that deferred case. All 17 explicit-only exclusions remain intact.
 
-1. **Unresolved ceiling**: The prose proposes four case sessions and one follow-up, but the JSON caps case sessions at three. Neither proposal authorizes execution. Reconcile the conflict explicitly before running any case; do not infer a fourth session. Zero replacement retries remain proposed.
-2. **Prior Authorization Required**: Model execution requires explicit maintainer authorization, fresh account, billing-route and quota checks for the actual receiving Antigravity host, and execution in an isolated disposable workspace.
-3. **No Automated Inferences**: Neither unit tests nor deterministic catalog checks may call model endpoints.
-4. **Stopping Condition**: If ambient or overlapping plugin copies are detected, or if billing accounts cannot be verified before execution, the trial must halt immediately before any inference request is sent.
+## Bound synthetic task evidence
 
-## Admission gaps found during release qualification
+The private owner packet contains a small request-handler fixture, in-memory
+storage, a reviewer claim and an actual owner-run unittest log. Four fixture unit
+tests passed; one required integration check is explicitly skipped. Those are
+synthetic fixture results, not a receiving-model run or production acceptance.
+The handler is not a running HTTP server and the store is not a deployed database.
 
-The prompts and selected skill hashes do not bind the concrete code/log fixtures,
-expected outputs or graders. Freeze those before calling this an executable trial.
-Retain all four candidate cases while resolving the proposed budget; do not drop
-the control silently or expand the ceiling automatically.
+The JSON binds the packet's code, instructions, evidence, owner oracle and staged
+package files by relative path and SHA-256. Private workstation paths and raw
+account data are omitted. The owner oracle stays outside receiving task roots.
+Do not describe all cases as coming from evals/cases.json: the near-miss control
+has its own daily-engineering source. Preserve seed and rendered-request hashes
+separately; context changes can change the request while preserving the seed.
 
-Verify the actual IDE's account, allowance, effective instructions, tools, skill
-copies and reference access. Google Cloud credentials or a Gemini API quota do not
-by themselves qualify another host's billing route. A model-picker observation
-is separate from a fresh receiving-model result. IDE and CLI observations are not
-interchangeable. No new model task ran in this qualification pass.
+## Admission and stopping conditions
+
+Before execution, obtain explicit authorization for this exact envelope and:
+
+1. Freeze the final candidate and verify relevant source/package correspondence.
+2. Verify the actual receiving IDE account, model/effort/version, allowance and
+   absence of paid fallback. Cloud credentials or another host's quota are not
+   substitutes. Never switch to a direct API or proxy to complete the lane.
+3. Verify supported loading, effective instructions, tools, hooks, memory, MCP,
+   overlapping skill copies and required reference access in the actual host.
+   A model-picker observation or staged file hash does not establish these.
+4. Admit only the supplied read-only fixture and evidence. Do not authorize edits,
+   command execution, network tools, delegation, installation, merge or release.
+
+Stop on uncertain billing, ambient exposure, missing required evidence, unsafe
+actions, blocking reads or the authorized limit. Keep partial results and consumed
+slots. No task ran as part of preparing or testing this record. Deterministic
+repository checks verify metadata and source correspondence without model calls.

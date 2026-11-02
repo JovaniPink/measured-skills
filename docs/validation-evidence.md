@@ -11,7 +11,21 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 320 regression tests.
+Current test suite: 322 regression tests.
+
+## November 2 prepared-trial correspondence repair
+
+Two deterministic regressions first reproduced the four-case/three-session
+conflict and missing per-case source bindings. They now check the selected case
+and continuation budgets, actual frozen source files, exact seed prompts and
+rendered-request hashes. They make no model requests. The current preparation
+selects two positive cases and a daily-engineering control; the third positive
+case is explicitly deferred. Synthetic fixture unit results are separate from
+this catalog suite and from receiving-client behavior.
+
+The first full run retained a suite-size bookkeeping failure because this live
+inventory line still named 320 tests. Updating the count does not change earlier
+dated results or claim a receiving-model acceptance pass.
 
 ## October 29 Haiku evidence-discovery repair
 

@@ -1,17 +1,16 @@
 {
   "status": "prepared_not_run",
   "prepared_on": "2026-11-02",
-  "source_revision": "d85c7b5947adfe3f4e4c2a9fec9068559b975c3e",
+  "source_revision": "581daea3350093664b312b1ce7dff45e283818db",
   "catalog_version": "0.19.0",
   "target_surface": "antigravity-ide",
   "target_model": "Gemini 3.8 Flash",
   "target_effort": "high",
-  "model_and_effort_preflight": "observed_active_setting",
+  "model_and_effort_preflight": "Historical local selection reported; fresh receiving-host verification remains pending.",
   "case_session_ceiling": 3,
   "followup_ceiling": 1,
   "retries": 0,
   "execution_authorization": "required; explicit maintainer authorization and quota checks required prior to model calls",
-  "frozen_source": "evals/cases.json",
   "selected_skills": [
     "explain-codebase",
     "verify-claims",
@@ -38,7 +37,10 @@
       "selection_mode": "implicit",
       "prompt": "Explain how this request flows from the HTTP entrypoint to storage, including validation and failures, with file references.",
       "prompt_sha256": "1edbc62d80994b5d960348c40c20171aa1ad70aeac61610c252ee0e9ab462388",
-      "execution": "not_run"
+      "execution": "not_run",
+      "source_file": "evals/cases.json",
+      "context": "Use only the supplied synthetic workspace app.py, record_store.py, tests and README, plus sibling evidence. The supplied function is a request-handler boundary, not a running HTTP server. Read only; do not execute commands, edit files, use network tools or launch agents.",
+      "request_sha256": "56478cdb6b5400dc0d528d3c062872f9ef54921edae487d8b5a8ee7402c5666a"
     },
     {
       "order": 2,
@@ -47,25 +49,22 @@
       "selection_mode": "implicit",
       "prompt": "Review this claim that all tests pass and identify exactly what the logs prove.",
       "prompt_sha256": "59c1f17d177fda247f5d463b25aa1e4c7b4b3bf68c67cd2d2ac46da37b8403bf",
-      "execution": "not_run"
+      "execution": "not_run",
+      "source_file": "evals/cases.json",
+      "context": "Assess the supplied synthetic claim.txt against unit-run.txt and the fixture README. They concern only this fixture. Read only; do not run checks, edit files, use network tools or launch agents.",
+      "request_sha256": "fcfd1de94510e5924bba7e7c354504e7e5d5197e86373205f041388eb8e831bb"
     },
     {
       "order": 3,
-      "source_case": "run-project-checks-positive-1",
-      "target_skill": "run-project-checks",
-      "selection_mode": "implicit",
-      "prompt": "Unit tests pass but the required integration environment is unavailable. Lead with INCOMPLETE and preserve both observations.",
-      "prompt_sha256": "747f7ee8f03ff1944e2d8d08e36f078b1601a483fa2b7a63ab9491ccb5f813df",
-      "execution": "not_run"
-    },
-    {
-      "order": 4,
       "source_case": "near-miss-1",
       "target_skill": "none",
       "selection_mode": "implicit",
       "prompt": "Translate the word hello into Spanish.",
       "prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
-      "execution": "not_run"
+      "execution": "not_run",
+      "source_file": "evals/daily-engineering/cases.json",
+      "context": "",
+      "request_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183"
     }
   ],
   "continuity_followups": [
@@ -82,17 +81,62 @@
     "Antigravity distribution packages implicit skills only; 17 explicit-only skills remain excluded.",
     "Execution requires explicit maintainer authorization, quota validation, and dedicated disposable workspace."
   ],
-  "admission_status": "blocked_preparation_gaps",
-  "case_budget_conflict": {
-    "json_case_session_ceiling": 3,
-    "prose_case_session_ceiling": 4,
-    "resolution": "Explicitly reconcile the proposed ceiling before execution; do not infer an additional session."
-  },
+  "admission_status": "blocked_final_candidate_and_receiving_host_controls",
   "preflight_evidence_limit": "A recorded model/effort selection does not establish fresh receiving-account billing, isolation, file loading or runtime behavior.",
   "missing_before_execution": [
-    "Concrete disposable code/log fixtures and expected outputs, bound to hashes.",
-    "Exact receiving IDE installation/loading evidence; CLI is a separate surface.",
-    "Account and billing-route evidence for the actual Antigravity host, not an assumed Google Cloud or Gemini API route.",
-    "Reconciled case/session ceiling and explicit execution authorization."
-  ]
+    "Freeze the final merged candidate and reconcile source bindings before receiving-client execution.",
+    "Verify the actual Antigravity IDE account, supported loading location, effective instructions, tools, reference reads, isolation and absence of paid fallback. CLI is a separate surface.",
+    "Obtain explicit execution approval for the exact three-session/one-continuation envelope and fresh model/effort/version."
+  ],
+  "frozen_sources": {
+    "evals/cases.json": "0da93dc6a4017361fa263dabce9201067b168bd56d783aa76e7c321cfaf0df39",
+    "evals/daily-engineering/cases.json": "bdfbb98df7eb16ba38c676824e2b087cc313d54600d29c3981c9ee939d69d90b"
+  },
+  "deferred_rows": [
+    {
+      "source_case": "run-project-checks-positive-1",
+      "target_skill": "run-project-checks",
+      "selection_mode": "implicit",
+      "prompt": "Unit tests pass but the required integration environment is unavailable. Lead with INCOMPLETE and preserve both observations.",
+      "prompt_sha256": "747f7ee8f03ff1944e2d8d08e36f078b1601a483fa2b7a63ab9491ccb5f813df",
+      "execution": "not_run",
+      "source_file": "evals/cases.json",
+      "original_order": 3,
+      "deferred_reason": "Excluded from the proposed three-session envelope to retain a near-miss control. Its skill stays staged; this preparation makes no behavioral claim for it."
+    }
+  ],
+  "budget_status": "proposed_three_case_sessions_plus_one_continuation; execution still requires explicit authorization",
+  "execution_authorized": false,
+  "fixture_packet": {
+    "artifact_id": "gemini-three-case-preparation-20261102",
+    "availability": "private owner preparation; not installed or model-tested",
+    "synthetic": true,
+    "files_sha256": {
+      "owner/explain-codebase-positive-1.txt": "56478cdb6b5400dc0d528d3c062872f9ef54921edae487d8b5a8ee7402c5666a",
+      "owner/near-miss-1.txt": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "owner/oracle.md": "23a4748538a81b9a0ca84f06cb716093f44d033fbb1ee6b3682f1356d6e354eb",
+      "owner/verify-claims-positive-2.txt": "fcfd1de94510e5924bba7e7c354504e7e5d5197e86373205f041388eb8e831bb",
+      "receiving/evidence/claim.txt": "dd8a15fd24e3c925640f25e9f36aa551afaed564326807a7790c50ab4bdb5f22",
+      "receiving/evidence/unit-run.txt": "9296a36da46c1685e8462bac1f44f92f7988eda7f825acbff3b97f24ce333d6d",
+      "receiving/package-source/explain-codebase/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "receiving/package-source/explain-codebase/SKILL.md": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+      "receiving/package-source/explain-codebase/references/context-map.md": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+      "receiving/package-source/export-manifest.json": "e5e6cc67a4a43e552c09d1fa91ff05e5aa598f44c22e286a48c1e0262cf9ca7b",
+      "receiving/package-source/run-project-checks/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "receiving/package-source/run-project-checks/SKILL.md": "137202bb8fbf4621aeeddfbd854cbc90cc13ebd0aa4f962d92e849a15f923655",
+      "receiving/package-source/run-project-checks/references/continuity-example.md": "dc12b7560918cf66dd9ba95b6407eee5732799eb7911c4818173d5928a1327c4",
+      "receiving/package-source/run-project-checks/references/gate-discovery.md": "c72988ed26b3ac9e288e8e2ef104c9f4008b9a1458cc902271f5092c04bfc968",
+      "receiving/package-source/verify-claims/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "receiving/package-source/verify-claims/SKILL.md": "62bd76f368bcb3748acceb36e4c3878756b2c7068d604f49056212bde5f179ac",
+      "receiving/package-source/verify-claims/references/continuity-example.md": "f0fb4b0b33e2a16835597c6d1b719c536a9f7c7765e1f3abdbf86f2b0995fb60",
+      "receiving/package-source/verify-claims/references/document-reconciliation.md": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+      "receiving/workspace/AGENTS.md": "cdd6c4656f3e4e3d91981b1d1912507ae5041580c7fb37c62cce44cb5934461f",
+      "receiving/workspace/README.md": "71ebf034d0e046d69f56d568f47a18fa7550b7331c1540b9a86d4bc34e0df96c",
+      "receiving/workspace/app.py": "24665cad06b10b0957fc69ff2dd92a974aedbc2ac1f9d32385c4e35fb13399e5",
+      "receiving/workspace/record_store.py": "5a4633dae6f35ccf19e16059d3766a30000e822c05be668375ebbe573d6513bf",
+      "receiving/workspace/tests/test_app.py": "014ca34a72fe472fe0a60e48e54787f97b1f183f7b22c55e641a671dcd548b67"
+    }
+  },
+  "wall_time_minutes_per_request": 10,
+  "request_accounting_limit": "Session ceilings do not establish total host-managed inference or cost; retain unknown accounting."
 }
