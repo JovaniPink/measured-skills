@@ -81,5 +81,18 @@
     "Model availability, introductory pricing, and thinking effort are volatile execution-envelope facts.",
     "Antigravity distribution packages implicit skills only; 17 explicit-only skills remain excluded.",
     "Execution requires explicit maintainer authorization, quota validation, and dedicated disposable workspace."
+  ],
+  "admission_status": "blocked_preparation_gaps",
+  "case_budget_conflict": {
+    "json_case_session_ceiling": 3,
+    "prose_case_session_ceiling": 4,
+    "resolution": "Explicitly reconcile the proposed ceiling before execution; do not infer an additional session."
+  },
+  "preflight_evidence_limit": "A recorded model/effort selection does not establish fresh receiving-account billing, isolation, file loading or runtime behavior.",
+  "missing_before_execution": [
+    "Concrete disposable code/log fixtures and expected outputs, bound to hashes.",
+    "Exact receiving IDE installation/loading evidence; CLI is a separate surface.",
+    "Account and billing-route evidence for the actual Antigravity host, not an assumed Google Cloud or Gemini API route.",
+    "Reconciled case/session ceiling and explicit execution authorization."
   ]
 }

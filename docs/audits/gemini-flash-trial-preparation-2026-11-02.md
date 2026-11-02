@@ -1,6 +1,6 @@
 # Gemini 3.8 Flash Behavioral Trial Preparation
 
-Status: `prepared_not_run`. Prepared November 2, 2026.
+Status: `prepared_not_run`, with unresolved admission gaps. Prepared November 2, 2026. This is a candidate-case brief, not a frozen executable packet.
 
 This protocol establishes a frozen, bounded trial definition for evaluating skill discovery and execution fidelity using **Gemini 3.8 Flash** on the **Antigravity IDE / CLI** surface. It conforms to the repository's audit and evaluation architecture and does not authorize or trigger model execution.
 
@@ -12,7 +12,7 @@ The upstream review record (`catalog/upstream-reviews.json`) notes:
 - Portable skills in `skills/` must remain model-agnostic; model parameters and thinking configurations belong to per-run execution receipts.
 
 The trial configuration prepared here records:
-- **Surface**: Antigravity IDE / CLI loading plugin packages from `.gemini/plugins/` (and projected in `plugins/antigravity/`).
+- **Surface**: proposed Antigravity IDE trial. Repository projection paths are not proof of receiving-IDE loading. CLI use requires a separate record.
 - **Model**: `Gemini 3.8 Flash`.
 - **Thinking Effort**: `High` (observed local envelope).
 - **Candidate Revision**: `d85c7b5947adfe3f4e4c2a9fec9068559b975c3e` (PR #83 head).
@@ -42,7 +42,20 @@ All staged file hashes for `SKILL.md`, `LICENSE`, and reference documentation ar
 
 ## Execution Ceilings and Stopping Conditions
 
-1. **Ceiling**: Exactly four case sessions (three positive, one near-miss control) and one continuity follow-up. Zero replacement retries.
-2. **Prior Authorization Required**: Model execution requires explicit maintainer authorization, a verified billing/credit quota check on the Google Cloud / Gemini API account, and execution in an isolated disposable workspace.
+1. **Unresolved ceiling**: The prose proposes four case sessions and one follow-up, but the JSON caps case sessions at three. Neither proposal authorizes execution. Reconcile the conflict explicitly before running any case; do not infer a fourth session. Zero replacement retries remain proposed.
+2. **Prior Authorization Required**: Model execution requires explicit maintainer authorization, fresh account, billing-route and quota checks for the actual receiving Antigravity host, and execution in an isolated disposable workspace.
 3. **No Automated Inferences**: Neither unit tests nor deterministic catalog checks may call model endpoints.
 4. **Stopping Condition**: If ambient or overlapping plugin copies are detected, or if billing accounts cannot be verified before execution, the trial must halt immediately before any inference request is sent.
+
+## Admission gaps found during release qualification
+
+The prompts and selected skill hashes do not bind the concrete code/log fixtures,
+expected outputs or graders. Freeze those before calling this an executable trial.
+Retain all four candidate cases while resolving the proposed budget; do not drop
+the control silently or expand the ceiling automatically.
+
+Verify the actual IDE's account, allowance, effective instructions, tools, skill
+copies and reference access. Google Cloud credentials or a Gemini API quota do not
+by themselves qualify another host's billing route. A model-picker observation
+is separate from a fresh receiving-model result. IDE and CLI observations are not
+interchangeable. No new model task ran in this qualification pass.
