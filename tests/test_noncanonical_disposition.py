@@ -8,6 +8,8 @@ import subprocess
 import unittest
 from typing import Any
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[1]
 PACKET = 'docs/audits/originality-approval-2026-10-20.json'
 DELTA = 'docs/audits/post-acceptance-delta-2026-10-20.json'
@@ -28,6 +30,24 @@ def inventory_digest(value: object) -> str:
 class NoncanonicalDispositionTests(unittest.TestCase):
     def setUp(self) -> None:
         self.audit: dict[str, Any] = json.loads((ROOT / PACKET).read_text())
+
+    def test_current_ci_action_pins_match_reviewed_provenance(self) -> None:
+        observed: dict[str, set[str]] = {}
+        for path in sorted((ROOT / '.github/workflows').iterdir()):
+            if path.suffix not in {'.yml', '.yaml'}:
+                continue
+            workflow = yaml.safe_load(path.read_text())
+            for job in workflow['jobs'].values():
+                for entry in [job, *job.get('steps', [])]:
+                    use = entry.get('uses')
+                    if not isinstance(use, str) or use.startswith('./'):
+                        continue
+                    name, separator, revision = use.partition('@')
+                    self.assertEqual('@', separator, str(path))
+                    observed.setdefault(name, set()).add(revision)
+        actions = json.loads((ROOT / 'provenance/ci-actions.json').read_text())['actions']
+        expected = {record['name']: {record['pinned_revision']} for record in actions}
+        self.assertEqual(expected, observed)
 
     def test_full_input_and_corrected_payload_are_accounted_for(self) -> None:
         audit = self.audit
@@ -97,7 +117,8 @@ class NoncanonicalDispositionTests(unittest.TestCase):
             self.assertEqual(tool['version'], receipt['version'])
             self.assertEqual([tool['artifact_sha256']], [r['sha256'] for r in receipt['matched_artifacts']])
             self.assertFalse(receipt['bundled'])
-        actions = json.loads((ROOT / 'provenance/ci-actions.json').read_text())['actions']
+        accepted = json.loads((ROOT / 'docs/audits/originality-acceptance-0.18.0.json').read_text())
+        actions = json.loads(git('show', accepted['accepted_revision'] + ':provenance/ci-actions.json'))['actions']
         action_receipts = {r['name']: r for r in audit['license_file_receipts']}
         for action in actions:
             self.assertEqual(action['pinned_revision'], action_receipts[action['name']]['pinned_revision'])
