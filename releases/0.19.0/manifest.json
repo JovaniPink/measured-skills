@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "4a54125175e93373d6a565c8f74ae5d65dcfc936",
+  "source_commit": "67d1be84774b1a7e7794eaf87dfee6b49c06d916",
   "created_on": "2026-11-02",
   "artifacts": [
     {
@@ -137,7 +137,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/coordinate-agents-0.19.0.zip",
-      "sha256": "221b22f9304b9e592d977605b7d4c28a6b989bc84a4f1bab2bb0da8242aa69b2"
+      "sha256": "eb81c0b9de2911cde9df01cccd81ac81e6b6d98bab0c7e90413502771cec20a0"
     },
     {
       "kind": "zip",
@@ -537,12 +537,12 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "0929295fa187ee75f33480adfe74eb76d3cb817d1d9e0fff5a1e91af110963dc"
+      "sha256": "f6e99718c3c98e439415dcba30025a2a06f7c230207c3e50b676b759752ce9b7"
     },
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "4b1052584c315fac7ebbf3c4ca0ec80c7cebe1b27ae10aa256139895a5b812f8"
+      "sha256": "0da93dc6a4017361fa263dabce9201067b168bd56d783aa76e7c321cfaf0df39"
     },
     {
       "kind": "file",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "9e24d610ceca35e07fb855219309fa7711af9115ef10e4965d9aa9cfba72f4d4"
+      "sha256": "a8e8b15ba6abbe7e6000853089f825bf7b2d986e7fa9c231eb42127cb61319bb"
     },
     {
       "kind": "tree",
@@ -612,12 +612,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "7efa36ce0bf57a070fc1fd8d156d716f417777de1b74f0ae7bf8db489db0a322"
+      "sha256": "c22559e1231545cae7ce7dc3bddf696360dc9920737692f5552991fbb9b1538c"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "6cfb683129ac398d1ea844d6b8004704e05e504ce2e2a1d69786f7ac0580be6b"
+      "sha256": "f7f3d54d3df353c7a26b336641605e139cdf1741ecc6091ed8548e5038ef850d"
     }
   ]
 }
