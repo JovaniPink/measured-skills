@@ -1,7 +1,7 @@
 {
   "name": "measured-operations",
-  "version": "0.18.0",
-  "description": "Portable requirements, decision, measurement, adoption, and incident workflows.",
+  "version": "0.19.0",
+  "description": "Clarify requirements, decisions, adoption, measurement, and incident learning.",
   "author": {
     "name": "Measured Studios",
     "url": "https://measuredstudios.com"
@@ -12,8 +12,7 @@
   "keywords": [
     "skills",
     "operations",
-    "decisions",
-    "measurement"
+    "engineering"
   ],
   "icon": "./.claude-plugin/icon.svg"
 }

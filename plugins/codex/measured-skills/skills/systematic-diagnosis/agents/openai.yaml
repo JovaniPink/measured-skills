@@ -1,6 +1,0 @@
-interface:
-  display_name: "Systematic Diagnosis"
-  short_description: "Diagnoses failures"
-  default_prompt: "Use $measured-skills:systematic-diagnosis for this task: Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix."
-policy:
-  allow_implicit_invocation: true

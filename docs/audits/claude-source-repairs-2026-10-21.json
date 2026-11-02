@@ -1,0 +1,78 @@
+{
+  "format_version": 1,
+  "reviewed_on": "2026-10-21",
+  "status": "source_repairs_reviewed_retest_not_run",
+  "reviewed_base": "6c943a285292d085a6d5af0d229744b0c5f74a6c",
+  "prior_observation": "docs/audits/cli-pilot-observations-2026-10-20.json",
+  "prior_observation_sha256": "96446ac1d7e1e45d35506a8ab15b182c915fc207fca98d7022b5335330029a67",
+  "retest_plan": "docs/audits/claude-retest-plan-2026-10-21.md",
+  "retest_plan_sha256": "17c9139ee91905c71b559ec61a9644629e2b31104c29570d14c087741ce0385b",
+  "changed_canonical": {
+    "skills/code-change-review/SKILL.md": {
+      "before_sha256": "eb00c178ea2a49d1dcb132cee1df69558769c58cef513842d6398d12049db1fa",
+      "after_sha256": "ad03921a886333a53e40b5b358075f85cfa3d7394fef29f68b204e7e956391d6"
+    },
+    "skills/code-change-review/agents/openai.yaml": {
+      "before_sha256": "a453d2541e1a0684bd873aa49e1ce05a2396b2d40123e60eab01cea989c218b5",
+      "after_sha256": "b8652f0b69ccff157c2aaa782c89369a12face8aa80f004003d168f072889153"
+    },
+    "skills/claim-verification/SKILL.md": {
+      "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
+      "after_sha256": "99fa8561d0abd9b4bcd165af68a0e89b542d5a67cbc26eb1f324cd1492bc3b8c"
+    },
+    "skills/claim-verification/agents/openai.yaml": {
+      "before_sha256": "00e9d44e63c82e173678a3e49227e54f3f69ba92560624b37fa9404d07bc0337",
+      "after_sha256": "2e7859c4377531f49ea6ffd74b283824b44290d8359410318474924a27514ac1"
+    },
+    "skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "11e23d0a1070cc637895b68b8dde414ad293715a0327ea0c52d36be8272b42b6",
+      "after_sha256": "b3fb8ebb6906fb8a5efefcac804195382dd19ec160c55c99901eab0d393aff4d"
+    },
+    "skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "a41277f75399e0229e7803aef77a62f05a39d1166c9a38ca1612ed1d6eba7ba2",
+      "after_sha256": "02ae3015178bd2994fcac44afae6f08c12e1d4bfe9cb5c0f82a4e4ed3910bb93"
+    }
+  },
+  "findings": [
+    {
+      "skill": "code-change-review",
+      "observed": "No expected invocation; answer and continuity conflated unrun tests with absent tests.",
+      "repair": "Clarify supplied-snippet review without a checkout; distinguish conditional risk, inspected coverage, and absent results. Retain review versus verification routing.",
+      "causal_limit": "The previous description already matched the prompt. No experiment establishes the cause of the missed invocation or that these edits improve it."
+    },
+    {
+      "skill": "claim-verification",
+      "observed": "Correct B-unverified answer without the expected invocation.",
+      "repair": "Put old receipts and revision-to-revision verification in the description and invocation prompt; allow a bounded verdict from supplied evidence.",
+      "causal_limit": "Selection remains untested. A more explicit description is a candidate repair, not observed activation improvement."
+    },
+    {
+      "skill": "gcp-data-engineering-profile",
+      "observed": "Skill and warehouse reference loaded, but the answer generalized plan, update, and recovery claims beyond supplied evidence.",
+      "repair": "Require warehouse reference use and distinguish plan observations, arrival semantics, strategy, and unknown recovery. Replace the ambiguous example with conditional conclusions and avoid unjustified executable SQL.",
+      "causal_limit": "These are instruction and example repairs; no new model result is available."
+    }
+  ],
+  "authorship_and_license_review": {
+    "method": "Original Codex-assisted edits to the owned canonical workflows, reviewed against the prior bodies and primary platform semantics. No third-party skill implementation was imported. Existing original/adapted declarations and MIT notices remain. No clean-room process, exclusive human authorship, or independent legal clearance is asserted.",
+    "sources_reviewed": [
+      "https://code.claude.com/docs/en/skills",
+      "https://docs.cloud.google.com/bigquery/docs/querying-partitioned-tables",
+      "https://docs.getdbt.com/docs/build/incremental-models",
+      "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax"
+    ],
+    "scope": "Review of changed expression and generated projections. The October 20 accepted inventory remains frozen; the current delta accounts for these new bytes. No new maintainer acceptance is inferred."
+  },
+  "offline_validation_design": {
+    "historical_test_failures": "The canonical edits reproduced four full-expression inventory failures, one owned-origin entrypoint failure, and an earlier scoped-inventory failure. Those tests now bind historical corrections to the exact accepted ancestor; the separate current delta inventory still checks all current payload bytes. Frozen receipts and acceptance text are unchanged.",
+    "generated": "Two complete distribution/archive builds produced identical hashes for all 87 archives. Only three skill projections, their archives, affected measurements, and current evidence metadata change.",
+    "limits": "Structural checks do not evaluate model selection or answer quality."
+  },
+  "execution": {
+    "new_model_case_sessions": 0,
+    "new_continuity_followups": 0,
+    "paid_evaluations": 0,
+    "status": "prepared_not_run",
+    "authority": "No new retest execution is inferred from the consumed October 20 ceiling. Billing, installation, merge, and release controls were not changed."
+  }
+}

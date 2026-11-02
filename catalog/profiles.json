@@ -1,18 +1,18 @@
 {
   "$schema": "./profiles-schema.json",
-  "catalog_version": "0.18.0",
+  "catalog_version": "0.19.0",
   "profiles": [
     {
       "id": "delivery-typescript-experimental",
       "purpose": "Test whether seven delivery and TypeScript capabilities outperform normal Codex without custom skills.",
       "skills": [
-        "problem-framing",
-        "implementation-planning",
-        "test-driven-change",
-        "cross-stack-quality-gates",
-        "code-change-review",
-        "publish-change-safely",
-        "typescript-javascript-engineering-profile"
+        "frame-problem",
+        "plan-change",
+        "implement-test-first",
+        "run-project-checks",
+        "review-code-change",
+        "publish-change",
+        "stack-typescript-javascript"
       ],
       "target_surfaces": [
         "codex",
@@ -27,22 +27,22 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 1261,
+          "description_characters": 1342,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 1261,
+          "description_characters": 1342,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 1261,
+          "description_characters": 1342,
           "budget_policy": "Measure the exact tested client's retained descriptions, omissions, and activation behavior without assuming a fixed discovery budget.",
           "observed_listing_state": "not_observed"
         }
       },
-      "source_catalog_version": "0.18.0",
+      "source_catalog_version": "0.19.0",
       "behavioral_evidence": {
         "status": "none",
         "observed_against_version": null,
@@ -69,7 +69,7 @@
           "observed_against_version": null,
           "observed_at": null,
           "evidence_reference": null,
-          "reason": "Setup may proceed independently. This profile remains blocked because publish-change-safely lacks a verified automatic-selection disable control."
+          "reason": "Setup may proceed independently. This profile remains blocked because publish-change lacks a verified automatic-selection disable control."
         }
       },
       "disposition": "experimental"
@@ -78,13 +78,13 @@
       "id": "build-typescript-experimental",
       "purpose": "Compare focused architecture and vertical-slice work with all-pack and no-custom-skill setups.",
       "skills": [
-        "problem-framing",
-        "module-interface-design",
-        "implementation-planning",
-        "test-strategy",
-        "test-driven-change",
-        "cross-stack-quality-gates",
-        "typescript-javascript-engineering-profile"
+        "frame-problem",
+        "design-module-interface",
+        "plan-change",
+        "plan-tests",
+        "implement-test-first",
+        "run-project-checks",
+        "stack-typescript-javascript"
       ],
       "target_surfaces": [
         "codex",
@@ -108,7 +108,7 @@
           "observed_listing_state": "not_observed"
         }
       },
-      "source_catalog_version": "0.18.0",
+      "source_catalog_version": "0.19.0",
       "behavioral_evidence": {
         "status": "none",
         "observed_against_version": null,
@@ -137,18 +137,18 @@
       "id": "daily-engineering-experimental",
       "purpose": "Prepare a focused daily engineering selection for independent client activation trials.",
       "skills": [
-        "problem-framing",
-        "implementation-planning",
-        "systematic-diagnosis",
-        "cross-stack-quality-gates",
-        "code-change-review",
-        "claim-verification",
-        "test-strategy",
-        "change-impact-analysis",
-        "application-security-review",
-        "api-contract-compatibility-review",
-        "python-engineering-profile",
-        "gcp-data-engineering-profile"
+        "frame-problem",
+        "plan-change",
+        "diagnose-failure",
+        "run-project-checks",
+        "review-code-change",
+        "verify-claims",
+        "plan-tests",
+        "assess-change-impact",
+        "review-app-security",
+        "review-api-compatibility",
+        "stack-python",
+        "stack-gcp-data"
       ],
       "target_surfaces": [
         "codex",
@@ -163,22 +163,177 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 2152,
+          "description_characters": 2368,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 2152,
+          "description_characters": 2368,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 2152,
+          "description_characters": 2368,
           "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
           "observed_listing_state": "not_observed"
         }
       },
-      "source_catalog_version": "0.18.0",
+      "source_catalog_version": "0.19.0",
+      "behavioral_evidence": {
+        "status": "none",
+        "observed_against_version": null,
+        "observed_at": null,
+        "evidence_reference": null
+      },
+      "surface_evidence": {
+        "codex": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "claude-code": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "antigravity-cli": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        }
+      },
+      "disposition": "experimental"
+    },
+    {
+      "id": "finish-existing-work-experimental",
+      "purpose": "Stage a focused selection for resuming and completing authorized engineering repairs.",
+      "skills": [
+        "review-engineering-prompt",
+        "plan-change",
+        "diagnose-failure",
+        "address-review",
+        "assess-change-impact",
+        "plan-tests",
+        "run-project-checks",
+        "review-code-change",
+        "verify-claims",
+        "stack-python",
+        "stack-typescript-javascript",
+        "stack-postgresql-sql",
+        "stack-gcp-data",
+        "stack-swift-swiftui"
+      ],
+      "target_surfaces": [
+        "codex",
+        "claude-code",
+        "antigravity-cli"
+      ],
+      "applicability": "Unfinished changes, defects, review findings, and journey gaps across Python, TypeScript/JavaScript, SQL/GCP, and Swift. Prepared selection, not observed activation evidence.",
+      "exclusions": [
+        "No global installation or account-upload changes.",
+        "No provider execution, paid model runs, or promotion based on offline checks.",
+        "Project projection retains its existing read-only implicit restriction.",
+        "Explicit execution, publication, and handoff workflows are not staged."
+      ],
+      "discovery_measurements": {
+        "codex": {
+          "description_characters": 2775,
+          "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
+          "observed_listing_state": "not_observed"
+        },
+        "claude-code": {
+          "description_characters": 2775,
+          "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
+          "observed_listing_state": "not_observed"
+        },
+        "antigravity-cli": {
+          "description_characters": 2775,
+          "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
+          "observed_listing_state": "not_observed"
+        }
+      },
+      "source_catalog_version": "0.19.0",
+      "behavioral_evidence": {
+        "status": "none",
+        "observed_against_version": null,
+        "observed_at": null,
+        "evidence_reference": null
+      },
+      "surface_evidence": {
+        "codex": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "claude-code": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        },
+        "antigravity-cli": {
+          "status": "blocked",
+          "observed_against_version": null,
+          "observed_at": null,
+          "evidence_reference": null,
+          "reason": "Prepared selection only; installation and behavioral trials have not run."
+        }
+      },
+      "disposition": "experimental"
+    },
+    {
+      "id": "finish-work-core",
+      "purpose": "Find and finish a bounded piece of existing work with nine focused capabilities.",
+      "skills": [
+        "choose-workflow",
+        "plan-change",
+        "diagnose-failure",
+        "address-review",
+        "assess-change-impact",
+        "plan-tests",
+        "run-project-checks",
+        "review-code-change",
+        "verify-claims"
+      ],
+      "target_surfaces": [
+        "codex",
+        "claude-code",
+        "antigravity-cli"
+      ],
+      "applicability": "Unfinished changes, defects, review findings, and journey gaps across Python, TypeScript/JavaScript, SQL/GCP, and Swift. Prepared selection, not observed activation evidence.",
+      "exclusions": [
+        "No global installation or account-upload changes.",
+        "No provider execution, paid model runs, or promotion based on offline checks.",
+        "Project projection retains its existing read-only implicit restriction.",
+        "Explicit execution, publication, and handoff workflows are not staged."
+      ],
+      "discovery_measurements": {
+        "codex": {
+          "description_characters": 1701,
+          "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
+          "observed_listing_state": "not_observed"
+        },
+        "claude-code": {
+          "description_characters": 1701,
+          "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
+          "observed_listing_state": "not_observed"
+        },
+        "antigravity-cli": {
+          "description_characters": 1701,
+          "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
+          "observed_listing_state": "not_observed"
+        }
+      },
+      "source_catalog_version": "0.19.0",
       "behavioral_evidence": {
         "status": "none",
         "observed_against_version": null,

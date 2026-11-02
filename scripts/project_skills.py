@@ -83,6 +83,12 @@ def source_files(source: Path, revision: str, skill: str) -> dict[str, bytes]:
         files[relative] = git(source, "show", f"{revision}:{path}")
     if not {"SKILL.md", "agents/openai.yaml"} <= files.keys() or "references/project-contract.md" in files:
         raise ValueError(f"incomplete skill or reserved reference collision: {skill}")
+    if not git(source, "ls-tree", revision, "--", "LICENSE").startswith(b"100644 blob "):
+        raise ValueError("source license notice must be a regular non-executable file")
+    notice = git(source, "show", f"{revision}:LICENSE")
+    if not notice.startswith(b"MIT License\n"):
+        raise ValueError("source MIT license notice is missing")
+    files["LICENSE"] = notice
     return files
 
 
@@ -145,7 +151,7 @@ def owned(root: Path, prefix: str) -> dict[str, str]:
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or len(parts) < 4 or "/".join(parts[:2]) not in ROOTS or not parts[2].startswith(prefix + "-") or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", parts[2]):
             raise ValueError("invalid owned path or digest")
         tail = "/".join(parts[3:])
-        if tail not in {"SKILL.md", "agents/openai.yaml"} and not (tail.startswith("references/") and Path(tail).suffix in {".md", ".json", ".txt"}):
+        if tail not in {"SKILL.md", "agents/openai.yaml", "LICENSE"} and not (tail.startswith("references/") and Path(tail).suffix in {".md", ".json", ".txt"}):
             raise ValueError("unexpected owned payload")
     return dict(data["files"])
 

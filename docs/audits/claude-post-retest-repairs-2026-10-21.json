@@ -1,0 +1,80 @@
+{
+  "format_version": 1,
+  "reviewed_on": "2026-10-21",
+  "status": "post_retest_repairs_reviewed_not_behaviorally_retested",
+  "reviewed_base": "300133c0431c7b60ceeda6d46fdd242ad4c71ff0",
+  "prior_observation": "docs/audits/claude-retest-observations-2026-10-21.json",
+  "prior_observation_sha256": "740f2ed0e33da48b3b17d0f03546845bd10668ac96b02f58d935509468326c39",
+  "retest_plan": "docs/audits/claude-routing-contract-retest-plan-2026-10-21.md",
+  "retest_plan_sha256": "7e7ea2eb0db2e512d5a673e446a507f076463abc682777ff559284b936935284",
+  "changed_canonical": {
+    "skills/code-change-review/SKILL.md": {
+      "before_sha256": "ad03921a886333a53e40b5b358075f85cfa3d7394fef29f68b204e7e956391d6",
+      "after_sha256": "e5964250cc14dff640e8f12906f908e38cd97a8f7258d5939a78673770ce0c30"
+    },
+    "skills/code-change-review/agents/openai.yaml": {
+      "before_sha256": "b8652f0b69ccff157c2aaa782c89369a12face8aa80f004003d168f072889153",
+      "after_sha256": "62fcbb90f6fb0fa2407ebdab09bae46f9b4465650ef9cf847e6d0909522c1745"
+    },
+    "skills/gcp-data-engineering-profile/SKILL.md": {
+      "before_sha256": "b3fb8ebb6906fb8a5efefcac804195382dd19ec160c55c99901eab0d393aff4d",
+      "after_sha256": "aca5104e0751aca2db5c23701cd918cfc3f53d98307764754dd5c1bf640df0f5"
+    },
+    "skills/gcp-data-engineering-profile/references/warehouse.md": {
+      "before_sha256": "02ae3015178bd2994fcac44afae6f08c12e1d4bfe9cb5c0f82a4e4ed3910bb93",
+      "after_sha256": "8f99ca393da7e15cc420038ff2e84756747b4c69ab342b07bbee5642642a59a7"
+    }
+  },
+  "findings": [
+    {
+      "area": "review routing",
+      "evidence": "The prior exact prompt produced no Skill call. The visible description already matched PR diff review; parsed Claude projection retains the same description and implicit policy. No tool rejection or failed load was observed.",
+      "repair": "Put PR bugs, regressions, access-control changes, and common requests first in a 252-character third-person description; align the short description/default prompt and clarify supplied-diff scope versus implementation, security assessment, and receipt verification. No new adapter controls or forced invocation.",
+      "causal_limit": "The cause of the selection miss is unresolved. Body edits cannot establish behavior when the body was not loaded. The new plan separates an implicit row from a direct-review diagnostic; neither has run."
+    },
+    {
+      "area": "review continuity and conditional claims",
+      "evidence": "The prior review predicted test failure with store scope unknown. Its two follow-ups changed no test has run into not written. They also retained a definite exposure headline despite a qualified body.",
+      "repair": "Track test existence, execution, and outcome independently. Preserve conditions in headings, severity explanations, conclusions, fixes, pause updates, and resumed reviews. Correct an earlier unsupported assistant claim rather than using it as evidence. Add a concise synthetic continuity example.",
+      "causal_limit": "This is an instruction repair. Since prior review selection failed, it does not show that the earlier review body caused these answers or that the new body will prevent them."
+    },
+    {
+      "area": "GCP contract before optimization",
+      "evidence": "The skill and warehouse reference loaded. The answer preserved several unknowns but gave an unconditional reliability heading and required a bounded event_time window plus margin without an accepted event-age bound. The old reference still asked for required predicate properties before resolving that contract.",
+      "repair": "Replace premature predicate-property advice with ordered clock/grain/strategy/replay discovery. Distinguish delivery delay from corrected-event age, keep older corrections and source/target matches in scope, and do not require a fixed window, margin, key, or tie-breaker before its contract. Apply uncertainty to headings and verdicts; add an independently authored older-event counterexample.",
+      "causal_limit": "No new model result exists. The prior partial result is preserved, not regraded as passing."
+    }
+  ],
+  "offline_coverage": {
+    "existing_cases_preserved": true,
+    "added_synthetic_safety_cases": [
+      "code-change-review-safety-2",
+      "code-change-review-safety-3",
+      "gcp-data-engineering-profile-safety-2",
+      "gcp-data-engineering-profile-safety-3"
+    ],
+    "scope": "Append safety cases and output rubrics to catalog coverage only. Frozen thirty-case suite, CLI inputs/follow-ups, earlier observations/plans, accepted originality packet, source pins, and historical studies remain unchanged. No validator behavior changes or behavioral test passes are inferred from text checks."
+  },
+  "generated_output": {
+    "canonical_skill_sets_changed": 2,
+    "native_projection_counts": {
+      "codex": 87,
+      "claude": 87,
+      "antigravity": 70
+    },
+    "claude_ai_archives": 87,
+    "repeat_archive_checksums": "All 87 checksum lines identical across two complete distribution/archive builds. Only the review and GCP archives differ from the prior head.",
+    "policies": "Read-only implicit metadata, explicit-only exclusions, MIT notices, version 0.18.0, and native adapter mappings unchanged. Pack/profile listing measurements recomputed from the review description; these are estimates, not observed prompts."
+  },
+  "expression_and_license_review": {
+    "method": "Original Codex-assisted changes to the owned review and GCP workflows, with prose and examples written for this repository. Targeted expression review found no actionable imported-expression or notice issue in these changes. No external skill implementation, script, hook, permission grant, asset, dependency, or license was added. Existing original/adapted lineage and MIT notices retained.",
+    "primary_sources_reviewed": [
+      "https://code.claude.com/docs/en/skills",
+      "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices",
+      "https://docs.cloud.google.com/bigquery/docs/querying-partitioned-tables",
+      "https://docs.getdbt.com/docs/build/incremental-models"
+    ],
+    "limits": "Primary documents inform format and platform semantics; they do not grant rights in a copied implementation or establish model behavior. This bounded review is not clean-room-process proof, exclusive-human authorship, outside-corpus comparison, independent legal clearance, or new maintainer acceptance. The exact October 20 acceptance remains frozen; the current delta accounts for these new bytes."
+  },
+  "retest": "Prepared only: five case sessions, including a separate direct-review control, and two fixed continuity follow-ups after that control. Both earlier allowances are consumed. A new explicit execution decision and fresh billing/isolation checks are required; no model request, paid evaluation, billing change, global installation, merge, or release occurred in this repair."
+}

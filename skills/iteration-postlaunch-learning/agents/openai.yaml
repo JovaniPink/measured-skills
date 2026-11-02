@@ -1,7 +1,0 @@
-interface:
-  display_name: "Iteration and Postlaunch Learning"
-  short_description: "Reviews postlaunch learning"
-  default_prompt: "Use $iteration-postlaunch-learning for this task: Reviews postlaunch learning when asked what worked, what to change, or which feedback deserves investigation; uses observed outcomes rather than treating deployment as success."
-policy:
-  allow_implicit_invocation: true
-

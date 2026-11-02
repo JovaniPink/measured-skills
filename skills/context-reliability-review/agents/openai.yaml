@@ -1,6 +1,0 @@
-interface:
-  display_name: "Context Reliability Review"
-  short_description: "Checks supplied agent context"
-  default_prompt: "Use $context-reliability-review for this task: Checks supplied agent context when asked whether a claim is stale, conflicting, authorized, or superseded; traces assertion provenance rather than redesigning the system of record."
-policy:
-  allow_implicit_invocation: true

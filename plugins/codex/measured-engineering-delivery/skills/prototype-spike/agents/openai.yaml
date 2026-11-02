@@ -1,6 +1,0 @@
-interface:
-  display_name: "Prototype Spike"
-  short_description: "Runs an isolated technical experiment"
-  default_prompt: "Use $measured-engineering-delivery:prototype-spike for this task: Runs an isolated technical experiment when explicitly asked to test feasibility or answer an implementation uncertainty; disposable evidence does not authorize production adoption."
-policy:
-  allow_implicit_invocation: false

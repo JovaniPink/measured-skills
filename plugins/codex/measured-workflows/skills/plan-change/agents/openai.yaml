@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan a change"
+  short_description: "Plans a change"
+  default_prompt: "Use $measured-workflows:plan-change for this task: Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization."
+policy:
+  allow_implicit_invocation: true

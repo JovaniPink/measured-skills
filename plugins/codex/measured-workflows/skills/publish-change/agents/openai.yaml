@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prepare or maintain a draft PR"
+  short_description: "Commits, pushes, or opens a PR only"
+  default_prompt: "Use $measured-workflows:publish-change for this task: Commits, pushes, or opens a PR only when explicitly requested; verifies identity, destination, diff, and checks while keeping merge, deployment, and release separately authorized."
+policy:
+  allow_implicit_invocation: false

@@ -1,7 +1,0 @@
-interface:
-  display_name: "Decision and Governance Records"
-  short_description: "Writes or reviews a decision record"
-  default_prompt: "Use $measured-operations:decision-governance-records for this task: Writes or reviews a decision record when asked to document options, rationale, ownership, or approval status; separates a proposal from a ratified decision."
-policy:
-  allow_implicit_invocation: true
-

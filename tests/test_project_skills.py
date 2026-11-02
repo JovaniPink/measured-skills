@@ -35,6 +35,7 @@ class ProjectSkillsTests(unittest.TestCase):
             (target / "agents/openai.yaml").write_text(f'interface:\n  default_prompt: "Use ${skill}."\n' + ('policy:\n  allow_implicit_invocation: false\n' if invocation == "explicit" else ''))
         (self.source / "catalog").mkdir()
         (self.source / "catalog/revocations.json").write_text('{"entries": []}\n')
+        (self.source / "LICENSE").write_text("MIT License\nCopyright (c) 2026 Fixture\nSynthetic notice fixture.\n")
         self.commit()
         (self.app / "docs/skills").mkdir(parents=True)
         (self.app / "docs/skills/contract.md").write_text("# Contract\nSynthetic read/write owner.\n")
@@ -52,6 +53,7 @@ class ProjectSkillsTests(unittest.TestCase):
     def test_layout_controls_and_reproducibility(self) -> None:
         self.assertEqual([], project(self.source, self.app, False))
         self.assertEqual([], project(self.source, self.app, True))
+        self.assertEqual((self.source / "LICENSE").read_bytes(), (self.app / ".agents/skills/fixture-read-check/LICENSE").read_bytes())
         self.assertFalse((self.app / ".agents/skills/fixture-deliver-check").exists())
         self.assertIn("allow_implicit_invocation: false", (self.app / ".codex/skills/fixture-deliver-check/agents/openai.yaml").read_text())
         self.assertIn("disable-model-invocation: true", (self.app / ".claude/skills/fixture-deliver-check/SKILL.md").read_text())

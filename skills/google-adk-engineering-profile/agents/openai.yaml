@@ -1,6 +1,0 @@
-interface:
-  display_name: "Google ADK Engineering Profile"
-  short_description: "Reviews Google ADK architecture"
-  default_prompt: "Use $google-adk-engineering-profile for this task: Reviews Google ADK architecture when asked about sessions, tools, models, evaluations, or deployment compatibility; checks exact versions and does not equate framework defaults with safety."
-policy:
-  allow_implicit_invocation: true

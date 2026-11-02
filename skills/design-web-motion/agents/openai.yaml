@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design web motion"
+  short_description: "Plans web interactions and motion"
+  default_prompt: "Use $design-web-motion for the supplied request. Preserve its scope and return concise guidance without executing the proposed task."
+policy:
+  allow_implicit_invocation: true

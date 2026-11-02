@@ -1,0 +1,6 @@
+interface:
+  display_name: "Adobe AEM guidance"
+  short_description: "Reviews AEM code, Sling, OSGi, Dispatcher, and content packages"
+  default_prompt: "Use $stack-adobe-aem for this task: Reviews AEM code, Sling, OSGi, Dispatcher, and content packages when an Adobe Experience Manager change needs stack-specific checks; follows discovered versions and Cloud Manager authority."
+policy:
+  allow_implicit_invocation: true

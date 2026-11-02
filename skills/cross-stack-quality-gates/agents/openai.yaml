@@ -1,6 +1,0 @@
-interface:
-  display_name: "Cross-Stack Quality Gates"
-  short_description: "Finds and runs repository checks"
-  default_prompt: "Use $cross-stack-quality-gates for this task: Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command."
-policy:
-  allow_implicit_invocation: true

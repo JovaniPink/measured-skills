@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan test coverage"
+  short_description: "Plans tests"
+  default_prompt: "Use $plan-tests for this task: Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Worktree Isolation"
-  short_description: "Assesses checkout isolation"
-  default_prompt: "Use $worktree-isolation for this task: Assesses checkout isolation when concurrent edits or dirty files may collide with a new task; reuses safe worktrees and preserves unrelated work rather than creating or deleting blindly."
-policy:
-  allow_implicit_invocation: true

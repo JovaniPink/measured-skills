@@ -1,6 +1,0 @@
-interface:
-  display_name: "Portable Skill Authoring"
-  short_description: "Authors portable skills"
-  default_prompt: "Use $portable-skill-authoring for this task: Authors portable skills when asked to create or revise SKILL.md workflows and client distributions; preserves routing, provenance, and invocation controls rather than treating ordinary docs as skills."
-policy:
-  allow_implicit_invocation: true

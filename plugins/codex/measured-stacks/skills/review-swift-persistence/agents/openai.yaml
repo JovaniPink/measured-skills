@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review Swift persistence"
+  short_description: "Reviews Swift persistence"
+  default_prompt: "Use $measured-stacks:review-swift-persistence for this task: Reviews Swift persistence when SwiftData identity, context ownership, deletion, migration, or sync behavior is uncertain; does not assume CloudKit or authorize data mutation."
+policy:
+  allow_implicit_invocation: true

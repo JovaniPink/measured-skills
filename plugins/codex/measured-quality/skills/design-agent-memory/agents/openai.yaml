@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design agent state and memory"
+  short_description: "Designs agent context and memory boundaries"
+  default_prompt: "Use $measured-quality:design-agent-memory for this task: Designs agent context and memory boundaries when asked where session state belongs, how memory expires, or how tenants stay isolated; distinguishes architecture from a context-packet audit."
+policy:
+  allow_implicit_invocation: true

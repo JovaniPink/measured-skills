@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review context and assertions"
+  short_description: "Checks supplied agent context"
+  default_prompt: "Use $review-context-evidence for this task: Checks supplied agent context when asked whether a claim is stale, conflicting, authorized, or superseded; traces assertion provenance rather than redesigning the system of record."
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Swift Persistence Contract Review"
-  short_description: "Reviews Swift persistence"
-  default_prompt: "Use $measured-swift-workflows:swift-persistence-contract-review for this task: Reviews Swift persistence when SwiftData identity, context ownership, deletion, migration, or sync behavior is uncertain; does not assume CloudKit or authorize data mutation."
-policy:
-  allow_implicit_invocation: true

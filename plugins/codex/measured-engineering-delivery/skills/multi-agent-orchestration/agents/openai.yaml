@@ -1,6 +1,0 @@
-interface:
-  display_name: "Multi-Agent Orchestration"
-  short_description: "Coordinates parallel agents"
-  default_prompt: "Use $measured-engineering-delivery:multi-agent-orchestration for this task: Coordinates parallel agents when explicitly asked to delegate independent work; defines ownership, evidence, and reconciliation without duplicating edits or delegating irreversible decisions."
-policy:
-  allow_implicit_invocation: false

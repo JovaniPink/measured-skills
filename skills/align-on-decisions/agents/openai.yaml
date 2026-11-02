@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agree on the decisions"
+  short_description: "Clarifies an underspecified request"
+  default_prompt: "Use $align-on-decisions for this task: Clarifies an underspecified request when the desired result, constraints, or success criteria are unclear; asks only material questions and does not reopen settled decisions."
+policy:
+  allow_implicit_invocation: true
