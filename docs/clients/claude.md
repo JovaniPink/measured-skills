@@ -47,6 +47,26 @@ Start a fresh task, then select the full plugin command:
 
 Generated Claude packages omit Codex's `agents/` files. Skills that require direct selection get `disable-model-invocation: true`. Check both direct selection and a related prompt that should leave the skill inactive.
 
+## Inspect a staged restricted session
+
+A listed skill or successfully loaded SKILL.md does not establish access to its
+linked references. In restricted mode, check that required evidence and plugin
+reference paths fall inside the working directory or explicitly added directories.
+The --add-dir flag expands file-tool access; it is not a read-only permission by
+itself. Add specific directories, not a preparation parent containing owner notes.
+Keep evidence and plugin files protected from both Edit and Write, and retain the
+agreed manual approval boundary for task edits.
+
+Plan bounded reads for large exports. An indexed identity extract can retain the
+original source hash without requiring a full catalog read. Keep the original
+bytes and distinguish a failed read from a successful partial inspection.
+
+Record the running version as well as the installed launcher version. Background
+updates can make them differ. A future authorized comparison can use the documented
+process-only DISABLE_AUTOUPDATER control; do not change global update settings or
+silently substitute a version. See the [November 2 stopped retest](../audits/client-preflight-2026-11-02.md)
+for observed limits and [official environment controls](https://code.claude.com/docs/en/env-vars).
+
 ## Check each app mode
 
 Claude desktop Code mode, Claude.ai, and Cowork each need their own record. Note whether the task runs locally or remotely. Check loading, linked files, result files, and resume behavior in each mode you use.

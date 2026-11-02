@@ -1,5 +1,34 @@
 # Merged work and remaining release gates
 
+## Current checkpoint: November 2, 2026
+
+Remote main is `3bbc88ce08bb5d686338f9185a742b752a31507f`: [PR 82](https://github.com/JovaniPink/measured-skills/pull/82)
+merged October 30 with both parents preserved. Its reviewed head
+`1e8bf7923189986c445a283bd06aa727d7c55a8d` passed all 320 tests in hosted CI;
+[merged-main validation](https://github.com/JovaniPink/measured-skills/actions/runs/41066698814)
+also passed. These results do not qualify receiving-client behavior.
+
+November 2 work adds two pending operational routes over existing skills and
+clarifies [current checkout selection](start.md#check-which-source-you-opened).
+Its source, validation and review status belong to [draft PR 83](https://github.com/JovaniPink/measured-skills/pull/83), not PR 82. Reviewed head `d85c7b59` passed all 320 local tests and [exact-head CI](https://github.com/JovaniPink/measured-skills/actions/runs/41472637584); the later preflight documentation has its own checks.
+The merged catalog still has 90 skills in four packs, with 17 explicit-only skills.
+
+| Remaining boundary | Current evidence and next action |
+| --- | --- |
+| Human usefulness | Ten-card exercise remains unscored; record actual route choice, expected output, scope, time and requests for help. Do not infer user success from search tests. |
+| Claude revised-source behavior | [November 2](audits/client-preflight-2026-11-02.md): matching account controls observed off; one authorized Haiku task stopped on blocked reference access, no edits or continuation. Corrected preparation passes static checks but needs a new execution decision, fresh controls and runtime verification. Original results remain unchanged. |
+| Gemini 3.8 Flash behavioral evaluation | Bounded trial protocol recorded in [preparation](audits/gemini-flash-trial-preparation-2026-11-02.md); execution remains unrun and requires separate authorization and quota checks. |
+| Other clients and machines | Codex no-paid-fallback and Antigravity isolation remain unresolved in retained evidence. Other surfaces and the second Mac need their own observations. |
+| Sources | [November 2 online check](audits/upstream-freshness-2026-11-02.json): 43 matching, 26 changed, none unavailable. Individually review all changes before justified pin updates. No pin or freshness policy changed; the October 29 pass remains a dated snapshot. |
+| Dotfiles companion | PR 39 remains an open draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`. Its retained hosted job did not start because of a payment/spending-limit issue; local checks do not clear that gate. |
+| Formal release | November 2 readback found no GitHub releases; the returned tags contain only v0.16.0. No 0.18 or 0.19 release or installation follows from merged source. |
+
+The accepted originality packet, source pins, original trial outputs, and retest
+remain intact. The new technical delta is not another maintainer acceptance.
+The dated records below preserve earlier evidence and their original limitations.
+
+## Historical October 29 checkpoint
+
 Snapshot: October 29, 2026. Merged repository baseline:
 `7cc619503c04cac2f178118830e7b0f82901587c`.
 

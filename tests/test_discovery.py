@@ -44,6 +44,9 @@ class MigrationTests(unittest.TestCase):
             ('I already checked something else.', []),
             ('There is a reviewer waiting elsewhere.', []),
             ('unrelated aardvark', []),
+            ('My flaky test passes alone; assess the cause.', ['diagnose-nondeterminism']),
+            ('Two reviewers disagree about the trust boundary.', ['resolve-review-conflict']),
+            ('conflicting review findings', ['resolve-review-conflict']),
         ]
         program = """
 const fs = require('node:fs');

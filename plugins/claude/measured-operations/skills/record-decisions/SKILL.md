@@ -15,6 +15,8 @@ metadata:
 
 Use generic terminology and preserve the status of every material statement: observed fact, proposal, ratified decision, rejected decision, unresolved question, measured result, estimate, or causal claim.
 
+Read [conflicting reviews](references/conflicting-reviews.md) when valid review findings appear to require incompatible changes.
+
 ## Workflow
 
 1. Identify the decision question, scope, affected capabilities, authority, and required decision date.

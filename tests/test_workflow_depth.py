@@ -17,7 +17,7 @@ from cataloglib import read_skill_metadata  # noqa: E402
 class WorkflowDepthTests(unittest.TestCase):
     def test_native_modes_resolve_and_antigravity_excludes_explicit_commands(self) -> None:
         data = json.loads((ROOT / 'catalog/workflows.json').read_text())
-        self.assertEqual(15, len(data['routes']))
+        self.assertEqual(17, len(data['routes']))
         for route in data['routes']:
             for mode in route['modes']:
                 name = mode.get('command_skill', route['primary_skill'])
@@ -32,7 +32,8 @@ class WorkflowDepthTests(unittest.TestCase):
 
     def test_new_references_survive_each_supported_standalone_export(self) -> None:
         names = ['explain-codebase', 'plan-change', 'verify-claims', 'design-module-interface',
-                 'stack-postgresql-sql', 'stack-gcp-data', 'stack-swift-swiftui']
+                 'stack-postgresql-sql', 'stack-gcp-data', 'stack-swift-swiftui',
+                 'diagnose-failure', 'record-decisions']
         for client in ('codex', 'claude', 'antigravity'):
             with tempfile.TemporaryDirectory() as raw:
                 dest = Path(raw).resolve() / 'export with spaces'

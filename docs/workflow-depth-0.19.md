@@ -104,3 +104,11 @@ regeneration, not treated as hand-authored changes.
 Available repository, export, browser and machine checks must be reported with
 exact revisions and limitations in the draft PRs. Human usability, installed-client
 activation, device acceptance, productivity and release readiness remain unproven.
+
+
+## Focused operational routes, November 2
+
+The chooser also provides [intermittent diagnosis and review-conflict resolution](operational-workflows.md).
+These compose existing skills, preserve all 90 capability identities, and keep
+local investigation distinct from read-only decision work. Source depth and
+packaging are not proof of installed activation or useful real-work outcomes.

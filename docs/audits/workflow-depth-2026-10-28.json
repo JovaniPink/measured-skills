@@ -97,18 +97,38 @@
     },
     "skills/coordinate-agents/SKILL.md": {
       "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
-      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
-      "after_sha256": "f84b85358312ac90f7daf532aeccc9e466ff03f548333e0e1cbae481bd8cb24b"
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
+      "after_sha256": "93eff329ecb538d51889acb4c4b960e64965acd9c34a62e4dfb232c6f7891dc4"
     },
     "skills/coordinate-agents/references/client-mapping.md": {
       "before_sha256": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
-      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
-      "after_sha256": "c4d5f0b2ad23ae07312ad1be4e6ca9b42c18760a4edb06571552250a39669d15"
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
+      "after_sha256": "30943d6457b21767b9672c9c399e2af6601548610e8756c4c222b5477e96d5bc"
     },
     "skills/design-agent-evaluations/SKILL.md": {
       "before_sha256": "6fd4bd20e3730db436a11ef615a2abb248c899c9fc3834497c9bebea683c67f4",
       "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
       "after_sha256": "2b7bfe3618281d3e3c0a58faf71f33fb1754683799b5e418bbb77710ea9e9f3d"
+    },
+    "skills/diagnose-failure/SKILL.md": {
+      "before_sha256": "c3d5934ebb5f558d4c2fcf830c9e8292398428260f30d914b8c2b3574b4170b9",
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "e60052ac868a5a56a9d936ccf1b8503cbf0aad473f0e7983517720b2316fa0d9"
+    },
+    "skills/diagnose-failure/references/nondeterministic-failures.md": {
+      "before_sha256": null,
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "71312fc60268847d718e6f987842e32187a8ee70c8ff9b35ca138af81090d935"
+    },
+    "skills/record-decisions/SKILL.md": {
+      "before_sha256": "52f44131d192a77fec918d4cc6f66c6ac3dc050d5a0651f056de84059ebfec07",
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "2a4615bbca369c36e82b6505132f44e3eb882a15f22c2110c38c4b7b08693158"
+    },
+    "skills/record-decisions/references/conflicting-reviews.md": {
+      "before_sha256": null,
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
+      "after_sha256": "36d541f914582b554649817b3ab91a8144c0ef08ec3a03222c8f2cd4df292a57"
     }
   }
 }

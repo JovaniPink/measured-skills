@@ -5,6 +5,30 @@ Start with [the offline chooser](../dist/discovery/index.html) or its
 locally; GitHub shows its source. It needs no server, login, network or installation.
 The Studio's `/skills` page uses the same revision-pinned records when published.
 
+## Check which source you opened
+
+An old checkout can show old names and omit routes that are already merged.
+Before comparing the catalog or copying commands, run these in the repository:
+
+```sh
+git status --short
+git branch --show-current
+git log -1 --oneline
+```
+
+Compare that revision and the chooser's displayed source with the version you
+intend to use. A clean checkout can still be old. An empty branch name means a
+detached historical snapshot; keep it labeled as such. Do not overwrite dirty
+work or upgrade an installed client to make a documentation example match.
+
+For an authorized update, fetch the intended remote and inspect the difference.
+A clean default-branch checkout that is only behind can advance with a fast-forward.
+Feature branches and divergent history need the project's integration rules;
+do not reset, rebase or force-push this catalog. Read the guide from the reviewed
+checkout. On a Mac, `open dist/discovery/index.html` opens its local chooser.
+The chooser's source, release manifest source, Git head and installed skills can
+have different identities; each must match the claim being checked.
+
 ## Start with the unfinished task
 
 Choose **Finish existing work**. If you need to know where things stand, use
@@ -85,3 +109,15 @@ from installation, release, and website publication.
 
 For upgrades, refactoring, queries, replay and Swift diagnosis, search the chooser.
 [Workflow depth and evidence limits](workflow-depth-0.19.md) explains these routes.
+
+For a **flaky test** or **intermittent failure**, choose **Diagnose an intermittent
+failure**. It allows bounded safe local investigation, without edits or retries
+until green. For **reviewers disagree**, choose **Resolve conflicting review
+findings**. It compares evidence and options without running checks or treating
+reviewer consensus as approval. See [operational workflows](operational-workflows.md)
+for examples and the difference between diagnosis, decisions and execution.
+
+For questions about model usage, background work or delegated permissions, read
+[client usage and permissions](client-usage-and-permissions.md). Session counts,
+token estimates and account billing prove different things; a reviewer role does
+not create its own permission boundary.

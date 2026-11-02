@@ -15,6 +15,8 @@ metadata:
 
 Determine the most strongly supported cause before changing the system.
 
+Read [intermittent failure diagnosis](references/nondeterministic-failures.md) for flaky tests, order-dependent failures, timing, or suspected races.
+
 ## Workflow
 
 1. Capture the observed symptom, expected behavior, environment, and smallest known reproduction.

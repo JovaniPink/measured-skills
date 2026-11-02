@@ -71,3 +71,13 @@ Align its qualification boundary with the HTML chooser; retain the historical
 results and current-source qualification gap. A failing cross-format regression
 preceded the repair. No task prompt, skill contract, source pin, trial result, or
 prepared retest changed. Regenerate derived copies and rebind the manifest.
+
+
+## November 2 source reconciliation
+
+The [usage and delegated-permission guide](../client-usage-and-permissions.md)
+records the primary-source review. Two fresh official subagent Markdown responses
+matched the existing pin. Correct the unsupported custom-agent sandbox/MCP override
+wording; this is a local wording defect, not established source fingerprint drift.
+Name Codex memory generation explicitly while retaining unknown execution and cost.
+No source repin, configuration change, client trial, or new acceptance follows.
