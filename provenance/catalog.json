@@ -405,7 +405,7 @@
       "reviewed_material": [
         "Agent Skills specification"
       ],
-      "local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract. 2026-10-28: one-to-one 0.19 identity and pack migration; original source and owned-adaptation lineage retained. This does not extend prior acceptance to the renamed package.",
+      "local_changes": "Original causal-diagnosis workflow with an explicit remediation boundary. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. Follow-up 2026-10-20 review makes the synthetic daily-use example retain its evidence and output contract. 2026-10-28: one-to-one 0.19 identity and pack migration; original source and owned-adaptation lineage retained. This does not extend prior acceptance to the renamed package. November 2 original operational depth: add self-contained intermittent-failure or conflicting-review guidance and discoverable routes, with synthetic cases only. Supplemental primary-source review is in docs/operational-workflows.md. No external implementation, invocation change, new client result, source repin or maintainer acceptance.",
       "security_review": "APPROVE: diagnostic workflow prohibits silent implementation.",
       "rereview_triggers": [
         "skill behavior change",
@@ -903,7 +903,7 @@
       "reviewed_material": [
         "Agent Skills specification and generic public-domain operating concepts"
       ],
-      "local_changes": "Original generic operating workflow with explicit evidence, claim-status, ownership, authority, and public-private boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. 2026-10-28: one-to-one 0.19 identity and pack migration; original source and owned-adaptation lineage retained. This does not extend prior acceptance to the renamed package.",
+      "local_changes": "Original generic operating workflow with explicit evidence, claim-status, ownership, authority, and public-private boundaries. Original 2026-10-20 editorial refinement adds task-focused routing, concise output guidance, and labeled synthetic examples; historical source review dates and invocation boundaries are retained. 2026-10-28: one-to-one 0.19 identity and pack migration; original source and owned-adaptation lineage retained. This does not extend prior acceptance to the renamed package. November 2 original operational depth: add self-contained intermittent-failure or conflicting-review guidance and discoverable routes, with synthetic cases only. Supplemental primary-source review is in docs/operational-workflows.md. No external implementation, invocation change, new client result, source repin or maintainer acceptance.",
       "security_review": "APPROVE: read-only instruction workflow with no proprietary terminology, hooks, executables, bundled agents, broad tool grants, external writes, or production actions.",
       "rereview_triggers": [
         "workflow or invocation changes",
