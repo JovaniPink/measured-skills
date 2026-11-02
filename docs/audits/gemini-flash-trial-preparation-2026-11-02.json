@@ -1,0 +1,85 @@
+{
+  "status": "prepared_not_run",
+  "prepared_on": "2026-11-02",
+  "source_revision": "d85c7b5947adfe3f4e4c2a9fec9068559b975c3e",
+  "catalog_version": "0.19.0",
+  "target_surface": "antigravity-ide",
+  "target_model": "Gemini 3.8 Flash",
+  "target_effort": "high",
+  "model_and_effort_preflight": "observed_active_setting",
+  "case_session_ceiling": 3,
+  "followup_ceiling": 1,
+  "retries": 0,
+  "execution_authorization": "required; explicit maintainer authorization and quota checks required prior to model calls",
+  "frozen_source": "evals/cases.json",
+  "selected_skills": [
+    "explain-codebase",
+    "verify-claims",
+    "run-project-checks"
+  ],
+  "staged_file_sha256": {
+    "plugins/antigravity/measured-workflows/skills/explain-codebase/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "plugins/antigravity/measured-workflows/skills/explain-codebase/SKILL.md": "153cef356245117f07aebe650dc13419549659b7073facc7ef23b6a608245739",
+    "plugins/antigravity/measured-workflows/skills/explain-codebase/references/context-map.md": "acb8db9e48ccdc8a1325914d7c9c7249245bd2fa7c8a84defb425e752ab08bf6",
+    "plugins/antigravity/measured-quality/skills/verify-claims/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "plugins/antigravity/measured-quality/skills/verify-claims/SKILL.md": "62bd76f368bcb3748acceb36e4c3878756b2c7068d604f49056212bde5f179ac",
+    "plugins/antigravity/measured-quality/skills/verify-claims/references/continuity-example.md": "f0fb4b0b33e2a16835597c6d1b719c536a9f7c7765e1f3abdbf86f2b0995fb60",
+    "plugins/antigravity/measured-quality/skills/verify-claims/references/document-reconciliation.md": "296ecfa219b6f065ef95f22cd79fcb16b85c7fcc2a662c10a24d2e69cf4e8eec",
+    "plugins/antigravity/measured-quality/skills/run-project-checks/LICENSE": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+    "plugins/antigravity/measured-quality/skills/run-project-checks/SKILL.md": "137202bb8fbf4621aeeddfbd854cbc90cc13ebd0aa4f962d92e849a15f923655",
+    "plugins/antigravity/measured-quality/skills/run-project-checks/references/continuity-example.md": "dc12b7560918cf66dd9ba95b6407eee5732799eb7911c4818173d5928a1327c4",
+    "plugins/antigravity/measured-quality/skills/run-project-checks/references/gate-discovery.md": "c72988ed26b3ac9e288e8e2ef104c9f4008b9a1458cc902271f5092c04bfc968"
+  },
+  "rows": [
+    {
+      "order": 1,
+      "source_case": "explain-codebase-positive-1",
+      "target_skill": "explain-codebase",
+      "selection_mode": "implicit",
+      "prompt": "Explain how this request flows from the HTTP entrypoint to storage, including validation and failures, with file references.",
+      "prompt_sha256": "1edbc62d80994b5d960348c40c20171aa1ad70aeac61610c252ee0e9ab462388",
+      "execution": "not_run"
+    },
+    {
+      "order": 2,
+      "source_case": "verify-claims-positive-2",
+      "target_skill": "verify-claims",
+      "selection_mode": "implicit",
+      "prompt": "Review this claim that all tests pass and identify exactly what the logs prove.",
+      "prompt_sha256": "59c1f17d177fda247f5d463b25aa1e4c7b4b3bf68c67cd2d2ac46da37b8403bf",
+      "execution": "not_run"
+    },
+    {
+      "order": 3,
+      "source_case": "run-project-checks-positive-1",
+      "target_skill": "run-project-checks",
+      "selection_mode": "implicit",
+      "prompt": "Unit tests pass but the required integration environment is unavailable. Lead with INCOMPLETE and preserve both observations.",
+      "prompt_sha256": "747f7ee8f03ff1944e2d8d08e36f078b1601a483fa2b7a63ab9491ccb5f813df",
+      "execution": "not_run"
+    },
+    {
+      "order": 4,
+      "source_case": "near-miss-1",
+      "target_skill": "none",
+      "selection_mode": "implicit",
+      "prompt": "Translate the word hello into Spanish.",
+      "prompt_sha256": "027e394d332ed04f3c2b505ea743f315a53c5a78fda15a37f91fd0e3f39a6183",
+      "execution": "not_run"
+    }
+  ],
+  "continuity_followups": [
+    {
+      "after_row": 1,
+      "prompt": "Pause for a status update. State the original goal, reviewed evidence, findings so far, unfinished checks, and next authorized step. Do not change files or broaden scope.",
+      "prompt_sha256": "96014e11b15f69ccaa51e306d1908a64e06b089cc6feb4f9ed6e9e507e75a373",
+      "execution": "not_run"
+    }
+  ],
+  "limits": [
+    "Prepared only; not executed in repository CI or local unit tests.",
+    "Model availability, introductory pricing, and thinking effort are volatile execution-envelope facts.",
+    "Antigravity distribution packages implicit skills only; 17 explicit-only skills remain excluded.",
+    "Execution requires explicit maintainer authorization, quota validation, and dedicated disposable workspace."
+  ]
+}

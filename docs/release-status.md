@@ -17,6 +17,7 @@ The merged catalog still has 90 skills in four packs, with 17 explicit-only skil
 | --- | --- |
 | Human usefulness | Ten-card exercise remains unscored; record actual route choice, expected output, scope, time and requests for help. Do not infer user success from search tests. |
 | Claude revised-source behavior | Original two-session/one-continuation results retain findings. The separate narrow retest is prepared, not run; it needs execution authorization and fresh matching-account billing and effective-isolation checks. Do not expand it into these new operational cases. |
+| Gemini 3.8 Flash behavioral evaluation | Bounded trial protocol recorded in [preparation](audits/gemini-flash-trial-preparation-2026-11-02.md); execution remains unrun and requires separate authorization and quota checks. |
 | Other clients and machines | Codex no-paid-fallback and Antigravity isolation remain unresolved in retained evidence. Other surfaces and the second Mac need their own observations. |
 | Sources | October 29's 69 matching sources are a dated snapshot. No November 2 online freshness result is claimed; recheck for release without weakening policy or transferring old results. |
 | Dotfiles companion | PR 39 remains an open draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`. Its retained hosted job did not start because of a payment/spending-limit issue; local checks do not clear that gate. |
