@@ -116,3 +116,8 @@ until green. For **reviewers disagree**, choose **Resolve conflicting review
 findings**. It compares evidence and options without running checks or treating
 reviewer consensus as approval. See [operational workflows](operational-workflows.md)
 for examples and the difference between diagnosis, decisions and execution.
+
+For questions about model usage, background work or delegated permissions, read
+[client usage and permissions](client-usage-and-permissions.md). Session counts,
+token estimates and account billing prove different things; a reviewer role does
+not create its own permission boundary.

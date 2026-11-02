@@ -18,7 +18,7 @@ Use workers only when the host and user permit delegation. Parallel tasks must
 be genuinely independent. An explicitly requested sequential reviewer is also a
 supported coordination pattern; it does not authorize parallel editing.
 
-Read [client mapping](references/client-mapping.md) only when selecting a client-specific coordination mechanism. Read [candidate comparison](references/candidate-comparison.md) only when several independent implementations can be tested against one rubric. Read [coverage fanout](references/coverage-fanout.md) only when independent review lenses can inspect the same pinned artifact without overlapping writes.
+Read [client mapping](references/client-mapping.md) when selecting a client-specific coordination mechanism or inspecting its usage and permission boundaries. Read [candidate comparison](references/candidate-comparison.md) only when several independent implementations can be tested against one rubric. Read [coverage fanout](references/coverage-fanout.md) only when independent review lenses can inspect the same pinned artifact without overlapping writes.
 
 ## Workflow
 
@@ -35,8 +35,8 @@ Read [client mapping](references/client-mapping.md) only when selecting a client
 ## One optional reviewer
 
 Worker and session limits bound authorized work, not every inference request made
-by the client. Allow for client-managed summaries, retries, and other overhead
-when estimating usage; leave unmeasured amounts unknown. Distinguish planned work,
+by the client. Allow for client-managed summaries, memory generation, retries,
+and other overhead when estimating usage; leave unmeasured amounts unknown. Distinguish planned work,
 observed requests and tokens, and account billing or allowance evidence. A token
 estimate is not a bill or a verified spending cap. Do not enable telemetry, alter
 runtime controls, or launch a measurement task merely to fill an evidence gap.
