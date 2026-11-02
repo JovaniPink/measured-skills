@@ -1287,7 +1287,7 @@
       ]
     }
   ],
-  "source_revision": "74b228ff87426d106cc4b71a479fc30ece61a592",
+  "source_revision": "cfc952d0735e6e87d5403e2434b776dd65916b74",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
@@ -1295,7 +1295,7 @@
     "catalog/profiles.json": "50af0bc61c0532a68312ae7ac65bc6bdc7e63cce604716b81cf3f268a4159d75",
     "catalog/skills.json": "199c0c51fc45bbda27277e1664d5f55646aa0b24ecfe0f2dbae299d4469941a2",
     "catalog/workflows.json": "b8496508388ab4537298a537b30f206fb6d245ee94c251a557dac82b5cf6de96",
-    "docs/audits/workflow-depth-2026-10-28.json": "d66fed81a0cc69c85c586e4e2e8001267b4e9cd0fee9602baf37aea5eb8086d9",
+    "docs/audits/workflow-depth-2026-10-28.json": "6ba1cbbf33612059774e4cc81424ad1a726ec95a2a0ae57b91cd15cddd4a756f",
     "scripts/canonical_deltas.py": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
     "scripts/discovery-ui.js": "2827bd64808afcf1f0e0b362513ac91f39218a5c2e3132e4710c677ff4c09920",
@@ -1330,7 +1330,7 @@
     "skills/coordinate-agents/SKILL.md": "93eff329ecb538d51889acb4c4b960e64965acd9c34a62e4dfb232c6f7891dc4",
     "skills/coordinate-agents/agents/openai.yaml": "953359db7d41ff3d8a21791a677fe083666a4dd73e353f6207ee63115f82ffb2",
     "skills/coordinate-agents/references/candidate-comparison.md": "a48b9da5eb61523f46717a86714c39185ed301f98d9e3c1aa76f49a3416b6aa2",
-    "skills/coordinate-agents/references/client-mapping.md": "bf7ae48104c03c0e83fcde093ddab7eb8be8bc380c5d100b9efeb85e2ea43bfa",
+    "skills/coordinate-agents/references/client-mapping.md": "30943d6457b21767b9672c9c399e2af6601548610e8756c4c222b5477e96d5bc",
     "skills/coordinate-agents/references/coverage-fanout.md": "e95cb2d1453a55fdea1a702ba8e5a7b3bd41fc752cadf9e50e542e7bde0749e9",
     "skills/deliver-nextjs-feature/SKILL.md": "34a1b55bef01fa970afc30d2c828774a38c09e75ba3bc97406c1406145e39c7f",
     "skills/deliver-nextjs-feature/agents/openai.yaml": "a66847d51a6fa5cea1ffd3943e0f3e5187385614c9e5c2dadbbac01639367e47",
