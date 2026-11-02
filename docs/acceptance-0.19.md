@@ -1,7 +1,9 @@
 # 0.19 acceptance: finding and finishing work
 
 Status: prepared, not run. These are chosen product targets, not measured benefits.
-The first exercise has no model calls. Give the user one initial orientation, then
+The first exercise has no model calls. This file is the facilitator record and contains
+the answer key. Give the participant the [separate task sheet](acceptance-0.19-participant.md),
+not this answer table. Give the user one initial orientation, then
 present the following fictional task cards without coaching. Record elapsed seconds,
 selected route/scope, wrong selections, help requests, prompt intent, expected output
 and stopping point. Unknown results stay unknown; do not fill them from inspection.
@@ -128,3 +130,32 @@ preserve those findings and define a narrower, unrun retest. The original task
 inputs, outputs, and receipts remain unchanged. No new model request is authorized
 by preparing the repair. Human chooser results remain unscored; Codex, Antigravity,
 other surfaces, and other machines retain their separate gates.
+
+## November 2 next bounded observation
+
+The public chooser is now published. Operator browser checks of search, scope and
+copy feedback remain separate from participant results. No card is scored here.
+
+Give one short orientation and one coached practice, both outside the score.
+Prepare cards 3 and 10 as the next two-card block, at most five minutes total.
+Retain each original card ID and the presentation order. This block is partial
+coverage of the original ten cards; it does not replace the remaining eight or
+change the nine-of-ten, 60-second median, safe-scope and later-rediscovery targets.
+
+Cards 1 and 4 were previously discussed and explained in this workstream. Mark
+that prior exposure when they are used again. Record other exposure as reported
+or unknown. Keep coached practice, repeated/primed choices and uncoached choices
+separate. Do not erase the earlier unscored replies or claim first-use success
+from a remembered answer. If the intended uncoached threshold cannot be assessed,
+leave that result unavailable rather than changing the threshold.
+
+For every card, record route, action, copied prompt, expected output, stopping
+point, elapsed seconds, help and confusion. No model session is needed. At five
+minutes, retain partial results and pause; a timeout is not a wrong choice unless
+the scoring contract actually defines it that way. Do not send the copied request
+to an assistant as part of this exercise.
+
+The [current qualification audit](audits/release-qualification-2026-11-02.md)
+binds the baseline and the next client-preparation limits. The original October 29
+and November 2 model results and the existing narrow preparation remain unchanged.
+This turn authorizes preparation, not a replacement model session.

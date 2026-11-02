@@ -1,0 +1,525 @@
+{
+  "status": "release_not_qualified",
+  "observed_on": "2026-11-02",
+  "audited_main": "a7eee41817625efbd8527db17ed562edddd9f441",
+  "baseline_ci": {
+    "conclusion": "success",
+    "url": "https://github.com/JovaniPink/measured-skills/actions/runs/41532669339",
+    "tests": 323
+  },
+  "catalog": {
+    "skills": 90,
+    "packs": 4,
+    "implicit": 73,
+    "explicit_only": 17
+  },
+  "identities": {
+    "artifact_source": "474c0bd5bd9084a5dcb938ef98d82181c64469a2",
+    "discovery_source": "cfc952d0735e6e87d5403e2434b776dd65916b74",
+    "discovery_sha256": "70cf6dfc1744b9d45be7533bf49f1fbd5aae648374eb8bb569ae172d3a72ef7b"
+  },
+  "freshness": {
+    "total": 69,
+    "matching": 42,
+    "changed": 27,
+    "unavailable": 0,
+    "stable_changed_observations": 24,
+    "varying_changed_observations": 3,
+    "pins_sha256": "4687ea079c759618c452a5e871c698a2ba29fb21d440d1fa087fcb354d78f709",
+    "policy_and_pins_changed": false,
+    "receipt": "upstream-freshness-release-2026-11-02.json",
+    "queue": [
+      {
+        "source_url": "https://agent-plugins.org/specification",
+        "expected_marker": "etag:\"039ae40592d1ac679e5762817f7863e6\"",
+        "observed_marker": "etag:\"557616557757a93f6f0de43dfac45d3f\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"557616557757a93f6f0de43dfac45d3f\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "author-skill",
+          "review-skill-security"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://agentskills.io/specification",
+        "expected_marker": "content-sha256:38d8b73bed4d668189be0939b14f664bc780615fe8707349992875276f70ec75",
+        "observed_marker": "content-sha256:de3351903c0eaf0e96c4b7be669451f78ec0902fa818bda24f5ab6df428eafe0",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:de3351903c0eaf0e96c4b7be669451f78ec0902fa818bda24f5ab6df428eafe0",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "align-on-decisions",
+          "analyze-incident",
+          "assess-change-impact",
+          "author-skill",
+          "build-spike",
+          "check-launch-readiness",
+          "choose-workflow",
+          "design-module-interface",
+          "diagnose-failure",
+          "edit-technical-writing",
+          "execute-plan",
+          "explain-codebase",
+          "explain-to-stakeholders",
+          "frame-problem",
+          "guide-configuration",
+          "handoff-work",
+          "implement-test-first",
+          "investigate-design-rationale",
+          "learn-after-launch",
+          "map-capability-dependencies",
+          "measure-outcomes",
+          "model-domain-vocabulary",
+          "plan-adoption",
+          "plan-change",
+          "plan-tests",
+          "plan-workshop",
+          "prepare-migration-decision",
+          "publish-change",
+          "record-decisions",
+          "research-sources",
+          "review-data-authority",
+          "review-public-boundary",
+          "review-skill-import",
+          "review-skill-security",
+          "review-value-evidence",
+          "run-project-checks",
+          "run-research-workflow",
+          "synthesize-requirements",
+          "trace-decisions",
+          "track-acceptance",
+          "verify-claims"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://ai.google.dev/gemini-api/docs/agents",
+        "expected_marker": "last-modified:Fri, 09 Oct 2026 22:11:39 GMT",
+        "observed_marker": "content-sha256:678dba6e8a24c6419aa43fe686c5d3917666a2b6c2f0b205ace5edd93f82bb5f",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:154242ad7cf25609ec8168f7df4b344217e0d58b48355cd326ae5cc7c21605f7",
+        "second_matches_first": false,
+        "metadata_affected_skills": [
+          "design-agent-evaluations",
+          "review-agent-security"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Investigate response variation or a stable official representation before content review or pin changes."
+      },
+      {
+        "source_url": "https://ai.google.dev/gemini-api/docs/latest-model",
+        "expected_marker": "last-modified:Tue, 27 Oct 2026 07:23:07 GMT",
+        "observed_marker": "content-sha256:1ca03a8ce9f45cd90de3777c8a0edf047141a752da4165ef108fd6dd282efbb9",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:9b0df8ecab9153515fde39023b551609e0ef5e188c97fcbdc0e9e18abeb4282c",
+        "second_matches_first": false,
+        "metadata_affected_skills": [
+          "design-agent-evaluations",
+          "stack-google-adk"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Investigate response variation or a stable official representation before content review or pin changes."
+      },
+      {
+        "source_url": "https://antigravity.google/docs/skills.md",
+        "expected_marker": "content-sha256:4e8ffce75d759a1760498e5b416acf4afb239009b1177033cba84de839df11f2",
+        "observed_marker": "content-sha256:c9062d3683bfffaa144736ce3330fe96989d412d80b73b5c47f0d48467793dbf",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:c9062d3683bfffaa144736ce3330fe96989d412d80b73b5c47f0d48467793dbf",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "author-skill",
+          "review-skill-security"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "expected_marker": "etag:\"cafae05bd353bd266d6d6a5e9411c67b\"",
+        "observed_marker": "etag:\"5142c16c011e6137bd580b5b012a3852\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"5142c16c011e6137bd580b5b012a3852\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-terraform"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+        "expected_marker": "content-sha256:3a077358aaa7a23464ccaae32d684467d2972491c5889517ae1a72753e9d1e6d",
+        "observed_marker": "content-sha256:79c72a47f0b129a3b5408f37890e455eeb9bafaff523b4b79b8829c8d318d28d",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:79c72a47f0b129a3b5408f37890e455eeb9bafaff523b4b79b8829c8d318d28d",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "review-engineering-prompt"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "expected_marker": "last-modified:Wed, 28 Oct 2026 22:43:06 GMT",
+        "observed_marker": "last-modified:Fri, 30 Oct 2026 17:06:28 GMT",
+        "result": "changed",
+        "second_observed_marker": "last-modified:Fri, 30 Oct 2026 17:06:28 GMT",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "design-agent-memory",
+          "review-agent-security",
+          "stack-google-adk"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+        "expected_marker": "last-modified:Mon, 26 Oct 2026 17:58:28 GMT",
+        "observed_marker": "last-modified:Fri, 30 Oct 2026 12:04:37 GMT",
+        "result": "changed",
+        "second_observed_marker": "last-modified:Fri, 30 Oct 2026 12:04:37 GMT",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-gcp-data"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "expected_marker": "etag:\"46e5a8de7402feb09aa948d21f3cb809\"",
+        "observed_marker": "etag:\"f02b9a77a1ac2f6f085264dff7d1491b\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"f02b9a77a1ac2f6f085264dff7d1491b\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-gcp-data"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://docs.spring.io/spring-boot/",
+        "expected_marker": "last-modified:Thu, 22 Oct 2026 17:08:55 GMT",
+        "observed_marker": "last-modified:Mon, 02 Nov 2026 13:52:42 GMT",
+        "result": "changed",
+        "second_observed_marker": "last-modified:Mon, 02 Nov 2026 13:52:42 GMT",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-java-spring"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+        "expected_marker": "content-sha256:c6ebbcc4b18b138cfc3a394f1441d06f6180998385e3e0c91ab40692758671e7",
+        "observed_marker": "content-sha256:b7b9131c8fbc2776763f4057d7ede203040e0cd6c0fa9f289bea50470af446d7",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:cf1ea7d4934ecfe0fa9389e4c6a8225169cd21e31dee9d8408ac28ea91b8031c",
+        "second_matches_first": false,
+        "metadata_affected_skills": [
+          "review-agent-security"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Investigate response variation or a stable official representation before content review or pin changes."
+      },
+      {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "expected_marker": "last-modified:Mon, 26 Oct 2026 14:52:03 GMT",
+        "observed_marker": "last-modified:Mon, 02 Nov 2026 06:50:38 GMT",
+        "result": "changed",
+        "second_observed_marker": "last-modified:Mon, 02 Nov 2026 06:50:38 GMT",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "resolve-merge-conflicts"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://git-scm.com/docs/git-worktree",
+        "expected_marker": "content-sha256:cf843ea6e3edda3fdda65877063f6c9b8a8e91b54041bc39d0bc89246a6bc72d",
+        "observed_marker": "content-sha256:83844e1cbf89532b6cc8477cd7f01fd606ce953f0de4fd6069dbf825b43dcf4f",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:83844e1cbf89532b6cc8477cd7f01fd606ce953f0de4fd6069dbf825b43dcf4f",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "assess-worktree-isolation",
+          "finish-branch"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+        "expected_marker": "etag:\"OpPNnOT7tbvDxZQ2IF8u6HE8vuY=\"",
+        "observed_marker": "etag:\"WLfSi4h4+0Q74dUwc1F93zwDE8A=\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"WLfSi4h4+0Q74dUwc1F93zwDE8A=\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-csharp-dotnet"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "expected_marker": "content-sha256:5d10abe8bdaf2fedc0399dae6378792dacbec7fdb2184b35dbabc2fd5fbc0af0",
+        "observed_marker": "content-sha256:3c58c5e5c22573a3fae315f7f3733cbe84715cf8b67f4de36cc177ebe4b22e63",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:3c58c5e5c22573a3fae315f7f3733cbe84715cf8b67f4de36cc177ebe4b22e63",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "plan-change"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "expected_marker": "etag:\"1a4ed345edd73053f8b0b31957c3c865-ssl\"",
+        "observed_marker": "etag:\"93d009a70bcbc925991ae6716ab15fc4-ssl\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"93d009a70bcbc925991ae6716ab15fc4-ssl\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "design-observability"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "expected_marker": "content-sha256:539f7e25313f99993351a6a8d9475501f7181185bb542d50079e0f1da05d41db",
+        "observed_marker": "content-sha256:c7174dc74dbcb155365a37d995a22d004c6618c28c8a948ea98cad5c656a4100",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:c7174dc74dbcb155365a37d995a22d004c6618c28c8a948ea98cad5c656a4100",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "review-engineering-prompt"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+        "expected_marker": "content-sha256:2281f518012cc22b46a7158ca74a0f4d16554d57872f55fb4f0cd47463e7cbf6",
+        "observed_marker": "content-sha256:4ee87268dff189a34a57536b7133fd841fee511ef66480ff5021ea593c8e155b",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:4ee87268dff189a34a57536b7133fd841fee511ef66480ff5021ea593c8e155b",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "review-tests"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://slsa.dev/spec/v1.2/provenance",
+        "expected_marker": "etag:\"0ad2785c0fcff93f158ece4f94ffabd9-ssl\"",
+        "observed_marker": "etag:\"50d72b3d48ed57ee7cd5280fadcfda22-ssl\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"50d72b3d48ed57ee7cd5280fadcfda22-ssl\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "review-dependencies"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+        "expected_marker": "etag:\"dd85-6569aa5054e49\"",
+        "observed_marker": "etag:\"11ccb-65f10a0e6ceae\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"11ccb-65f10a0e6ceae\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-gcp-data"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "expected_marker": "normalized-content-sha256:049794fb47b6a389ce7e879647230afa1ebcc3689ab096d22d224f61f8441f0e",
+        "observed_marker": "normalized-content-sha256:0e4b1fb4b32fc67e24b49fa01ead5eb75dd27e28fba4c1755e720390fb5863c7",
+        "result": "changed",
+        "second_observed_marker": "normalized-content-sha256:0e4b1fb4b32fc67e24b49fa01ead5eb75dd27e28fba4c1755e720390fb5863c7",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-salesforce-apex"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "expected_marker": "normalized-content-sha256:6033490e7073a98247d2588b695265358aeb9817ea9a5804c5fdda365593f263",
+        "observed_marker": "normalized-content-sha256:140d1711ed7df516544f77b69535c833832c9105cc5afccfb1f330cb752411ea",
+        "result": "changed",
+        "second_observed_marker": "normalized-content-sha256:140d1711ed7df516544f77b69535c833832c9105cc5afccfb1f330cb752411ea",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-php-drupal"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+        "expected_marker": "content-sha256:2b0fcd555487d48d8c59065b4ba682c9a53760eb64ef8352ea9face07daa2f56",
+        "observed_marker": "content-sha256:2d1dc1e55d284eafc5640894c0843db954e42681e220e319fe1a554ed1834f7a",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:2d1dc1e55d284eafc5640894c0843db954e42681e220e319fe1a554ed1834f7a",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-postgresql-sql"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://www.postgresql.org/docs/current/",
+        "expected_marker": "content-sha256:0780b123ffcbebff512955545634fa77ae6cd59b7ff9940d5dfa866e931dd13e",
+        "observed_marker": "content-sha256:0f01a3f404d4056594755e68dd35244f0e1ee1933d0a11182e8d7e4445603764",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:0f01a3f404d4056594755e68dd35244f0e1ee1933d0a11182e8d7e4445603764",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-postgresql-sql"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://www.swift.org/swift-evolution/",
+        "expected_marker": "content-sha256:0cd8f0cbe35b7c441a6f4ecb299e0ea60507a3b64629a9d0971afef9ab73d57b",
+        "observed_marker": "content-sha256:287902281a6584119d2a65e33ba9ef85ba32d00fc1cc47c7d57c810e0ddbc3c4",
+        "result": "changed",
+        "second_observed_marker": "content-sha256:287902281a6584119d2a65e33ba9ef85ba32d00fc1cc47c7d57c810e0ddbc3c4",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "diagnose-swift-concurrency",
+          "stack-swift-swiftui"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      },
+      {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "expected_marker": "etag:\"6ae284a8-2a652\"",
+        "observed_marker": "etag:\"6ae882b4-2a652\"",
+        "result": "changed",
+        "second_observed_marker": "etag:\"6ae882b4-2a652\"",
+        "second_matches_first": true,
+        "metadata_affected_skills": [
+          "stack-typescript-javascript"
+        ],
+        "semantic_review": "not_completed",
+        "canonical_defect": "not_established",
+        "next_action": "Review authority content and affected contracts before any pin change."
+      }
+    ]
+  },
+  "human_usability": {
+    "status": "prepared_unscored",
+    "original_cards": 10,
+    "targets_changed": false,
+    "next_block_cards": [
+      3,
+      10
+    ],
+    "previously_primed_cards": [
+      1,
+      4
+    ],
+    "coached_practice": "separate_not_scored"
+  },
+  "client_metadata": {
+    "claude_code": "2.1.316",
+    "codex_cli": "0.161.0",
+    "antigravity_cli": "1.4.7",
+    "mode": "version_help_and_sanitized_auth_only",
+    "effective_trial_isolation_reverified": false,
+    "fresh_matching_billing_controls_reverified": false
+  },
+  "claude_preparation": {
+    "status": "prepared_not_run",
+    "execution_authorized": false,
+    "historical_attempt_preserved": true,
+    "existing_preparation_hashes_verified": 52,
+    "staged_current_generated_files_compared": 31,
+    "staged_current_generated_mismatches": 0,
+    "task_fixture_is_historical": true,
+    "fixture_source": "7cc619503c04cac2f178118830e7b0f82901587c",
+    "fixture_artifact_source": "ac7edf80df91cbbe9a9c572ada6080ba083a2e25",
+    "fixture_discovery_source": "b6986841bb03cd926071f40057ef0c8d9075c5b2",
+    "proposal": {
+      "task_sessions": 1,
+      "same_session_continuations": 1,
+      "minutes_per_request": 10,
+      "replacement_attempts": 0
+    },
+    "new_execution_requires": "New exact-envelope authorization, current matching-account no-paid-fallback controls and effective isolation/reference-access readback."
+  },
+  "other_lanes": {
+    "codex": "No-paid-fallback control remains unverified; no receiving task started.",
+    "antigravity": "Effective isolation remains unverified; native CLI metadata does not qualify the separate prepared IDE trial.",
+    "gemini_ide_preparation": "Retain existing three-case/one-continuation proposal; no new allowance or execution.",
+    "other_surfaces_and_second_mac": "Not qualified by these observations."
+  },
+  "public_discovery": {
+    "studio": "a78390af1cb99018ab5449b91fa22385b5063130",
+    "personal": "6d60fdefac68a5256a2483753d91c83cfe59dd95",
+    "profile": "f1f1c709a965b16c27b046d1baf1328c79b2bcaa",
+    "evidence": "November 2 production/readback receipts; publication is not human or client acceptance."
+  },
+  "excluded_actions": [
+    "model_trial_execution",
+    "billing_changes",
+    "account_switches",
+    "installation",
+    "merge",
+    "tag",
+    "release",
+    "freshness_policy_changes",
+    "source_repinning"
+  ],
+  "support_claims_changed": false
+}
