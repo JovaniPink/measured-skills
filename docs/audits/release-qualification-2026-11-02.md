@@ -1,7 +1,8 @@
 # Current-main release qualification - November 2, 2026
 
 Result: 0.19 is not release-qualified. Repository and publication work are verified;
-source freshness, human usability and receiving-client acceptance remain open.
+human usability and receiving-client acceptance remain open. Source freshness was
+resolved by the [follow-up review](#source-review-follow-up) after this audit.
 This is an owner audit and preparation, not independent grading or model execution.
 
 ## Baseline and completed work
@@ -39,6 +40,20 @@ defects or required rewrites. Compare current authority content and the last
 reviewed body where available; retain missing-history limits. For varying
 responses, first investigate a stable official representation without weakening
 freshness checks. No semantic source review or justified repin is claimed here.
+
+## Source review follow-up
+
+Each of the 27 holds was then reviewed individually in the
+[ledger](source-review-2026-11-02.json). Twenty-five were repinned with their
+existing marker method after every read agreed; none changed canonical text.
+Two ai.google.dev pages now redirect to a script shell without a last-modified
+header, so their official Markdown representation was bound instead, with old
+pins and failed observations retained. The
+[final receipt](source-check-final-2026-11-02.json) shows 69 of 69 matching.
+Ten sources had no retained earlier body, so those were checked against prior
+findings and affected skills only; that is not proof of semantic equivalence.
+The checker, review age and review date did not change. The queue above is kept
+as the original observation.
 
 ## Human observation: make the next step small
 

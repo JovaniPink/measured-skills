@@ -17,7 +17,7 @@ account and publication states are not current-state instructions.
 
 | Boundary | Current result and next action |
 | --- | --- |
-| Source freshness | New read-only check: 42 matching, 27 changed, none unavailable. A second observation found 24 stable changed fingerprints and three varying responses. All 27 remain holds pending individual review. No pin, method or age policy changed. See the [raw receipt](audits/upstream-freshness-release-2026-11-02.json) and [review queue](audits/release-qualification-2026-11-02.json). |
+| Source freshness | The November 2 read-only check found 42 matching and 27 changed. All 27 were then reviewed individually in the [source-review ledger](audits/source-review-2026-11-02.json): 25 were repinned after unchanged marker methods read identically on every observation, and the two ai.google.dev pages were rebound to their official Markdown representation because the HTML address now redirects to a script shell with a varying fallback fingerprint. No canonical instruction defect was found. The [final online receipt](audits/source-check-final-2026-11-02.json) shows 69 of 69 matching. The checker, age policy and review date are unchanged; the original [raw receipt](audits/upstream-freshness-release-2026-11-02.json) and [hold queue](audits/release-qualification-2026-11-02.json) are retained. This is a dated checkpoint, not a permanent pass: repeat it on the frozen candidate. |
 | Human usefulness | The original ten-card exercise is still unscored. Use the [participant sheet](acceptance-0.19-participant.md), with a separate coached practice and two-card next block. Keep prior exposure and help visible; do not turn repeated or coached choices into new uncoached results. Targets remain unchanged. |
 | Claude revised-source behavior | The November 2 task stopped on blocked reference access; no edit or continuation occurred. The corrected preparation's 52 recorded files are unchanged. Its 31 staged skill/reference/license files match current generated files. Native CLI is now 2.1.316; only version/help/authentication class were rechecked. A new task still needs explicit authorization, fresh same-account billing controls and effective isolation/read-access verification. |
 | Other clients | Codex CLI 0.161.0 and Antigravity CLI 1.4.7 were observed through native metadata only. Codex no-paid-fallback and Antigravity effective isolation remain unverified. The separate Gemini IDE preparation is not a CLI result or an execution allowance. |
@@ -32,10 +32,10 @@ Both are ancestors of audited main. Do not replace either with the merge SHA.
 The retained narrow task deliberately uses older frozen evidence; it does not
 silently make that evidence current.
 
-Next: review the 27 source holds, record actual human choices, and obtain the
+Next: record actual human choices, and obtain the
 separate decision for a corrected bounded client task only after its controls
-pass. Freeze the final candidate after justified source changes, then complete
-the applicable release checks. No paid run, billing change or release occurred.
+pass. Freeze the final candidate, repeat the online source check on it, and complete
+the applicable release checks. The Gemini 3.8 Flash trial packet needs an owner re-check because the Google latest-model page now names Gemini 4 Argon. No paid run, billing change or release occurred.
 
 ## Historical November 2 checkpoint before PR 83 merged
 

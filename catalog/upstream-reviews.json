@@ -210,15 +210,15 @@
       "action": "Retain actual-action and diagnostic evidence, exact installed-version discovery, and separate authorization. No runner, permission bypass, authentication, or model request is introduced. Replace the unstable HTML binding with the complete official Markdown response, using existing content-sha256 after declared HTTP decoding. See docs/audits/antigravity-source-resolution-2026-10-26.json; preserve the global review-age date."
     },
     {
-      "url": "https://ai.google.dev/gemini-api/docs/agents",
+      "url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
       "status": "reviewed",
       "ownership_check": "Google AI for Developers is the official authority for Gemini API Managed Agents.",
       "affected_skills": [
         "design-agent-evaluations",
         "review-agent-security"
       ],
-      "finding": "Reviewed 2026-09-30: Managed Agents remain Public Preview. The overview describes a hosted Linux sandbox, unrestricted outbound access by default, credential scopes, human verification, retention, and token/tool billing. Sandbox isolation alone does not bound egress or authority.",
-      "action": "Keep hosted agents outside this client campaign and require separate network, credential, cost, retention, and deletion authority. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-09-30: Managed Agents remain Public Preview. The overview describes a hosted Linux sandbox, unrestricted outbound access by default, credential scopes, human verification, retention, and token/tool billing. Sandbox isolation alone does not bound egress or authority. Re-reviewed 2026-11-02: the HTML address now redirects to an application shell whose fallback fingerprint varies per request. The official Markdown representation is stable, and its preview, egress, credential, human-oversight and deletion statements match this finding.",
+      "action": "Keep hosted agents outside this client campaign and require separate network, credential, cost, retention, and deletion authority. Refresh only this reviewed fingerprint; preserve the older global review-age date. Bind the complete official Markdown bytes with no extraction. Keep the human-facing HTML reference. Preserve the old pin and failed observations in the 2026-11-02 ledger."
     },
     {
       "url": "https://docs.cloud.google.com/data-agent-kit/overview",
@@ -232,15 +232,15 @@
       "action": "Retain exact integration discovery and provider boundaries. An available plugin does not grant database access or deployment authority. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
     },
     {
-      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
       "status": "reviewed",
       "ownership_check": "Google AI for Developers is the official authority for current Gemini model availability and pricing qualifications.",
       "affected_skills": [
         "stack-google-adk",
         "design-agent-evaluations"
       ],
-      "finding": "Reviewed 2026-09-30: The latest-model page documents Gemini 3.8 Flash and time-limited introductory pricing. Model, thinking level, price, and availability remain volatile experiment conditions.",
-      "action": "Keep model selection out of portable instructions and record current execution-envelope facts per run. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-09-30: The latest-model page documents Gemini 3.8 Flash and time-limited introductory pricing. Model, thinking level, price, and availability remain volatile experiment conditions. Re-reviewed 2026-11-02: the official Markdown now names Gemini 4 Argon as the latest model with time-limited introductory pricing and links Gemini 3.8 Flash among earlier releases. Volatility, not any one model, is the retained finding.",
+      "action": "Keep model selection out of portable instructions and record current execution-envelope facts per run. Refresh only this reviewed fingerprint; preserve the older global review-age date. Bind the complete official Markdown bytes with no extraction. Keep the human-facing HTML reference. Do not rewrite frozen trial preparation; its target model needs an owner re-check before any run."
     },
     {
       "url": "https://antigravity.google/docs/sdk/overview.md",
