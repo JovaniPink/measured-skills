@@ -26,9 +26,12 @@ account and publication states are not current-state instructions.
 | Dotfiles companion | #35/#37 remain merged. #39 is still a separate draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, with a failed hosted status. It was not rerun here. Neither a companion PR nor its local checks establish installed-machine behavior. |
 | Formal release | Fresh GitHub readback: no releases; the returned tag list contains only v0.16.0. The 0.18 and 0.19 source records remain distinct. No release, tag or installation is authorized by this audit. |
 
-Current artifact source is `474c0bd5bd9084a5dcb938ef98d82181c64469a2`;
-discovery input is `cfc952d0735e6e87d5403e2434b776dd65916b74`.
-Both are ancestors of audited main. Do not replace either with the merge SHA.
+Generated artifacts are unchanged since artifact source
+`474c0bd5bd9084a5dcb938ef98d82181c64469a2`; discovery input is
+`cfc952d0735e6e87d5403e2434b776dd65916b74`. Both are ancestors of audited main.
+Do not replace either with a merge SHA. On this branch the release manifest was
+rebuilt at source-review commit `173fe8aace86580654d6eb6b286ce13d9c050165`,
+because only the pins and reviews it hashes changed. Its other entries are unchanged.
 The retained narrow task deliberately uses older frozen evidence; it does not
 silently make that evidence current.
 
