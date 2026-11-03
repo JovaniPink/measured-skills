@@ -1,0 +1,43 @@
+# Try the workflow chooser
+
+Prepared exercise, not a recorded result. No model calls or installation.
+Use the [public chooser](https://measuredstudios.com/skills), or the matching local
+guide from the reviewed source. You do not need to remember a skill name.
+
+## Orientation and practice - not scored
+
+1. Choose the task that describes the work you want help with.
+2. Read the action's finish line. Assessment, local repair and publication have
+   different permissions. Selecting a card executes nothing.
+3. Keep Ordinary request selected unless you are deliberately checking a verified
+   installed entry. Copying a prompt does not prove that a skill loaded.
+4. Read the copied request to check its output and stopping point. Do not send it
+   to an assistant during this exercise.
+
+Practice with a different, unscored task: you have a supplied SQL execution plan
+and want an explanation without running a query. The facilitator may demonstrate
+finding that route and reading its boundary. Ask questions during this practice.
+Do not count its time or answer in the ten-card result.
+
+## Next block - at most five minutes
+
+Use the chooser without having the facilitator pick the route. Report confusion
+instead of guessing what the exercise expects. A suitable answer can have more
+than one route; the requested work and its limits matter.
+
+**Card 3:** CI is red and the cause is unknown.
+
+**Card 10:** Explain the save path before changing it.
+
+For each card, record:
+
+- Route and action you chose.
+- Copied request, without replacing placeholders with private task information.
+- What you expect to receive and where the assistant must stop.
+- Approximate selection time in seconds, or unknown.
+- Any help, prior exposure, wrong turn or confusing wording.
+
+Stop after these two cards or five minutes. There is no need to finish all ten in
+one sitting. The facilitator retains the original ten-card protocol and records
+partial coverage. A remembered or coached answer is kept separate from an
+uncoached observation. No result or benefit is inferred from this prepared sheet.

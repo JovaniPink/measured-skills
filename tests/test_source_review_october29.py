@@ -10,6 +10,8 @@ from typing import Any
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+# The reviewed October 29 closeout; later reviews are bound by their own ledgers.
+CLOSEOUT_REVISION = '514f113695ca79ee0c95d056fb255499f9361941'
 
 
 class SourceReviewTests(unittest.TestCase):
@@ -19,7 +21,11 @@ class SourceReviewTests(unittest.TestCase):
             'git', 'show', self.ledger['reviewed_revision'] + ':catalog/upstream-pins.json'], cwd=ROOT)
         self.assertEqual(hashlib.sha256(raw).hexdigest(), self.ledger['pins_before_sha256'])
         self.before = json.loads(raw)
-        self.current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        subprocess.check_call(['git', 'merge-base', '--is-ancestor', CLOSEOUT_REVISION, 'HEAD'], cwd=ROOT)
+        closeout = subprocess.check_output([
+            'git', 'show', CLOSEOUT_REVISION + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.assertEqual(hashlib.sha256(closeout).hexdigest(), self.ledger['pins_after_sha256'])
+        self.current = json.loads(closeout)
 
     def assert_transition(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
         expected = {r['source_url']: r for r in self.before['sources']}
@@ -58,8 +64,6 @@ class SourceReviewTests(unittest.TestCase):
 
     def test_reviewed_transitions_preserve_other_sources_and_policy(self) -> None:
         self.assert_transition(self.ledger, self.current)
-        self.assertEqual(self.ledger['pins_after_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
 
     def test_unreviewed_changes_and_weakened_bindings_fail(self) -> None:
         for mutation in ('unreviewed', 'review_age', 'method', 'url', 'missing', 'disagreement'):

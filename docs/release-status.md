@@ -1,6 +1,50 @@
 # Merged work and remaining release gates
 
-## Current checkpoint: November 2, 2026
+## Current checkpoint: November 2, 2026, after the priority merge train
+
+Audited main: `a7eee41817625efbd8527db17ed562edddd9f441`.
+PR #83 is merged at `bcf157aa8d2f0c2b0874f5e6c643bfdf9fa995c9`;
+maintenance #76 and #74 are merged with their reviewed heads preserved.
+[Current-main validation](https://github.com/JovaniPink/measured-skills/actions/runs/41532669339)
+passes, including 323 regression tests. This is repository evidence, not a
+release or receiving-client acceptance. The catalog remains 90 skills in four
+packs: 73 implicit and 17 explicit-only.
+
+The [current qualification audit](audits/release-qualification-2026-11-02.md)
+records exact source identities, source holds and the next preparation. The
+historical sections below retain their original observations. Their old draft,
+account and publication states are not current-state instructions.
+
+| Boundary | Current result and next action |
+| --- | --- |
+| Source freshness | The November 2 read-only check found 42 matching and 27 changed. All 27 were then reviewed individually in the [source-review ledger](audits/source-review-2026-11-02.json): 25 were repinned after unchanged marker methods read identically on every observation, and the two ai.google.dev pages were rebound to their official Markdown representation because the HTML address now redirects to a script shell with a varying fallback fingerprint. No canonical instruction defect was found. The [final online receipt](audits/source-check-final-2026-11-02.json) shows 69 of 69 matching. A [fresh owner review](audits/source-review-followup-2026-11-02.md) confirms all 27 decisions, narrows unsupported wording, and repairs manifest delivery without rewriting history. A later delivery check found two new hosting-only changes. Both were reviewed and repinned in the [addendum](audits/source-review-addendum-2026-11-02.json); see its [closeout receipt](audits/source-check-closeout-2026-11-02.json) for the latest result. The checker, age policy and review date are unchanged; the original [raw receipt](audits/upstream-freshness-release-2026-11-02.json) and [hold queue](audits/release-qualification-2026-11-02.json) are retained. This is a dated checkpoint, not a permanent pass: repeat it on the frozen candidate. |
+| Human usefulness | The original ten-card exercise is still unscored. Use the [participant sheet](acceptance-0.19-participant.md), with a separate coached practice and two-card next block. Keep prior exposure and help visible; do not turn repeated or coached choices into new uncoached results. Targets remain unchanged. |
+| Claude revised-source behavior | The November 2 task stopped on blocked reference access; no edit or continuation occurred. The corrected preparation's 52 recorded files are unchanged. Its 31 staged skill/reference/license files match current generated files. Native CLI is now 2.1.316; only version/help/authentication class were rechecked. A new task still needs explicit authorization, fresh same-account billing controls and effective isolation/read-access verification. |
+| Other clients | Codex CLI 0.161.0 and Antigravity CLI 1.4.7 were observed through native metadata only. Codex no-paid-fallback and Antigravity effective isolation remain unverified. The separate Gemini IDE preparation is not a CLI result or an execution allowance. |
+| Installation and supported claims | No current-source install/upgrade/downgrade/uninstall/reinstall or full behavioral acceptance was added. Each claimed CLI, app, web surface and second Mac needs its own applicable evidence. This audit narrows no support requirement and grants no waiver. |
+| Public discovery | Studio #140/#141/#142, personal #162/#164/#165, and profile #13 are merged and published. November 2 readbacks verify Studio `a78390af`, personal `6d60fdef` and profile `f1f1c709`. The chooser and articles are available; publication does not score human usefulness or qualify a client. |
+| Dotfiles companion | #35/#37 remain merged. #39 is still a separate draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, with a failed hosted status. It was not rerun here. Neither a companion PR nor its local checks establish installed-machine behavior. |
+| Formal release | Fresh GitHub readback: no releases; the returned tag list contains only v0.16.0. The 0.18 and 0.19 source records remain distinct. No release, tag or installation is authorized by this audit. |
+
+Generated artifacts are unchanged since artifact source
+`474c0bd5bd9084a5dcb938ef98d82181c64469a2`; discovery input is
+`cfc952d0735e6e87d5403e2434b776dd65916b74`. Both are ancestors of audited main.
+Do not replace either with a merge SHA. The source-review manifest first bound
+`173fe8aace86580654d6eb6b286ce13d9c050165`, with only the pins and reviews
+hashes changed. Its commit also edited documentation. The follow-up restores the
+required clean-source, manifest-only delivery sequence with ordinary commits.
+Read the current binding from [the manifest](../releases/0.19.0/manifest.json);
+the prior commits remain ancestors. The follow-up changes only two later pins
+and the manifest source binding; generated package and discovery hashes remain unchanged.
+The retained narrow task deliberately uses older frozen evidence; it does not
+silently make that evidence current.
+
+Next: record actual human choices, and obtain the
+separate decision for a corrected bounded client task only after its controls
+pass. Freeze the final candidate, repeat the online source check on it, and complete
+the applicable release checks. Preserve the Gemini 3.8 Flash packet. A newer latest-model page does not prove its model unavailable on the selected IDE; verify that exact host and model before any separately authorized run, without automatic substitution. No paid run, billing change or release occurred.
+
+## Historical November 2 checkpoint before PR 83 merged
 
 Remote main is `3bbc88ce08bb5d686338f9185a742b752a31507f`: [PR 82](https://github.com/JovaniPink/measured-skills/pull/82)
 merged October 30 with both parents preserved. Its reviewed head
@@ -64,7 +108,7 @@ has 0.19 metadata, generators and renamed skills. Do not run current generators
 and label their output 0.18. Follow the [release process](release-process.md)
 and [migration guidance](migration-0.19.md), preserving ancestry.
 
-## Remaining gates and concrete next work
+## Historical October 29 remaining gates and next work
 
 | Gate | Retained evidence | Next action and boundary |
 | --- | --- | --- |
@@ -80,7 +124,7 @@ and [migration guidance](migration-0.19.md), preserving ancestry.
 | Public discovery | Studio #141 and personal #164 are open drafts as of October 29 | Complete existing website approval and deployment gates separately. Local guide use does not require website publication |
 | Release | No GitHub Release at this observation; prior tag inspection dated October 28 | Select an exact version and qualified revision, satisfy its applicable gates, and obtain the separate release decision. Merge alone is insufficient |
 
-## Merge checkpoint and next sequence
+## Historical October 29 merge checkpoint and next sequence
 
 PR #80 merged October 29 at 23:13:55 UTC with parents `4a35cde` and
 `9784379`. Exact-head validation passed; all review threads were inspected and

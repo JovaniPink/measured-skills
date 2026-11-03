@@ -11,7 +11,28 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 323 regression tests.
+Current test suite: 329 regression tests.
+
+## November 2 source-review follow-up
+
+The first fresh owner review passed all 327 tests in 304.309 seconds on Python
+3.14.7, plus strict typing, lint, workflow, generated-output, deterministic and
+public-boundary checks. All 90 archives matched two fresh builds and tracked
+artifacts. These results preceded two additional source changes at delivery.
+
+The failed 67-matching/two-changed online receipt is retained. Individual review
+found only a Next.js deployment attribute and an OpenTelemetry hosting script.
+Two agreeing observations support each same-method repin; the later online
+closeout passes all 69. The original 27-source checkpoint remains checked at its
+own committed revision. Two additional tests bind live pins and reject unreviewed
+changes, changed URLs or methods, age-policy changes and disagreeing observations.
+All six focused November 2 transition tests pass. Final full-suite and exact-head
+hosted results belong to the submitted revision and are reported in PR 84.
+
+The [review follow-up](audits/source-review-followup-2026-11-02.md) also corrects
+evidence attribution and the manifest delivery sequence. Accepted historical
+evidence, all 436 retained private trial/preparation files, canonical skills and
+generated packages remain unchanged. No receiving-model evaluation was run.
 
 ## November 2 prepared-trial correspondence repair
 
