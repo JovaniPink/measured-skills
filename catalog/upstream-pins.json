@@ -242,12 +242,12 @@
     {
       "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
       "marker_kind": "content-sha256",
-      "marker_value": "f2e72180185ae38031ad54fede9ed19e930801b823e81e4635c5ef787d450e0a"
+      "marker_value": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a"
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
       "marker_kind": "etag",
-      "marker_value": "\"93d009a70bcbc925991ae6716ab15fc4-ssl\""
+      "marker_value": "\"66f7da0a3f93825b8089229a6e91b20e-ssl\""
     },
     {
       "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",

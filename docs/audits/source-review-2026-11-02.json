@@ -38,8 +38,8 @@
       "historical_body_sha256": null,
       "comparison_basis": "none-retained",
       "comparison_limit": "No earlier body was retained; current content was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
-      "change_class": "representation",
-      "finding": "Agent Plugins specification still declares version 1.0.0, requires plugin.json at the plugin root, bounds component paths, and keeps MCP content optional. Only the entity tag changed; no retained earlier body, so equivalence is not proven.",
+      "change_class": "current-content-review",
+      "finding": "Agent Plugins specification currently declares version 1.0.0, requires plugin.json at the plugin root, bounds component paths, and keeps MCP content optional. The entity tag differs from the old pin. No earlier body was retained, so the content delta and semantic equivalence are not established.",
       "affected_skills": [
         "author-skill",
         "review-skill-security"
@@ -270,7 +270,7 @@
         "skills/design-agent-evaluations/SKILL.md",
         "skills/stack-google-adk/SKILL.md"
       ],
-      "instruction_consequence": "Skills carry no model names. The prepared Gemini 3.8 Flash trial packet is a frozen owner decision and is not rewritten; its target-model premise needs an owner re-check before any run.",
+      "instruction_consequence": "Skills carry no model names. Preserve the frozen Gemini 3.8 Flash trial packet. Before any authorized run, verify that the selected IDE supports its exact model and controls; a newer latest-model page neither proves Flash unavailable nor authorizes a model substitution.",
       "decision": "rebind-official-markdown",
       "after_pin": {
         "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
@@ -1191,7 +1191,7 @@
       "comparison_basis": "none-retained",
       "comparison_limit": "No earlier body was retained; current content was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
       "change_class": "current-content-review",
-      "finding": "Official EXPLAIN page still states ANALYZE executes the statement, side effects occur, and a ROLLBACK example is not universal recovery. No retained earlier body.",
+      "finding": "The official EXPLAIN page states that ANALYZE executes the statement and its side effects, and provides a BEGIN/ROLLBACK example. It does not establish recovery for external or nontransactional effects. No retained earlier body.",
       "affected_skills": [
         "stack-postgresql-sql"
       ],
@@ -1373,6 +1373,6 @@
   "limits": [
     "This review does not certify future stability; Mintlify, Google, OWASP and Trailhead pages churn independently of authority content.",
     "Two sources changed binding method after individual review; the old pins and failed observations are retained in the initial report and this ledger.",
-    "Gemini 4 Argon appearing as the latest model is an owner-decision input for the unrun Gemini 3.8 Flash trial packet; that frozen packet was not edited."
+    "Gemini 4 Argon appearing as the latest model does not establish Gemini 3.8 Flash availability in Antigravity IDE. Preserve the unrun frozen packet and verify its actual host and model before any separately authorized run; do not substitute a newer model automatically."
   ]
 }

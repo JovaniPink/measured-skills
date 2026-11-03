@@ -1,0 +1,97 @@
+{
+  "reviewed_on": "2026-11-02",
+  "reviewed_revision": "6096f117dbffd86ed605bb9e0cef1f6def7612c1",
+  "initial_report": "docs/audits/source-check-intermediate-2026-11-02.json",
+  "initial_report_sha256": "8ac08356c4831a2c7b9df279e60325003a81bcff7a68eba3cea1a5252c13686f",
+  "pins_before_sha256": "5e91d6df7ff7e12246551bfa95f647ae687ae9692eb80b64739f94bbe64ca691",
+  "pins_after_sha256": "1672b054c55c8d3467e2d8ae40931602d379f22644811747b05858d21b3b7952",
+  "scope": "Two later hosting-only changes observed after the original 27-source review. Preserve the failed intermediate receipt, the original closeout, source URLs, marker kinds, unchanged pins, checker, global review date and maximum age. No canonical change or model evaluation.",
+  "records": [
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "before_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "f2e72180185ae38031ad54fede9ed19e930801b823e81e4635c5ef787d450e0a"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-02T23:56:49.007794+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "marker_kind": "content-sha256",
+          "marker_value": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a",
+          "raw_sha256": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a",
+          "body_bytes": 1869252
+        },
+        {
+          "observed_at": "2026-11-02T23:56:49.586084+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "marker_kind": "content-sha256",
+          "marker_value": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a",
+          "raw_sha256": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a",
+          "body_bytes": 1869252
+        }
+      ],
+      "historical_body_sha256": "f2e72180185ae38031ad54fede9ed19e930801b823e81e4635c5ef787d450e0a",
+      "comparison_basis": "retained-body-from-initial-fresh-review",
+      "finding": "Only the HTML data-dpl-id deployment attribute changed; the complete bodies are identical after substituting that attribute for comparison.",
+      "instruction_consequence": "No canonical change. The comparison is an audit aid, not a new fingerprint normalization.",
+      "affected_skills": [
+        "plan-change"
+      ],
+      "reviewed_local_files": [
+        "skills/plan-change/SKILL.md"
+      ],
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a"
+      }
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "before_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"93d009a70bcbc925991ae6716ab15fc4-ssl\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-02T23:56:50.007965+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "marker_kind": "etag",
+          "marker_value": "\"66f7da0a3f93825b8089229a6e91b20e-ssl\"",
+          "raw_sha256": "54072a9f064b386788ea1918312f2502b2274dd73fd8fc9e19f4272df9a85f64",
+          "body_bytes": 405262
+        },
+        {
+          "observed_at": "2026-11-02T23:56:50.347808+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "marker_kind": "etag",
+          "marker_value": "\"66f7da0a3f93825b8089229a6e91b20e-ssl\"",
+          "raw_sha256": "54072a9f064b386788ea1918312f2502b2274dd73fd8fc9e19f4272df9a85f64",
+          "body_bytes": 405262
+        }
+      ],
+      "historical_body_sha256": "2b8bb62c7e1ecdd2de8c4bea973d0db02aa71a8dd7f02e8d993f735bdc72b510",
+      "comparison_basis": "retained-body-from-initial-fresh-review",
+      "finding": "Only the Netlify RUM hosting script changed; the complete bodies are identical after replacing that one script for comparison. Signal guidance is unchanged.",
+      "instruction_consequence": "No canonical change. The comparison is an audit aid, not a new fingerprint normalization.",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "reviewed_local_files": [
+        "skills/design-observability/SKILL.md"
+      ],
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"66f7da0a3f93825b8089229a6e91b20e-ssl\""
+      }
+    }
+  ],
+  "final_report": "docs/audits/source-check-closeout-2026-11-02.json",
+  "final_report_sha256": "8ee6cfccb5ed903d8a7667a3132861187a05ff93d5a73526dfe66b27b94586a7"
+}

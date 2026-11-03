@@ -13,7 +13,8 @@ passes all 323 tests. #83 and maintenance #76/#74 are merged. The 90-skill,
 four-pack catalog keeps 73 implicit and 17 explicit-only classifications.
 Artifact source `474c0bd5bd9084a5dcb938ef98d82181c64469a2` and discovery input
 `cfc952d0735e6e87d5403e2434b776dd65916b74` remain separate ancestors.
-No package, canonical skill, manifest or source pin changes in this increment.
+That initial audit changed no package, canonical skill, manifest or source pin.
+The source-review follow-up below records later pin and manifest changes.
 
 The November 2 publication train is complete: Studio `a78390af`, personal site
 `6d60fdef` and profile `f1f1c709` have verified public readbacks and main checks.
@@ -21,7 +22,7 @@ Those receipts establish availability of the chooser and current guidance. They
 do not demonstrate user success, installed-client behavior or financial benefit.
 Formal release readback remains empty; the returned tag list contains v0.16.0.
 
-## Freshness holds
+## Initial freshness holds (retained checkpoint)
 
 The [unchanged checker receipt](upstream-freshness-release-2026-11-02.json)
 contains 42 matching sources, 27 changed and none unavailable. The earlier November
@@ -31,8 +32,8 @@ observations.
 
 A second observation of only the 27 holds found 24 stable changed fingerprints.
 Google AI agents, Google AI latest-model, and the OWASP page endpoint varied
-between reads. None returned to its pin. All 27 remain holds. Variation is not
-permission to normalize more content or accept a new fingerprint.
+between reads. None returned to its pin. At this checkpoint all 27 remained
+holds. Variation is not permission to normalize more content or accept a new fingerprint.
 
 The [machine-readable queue](release-qualification-2026-11-02.json) links each
 hold to metadata-listed skills. It maps 62 skills for inspection, not 62 confirmed
@@ -53,7 +54,11 @@ pins and failed observations retained. The
 Ten sources had no retained earlier body, so those were checked against prior
 findings and affected skills only; that is not proof of semantic equivalence.
 The checker, review age and review date did not change. The queue above is kept
-as the original observation.
+as the original observation. The [fresh follow-up](source-review-followup-2026-11-02.md)
+checks each decision again and records the manifest-delivery correction. A later
+67-matching/two-changed check led to two additional hosting-only reviews in the
+[addendum](source-review-addendum-2026-11-02.json). Its
+[closeout receipt](source-check-closeout-2026-11-02.json) is the latest source result.
 
 ## Human observation: make the next step small
 

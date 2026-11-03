@@ -12,6 +12,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = 'docs/audits/source-review-2026-11-02.json'
 OCTOBER29_AFTER_PINS = '4687ea079c759618c452a5e871c698a2ba29fb21d440d1fa087fcb354d78f709'
+INITIAL_CLOSEOUT_REVISION = '173fe8aace86580654d6eb6b286ce13d9c050165'
 
 
 def git(*args: str) -> bytes:
@@ -24,7 +25,10 @@ class SourceReviewNovemberTests(unittest.TestCase):
         raw = git('show', self.ledger['reviewed_revision'] + ':catalog/upstream-pins.json')
         self.assertEqual(hashlib.sha256(raw).hexdigest(), self.ledger['pins_before_sha256'])
         self.before = json.loads(raw)
-        self.current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        # This checkpoint binds the original 27 decisions. The addendum tests bind live pins.
+        git('merge-base', '--is-ancestor', INITIAL_CLOSEOUT_REVISION, 'HEAD')
+        self.closeout_bytes = git('show', INITIAL_CLOSEOUT_REVISION + ':catalog/upstream-pins.json')
+        self.current = json.loads(self.closeout_bytes)
 
     def assert_transition(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
         expected = {r['source_url']: r for r in self.before['sources']}
@@ -79,7 +83,7 @@ class SourceReviewNovemberTests(unittest.TestCase):
     def test_reviewed_transitions_preserve_other_sources_and_policy(self) -> None:
         self.assert_transition(self.ledger, self.current)
         self.assertEqual(self.ledger['pins_after_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+                         hashlib.sha256(self.closeout_bytes).hexdigest())
 
     def test_ancestry_and_freshness_checker_are_preserved(self) -> None:
         self.assertEqual(OCTOBER29_AFTER_PINS, self.ledger['pins_before_sha256'])
