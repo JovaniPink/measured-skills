@@ -85,6 +85,13 @@ class PromptWordingTests(unittest.TestCase):
             with self.subTest(route=route, mode=mode, client=client):
                 self.assertEqual(expected, sentences(after))
 
+    def test_every_request_is_single_spaced_sentences(self) -> None:
+        # The site displays requests sentence by sentence and copies the original string,
+        # so the two must be identical.
+        for route, mode, client, prompt in prompts(registry()):
+            with self.subTest(route=route, mode=mode, client=client):
+                self.assertEqual(prompt, ' '.join(sentences(prompt)))
+
     def test_example_result_carries_no_hedge_prefix(self) -> None:
         for route in registry()['routes']:
             with self.subTest(route=route['id']):
