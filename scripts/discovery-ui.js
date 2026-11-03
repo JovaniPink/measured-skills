@@ -67,9 +67,9 @@ if (typeof document !== "undefined") (() => {
     status.textContent = "";
     style.disabled = !["codex", "claude"].includes(client.value);
     if (style.disabled) style.value = "ordinary";
-    invocationHelp.textContent = style.value === "ordinary"
+    invocationHelp.textContent = (data.client_notes[client.value] || "") + " " + (style.value === "ordinary"
       ? "Copy an ordinary request when the skill is missing or its source is uncertain. This does not claim that a skill loaded. Keep your current constraints when filling in placeholders."
-      : "Select this exact installed entry before sending its native command. A matching name alone does not verify its source or loading.";
+      : "Select this exact installed entry before sending its native command. A matching name alone does not verify its source or loading.");
     const term = search.value.toLowerCase().trim();
     const {matching, routes} = searchDiscovery(data, term);
     make("p", `${routes.length} possible ${routes.length === 1 ? "route" : "routes"}. Choose the action scope below; matching words do not grant permission. Search stays on this page.`, result);
