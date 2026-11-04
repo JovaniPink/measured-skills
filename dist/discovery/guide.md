@@ -1562,4 +1562,4 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `f20d09e046def8dc7635c0c54bd339587ddfc516`. File hashes: `catalog.json` alongside this guide.
+Source revision: `8843bd161eaaea1166deee7195b68b37dfc6d921`. File hashes: `catalog.json` alongside this guide.
