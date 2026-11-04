@@ -30,7 +30,7 @@ Before creating an overlay, check whether the product repository already has rep
 
 ## Fictional example
 
-Assume a fictional warehouse service named Northwind Relay. Its public workflow can use `authority-boundary-review` to ask which system owns an order and which systems are projections. Its private overlay may identify `Order Ledger A` as the current authority, name an internal reconciliation report, and state who may ratify a writer change. Those private names and contracts remain in Northwind Relay's repository; the public skill contains none of them.
+Assume a fictional warehouse service named Northwind Relay. Its public workflow can use `review-data-authority` to ask which system owns an order and which systems are projections. Its private overlay may identify `Order Ledger A` as the current authority, name an internal reconciliation report, and state who may ratify a writer change. Those private names and contracts remain in Northwind Relay's repository; the public skill contains none of them.
 
 ## Placement test
 

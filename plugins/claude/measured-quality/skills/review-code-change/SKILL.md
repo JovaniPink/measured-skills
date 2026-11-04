@@ -19,6 +19,11 @@ Read [bounded review](references/bounded-review.md) when repeated review or a
 maintenance loop is requested. The reference defines snapshot identity, round
 limits, and the optional reviewer boundary; this skill remains findings-only.
 
+For "explain this PR and check its scope", read
+[explanation and scope review](references/explain-and-check-scope.md). This optional
+mode inventories facts before assessing necessity; it does not authorize repairs
+or replace ordinary defect review.
+
 ## Routing and evidence
 
 Use this workflow when the requested result is findings about changed code,
@@ -92,7 +97,9 @@ wording explicitly; continuity does not require carrying forward its mistake.
 
 Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
 
-Lead with findings ordered by severity, most severe first. For each finding provide `Severity`, `State`, `Location`, `Failure`, `Evidence`, `Impact`, and `Suggested direction`. Grade `Severity` as `none`, `note`, `warning`, or `error`. Set `State` to `new`, `unchanged`, `updated`, or `absent` against the pinned base revision. `error` means the finding would block the reviewed action; keep reporting findings of every severity. Then report `Questions`, `Validation`, and `Review boundary`. If no actionable finding survives verification, say so and name remaining risks or untested surfaces.
+For the optional explanation-and-scope mode, present the factual inventory first,
+then use the finding fields below for supported scope findings. Otherwise lead
+with findings ordered by severity, most severe first. For each finding provide `Severity`, `State`, `Location`, `Failure`, `Evidence`, `Impact`, and `Suggested direction`. Grade `Severity` as `none`, `note`, `warning`, or `error`. Set `State` to `new`, `unchanged`, `updated`, or `absent` against the pinned base revision. `error` means the finding would block the reviewed action; keep reporting findings of every severity. Then report `Questions`, `Validation`, and `Review boundary`. If no actionable finding survives verification, say so and name remaining risks or untested surfaces.
 
 ## Example
 

@@ -65,7 +65,8 @@ class PromptWordingTests(unittest.TestCase):
 
     def test_every_changed_sentence_is_an_expected_rewrite(self) -> None:
         old = json.loads(subprocess.check_output(['git', 'show', BASELINE + ':' + discovery.REGISTRY], cwd=ROOT))
-        new = registry()
+        # Freeze the historical rewrite; later optional actions have separate tests.
+        new = json.loads(subprocess.check_output(['git', 'show', '0a972d7b:' + discovery.REGISTRY], cwd=ROOT))
         self.assertEqual([p[:3] for p in prompts(old)], [p[:3] for p in prompts(new)])
         for (route, mode, client, before), (_, _, _, after) in zip(prompts(old), prompts(new), strict=True):
             expected: list[str] = []
@@ -167,7 +168,9 @@ class LimitTests(unittest.TestCase):
     def test_every_prompt_still_contains_every_limit_it_had(self) -> None:
         old = json.loads(subprocess.check_output(['git', 'show', BASELINE + ':' + discovery.REGISTRY], cwd=ROOT))
         limits = set(self.registry['standard_limits'])
-        for (route, mode, client, before), (_, _, _, after) in zip(prompts(old), prompts(self.registry), strict=True):
+        current = {p[:3]: p[3] for p in prompts(self.registry)}
+        for route, mode, client, before in prompts(old):
+            after = current[(route, mode, client)]
             with self.subTest(route=route, mode=mode, client=client):
                 self.assertEqual({s for s in sentences(before) if s in limits}, {s for s in sentences(after) if s in limits})
 

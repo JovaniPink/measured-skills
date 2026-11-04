@@ -149,7 +149,10 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             if not isinstance(mode, dict) or not isinstance(mode.get('id'), str) or not isinstance(mode.get('prompts'), dict):
                 errors.append(f'{identity}: invalid mode record')
                 continue
-            if mode.get('id') in mode_ids or mode.get('id') not in {'assess', 'repair', 'maintain', 'prepare'}:
+            allowed_modes = {'assess', 'repair', 'maintain', 'prepare'}
+            if identity == 'review':
+                allowed_modes.add('explain-scope')
+            if mode.get('id') in mode_ids or mode.get('id') not in allowed_modes:
                 errors.append(f'{identity}: invalid or duplicate mode')
             mode_ids.add(mode['id'])
             if set(mode.get('prompts', {})) != clients or not mode.get('scope'):

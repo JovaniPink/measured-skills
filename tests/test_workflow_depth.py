@@ -33,7 +33,7 @@ class WorkflowDepthTests(unittest.TestCase):
     def test_new_references_survive_each_supported_standalone_export(self) -> None:
         names = ['explain-codebase', 'plan-change', 'verify-claims', 'design-module-interface',
                  'stack-postgresql-sql', 'stack-gcp-data', 'stack-swift-swiftui',
-                 'diagnose-failure', 'record-decisions']
+                 'diagnose-failure', 'record-decisions', 'review-code-change']
         for client in ('codex', 'claude', 'antigravity'):
             with tempfile.TemporaryDirectory() as raw:
                 dest = Path(raw).resolve() / 'export with spaces'

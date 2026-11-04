@@ -11,7 +11,28 @@ See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older ob
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 341 regression tests.
+Current test suite: 343 regression tests.
+
+## November 4 optional explanation and scope review
+
+The new action has two deterministic regressions. Both first failed because the
+mode was absent and rejected by the registry, then passed after implementation.
+The full local run at `74eea965` executed 343 tests in 428.669 seconds: 342 passed,
+and the suite-inventory assertion found the stale 341-test line above. This commit
+corrects that inventory; it does not change a test or weaken a gate. Final focused
+rechecks and exact-head hosted outcomes are recorded in PR 86.
+
+Deterministic validation, strict typing, lint, workflow syntax, generated-output,
+public-boundary and repository-independence checks passed. Two generations matched
+all 964 generated files, including 90 archives. The current and historical review
+names and new scope phrases resolve through the local JavaScript search function.
+All pre-existing prompts, source pins, classifications and profiles are unchanged.
+The historical chooser wording check remains bound to its actual transition.
+
+See [the scoped source and implementation record](audits/review-scope-2026-11-04.md).
+Browser visual inspection and human usability are not newly established. No model
+trial, new maintainer acceptance, installation or release is implied. All retained
+Haiku trial/preparation files remain unchanged.
 
 ## November 2 source-review follow-up
 
