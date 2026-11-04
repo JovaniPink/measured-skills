@@ -121,3 +121,16 @@ For questions about model usage, background work or delegated permissions, read
 [client usage and permissions](client-usage-and-permissions.md). Session counts,
 token estimates and account billing prove different things; a reviewer role does
 not create its own permission boundary.
+
+## Explain a PR before judging its scope
+
+Choose **Review a change**, then **Explain this PR and check its scope**. Supply
+the repository or PR and what you wanted, including known constraints. The
+assistant first explains the changed behavior and operational surface, then
+compares material additions with requirement evidence and smaller alternatives.
+Missing rationale is a question, not proof that deletion is safe. This action
+does not edit, run tests, launch reviewers or publish.
+
+See the [review contract](../skills/review-code-change/references/explain-and-check-scope.md)
+for a synthetic example and the distinction between scope and defect findings.
+The existing **Review without editing** action remains available for defect review.

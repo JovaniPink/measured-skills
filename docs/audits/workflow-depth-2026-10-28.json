@@ -129,6 +129,16 @@
       "before_sha256": null,
       "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
       "after_sha256": "36d541f914582b554649817b3ab91a8144c0ef08ec3a03222c8f2cd4df292a57"
+    },
+    "skills/review-code-change/SKILL.md": {
+      "before_sha256": "2b74249c46f7d6ceb52c32dddf554697fab550edae481c23e5c34673aace03d8",
+      "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance.",
+      "after_sha256": "a0080c45cd3df2fd8ae92398989561110d807fca4b4ea332d417649314f6448b"
+    },
+    "skills/review-code-change/references/explain-and-check-scope.md": {
+      "before_sha256": null,
+      "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance.",
+      "after_sha256": "72f7c58bf6082e7996d132e8f3cef333dfe9d82093e81f9d85a939f956d88b34"
     }
   }
 }
