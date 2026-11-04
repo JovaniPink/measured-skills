@@ -119,6 +119,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
     if not isinstance(client_records, dict) or set(client_records) != {'codex', 'claude', 'antigravity', 'chatgpt', 'claude-web'}:
         return errors + ['workflow clients are missing or invalid']
     clients = set(client_records)
+    request_sentences: set[str] = set()
     for row in routes:
         if not isinstance(row, dict):
             errors.append('invalid workflow record')
@@ -143,6 +144,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             errors.append(f'{identity}: missing action scope')
             continue
         mode_ids: set[str] = set()
+        used_tokens: set[str] = set()
         for mode in modes:
             if not isinstance(mode, dict) or not isinstance(mode.get('id'), str) or not isinstance(mode.get('prompts'), dict):
                 errors.append(f'{identity}: invalid mode record')
@@ -158,10 +160,10 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             for prompt in mode.get('prompts', {}).values():
                 if not isinstance(prompt, str) or '[REPOSITORY]' not in prompt or not prompt.isascii():
                     errors.append(f'{identity}: invalid portable prompt')
-        used = {token for mode in modes if isinstance(mode, dict) and isinstance(mode.get('prompts'), dict)
-                for prompt in mode['prompts'].values() if isinstance(prompt, str)
-                for token in re.findall(r'\[([^\]]+)\]', prompt)}
-        errors += input_errors(identity, row.get('inputs'), used)
+                if isinstance(prompt, str):
+                    used_tokens.update(re.findall(r'\[([^\]]+)\]', prompt))
+                    request_sentences.update(sentences(prompt))
+        errors += input_errors(identity, row.get('inputs'), used_tokens)
     if data.get('default_route') not in ids:
         errors.append('default workflow is missing')
     labels = data.get('clients', {})
@@ -175,9 +177,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             not isinstance(v, str) or not v.endswith('.') or not v.isascii() for v in limits):
         errors.append('standard limits must be unique whole sentences')
     else:
-        present = {part for row in routes if isinstance(row, dict) for mode in row.get('modes', []) if isinstance(mode, dict)
-                   for prompt in (mode.get('prompts') or {}).values() if isinstance(prompt, str) for part in sentences(prompt)}
-        errors += [f'standard limit is not used by any request: {v[:40]}' for v in limits if v not in present]
+        errors += [f'standard limit is not used by any request: {v[:40]}' for v in limits if v not in request_sentences]
     stacks = data.get('stack_options', {})
     if not isinstance(stacks, dict) or any(not isinstance(v, dict) for v in stacks.values()):
         return errors + ['invalid stack options']

@@ -128,6 +128,20 @@ class InputTests(unittest.TestCase):
                 self.assertTrue(discovery.registry_errors(data, known))
 
 
+    def test_registry_reports_malformed_actions_with_standing_limits(self) -> None:
+        known = {s['skill'] for s in json.loads((ROOT / 'catalog/skills.json').read_text())['skills']}
+        for field, value, message in (
+            ('modes', None, 'missing action scope'),
+            ('prompts', ['invalid'], 'invalid mode record'),
+        ):
+            with self.subTest(field=field):
+                data = registry()
+                route = data['routes'][0]
+                record = route if field == 'modes' else route['modes'][0]
+                record[field] = value
+                self.assertIn(f"{route['id']}: {message}", discovery.registry_errors(data, known))
+
+
 class LimitTests(unittest.TestCase):
     def setUp(self) -> None:
         self.registry = registry()
