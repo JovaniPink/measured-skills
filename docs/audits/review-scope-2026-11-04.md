@@ -64,3 +64,11 @@ Before delivery, run the local repository gates and regenerate discovery,
 distributions and archives. Preserve the source/artifact commit followed by a
 manifest-only commit. Record exact test outcomes in the draft PR; do not infer
 client behavior, human usability or release readiness from local checks.
+
+## Draft review follow-up
+
+The chooser now asks for the intended outcome, known constraints, and approved
+scope. The copied request and the bundled reference use the requested comparison.
+A PR review uses its base and head. A working-tree review binds the relevant
+local changes. A pasted diff supports a review of its supplied snapshot, with
+missing context recorded as a limit on the findings.

@@ -6,11 +6,15 @@ mode changes the order and focus of the report, not permissions or approval gate
 
 ## Establish the packet
 
-Pin the repository, exact base and head, intended outcome, exclusions, known
-constraints and approved plans. Include relevant staged, working-tree and
-untracked content using the snapshot rules in the skill. Distinguish missing
-context from an absent requirement. A fresh reviewer still needs the approved
-product context; do not deliberately withhold it to simulate independence.
+Use the comparison the user requested. For a PR, pin its repository, base and head.
+When the scope includes the working tree, bind relevant staged, unstaged and
+untracked content using the snapshot rules in the skill. A pasted diff supports
+review of the supplied snapshot. Record any missing revision, caller or contract
+context and limit conclusions to the evidence available.
+
+Collect the intended outcome, exclusions, known constraints and approved plans.
+Distinguish missing context from an absent requirement. Give a fresh reviewer
+the same approved product context.
 
 Perform one read-only pass. Do not edit, run tests or builds, install anything,
 launch reviewers, post comments, approve, push or merge. Continue to account for

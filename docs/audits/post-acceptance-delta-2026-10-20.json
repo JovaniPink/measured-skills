@@ -137,7 +137,7 @@
     },
     "catalog/workflows.json": {
       "before_sha256": null,
-      "after_sha256": "22e4bbf2623b12fb815d1603299481051e72efb7076276ca30f3273d51d983dd",
+      "after_sha256": "5ea0e46454ad58dc2cdd2b25c240d08fd63d317c19f4ccda95b6504ef8598a2a",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run."
     },
     "dist/claude-ai/SHA256SUMS": {
@@ -12467,7 +12467,7 @@
     },
     "docs/audits/workflow-depth-2026-10-28.json": {
       "before_sha256": null,
-      "after_sha256": "4d1b5e1f6cf29332b0a2202df49e935d2946727513a0eab3b865c37452d96e3b",
+      "after_sha256": "510d60e5b3c293a402d7b7961d43a3cb2057cab5b526bb421d23d3527f8e3b9a",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 original client usage and permission documentation: repair local sandbox/provider/MCP inheritance wording against matching primary bytes, name background memory generation, separate public guidance from private observations, and preserve unknown accounting and instrumentation authority. No imported patch, pin change, installed setting, model trial or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run."
     },
     "docs/workflow-depth-0.19.md": {
@@ -12903,7 +12903,7 @@
     "docs/audits/review-scope-2026-11-04.md": {
       "before_sha256": null,
       "expression_and_license_review": " November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "540c33ffc51667def1d2806b163133cf220ac487276d8e4db90433a0198364d5"
+      "after_sha256": "67a507bd0191919df02216c28eb2eba1925995bd3371159272e8f882a0d322cf"
     },
     "docs/private-overlays.md": {
       "before_sha256": "2e2b00e4bda5c3ef9e3252add73fd125ee2aa419733737dc65627173e664462c",
@@ -12913,7 +12913,7 @@
     "skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
       "expression_and_license_review": " November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "72f7c58bf6082e7996d132e8f3cef333dfe9d82093e81f9d85a939f956d88b34"
+      "after_sha256": "ca6c20698a24a045f3d68f48f54dfd42dad51a95a0d69db90dc07eb886e1828e"
     },
     "tests/test_review_scope.py": {
       "before_sha256": null,
