@@ -88,6 +88,25 @@ def obsolete_message(names: list[str], root: Path = ROOT) -> str:
     return 'Obsolete 0.18 identifier; use ' + ', '.join(changed) + '. See docs/migration-0.19.md.' if changed else ''
 
 
+def input_errors(identity: str, fields: object, used: set[str]) -> list[str]:
+    """Each route must describe exactly the placeholders its requests contain."""
+    if not isinstance(fields, list) or not fields:
+        return [f'{identity}: missing input fields']
+    errors: list[str] = []
+    tokens: list[str] = []
+    for field in fields:
+        if not isinstance(field, dict) or any(not isinstance(field.get(k), str) or not field[k].strip() or not field[k].isascii()
+                                              for k in ('token', 'label', 'hint')):
+            errors.append(f'{identity}: invalid input field')
+            continue
+        tokens.append(field['token'])
+    if len(tokens) != len(set(tokens)):
+        errors.append(f'{identity}: duplicate input field')
+    if set(tokens) != used:
+        errors.append(f'{identity}: input fields must match the placeholders used by its requests')
+    return errors
+
+
 def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
     errors: list[str] = []
     if data.get('format_version') != 1 or data.get('catalog_version') != VERSION:
@@ -100,6 +119,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
     if not isinstance(client_records, dict) or set(client_records) != {'codex', 'claude', 'antigravity', 'chatgpt', 'claude-web'}:
         return errors + ['workflow clients are missing or invalid']
     clients = set(client_records)
+    request_sentences: set[str] = set()
     for row in routes:
         if not isinstance(row, dict):
             errors.append('invalid workflow record')
@@ -124,6 +144,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             errors.append(f'{identity}: missing action scope')
             continue
         mode_ids: set[str] = set()
+        used_tokens: set[str] = set()
         for mode in modes:
             if not isinstance(mode, dict) or not isinstance(mode.get('id'), str) or not isinstance(mode.get('prompts'), dict):
                 errors.append(f'{identity}: invalid mode record')
@@ -139,8 +160,24 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             for prompt in mode.get('prompts', {}).values():
                 if not isinstance(prompt, str) or '[REPOSITORY]' not in prompt or not prompt.isascii():
                     errors.append(f'{identity}: invalid portable prompt')
+                if isinstance(prompt, str):
+                    used_tokens.update(re.findall(r'\[([^\]]+)\]', prompt))
+                    request_sentences.update(sentences(prompt))
+        errors += input_errors(identity, row.get('inputs'), used_tokens)
     if data.get('default_route') not in ids:
         errors.append('default workflow is missing')
+    labels = data.get('clients', {})
+    notes = data.get('client_notes')
+    if any(not isinstance(v, str) or not v.strip() or not v.isascii() for v in labels.values()):
+        errors.append('client labels must be non-blank text')
+    if not isinstance(notes, dict) or set(notes) != clients or any(not isinstance(v, str) or not v.strip() or not v.isascii() for v in notes.values()):
+        errors.append('every client needs a note')
+    limits = data.get('standard_limits')
+    if not isinstance(limits, list) or not limits or len(limits) != len(set(map(str, limits))) or any(
+            not isinstance(v, str) or not v.endswith('.') or not v.isascii() for v in limits):
+        errors.append('standard limits must be unique whole sentences')
+    else:
+        errors += [f'standard limit is not used by any request: {v[:40]}' for v in limits if v not in request_sentences]
     stacks = data.get('stack_options', {})
     if not isinstance(stacks, dict) or any(not isinstance(v, dict) for v in stacks.values()):
         return errors + ['invalid stack options']
@@ -170,6 +207,34 @@ def ordinary_prompt(prompt: str, client: str) -> str:
     if prefix is None:
         return prompt
     return re.sub(r'^' + prefix + r'[a-z0-9-]+:[a-z0-9-]+\s+', '', prompt, count=1)
+
+
+def sentences(text: str) -> list[str]:
+    """Split a request into sentences; every standing limit is one whole sentence."""
+    return [part for part in re.split(r'(?<=\.)\s+', text.strip()) if part]
+
+
+def request_parts(prompt: str, limits: list[str]) -> dict[str, Any]:
+    """Separate the task wording from standing limits for display only.
+
+    The full request remains the copied text. Only exact whole-sentence matches
+    leave the task, so a task-specific limit is never hidden.
+    """
+    task: list[str] = []
+    shown: list[str] = []
+    for part in sentences(prompt):
+        (shown if part in limits else task).append(part)
+    return {'task': ' '.join(task), 'limits': shown}
+
+
+def action_facts(data: dict[str, Any], route: dict[str, Any], mode: dict[str, Any]) -> dict[str, Any]:
+    """Structured facts behind the action sentence; never infer installation."""
+    entry = next(s for s in data['skills'] if s['id'] == (mode.get('command_skill') or route['primary_skill']))
+    core = next(p['skills'] for p in data['profiles'] if p['id'] == 'finish-work-core')
+    identity = f"{entry['pack']}:{entry['id']}"
+    return {'skill': entry['id'], 'pack': entry['pack'], 'invocation': entry['invocation'],
+            'in_core_profile': entry['id'] in core, 'availability': dict(entry['availability']),
+            'command': {'codex': '$' + identity, 'claude': '/' + identity}}
 
 
 def action_guidance(data: dict[str, Any], route: dict[str, Any], mode: dict[str, Any], client: str) -> str:
@@ -224,6 +289,10 @@ def build_data(revision: str, root: Path = ROOT, verify_source: bool = True) -> 
         for mode in route['modes']:
             mode['action_guidance'] = {client: action_guidance(data, route, mode, client) for client in data['clients']}
             mode['ordinary_prompts'] = {client: ordinary_prompt(prompt, client) for client, prompt in mode['prompts'].items()}
+            mode['action'] = action_facts(data, route, mode)
+            mode['request_parts'] = {
+                style: {client: request_parts(text, data['standard_limits']) for client, text in texts.items()}
+                for style, texts in (('native', mode['prompts']), ('ordinary', mode['ordinary_prompts']))}
     return data
 
 
@@ -249,7 +318,7 @@ def markdown(data: dict[str, Any], bundled: bool = False) -> str:
             for client, label in data['clients'].items():
                 if bundled and client != 'antigravity':
                     continue
-                lines += [label, '', mode['action_guidance'][client], '',
+                lines += [f"{label}: {data['client_notes'][client]}", '', mode['action_guidance'][client], '',
                           'Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.', '',
                           '```text', mode['ordinary_prompts'][client], '```', '']
     lines += ['## Catalog and historical names', '', '| Skill | Former name | Invocation |', '| --- | --- | --- |']
