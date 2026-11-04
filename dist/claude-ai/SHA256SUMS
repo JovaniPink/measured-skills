@@ -6,7 +6,7 @@ b0b0b57175941666476cf25a75b6d37d9cee21c5b991d04f9392a7e22e228a43  analyze-incide
 0578bfabb536a7d79c942142f0dec89d555f014301e74c5761d65e0d3e9c6a42  author-skill-0.19.0.zip
 ef034d925727486142f19cafd56e8ef88c4e2e3889abcf8e504a052282976b6c  build-spike-0.19.0.zip
 9b0ee4bfdd0bddbe160cc32cc39fb1c01c7606f2c59e4dc632db086d6d102431  check-launch-readiness-0.19.0.zip
-a05dd1e19bcc2851ed58d9aee6e0d301a8883ebb0fcfdd8e7d0db0080714511f  choose-workflow-0.19.0.zip
+7dffbd29952a7a438a0c72bd775881c7e9ac6b0dec76660596bcdbca4a254b14  choose-workflow-0.19.0.zip
 80caf668d908aef823b598c2540c135dca6eb8f2bc9a9887246487003da6849a  consolidate-findings-0.19.0.zip
 4103e5bd10e25d62460ff995ed2a9311069da8b0e7b78cc3b617c05f42f3e883  coordinate-agents-0.19.0.zip
 130e588c593cf664567995ce2774ec8a6872aa5c264a6b26ec168f70a31a336a  deliver-nextjs-feature-0.19.0.zip
@@ -50,7 +50,7 @@ ae8500ce2c83ece60ed54b4e8030c192e40bfd7a12b625b3c5da35b3229ab75a  review-agent-p
 a70b8cf3e35f86e39e9ebd8a6f0dfa28ea23b03654ea7aa730c13e1fb0d697db  review-agent-tools-0.19.0.zip
 d24fee22e75726c909dbe67ce312ff51d92bc39c1ab4bd671955f3ced80f3ac5  review-api-compatibility-0.19.0.zip
 d7182f17b44298a6aa05d67377ba127dd0e5c034b776497157117cca6327f32b  review-app-security-0.19.0.zip
-26edf173fb9afdf80d05068ca5fd873f65abdd19f21b4e4c2997c8699fe7fb4b  review-code-change-0.19.0.zip
+75af3329c4f223399ecec2ad7b8e590b1caa0c6b88e960b0de4e3bf84fa62abc  review-code-change-0.19.0.zip
 8801d98f5f79b5c979fe1258b8bbdca7c5a00f3bd01c4e063423f92c559770ff  review-context-evidence-0.19.0.zip
 9171dc64fa11f7ea68d0ad35c4610926a2c23745cafe44d2e769e187be67b456  review-data-authority-0.19.0.zip
 6895e1dc3c7731da6987a2d73aed169a95d56a69fac2f23e716128565f96674a  review-data-migration-0.19.0.zip
