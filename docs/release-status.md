@@ -18,7 +18,7 @@ is exploratory. It does not close any acceptance gate below.
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
 | Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
-| Description wording | Reworded in third person on this draft and retested: 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing | The maintainer accepts this wording in review |
+| Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
 | Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates | The maintainer, by reading the account's usage |
 | Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
 | Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
