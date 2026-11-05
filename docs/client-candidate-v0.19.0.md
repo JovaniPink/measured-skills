@@ -24,9 +24,11 @@ and one prompt. It is one model on one synthetic task, not client acceptance.
 
 ## November 5 state
 
-The candidate is frozen at manifest source `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`, with
-chooser source `8f5f32e62e05bcde8c4be0815d3c01211ab84a47`. The maintainer accepted the
-[release decision](audits/release-decision-0.19.0.md) on November 5.
+The candidate is manifest source `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`, with
+chooser source `cb68f3c666366fa030ab43a008a3d520e2f5be3d`. It replaces the earlier freeze, because the
+[skill security review](audits/skill-security-review-2026-11-05.md) changed skill text. The maintainer accepted the
+[release decision](audits/release-decision-0.19.0.md) on November 5, and its
+[amendment](audits/release-decision-0.19.0.md#amendment-on-november-5-2026-safety-fixes) records this change.
 
 | Client or app | Packaging | Behavior | 0.19.0 claim |
 | --- | --- | --- | --- |
@@ -35,7 +37,7 @@ chooser source `8f5f32e62e05bcde8c4be0815d3c01211ab84a47`. The maintainer accept
 | Antigravity CLI | [Passed](audits/lifecycle-0.19.0.md) | Blocked, isolation unproven | Packaging only |
 | Antigravity IDE, desktop and web apps, second Mac | Not checked | Not checked | Unclaimed |
 
-The [0.18 upgrade record](audits/upgrade-0.18-to-0.19.md) adds the upgrade from the untagged candidate, for packaging only.
+The [0.18 upgrade record](audits/upgrade-0.18-to-0.19.md) adds the upgrade from the untagged candidate, for packaging only. It used the earlier freeze.
 
 Unclaimed means not tested, not failed. Packaging covers install, upgrade, downgrade, uninstall,
 and reinstall in throwaway configurations. It does not show that a skill loads in a fresh task.

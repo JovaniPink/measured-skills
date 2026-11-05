@@ -72,6 +72,7 @@ conditions to headings and the final recommendation as well as detailed prose.
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Local source inspection does not authorize authentication, querying a warehouse, a cloud dry run, job submission, backfills, data writes, IAM changes, or deployment. Existing explicit authority controls those actions.
 - Never copy private project IDs, datasets, schemas, credentials, job traces, or customer records into a public example or artifact.
 - This profile does not duplicate a product-specific delivery or approval workflow.

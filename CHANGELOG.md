@@ -10,6 +10,7 @@ All notable changes use this file. The project follows semantic versioning after
 
 - Rename skills around the task, so names now read as actions such as `plan-change` and `verify-claims`.
 - Reduce 11 packs to four: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. The catalog has 90 skills.
+- Add safety rules from a [November 5 security review](docs/audits/skill-security-review-2026-11-05.md): ask before running checks in a repository the user has not said they trust, keep platform checks read-only, edit only on a redaction request, mask secrets in findings, and treat real Terraform backends as provider access.
 - Add a task-first chooser, offline guide, and in-client `choose-workflow` reference built from one versioned registry.
 - Add `finish-work-core`, a nine-skill starting profile, and copyable requests with a stated finish line.
 - Add a read-only scope review, focused operational workflows, and guidance on client usage and delegated permissions.

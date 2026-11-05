@@ -114,3 +114,21 @@ claim or gate.
   stay the same, apart from the two pin files, not that `source_commit` stays the same.
 - The list of text to change when tagging now includes every file that says "preview". The steps
   are in [the release process](../release-process.md#tag-a-release).
+
+## Amendment on November 5, 2026: safety fixes
+
+The maintainer chose to fix the five warnings from
+[the skill security review](skill-security-review-2026-11-05.md) before tagging, knowing this
+ends the freeze. Claims, gates, the drift rule, and the rollback target do not change.
+
+- The freeze at `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe` is over. Only `measured-quality`, `measured-stacks`, 16 Claude.ai ZIPs,
+  and the discovery export changed. `measured-workflows` and `measured-operations` bytes
+  did not.
+- The new candidate is manifest source `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`, with chooser source `cb68f3c666366fa030ab43a008a3d520e2f5be3d`. It is frozen once
+  the safety fix PR merges, under the same rules as above.
+- Lifecycle evidence for the old freeze does not carry over. [The rerun](lifecycle-0.19.0.md)
+  applies to the new candidate.
+- The Claude Code task loads `measured-quality`, so its packet has to be rebound to the new
+  bytes before it runs. It is still unrun.
+- The maintainer's real CLI installs came from the old freeze. Refreshing them is a separate
+  decision.

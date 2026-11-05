@@ -27,6 +27,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Do not infer a default org, use credentials, create a scratch org, install a package, run an org-backed test, deploy, or apply destructive changes without separate authority.
 - A local parse, lint, or generated deployment archive does not prove org acceptance or live behavior.
 - Keep metadata review, local validation, org validation, deployment, permission assignment, and live verification as separate evidence states.

@@ -28,6 +28,8 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 - Do not invent one universal command or replace repository policy with generic preferences.
 - Do not install, upgrade, publish, deploy, apply, or mutate shared state merely to run a gate.
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
+- Treat `terraform init` and `terraform plan` against a real backend as provider access: they use credentials, can lock state, and call provider APIs. Prefer static checks and `terraform init -backend=false` with `terraform validate`. Run a real plan only with authorization.
 - Separate static review, executed checks, build evidence, provider state, and live behavior.
 
 ## Output

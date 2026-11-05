@@ -15,6 +15,11 @@ is exploratory. It does not close any acceptance gate below.
 November 5, sets what a stable tag would claim, which gates block it, and what the
 frozen candidate is. It does not authorize a tag or a Release.
 
+The [November 5 skill security review](audits/skill-security-review-2026-11-05.md) found no
+errors and five warnings. The maintainer chose to fix them before tagging, which replaced
+the earlier freeze. See
+[the amendment](audits/release-decision-0.19.0.md#amendment-on-november-5-2026-safety-fixes).
+
 | Record | Revision |
 | --- | --- |
 | Chooser input in [the export](../dist/discovery/catalog.json) | Read `source_revision` there |
@@ -28,13 +33,14 @@ frozen candidate is. It does not authorize a tag or a Release.
 | Online sources | Reviewed, final check still open. The [November 5 review](audits/source-review-2026-11-05.json) read all 31 changed sources and found no wrong skill instruction, so no skill text changed. The [online check](audits/source-check-final-2026-11-05.json) then matched 69 of 69. No old page text existed, so this reviews current content, not what changed. Two `ai.google.dev` sources now redirect to `aistudio.google.com`, as do the two matching links in `docs/google-agent-surfaces.md`. About an hour later, two sources had drifted again: TypeScript by build asset names only, and the Google agent platform overview, which is not yet reviewed | Recheck on the exact tagged commit |
 | Human chooser usefulness | Open. Ten-card exercise unscored. [Results go here](acceptance-0.19.md#ten-card-results) | A real participant |
 | 0.18 upgrade | [Rehearsed and applied](audits/upgrade-0.18-to-0.19.md) on three CLIs on one Mac. Packaging only. Apps and accounts are not updated | Not applicable |
-| Install lifecycle | Passed on the frozen candidate. [All four packs](audits/lifecycle-0.19.0.md) passed install, upgrade, downgrade, uninstall, and reinstall on Claude Code, Codex, and Antigravity CLIs, in throwaway configurations. This covers packaging only. No fresh task ran | Closed for these three CLIs |
-| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin. The corrected packet is still unrun and must be rebound, because all nine staged `SKILL.md` files changed since `d85c7b59`. Its frozen evidence carries a small identity extract, so the larger current export does not reach it | A separately decided task |
+| Install lifecycle | Passed on the frozen candidate, then [rerun](audits/lifecycle-0.19.0.md) on the safety fix candidate. [All four packs](audits/lifecycle-0.19.0.md) passed install, upgrade, downgrade, uninstall, and reinstall on Claude Code, Codex, and Antigravity CLIs, in throwaway configurations. This covers packaging only. No fresh task ran | Closed for these three CLIs |
+| Claude Code acceptance | Open. The safety fixes changed `measured-quality`, so the task packet needs a new binding. Exploration ran generated packs by directory, not an installed plugin. The corrected packet is still unrun and must be rebound, because all nine staged `SKILL.md` files changed since `d85c7b59`. Its frozen evidence carries a small identity extract, so the larger current export does not reach it | A separately decided task |
 | Codex and Antigravity | Open. No new evidence. Unclaimed for 0.19.0 | The maintainer, after their controls are verified |
 | Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified. Unclaimed for 0.19.0 | The maintainer, by separate authorization |
 | Apps and second Mac | Open. No new observations. Unclaimed for 0.19.0 | The maintainer, on each intended surface |
 | Dotfiles companion | Not a tag gate. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, and no release rule depends on it | The maintainer |
-| Candidate freeze | Set when PR 91 merged. The manifest names `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
+| Skill security review | Closed for this candidate. Five warnings fixed in skill text, no errors. Static review only | Not applicable |
+| Candidate freeze | The freeze at `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe` ended with the safety fixes. The new candidate is frozen when that PR merges. The manifest names `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
 | Native eval suite | Exploratory, not a gate. One `routing-specialist` pass ran on the imperative wording. The other four arms are unrun, and each needs the maintainer's yes | Not applicable |
 | Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
 | Public chooser | Open. This is a website gate, not a tag gate. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |

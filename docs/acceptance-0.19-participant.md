@@ -1,11 +1,11 @@
 # Try the workflow chooser
 
 This exercise observes how you choose a workflow and read its scope. Open the
-[offline chooser from the reviewed artifact](https://github.com/JovaniPink/measured-skills/blob/63156e05a9c7c5f25ed50920cc49b8c49bd00cfe/dist/discovery/index.html).
+[offline chooser from the reviewed artifact](https://github.com/JovaniPink/measured-skills/blob/3df7e438e24d8ae75f17ccb3c3f6671b1cb78018/dist/discovery/index.html).
 Download the HTML and open it in a browser. From a matching checkout on a Mac,
 run `open dist/discovery/index.html` at the repository root.
 
-The chooser should display source `8f5f32e62e05bcde8c4be0815d3c01211ab84a47`.
+The chooser should display source `cb68f3c666366fa030ab43a008a3d520e2f5be3d`.
 Record that value with your responses. If the source differs, open the pinned
 copy before starting the clock. The website can serve a different export.
 

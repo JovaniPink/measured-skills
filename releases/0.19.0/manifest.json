@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "63156e05a9c7c5f25ed50920cc49b8c49bd00cfe",
+  "source_commit": "3df7e438e24d8ae75f17ccb3c3f6671b1cb78018",
   "created_on": "2026-11-05",
   "artifacts": [
     {
@@ -122,7 +122,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/check-launch-readiness-0.19.0.zip",
-      "sha256": "9b0ee4bfdd0bddbe160cc32cc39fb1c01c7606f2c59e4dc632db086d6d102431"
+      "sha256": "552be9773ec1c8f0f9425955b7b50557c2cd9e0b64e2e5dc039990c0ecdb27f8"
     },
     {
       "kind": "zip",
@@ -392,7 +392,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-public-boundary-0.19.0.zip",
-      "sha256": "627ed5fcee9563d415d859c1b794954f3f734a5ea74096fe90fb9130eabdb044"
+      "sha256": "11a68958c56b47d865bf18590aba383ccf3110f7a2510e004c182c97f3c1105a"
     },
     {
       "kind": "zip",
@@ -432,7 +432,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/run-project-checks-0.19.0.zip",
-      "sha256": "df34978444aac03468e467b64da0ed6c2429c72427e6a5ce2a3353fc6a5bdaf2"
+      "sha256": "7c7ab962453ac367e7e21652d2c713f6aea90df3d4f22795a1d38de09f311674"
     },
     {
       "kind": "zip",
@@ -442,67 +442,67 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-adobe-aem-0.19.0.zip",
-      "sha256": "105668faf517ea65a289fe7bf42858ab1bdc38883708c7809cb1020b5e75581c"
+      "sha256": "490cb878f0ccc2109c511a71b8d27c3996711d6ac7cd5480cc1a265bdce0db3c"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-csharp-dotnet-0.19.0.zip",
-      "sha256": "1505ccdbfdcfe0c574c13a98800bf54b252c7b5f9c2dcdf82cb337f739b2211b"
+      "sha256": "9674b557e8bd514a50b9f9db0764e35ed62059bbdcc717fca638eb2cae2a57be"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-gcp-data-0.19.0.zip",
-      "sha256": "d8933c1f3ceaef5f839dc23ed17b34000dc092e4547ae9f7168618bb5ca9bd8b"
+      "sha256": "022173e30c04545c48ca00cab15b8d6e21c00c1991469a037855fd79b5d3a9bf"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-go-0.19.0.zip",
-      "sha256": "6bbe7127fd8dc9f7568ac5491803f9b3b36ae24d38944cb98a56330356a2cd25"
+      "sha256": "1183eef39cb4272b2c3db544166d33ec8cd60c41ec8060ba9295b7f972f37024"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-google-adk-0.19.0.zip",
-      "sha256": "cceaba7cf11b6ef11933f1dc73aab1c741d75722943cd22b18ca89f89abdb83c"
+      "sha256": "67faf27d040a412115b7283928c447be601156c84648138422a97c756829a51b"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-java-spring-0.19.0.zip",
-      "sha256": "06ef0a0a0c733d67c0ccff2906ef3b8f5847279c41624f789b660f5b4b213424"
+      "sha256": "12eb977182778b5709db8b18f486ac532126e0e1ba1ffdff38aaa6369346989e"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-php-drupal-0.19.0.zip",
-      "sha256": "533ba3125055414f3440c3fc89ef9720ebdc5ef286f4e780846316f150de349c"
+      "sha256": "e5520fc61ed21aff2c1019da2daccdc5d5088a9e4e42d03f0d45ba931bc6d601"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-postgresql-sql-0.19.0.zip",
-      "sha256": "b3d1fd99cc1e004d7ede99370a69392073bbc530b06add7571e1721305eb5552"
+      "sha256": "6f6367ce8cc69f7070b57c6f50a93685545093b7e06d68104115ac0f96934fbd"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-python-0.19.0.zip",
-      "sha256": "aca3e6800532a6b0d0493423381b01de014d2f870b2cf16cef8873859225ab58"
+      "sha256": "bddbbe6e34cebd27967c4e931c50ff5578934a0902347b412d25ec7216f95e82"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-salesforce-apex-0.19.0.zip",
-      "sha256": "17a4edd322ce518cbaf504e5d95f0a168d743e2dfbe09d345cafe12d87fa9389"
+      "sha256": "8d1380a2aafdcdb7d5ab6129f8d1c428e63b9275c14e1a7543567f3d7028c96b"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-swift-swiftui-0.19.0.zip",
-      "sha256": "c2206a26cb0acc95322b5c5674da0be7ac5226d8dcd45895ecde95810a214c34"
+      "sha256": "e279527c3fdb4779ecf9b6a96bd0335c641ad1a0ff7753f35d03824583e2cfdf"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-terraform-0.19.0.zip",
-      "sha256": "00448073f3e539694dfe39f61f6dea20a615809cf372b3d7ea748ad621247217"
+      "sha256": "2f20237d884c2616afe5aa117bfd63700262306fd5147ce6c2a69cf0de1f8d8d"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/stack-typescript-javascript-0.19.0.zip",
-      "sha256": "ec3add21999b2b19d227edc0e1c8a8158c2449675f25f84285401804473122b2"
+      "sha256": "cc17d759dd06914bbea25dc6d90a6cd39a0f8ff232bb97fa9bda958501cc6b96"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "4477683b36aec7e7e04a04b1e2c838d7858f79163cde86aa72f07ef089ff4c8f"
+      "sha256": "442705d742ac5d5d8ed559790d859c3542ee63e281172fa43687a8bd6edd281b"
     },
     {
       "kind": "file",
@@ -562,12 +562,12 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "03ea61de3b758a9159867af15b7cd447ef253081e65c7de053394c52bd62c5ae"
+      "sha256": "8f7046b1c5b77d20fa0ed3bf2c26d9683ec2b67505affc8c7fdd7aecca4fe279"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stacks",
-      "sha256": "7df474acca0bdc8d6a921cf81238c03b51b8228de41e4d996b53095840765811"
+      "sha256": "37a68758f8d0e448090b35fce501a02ef84b8a17c871a79c66865c54c62ba2a9"
     },
     {
       "kind": "tree",
@@ -582,12 +582,12 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "229c1bb1e82f514c36c0d915f264ba9c2cb7c95352f7b5885a85891660990302"
+      "sha256": "377ddbb516aa389cbc46abdb679ee2718307933561d84956f0191d0bede9ec55"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-stacks",
-      "sha256": "d0a694ba1d455f12867b2ddb7f04ad06cc86bfb55443c99b58ef2a1a8f58fb00"
+      "sha256": "3a6f5377912c2d5b6b898904b44a1fe9ddda721854c7a452c050161a1e7badcf"
     },
     {
       "kind": "tree",
@@ -602,12 +602,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "fa5dc441b501b4334c754dd83f0848f0fc1f67a3e752d145ef2b4f28220107be"
+      "sha256": "c3cf3160d96376574d91e5249cacae382b7f292b5f753502836e13c4e184a0e0"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-stacks",
-      "sha256": "029e18327db899b3774567e687c17dba8167e0a4f3e3c44609712c0c8ae6fea9"
+      "sha256": "4ebd6f2ad455aec7f0c8022fffd7f2b0a703028b4da8ce60dfb631b1c0b0fe82"
     },
     {
       "kind": "tree",

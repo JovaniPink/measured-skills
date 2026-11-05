@@ -21,13 +21,14 @@ Audit only the surface being launched. Read [surface checks](references/surface-
 2. Locate the repository's release contract, runbooks, required checks, and provider configuration.
 3. Verify functional, data, security, privacy, accessibility, operability, and rollback evidence proportionate to the launch.
 4. Check user-visible claims against actual behavior and maturity. Distinguish prototype, tested, deployed, and publicly available states.
-5. Verify platform-only facts from the platform when access exists. Mark them `UNVERIFIED` otherwise.
+5. Verify platform-only facts from the platform through read-only queries when access exists and the request covers it. Mark them `UNVERIFIED` otherwise.
 6. Classify every item as `PASS`, `FAIL`, `WAIVED`, or `UNVERIFIED`; include evidence and waiver owner.
 7. Issue `READY`, `BLOCKED`, or `CONDITIONALLY READY` with the smallest list of launch blockers.
 
 ## Boundaries
 
 - This skill audits readiness; it does not deploy, change DNS, publish stores, send announcements, or waive failures.
+- Do not submit production forms, sign-ins, payments, or test transactions, or create accounts or data, without explicit authorization. Mark that journey `UNVERIFIED` instead.
 - A successful build does not prove provider configuration or live behavior.
 - A merged change does not prove deployment, traffic, data migration, monitoring, or rollback readiness.
 - Do not require irrelevant checklist items merely because they appear in a generic template.

@@ -25,15 +25,15 @@ Review both content and provenance. Renaming an internal identifier does not mak
    - private repository URLs, absolute local paths, account IDs, project IDs, hostnames, emails, and internal ticket references
    - client names, proprietary schemas, business rules, architecture contracts, incidents, logs, screenshots, and production configuration
    - claims that confuse repository code with testing, deployment, availability, or outcomes
-5. Replace only ordinary incidental identifiers. For proprietary substance, remove it and independently author from public sources or keep it in a private overlay.
-6. Re-run tests and documentation checks after redaction so safety edits do not leave broken artifacts.
+5. Recommend a disposition. Replace only ordinary incidental identifiers. For proprietary substance, remove it and independently author from public sources or keep it in a private overlay. Edit files only when the request asks for redaction.
+6. After an authorized redaction, re-run tests and documentation checks so safety edits do not leave broken artifacts.
 7. Report blockers, safe-to-publish items, and facts requiring owner or counsel confirmation.
 
 ## Output
 
 Lead with the answer. Use the shortest format that retains the required evidence and limits; expand when requested or needed. The items below describe required content, not mandatory headings.
 
-Use `BLOCK`, `REVIEW`, or `CLEAR` per finding, with location, risk, evidence, and disposition. A `CLEAR` verdict means no issue was found in the reviewed scope; it is not a legal opinion or proof that unreviewed history is safe.
+Use `BLOCK`, `REVIEW`, or `CLEAR` per finding, with location, risk, evidence, and disposition. A `CLEAR` verdict means no issue was found in the reviewed scope; it is not a legal opinion or proof that unreviewed history is safe. Never quote a secret in a finding: give its type and location, and mask the value.
 
 ## Example
 

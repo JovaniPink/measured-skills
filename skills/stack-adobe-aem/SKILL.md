@@ -27,6 +27,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Do not copy proprietary project content, read Cloud Manager credentials, start a shared author or publish service, upload a package, activate content, run a pipeline, deploy, or mutate an environment without separate authority.
 - A local Maven build or Dispatcher validation does not prove Cloud Manager acceptance, deployment, caching behavior, or production readiness.
 - Keep source review, local validation, SDK behavior, pipeline validation, deployment, activation, and live delivery as separate evidence states.
