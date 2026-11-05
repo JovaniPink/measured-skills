@@ -136,7 +136,7 @@
         "track-acceptance"
       ],
       "description_characters": 6275,
-      "budget_status": "within-budget",
+      "budget_status": "warning",
       "discovery_estimates": {
         "codex": 9031,
         "claude": 9063

@@ -1,6 +1,6 @@
 ---
 name: verify-claims
-description: "Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct."
+description: "Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct. Load this skill first, before inspecting files, whenever the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -44,8 +44,8 @@ to state that evidence limit.
 - Re-read drift-prone evidence immediately before a conclusion that depends on it.
 - Bind each result to its checked revision and inputs. A result at A does not verify B unless a justified scope comparison establishes that the relevant checked inputs are identical; label that comparison separately from execution at B.
 - Keep `not run`, `not supplied`, `not found in the inspected scope`, and `does not exist` distinct. Missing evidence cannot establish a failing test, absent coverage, or a completed action.
-- Before calling supplied evidence unavailable, inspect its index and relevant paths within the authorized evidence roots, not only the editable workspace. Report unsuccessful reads and unsearched scope; do not expand access to unrelated files or credentials.
-- Separate the checkpoint described by a receipt from the current task. A prior zero-model-request record cannot support that claim for a later model-assisted response. No network-tool use does not prove no client networking or spending. Count task sessions, delegated requests, and evaluation runs separately when known; do not invent API-call counts.
+- Before calling evidence unavailable, check every location the request points to and that you may read, not only the working directory. Report failed reads and what you did not search; do not expand access to unrelated files or credentials.
+- Separate the checkpoint described by a receipt from the current task. A record that an earlier step used no model calls says nothing about the current step. Not using a network tool does not prove the client made no network calls or spent nothing. Count sessions, delegated requests, and evaluation runs separately when known; do not invent call counts.
 - Bind local edits, committed contents, PR scope, and remote state separately. A partial readback supports only the inspected portion; report the rest as unchecked.
 - Similar names do not prove that two resources, branches, or environments are the same. Confirm identity by identifier, URL, or direct inspection.
 - When the user disputes a verdict and current evidence still supports it, state the evidence once and record the disagreement. The verdict changes only with new evidence, while the user's direction still decides the next action.

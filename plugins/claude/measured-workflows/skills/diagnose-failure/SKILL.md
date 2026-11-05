@@ -1,6 +1,6 @@
 ---
 name: diagnose-failure
-description: "Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix."
+description: "Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix. Load this skill first, before inspecting files, whenever the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
