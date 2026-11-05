@@ -1,0 +1,128 @@
+{
+  "format_version": 1,
+  "status": "prepared_not_run",
+  "model": "claude-haiku-5-5",
+  "judge_model": "claude-haiku-5-5",
+  "effort": "medium",
+  "withheld_tools": [
+    "Agent",
+    "Task",
+    "TaskStop"
+  ],
+  "core_profile": "finish-work-core",
+  "behavior": {
+    "route": "finish-work",
+    "mode": "assess",
+    "prompt_surface": "chatgpt",
+    "replacements": {
+      "[REPOSITORY]": "this repository",
+      "[TASK or PR_URL]": "the retry feature"
+    },
+    "short_prompt": "Find out what remains for the retry feature in this repository. Report what is done and what is not, with evidence, and one next step. Inspect only; change nothing and do not run tests.",
+    "forced_skill": "plan-change",
+    "fixture": "fixture/build-half-finished-pr.sh",
+    "bash_grants": [
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git stash list:*)",
+      "Bash(git stash show:*)"
+    ]
+  },
+  "arms": [
+    {
+      "id": "routing-core",
+      "kind": "routing",
+      "purpose": "Retest core activation and precision in the full catalog.",
+      "selection": [
+        "core-positive",
+        "core-near-miss"
+      ],
+      "expected_cases": 63,
+      "runs": 1,
+      "max_turns": 4,
+      "timeout_seconds": 120,
+      "ablation": "none",
+      "concurrency": 5,
+      "environment": {},
+      "estimated_cost_usd": 0.19,
+      "max_cost_usd": 0.5
+    },
+    {
+      "id": "routing-specialist",
+      "kind": "routing",
+      "purpose": "Run the 64 specialist cases, which were not rerun with the added sentence, plus each specialist's first near miss.",
+      "selection": [
+        "specialist-positive",
+        "specialist-near-miss"
+      ],
+      "expected_cases": 128,
+      "runs": 1,
+      "max_turns": 4,
+      "timeout_seconds": 120,
+      "ablation": "none",
+      "concurrency": 5,
+      "environment": {},
+      "estimated_cost_usd": 0.4,
+      "max_cost_usd": 1.0
+    },
+    {
+      "id": "routing-listing-8000",
+      "kind": "routing",
+      "purpose": "Force an 8,000 character skill listing and check whether core or specialist skills are displaced.",
+      "selection": [
+        "core-positive",
+        "specialist-positive"
+      ],
+      "expected_cases": 96,
+      "runs": 1,
+      "max_turns": 4,
+      "timeout_seconds": 120,
+      "ablation": "none",
+      "concurrency": 5,
+      "environment": {
+        "SLASH_COMMAND_TOOL_CHAR_BUDGET": "8000"
+      },
+      "estimated_cost_usd": 0.21,
+      "max_cost_usd": 0.5
+    },
+    {
+      "id": "behavior-plain",
+      "kind": "behavior",
+      "purpose": "Compare both requests with the catalog installed against the native no-plugin baseline.",
+      "selection": [
+        "long",
+        "short"
+      ],
+      "expected_cases": 2,
+      "runs": 10,
+      "max_turns": 18,
+      "timeout_seconds": 280,
+      "ablation": "with-without",
+      "concurrency": 4,
+      "environment": {},
+      "estimated_cost_usd": 0.31,
+      "max_cost_usd": 1.25
+    },
+    {
+      "id": "behavior-forced",
+      "kind": "behavior",
+      "purpose": "Load plan-change with its slash command and record per run whether the body arrived.",
+      "selection": [
+        "long-forced",
+        "short-forced"
+      ],
+      "expected_cases": 2,
+      "runs": 10,
+      "max_turns": 18,
+      "timeout_seconds": 280,
+      "ablation": "none",
+      "concurrency": 4,
+      "environment": {},
+      "estimated_cost_usd": 0.15,
+      "max_cost_usd": 0.75
+    }
+  ]
+}
