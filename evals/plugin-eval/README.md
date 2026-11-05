@@ -142,12 +142,15 @@ it. Raw traces are not kept here.
 | Near misses that fired any skill | 12 of 64 |
 | Runs that hit the 4-turn limit | 48 of 128 |
 
-**This run does not measure the added sentence.** It has no baseline from this
-suite, and the sentence sits only on the nine core skills. The November 5 result of
-17 of 64 is not comparable. In that run 41 of these 64 prompts first used another
-tool, mostly `Bash`, which this arm does not offer. That is the likely cause of
-much of the gap, but no run has tested it. An export from a checkout without the
-sentence would give the missing baseline.
+**This run does not measure the added sentence, and the rise in specialist
+activation is unexplained.** The sentence sits only on the nine core skills, and
+this run has no baseline from this suite. The November 5 result of 17 of 64 is not
+comparable, because that harness offered `Bash` and this arm does not. That
+difference alone cannot explain the rise: a retest on the November 5 harness, with
+`Bash` offered and a third-person wording of the sentence, also reached 32 of 64 on
+the same prompts. The cause is unknown, and it may be drift between runs. An export
+from a checkout without the sentence would give a baseline, but one pass cannot
+separate an effect from drift.
 
 ## Offline check
 

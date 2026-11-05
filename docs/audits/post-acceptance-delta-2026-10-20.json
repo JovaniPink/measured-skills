@@ -12938,7 +12938,7 @@
     "evals/plugin-eval/README.md": {
       "before_sha256": null,
       "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "f7b2d88a05b8507d159cd2bce6c74ebdf633112e949b3147d13abf347b137e34"
+      "after_sha256": "111cbc4f854dae60152ef764d7612c4421b75cabed74917e3433aa831bdc4cc1"
     },
     "evals/plugin-eval/arms.json": {
       "before_sha256": null,
