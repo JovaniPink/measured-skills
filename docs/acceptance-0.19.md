@@ -13,7 +13,7 @@ and stopping point. Unknown results stay unknown; do not fill them from inspecti
 | 1 | Recover a half-finished draft and list what remains | Finish / assess |
 | 2 | Repair the agreed retry bug locally without pushing | Finish / repair |
 | 3 | CI is red and the cause is unknown | Diagnose |
-| 4 | Evaluate a reviewer's disputed claim before editing | Review or finish / assess |
+| 4 | Evaluate a reviewer's disputed claim before editing | Resolve review conflict, or review, or finish / assess |
 | 5 | Plan a new filter that must preserve existing sorting | Plan |
 | 6 | Check whether a request accidentally permits deployment | Prompt review |
 | 7 | Design an optional interactive explanation | Motion |
@@ -25,6 +25,41 @@ Targets: at least nine suitable routes and prompts without coaching; median
 selection time at most 60 seconds after orientation; zero misleading authorization;
 and successful rediscovery from a bookmark in a later session. If selection is
 still hard, simplify words and navigation before adding more capabilities.
+
+For the later session, the bookmark is the pinned GitHub page the participant sheet
+links to, not the website, which can serve a different export. The participant
+reopens it and finds card 3 again without help.
+
+The `resolve-review-conflict` route was added after this table was first written.
+Card 4 accepts it because it matches the task. The target did not change.
+
+## Ten-card results
+
+Nothing is recorded yet. Leave a cell as `unknown` when it was not observed. Add one
+table per participant, and record the chooser source they saw.
+
+Participant: not yet run. Chooser source: not yet recorded. Prior exposure: cards 1
+and 4 count as exposed if the maintainer takes part.
+
+| Card | Seconds | Route and action | Scope read correctly | Wrong selections | Help | Expected output | Stop point | Copied request kept | Suitable | Misleading authorization |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | not run | | | | | | | | | |
+| 2 | not run | | | | | | | | | |
+| 3 | not run | | | | | | | | | |
+| 4 | not run | | | | | | | | | |
+| 5 | not run | | | | | | | | | |
+| 6 | not run | | | | | | | | | |
+| 7 | not run | | | | | | | | | |
+| 8 | not run | | | | | | | | | |
+| 9 | not run | | | | | | | | | |
+| 10 | not run | | | | | | | | | |
+
+| Target | Result |
+| --- | --- |
+| At least nine suitable without coaching | not run |
+| Median selection at most 60 seconds | not run |
+| Zero misleading authorization | not run |
+| Rediscovery from the bookmark in a later session | not run |
 
 ## Later real-work trial: separate authorization required
 

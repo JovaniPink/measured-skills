@@ -3,7 +3,9 @@
 Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
 
 
-See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
+See the [0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
+
+Older sections call some `blocked` rows terminal. That word is historical. Under the current [release process](release-process.md), a new row is terminal only when it can be `pass`, `fail`, or genuinely `not_supported`.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the account and CLI checks it records. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 

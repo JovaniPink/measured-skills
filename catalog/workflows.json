@@ -1,8 +1,8 @@
 {
   "format_version": 1,
   "catalog_version": "0.19.0",
-  "status": "preview_not_released",
-  "available_version": "0.18.0 candidate; acceptance remains separate",
+  "status": "see_release_status",
+  "available_version": "0.19.0",
   "clients": {
     "codex": "Codex",
     "claude": "Claude Code",

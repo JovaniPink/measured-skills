@@ -46,3 +46,28 @@ Stop after these two cards or five minutes. There is no need to finish all ten i
 one sitting. The facilitator retains the original ten-card protocol and records
 partial coverage. A remembered or coached answer is kept separate from an
 uncoached observation. No result or benefit is inferred from this prepared sheet.
+
+## Remaining cards
+
+Use these when you continue, in this order, and record the same details.
+
+**Card 1:** Recover a half-finished draft and list what remains.
+
+**Card 2:** Repair the agreed retry bug locally without pushing.
+
+**Card 4:** Evaluate a reviewer's disputed claim before editing.
+
+**Card 5:** Plan a new filter that must preserve existing sorting.
+
+**Card 6:** Check whether a request accidentally permits deployment.
+
+**Card 7:** Design an optional interactive explanation.
+
+**Card 8:** Compare an old plan with today's implementation.
+
+**Card 9:** Update an existing draft and follow its checks.
+
+## Later session
+
+Bookmark the chooser page linked at the top of this sheet. In a later session, open
+that bookmark and find Card 3 again without help.

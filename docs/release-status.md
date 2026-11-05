@@ -1,43 +1,48 @@
 # Merged work and remaining release gates
 
-## Release candidate work on November 5
+## Current state on November 5
 
-This section describes draft work that builds on the PR 86 checkpoint below. It is
-not merged, tagged, or released. The 0.19.0 preview still has 90 skills in four
+The November 5 work is merged. `main` is `4640b1cea8ebeb6ab864de8f64ad9f748bdf5dfe`, and
+[validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42059438926)
+passed. Nothing is tagged or released. The 0.19.0 preview still has 90 skills in four
 packs: 73 implicit and 17 explicit-only.
 
-The draft tunes the nine core descriptions and the assess prompt from a
+The merged work tunes the nine core descriptions and the assess prompt from a
 [one-model Haiku exploration and retest](audits/haiku-exploration-2026-11-05.md). That record
 is exploratory. It does not close any acceptance gate below.
 
+[The release decision](audits/release-decision-0.19.0.md) proposes what a stable tag
+would claim, which gates block it, and what the frozen candidate is. It takes effect
+only when the maintainer accepts it.
+
 | Record | Revision |
 | --- | --- |
-| Chooser input in [the export](../dist/discovery/catalog.json) | `e7750b2f1d8c8605817a34d8c89411a0861c6604` |
-| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `f6fd73e1f2b4b96c7ced6bf96630bff81843f414` |
+| Chooser input in [the export](../dist/discovery/catalog.json) | Read `source_revision` there |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | Read `source_commit` there |
 
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
-| Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
+| Repository checks | Passed on merged `main` (linked above). Each later head needs its own run | Hosted CI on the exact head |
 | Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
-| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates | The maintainer, by reading the account's usage |
-| Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
-| Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
-| Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded | The maintainer, on each claimed client |
-| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin | A separately decided task |
-| Codex and Antigravity | Open. No new evidence | The maintainer, after their controls are verified |
-| Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified | The maintainer, by separate authorization |
-| Apps and second Mac | Open. No new observations | The maintainer, on each intended surface |
-| Dotfiles companion | Open. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0` | The maintainer |
-| Candidate freeze | Open. The online check and acceptance gates must end on one exact revision | The maintainer |
+| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates. A later usage readback showed extra usage off, but the maintainer has not confirmed it in Settings | The maintainer, by reading the account's usage |
+| Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change before the freeze, then recheck on the frozen candidate |
+| Human chooser usefulness | Open. Ten-card exercise unscored. [Results go here](acceptance-0.19.md#ten-card-results) | A real participant |
+| Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded. [Results go here](audits/lifecycle-0.19.0.md) | The maintainer, on each claimed client |
+| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin. The prepared packet must be rebuilt: 11 skill files changed since `d85c7b59` and the discovery export is now about 909 KB, past the 256 KB client read limit seen on November 2 | A separately decided task |
+| Codex and Antigravity | Open. No new evidence. Proposed as unclaimed for 0.19.0 | The maintainer, after their controls are verified |
+| Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified. Proposed as unclaimed for 0.19.0 | The maintainer, by separate authorization |
+| Apps and second Mac | Open. No new observations. Proposed as unclaimed for 0.19.0 | The maintainer, on each intended surface |
+| Dotfiles companion | Proposed as not a tag gate. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, and no release rule depends on it | The maintainer |
+| Candidate freeze | Open. Defined in [the release decision](audits/release-decision-0.19.0.md#freeze) | The maintainer |
 | Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
-| Public chooser | Open. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
+| Public chooser | Open, and proposed as a website gate, not a tag gate. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
 | Release | Open. No tag or published Release | The maintainer's separate decision |
 
 Do not describe this work as a stable release or a benchmark result. Supported
 public wording: the copied requests are usable today without installing anything,
 and skills are an optional preview with published limits.
 
-## Current checkpoint after PR 86
+## Historical November 4 checkpoint after PR 86
 
 Reviewed main at `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` after the November 4,
 2026 merge of [PR #86](https://github.com/JovaniPink/measured-skills/pull/86).
