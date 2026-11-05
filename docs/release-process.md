@@ -21,6 +21,8 @@ does not authorize tagging or turn its old client observations into new acceptan
 8. Open and review a release PR. Merge, tagging, public-directory submission, and publication remain separately authorized.
 9. When tagging is authorized, use `vX.Y.Z` only after the manifest and exact merged commit agree.
 
+"Agree" means `python3 scripts/validate.py` passes on the commit being tagged, hosted CI passed on that same commit, and the tag equals `v` plus the catalog version. Tag pushes do not run CI, so read the result first. A release can also define a freeze, narrower claims, and a rollback target in its own decision record. See [the 0.19.0 decision](audits/release-decision-0.19.0.md).
+
 ## Rollback
 
 Reinstall the last accepted tag, verify its release manifest and checksums, then repeat discovery, implicit activation, explicit-only controls, focused-reference loading, and uninstall tests. A repository rollback does not prove already installed clients changed.

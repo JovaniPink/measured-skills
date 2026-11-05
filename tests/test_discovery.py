@@ -17,6 +17,19 @@ import canonical_deltas  # noqa: E402
 
 
 class MigrationTests(unittest.TestCase):
+    def test_generated_text_stays_true_before_and_after_a_tag(self) -> None:
+        # These files ship inside packs or the chooser, so a release state in
+        # them would force a rebuild after acceptance. Status lives in docs.
+        paths = [discovery.EXPORT, discovery.GENERATED_INDEX, 'dist/discovery/guide.md',
+                 'dist/discovery/index.html', 'docs/skill-catalog-reader-guide.md']
+        stale = ('preview_not_released', 'not released', '0.19.0 preview', 'This preview contains',
+                 'not client-qualified', 'not_qualified_for_current_source', '0.18.0 candidate')
+        for path in paths:
+            text = (ROOT / path).read_text()
+            for phrase in stale:
+                with self.subTest(path=path, phrase=phrase):
+                    self.assertNotIn(phrase, text)
+
     def test_sentence_search_keeps_scope_and_name_lookup(self) -> None:
         import shutil
         import subprocess
@@ -250,7 +263,7 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
             with self.subTest(format=label):
                 self.assertFalse('All 0.19 installed-client behavior remains unobserved' in rendered)
                 self.assertIn('docs/client-candidate-v0.19.0.md', rendered)
-                self.assertIn('not client-qualified', rendered)
+                self.assertIn('Client support is recorded by date', rendered)
 
     def test_action_availability_tracks_client_and_scope(self) -> None:
         data = json.loads((ROOT / discovery.EXPORT).read_text())
@@ -261,10 +274,10 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
                 with self.subTest(mode=mode['id'], client=client):
                     text = discovery.action_guidance(data, route, mode, client)
                     self.assertIn(':' + expected[mode['id']] + '.', text)
-                    self.assertIn('Current source is not client-qualified', text)
+                    self.assertIn('Client support is recorded by date', text)
                     self.assertIn('docs/client-candidate-v0.19.0.md', text)
                     skill = next(s for s in data['skills'] if s['id'] == expected[mode['id']])
-                    self.assertEqual('not_qualified_for_current_source', skill['client_evidence'])
+                    self.assertEqual('see_evidence_reference', skill['client_evidence'])
                     if mode['id'] != 'assess':
                         self.assertIn('Outside finish-work-core', text)
                         self.assertIn('Invocation policy: explicit', text)

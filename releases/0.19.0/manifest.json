@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "f6fd73e1f2b4b96c7ced6bf96630bff81843f414",
+  "source_commit": "63156e05a9c7c5f25ed50920cc49b8c49bd00cfe",
   "created_on": "2026-11-05",
   "artifacts": [
     {
@@ -72,17 +72,17 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "1672b054c55c8d3467e2d8ae40931602d379f22644811747b05858d21b3b7952"
+      "sha256": "a54a7c8f5fdf752a148da6aec61e7b51e09b3771bde8c96554c80f6a1107b9fc"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "fb2c0b66a24e072c952dd036f33f8631e43b7a8bf106b962ce65615ddade5e24"
+      "sha256": "99dc5873912e6a07c9145b278a794a23839613e5a4731bb3083a2d67108e3dcf"
     },
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "722d3d957efc005561aaf28490866cb6e505b93e6293f19f61e9c68e95b6d09a"
+      "sha256": "946282e5b97873c1815133bd4ccf4f8dcb6150ced6d089930f8b4191444761c8"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "0e09ce25b3a119906044b37488eff9d5d80fbc2b1602e8accc2f00efcc947e9e"
+      "sha256": "71245ed9a2a4025771bb306b12aafd00a083867bc202b17a4180e1fed0e76189"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "2bfa6ce53ba5ac219a7283ba071ddf8a4a1225d4bb7bb48ccc1bb351d4bd4bab"
+      "sha256": "4477683b36aec7e7e04a04b1e2c838d7858f79163cde86aa72f07ef089ff4c8f"
     },
     {
       "kind": "file",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "02b1042e99f4fb26ca06977fd8f15909c6671366fab5eda6e5f5b033fc9bb058"
+      "sha256": "87edac39df5b9064e3dbe14f4ba2a1c3f584453401836d7a98cec4594f938b7b"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "0a1c2c535bf9443a472926c80f8408f7dce4a0080f6ae577d32b0d933af354e1"
+      "sha256": "8d94d7564d612fc6ab142c7c00559f70b9fa2cf428decf2acf06d4db9b98d396"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "b8a9a71ea90b77a87bd38771906814e6619e632f336b0216c8e90319fd5d8553"
+      "sha256": "ca2463c9b998fdf5727e65d5457efdc5949956bb19ee65ace423313c3ebecf32"
     },
     {
       "kind": "file",

@@ -162,7 +162,9 @@ effort. Effort made no clear difference.
   earlier bounded client tasks required.
 - Raw runs and the harness are not in this repository, because evaluation guidance
   keeps raw traces out. They are retained locally by the maintainer, so outside
-  readers cannot rerun this yet.
+  readers cannot rerun this harness. The later
+  [native eval suite](../../evals/plugin-eval/README.md) is a public rerun path for
+  routing, but its results do not compare with these.
 
 Four harness errors were caught and their results excluded: a one-turn limit that
 measured first actions instead of routing, a copy step that produced an empty
@@ -179,4 +181,4 @@ asks authors to test each intended model. The
 [Claude Code skills guide](https://code.claude.com/docs/en/skills) describes the
 listing budget. The [evaluation guide](https://agentskills.io/skill-creation/evaluating-skills)
 recommends comparing runs with and without a skill. `claude plugin eval` now offers
-a native no-plugin baseline. This catalog does not use it yet.
+a native no-plugin baseline. This catalog added a suite for it after this record.

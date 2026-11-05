@@ -2,7 +2,7 @@
 
 Generated from canonical metadata. Start with [the task chooser](start.md).
 
-This preview contains 90 portable agent skills. Packs are distribution units, not recommended activation sets.
+This catalog contains 90 portable agent skills. Packs are distribution units, not recommended activation sets.
 
 ## measured-operations
 

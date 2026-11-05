@@ -1,6 +1,6 @@
 # Find your next workflow
 
-Generated from one shared workflow registry. 0.19.0 preview, not released.
+Generated from one shared workflow registry for catalog version 0.19.0.
 
 Start with **Finish existing work**, then **Find out what remains - no edits** if you need to recover the state. Provide the repository and unfinished task or PR. The assistant discovers the branch and any saved plan. Repair and publication are separate choices.
 
@@ -53,7 +53,7 @@ Native entry when installed: Codex `$measured-workflows:plan-change`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -63,7 +63,7 @@ In [REPOSITORY], find out what remains for [TASK or PR_URL]. Read repository ins
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -73,7 +73,7 @@ In [REPOSITORY], find out what remains for [TASK or PR_URL]. Read repository ins
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -83,7 +83,7 @@ In [REPOSITORY], find out what remains for [TASK or PR_URL]. Read repository ins
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -93,7 +93,7 @@ In [REPOSITORY], find out what remains for [TASK or PR_URL]. Read repository ins
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -109,7 +109,7 @@ Native entry when installed: Codex `$measured-workflows:execute-plan`; Claude Co
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -119,7 +119,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -129,7 +129,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -139,7 +139,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -149,7 +149,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -165,7 +165,7 @@ Native entry when installed: Codex `$measured-workflows:publish-change`; Claude 
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -175,7 +175,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -185,7 +185,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -195,7 +195,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -205,7 +205,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -233,7 +233,7 @@ Native entry when installed: Codex `$measured-workflows:explain-codebase`; Claud
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -243,7 +243,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -253,7 +253,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -263,7 +263,7 @@ Use explain-codebase if the matching skill is available. In [REPOSITORY], inspec
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -273,7 +273,7 @@ Use explain-codebase if the matching skill is available. In [REPOSITORY], inspec
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:explain-codebase. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -301,7 +301,7 @@ Native entry when installed: Codex `$measured-workflows:plan-change`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -311,7 +311,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -321,7 +321,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -331,7 +331,7 @@ Use plan-change if the matching skill is available; otherwise state that it did 
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -341,7 +341,7 @@ Use plan-change if the matching skill is available; otherwise state that it did 
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -369,7 +369,7 @@ Native entry when installed: Codex `$measured-workflows:diagnose-failure`; Claud
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -379,7 +379,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -389,7 +389,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -399,7 +399,7 @@ Use diagnose-failure if the matching skill is available; otherwise state that it
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -409,7 +409,7 @@ Use diagnose-failure if the matching skill is available; otherwise state that it
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -437,7 +437,7 @@ Native entry when installed: Codex `$measured-quality:review-code-change`; Claud
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -447,7 +447,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -457,7 +457,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -467,7 +467,7 @@ Use review-code-change if the matching skill is available; otherwise state that 
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -477,7 +477,7 @@ Use review-code-change if the matching skill is available; otherwise state that 
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -493,7 +493,7 @@ Native entry when installed: Codex `$measured-quality:review-code-change`; Claud
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -503,7 +503,7 @@ In [REPOSITORY], explain [TASK or PR_URL] and check its scope. Read applicable i
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -513,7 +513,7 @@ In [REPOSITORY], explain [TASK or PR_URL] and check its scope. Read applicable i
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -523,7 +523,7 @@ Use review-code-change if the matching skill is available; otherwise state that 
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -533,7 +533,7 @@ Use review-code-change if the matching skill is available; otherwise state that 
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:review-code-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -561,7 +561,7 @@ Native entry when installed: Codex `$measured-quality:verify-claims`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -571,7 +571,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -581,7 +581,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -591,7 +591,7 @@ Use verify-claims if the matching skill is available; otherwise state that it di
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -601,7 +601,7 @@ Use verify-claims if the matching skill is available; otherwise state that it di
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -629,7 +629,7 @@ Native entry when installed: Codex `$measured-workflows:publish-change`; Claude 
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -639,7 +639,7 @@ In [REPOSITORY], inspect repository instructions, the branch, relevant dirty fil
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -649,7 +649,7 @@ In [REPOSITORY], inspect repository instructions, the branch, relevant dirty fil
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -659,7 +659,7 @@ In [REPOSITORY], inspect repository instructions, the branch, relevant dirty fil
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -669,7 +669,7 @@ In [REPOSITORY], inspect repository instructions, the branch, relevant dirty fil
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -685,7 +685,7 @@ Native entry when installed: Codex `$measured-workflows:publish-change`; Claude 
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -695,7 +695,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -705,7 +705,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -715,7 +715,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -725,7 +725,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:publish-change. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -753,7 +753,7 @@ Native entry when installed: Codex `$measured-workflows:review-engineering-promp
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -763,7 +763,7 @@ Review [PROMPT] intended for [CLIENT], using [KNOWN_SCOPE and CONSTRAINTS]. Insp
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -773,7 +773,7 @@ Review [PROMPT] intended for [CLIENT], using [KNOWN_SCOPE and CONSTRAINTS]. Insp
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -783,7 +783,7 @@ Review [PROMPT] intended for [CLIENT], using [KNOWN_SCOPE and CONSTRAINTS]. Insp
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -793,7 +793,7 @@ Review [PROMPT] intended for [CLIENT], using [KNOWN_SCOPE and CONSTRAINTS]. Insp
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:review-engineering-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -821,7 +821,7 @@ Native entry when installed: Codex `$measured-workflows:design-web-motion`; Clau
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -831,7 +831,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -841,7 +841,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant d
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -851,7 +851,7 @@ Use design-web-motion if the matching skill is available; otherwise state that i
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -861,7 +861,7 @@ Use design-web-motion if the matching skill is available; otherwise state that i
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-web-motion. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -889,7 +889,7 @@ Native entry when installed: Codex `$measured-workflows:plan-change`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -899,7 +899,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -909,7 +909,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -919,7 +919,7 @@ Use plan-change if the matching skill is available. In [REPOSITORY], inspect rep
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -929,7 +929,7 @@ Use plan-change if the matching skill is available. In [REPOSITORY], inspect rep
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -957,7 +957,7 @@ Native entry when installed: Codex `$measured-quality:verify-claims`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -967,7 +967,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -977,7 +977,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -987,7 +987,7 @@ Use verify-claims if the matching skill is available. In [REPOSITORY], inspect r
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -997,7 +997,7 @@ Use verify-claims if the matching skill is available. In [REPOSITORY], inspect r
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:verify-claims. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1025,7 +1025,7 @@ Native entry when installed: Codex `$measured-workflows:plan-change`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1035,7 +1035,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1045,7 +1045,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1055,7 +1055,7 @@ Use plan-change if the matching skill is available. In [REPOSITORY], inspect rep
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1065,7 +1065,7 @@ Use plan-change if the matching skill is available. In [REPOSITORY], inspect rep
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:plan-change. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1081,7 +1081,7 @@ Native entry when installed: Codex `$measured-workflows:execute-plan`; Claude Co
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1091,7 +1091,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1101,7 +1101,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1111,7 +1111,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1121,7 +1121,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1149,7 +1149,7 @@ Native entry when installed: Codex `$measured-workflows:design-module-interface`
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1159,7 +1159,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1169,7 +1169,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1179,7 +1179,7 @@ Use design-module-interface if the matching skill is available. In [REPOSITORY],
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1189,7 +1189,7 @@ Use design-module-interface if the matching skill is available. In [REPOSITORY],
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:design-module-interface. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1205,7 +1205,7 @@ Native entry when installed: Codex `$measured-workflows:execute-plan`; Claude Co
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1215,7 +1215,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: packaged. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1225,7 +1225,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: excluded: explicit-only control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1235,7 +1235,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; receiving-surface control unverified. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1245,7 +1245,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:execute-plan. Package for this client: archive prepared; upload held pending invocation control. Invocation policy: explicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1273,7 +1273,7 @@ Native entry when installed: Codex `$measured-quality:diagnose-performance`; Cla
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1283,7 +1283,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1293,7 +1293,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1303,7 +1303,7 @@ Use diagnose-performance if the matching skill is available. In [REPOSITORY], in
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1313,7 +1313,7 @@ Use diagnose-performance if the matching skill is available. In [REPOSITORY], in
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-quality:diagnose-performance. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1341,7 +1341,7 @@ Native entry when installed: Codex `$measured-stacks:stack-gcp-data`; Claude Cod
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1351,7 +1351,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1361,7 +1361,7 @@ In [REPOSITORY], inspect repository instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1371,7 +1371,7 @@ Use stack-gcp-data if the matching skill is available. In [REPOSITORY], inspect 
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1381,7 +1381,7 @@ Use stack-gcp-data if the matching skill is available. In [REPOSITORY], inspect 
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-stacks:stack-gcp-data. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1407,7 +1407,7 @@ Finish line: Inspection and bounded safe local reproductions within the task sco
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1417,7 +1417,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1427,7 +1427,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1437,7 +1437,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1447,7 +1447,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-workflows:diagnose-failure. Package for this client: packaged. Invocation policy: implicit. Included in finish-work-core. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1473,7 +1473,7 @@ Finish line: Read-only comparison and recommendation; no edits, test execution, 
 
 Codex: Codex CLI or desktop. Verify the installed entry before using its native command.
 
-Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1483,7 +1483,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Claude Code: Claude Code. One leading command works across its interfaces.
 
-Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1493,7 +1493,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Antigravity: Antigravity CLI or app. Ordinary requests only; explicit-only skills are excluded.
 
-Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1503,7 +1503,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 ChatGPT: ChatGPT Work or web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1513,7 +1513,7 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Claude (web): Claude on the web. Verify uploaded sources before relying on a skill.
 
-Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Current source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated observations. Sending the request authorizes only its stated scope.
+Action skill: measured-operations:record-decisions. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.
 
 Ordinary request; no skill loading is implied. To invoke a verified installed entry, select it before sending this request.
 
@@ -1616,6 +1616,6 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 | Verify an iOS journey (`verify-ios-journey`) | ios-journey-verification | explicit |
 | Check output against its source (`verify-source-output`) | source-output-conformance-audit | implicit |
 
-Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
+Package availability, invocation policy, and observed behavior are separate. Client support is recorded by date in docs/client-candidate-v0.19.0.md. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `e7750b2f1d8c8605817a34d8c89411a0861c6604`. File hashes: `catalog.json` alongside this guide.
+Source revision: `8f5f32e62e05bcde8c4be0815d3c01211ab84a47`. File hashes: `catalog.json` alongside this guide.

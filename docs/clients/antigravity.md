@@ -105,7 +105,7 @@ Published guidance names several skill folders, and they are not read by the sam
 | `~/.gemini/antigravity-cli/skills/` | CLI and IDE |
 | `~/.gemini/config/plugins/<plugin>/skills/` | skills installed as part of a plugin |
 
-The September 30 combined plugin guide gives `~/.gemini/config/plugins/` for manual global installation and `~/.gemini/antigravity-cli/plugins/` in its CLI filesystem section. The disposable 1.2.9 native package check used the shared configuration path. Record your installer's actual path, enabled state, and file hashes; the two documented locations are not evidence that a second copy should be created.
+The September 30 combined plugin guide gives `~/.gemini/config/plugins/` for manual global installation and `~/.gemini/antigravity-cli/plugins/` in its CLI filesystem section. The disposable 1.2.9 native package check used the shared configuration path. Record your installer's actual path, enabled state, and file hashes; the two documented locations are not evidence that a second copy should be created. The November 5, 2026 plugin guide lists only `~/.gemini/config/plugins/` for the App, CLI, and IDE, and a workspace folder for the App and IDE only.
 
 Keep repository rules in the existing `AGENTS.md` files and `.agents/rules/*.md`. The installed CLI guide says it reads `AGENTS.md` and `GEMINI.md` from the working directory up to the repository root, as well as modular markdown rules under `.agents/rules/`. Verify that loading in a fresh task before relying on it. Avoid a second copy that could drift.
 

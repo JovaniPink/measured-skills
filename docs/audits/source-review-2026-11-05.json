@@ -1,0 +1,1590 @@
+{
+  "reviewed_on": "2026-11-05",
+  "reviewed_revision": "f64991a9d6668f1a0b02de5e8e5666d90ce0e8e0",
+  "initial_report": "docs/audits/upstream-freshness-review-2026-11-05.json",
+  "initial_report_sha256": "effec75cdbb198f62ec757f6ca9a2ff198d60cb8bde63f403c00034053104da9",
+  "pins_before_sha256": "1672b054c55c8d3467e2d8ae40931602d379f22644811747b05858d21b3b7952",
+  "pins_after_sha256": "a54a7c8f5fdf752a148da6aec61e7b51e09b3771bde8c96554c80f6a1107b9fc",
+  "scope": "Individual review of all 31 changed sources found on November 5, 2026. Original summaries only; publisher bodies stay outside the public tree. No canonical instruction defect was established and no skill text changed. One review record was corrected (Spring Boot preview). The freshness checker, source URLs and maximum age are unchanged. One marker method changed: www.typescriptlang.org/docs/ moved from etag to content-sha256 after its servers returned two tags for identical bytes. The global review date moved to 2026-11-05. No model call, installation, billing change or release. Current-content review does not prove what changed, because no earlier body was retained for any of these sources.",
+  "method": "Each source was read twice with the existing checker user agent and content decoding, and a pin moved only when both reads gave the same marker of the same kind. Two review agents read extracted text against the prior finding and the citing skills. The maintainer session spot-checked the Spring, Next.js and Antigravity findings against the page text and rejected one proposed skill edit.",
+  "source_url_changes": 0,
+  "records": [
+    {
+      "source_url": "https://agent-plugins.org/specification",
+      "publisher": "agent-plugins.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://agent-plugins.org/specification",
+        "marker_kind": "etag",
+        "marker_value": "\"557616557757a93f6f0de43dfac45d3f\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:41.033755+00:00",
+          "final_url": "https://agent-plugins.org/specification",
+          "raw_sha256": "73a86146a2ec1e7f68bfe50a80ad476b7e6862f6dd639f2b03ad0e21bfbca9cd",
+          "marker_kind": "etag",
+          "marker_value": "\"41ca9ccdb6744debb6f1f1b1a70146a5\"",
+          "body_bytes": 425591
+        },
+        {
+          "observed_at": "2026-11-05T16:24:41.381478+00:00",
+          "final_url": "https://agent-plugins.org/specification",
+          "raw_sha256": "73a86146a2ec1e7f68bfe50a80ad476b7e6862f6dd639f2b03ad0e21bfbca9cd",
+          "marker_kind": "etag",
+          "marker_value": "\"41ca9ccdb6744debb6f1f1b1a70146a5\"",
+          "body_bytes": 425591
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "Agent Plugins is still version 1.0.0 with Published status; it requires plugin.json at the plugin root with a required $schema field and a closed field set, keeps package paths inside the plugin root, and defines skills and MCP servers as the only portable components, both optional. It states that containment does not sandbox subprocesses, so every prior statement still holds. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "author-skill",
+        "review-skill-security"
+      ],
+      "reviewed_local_files": [
+        "skills/author-skill/SKILL.md",
+        "skills/author-skill/references/client-adapters.md",
+        "skills/review-skill-security/SKILL.md",
+        "skills/review-skill-security/references/review-domains.md",
+        "docs/google-agent-surfaces.md",
+        "plugins/antigravity/measured-operations/plugin.json"
+      ],
+      "instruction_consequence": "Keep separate native projections and the deferred proof package; the generated Antigravity manifests have no $schema field, so they are not Agent Plugins packages, and no skill claims they are.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://agent-plugins.org/specification",
+        "marker_kind": "etag",
+        "marker_value": "\"41ca9ccdb6744debb6f1f1b1a70146a5\""
+      }
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "publisher": "agentskills.io",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "de3351903c0eaf0e96c4b7be669451f78ec0902fa818bda24f5ab6df428eafe0"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:41.755253+00:00",
+          "final_url": "https://agentskills.io/specification",
+          "raw_sha256": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf",
+          "marker_kind": "content-sha256",
+          "marker_value": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf",
+          "body_bytes": 262373
+        },
+        {
+          "observed_at": "2026-11-05T16:24:42.127702+00:00",
+          "final_url": "https://agentskills.io/specification",
+          "raw_sha256": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf",
+          "marker_kind": "content-sha256",
+          "marker_value": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf",
+          "body_bytes": 262373
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The specification still sets name at 1-64 lowercase characters with no leading, trailing or doubled hyphens and a match to the directory, description at 1-1024 characters, compatibility at 1-500, metadata as string values, and allowed-tools as experimental, so all prior statements hold. Embedded page metadata gives a last-modified date of 2026-08-04, which suggests hosting fields moved the hash, but the content delta is unknown because no earlier body was kept. scripts/validate_catalog.py enforces the name, directory and description limits and permits only name, description, license and metadata at the top level; a direct check of all 90 SKILL.md files found no violation, a longest description of 311 characters, and a longest file of 127 lines.",
+      "affected_skills": [
+        "track-acceptance",
+        "align-on-decisions",
+        "review-data-authority",
+        "plan-adoption",
+        "assess-change-impact",
+        "verify-claims",
+        "explain-codebase",
+        "map-capability-dependencies",
+        "run-project-checks",
+        "prepare-migration-decision",
+        "trace-decisions",
+        "record-decisions",
+        "investigate-design-rationale",
+        "model-domain-vocabulary",
+        "guide-configuration",
+        "edit-technical-writing",
+        "plan-change",
+        "learn-after-launch",
+        "measure-outcomes",
+        "design-module-interface",
+        "execute-plan",
+        "author-skill",
+        "check-launch-readiness",
+        "frame-problem",
+        "analyze-incident",
+        "build-spike",
+        "review-public-boundary",
+        "publish-change",
+        "synthesize-requirements",
+        "run-research-workflow",
+        "review-skill-import",
+        "review-skill-security",
+        "research-sources",
+        "explain-to-stakeholders",
+        "diagnose-failure",
+        "handoff-work",
+        "implement-test-first",
+        "plan-tests",
+        "review-value-evidence",
+        "plan-workshop"
+      ],
+      "reviewed_local_files": [
+        "skills/track-acceptance/SKILL.md",
+        "skills/align-on-decisions/SKILL.md",
+        "skills/review-data-authority/SKILL.md",
+        "skills/plan-adoption/SKILL.md",
+        "skills/assess-change-impact/SKILL.md",
+        "skills/verify-claims/SKILL.md",
+        "skills/explain-codebase/SKILL.md",
+        "skills/map-capability-dependencies/SKILL.md",
+        "skills/run-project-checks/SKILL.md",
+        "skills/prepare-migration-decision/SKILL.md",
+        "skills/trace-decisions/SKILL.md",
+        "skills/record-decisions/SKILL.md",
+        "skills/investigate-design-rationale/SKILL.md",
+        "skills/model-domain-vocabulary/SKILL.md",
+        "skills/guide-configuration/SKILL.md",
+        "skills/edit-technical-writing/SKILL.md",
+        "skills/plan-change/SKILL.md",
+        "skills/learn-after-launch/SKILL.md",
+        "skills/measure-outcomes/SKILL.md",
+        "skills/design-module-interface/SKILL.md",
+        "skills/execute-plan/SKILL.md",
+        "skills/author-skill/SKILL.md",
+        "skills/check-launch-readiness/SKILL.md",
+        "skills/frame-problem/SKILL.md",
+        "skills/analyze-incident/SKILL.md",
+        "skills/build-spike/SKILL.md",
+        "skills/review-public-boundary/SKILL.md",
+        "skills/publish-change/SKILL.md",
+        "skills/synthesize-requirements/SKILL.md",
+        "skills/run-research-workflow/SKILL.md",
+        "skills/review-skill-import/SKILL.md",
+        "skills/review-skill-security/SKILL.md",
+        "skills/research-sources/SKILL.md",
+        "skills/explain-to-stakeholders/SKILL.md",
+        "skills/diagnose-failure/SKILL.md",
+        "skills/handoff-work/SKILL.md",
+        "skills/implement-test-first/SKILL.md",
+        "skills/plan-tests/SKILL.md",
+        "skills/review-value-evidence/SKILL.md",
+        "skills/plan-workshop/SKILL.md",
+        "scripts/validate_catalog.py",
+        "scripts/cataloglib.py"
+      ],
+      "instruction_consequence": "Keep the stricter ASCII catalog and current frontmatter rules, because no limit or rule the catalog relies on has moved.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf"
+      }
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
+      "publisher": "ai.google.dev",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
+        "marker_kind": "content-sha256",
+        "marker_value": "4c4272bf7e0857fc3e4cc776658bd2363a6479ef903c276d983e230d07b707ba"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:42.892217+00:00",
+          "final_url": "https://aistudio.google.com/docs/agents.md",
+          "raw_sha256": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871",
+          "marker_kind": "content-sha256",
+          "marker_value": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871",
+          "body_bytes": 5662
+        },
+        {
+          "observed_at": "2026-11-05T16:24:43.731222+00:00",
+          "final_url": "https://aistudio.google.com/docs/agents.md",
+          "raw_sha256": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871",
+          "marker_kind": "content-sha256",
+          "marker_value": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871",
+          "body_bytes": 5662
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The overview still marks Managed Agents as Public Preview and describes a hosted Linux sandbox, unrestricted outbound access by default with an allowlist option, credential scoping, human verification of outputs, deletion of environments after 7 days of inactivity, and token and tool billing, so the prior statements hold. It names Gemini 3.8 Flash for the default agent, while the latest-model page says the same agent supports Gemini 4 Argon, which is another reason to keep model facts out of instructions. The content delta is unknown because no earlier body was kept. This address now redirects to https://aistudio.google.com/docs/agents.md, a Google host, so the source URL is kept and the review covers the redirected page.",
+      "affected_skills": [
+        "design-agent-evaluations",
+        "review-agent-security"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-evaluations/SKILL.md",
+        "skills/review-agent-security/SKILL.md",
+        "docs/google-agent-surfaces.md"
+      ],
+      "instruction_consequence": "Keep hosted agents outside this campaign and keep separate network, credential, cost, retention and deletion authority.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
+        "marker_kind": "content-sha256",
+        "marker_value": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871"
+      }
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
+      "publisher": "ai.google.dev",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
+        "marker_kind": "content-sha256",
+        "marker_value": "1bfe8be3415e6756cf3b7e90f687d884bc2777c7d3997d50c68ca61abfd6256f"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:44.589061+00:00",
+          "final_url": "https://aistudio.google.com/docs/latest-model.md",
+          "raw_sha256": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522",
+          "marker_kind": "content-sha256",
+          "marker_value": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522",
+          "body_bytes": 18045
+        },
+        {
+          "observed_at": "2026-11-05T16:24:45.458154+00:00",
+          "final_url": "https://aistudio.google.com/docs/latest-model.md",
+          "raw_sha256": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522",
+          "marker_kind": "content-sha256",
+          "marker_value": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522",
+          "body_bytes": 18045
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page names Gemini 4 Argon (gemini-4-argon) as the latest model with introductory pricing through November 30, 2026, and lists Gemini 3.8 Flash under other models, so the prior statements hold. It also removes explicit caching, ignores temperature, top_p and top_k, and makes thinking level the main control, so a model switch changes run settings as well as the model name. No skill names a Gemini model, and the content delta is unknown because no earlier body was kept. This address now redirects to https://aistudio.google.com/docs/latest-model.md, a Google host, so the source URL is kept and the review covers the redirected page.",
+      "affected_skills": [
+        "stack-google-adk",
+        "design-agent-evaluations"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/stack-google-adk/references/adk-version-boundaries.md",
+        "skills/design-agent-evaluations/SKILL.md",
+        "skills/design-agent-evaluations/references/evaluation-contract.md",
+        "docs/release-status.md",
+        "docs/google-agent-surfaces.md"
+      ],
+      "instruction_consequence": "Keep model selection out of portable instructions and keep the general configuration list in design-agent-evaluations, while the Gemini 3.8 Flash trial packet still needs the owner re-check before any run.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
+        "marker_kind": "content-sha256",
+        "marker_value": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522"
+      }
+    },
+    {
+      "source_url": "https://antigravity.google/docs/cli/headless.md",
+      "publisher": "antigravity.google",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://antigravity.google/docs/cli/headless.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "3807eb1495433cfe8d9934db7506ac163c1b53b02800f3f9cf26d790c9a10af9"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:45.702353+00:00",
+          "final_url": "https://antigravity.google/docs/cli/headless.md",
+          "raw_sha256": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c",
+          "marker_kind": "content-sha256",
+          "marker_value": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c",
+          "body_bytes": 27859
+        },
+        {
+          "observed_at": "2026-11-05T16:24:45.945177+00:00",
+          "final_url": "https://antigravity.google/docs/cli/headless.md",
+          "raw_sha256": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c",
+          "marker_kind": "content-sha256",
+          "marker_value": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c",
+          "body_bytes": 27859
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still documents text, json and stream-json output, cumulative session counters, --continue and --conversation resumption, soft-denied actions that continue and exit 0 with a stderr notice, terminal status values, --print-timeout, and error exits, so the prior statements hold. Its sample model list shows Gemini 4 Argon and Gemini 3.8 Flash slugs together, which supports checking the installed client instead of assuming a model. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "design-agent-evaluations",
+        "verify-claims"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-evaluations/SKILL.md",
+        "skills/verify-claims/SKILL.md",
+        "docs/clients/antigravity.md",
+        "docs/client-candidate-v0.15.0.md"
+      ],
+      "instruction_consequence": "Keep actual-action and diagnostic evidence, exact-version discovery, separate authorization, and the separation of exit status from whether an action ran.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://antigravity.google/docs/cli/headless.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c"
+      }
+    },
+    {
+      "source_url": "https://antigravity.google/docs/plugins.md",
+      "publisher": "antigravity.google",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://antigravity.google/docs/plugins.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "b9a4b3cd56141a6458261695475b572460767b2ce3c9444826399623bcf209db"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:46.161746+00:00",
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "raw_sha256": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e",
+          "marker_kind": "content-sha256",
+          "marker_value": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e",
+          "body_bytes": 14074
+        },
+        {
+          "observed_at": "2026-11-05T16:24:46.370592+00:00",
+          "final_url": "https://antigravity.google/docs/plugins.md",
+          "raw_sha256": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e",
+          "marker_kind": "content-sha256",
+          "marker_value": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e",
+          "body_bytes": 14074
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page keeps the three surface sections and now lists one global plugin folder for App, CLI and IDE; it lists a workspace plugin folder only for App and IDE. The dated local note about a separate CLI plugin folder no longer matches this page, but the skill line that paths vary by surface still holds for workspace plugins and global skills. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "author-skill",
+        "review-skill-security"
+      ],
+      "reviewed_local_files": [
+        "skills/author-skill/SKILL.md",
+        "skills/author-skill/references/client-adapters.md",
+        "skills/review-skill-security/SKILL.md",
+        "skills/review-skill-security/references/review-domains.md",
+        "docs/clients/antigravity.md",
+        "docs/google-agent-surfaces.md",
+        "plugins/antigravity/measured-operations/plugin.json"
+      ],
+      "instruction_consequence": "Keep the skill text, because its working rule is to prefer the native install route and verify the actual path; record the page change in the Antigravity client notes.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://antigravity.google/docs/plugins.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e"
+      }
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "publisher": "developer.hashicorp.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"5142c16c011e6137bd580b5b012a3852\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:46.808886+00:00",
+          "final_url": "https://developer.hashicorp.com/terraform/language",
+          "raw_sha256": "4a3e91abea79ef619ab10c8f03292bf57f1b58862d5e3d02d2f78a22828cfc66",
+          "marker_kind": "etag",
+          "marker_value": "\"1411b162d211332935f3b849931739c0\"",
+          "body_bytes": 221478
+        },
+        {
+          "observed_at": "2026-11-05T16:24:47.218206+00:00",
+          "final_url": "https://developer.hashicorp.com/terraform/language",
+          "raw_sha256": "4a3e91abea79ef619ab10c8f03292bf57f1b58862d5e3d02d2f78a22828cfc66",
+          "marker_kind": "etag",
+          "marker_value": "\"1411b162d211332935f3b849931739c0\"",
+          "body_bytes": 221478
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The language index still presents declarative resources, implicit and explicit dependency ordering, and providers, and it applies across the CLI, HCP Terraform, and Terraform Enterprise, so the prior statements hold. The version selector now tops out at v1.17.x and the navigation lists Stacks, query blocks, and policy topics, none of which the skill's version-neutral text contradicts. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-terraform"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-terraform/SKILL.md",
+        "skills/stack-terraform/references/checks.md"
+      ],
+      "instruction_consequence": "Keep project-specific version and plan discovery unchanged; the skill states no Terraform version and source reading does not authorize apply.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"1411b162d211332935f3b849931739c0\""
+      }
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "publisher": "developers.googleblog.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "057a1b9776b647e8470bba40273c66e688a7090530ed400aad24dbfe9ae43fb6"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:47.872519+00:00",
+          "final_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+          "raw_sha256": "6d08d48751022d4f75dde26a995ce661e46aa916454428b01b559601b9c14db1",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "78ae0c997f5339123aa42720ed5d596feaeb9cd8e58f8ed7f03f73c5e3f5809e",
+          "body_bytes": 47351
+        },
+        {
+          "observed_at": "2026-11-05T16:24:48.876359+00:00",
+          "final_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+          "raw_sha256": "ef4e7eb56696597492c7735591564b7418a2faaae578689693d4a1ac1e7debcb",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "78ae0c997f5339123aa42720ed5d596feaeb9cd8e58f8ed7f03f73c5e3f5809e",
+          "body_bytes": 47351
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The April 22, 2026 article still presents scaffolding, evaluation, infrastructure provisioning, deployment and publication as separate commands, so the prior statement holds. It describes a tool for coding assistants and does not make the CLI an ADK runtime dependency, which fits stack-google-adk. The only later-dated text is a related-posts list, a likely but unconfirmed cause of the hash change, and the content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-google-adk",
+        "publish-change"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/publish-change/SKILL.md",
+        "skills/publish-change/references/pr-maintenance.md",
+        "docs/google-agent-surfaces.md"
+      ],
+      "instruction_consequence": "Keep Agents CLI as optional developer tooling and keep action authority and observed evidence separate.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "78ae0c997f5339123aa42720ed5d596feaeb9cd8e58f8ed7f03f73c5e3f5809e"
+      }
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "publisher": "developers.googleblog.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "10a808b2e672469dbc23b800642a6d5b392f8783d77ae11346cb1e7cd17dcaab"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:49.548882+00:00",
+          "final_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "raw_sha256": "d835ade4414fa8a9494b2d096cab079c4520307cac03ee5784b7d2f41d0e9ce3",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "cc355562d6c7c8eac8759a6be0e44aa147d686b3e56eb01e44b3646ce5a2ad02",
+          "body_bytes": 39257
+        },
+        {
+          "observed_at": "2026-11-05T16:24:50.473420+00:00",
+          "final_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "raw_sha256": "541355c5c2b37eca0e70eaff9f39eec19547714f9b3e58a6da23121fedc0951c",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "cc355562d6c7c8eac8759a6be0e44aa147d686b3e56eb01e44b3646ce5a2ad02",
+          "body_bytes": 39257
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The May 19, 2026 article still separates the consumer cutoff on June 18, 2026 from unchanged enterprise and paid API access, and it still says feature parity is not one-to-one, so the prior statements hold. That cutoff date has now passed, but no skill relies on Gemini CLI as a client. The only later-dated text is a related-posts list, a likely but unconfirmed cause of the hash change, and the content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-google-adk",
+        "author-skill"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-google-adk/SKILL.md",
+        "skills/author-skill/SKILL.md",
+        "skills/author-skill/references/client-adapters.md"
+      ],
+      "instruction_consequence": "Keep separate client acceptance and do not infer parity or migrate accounts from the announcement.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "cc355562d6c7c8eac8759a6be0e44aa147d686b3e56eb01e44b3646ce5a2ad02"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+        "marker_kind": "last-modified",
+        "marker_value": "Tue, 27 Oct 2026 23:55:45 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:51.519606+00:00",
+          "final_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+          "raw_sha256": "68e43af60e9ef3c33222375e9c33fa606b2c4cb10404ce94f02c52f095f4270b",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 03 Nov 2026 03:22:08 GMT",
+          "body_bytes": 346080
+        },
+        {
+          "observed_at": "2026-11-05T16:24:52.360275+00:00",
+          "final_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+          "raw_sha256": "97e5354cea6bfbdc81385d3f17f05a7f626a9574c932767671f279936008ac83",
+          "marker_kind": "last-modified",
+          "marker_value": "Tue, 03 Nov 2026 03:22:08 GMT",
+          "body_bytes": 346080
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page, last updated 2026-11-03, still covers query plans, column projection, partition predicates and intermediate output, and it still says LIMIT on SELECT * does not reduce bytes read, so the prior statements hold. Nothing in it conflicts with warehouse.md, which adds a correctness limit on pruning and does not dispute the performance advice. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/SKILL.md",
+        "skills/stack-gcp-data/references/warehouse.md"
+      ],
+      "instruction_consequence": "Keep plan-grounded optimization constrained by correctness, and keep metadata queries, dry runs and capacity changes under separate authority.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+        "marker_kind": "last-modified",
+        "marker_value": "Tue, 03 Nov 2026 03:22:08 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:54.380642+00:00",
+          "final_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+          "raw_sha256": "ea4202fa33ece651e2c8830d96ecd060e89e13ccd48ce24c42a1c30fec010c88",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 14:28:16 GMT",
+          "body_bytes": 226475
+        },
+        {
+          "observed_at": "2026-11-05T16:24:55.474313+00:00",
+          "final_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+          "raw_sha256": "3bce8e9a16a3e15f4ef883ddbe141a8f848c7410a59688ce32bb34ffef199014",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 14:28:16 GMT",
+          "body_bytes": 226479
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page, last updated 2026-11-04, still covers first builds and incremental runs, uniqueKey merging, partition filters, assertions, and schema-change options through a Preview onSchemaChange property, so the prior statements hold. Its note that updatePartitionFilter without uniqueKey falls back to insert, and its split of target and source pruning, support the warehouse.md rules on checking the real strategy and target-side matching. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/SKILL.md",
+        "skills/stack-gcp-data/references/warehouse.md",
+        "skills/stack-gcp-data/references/replay-review.md"
+      ],
+      "instruction_consequence": "Keep grain, timestamp, strategy and recovery discovery before any key, filter or full-refresh recommendation.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+        "marker_kind": "last-modified",
+        "marker_value": "Wed, 04 Nov 2026 14:28:16 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "publisher": "docs.cloud.google.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Fri, 30 Oct 2026 17:06:28 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:56.360339+00:00",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+          "raw_sha256": "d0608656774202985553ccb4233263dd687865f01a63b8918226c3457584f36d",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 21:52:20 GMT",
+          "body_bytes": 158119
+        },
+        {
+          "observed_at": "2026-11-05T16:24:56.917925+00:00",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+          "raw_sha256": "5371bb7d3536f75b41c964d7acd24e492386f9820cf296a5c3d1073447f896e3",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 21:52:20 GMT",
+          "body_bytes": 158115
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The overview, last updated 2026-11-04, still groups capabilities as Build, Scale, Govern and Optimize and keeps runtime, sessions, memory, identity and gateway as distinct services, so the prior statements hold, and only the date is known to differ from the prior ledger note. No affected skill names these product groupings, so none depends on the wording. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "design-agent-memory",
+        "review-agent-security",
+        "stack-google-adk"
+      ],
+      "reviewed_local_files": [
+        "skills/design-agent-memory/SKILL.md",
+        "skills/review-agent-security/SKILL.md",
+        "skills/stack-google-adk/SKILL.md"
+      ],
+      "instruction_consequence": "Keep generic skill discovery and do not treat product groupings as client acceptance.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Wed, 04 Nov 2026 21:52:20 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "publisher": "docs.getdbt.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"f02b9a77a1ac2f6f085264dff7d1491b\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:57.276138+00:00",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models",
+          "raw_sha256": "cf7586586a4d48ebebbbcbcdc2cfeba20d0c7d509071e899ed6984e98349c374",
+          "marker_kind": "etag",
+          "marker_value": "\"29356880aff4bffb1bd5789db3a69be9\"",
+          "body_bytes": 129020
+        },
+        {
+          "observed_at": "2026-11-05T16:24:57.528444+00:00",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models",
+          "raw_sha256": "cf7586586a4d48ebebbbcbcdc2cfeba20d0c7d509071e899ed6984e98349c374",
+          "marker_kind": "etag",
+          "marker_value": "\"29356880aff4bffb1bd5789db3a69be9\"",
+          "body_bytes": 129020
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still covers the is_incremental conditions, first-run and full-refresh behavior, optional unique keys, and strategy-dependent update mechanics, and it says some strategies ignore unique_key, which supports the skill's refusal to infer MERGE from the key. New-looking items are a Snowflake adapter notice that does not touch BigQuery, dbt v2 tracks with 1.13 in beta, and the page's last-updated stamp of Jul 13, 2026. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-gcp-data/SKILL.md",
+        "skills/stack-gcp-data/references/warehouse.md"
+      ],
+      "instruction_consequence": "Keep the strategy and grain discovery, null and duplicate key tests, and correction contracts; the page's BigQuery nested-column limit on schema-change tracking is an optional addition, not a required fix.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"29356880aff4bffb1bd5789db3a69be9\""
+      }
+    },
+    {
+      "source_url": "https://docs.spring.io/spring-boot/",
+      "publisher": "docs.spring.io",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.spring.io/spring-boot/",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 02 Nov 2026 13:52:42 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:57.715713+00:00",
+          "final_url": "https://docs.spring.io/spring-boot/",
+          "raw_sha256": "da3227ea54d170bf2ea3a1420a7763ab8da4a06bf174980e2b1adc0c0020c2e7",
+          "marker_kind": "last-modified",
+          "marker_value": "Thu, 05 Nov 2026 13:26:23 GMT",
+          "body_bytes": 83980
+        },
+        {
+          "observed_at": "2026-11-05T16:24:57.904547+00:00",
+          "final_url": "https://docs.spring.io/spring-boot/",
+          "raw_sha256": "da3227ea54d170bf2ea3a1420a7763ab8da4a06bf174980e2b1adc0c0020c2e7",
+          "marker_kind": "last-modified",
+          "marker_value": "Thu, 05 Nov 2026 13:26:23 GMT",
+          "body_bytes": 83980
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "Stable lines 4.1.2, 4.0.9, 3.5.16, 3.4.13, and 3.3.13 still hold, but the preview is now 4.2.0-RC2, so the recorded 4.2.0-RC1 statement and the Nov 2 ledger note that it was unchanged are out of date. No skill file names a Spring Boot version, so this affects the review record only. The full content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-java-spring"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-java-spring/SKILL.md",
+        "skills/stack-java-spring/references/checks.md"
+      ],
+      "instruction_consequence": "Keep the skill text unchanged and update the dated summary in catalog/upstream-reviews.json to preview 4.2.0-RC2.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.spring.io/spring-boot/",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 05 Nov 2026 13:26:23 GMT"
+      }
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/data/documentation.json",
+      "publisher": "docs.swift.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.swift.org/latest/data/documentation.json",
+        "marker_kind": "content-sha256",
+        "marker_value": "72da9f4dcac98741a3090dd6b8aac143e76a2f2bcf105db3cda91f5cc74bfbbe"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:58.075361+00:00",
+          "final_url": "https://docs.swift.org/latest/data/documentation.json",
+          "raw_sha256": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06",
+          "marker_kind": "content-sha256",
+          "marker_value": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06",
+          "body_bytes": 15067
+        },
+        {
+          "observed_at": "2026-11-05T16:24:58.182730+00:00",
+          "final_url": "https://docs.swift.org/latest/data/documentation.json",
+          "raw_sha256": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06",
+          "marker_kind": "content-sha256",
+          "marker_value": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06",
+          "body_bytes": 15067
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The data response is a real topic index that still titles The Swift Programming Language as 6.4 and lists the standard library, Testing, Swiftly, SwiftPM, DocC, platform guides, compiler diagnostics, and the Swift 6 migration guide. The prior statement that this response carries the substantive content holds, and the 6.4 title agrees with the skill's evidence labels. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-swift-swiftui/SKILL.md",
+        "skills/stack-swift-swiftui/references/checks.md",
+        "skills/stack-swift-swiftui/references/swiftui.md"
+      ],
+      "instruction_consequence": "Keep the exact-version discovery requirements and the full-response pin; the skill text cites only the HTML sibling URL, which is unchanged in effect.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.swift.org/latest/data/documentation.json",
+        "marker_kind": "content-sha256",
+        "marker_value": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06"
+      }
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "publisher": "docs.swift.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://docs.swift.org/latest/documentation/",
+        "marker_kind": "etag",
+        "marker_value": "\"f63-65c3036923100\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:58.286337+00:00",
+          "final_url": "https://docs.swift.org/latest/documentation/",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "etag",
+          "marker_value": "\"f63-65f89395fc580\"",
+          "body_bytes": 3939
+        },
+        {
+          "observed_at": "2026-11-05T16:24:58.385138+00:00",
+          "final_url": "https://docs.swift.org/latest/documentation/",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "etag",
+          "marker_value": "\"f63-65f89395fc580\"",
+          "body_bytes": 3939
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The extracted text is a tiny JavaScript application shell with a heading and footer links only, so it cannot confirm or refute any prior statement on its own. The sibling documentation.json source supplies the same index and supports the prior list, including the 6.4 language book title. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-swift-swiftui/SKILL.md",
+        "skills/stack-swift-swiftui/references/checks.md"
+      ],
+      "instruction_consequence": "Keep the rendered-page requirement and repository-pinned language mode, SDK, isolation, and compiler evidence, and rely on the documentation.json source for content.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://docs.swift.org/latest/documentation/",
+        "marker_kind": "etag",
+        "marker_value": "\"f63-65f89395fc580\""
+      }
+    },
+    {
+      "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+      "publisher": "experienceleague.adobe.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 22 Oct 2026 12:56:11 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:58.654529+00:00",
+          "final_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+          "raw_sha256": "98eb59b66b16170e5b9149d9aa0ff2c299ff9396cbc6d08eb6a47735cc3a2a57",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 14:10:00 GMT",
+          "body_bytes": 12773
+        },
+        {
+          "observed_at": "2026-11-05T16:24:58.827772+00:00",
+          "final_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+          "raw_sha256": "98eb59b66b16170e5b9149d9aa0ff2c299ff9396cbc6d08eb6a47735cc3a2a57",
+          "marker_kind": "last-modified",
+          "marker_value": "Wed, 04 Nov 2026 14:10:00 GMT",
+          "body_bytes": 12773
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The landing page still separates AEM as a Cloud Service, AEM 6.5, AEM 6.5 LTS, previous versions, and related products, and it splits Cloud Manager guidance by hosted and managed-service generations. That matches the prior statement and the skill's demand to confirm the product generation first. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-adobe-aem"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-adobe-aem/SKILL.md",
+        "skills/stack-adobe-aem/references/checks.md"
+      ],
+      "instruction_consequence": "Keep exact product and version discovery and the separate Cloud Manager authority boundary.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+        "marker_kind": "last-modified",
+        "marker_value": "Wed, 04 Nov 2026 14:10:00 GMT"
+      }
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "publisher": "genai.owasp.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+        "marker_kind": "content-sha256",
+        "marker_value": "cf1ea7d4934ecfe0fa9389e4c6a8225169cd21e31dee9d8408ac28ea91b8031c"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:59.080068+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+          "raw_sha256": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807",
+          "marker_kind": "content-sha256",
+          "marker_value": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807",
+          "body_bytes": 601885
+        },
+        {
+          "observed_at": "2026-11-05T16:24:59.338530+00:00",
+          "final_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+          "raw_sha256": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807",
+          "marker_kind": "content-sha256",
+          "marker_value": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807",
+          "body_bytes": 601885
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The extracted text carries the initiative description, a resource index that includes the OWASP Top 10 for Agentic Applications for 2026, events, and workstream lists, so the prior statement about substantive content holds and the index role in review-agent-security still fits. The page id and canonical URL do not appear in this extraction, which holds only CSS and the rendered body, so those prior identity statements could not be rechecked here. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "review-agent-security"
+      ],
+      "reviewed_local_files": [
+        "skills/review-agent-security/SKILL.md"
+      ],
+      "instruction_consequence": "Keep this source as discovery evidence and keep checking the specific linked document and version before treating it as technical authority.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+        "marker_kind": "content-sha256",
+        "marker_value": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807"
+      }
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "publisher": "git-scm.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Mon, 02 Nov 2026 06:50:38 GMT"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:59.524786+00:00",
+          "final_url": "https://git-scm.com/docs/git-merge",
+          "raw_sha256": "b55a3b78ae297f815ad23966dcd97c14bad3c98ad7a16677f60a176b9ae04cfa",
+          "marker_kind": "last-modified",
+          "marker_value": "Thu, 05 Nov 2026 04:35:21 GMT",
+          "body_bytes": 142116
+        },
+        {
+          "observed_at": "2026-11-05T16:24:59.695758+00:00",
+          "final_url": "https://git-scm.com/docs/git-merge",
+          "raw_sha256": "b55a3b78ae297f815ad23966dcd97c14bad3c98ad7a16677f60a176b9ae04cfa",
+          "marker_kind": "last-modified",
+          "marker_value": "Thu, 05 Nov 2026 04:35:21 GMT",
+          "body_bytes": 142116
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The manual page still distinguishes fast-forward from true merges, describes squash as making no merge commit or MERGE_HEAD, and warns that abort may fail to restore pre-existing uncommitted work, and its version log shows no manual change after 2.54.0. The skill's handling of recorded abort options and uncommitted changes agrees with this, and resolve-merge-conflicts links no git-scm page itself because the source is bound only in the catalog. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "resolve-merge-conflicts"
+      ],
+      "reviewed_local_files": [
+        "skills/resolve-merge-conflicts/SKILL.md"
+      ],
+      "instruction_consequence": "Keep repository-specific ancestry and dirty-work preservation; no rebase, squash, or blanket abort assumption is needed.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 05 Nov 2026 04:35:21 GMT"
+      }
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "publisher": "git-scm.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://git-scm.com/docs/git-worktree",
+        "marker_kind": "content-sha256",
+        "marker_value": "83844e1cbf89532b6cc8477cd7f01fd606ce953f0de4fd6069dbf825b43dcf4f"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:24:59.850703+00:00",
+          "final_url": "https://git-scm.com/docs/git-worktree",
+          "raw_sha256": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5",
+          "marker_kind": "content-sha256",
+          "marker_value": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5",
+          "body_bytes": 98918
+        },
+        {
+          "observed_at": "2026-11-05T16:25:00.085967+00:00",
+          "final_url": "https://git-scm.com/docs/git-worktree",
+          "raw_sha256": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5",
+          "marker_kind": "content-sha256",
+          "marker_value": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5",
+          "body_bytes": 98918
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The manual still separates shared repository state and refs from per-worktree HEAD and index, documents lock, prune, repair, and clean-only remove limits, and keeps the incomplete submodule warning; every decision fact in the linked worktree model checks out. Its version log shows a 2.56.0 manual update dated 2026-09-28, which predates the prior review. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "finish-branch",
+        "assess-worktree-isolation"
+      ],
+      "reviewed_local_files": [
+        "skills/assess-worktree-isolation/SKILL.md",
+        "skills/assess-worktree-isolation/references/linked-worktree-model.md",
+        "skills/finish-branch/SKILL.md"
+      ],
+      "instruction_consequence": "Keep isolated-work inspection and explicit cleanup boundaries; finish-branch states the same removal conditions without citing the page.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://git-scm.com/docs/git-worktree",
+        "marker_kind": "content-sha256",
+        "marker_value": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5"
+      }
+    },
+    {
+      "source_url": "https://go.dev/doc/",
+      "publisher": "go.dev",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://go.dev/doc/",
+        "marker_kind": "content-sha256",
+        "marker_value": "91302b335e12f1277b2b9bf4792a16521a2d9febb64db3cb3949675ebcd57202"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:00.411555+00:00",
+          "final_url": "https://go.dev/doc/",
+          "raw_sha256": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+          "marker_kind": "content-sha256",
+          "marker_value": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+          "body_bytes": 47874
+        },
+        {
+          "observed_at": "2026-11-05T16:25:00.670386+00:00",
+          "final_url": "https://go.dev/doc/",
+          "raw_sha256": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+          "marker_kind": "content-sha256",
+          "marker_value": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+          "body_bytes": 47874
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The index still links modules, multi-module workspaces, testing, fuzzing, coverage, the language specification, and tool documentation, and it now also lists an encoding/json/v2 migration guide. The word toolchain does not appear, so the prior 'toolchain guidance' holds only through the go.mod reference and command documentation links; the skill does not depend on this index for toolchain facts. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-go"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-go/SKILL.md",
+        "skills/stack-go/references/checks.md"
+      ],
+      "instruction_consequence": "Keep repository-specific version and command discovery; the skill names no Go version and an index is not evidence that local gates ran.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://go.dev/doc/",
+        "marker_kind": "content-sha256",
+        "marker_value": "63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509"
+      }
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "publisher": "nextjs.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "c786bc8610268c94461999735c3153dc778b667b05e61e808836392511d6a23a"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:01.165079+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "raw_sha256": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc",
+          "marker_kind": "content-sha256",
+          "marker_value": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc",
+          "body_bytes": 1870734
+        },
+        {
+          "observed_at": "2026-11-05T16:25:01.705026+00:00",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+          "raw_sha256": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc",
+          "marker_kind": "content-sha256",
+          "marker_value": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc",
+          "body_bytes": 1870734
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The guide still covers runtime minimums, API removals, the Turbopack default, and codemods, so the skill's description of API, runtime, and bundler changes holds; its stamp reads October 15, 2026, with latest shown as v16.4.5. It now leads with a recommended coding-agent path that runs a floating canary CLI, and the skill already says not to copy unpinned installers into a plan, so the prior caution holds and matters more. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "plan-change"
+      ],
+      "reviewed_local_files": [
+        "skills/plan-change/SKILL.md",
+        "skills/plan-change/references/dependency-upgrade.md"
+      ],
+      "instruction_consequence": "Keep the rule to review codemods and refuse unpinned one-line installers; treat the guide's agent path as content to review, not as authorization.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc"
+      }
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "publisher": "opentelemetry.io",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"66f7da0a3f93825b8089229a6e91b20e-ssl\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:02.204863+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "raw_sha256": "b2520aa8da2a6d0caf38f8d84ae677588dd4a7a243d3b3223b6562073db280e9",
+          "marker_kind": "etag",
+          "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\"",
+          "body_bytes": 405763
+        },
+        {
+          "observed_at": "2026-11-05T16:25:02.553340+00:00",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/",
+          "raw_sha256": "b2520aa8da2a6d0caf38f8d84ae677588dd4a7a243d3b3223b6562073db280e9",
+          "marker_kind": "etag",
+          "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\"",
+          "body_bytes": 405763
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still lists traces, metrics, logs, and baggage as supported and keeps events and profiles as under development or proposed, so the prior statement holds. Its last-modified stamp is March 10, 2026, and the skill uses the page only for vocabulary. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "reviewed_local_files": [
+        "skills/design-observability/SKILL.md"
+      ],
+      "instruction_consequence": "Keep exact instrumentation support and observed telemetry requirements; signal types do not establish operational readiness.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\""
+      }
+    },
+    {
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "publisher": "platform.claude.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "c7174dc74dbcb155365a37d995a22d004c6618c28c8a948ea98cad5c656a4100"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:02.920337+00:00",
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+          "raw_sha256": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996",
+          "marker_kind": "content-sha256",
+          "marker_value": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996",
+          "body_bytes": 74732
+        },
+        {
+          "observed_at": "2026-11-05T16:25:03.420284+00:00",
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+          "raw_sha256": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996",
+          "marker_kind": "content-sha256",
+          "marker_value": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996",
+          "body_bytes": 74732
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still covers clarity, context, examples and structure, and it tells readers to treat a technique tied to a named model as measured on that model and to re-check it with their own evaluations, which supports the skill line that model-specific examples are not universal. The prior notes hold: the append-only history item refers to Claude 5.1 and later models, and model coverage is broad, including Opus 5.5, Sonnet 5.5 and Haiku 5.5. The skill names no Claude model or API parameter, so details such as the budget_tokens rejection do not reach it, and the content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "review-engineering-prompt"
+      ],
+      "reviewed_local_files": [
+        "skills/review-engineering-prompt/SKILL.md"
+      ],
+      "instruction_consequence": "Keep the independently written workflow and the limit that model-specific guidance does not establish installed-client behavior.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "marker_kind": "content-sha256",
+        "marker_value": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996"
+      }
+    },
+    {
+      "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "publisher": "react.dev",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+        "marker_kind": "content-sha256",
+        "marker_value": "9e6ab5aaee1970cc8271ea5239226585b22c915796a49e0a05034db0d16fc830"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:03.798847+00:00",
+          "final_url": "https://react.dev/learn/you-might-not-need-an-effect",
+          "raw_sha256": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7",
+          "marker_kind": "content-sha256",
+          "marker_value": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7",
+          "body_bytes": 434498
+        },
+        {
+          "observed_at": "2026-11-05T16:25:04.080446+00:00",
+          "final_url": "https://react.dev/learn/you-might-not-need-an-effect",
+          "raw_sha256": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7",
+          "marker_kind": "content-sha256",
+          "marker_value": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7",
+          "body_bytes": 434498
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still advises removing Effects that only derive data or handle user events, offers useMemo or React Compiler for expensive calculations, and tells readers to measure on a production build because development and Strict Mode distort timings. All prior statements hold and the skill's measured, effect-first diagnosis agrees; the site header now reads v19.3, and the skill names no React version. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "diagnose-react-rendering"
+      ],
+      "reviewed_local_files": [
+        "skills/diagnose-react-rendering/SKILL.md",
+        "skills/diagnose-react-rendering/references/measurement.md"
+      ],
+      "instruction_consequence": "Keep the measured, effect-first diagnosis and the rule that memoization must address observed work.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+        "marker_kind": "content-sha256",
+        "marker_value": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7"
+      }
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "publisher": "slsa.dev",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://slsa.dev/spec/v1.2/provenance",
+        "marker_kind": "etag",
+        "marker_value": "\"50d72b3d48ed57ee7cd5280fadcfda22-ssl\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:04.267724+00:00",
+          "final_url": "https://slsa.dev/spec/v1.2/provenance",
+          "raw_sha256": "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+          "marker_kind": "etag",
+          "marker_value": "\"98144ff492ccb06c814febf3ff7f385f-ssl\"",
+          "body_bytes": 17253
+        },
+        {
+          "observed_at": "2026-11-05T16:25:04.471591+00:00",
+          "final_url": "https://slsa.dev/spec/v1.2/provenance",
+          "raw_sha256": "9a176a8193aff28144dbab80584f0e9dd707a7c24f98c436349674a4a0e51e44",
+          "marker_kind": "etag",
+          "marker_value": "\"98144ff492ccb06c814febf3ff7f385f-ssl\"",
+          "body_bytes": 17253
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page is still marked approved and now reads as a short overview that separates build provenance from source provenance and sends schema detail to a sibling Build Provenance page. The distinction holds, but verification purposes appear only as the phrase about verifiable information, so the prior wording is slightly stronger than this page alone. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "review-dependencies"
+      ],
+      "reviewed_local_files": [
+        "skills/review-dependencies/SKILL.md"
+      ],
+      "instruction_consequence": "Keep versioned source authority and the rule that a provenance document does not establish a verified SLSA level.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://slsa.dev/spec/v1.2/provenance",
+        "marker_kind": "etag",
+        "marker_value": "\"98144ff492ccb06c814febf3ff7f385f-ssl\""
+      }
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "publisher": "trailhead.salesforce.com",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "0e4b1fb4b32fc67e24b49fa01ead5eb75dd27e28fba4c1755e720390fb5863c7"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:05.103826+00:00",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+          "raw_sha256": "e14f707a61e94d53c8e0c420b7083781865bebea8b44fab3c53b314e2aa057e7",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "df5547901fa8c67250e92e6f9b144ef3dccc3d47fc16440fabb226b5a76c63ec",
+          "body_bytes": 236040
+        },
+        {
+          "observed_at": "2026-11-05T16:25:05.607087+00:00",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+          "raw_sha256": "c28eacf597bc8883c5e7b277f58daf01dbbb529e1130eaf834ba141c8a8a004c",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "df5547901fa8c67250e92e6f9b144ef3dccc3d47fc16440fabb226b5a76c63ec",
+          "body_bytes": 236040
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The unit still describes hosted Apex, enforced multitenant limits, database access with rollback, and built-in testing, so the prior statement holds. The executable tutorial now runs in Web Console with a user-mode account update through anonymous Apex, and a banner says the online community is read-only; no skill text names either tool or the community. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-salesforce-apex"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-salesforce-apex/SKILL.md",
+        "skills/stack-salesforce-apex/references/checks.md"
+      ],
+      "instruction_consequence": "Keep org and version discovery and separate live-org authority; reading the tutorial does not authorize anonymous Apex or data mutation.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "df5547901fa8c67250e92e6f9b144ef3dccc3d47fc16440fabb226b5a76c63ec"
+      }
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "publisher": "www.drupal.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "140d1711ed7df516544f77b69535c833832c9105cc5afccfb1f330cb752411ea"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:05.903854+00:00",
+          "final_url": "https://www.drupal.org/docs/develop",
+          "raw_sha256": "14ec38259b27a645e2ff838f4024204faa5ef56a3381d86a605f4964ea652fd3",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c444e0cb956c3de055fdfc72a07f3807235583afc8eb7945e6e3639c4d3dfb61",
+          "body_bytes": 59684
+        },
+        {
+          "observed_at": "2026-11-05T16:25:06.078670+00:00",
+          "final_url": "https://www.drupal.org/docs/develop",
+          "raw_sha256": "14ec38259b27a645e2ff838f4024204faa5ef56a3381d86a605f4964ea652fd3",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c444e0cb956c3de055fdfc72a07f3807235583afc8eb7945e6e3639c4d3dfb61",
+          "body_bytes": 59684
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The develop index still separates tools, Composer, security, profiling, automated testing, and APIs, and it marks the coding standards section obsolete with a move to a project pages site. The prior statement holds, and the skill refers to coding standards only as a repository gate with no link to the obsolete pages. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-php-drupal"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-php-drupal/SKILL.md",
+        "skills/stack-php-drupal/references/checks.md"
+      ],
+      "instruction_consequence": "Keep framework and version discovery and actual repository gates; do not prescribe one command for all Drupal versions.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "c444e0cb956c3de055fdfc72a07f3807235583afc8eb7945e6e3639c4d3dfb61"
+      }
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "publisher": "www.postgresql.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+        "marker_kind": "content-sha256",
+        "marker_value": "2d1dc1e55d284eafc5640894c0843db954e42681e220e319fe1a554ed1834f7a"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:06.659096+00:00",
+          "final_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+          "raw_sha256": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36",
+          "marker_kind": "content-sha256",
+          "marker_value": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36",
+          "body_bytes": 34872
+        },
+        {
+          "observed_at": "2026-11-05T16:25:07.246933+00:00",
+          "final_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+          "raw_sha256": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36",
+          "marker_kind": "content-sha256",
+          "marker_value": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36",
+          "body_bytes": 34872
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The page still separates planner estimates in arbitrary cost units from actual execution, says ANALYZE runs the statement with its side effects, and shows a BEGIN and ROLLBACK pattern for data-changing statements. The page itself does not discuss nontransactional effects, so the skill's limits on rollback are added catalog caution that goes further than the page without contradicting it. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-postgresql-sql"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-postgresql-sql/SKILL.md",
+        "skills/stack-postgresql-sql/references/query-plans.md"
+      ],
+      "instruction_consequence": "Keep the supplied-plan default and the warning that a transaction wrapper is not blanket safety.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+        "marker_kind": "content-sha256",
+        "marker_value": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36"
+      }
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/current/",
+      "publisher": "www.postgresql.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://www.postgresql.org/docs/current/",
+        "marker_kind": "content-sha256",
+        "marker_value": "0f01a3f404d4056594755e68dd35244f0e1ee1933d0a11182e8d7e4445603764"
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:25:07.840595+00:00",
+          "final_url": "https://www.postgresql.org/docs/current/",
+          "raw_sha256": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133",
+          "marker_kind": "content-sha256",
+          "marker_value": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133",
+          "body_bytes": 25377
+        },
+        {
+          "observed_at": "2026-11-05T16:25:08.431997+00:00",
+          "final_url": "https://www.postgresql.org/docs/current/",
+          "raw_sha256": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133",
+          "marker_kind": "content-sha256",
+          "marker_value": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133",
+          "body_bytes": 25377
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The current documentation still identifies 18.6, lists 18 through 14 as supported, and keeps PostgreSQL 19 under development with the October 15 RC 1 news kept distinct. Prior statements hold, and the skill's version-neutral text does not depend on them. The content delta is unknown because no earlier body was kept.",
+      "affected_skills": [
+        "stack-postgresql-sql"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-postgresql-sql/SKILL.md",
+        "skills/stack-postgresql-sql/references/checks.md"
+      ],
+      "instruction_consequence": "Keep exact installed-server discovery; the mutable current URL cannot identify a project server or justify an upgrade.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://www.postgresql.org/docs/current/",
+        "marker_kind": "content-sha256",
+        "marker_value": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133"
+      }
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "publisher": "www.typescriptlang.org",
+      "reviewed_on": "2026-11-05",
+      "before_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "etag",
+        "marker_value": "\"6ae882b4-2a652\""
+      },
+      "observations": [
+        {
+          "observed_at": "2026-11-05T16:35:00.515589+00:00",
+          "final_url": "https://www.typescriptlang.org/docs/",
+          "raw_sha256": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12",
+          "marker_kind": "content-sha256",
+          "marker_value": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12",
+          "body_bytes": 173839
+        },
+        {
+          "observed_at": "2026-11-05T16:35:00.696959+00:00",
+          "final_url": "https://www.typescriptlang.org/docs/",
+          "raw_sha256": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12",
+          "marker_kind": "content-sha256",
+          "marker_value": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12",
+          "body_bytes": 173839
+        }
+      ],
+      "historical_body_sha256": null,
+      "comparison_basis": "none-retained",
+      "comparison_limit": "No earlier body was retained, so the current text was checked against the prior finding and the affected skills. This does not prove semantic equivalence.",
+      "change_class": "current-content-review",
+      "finding": "The index still covers the handbook, modules, JSX, declaration files, project configuration, ESM and CommonJS interoperability, and release notes, so the prior statement holds. Its release note links now point at 7.0 and an upcoming 7.1, and the skill names no compiler version and only asks to check the TypeScript version. The content delta is unknown because no earlier body was kept. Later reads returned two different entity tags for identical bytes, so the entity tag alone is not a stable marker for this page.",
+      "affected_skills": [
+        "stack-typescript-javascript"
+      ],
+      "reviewed_local_files": [
+        "skills/stack-typescript-javascript/SKILL.md",
+        "skills/stack-typescript-javascript/references/checks.md"
+      ],
+      "instruction_consequence": "Keep project compiler and runtime discovery and relevant checks; the index does not identify an installed toolchain. Bind this source to its exact content hash, the existing method already used for the A2A specification after the same behavior.",
+      "decision": "repin-after-review",
+      "after_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "content-sha256",
+        "marker_value": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12"
+      }
+    }
+  ],
+  "final_report": "docs/audits/source-check-final-2026-11-05.json",
+  "final_report_sha256": "7cd134efda73a466e5f3172759a681ed0290ce1c56dd33b6b6d487a70c409f08",
+  "final_counts": {
+    "total": 69,
+    "pass": 69,
+    "changed_or_blocked": 0
+  },
+  "limits": [
+    "This review does not certify future stability. Thirty of 69 sources changed within three days of the last clean check.",
+    "Reviewed bodies were kept privately outside this repository for the next comparison.",
+    "A page text extraction can omit content rendered by scripts. docs.swift.org/latest/documentation/ is a script shell, so the sibling documentation.json source carried that review. The OWASP extraction could not recheck the page id or canonical URL.",
+    "Two ai.google.dev source URLs now redirect to aistudio.google.com. The URLs stay pinned so that no skill bytes change. Decide at the next review whether to rebind them."
+  ]
+}
