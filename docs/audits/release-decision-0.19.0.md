@@ -1,8 +1,9 @@
 # 0.19.0 release decision
 
-Status: proposed on November 5, 2026. This record takes effect only when the
-maintainer accepts it. Accepting it does not authorize a tag, a Release, an
-install, a paid run, or any publication. Each stays a separate decision.
+Status: accepted by the maintainer on November 5, 2026. This acceptance covers the
+claims, tag gates, freeze, drift rule, and rollback target in this record. It does not
+authorize a tag, a Release, an install, a paid run, or any publication. Each stays a
+separate decision.
 
 Earlier records say that a smaller result or narrower claim needs its own reviewed
 decision, not a passing label. This is that decision for 0.19.0.
