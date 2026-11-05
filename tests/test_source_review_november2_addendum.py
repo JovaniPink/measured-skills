@@ -11,6 +11,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = 'docs/audits/source-review-addendum-2026-11-02.json'
+# The November 5 review moved the live pins; this checkpoint keeps the addendum's result.
+CLOSEOUT_REVISION = 'f64991a9d6668f1a0b02de5e8e5666d90ce0e8e0'
 
 
 class SourceReviewAddendumTests(unittest.TestCase):
@@ -21,7 +23,8 @@ class SourceReviewAddendumTests(unittest.TestCase):
         raw = subprocess.check_output(['git', 'show', revision + ':catalog/upstream-pins.json'], cwd=ROOT)
         self.assertEqual(hashlib.sha256(raw).hexdigest(), self.ledger['pins_before_sha256'])
         self.before = json.loads(raw)
-        self.current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        self.closeout_bytes = subprocess.check_output(['git', 'show', CLOSEOUT_REVISION + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.current = json.loads(self.closeout_bytes)
 
     def assert_transition(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
         expected = {r['source_url']: r for r in self.before['sources']}
@@ -58,10 +61,9 @@ class SourceReviewAddendumTests(unittest.TestCase):
             self.assertEqual((marker, marker, 'pass'),
                              (result['expected_marker'], result['observed_marker'], result['result']))
 
-    def test_reviewed_addendum_binds_live_pins_and_preserves_checker(self) -> None:
+    def test_reviewed_addendum_binds_closeout_pins_and_preserves_checker(self) -> None:
         self.assert_transition(self.ledger, self.current)
-        self.assertEqual(self.ledger['pins_after_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+        self.assertEqual(self.ledger['pins_after_sha256'], hashlib.sha256(self.closeout_bytes).hexdigest())
         old = subprocess.check_output(['git', 'show', self.ledger['reviewed_revision'] +
                                        ':scripts/check_upstream_freshness.py'], cwd=ROOT)
         self.assertEqual(old, (ROOT / 'scripts/check_upstream_freshness.py').read_bytes())

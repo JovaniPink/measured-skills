@@ -335,7 +335,7 @@
         "stack-typescript-javascript"
       ],
       "finding": "Reviewed 2026-10-26: TypeScript documentation covers the handbook, modules, JSX, declarations, configuration, interoperability, and versioned release notes.",
-      "action": "Retain project compiler/runtime discovery and relevant checks; the current index does not identify an installed toolchain. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "action": "Retain project compiler/runtime discovery and relevant checks; the current index does not identify an installed toolchain. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date. Bind this URL to its exact content hash, because reads on 2026-11-05 returned two entity tags for identical bytes."
     },
     {
       "url": "https://docs.swift.org/latest/documentation/",
@@ -404,7 +404,7 @@
       "affected_skills": [
         "stack-java-spring"
       ],
-      "finding": "Reviewed 2026-10-26: Spring Boot lists stable 4.1.2, 4.0.9, 3.5.16, 3.4.13, and 3.3.13, with 4.2.0-RC1 as preview.",
+      "finding": "Reviewed 2026-11-05: Spring Boot lists stable 4.1.2, 4.0.9, 3.5.16, 3.4.13, and 3.3.13, with 4.2.0-RC2 as preview.",
       "action": "Update the dated source summary; do not change a project version or mistake a preview for its installed release. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
     },
     {

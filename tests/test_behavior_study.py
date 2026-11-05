@@ -243,13 +243,13 @@ class BehaviorStudyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 fixture.materialize(spec, Path(temporary) / "study")
 
-    def test_review_age_first_fails_january_four(self) -> None:
+    def test_review_age_first_fails_february_four(self) -> None:
         from datetime import date
         from check_upstream_freshness import check
 
-        self.assertEqual([], check(today=date(2027, 1, 3))[0])
+        self.assertEqual([], check(today=date(2027, 2, 3))[0])
         self.assertTrue(
-            any("overdue" in error for error in check(today=date(2027, 1, 4))[0])
+            any("overdue" in error for error in check(today=date(2027, 2, 4))[0])
         )
 
     def test_malformed_receipt_and_configuration_are_rejected(self) -> None:
