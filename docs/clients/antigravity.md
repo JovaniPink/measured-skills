@@ -1,6 +1,6 @@
 # Antigravity setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Antigravity CLI 1.4.7. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
 
 Antigravity setup and testing have equal priority with Codex and Claude. Preview 0.19.0 generates four modular packs under `plugins/antigravity/`. Its installed-client behavior remains unqualified; see the [preview record](../client-candidate-v0.19.0.md). The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked for the nine 0.17.1 packs on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
 
@@ -12,7 +12,7 @@ The normal packs and preview builder include 73 implicit skills. All 17 explicit
 
 ```sh
 agy --version
-agy plugin list
+agy plugin list --json
 ```
 
 The command is `agy`. An empty imported-plugin list does not mean the client has no skills. Built-in, global, and project skills may also load.
@@ -24,12 +24,22 @@ In the desktop app, open **Settings > Customizations** and inspect the skill lis
 Google's [combined plugin guide](https://www.antigravity.google/docs/plugins?tab=cli) documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It also describes an interactive marketplace and inline `/plugin` commands. Clone and review the repository, then install one pack from its folder:
 
 ```sh
-agy plugin install /absolute/path/to/skills/plugins/antigravity/measured-quality
+agy plugin install /absolute/path/to/measured-skills/plugins/antigravity/measured-quality
 agy plugin enable measured-quality
-agy plugin list
+agy plugin list --json
 ```
 
-Repeat with another folder under `plugins/antigravity/` for each pack you want. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema.
+Repeat with another folder under `plugins/antigravity/` for each pack you want: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. Read the enabled state back. On 1.4.7, a pack already showed as enabled before the `enable` command ran. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema. It has no version field, so use file hashes to identify a pack.
+
+To turn a pack off, or remove it, use:
+
+```sh
+agy plugin disable measured-quality
+agy plugin uninstall measured-quality
+agy plugin list --json
+```
+
+On 1.4.7, uninstall left no plugin files behind.
 
 For everyday tasks, start with an ordinary request naming an eligible skill:
 

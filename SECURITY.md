@@ -2,7 +2,7 @@
 
 ## Which version is supported
 
-Only the latest tagged release is supported. That is `v0.16.0`, the only tag so far. The 0.18.0 candidate and the 0.19.0 preview have no tag yet, so for either one, name the commit you ran.
+Only the latest tagged release is supported. That is `v0.16.0`, the only tag so far. The 0.18.0 candidate was never tagged, and the 0.19.0 preview has no tag yet, so for either one, name the commit you ran.
 
 Report issues against that tag, and name the tag you used. If you are running the default branch instead, say so. The branch moves, so your copy may not match anyone else's.
 

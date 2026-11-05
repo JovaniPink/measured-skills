@@ -3,7 +3,7 @@
 Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
 
 
-See the [0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
+For 0.19, see the [install lifecycle record](audits/lifecycle-0.19.0.md). See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Older sections call some `blocked` rows terminal. That word is historical. Under the current [release process](release-process.md), a new row is terminal only when it can be `pass`, `fail`, or genuinely `not_supported`.
 
@@ -11,7 +11,7 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 ## 0.17.0 isolated install lifecycle, 2026-09-23
 
-This checks the native plugin lifecycle on each supported CLI: install, upgrade, downgrade, uninstall, and reinstall (release-process step 5). The lifecycle steps ran no model prompt. Fresh-task checks follow in their own subsection and so far cover Claude Code only.
+This checks the native plugin lifecycle on each supported CLI: install, upgrade, downgrade, uninstall, and reinstall (the lifecycle step of the release process). The lifecycle steps ran no model prompt. Fresh-task checks follow in their own subsection and so far cover Claude Code only.
 
 Setup: each CLI ran against a throwaway configuration, so no personal install changed. Claude Code used `CLAUDE_CONFIG_DIR` and Codex used `CODEX_HOME`. Antigravity has no configuration-folder option, so `agy` ran with `HOME` set to a throwaway folder. A before-and-after check confirmed that nothing under the real `~/.gemini` changed. Sources were exact archives of `v0.16.0` (`89728f9`) and 0.17.0 candidate `a9b55e7`, each used as a local marketplace or plugin folder. Antigravity 0.16.0 is the offline preview built by that tag's `scripts/build_antigravity.py`, because 0.16.0 generated no Antigravity packs.
 

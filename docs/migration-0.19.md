@@ -1,8 +1,16 @@
-# Moving from 0.18 to the 0.19 preview
+# Moving to the 0.19 preview
 
 This is a breaking identity migration, not an automatic update. No installation
 has been changed. The exact map is [0.18 to 0.19](../catalog/migrations/0.18-to-0.19.json).
 The older [0.16 to 0.17 map](../catalog/plugin-migrations.json) remains intact.
+
+## Which path you are on
+
+- **From `v0.16.0`:** this is the only public tag, and it is the tested path. Its names are `jovanipink-*`, in marketplace
+  `jovanipink-skills`. Apply the [0.16 to 0.17 map](../catalog/plugin-migrations.json), then the 0.18 to 0.19 map to
+  find a skill's current name. On Antigravity, `v0.16.0` has only an offline preview, which you build from that tag.
+  The [lifecycle record](audits/lifecycle-0.19.0.md) shows this upgrade and downgrade passing for packaging.
+- **From 0.18:** this candidate was never tagged, so it applies only if you installed it from source.
 
 ## What changes
 
@@ -46,6 +54,10 @@ can proceed without importing them. The project projector retains its stricter
 read-only implicit selection rule; use staged exports for bounded-execution skills.
 
 ## Roll back
+
+The rollback target for 0.19.0 is `v0.16.0`. It is a known package, not a qualified one:
+it has no accepted client behavior. Rolling back crosses the rename, so disable the
+`measured-*` packs before enabling `jovanipink-*`.
 
 Disable the new selection under explicit installation authority; restore the
 recorded old package using its exact source revision and receipt. Verify bytes and
