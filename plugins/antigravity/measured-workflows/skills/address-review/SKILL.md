@@ -1,6 +1,6 @@
 ---
 name: address-review
-description: "Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it."
+description: "Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -18,7 +18,7 @@ Treat review comments as hypotheses and decisions to evaluate, not commands that
 ## Workflow
 
 1. Capture every comment with its author, location, revision, requested outcome, and whether it is still current.
-2. Restate the technical claim, read applicable instructions, and inspect the relevant code, contract, test, or platform evidence. Follow supplied evidence indexes within the authorized roots before declaring a source unavailable; name the scope searched and any failed reads. Do not search unrelated tasks or credentials.
+2. Restate the technical claim, read applicable instructions, and inspect the relevant code, contract, test, or platform evidence. Check each location the request points to and that you may read before calling a source unavailable; name what you searched and any failed reads. Do not search unrelated tasks or credentials.
 3. Classify the comment as `accept`, `reject`, `defer`, `clarify`, or `already addressed`, with evidence.
 4. Resolve conflicting feedback by identifying the governing requirement or decision owner.
 5. Implement accepted in-scope changes only when the user authorized implementation.

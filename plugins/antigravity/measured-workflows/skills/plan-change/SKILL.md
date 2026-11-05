@@ -1,6 +1,6 @@
 ---
 name: plan-change
-description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization."
+description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -26,7 +26,7 @@ Read [dependency upgrades](references/dependency-upgrade.md) when planning a dep
 ## Workflow
 
 1. Confirm the approved problem, desired outcome, scope, non-goals, and decision owner.
-2. Read applicable repository instructions and inspect the current repository and relevant authorized evidence before naming files, interfaces, or commands. Follow the supplied evidence index within the authorized roots; a failed search in the working directory does not establish absence from the supplied packet.
+2. Read applicable repository instructions and inspect the current repository and relevant authorized evidence before naming files, interfaces, or commands. If the request points to evidence stored elsewhere, follow that pointer within your allowed access. A failed search of the working directory does not show the evidence is missing.
 3. Describe the target behavior and every public interface, data contract, state transition, or compatibility promise that changes.
 4. Name the existing module to extend and its ownership boundary. Break work into behaviorally complete vertical slices with exact locations and dependencies, not test or PR tranches.
 5. Define tests by risk: unit, integration, contract, migration, end-to-end, property, and manual observation as applicable.

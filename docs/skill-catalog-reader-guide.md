@@ -242,7 +242,7 @@ Historical name: application-security-review.
 
 [`review-code-change`](../skills/review-code-change/SKILL.md)
 
-Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging.
+Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
@@ -362,7 +362,7 @@ Historical name: test-quality-review.
 
 [`run-project-checks`](../skills/run-project-checks/SKILL.md)
 
-Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command.
+Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: bounded-execution.
 
@@ -372,7 +372,7 @@ Historical name: cross-stack-quality-gates.
 
 [`verify-claims`](../skills/verify-claims/SKILL.md)
 
-Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct.
+Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
@@ -596,7 +596,7 @@ Historical name: ios-journey-verification.
 
 [`address-review`](../skills/address-review/SKILL.md)
 
-Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it.
+Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: bounded-execution.
 
@@ -616,7 +616,7 @@ Historical name: alignment-interview.
 
 [`assess-change-impact`](../skills/assess-change-impact/SKILL.md)
 
-Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses.
+Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
@@ -656,7 +656,7 @@ Historical name: prototype-spike.
 
 [`choose-workflow`](../skills/choose-workflow/SKILL.md)
 
-Suggests a workflow when a user asks which skill to use, where to start, or how to finish existing work. Returns a route, context needs, and a copyable prompt without executing it.
+Suggests a workflow when a user asks which skill to use, where to start, or how to finish existing work. Returns a route, context needs, and a copyable prompt without executing it. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
@@ -696,7 +696,7 @@ Historical name: new in 0.19.
 
 [`diagnose-failure`](../skills/diagnose-failure/SKILL.md)
 
-Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix.
+Diagnoses failures when asked \"why is the build failing\", \"why did this regress\", or \"what caused this error\"; reproduces and tests hypotheses before proposing a fix. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: bounded-execution.
 
@@ -806,7 +806,7 @@ Historical name: domain-vocabulary-modeling.
 
 [`plan-change`](../skills/plan-change/SKILL.md)
 
-Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization.
+Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
@@ -816,7 +816,7 @@ Historical name: implementation-planning.
 
 [`plan-tests`](../skills/plan-tests/SKILL.md)
 
-Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence.
+Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence. Loads before file inspection when the request matches.
 
 Invocation: implicit. Risk class: read-only.
 
