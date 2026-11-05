@@ -4,6 +4,11 @@ Status: observed on November 5, 2026. All three CLIs passed every step for all f
 packs. This covers packaging only. No model prompt ran, so it does not show that a
 skill loads or works in a fresh task.
 
+Rerun on the same day after the
+[safety fixes](skill-security-review-2026-11-05.md) changed `measured-quality` and
+`measured-stacks`. The rerun used every pack, not only the changed ones, and [its result](#rerun-on-the-safety-fix-candidate)
+applies to the current candidate. The table below is the first run.
+
 Each CLI ran against a throwaway configuration, so no personal install changed:
 `CLAUDE_CONFIG_DIR` for Claude Code, `CODEX_HOME` for Codex, and a throwaway `HOME` for
 Antigravity. A before-and-after hash of 4,038 real client configuration files showed no
@@ -14,7 +19,8 @@ for the method.
 Allowed results are `pass`, `fail`, `blocked`, `not_supported`, and `not_run`.
 A `blocked` row is not a claim.
 
-Frozen candidate: `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`.
+First run candidate: `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`.
+Current candidate: `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`.
 Rollback target: `v0.16.0`.
 
 | Check | Value |
@@ -80,3 +86,18 @@ second run. Raw receipts are retained privately, outside this repository.
   left no plugin files.
 - **Upgrade and downgrade** cross the rename from `jovanipink-*` to `measured-*`. Disable
   the old identities before enabling new ones.
+
+## Rerun on the safety fix candidate
+
+Status: observed on November 5, 2026, on source `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`. The same steps and client versions
+ran on the same Mac, in throwaway configurations, with no model prompt.
+
+- All 225 lifecycle commands exited 0, and all 10 steps passed on each CLI.
+- Each source pack matched its manifest hash before the run.
+- File counts match the table above for every pack, because the fixes changed text and
+  added no files.
+- Claude Code again left 426 cache files after removal. Codex and Antigravity left none.
+- Hashes of 3,266 real plugin and settings files did not change.
+
+The limits above still apply. No fresh task ran, so this does not show that the new
+safety rules load or that an assistant follows them.
