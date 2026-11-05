@@ -1,6 +1,6 @@
 # Claude setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Claude Code 2.1.316. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
 
 Before copying a command, follow [installed-name and missing-entry guidance](../start.md#use-the-guide-with-the-skills-you-actually-have). Remove an unavailable native command before sending an ordinary request; do not rely on fallback text after an unknown slash command.
 
@@ -30,12 +30,23 @@ Check personal, project, plugin, managed, account-synced and bundled skills for 
 Replace the example path with your local checkout. These commands change your install:
 
 ```sh
-claude plugin marketplace add /absolute/path/to/skills --scope user
+claude plugin marketplace add /absolute/path/to/measured-skills --scope user
 claude plugin install measured-quality@measured-skills --scope user
 claude plugin list --json
 ```
 
 The install argument is `plugin@marketplace`. The marketplace is `measured-skills`; the four packs have distinct names. For example, `measured-quality@measured-skills` selects the Quality pack.
+
+For all four packs, repeat the install with `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. To turn a pack off, or remove it, use:
+
+```sh
+claude plugin disable measured-quality@measured-skills --scope user
+claude plugin uninstall measured-quality@measured-skills --scope user
+claude plugin marketplace remove measured-skills
+claude plugin list --json
+```
+
+On 2.1.316, removal left the pack's files in `plugins/cache/`, and the list stopped showing the pack. A directory marketplace reports its own folder as `readFromFolder`, so check that folder as well as the cache.
 
 For an existing install, refresh the marketplace before updating the plugin. Use `claude plugin marketplace update --help` and `claude plugin update --help` to check the current command form. Save the old version and file hashes first. Check every installed file after the update. In the observed 2.1.220 update, all seven packs moved to 0.11.0 and their files matched the generated source. The desktop plugin pages also showed the new version; that did not establish behavior in an existing task. In 2.1.280, `claude plugin uninstall` and `claude plugin marketplace remove` removed a pack from the inventory but left its files in `plugins/cache/`. Check removal with a fresh task, not only the file tree. For a local directory marketplace, a 2.1.281 session loaded each plugin from the marketplace folder when the folder still contained it, not from that cached copy. A session whose marketplace folder no longer contained its installed plugins loaded them from `plugins/cache/` instead.
 

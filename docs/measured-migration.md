@@ -4,7 +4,9 @@ Measured Skills is maintained by Measured Studios. The homepage is https://measu
 
 ## Identity mapping
 
-| Previous identity | New identity |
+This table is the 0.16 to 0.17 step. Its new names are not the current packs: 0.19 moved those skills into four packs. See [Moving to 0.19](migration-0.19.md).
+
+| Previous identity | 0.17 identity |
 | --- | --- |
 | jovanipink-skills marketplace and core pack | measured-skills marketplace and core pack |
 | jovanipink-engineering | measured-engineering-build, measured-engineering-review, measured-engineering-delivery |
@@ -30,11 +32,11 @@ The 0.18.0 candidate keeps every pack name and skill name from 0.17.x, so there 
 
 ## Focused build selection
 
-Enable `measured-engineering-build` and stage only `cross-stack-quality-gates` plus the primary language profile. They are available tools, not seven mandatory ceremonies.
+Stage only `run-project-checks` plus the primary language profile, or use the `finish-work-core` profile with a stack. These are available tools, not mandatory ceremonies.
 
 ```sh
-python3 scripts/export_selected.py --client codex --output dist/build-extras-codex --skill cross-stack-quality-gates --skill typescript-javascript-engineering-profile
-python3 scripts/export_selected.py --client claude --output dist/build-extras-claude --skill cross-stack-quality-gates --skill typescript-javascript-engineering-profile
+python3 scripts/export_selected.py --client codex --output dist/build-extras-codex --skill run-project-checks --skill stack-typescript-javascript
+python3 scripts/export_selected.py --client claude --output dist/build-extras-claude --profile finish-work-core --stack stack-typescript-javascript
 ```
 
 Use a new staging directory for each export. Review its manifest before a separate, authorized installation. The tool refuses explicit-only skills; supported plugin controls remain their route. It changes no client configuration.

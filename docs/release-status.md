@@ -2,8 +2,8 @@
 
 ## Current state on November 5
 
-The November 5 work is merged. `main` is `1beb94a82c11533f43c934771f797f035d63290c`, and
-[validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42069818142)
+The November 5 work is merged. At this update, `main` was `d241ac8116ae8d638115890e7414c8fab7f84488`, and
+[validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42073899987)
 passed. Nothing is tagged or released. The 0.19.0 preview still has 90 skills in four
 packs: 73 implicit and 17 explicit-only.
 
@@ -25,15 +25,16 @@ frozen candidate is. It does not authorize a tag or a Release.
 | Repository checks | Passed on merged `main` (linked above). Each later head needs its own run | Hosted CI on the exact head |
 | Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
 | Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates. A later usage readback showed extra usage off, but the maintainer has not confirmed it in Settings | The maintainer, by reading the account's usage |
-| Online sources | Reviewed, final check still open. The [November 5 review](audits/source-review-2026-11-05.json) read all 31 changed sources and found no wrong skill instruction, so no skill text changed. The [online check](audits/source-check-final-2026-11-05.json) then matched 69 of 69. No old page text existed, so this reviews current content, not what changed. Two `ai.google.dev` sources now redirect to `aistudio.google.com` | Recheck on the exact tagged commit |
+| Online sources | Reviewed, final check still open. The [November 5 review](audits/source-review-2026-11-05.json) read all 31 changed sources and found no wrong skill instruction, so no skill text changed. The [online check](audits/source-check-final-2026-11-05.json) then matched 69 of 69. No old page text existed, so this reviews current content, not what changed. Two `ai.google.dev` sources now redirect to `aistudio.google.com`, as do the two matching links in `docs/google-agent-surfaces.md`. About an hour later, two sources had drifted again: TypeScript by build asset names only, and the Google agent platform overview, which is not yet reviewed | Recheck on the exact tagged commit |
 | Human chooser usefulness | Open. Ten-card exercise unscored. [Results go here](acceptance-0.19.md#ten-card-results) | A real participant |
 | Install lifecycle | Passed on the frozen candidate. [All four packs](audits/lifecycle-0.19.0.md) passed install, upgrade, downgrade, uninstall, and reinstall on Claude Code, Codex, and Antigravity CLIs, in throwaway configurations. This covers packaging only. No fresh task ran | Closed for these three CLIs |
-| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin. The prepared packet must be rebuilt: 11 skill files changed since `d85c7b59` and the discovery export is now about 909 KB, past the 256 KB client read limit seen on November 2 | A separately decided task |
+| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin. The corrected packet is still unrun and must be rebound, because all nine staged `SKILL.md` files changed since `d85c7b59`. Its frozen evidence carries a small identity extract, so the larger current export does not reach it | A separately decided task |
 | Codex and Antigravity | Open. No new evidence. Unclaimed for 0.19.0 | The maintainer, after their controls are verified |
 | Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified. Unclaimed for 0.19.0 | The maintainer, by separate authorization |
 | Apps and second Mac | Open. No new observations. Unclaimed for 0.19.0 | The maintainer, on each intended surface |
 | Dotfiles companion | Not a tag gate. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, and no release rule depends on it | The maintainer |
 | Candidate freeze | Set when PR 91 merged. The manifest names `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
+| Native eval suite | Exploratory, not a gate. One `routing-specialist` pass ran on the imperative wording. The other four arms are unrun, and each needs the maintainer's yes | Not applicable |
 | Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
 | Public chooser | Open. This is a website gate, not a tag gate. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
 | Release | Open. No tag or published Release | The maintainer's separate decision |

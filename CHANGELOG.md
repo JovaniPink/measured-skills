@@ -16,6 +16,10 @@ All notable changes use this file. The project follows semantic versioning after
 - Ask the assess request to include uncommitted work and stashes. In one synthetic November 5 task on Claude Haiku 5.5, stash detection rose from 18 of 54 runs to 19 of 19.
 - Add one third-person sentence to the nine core descriptions. On the same model, activation in the full catalog rose from 1 of 32 to 8 of 32 in each of two runs, and no near-miss case fired its own skill (0 of 31). The gain did not hold under a forced 8,000 character listing. `measured-workflows` now carries a discovery budget warning. See the [exploration record](docs/audits/haiku-exploration-2026-11-05.md).
 - These are preview observations for one model and client. They are not client qualification.
+- Lead the public entry with copied requests, and present skills as an optional preview.
+- Add a native `claude plugin eval` suite in `evals/plugin-eval`. Runs are paid and close no gate.
+- Accept a release decision that limits what 0.19.0 can claim, and define the freeze and tag steps.
+- Fix migration commands that used removed names, and add removal steps to the client guides.
 - Record a passing install lifecycle for all four packs on Claude Code, Codex, and Antigravity CLIs. This covers packaging only.
 - Review the 31 upstream sources that changed by November 5. No skill instruction changed.
 - Remove release state from generated chooser and pack text, so those files stay true before and after a tag. Status now lives in docs/release-status.md.

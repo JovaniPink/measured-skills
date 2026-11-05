@@ -15,17 +15,27 @@ does not authorize tagging or turn its old client observations into new acceptan
 2. Regenerate client trees and marketplaces.
 3. Package individual Claude.ai ZIPs twice and compare checksums.
 4. Run open-spec, client adapter, schema, link, boundary, trigger, fixture, drift, and unit validations.
-5. Install, upgrade, downgrade, uninstall, and reinstall every affected plugin on each supported CLI surface.
-6. Record Desktop, web, API, and command-line observations separately. Historical blocked records remain historical. Create a terminal row only after it can be recorded as `pass`, `fail`, or genuinely `not_supported`; do not use a placeholder row to imply acceptance.
-7. Build the release manifest from the exact tested source commit and artifact checksums. Run `python3 scripts/build_release_manifest.py --source-commit <full commit hash>` on a clean checkout whose HEAD is that commit, then commit only the manifest.
-8. Open and review a release PR. Merge, tagging, public-directory submission, and publication remain separately authorized.
-9. When tagging is authorized, use `vX.Y.Z` only after the manifest and exact merged commit agree.
+5. Build the release manifest from the exact tested source commit and artifact checksums. Run `python3 scripts/build_release_manifest.py --source-commit <full commit hash>` on a clean checkout whose HEAD is that commit, then commit only the manifest.
+6. Set the freeze. Open and review a release PR, and merge it with a merge commit. A release decision defines what the frozen candidate is and which bytes may still change.
+7. On the frozen candidate, install, upgrade, downgrade, uninstall, and reinstall every affected plugin on each claimed CLI surface.
+8. Record Desktop, web, API, and command-line observations separately. Historical blocked records remain historical. Create a terminal row only after it can be recorded as `pass`, `fail`, or genuinely `not_supported`; do not use a placeholder row to imply acceptance.
+9. Run the human and client gates the release decision names, and report any miss as it happened. If a behavior gate fails or does not run, remove that claim.
+10. Tag only through the sequence below. Merge, tagging, public-directory submission, and publication remain separately authorized.
 
-"Agree" means `python3 scripts/validate.py` passes on the commit being tagged, hosted CI passed on that same commit, and the tag equals `v` plus the catalog version. Tag pushes do not run CI, so read the result first. A release can also define a freeze, narrower claims, and a rollback target in its own decision record. See [the 0.19.0 decision](audits/release-decision-0.19.0.md).
+## Tag a release
+
+Upstream sources move often, and tag pushes run no CI, so do these steps in one sitting.
+
+1. Open one PR with the tag-time text, any reviewed repins, and a manifest-only commit if pins moved. Word the text to be true once the tag exists. Rebind the delta, then merge with a merge commit.
+2. On that merge commit, read the hosted CI result and run the online check: `gh workflow run upstream-freshness.yml`, plus `python3 scripts/check_upstream_freshness.py --online --output <receipt>`.
+3. If it passes, compare the manifest's artifact hashes with the freeze. Only `catalog/upstream-pins.json` and `catalog/upstream-reviews.json` may differ. Then tag that commit as `vX.Y.Z`.
+4. If a source moved, review it individually, keep the failed receipt, and repeat from step 1. A repin moves `source_commit`; the artifact hashes are what must stay the same.
+
+"Agree" means `python3 scripts/validate.py` passes on the commit being tagged, hosted CI passed on that same commit, and the tag equals `v` plus the catalog version. See [the 0.19.0 decision](audits/release-decision-0.19.0.md) for an example of a freeze, narrower claims, and a rollback target.
 
 ## Rollback
 
-Reinstall the last accepted tag, verify its release manifest and checksums, then repeat discovery, implicit activation, explicit-only controls, focused-reference loading, and uninstall tests. A repository rollback does not prove already installed clients changed.
+Reinstall the rollback target named in the release decision, verify its release manifest and checksums, then repeat discovery, implicit activation, explicit-only controls, focused-reference loading, and uninstall tests. A repository rollback does not prove already installed clients changed. The rollback target may not have accepted behavior, so state that when you use it.
 
 ## Deprecation
 

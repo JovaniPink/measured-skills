@@ -1,6 +1,6 @@
 # Codex setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). New packages have no installed-client acceptance. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Codex CLI 0.161.0. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
 
 Before copying a command, follow [installed-name and missing-entry guidance](../start.md#use-the-guide-with-the-skills-you-actually-have). An older installed pack does not supply a renamed 0.19 entry.
 
@@ -28,10 +28,20 @@ Look for old copies in personal or project skill folders as well as the plugin c
 Replace the example path with your local checkout. These commands change your install:
 
 ```sh
-codex plugin marketplace add /absolute/path/to/skills
+codex plugin marketplace add /absolute/path/to/measured-skills
 codex plugin add measured-quality@measured-skills
 codex plugin list --json
 ```
+
+For all four packs, repeat the add with `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. To remove a pack, use:
+
+```sh
+codex plugin remove measured-quality@measured-skills
+codex plugin marketplace remove measured-skills
+codex plugin list --json
+```
+
+On 0.161.0, removal left no cache files. The CLI has no disable command. To turn a pack off without removing it, set `enabled = false` under `[plugins."measured-quality@measured-skills"]` in `config.toml`, then confirm with `codex plugin list --json`.
 
 Open a fresh task after the install. Select a skill by its full plugin name:
 
@@ -55,6 +65,6 @@ Review personal preferences in Codex user instructions separately from the packa
 
 Follow the [shared client checks](../client-support.md) for updates, removal, and evidence. Check native `--help` before an update or uninstall; command forms can change.
 
-If a check fails, stop that pack's update batch. Turn it off in plugin settings, or restore the saved reviewed package through the native install route. Check the resulting state in a fresh test task. Keep the other packs and active user tasks intact.
+If a check fails, stop that pack's update batch. Turn it off in the desktop app's plugin settings or in `config.toml` for the CLI, or restore the saved reviewed package through the native install route. Check the resulting state in a fresh test task. Keep the other packs and active user tasks intact.
 
 Sources: [OpenAI skill guide](https://learn.chatgpt.com/docs/build-skills), [OpenAI plugin guide](https://developers.openai.com/plugins/build/plugins).

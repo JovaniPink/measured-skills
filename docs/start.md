@@ -3,7 +3,7 @@
 Start with [the offline chooser](../dist/discovery/index.html) or its
 [plain-text guide](../dist/discovery/guide.md). Download the HTML file and open it
 locally; GitHub shows its source. It needs no server, login, network or installation.
-The Studio's `/skills` page uses the same revision-pinned records when published.
+The Studio's `/skills` page pins its own export, which can be older. Compare the source revision shown there.
 
 ## Check which source you opened
 
@@ -92,8 +92,8 @@ Keep the copied requests as exercise responses.
 ## Use the guide with the skills you actually have
 
 The chooser describes the 0.19 preview, not your installed inventory. If your
-client still has 0.18, a 0.19 command can be missing even though its older capability
-exists. Check the [name and pack migration](migration-0.19.md); do not combine an
+client still has `v0.16.0` or 0.18, a 0.19 command can be missing even though its older
+capability exists. Check the [name and pack migration](migration-0.19.md); do not combine an
 old pack name with a new skill name or install an alias to make a prompt work.
 
 Before sending a Codex or Claude Code prompt, select the exact installed entry.

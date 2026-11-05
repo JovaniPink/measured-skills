@@ -57,6 +57,8 @@ uses this mode. Keep changed or unavailable sources visible; an offline pass or
 a green catalog job does not clear an online freshness hold. This distinction
 does not change the existing freshness policy or authorize pin replacement.
 
+The review age is 90 days from `reviewed_on`, which is now 2026-11-05. The offline check, and so `scripts/validate.py` and CI, fails from 2027-02-04 unless a new review advances that date.
+
 Content hashes cover complete document bytes after declared HTTP content decoding.
 The fetcher requests identity encoding and also decodes gzip when the publisher
 returns it. Unsupported coding and corrupt gzip fail closed. This is transport
@@ -84,9 +86,13 @@ Run Codex's bundled skill validator for every canonical skill and the bundled pl
 
 `evals/cases.json` is a deterministic coverage contract, not a claim that every client model behaves identically. Execute the cases on each supported surface and record observed activation or refusal separately in `docs/manual-smoke-tests.md`.
 
+## Native eval suite
+
+[`evals/plugin-eval`](../evals/plugin-eval/README.md) holds routing and behavior arms for `claude plugin eval`. These are paid runs that need the maintainer's yes for each arm. They are exploratory and close no gate. A pass is not client acceptance.
+
 ## Release gate
 
-A release requires green automated checks, clean generated trees, all required trigger cases, and completed manual evidence for every surface claimed as supported. A pending manual surface blocks parity claims and public-directory submission, not local authoring.
+A release can narrow its claims through a reviewed [release decision](audits/release-decision-0.19.0.md), which then defines the gates for that release. A release requires green automated checks, clean generated trees, all required trigger cases, and completed manual evidence for every surface claimed as supported. A pending manual surface blocks parity claims and public-directory submission, not local authoring.
 
 ## Current evidence links
 

@@ -10,7 +10,7 @@ acceptance work remain separate.
 3. Replace the placeholders with your repository, task, comparison revision, plan,
    and PR where needed. Let the assistant discover real paths and commands.
 4. Check which installed entry matches. If absent, remove its leading native
-   command and use ordinary task wording, recording that no skill loaded.
+   command and use ordinary task wording, recording that skill loading is unverified.
    See [missing-entry guidance](start.md#use-the-guide-with-the-skills-you-actually-have).
    Do not invent a command or install a replacement
    merely to continue authorized work.

@@ -22,6 +22,10 @@ The file `releases/<version>/manifest.json` records hashes of the generated pack
 3. Commit only `releases/<version>/manifest.json`.
 4. Push both commits together. CI on the first commit alone fails by design.
 
+Every changed tracked file also needs its row in `docs/audits/post-acceptance-delta-2026-10-20.json`: update `after_sha256` and extend the review text. A new file gets a row with a `null` `before_sha256`. `tests/test_noncanonical_disposition.py` fails without this.
+
+During a freeze, read [the release decision](docs/audits/release-decision-0.19.0.md#freeze) first. Changing a covered byte, other than a reviewed repin, ends the freeze and forces lifecycle and acceptance reruns.
+
 Expected result: `python3 scripts/validate.py` ends with `All deterministic catalog validations passed.`
 
 Merge the pull request with a merge commit. The check needs the source commit to stay in history, and a squash or rebase merge removes it.

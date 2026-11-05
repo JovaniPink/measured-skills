@@ -7,11 +7,15 @@ Current preview inventory: 90 canonical skills in four packs. The 0.19 discovery
 and identity migration retains the 0.18 candidate as historical source. Validation
 results for this change are recorded separately; earlier counts below are historical.
 
-See the [current 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
+See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
 Current test suite: 382 regression tests.
+
+## November 5 lifecycle, sources, and eval suite
+
+The [install lifecycle](audits/lifecycle-0.19.0.md) passed for all four packs on Claude Code 2.1.316, Codex 0.161.0, and Antigravity 1.4.7, in throwaway configurations. This covers packaging only. The [source review](audits/source-review-2026-11-05.json) read all 31 changed sources and changed no skill text, and its [online check](audits/source-check-final-2026-11-05.json) matched 69 of 69 at that moment. The [native eval suite](../evals/plugin-eval/README.md) had one `routing-specialist` pass on the imperative wording, so it says nothing about the shipped third-person sentence. None of these is client acceptance.
 
 ## November 4 optional explanation and scope review
 

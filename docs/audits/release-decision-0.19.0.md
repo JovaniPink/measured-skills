@@ -91,9 +91,11 @@ The preserved 0.18 source was never tagged, so it is not a public rollback targe
 These files describe the preview and are not in the manifest, so they can change after
 acceptance without touching plugin bytes:
 
-- `README.md`, `SECURITY.md`, and `docs/start.md`
+- `README.md`, `SECURITY.md`, `docs/start.md`, `docs/quickstart.md`, and `docs/README.md`
 - `CHANGELOG.md`, which also has to move the 0.19.0 section out of `[Unreleased]`
 - `docs/client-candidate-v0.19.0.md` and `docs/release-status.md`
+- `docs/client-support.md`, `docs/migration-0.19.md`, and `docs/clients/*.md`
+- the introductions of `docs/validation-evidence.md` and `docs/manual-smoke-tests.md`
 
 ## Open at tag time
 
@@ -101,3 +103,14 @@ acceptance without touching plugin bytes:
 - Install guidance that pins the tag. `docs/quickstart.md` no longer has it, and
   marketplace entries use relative paths, so a tag alone pins nothing.
 - Directory submission and account ZIP uploads, which stay separate.
+
+## Amendment on November 5, 2026
+
+The maintainer accepted these two additions with the docs plan. They add detail and change no
+claim or gate.
+
+- A reviewed repin moves `source_commit` off the frozen commit, because the pins are covered by
+  the manifest. The chooser source does not move. So freeze continuity means the artifact hashes
+  stay the same, apart from the two pin files, not that `source_commit` stays the same.
+- The list of text to change when tagging now includes every file that says "preview". The steps
+  are in [the release process](../release-process.md#tag-a-release).

@@ -28,9 +28,9 @@ Release. Human usability and receiving-client acceptance remain separate work.
 - [Continue unfinished work](docs/finish-existing-work.md) or [develop a feature](docs/feature-development-workflow.md).
 - [Upgrade or roll back deliberately](docs/migration-0.19.md); old and new names must not become duplicate installations.
 
-The website preview, offline guide, and in-client `choose-workflow` reference use
-one versioned registry. The website consumes a committed export; it does not fetch
-mutable `main` at runtime. Selecting a route executes nothing. Sending its prompt
+The offline guide and in-client `choose-workflow` reference use one versioned
+registry. The website consumes its own committed export, which can be older; it does
+not fetch mutable `main` at runtime. Selecting a route executes nothing. Sending its prompt
 asks the assistant to perform the scope written in that prompt.
 
 ## Four packs, focused selections
@@ -53,7 +53,9 @@ daily and finish-work profiles retain their history with mapped 0.19 identifiers
 Codex and Claude Code projections contain 90 skills. Antigravity contains the 73
 implicit skills; all 17 explicit-only workflows remain excluded. Account archives
 are prepared separately, and explicit-only uploads remain held until the receiving
-surface's invocation control is verified. Packaging is not installation acceptance.
+surface's invocation control is verified. Packaging is not installation acceptance:
+the four packs [passed install, upgrade, downgrade, uninstall, and reinstall](docs/audits/lifecycle-0.19.0.md)
+on three CLIs, which says nothing yet about how they behave in a task.
 
 Use the [Codex](docs/clients/codex.md), [Claude](docs/clients/claude.md), or
 [Antigravity](docs/clients/antigravity.md) guide for the installed interface. Check
