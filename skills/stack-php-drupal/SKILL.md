@@ -27,6 +27,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Do not assume a global Composer, Drush, PHP, database, or local-environment command when the repository defines its own tooling.
 - Do not install modules, update the lockfile, import configuration, run update hooks, alter content, deploy, or mutate shared state merely to run a gate.
 - Separate static review, executed checks, local-site behavior, configuration import evidence, deployment, and live behavior.

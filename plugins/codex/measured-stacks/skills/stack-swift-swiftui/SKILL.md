@@ -54,6 +54,7 @@ Read [memory and lifetime diagnosis](references/memory-diagnosis.md) when alloca
 
 - Do not invent one universal command or replace repository policy with generic preferences.
 - Do not install, upgrade, publish, deploy, apply, or mutate shared state merely to run a gate.
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Separate static review, executed checks, build evidence, provider state, and live behavior.
 - Do not change entitlements, capabilities, signing, HealthKit authorization, or CloudKit schemas to make a check pass. Report the gap and name who can approve the change.
 

@@ -32,6 +32,7 @@ Identify the repository, language, installed ADK version, intended users, runtim
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Google Agents CLI is optional developer tooling, not an ADK runtime dependency or a source of product authority.
 - Experimental tool confirmation is not durable approval for real external writes. A production design needs authenticated approvers, external decision state, idempotency, replay protection, and audit evidence.
 - An ADK runtime bundle must not be downloaded from a mutable branch during a run.

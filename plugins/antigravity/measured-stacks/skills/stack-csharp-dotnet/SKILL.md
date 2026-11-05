@@ -27,6 +27,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Do not invent one universal `dotnet` command or replace repository policy with generic preferences.
 - Do not restore from an unapproved feed, install tools, update packages, apply a database migration, publish, deploy, or mutate shared state merely to run a gate.
 - Separate static review, executed checks, build evidence, migration evidence, provider state, and live behavior.

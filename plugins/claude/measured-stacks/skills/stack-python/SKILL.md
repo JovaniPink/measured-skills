@@ -28,6 +28,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 - Do not invent one universal command or replace repository policy with generic preferences.
 - Do not install, upgrade, publish, deploy, apply, or mutate shared state merely to run a gate.
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Separate static review, executed checks, build evidence, provider state, and live behavior.
 
 ## Output

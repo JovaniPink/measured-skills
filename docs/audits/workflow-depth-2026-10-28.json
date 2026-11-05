@@ -42,8 +42,8 @@
     },
     "skills/stack-gcp-data/SKILL.md": {
       "before_sha256": "bcaea62084c8a64a9a66fcaf57a82cc0731dcff241f1c43800946e22bb503b5b",
-      "after_sha256": "058fd706fae1d4b47bc4f4d1a691074146b18a1f6976c2785edb5a11d7e495de",
-      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary."
+      "after_sha256": "474e7412efcec2d7b83fb2e990604dea28e23617ccb0dab1ef35d61bb8481b33",
+      "review_reason": "Reviewed replay identity, correction, retry and reconciliation scenarios; preserved earlier clock/example protections and provider boundary. November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
     },
     "skills/stack-gcp-data/references/replay-review.md": {
       "before_sha256": null,
@@ -52,8 +52,8 @@
     },
     "skills/stack-postgresql-sql/SKILL.md": {
       "before_sha256": "79ab4764ae06ce9c0d2efc9c3166e6f28ea2245ec044c26c977d4218b17b55cf",
-      "after_sha256": "9ff9f52b980df1b72f9d0285d2e9ec97f1602d338ec2c57eb9cfd7f9c8948619",
-      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority."
+      "after_sha256": "ce8f9930d05eb317d7aad8d212df644cb0b2a5a12a49f110c7279842aa400788",
+      "review_reason": "Reviewed PostgreSQL 18 plan distinctions and ANALYZE execution boundary; no live query authority. November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
     },
     "skills/stack-postgresql-sql/references/query-plans.md": {
       "before_sha256": null,
@@ -62,8 +62,8 @@
     },
     "skills/stack-swift-swiftui/SKILL.md": {
       "before_sha256": "1990f3fc97b62c27b5dffd9d9aabac0a0ea9556fe2f396de5bf76741dac63db9",
-      "after_sha256": "188e0acb4cc617180b9a74377da7b619afa41d2544be361779b923fd0b720cd7",
-      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results."
+      "after_sha256": "7dc772d7ab659bcb11101674de267c7618cf059422b8038ea0d2979d7df38240",
+      "review_reason": "Reviewed official Apple memory/performance Markdown; synthetic examples separated from actual trace and device results. November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
     },
     "skills/stack-swift-swiftui/references/memory-diagnosis.md": {
       "before_sha256": null,
@@ -157,8 +157,68 @@
     },
     "skills/run-project-checks/SKILL.md": {
       "before_sha256": "137202bb8fbf4621aeeddfbd854cbc90cc13ebd0aa4f962d92e849a15f923655",
-      "after_sha256": "37201f4a9a68f1b7947a3160adf2495af2b08781a59b1e8447472638983dffb3",
-      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+      "after_sha256": "ee167dfb8d8ec9eec89cb403a0c59033f87b910f30cd6fab5d5199e7fe736729",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/check-launch-readiness/SKILL.md": {
+      "before_sha256": "75e984fea9021f49015002021f89afefd13679a7f321fa3a58550cab64438f35",
+      "after_sha256": "0b6f7859bd4757b266f06d395da52649f7ce6069725f35fab36eb90c81b5741f",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/review-public-boundary/SKILL.md": {
+      "before_sha256": "67851cfd66ab3e94cb46573e7aafe115071266124be853b514cdc6fcf55d380a",
+      "after_sha256": "0c227694894c954043d3f254662bae5d6a4b297688e4d8b9fabcc0ad65b7d8df",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-adobe-aem/SKILL.md": {
+      "before_sha256": "de339fb824f1590ec99269ad64b0dcb00bfcbfdc877e058a4100def77d27d7fc",
+      "after_sha256": "0dd355a277595dec8c9247d307c293fb7a6bd2db2655d9539df184684b936974",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-csharp-dotnet/SKILL.md": {
+      "before_sha256": "2f9137c8b990d4ff3753416942105fbebaf184c87ccf33ada2600ed7a4d465ae",
+      "after_sha256": "8cd8e390f8f7fffbc837a6881ba0f07839f55e649379b63beda4ff133b5b78c7",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-go/SKILL.md": {
+      "before_sha256": "6d6081f51f5f1002a031392ade41c3e05456e0c310b22ea0af64491ef2f598ea",
+      "after_sha256": "f6dac7787e56bdc839fb36cd730dc1aadc751eb7bf92086bf61d4d12fcac8ae9",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-google-adk/SKILL.md": {
+      "before_sha256": "91b4ce8d7f3555755204a8b862e46e8f616e9c47773942bc103ea47609eb5b10",
+      "after_sha256": "b03e18abe1210c389674fa37b571103e7a5af1c7e4a3fdd4993d83d3856e8efe",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-java-spring/SKILL.md": {
+      "before_sha256": "b3d6edcf5faebf203815a3ed708861bbe0477610f3221351d6bcb1507d8f8cd9",
+      "after_sha256": "036bdcb767cd465ebf6910a56616db6e14bfd7746f90df1de53f6ce0bb81e872",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-php-drupal/SKILL.md": {
+      "before_sha256": "5e1b4249a86f18be9318fc240b5fc99d4489ed87581f358c29cb27c0538123e2",
+      "after_sha256": "31f0984b7cf1583ea4fa9a8969667b448d9b402008aef077abbdcd558a53664d",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-python/SKILL.md": {
+      "before_sha256": "bc75bd368f762eb2fac21da598de5ca0dd7649bf38a934f742ab0fa6dbb3bc49",
+      "after_sha256": "6d6ebbb04983cf1b26a98e303a6272f86738a080672c77d50bad764c336bf185",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-salesforce-apex/SKILL.md": {
+      "before_sha256": "ee461f39fcfb62474cd5fab805571a88714041d650db72bbe80a3e083a58b078",
+      "after_sha256": "6dc9242c0e66fcfddf517e77304597b0ffd118e807e31e13798dd34575767387",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-terraform/SKILL.md": {
+      "before_sha256": "f12de5c2700f6e61ca51730ffc54bc426f48b5627b7f967e93357b61f1427075",
+      "after_sha256": "42c6bcdcf60b9f08ca45cbb29d7ce2cadcb30a66651f90230fa31f5309c14b10",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/stack-typescript-javascript/SKILL.md": {
+      "before_sha256": "80e89331e53a9479aefd4189f64d48e8b76c9f0fe5895b4ad8a51e97e889f7ca",
+      "after_sha256": "008244536d1bab06b9ae32b309318ae48fdf891e48370a4f1217403b550dc25a",
+      "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
     }
   }
 }

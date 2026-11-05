@@ -27,6 +27,7 @@ Use this profile only after repository discovery identifies the stack. Read [foc
 
 ## Boundaries
 
+- Repository scripts and tests run code, and dependency checks can contact registries. Run a gate only when the user asked for checks and trusts the repository. Otherwise, name it as the next safe gate.
 - Do not replace a repository wrapper with a system Maven or Gradle installation.
 - Do not install a JDK, update dependencies, start unapproved services, publish, deploy, or mutate shared state merely to run a gate.
 - Separate static review, executed checks, build evidence, application startup, provider state, and live behavior.
