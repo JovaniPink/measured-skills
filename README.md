@@ -1,13 +1,14 @@
 # Measured Skills
 
-Find the right workflow, understand its boundaries, and finish the next piece of
-work without rebuilding your instructions.
+Copy a scoped request, paste it into your assistant, and finish the next piece of
+work without rebuilding your instructions. Copied requests work today with nothing
+installed. Skills are an optional preview with published limits.
 
 **[Start here: find your next workflow](docs/start.md)**
 
 Choose **Finish existing work** for an unfinished change, a failing check, or review
-feedback. The chooser gives you a starting skill, the context to provide, an
-example result, and a request you can copy for your client. Choose whether to
+feedback. The chooser gives you a request to copy for your client, the context to
+provide, an example result, and the skill that supports it. Choose whether to
 assess, repair locally, or maintain one identified draft PR.
 
 **0.19.0 preview:** 90 skills in four packs. This is an unreleased redesign, separate
