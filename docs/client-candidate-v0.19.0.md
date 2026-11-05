@@ -35,7 +35,8 @@ chooser source `cb68f3c666366fa030ab43a008a3d520e2f5be3d`. It replaces the earli
 | Claude Code CLI | [Passed](audits/lifecycle-0.19.0.md) | Not yet run | Behavior claimed only if the bounded task passes |
 | Codex CLI | [Passed](audits/lifecycle-0.19.0.md) | Blocked, no zero-credit control | Packaging only |
 | Antigravity CLI | [Passed](audits/lifecycle-0.19.0.md) | Blocked, isolation unproven | Packaging only |
-| Antigravity IDE, desktop and web apps, second Mac | Not checked | Not checked | Unclaimed |
+| Antigravity IDE and desktop, Claude desktop Code tab | [Listed after upgrade](audits/upgrade-0.18-to-0.19.md#app-read-back) | Not checked | Unclaimed |
+| Other desktop and web apps, second Mac | Not checked | Not checked | Unclaimed |
 
 The [0.18 upgrade record](audits/upgrade-0.18-to-0.19.md) adds the upgrade from the untagged candidate, for packaging only. It used the earlier freeze.
 

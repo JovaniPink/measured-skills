@@ -58,9 +58,28 @@ commands that all exited 0.
   source. No old entries remained in its `settings.json` or in Codex's `config.toml`.
 - An upgrade that stopped halfway rolled back cleanly.
 
+## App read-back
+
+After the real upgrade, each app's own skill list was read on the same Mac. This was before the
+safety-fix refresh, so it shows the earlier candidate. No task ran, so this shows what each app
+lists, not that a skill loads.
+
+| App | Version | Observed |
+| --- | --- | --- |
+| Antigravity IDE | 2.6.0 | 143 skills in one project, with all 73 expected names listed |
+| Antigravity desktop | 2.25.0 | 9 plugins, including the 4 packs and no 0.18 packs. `measured-workflows` showed 19 commands, matching the pack |
+| Claude desktop, Code tab | 4.16336.0 | One session's skill list showed the 4 packs with their new names |
+
+The IDE reported 21,101 of its 20,000 token budget for customizations. It excluded 6 entries, all
+Google skills, and none from these packs. The packs use roughly a third of that budget, so a client
+with more customizations could exclude some of them. How the IDE chooses what to exclude was not
+tested.
+
+Claude desktop Chat and Cowork were not read, because Computer Use cannot control Claude's own app.
+
 ## Not covered
 
 - Skill loading or behavior in a fresh task.
-- Antigravity IDE, desktop apps, web accounts, and a second Mac.
+- Claude desktop Chat and Cowork, the ChatGPT app, web accounts, and a second Mac.
 - Account uploads. All 69 account skills from 0.18 were renamed, so they cannot be replaced
   in place.
