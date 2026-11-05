@@ -1,6 +1,6 @@
 ---
 name: choose-workflow
-description: "Suggests a workflow when a user asks which skill to use, where to start, or how to finish existing work. Returns a route, context needs, and a copyable prompt without executing it."
+description: "Suggests a workflow when a user asks which skill to use, where to start, or how to finish existing work. Returns a route, context needs, and a copyable prompt without executing it. Load this skill first, before inspecting files, whenever the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

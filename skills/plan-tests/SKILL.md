@@ -1,6 +1,6 @@
 ---
 name: plan-tests
-description: "Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence."
+description: "Plans tests when asked what to test, which checks matter, or how to cover a risky change; selects proportionate unit, integration, contract, and journey evidence. Load this skill first, before inspecting files, whenever the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
