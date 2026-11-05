@@ -1,6 +1,6 @@
 ---
 name: plan-change
-description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization. Load this skill first, before inspecting files, whenever the request matches."
+description: "Plans a change when asked for implementation steps, acceptance criteria, or a handoff-ready design; resolves interfaces and dependencies before execution without treating the plan as authorization. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

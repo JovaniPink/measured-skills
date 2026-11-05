@@ -1,6 +1,6 @@
 ---
 name: verify-claims
-description: "Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct. Load this skill first, before inspecting files, whenever the request matches."
+description: "Verifies completion and check results when asked whether work is done, a fix is live, or an old receipt still applies after a change from revision A to B; keeps current proof, historical evidence, and missing checks distinct. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

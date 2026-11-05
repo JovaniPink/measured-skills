@@ -1618,4 +1618,4 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Package availability, invocation policy, and observed behavior are separate. This source is not client-qualified; see docs/client-candidate-v0.19.0.md for dated partial observations. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `736699fd175e10b0dbbf903072835b8e867d767a`. File hashes: `catalog.json` alongside this guide.
+Source revision: `e7750b2f1d8c8605817a34d8c89411a0861c6604`. File hashes: `catalog.json` alongside this guide.

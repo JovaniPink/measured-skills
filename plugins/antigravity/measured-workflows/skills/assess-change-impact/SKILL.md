@@ -1,6 +1,6 @@
 ---
 name: assess-change-impact
-description: "Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses. Load this skill first, before inspecting files, whenever the request matches."
+description: "Traces a change's blast radius when asked what might break, which callers depend on it, or what else needs updating; separates traced dependencies from hypotheses. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

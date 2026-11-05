@@ -1,6 +1,6 @@
 ---
 name: address-review
-description: "Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it. Load this skill first, before inspecting files, whenever the request matches."
+description: "Evaluates reviewer comments when asked to address feedback or decide whether a requested fix is valid; checks current code and tests before accepting, rejecting, or deferring it. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"
