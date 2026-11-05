@@ -1,7 +1,8 @@
 # Native plugin eval suite
 
-Status: `prepared_not_run`. This suite has not been executed. No result in this
-folder is an observation, and every paid run needs the maintainer's own yes.
+Status: prepared. One pass of `routing-specialist` has run, as recorded in
+[First run](#first-run). The other four arms have not been executed. Every paid
+run needs the maintainer's own yes.
 
 This is the repeatable form of the November 5 Haiku exploration. It uses
 `claude plugin eval` from Claude Code 2.1.316, so outside readers can rerun the
@@ -40,8 +41,7 @@ starts, so runs already in flight can finish and overrun it slightly. A second
 pass needs its own approval and its own ceiling.
 
 - `routing-specialist` covers the 64 specialist positive cases and each
-  specialist's first near miss. The 64 were not rerun with the added description
-  sentence.
+  specialist's first near miss.
 - `routing-listing-8000` forces an 8,000 character listing. It uses the same 96
   positive cases as the November 5 overflow run.
 - `routing-core` uses all 63 core cases in the full catalog.
@@ -70,7 +70,8 @@ Keep `--no-publish`: without it the report goes to claude.ai when the account
 supports that. `--threshold 0` keeps exit 1 from reading as a failed measurement.
 Exit 2 means the ceiling stopped the run and results are partial.
 
-To compare wording, export the same arm from each clean checkout and run both:
+To compare wording, export the same arm from each clean checkout and run both.
+Compare only runs of this suite. November 5 numbers are not a baseline for it.
 
 ```sh
 python3 scripts/export_plugin_evals.py --arm routing-specialist --source /path/to/other/checkout --output /private/tmp/measured-eval-specialist-other
@@ -126,9 +127,31 @@ Native graders have no custom code, so these are regex, tool, and judge graders.
 `boundary-no-edit`, `boundary-no-write`, and `boundary-no-test-run` count attempts
 from the trace, and the fixture's test file must survive.
 
+## First run
+
+One pass of `routing-specialist` ran on November 5 with Claude Code 2.1.316 and
+Haiku 5.5, against the packs at `7a0da14`, which carry the added description
+sentence. All 128 runs finished at $0.44 list price, and the ceiling did not stop
+it. Raw traces are not kept here.
+
+| Measure | Result |
+| --- | --- |
+| Positive cases that loaded the expected skill | 46 of 64 |
+| Positive cases that loaded another skill | 1 of 64 |
+| Near misses that fired their own skill | 0 of 64 |
+| Near misses that fired any skill | 12 of 64 |
+| Runs that hit the 4-turn limit | 48 of 128 |
+
+**This run does not measure the added sentence.** It has no baseline from this
+suite, and the sentence sits only on the nine core skills. The November 5 result of
+17 of 64 is not comparable. In that run 41 of these 64 prompts first used another
+tool, mostly `Bash`, which this arm does not offer. That is the likely cause of
+much of the gap, but no run has tested it. An export from a checkout without the
+sentence would give the missing baseline.
+
 ## Offline check
 
-No model has run, but the suite did pass through the real loader at no cost. On
+Before the first run, the suite passed through the real loader at no cost. On
 Claude Code 2.1.316 on macOS, one `behavior-long` run and one
 `plan-change-positive-1` run were started with outbound network denied by
 `sandbox-exec`, `ANTHROPIC_BASE_URL` set to a closed loopback port, and a dummy key.

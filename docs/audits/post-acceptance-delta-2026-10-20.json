@@ -12938,7 +12938,7 @@
     "evals/plugin-eval/README.md": {
       "before_sha256": null,
       "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "7dfcbd7ce24c1427fa0154d01c186269508d8c92fd11a4987229645397d7e806"
+      "after_sha256": "f7b2d88a05b8507d159cd2bce6c74ebdf633112e949b3147d13abf347b137e34"
     },
     "evals/plugin-eval/arms.json": {
       "before_sha256": null,
@@ -13018,12 +13018,12 @@
     "scripts/export_plugin_evals.py": {
       "before_sha256": null,
       "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "075663867de23df79ac460cc49cc6c557de3b2510da47438289d6f145209bb55"
+      "after_sha256": "78a6f43f89408b459b2e28ce19c7f2632ecb97f07eb2c10d1f6d1f4eb13c7948"
     },
     "tests/test_plugin_evals.py": {
       "before_sha256": null,
       "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "a9c752b224e892116e543f7b13fc033c119ac2c0d972f55b4992fe7ad0d77c62"
+      "after_sha256": "31b3dce1d92fbd040c0fdc45fd82658020752d0b63eea51f0f35693624b76f61"
     }
   },
   "additional_payload_exclusions": [

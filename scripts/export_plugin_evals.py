@@ -38,14 +38,15 @@ def git(checkout: Path, *args: str) -> str:
 
 
 def load_arms(suite: Path = SUITE) -> dict[str, Any]:
-    document = load_json(suite / 'arms.json')
+    document: dict[str, Any] = load_json(suite / 'arms.json')
     if document.get('format_version') != 1 or document.get('status') != 'prepared_not_run':
         raise ValueError('unsupported arm definition')
     return document
 
 
 def find_arm(document: dict[str, Any], arm_id: str) -> dict[str, Any]:
-    for arm in document['arms']:
+    arms: list[dict[str, Any]] = document['arms']
+    for arm in arms:
         if arm['id'] == arm_id:
             return arm
     raise ValueError(f'unknown arm: {arm_id}')
@@ -134,7 +135,7 @@ def assess_prompt(source: Path, settings: dict[str, Any]) -> str:
     routes = load_json(source / 'catalog/workflows.json')['routes']
     route = next(row for row in routes if row['id'] == settings['route'])
     mode = next(row for row in route['modes'] if row['id'] == settings['mode'])
-    prompt = mode['prompts'][settings['prompt_surface']]
+    prompt: str = mode['prompts'][settings['prompt_surface']]
     for placeholder, value in settings['replacements'].items():
         prompt = prompt.replace(placeholder, value)
     if '[' in prompt or ']' in prompt:

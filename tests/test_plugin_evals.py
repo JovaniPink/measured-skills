@@ -8,12 +8,14 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from typing import Any
 import unittest
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
+from cataloglib import read_skill_metadata  # noqa: E402
 import export_plugin_evals as exporter  # noqa: E402
 
 SUITE = ROOT / 'evals/plugin-eval'
@@ -21,8 +23,9 @@ FIXTURE = SUITE / 'fixture/build-half-finished-pr.sh'
 GRADERS = SUITE / 'graders'
 
 
-def front(payload: bytes) -> dict:
-    return yaml.safe_load(payload.decode().split('---', 2)[1])
+def front(payload: bytes) -> dict[str, Any]:
+    fields: dict[str, Any] = yaml.safe_load(payload.decode().split('---', 2)[1])
+    return fields
 
 
 def case_names(files: dict[str, bytes]) -> list[str]:
@@ -36,6 +39,12 @@ def grader_regex(name: str) -> re.Pattern[str]:
 
 
 class RoutingExport(unittest.TestCase):
+    document: dict[str, Any]
+    core: dict[str, bytes]
+    specialist: dict[str, bytes]
+    listing: dict[str, bytes]
+    skills: dict[str, dict[str, Any]]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.document = exporter.load_arms()
@@ -134,6 +143,10 @@ class RoutingExport(unittest.TestCase):
 
 
 class BehaviorExport(unittest.TestCase):
+    document: dict[str, Any]
+    plain: dict[str, bytes]
+    forced: dict[str, bytes]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.document = exporter.load_arms()
@@ -169,7 +182,7 @@ class BehaviorExport(unittest.TestCase):
 
     def test_body_marker_stays_out_of_the_listing(self) -> None:
         _, heading = exporter.forced_skill(ROOT, self.document['behavior'])
-        metadata = exporter.read_skill_metadata(ROOT / 'skills/plan-change')
+        metadata = read_skill_metadata(ROOT / 'skills/plan-change')
         self.assertEqual(heading, '# Implementation Planning')
         self.assertNotIn(heading.removeprefix('# '), metadata['description'])
 
@@ -205,7 +218,7 @@ class RunCommand(unittest.TestCase):
         self.assertIn(f'${total:.2f}', readme)
         arm = exporter.find_arm(document, 'routing-specialist')
         self.assertIn(exporter.run_command(arm, document, '/private/tmp/measured-eval-specialist'), readme)
-        self.assertIn('has not been executed', readme)
+        self.assertIn('have not been executed', readme)
         self.assertIn('stability, not independent cases', readme)
 
 
