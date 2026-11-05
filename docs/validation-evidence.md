@@ -17,6 +17,8 @@ Current test suite: 382 regression tests.
 
 The [install lifecycle](audits/lifecycle-0.19.0.md) passed for all four packs on Claude Code 2.1.316, Codex 0.161.0, and Antigravity 1.4.7, in throwaway configurations. This covers packaging only. The [source review](audits/source-review-2026-11-05.json) read all 31 changed sources and changed no skill text, and its [online check](audits/source-check-final-2026-11-05.json) matched 69 of 69 at that moment. The [native eval suite](../evals/plugin-eval/README.md) had one `routing-specialist` pass on the imperative wording, so it says nothing about the shipped third-person sentence. None of these is client acceptance.
 
+The [0.18 upgrade](audits/upgrade-0.18-to-0.19.md) was rehearsed with rollback, then applied to the maintainer's three CLIs. This also covers packaging only.
+
 ## November 4 optional explanation and scope review
 
 The new action has two deterministic regressions. Both first failed because the

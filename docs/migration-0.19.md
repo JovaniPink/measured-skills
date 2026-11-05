@@ -1,7 +1,7 @@
 # Moving to the 0.19 preview
 
-This is a breaking identity migration, not an automatic update. No installation
-has been changed. The exact map is [0.18 to 0.19](../catalog/migrations/0.18-to-0.19.json).
+This is a breaking identity migration, not an automatic update. Nothing updates
+on its own. The exact map is [0.18 to 0.19](../catalog/migrations/0.18-to-0.19.json).
 The older [0.16 to 0.17 map](../catalog/plugin-migrations.json) remains intact.
 
 ## Which path you are on
@@ -10,7 +10,10 @@ The older [0.16 to 0.17 map](../catalog/plugin-migrations.json) remains intact.
   `jovanipink-skills`. Apply the [0.16 to 0.17 map](../catalog/plugin-migrations.json), then the 0.18 to 0.19 map to
   find a skill's current name. On Antigravity, `v0.16.0` has only an offline preview, which you build from that tag.
   The [lifecycle record](audits/lifecycle-0.19.0.md) shows this upgrade and downgrade passing for packaging.
-- **From 0.18:** this candidate was never tagged, so it applies only if you installed it from source.
+- **From 0.18:** this candidate was never tagged, so it applies only if you installed it from source. The two versions
+  share a marketplace name and one pack name, so they cannot sit side by side. Uninstall the 11 packs, remove the
+  marketplace, add it from the new source, then install the 4 packs. The [upgrade record](audits/upgrade-0.18-to-0.19.md)
+  shows this upgrade and its rollback passing for packaging. Account uploads need new entries, because every name changed.
 
 ## What changes
 
