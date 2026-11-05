@@ -1,6 +1,36 @@
 # Merged work and remaining release gates
 
-## Current checkpoint: November 2, 2026, after the priority merge train
+## Current checkpoint after PR 86
+
+Reviewed main at `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` after the November 4,
+2026 merge of [PR #86](https://github.com/JovaniPink/measured-skills/pull/86).
+[Validation on merged main](https://github.com/JovaniPink/measured-skills/actions/runs/41936984685)
+passed all 343 regression tests. The 0.19.0 preview has 90 skills in four packs,
+with 73 implicit and 17 explicit-only skills.
+
+| Record | Revision |
+| --- | --- |
+| Reviewed main | `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` |
+| Chooser input in [the export](../dist/discovery/catalog.json) | `c494143eb210ee1692fbff7f30813e36a7db9e5a` |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `bfeab70ebfbfd2c147fd6d98f21b5164bc3fda16` |
+| Manifest binding commit | `691d498211427aadd0dbfe82e9255476f9e8729a` |
+
+PR #86 added a read-only scope review that explains the requested comparison
+before assessing whether changes fit the approved work. The two-Mac runbook
+companion (#41) merged with separate pins for the generated chooser and the
+review contract. The companion comparison study is prepared. Execution requires
+its separate authorization. See the [scope review record](audits/review-scope-2026-11-04.md).
+
+| Gate | Evidence and next action |
+| --- | --- |
+| Human chooser usefulness | The ten-card exercise is unscored. Start with the [five-minute participant sheet](acceptance-0.19-participant.md) on the pinned chooser. Record actual choices, time, help, and prior exposure under the [existing protocol](acceptance-0.19.md). |
+| Claude Code | The November 2 task stopped when a required reference was blocked. Rebuild and hash the candidate packet, verify reference access and current controls, and record the separate execution decision. See the [stopped attempt and corrected preparation](audits/client-preflight-2026-11-02.md). |
+| Other clients and machines | Codex paid-fallback control and Antigravity isolation still need evidence. Verify the applicable lifecycle and behavioral checks for each intended client, app, and machine. See [client acceptance](client-candidate-v0.19.0.md). |
+| Online sources | The [November 2 closeout](audits/source-check-closeout-2026-11-02.json) matched 69 of 69 sources. Repeat the online check on the frozen release candidate and review any drift individually. |
+| Public chooser | The website pins its own export. Compare its deployed revision with the qualified artifact before updating the public entry point. |
+| Release | GitHub lists `v0.16.0` as the only tag and has no published Releases at this checkpoint. Complete the [staged release process](release-process.md) and obtain the separate release decision for the exact qualified revision. |
+
+## Historical November 2 checkpoint after the priority merge train
 
 Audited main: `a7eee41817625efbd8527db17ed562edddd9f441`.
 PR #83 is merged at `bcf157aa8d2f0c2b0874f5e6c643bfdf9fa995c9`;
