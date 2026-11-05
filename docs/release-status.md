@@ -29,6 +29,7 @@ is exploratory. It does not close any acceptance gate below.
 | Apps and second Mac | Open. No new observations | The maintainer, on each intended surface |
 | Dotfiles companion | Open. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0` | The maintainer |
 | Candidate freeze | Open. The online check and acceptance gates must end on one exact revision | The maintainer |
+| Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
 | Public chooser | Open. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
 | Release | Open. No tag or published Release | The maintainer's separate decision |
 
