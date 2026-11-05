@@ -67,12 +67,15 @@ Choose **Review a change**, then **Explain this PR and check its scope**.
 Supply the PR, working-tree comparison, or pasted diff, along with the
 approved outcome and constraints. Expect an inventory of what changed,
 then a review of what each addition contributes to the approved work.
+Missing rationale is a question, not proof that deletion is safe. This action
+does not edit, run tests, launch reviewers or publish.
 
-For example, imagine a PR whose ticket asks to show the last sync time
-in settings and retain the existing sync schedule. The diff displays
-the saved timestamp and adds a one-minute polling loop.
+The following example is synthetic, not an observed client result. Imagine a
+PR whose ticket asks to show the last sync time in settings and retain the
+existing sync schedule. The diff displays the saved timestamp and adds a
+one-minute polling loop.
 
-| Part of the report | Example |
+| Part of the report | Synthetic example |
 | --- | --- |
 | What changed | The settings view renders the saved timestamp. A new timer requests sync status once a minute while the view is open. |
 | What fits the request | Displaying the timestamp meets the ticket. The polling loop changes how often the view requests status. |
