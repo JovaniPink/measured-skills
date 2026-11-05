@@ -1077,7 +1077,7 @@
     },
     "docs/acceptance-0.19-participant.md": {
       "before_sha256": null,
-      "after_sha256": "6c77c94445f742e680ac55306d5132c383db53f3260d46d6dfb40a20afd09437",
+      "after_sha256": "0b483dc139a710d4815bba83a7dc63ca68e03384941b0b68ce94dd2244c90d33",
       "expression_and_license_review": " November 2 post-publication qualification: original current-main gate audit, exact unchanged-checker freshness receipts and metadata-linked source holds, participant-only task sheet, and bounded unrun client admission. Preserve original acceptance, task inputs/results, prior preparations, source pins, generated packages and support claims. No imported implementation, new maintainer acceptance, paid run, installation or release. November 4 qualification handoff documents existing release evidence, updates onboarding, and prepares the next human observation. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added."
     },
     "docs/acceptance-0.19.md": {
