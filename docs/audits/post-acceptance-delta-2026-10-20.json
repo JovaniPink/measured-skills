@@ -13127,8 +13127,8 @@
     },
     "docs/audits/clean-install-2026-11-05.md": {
       "before_sha256": null,
-      "after_sha256": "651c8cab9b780ac7a5b2a6d92ebb9a1204df121e187edb0b7fd50e7c59492853",
-      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+      "after_sha256": "819034cbdaf732562bb8cbc77520824ef0f780e67d04df41350e3133f99bcf73",
+      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     }
   },
   "additional_payload_exclusions": [

@@ -59,7 +59,10 @@ target stays `v0.16.0`.
 
 - Old account skills remain in the Claude accounts and the ChatGPT account until their owner
   deletes them. Permanent account deletions are not done by an assistant.
-- The 73 account uploads are not done.
+- The 73 uploads are done for one Claude account (the work account, in Chrome). Its skill list then showed
+  142 skills created by the owner: the 69 old names plus the 73 new ones, with every new skill on. Until the old
+  names are deleted, that account lists each job twice in Chat and Cowork. The personal Claude account and
+  ChatGPT have no uploads yet.
 - The Antigravity IDE is still over its 20,000 token customization budget, and the check did not
   separate Google's plugins from ours.
 - The second Mac was not checked.
