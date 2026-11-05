@@ -27,17 +27,17 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 1576,
+          "description_characters": 1507,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 1576,
+          "description_characters": 1507,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 1576,
+          "description_characters": 1507,
           "budget_policy": "Measure the exact tested client's retained descriptions, omissions, and activation behavior without assuming a fixed discovery budget.",
           "observed_listing_state": "not_observed"
         }
@@ -98,12 +98,12 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 1459,
+          "description_characters": 1390,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 1459,
+          "description_characters": 1390,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         }
@@ -163,17 +163,17 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 2914,
+          "description_characters": 2753,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 2914,
+          "description_characters": 2753,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 2914,
+          "description_characters": 2753,
           "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
           "observed_listing_state": "not_observed"
         }
@@ -243,17 +243,17 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 3399,
+          "description_characters": 3215,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 3399,
+          "description_characters": 3215,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 3399,
+          "description_characters": 3215,
           "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
           "observed_listing_state": "not_observed"
         }
@@ -318,17 +318,17 @@
       ],
       "discovery_measurements": {
         "codex": {
-          "description_characters": 2403,
+          "description_characters": 2196,
           "budget_policy": "Measure against the current Codex initial skill-list policy for the tested client and model.",
           "observed_listing_state": "not_observed"
         },
         "claude-code": {
-          "description_characters": 2403,
+          "description_characters": 2196,
           "budget_policy": "Measure against the tested Claude Code model's skill-list budget and per-entry truncation behavior.",
           "observed_listing_state": "not_observed"
         },
         "antigravity-cli": {
-          "description_characters": 2403,
+          "description_characters": 2196,
           "budget_policy": "Measure retained descriptions and selection on the exact Antigravity client; no universal budget is asserted.",
           "observed_listing_state": "not_observed"
         }
