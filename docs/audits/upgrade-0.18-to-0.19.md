@@ -10,7 +10,8 @@ other starting point: the untagged 0.18 candidate, which the maintainer's Mac wa
 
 Source: earlier frozen candidate `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe`. The
 [safety fixes](release-decision-0.19.0.md#amendment-on-november-5-2026-safety-fixes) later replaced
-it, so the installs recorded here do not have those fixes until they are refreshed.
+it. The installs were refreshed to the new candidate the same day, and the old copies were removed. See
+[the cleanup record](clean-install-2026-11-05.md).
 Starting point: `c2d10443fe683228994dad72b0461ae7fd6ebdfa`, 11 packs.
 
 | Check | Value |

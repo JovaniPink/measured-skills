@@ -1072,8 +1072,8 @@
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
-      "after_sha256": "188655d5850f99244135fac92b3babe271e7cc049654e9910f6f8e517baa9d32",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added."
+      "after_sha256": "7d7bcd88acdf7a1f7eeb29d6776409f59e9a534f35dc63e79536b6037b13928f",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     },
     "docs/acceptance-0.19-participant.md": {
       "before_sha256": null,
@@ -13112,8 +13112,8 @@
     },
     "docs/audits/upgrade-0.18-to-0.19.md": {
       "before_sha256": null,
-      "after_sha256": "b0d46dca7e78d23f9cbab848cd10fad810c5763e30f2489fe3b304480d8ecd5b",
-      "expression_and_license_review": "November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+      "after_sha256": "341eed957661fd70fdbadcaa86cc2d7e66d71ea1f4e18a1f3c736ab6a72758be",
+      "expression_and_license_review": "November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     },
     "docs/audits/skill-security-review-2026-11-05.md": {
       "before_sha256": null,
@@ -13123,6 +13123,11 @@
     "tests/test_skill_safety_text.py": {
       "before_sha256": null,
       "after_sha256": "2e99217eb20b81e1e39ccb987c1da6495f8a0d6a76c26e60dfc93304433240db",
+      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "docs/audits/clean-install-2026-11-05.md": {
+      "before_sha256": null,
+      "after_sha256": "651c8cab9b780ac7a5b2a6d92ebb9a1204df121e187edb0b7fd50e7c59492853",
       "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     }
   },
