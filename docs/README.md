@@ -17,7 +17,7 @@ pins its own export, which can be older.
 Maintainers: [authoring](authoring.md), [architecture](architecture.md),
 [testing](testing.md), [security](security-model.md), and
 [release process](release-process.md), [release decision](audits/release-decision-0.19.0.md),
-[install lifecycle](audits/lifecycle-0.19.0.md), [source review](audits/source-review-2026-11-05.json),
+[install lifecycle](audits/lifecycle-0.19.0.md), [0.18 upgrade](audits/upgrade-0.18-to-0.19.md), [source review](audits/source-review-2026-11-05.json),
 [native eval suite](../evals/plugin-eval/README.md), and
 [research disposition](audits/discovery-0.19.md). Older studies retain their original
 names and conclusions; they are not current onboarding instructions.

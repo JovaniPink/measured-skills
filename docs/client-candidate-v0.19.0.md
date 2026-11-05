@@ -35,6 +35,8 @@ chooser source `8f5f32e62e05bcde8c4be0815d3c01211ab84a47`. The maintainer accept
 | Antigravity CLI | [Passed](audits/lifecycle-0.19.0.md) | Blocked, isolation unproven | Packaging only |
 | Antigravity IDE, desktop and web apps, second Mac | Not checked | Not checked | Unclaimed |
 
+The [0.18 upgrade record](audits/upgrade-0.18-to-0.19.md) adds the upgrade from the untagged candidate, for packaging only.
+
 Unclaimed means not tested, not failed. Packaging covers install, upgrade, downgrade, uninstall,
 and reinstall in throwaway configurations. It does not show that a skill loads in a fresh task.
 

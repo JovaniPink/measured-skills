@@ -20,6 +20,7 @@ All notable changes use this file. The project follows semantic versioning after
 - Add a native `claude plugin eval` suite in `evals/plugin-eval`. Runs are paid and close no gate.
 - Accept a release decision that limits what 0.19.0 can claim, and define the freeze and tag steps.
 - Fix migration commands that used removed names, and add removal steps to the client guides.
+- Record a passing 0.18 to 0.19 upgrade and rollback on three CLIs. This covers packaging only.
 - Record a passing install lifecycle for all four packs on Claude Code, Codex, and Antigravity CLIs. This covers packaging only.
 - Review the 31 upstream sources that changed by November 5. No skill instruction changed.
 - Remove release state from generated chooser and pack text, so those files stay true before and after a tag. Status now lives in docs/release-status.md.
