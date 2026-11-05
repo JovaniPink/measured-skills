@@ -1,6 +1,6 @@
 ---
 name: review-code-change
-description: "Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging."
+description: "Reviews PR diffs for bugs, regressions, and access-control changes on requests such as review this PR diff, check this patch, or find a regression. Applies to pasted changes and repository diffs; returns findings without editing, approving, or merging. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

@@ -130,8 +130,9 @@ from the trace, and the fixture's test file must survive.
 ## First run
 
 One pass of `routing-specialist` ran on November 5 with Claude Code 2.1.316 and
-Haiku 5.5, against the packs at `7a0da14`, which carry the added description
-sentence. All 128 runs finished at $0.44 list price, and the ceiling did not stop
+Haiku 5.5, against the packs at `7a0da14`. Those packs carry the first, imperative
+wording of the added description sentence, not the third-person wording now on
+`main`, so this result does not describe the current packs. All 128 runs finished at $0.44 list price, and the ceiling did not stop
 it. Raw traces are not kept here.
 
 | Measure | Result |

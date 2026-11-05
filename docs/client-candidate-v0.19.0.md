@@ -19,6 +19,8 @@ It does not qualify the revised skills or other clients. The later
 [current-main qualification audit](audits/release-qualification-2026-11-02.md)
 retain the failed reference access, corrected unrun preparation and remaining gates.
 Neither is a full acceptance pass.
+The [November 5 Haiku exploration](audits/haiku-exploration-2026-11-05.md) changed discovery wording
+and one prompt. It is one model on one synthetic task, not client acceptance.
 
 The 0.18 candidate remains an independent preserved workstream. See its
 [release ledger](release-readiness-2026-10-26.md). A preview is not a release approval.

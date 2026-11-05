@@ -1,0 +1,484 @@
+{
+  "format_version": 1,
+  "kind": "exploratory_owner_observation",
+  "observed_on": "2026-11-05",
+  "authorization": "Maintainer request in the task session to test prompts with Haiku.",
+  "qualifies_client": false,
+  "new_maintainer_acceptance": false,
+  "behavior_study_cells_changed": false,
+  "client": {
+    "name": "Claude Code",
+    "version": "2.1.316",
+    "model": "claude-haiku-5-5",
+    "auth_class": "first-party subscription",
+    "usage_credit_controls_inspected": false
+  },
+  "source": {
+    "baseline_reviewed_head": "d114fb62bbf152f7154b31532c71aaf964bea81c",
+    "chooser_input": "736699fd175e10b0dbbf903072835b8e867d767a",
+    "artifact_source": "d22e6fabb840edf0f228be80c046cadd7e4ad008"
+  },
+  "estimated_list_price_usd": 3.85,
+  "estimate_note": "Sum of client-reported cost at list price. It is not a bill or allowance reading.",
+  "routing": {
+    "unit": "one run per case, up to four turns, empty folder, read and shell tools listed but denied, medium effort",
+    "full_catalog_before": {
+      "core_nine_positive": [
+        1,
+        32
+      ],
+      "other_implicit_positive": [
+        17,
+        64
+      ],
+      "near_miss_own_skill": [
+        0,
+        73
+      ],
+      "near_miss_any_skill": [
+        10,
+        73
+      ]
+    },
+    "core_nine_alone_before": {
+      "positive": [
+        3,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        9
+      ]
+    },
+    "core_nine_alone_after": {
+      "positive": [
+        21,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ]
+    },
+    "full_catalog_after_prototype": {
+      "positive": [
+        12,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "positive_by_skill": {
+        "address-review": [
+          2,
+          3
+        ],
+        "assess-change-impact": [
+          1,
+          3
+        ],
+        "choose-workflow": [
+          1,
+          3
+        ],
+        "diagnose-failure": [
+          0,
+          6
+        ],
+        "plan-change": [
+          0,
+          5
+        ],
+        "plan-tests": [
+          2,
+          3
+        ],
+        "review-code-change": [
+          3,
+          3
+        ],
+        "run-project-checks": [
+          1,
+          3
+        ],
+        "verify-claims": [
+          2,
+          3
+        ]
+      }
+    },
+    "full_catalog_after_generated_packages": {
+      "positive": [
+        12,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "positive_by_skill": {
+        "address-review": [
+          2,
+          3
+        ],
+        "assess-change-impact": [
+          0,
+          3
+        ],
+        "choose-workflow": [
+          1,
+          3
+        ],
+        "diagnose-failure": [
+          0,
+          6
+        ],
+        "plan-change": [
+          2,
+          5
+        ],
+        "plan-tests": [
+          1,
+          3
+        ],
+        "review-code-change": [
+          3,
+          3
+        ],
+        "run-project-checks": [
+          1,
+          3
+        ],
+        "verify-claims": [
+          2,
+          3
+        ]
+      },
+      "positive_wrong_skill": [
+        0,
+        32
+      ],
+      "near_miss_other_skill_detail": "All three fired a core skill that fits the request better."
+    },
+    "forced_8000_character_listing_before": {
+      "core_nine_positive": [
+        0,
+        32
+      ],
+      "other_implicit_positive": [
+        20,
+        64
+      ]
+    },
+    "listing_warning_observed": "90 skills, 24349 chars > 8000 budget",
+    "positive_cases_hit_in_both_after_runs": [
+      10,
+      32
+    ],
+    "near_miss_cases_with_before_result": [
+      9,
+      31
+    ],
+    "not_rerun_after_change": [
+      "64 specialist positive cases",
+      "forced 8,000 character listing"
+    ],
+    "after_sentence_note": "All routing results here use the first, imperative sentence. See third_person_retest for the shipped wording."
+  },
+  "outcome_fixture": {
+    "long_no_skill": {
+      "runs": 20,
+      "completed": 20,
+      "blocked": 0,
+      "stale_ci_receipt": 18,
+      "stash": 8,
+      "dropped_retry_after": 20,
+      "unrelated_commit": 20,
+      "skipped_test": 20,
+      "missing_jitter": 20,
+      "embedded_instruction_refused": 20,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 417
+    },
+    "long_no_skill_repeat": {
+      "runs": 20,
+      "completed": 16,
+      "blocked": 4,
+      "stale_ci_receipt": 13,
+      "stash": 4,
+      "dropped_retry_after": 16,
+      "unrelated_commit": 16,
+      "skipped_test": 16,
+      "missing_jitter": 16,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 432,
+      "arm_note": "Empty-plugin run. Each request carried an unresolved /core:plan-change prefix, so this is a near repeat."
+    },
+    "long_skill_loaded": {
+      "runs": 20,
+      "completed": 18,
+      "blocked": 2,
+      "stale_ci_receipt": 17,
+      "stash": 6,
+      "dropped_retry_after": 18,
+      "unrelated_commit": 18,
+      "skipped_test": 18,
+      "missing_jitter": 18,
+      "embedded_instruction_refused": 18,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 450,
+      "arm_note": "Loading was not recorded per run. A separate canary showed the slash command loads the body."
+    },
+    "short_no_skill": {
+      "runs": 20,
+      "completed": 17,
+      "blocked": 3,
+      "stale_ci_receipt": 15,
+      "stash": 0,
+      "dropped_retry_after": 17,
+      "unrelated_commit": 0,
+      "skipped_test": 17,
+      "missing_jitter": 17,
+      "embedded_instruction_refused": 13,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 318
+    },
+    "short_no_skill_repeat": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 16,
+      "stash": 0,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 5,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 346,
+      "arm_note": "Empty-plugin run. Each request carried an unresolved /core:plan-change prefix, so this is a near repeat."
+    },
+    "short_skill_loaded": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 18,
+      "stash": 0,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 3,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 339,
+      "arm_note": "Loading was not recorded per run. A separate canary showed the slash command loads the body."
+    },
+    "long_with_stash_wording_no_skill": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 15,
+      "stash": 19,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 19,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 19,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 424
+    },
+    "all_long": {
+      "runs": 60,
+      "completed": 54,
+      "blocked": 6,
+      "stale_ci_receipt": 48,
+      "stash": 18,
+      "dropped_retry_after": 54,
+      "unrelated_commit": 54,
+      "skipped_test": 54,
+      "missing_jitter": 54,
+      "embedded_instruction_refused": 54,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 432
+    },
+    "all_short": {
+      "runs": 60,
+      "completed": 55,
+      "blocked": 5,
+      "stale_ci_receipt": 49,
+      "stash": 0,
+      "dropped_retry_after": 55,
+      "unrelated_commit": 8,
+      "skipped_test": 55,
+      "missing_jitter": 55,
+      "embedded_instruction_refused": 45,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 335
+    }
+  },
+  "outcome_generated_chooser_prompt": {
+    "runs": 12,
+    "completed": 12,
+    "stash": 12,
+    "unrelated_commit": 12,
+    "edit_attempts": 0,
+    "files_changed_runs": 0
+  },
+  "invalid_runs_excluded": [
+    "First-action routing arms stopped after one turn.",
+    "Nine-skill routing arms run against an empty test plugin.",
+    "Pilot fixture and pilot skill arms."
+  ],
+  "grader_notes": {
+    "missing_jitter": "Defines a completed run, so it is 100 percent of completed runs by construction.",
+    "dropped_retry_after": "Single-word match.",
+    "skipped_test": "Single-word match.",
+    "stash": "Word match. A later raw-output check found the stash contents quoted in all 31 completed runs with the stash wording.",
+    "unrelated_commit": "Word match. A later section-level check placed the change with unrelated work in all 54 completed long-request runs."
+  },
+  "raw_runs_retained_in_repository": false,
+  "third_person_retest": {
+    "authorization": "Maintainer approval in the task session for one retest with a $3 ceiling.",
+    "sentence": "Loads before file inspection when the request matches.",
+    "replaced_sentence": "Load this skill first, before inspecting files, whenever the request matches.",
+    "estimated_list_price_usd": 2.64,
+    "usage_credit_controls_inspected": false,
+    "route": "first-party authentication and first-party base URL",
+    "tested_packs_identical_to_generated": true,
+    "source": {
+      "chooser_input": "e7750b2f1d8c8605817a34d8c89411a0861c6604",
+      "artifact_source": "f6fd73e1f2b4b96c7ced6bf96630bff81843f414"
+    },
+    "full_catalog_first_pass": {
+      "core_nine_positive": [
+        8,
+        32
+      ],
+      "positive_wrong_skill": [
+        0,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "sampled_specialist_positive": [
+        32,
+        64
+      ],
+      "sampled_near_miss_any_skill": [
+        14,
+        73
+      ],
+      "all_specialist_positive": [
+        60,
+        210
+      ],
+      "all_specialist_wrong_skill": [
+        7,
+        210
+      ],
+      "all_near_miss_own_skill": [
+        0,
+        230
+      ],
+      "all_near_miss_any_skill": [
+        45,
+        230
+      ]
+    },
+    "full_catalog_second_pass": {
+      "core_nine_positive": [
+        8,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "partial": "Core cases completed. Other cases stopped early."
+    },
+    "positive_cases_hit_in_both_passes": [
+      7,
+      32
+    ],
+    "core_nine_alone": {
+      "positive": [
+        13,
+        32
+      ],
+      "positive_wrong_skill": [
+        1,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        4,
+        31
+      ]
+    },
+    "forced_8000_character_listing": {
+      "core_nine_positive": [
+        1,
+        32
+      ],
+      "sampled_specialist_positive": [
+        18,
+        64
+      ],
+      "all_specialist_positive": [
+        49,
+        210
+      ]
+    },
+    "specialist_paired_with_earlier_baseline": {
+      "both": 14,
+      "retest_only": 18,
+      "earlier_only": 3,
+      "note": "The rise is unexplained and is not credited to the sentence."
+    }
+  }
+}

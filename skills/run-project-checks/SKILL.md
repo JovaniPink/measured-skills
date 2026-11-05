@@ -1,6 +1,6 @@
 ---
 name: run-project-checks
-description: "Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command."
+description: "Finds and runs repository checks when asked to run tests, check the build, or verify changes; follows actual CI and scripts rather than assuming one universal test command. Loads before file inspection when the request matches."
 license: MIT
 metadata:
   author: "Measured Studios"

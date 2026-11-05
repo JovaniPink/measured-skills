@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "bfeab70ebfbfd2c147fd6d98f21b5164bc3fda16",
-  "created_on": "2026-11-04",
+  "source_commit": "f6fd73e1f2b4b96c7ced6bf96630bff81843f414",
+  "created_on": "2026-11-05",
   "artifacts": [
     {
       "kind": "file",
@@ -47,7 +47,7 @@
     {
       "kind": "file",
       "path": "catalog/packs.json",
-      "sha256": "fb2720479250ac2bfa163a15fd92ae06766b01ab39f1e5bcbaed693d25550b9d"
+      "sha256": "246be48e4235a161db295b1a6b43a18076529242064cfdae0fbdbbf685859aa5"
     },
     {
       "kind": "file",
@@ -57,7 +57,7 @@
     {
       "kind": "file",
       "path": "catalog/profiles.json",
-      "sha256": "50af0bc61c0532a68312ae7ac65bc6bdc7e63cce604716b81cf3f268a4159d75"
+      "sha256": "7b9ace6d9a2773444d594169538d71d5a2561cc435a1b4b7151c3f0038eb2521"
     },
     {
       "kind": "file",
@@ -82,12 +82,12 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "5ea0e46454ad58dc2cdd2b25c240d08fd63d317c19f4ccda95b6504ef8598a2a"
+      "sha256": "722d3d957efc005561aaf28490866cb6e505b93e6293f19f61e9c68e95b6d09a"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/address-review-0.19.0.zip",
-      "sha256": "1fd5a4b0ae5d524bfa0565ddfe2fdd47b00ca5bd0af588e4351e86ac19eef0cc"
+      "sha256": "404c1c0f8e41f8805d10271ee01b347dde4dccf3c9eebbaebde8c72f686d417c"
     },
     {
       "kind": "zip",
@@ -102,7 +102,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/assess-change-impact-0.19.0.zip",
-      "sha256": "734ee37486ea7aa745b5b7994e4ab4eaef41255f04a1c29ad7eb6272a2ba061f"
+      "sha256": "a617a24d357a9af79d1569657be8d526e047b09da243786860b3326750c8eacd"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "7dffbd29952a7a438a0c72bd775881c7e9ac6b0dec76660596bcdbca4a254b14"
+      "sha256": "0e09ce25b3a119906044b37488eff9d5d80fbc2b1602e8accc2f00efcc947e9e"
     },
     {
       "kind": "zip",
@@ -177,7 +177,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/diagnose-failure-0.19.0.zip",
-      "sha256": "7865128a787c804542c09f16316158478ecc35651c5b3ff11fa2140b9efb2db8"
+      "sha256": "86269faba8798b26c9c540029e2859019b9b3411d4e02d0b6695a460316015bd"
     },
     {
       "kind": "zip",
@@ -272,12 +272,12 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-change-0.19.0.zip",
-      "sha256": "72ca0af1a1cc1013863ab3854247962019ed0ab71635f423a62e9ae1462f25dd"
+      "sha256": "21556d5bd51dde15e07c04b8a084b5470b378fe9c19905cd95a607ce881f60fe"
     },
     {
       "kind": "zip",
       "path": "dist/claude-ai/plan-tests-0.19.0.zip",
-      "sha256": "80c32f01abb4a566bd6e89e0d7fd7b49c912bff341f8ac763518bfdf8eb5924c"
+      "sha256": "325ec199927e9a910c25c2e966d40ce880e3ad77a7029b0c03fe162705f487b7"
     },
     {
       "kind": "zip",
@@ -347,7 +347,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-code-change-0.19.0.zip",
-      "sha256": "75af3329c4f223399ecec2ad7b8e590b1caa0c6b88e960b0de4e3bf84fa62abc"
+      "sha256": "db7400b8faf41673a995a732c337874276e9c036d96b1f0ecd667340f5fe782e"
     },
     {
       "kind": "zip",
@@ -432,7 +432,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/run-project-checks-0.19.0.zip",
-      "sha256": "4e9a980faee1f265d92f74ecfe151d229e340ff6f2a1ec4fea6833118f01bec4"
+      "sha256": "df34978444aac03468e467b64da0ed6c2429c72427e6a5ce2a3353fc6a5bdaf2"
     },
     {
       "kind": "zip",
@@ -522,7 +522,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/verify-claims-0.19.0.zip",
-      "sha256": "c8542ddb18bb06affdcb7c3b88e0fc2c931b1e65c96a2a4b0ee1ffc833f6b30d"
+      "sha256": "96d6be80ec70ad07f77be87ce91d09a39fbe6d492d9bd1055527b82fccf0f58e"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "55ad67f4c41764d95a7deabb9ff8e84370fb97133996866736c517159092e98a"
+      "sha256": "2bfa6ce53ba5ac219a7283ba071ddf8a4a1225d4bb7bb48ccc1bb351d4bd4bab"
     },
     {
       "kind": "file",
@@ -562,7 +562,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "70cb468b50b6017b6929d6aca8d3cd36554898d5640c270f137853a9c1805017"
+      "sha256": "03ea61de3b758a9159867af15b7cd447ef253081e65c7de053394c52bd62c5ae"
     },
     {
       "kind": "tree",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "1eec5f3763d5800b5a438a8395078a920b5340e3ffd1bd09b15057321f996df2"
+      "sha256": "02b1042e99f4fb26ca06977fd8f15909c6671366fab5eda6e5f5b033fc9bb058"
     },
     {
       "kind": "tree",
@@ -582,7 +582,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "e247d1e2cdc0aa102c994b065a200083ee91ea073d36babf156666a5a9b8a361"
+      "sha256": "229c1bb1e82f514c36c0d915f264ba9c2cb7c95352f7b5885a85891660990302"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "ee9148c3bd1087530c0a4d23d92b5f0dc4905748d29a3e2e399eb0884afebd8e"
+      "sha256": "0a1c2c535bf9443a472926c80f8408f7dce4a0080f6ae577d32b0d933af354e1"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "05ffe739825c45d5337b5e10993865f46dc6521453cf822c09b4588ca325c2ba"
+      "sha256": "fa5dc441b501b4334c754dd83f0848f0fc1f67a3e752d145ef2b4f28220107be"
     },
     {
       "kind": "tree",
@@ -612,7 +612,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "0066f042542fca334c59947f4d28dd088e98269e23f27f2345f04674fb6717d3"
+      "sha256": "b8a9a71ea90b77a87bd38771906814e6619e632f336b0216c8e90319fd5d8553"
     },
     {
       "kind": "file",

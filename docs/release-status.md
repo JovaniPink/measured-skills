@@ -1,6 +1,72 @@
 # Merged work and remaining release gates
 
-## Current checkpoint: November 2, 2026, after the priority merge train
+## Release candidate work on November 5
+
+This section describes draft work that builds on the PR 86 checkpoint below. It is
+not merged, tagged, or released. The 0.19.0 preview still has 90 skills in four
+packs: 73 implicit and 17 explicit-only.
+
+The draft tunes the nine core descriptions and the assess prompt from a
+[one-model Haiku exploration and retest](audits/haiku-exploration-2026-11-05.md). That record
+is exploratory. It does not close any acceptance gate below.
+
+| Record | Revision |
+| --- | --- |
+| Chooser input in [the export](../dist/discovery/catalog.json) | `e7750b2f1d8c8605817a34d8c89411a0861c6604` |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `f6fd73e1f2b4b96c7ced6bf96630bff81843f414` |
+
+| Gate | State on November 5 | Who can close it |
+| --- | --- | --- |
+| Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
+| Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
+| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates | The maintainer, by reading the account's usage |
+| Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
+| Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
+| Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded | The maintainer, on each claimed client |
+| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin | A separately decided task |
+| Codex and Antigravity | Open. No new evidence | The maintainer, after their controls are verified |
+| Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified | The maintainer, by separate authorization |
+| Apps and second Mac | Open. No new observations | The maintainer, on each intended surface |
+| Dotfiles companion | Open. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0` | The maintainer |
+| Candidate freeze | Open. The online check and acceptance gates must end on one exact revision | The maintainer |
+| Public chooser | Open. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
+| Release | Open. No tag or published Release | The maintainer's separate decision |
+
+Do not describe this work as a stable release or a benchmark result. Supported
+public wording: the copied requests are usable today without installing anything,
+and skills are an optional preview with published limits.
+
+## Current checkpoint after PR 86
+
+Reviewed main at `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` after the November 4,
+2026 merge of [PR #86](https://github.com/JovaniPink/measured-skills/pull/86).
+[Validation on merged main](https://github.com/JovaniPink/measured-skills/actions/runs/41936984685)
+passed all 343 regression tests. The 0.19.0 preview has 90 skills in four packs,
+with 73 implicit and 17 explicit-only skills.
+
+| Record | Revision |
+| --- | --- |
+| Reviewed main | `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` |
+| Chooser input in [the export](../dist/discovery/catalog.json) | `c494143eb210ee1692fbff7f30813e36a7db9e5a` |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `bfeab70ebfbfd2c147fd6d98f21b5164bc3fda16` |
+| Manifest binding commit | `691d498211427aadd0dbfe82e9255476f9e8729a` |
+
+PR #86 added a read-only scope review that explains the requested comparison
+before assessing whether changes fit the approved work. The two-Mac runbook
+companion (#41) merged with separate pins for the generated chooser and the
+review contract. The companion comparison study is prepared. Execution requires
+its separate authorization. See the [scope review record](audits/review-scope-2026-11-04.md).
+
+| Gate | Evidence and next action |
+| --- | --- |
+| Human chooser usefulness | The ten-card exercise is unscored. Start with the [five-minute participant sheet](acceptance-0.19-participant.md) on the pinned chooser. Record actual choices, time, help, and prior exposure under the [existing protocol](acceptance-0.19.md). |
+| Claude Code | The November 2 task stopped when a required reference was blocked. Rebuild and hash the candidate packet, verify reference access and current controls, and record the separate execution decision. See the [stopped attempt and corrected preparation](audits/client-preflight-2026-11-02.md). |
+| Other clients and machines | Codex paid-fallback control and Antigravity isolation still need evidence. Verify the applicable lifecycle and behavioral checks for each intended client, app, and machine. See [client acceptance](client-candidate-v0.19.0.md). |
+| Online sources | The [November 2 closeout](audits/source-check-closeout-2026-11-02.json) matched 69 of 69 sources. Repeat the online check on the frozen release candidate and review any drift individually. |
+| Public chooser | The website pins its own export. Compare its deployed revision with the qualified artifact before updating the public entry point. |
+| Release | GitHub lists `v0.16.0` as the only tag and has no published Releases at this checkpoint. Complete the [staged release process](release-process.md) and obtain the separate release decision for the exact qualified revision. |
+
+## Historical November 2 checkpoint after the priority merge train
 
 Audited main: `a7eee41817625efbd8527db17ed562edddd9f441`.
 PR #83 is merged at `bcf157aa8d2f0c2b0874f5e6c643bfdf9fa995c9`;

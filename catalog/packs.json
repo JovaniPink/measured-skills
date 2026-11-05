@@ -59,11 +59,11 @@
         "verify-claims",
         "verify-source-output"
       ],
-      "description_characters": 4935,
+      "description_characters": 5100,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 7391,
-        "claude": 7418
+        "codex": 7556,
+        "claude": 7583
       }
     },
     {
@@ -135,11 +135,11 @@
         "trace-decisions",
         "track-acceptance"
       ],
-      "description_characters": 5807,
-      "budget_status": "within-budget",
+      "description_characters": 6137,
+      "budget_status": "warning",
       "discovery_estimates": {
-        "codex": 8563,
-        "claude": 8595
+        "codex": 8893,
+        "claude": 8925
       }
     }
   ],
@@ -175,7 +175,7 @@
         "verify-claims",
         "track-acceptance"
       ],
-      "description_characters": 371,
+      "description_characters": 426,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -187,7 +187,7 @@
         "plan-change",
         "plan-tests"
       ],
-      "description_characters": 548,
+      "description_characters": 658,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -210,7 +210,7 @@
         "diagnose-failure",
         "verify-claims"
       ],
-      "description_characters": 397,
+      "description_characters": 507,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -269,7 +269,7 @@
         "review-engineering-prompt",
         "plan-change"
       ],
-      "description_characters": 453,
+      "description_characters": 508,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -281,7 +281,7 @@
         "diagnose-failure",
         "plan-tests"
       ],
-      "description_characters": 512,
+      "description_characters": 677,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -293,7 +293,7 @@
         "review-code-change",
         "verify-claims"
       ],
-      "description_characters": 649,
+      "description_characters": 814,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -305,7 +305,7 @@
         "review-context-evidence",
         "plan-change"
       ],
-      "description_characters": 557,
+      "description_characters": 612,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -317,7 +317,7 @@
         "verify-claims",
         "plan-change"
       ],
-      "description_characters": 585,
+      "description_characters": 750,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     }

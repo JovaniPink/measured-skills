@@ -27,8 +27,8 @@
     },
     "skills/plan-change/SKILL.md": {
       "before_sha256": "11bcad3baa8d6dd36b3ba5fa9a5d972ba21edfe78e819375152c1c9d34c378d0",
-      "after_sha256": "9e8625084351e17d616d18483176e9703093c7602c70cf69df8e27380f05dc01",
-      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
+      "after_sha256": "4348be3bd1ae4562e8081f84fd308e9403745502816721d54d7026026d983c91",
+      "review_reason": "Reviewed design reconstruction and dependency migration contracts; read-only assessment, explicit local install scope only in the separate workflow prompt; no automatic delegation. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
     },
     "skills/plan-change/references/dependency-upgrade.md": {
       "before_sha256": null,
@@ -77,8 +77,8 @@
     },
     "skills/verify-claims/SKILL.md": {
       "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "after_sha256": "62bd76f368bcb3748acceb36e4c3878756b2c7068d604f49056212bde5f179ac",
-      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance."
+      "after_sha256": "f0e52a076e16fa212403d9cabbe5f40b384a5c6adc9459f736bfb0a53eb1f665",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
     },
     "skills/verify-claims/references/document-reconciliation.md": {
       "before_sha256": null,
@@ -92,8 +92,8 @@
     },
     "skills/address-review/SKILL.md": {
       "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
-      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance.",
-      "after_sha256": "c9180edd5e3de5fb296922844680a29721fd8431b429f40ff94612026fc2b513"
+      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill.",
+      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d"
     },
     "skills/coordinate-agents/SKILL.md": {
       "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
@@ -112,8 +112,8 @@
     },
     "skills/diagnose-failure/SKILL.md": {
       "before_sha256": "c3d5934ebb5f558d4c2fcf830c9e8292398428260f30d914b8c2b3574b4170b9",
-      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution.",
-      "after_sha256": "e60052ac868a5a56a9d936ccf1b8503cbf0aad473f0e7983517720b2316fa0d9"
+      "review_reason": " November 2 original bounded diagnostic or read-only trade-off procedure with explicit evidence limits; see operational-workflows.md. No new acceptance or automatic execution. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill.",
+      "after_sha256": "3dd1ec095650e7acdc9cc7d31bd8f99bb80c2e3aa097a19b8512d5ac4d43e376"
     },
     "skills/diagnose-failure/references/nondeterministic-failures.md": {
       "before_sha256": null,
@@ -132,13 +132,33 @@
     },
     "skills/review-code-change/SKILL.md": {
       "before_sha256": "2b74249c46f7d6ceb52c32dddf554697fab550edae481c23e5c34673aace03d8",
-      "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance.",
-      "after_sha256": "a0080c45cd3df2fd8ae92398989561110d807fca4b4ea332d417649314f6448b"
+      "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill.",
+      "after_sha256": "13ac07ee1a8cf6cf74ae21342bb2b77baaa51395f95ddf741084db9091b90042"
     },
     "skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
       "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance. Follow-up review clarifies requested snapshot boundaries and pasted-diff evidence.",
       "after_sha256": "ca6c20698a24a045f3d68f48f54dfd42dad51a95a0d69db90dc07eb886e1828e"
+    },
+    "skills/assess-change-impact/SKILL.md": {
+      "before_sha256": "3988ac1bca81770e7cc0c8350a485ecf38435b9a1836d0a7dc7a9fd8370c42b5",
+      "after_sha256": "dea43e28856ea2b079ed9500493f8f80660b7365498d1dbb0e58750d1f32ef0d",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+    },
+    "skills/choose-workflow/SKILL.md": {
+      "before_sha256": "0aa46cfdc992c0a3bbaecd0ed6602c35047068b7665f1369262172da3a2e7c18",
+      "after_sha256": "0a9cad028af59d6a69c02fcb0c74ddaf1a3f9892386e33a7e1c510bf653f7ed1",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+    },
+    "skills/plan-tests/SKILL.md": {
+      "before_sha256": "458593539d11dec2f76654699921e289409f0b36b69cef4d5ad6c76064236bec",
+      "after_sha256": "c2c653a44d6cf2486c1d9ac814063889b0d241ede81b1b33ef44a39893d1020e",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+    },
+    "skills/run-project-checks/SKILL.md": {
+      "before_sha256": "137202bb8fbf4621aeeddfbd854cbc90cc13ebd0aa4f962d92e849a15f923655",
+      "after_sha256": "37201f4a9a68f1b7947a3160adf2495af2b08781a59b1e8447472638983dffb3",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
     }
   }
 }
