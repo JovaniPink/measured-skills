@@ -61,6 +61,34 @@ additional model calls need separate authorization for the task. If those checks
 are unavailable, keep the gap visible and continue the authorized local work.
 A familiar response does not prove that a skill loaded or that work is complete.
 
+## Explain a PR before judging its scope
+
+Choose **Review a change**, then **Explain this PR and check its scope**.
+Supply the PR, working-tree comparison, or pasted diff, along with the
+approved outcome and constraints. Expect an inventory of what changed,
+then a review of what each addition contributes to the approved work.
+Missing rationale is a question, not proof that deletion is safe. This action
+does not edit, run tests, launch reviewers or publish.
+
+The following example is synthetic, not an observed client result. Imagine a
+PR whose ticket asks to show the last sync time in settings and retain the
+existing sync schedule. The diff displays the saved timestamp and adds a
+one-minute polling loop.
+
+| Part of the report | Synthetic example |
+| --- | --- |
+| What changed | The settings view renders the saved timestamp. A new timer requests sync status once a minute while the view is open. |
+| What fits the request | Displaying the timestamp meets the ticket. The polling loop changes how often the view requests status. |
+| Next decision | Check whether the approved work requires live updates. The existing timestamp can serve the display requirement on its own. |
+| Evidence and stopping point | Findings come from the supplied diff and ticket. Return the report and stop after the read-only review. |
+
+Use [the scope review reference](../skills/review-code-change/references/explain-and-check-scope.md)
+for the report format. Choose **Review without editing** when the task is a
+defect review.
+
+Try the pinned chooser with the [five-minute participant sheet](acceptance-0.19-participant.md).
+Keep the copied requests as exercise responses.
+
 ## Use the guide with the skills you actually have
 
 The chooser describes the 0.19 preview, not your installed inventory. If your
@@ -121,16 +149,3 @@ For questions about model usage, background work or delegated permissions, read
 [client usage and permissions](client-usage-and-permissions.md). Session counts,
 token estimates and account billing prove different things; a reviewer role does
 not create its own permission boundary.
-
-## Explain a PR before judging its scope
-
-Choose **Review a change**, then **Explain this PR and check its scope**. Supply
-the repository or PR and what you wanted, including known constraints. The
-assistant first explains the changed behavior and operational surface, then
-compares material additions with requirement evidence and smaller alternatives.
-Missing rationale is a question, not proof that deletion is safe. This action
-does not edit, run tests, launch reviewers or publish.
-
-See the [review contract](../skills/review-code-change/references/explain-and-check-scope.md)
-for a synthetic example and the distinction between scope and defect findings.
-The existing **Review without editing** action remains available for defect review.

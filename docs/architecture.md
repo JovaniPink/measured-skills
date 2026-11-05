@@ -36,13 +36,16 @@ Invocation metadata is portable repository metadata, not a replacement for host 
 - canonical: `metadata.invocation`
 - Codex: `policy.allow_implicit_invocation`
 - Claude: `disable-model-invocation`
-- Antigravity: `disable-model-invocation`
+- Antigravity: the generated marketplace contains the implicit subset while
+  explicit-only invocation control awaits verification.
 
-Direct invocation is also client-native and namespaced after plugin installation:
+For a verified installed entry, use the actual pack and skill name. For example,
+`review-code-change` belongs to `measured-quality`.
 
-- Codex plugin: `$measured-skills:skill-name`
-- Claude plugin: `/measured-skills:skill-name`
-- Antigravity plugin: `/measured-skills:skill-name`
+- Codex plugin: `$measured-quality:review-code-change`
+- Claude Code plugin: `/measured-quality:review-code-change`
+- Antigravity: use the ordinary request from the chooser. See the
+  [Antigravity setup guide](clients/antigravity.md) for client-specific loading.
 
 Canonical unnamespaced forms remain useful when a client installs an individual skill rather than the plugin.
 

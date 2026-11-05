@@ -1,8 +1,13 @@
 # Try the workflow chooser
 
-Prepared exercise, not a recorded result. No model calls or installation.
-Use the [public chooser](https://measuredstudios.com/skills), or the matching local
-guide from the reviewed source. You do not need to remember a skill name.
+This exercise observes how you choose a workflow and read its scope. Open the
+[offline chooser from the reviewed artifact](https://github.com/JovaniPink/measured-skills/blob/bfeab70ebfbfd2c147fd6d98f21b5164bc3fda16/dist/discovery/index.html).
+Download the HTML and open it in a browser. From a matching checkout on a Mac,
+run `open dist/discovery/index.html` at the repository root.
+
+The chooser should display source `c494143eb210ee1692fbff7f30813e36a7db9e5a`.
+Record that value with your responses. If the source differs, open the pinned
+copy before starting the clock. The website can serve a different export.
 
 ## Orientation and practice - not scored
 
@@ -29,7 +34,7 @@ than one route; the requested work and its limits matter.
 
 **Card 10:** Explain the save path before changing it.
 
-For each card, record:
+Start the five-minute timer after orientation and practice. For each card, record:
 
 - Route and action you chose.
 - Copied request, without replacing placeholders with private task information.
