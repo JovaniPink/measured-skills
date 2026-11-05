@@ -14,7 +14,7 @@ All notable changes use this file. The project follows semantic versioning after
 - Add `finish-work-core`, a nine-skill starting profile, and copyable requests with a stated finish line.
 - Add a read-only scope review, focused operational workflows, and guidance on client usage and delegated permissions.
 - Ask the assess request to include uncommitted work and stashes. In one synthetic November 5 task on Claude Haiku 5.5, stash detection rose from 18 of 54 runs to 19 of 19.
-- Add one sentence to the nine core descriptions. On the same model, activation in the full catalog rose from 1 of 32 to 12 of 32, with 0 of 31 near-miss fires. `measured-workflows` now carries a discovery budget warning. See the [exploration record](docs/audits/haiku-exploration-2026-11-05.md).
+- Add one sentence to the nine core descriptions. On the same model, activation in the full catalog rose from 1 of 32 to 12 of 32, and no near-miss case fired its own skill (0 of 31). `measured-workflows` now carries a discovery budget warning. See the [exploration record](docs/audits/haiku-exploration-2026-11-05.md).
 - These are preview observations for one model and client. They are not client qualification.
 
 ### 0.18.0 candidate: run endings and target authority

@@ -18,11 +18,17 @@ is exploratory. It does not close any acceptance gate below.
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
 | Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
+| Description wording | Open. The sentence added to nine core descriptions is an imperative. The [authoring guide](authoring.md#task-focused-refinement) asks for third-person descriptions and no indiscriminate activation commands. Reword and retest it, or change the rule. The specialist and overflow cases were not rerun with it | The maintainer |
+| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 is a list-price estimate | The maintainer, by reading the account's usage |
 | Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
 | Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
 | Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded | The maintainer, on each claimed client |
 | Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin | A separately decided task |
 | Codex and Antigravity | Open. No new evidence | The maintainer, after their controls are verified |
+| Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified | The maintainer, by separate authorization |
+| Apps and second Mac | Open. No new observations | The maintainer, on each intended surface |
+| Dotfiles companion | Open. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0` | The maintainer |
+| Candidate freeze | Open. The online check and acceptance gates must end on one exact revision | The maintainer |
 | Public chooser | Open. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
 | Release | Open. No tag or published Release | The maintainer's separate decision |
 

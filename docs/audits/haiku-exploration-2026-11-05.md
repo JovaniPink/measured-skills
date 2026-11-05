@@ -11,16 +11,25 @@ behavior study cells stay `not_run`. Aggregates are in
 | Change | Measured reason | Limit |
 | --- | --- | --- |
 | Name uncommitted work and stashes in the assess prompt | Stash found in 18 of 54 completed runs before, 19 of 19 after, and 12 of 12 with the generated chooser prompt | One fixture |
-| Add one sentence to the nine core descriptions | Activation in the full catalog went from 1 of 32 to 12 of 32, with 0 of 31 near-miss fires | Haiku only. `diagnose-failure` and `plan-change` stayed at 0 of 11 |
+| Add one sentence to the nine core descriptions | Activation in the full catalog went from 1 of 32 to 12 of 32. No near-miss case fired its own skill (0 of 31) | Haiku only. `diagnose-failure` stayed at 0 of 6. `plan-change` was 0 of 5 on the prototype and 2 of 5 on the generated packages |
 | Restate four trial-shaped lines in general terms | Review finding, not a model result | The meaning is intended to be unchanged |
 
 The added sentence moves `measured-workflows` to 6,275 description characters,
 past the 6,000 warning line and under the 8,000 limit.
 
+The sentence is also an imperative. The [authoring guide](../authoring.md#task-focused-refinement)
+and [skill guidance](../../skills/AGENTS.md) ask for third-person descriptions and
+no indiscriminate activation commands. The sentence applies only when a request
+matches, and it fired no near-miss case, but the same words sit on nine skills.
+The measured gain does not settle this. It is an open decision in
+[release status](../release-status.md).
+
 ## What we learned
 
 **The prompt carried the result.** Long and short requests were compared on a
-half-finished change with planted traps. Blocked runs are excluded below.
+half-finished change with planted traps. Blocked runs are excluded below. Length
+itself was not varied. These are two specific requests, and the long one names
+`unrelated work` as a category.
 
 | Trap reported | Long request (54 runs) | Short request (55 runs) |
 | --- | --- | --- |
@@ -32,17 +41,36 @@ half-finished change with planted traps. Blocked runs are excluded below.
 | Plan item ticked but not implemented | 54 | 55 |
 | Skipped test | 54 | 55 |
 
+The last three rows do not separate the requests. The dropped requirement and
+skipped test are single-word matches. The jitter row is how a completed run is
+defined, so it is 100 percent by construction.
+
 **Loading `plan-change` showed no measured benefit on this task.** With the long
 request, the skill arm found the stale receipt in 17 of 18 runs and the stash in
-6 of 18. The two no-skill arms found them in 31 of 36 and 12 of 36. Two identical
-no-skill arms differed by about as much as skill and no skill did. This fixture
-may be too easy for Haiku 5.5, and it says nothing about other skills or models.
+6 of 18. The two no-skill arms found them in 31 of 36 and 12 of 36. The second
+no-skill arm came from the empty-plugin runs, so each request carried an unresolved
+`/core:plan-change` prefix. That makes it a near repeat, not an identical one. The
+two arms still differed by about as much as skill and no skill did. The skill arm
+did not record loading per run. A separate canary showed that the slash command
+loads the body. This fixture may be too easy for Haiku 5.5, and it says nothing
+about other skills or models.
 
 **Ordinary requests rarely load core skills.** Haiku tends to start working
 instead. Specialist skills activated more often, at 17 of 64. Near-miss precision
 was high: 0 of 73 fired their own skill, while 10 of 73 fired some other skill.
+After the change, 0 of 31 core near-miss cases fired their own skill and 3 fired
+another core skill. All three requests fit that skill better: for example, running
+lint and tests loaded `run-project-checks`. Only 9 of those 31 cases were in the
+earlier sample, so this is not a before-and-after comparison.
 A canary line proved that the slash command loads the body and that the same
 ordinary request does not.
+
+**The catalog size and the run both moved activation.** With the added sentence,
+the nine core skills alone reached 21 of 32, against 12 of 32 in the full catalog.
+No positive case loaded the wrong skill. The same sentence ran twice in the full
+catalog: both runs scored 12 of 32, but only 10 cases hit in both. Read the total
+as a rough level, not a stable per-skill rate. A smaller installed set may route
+better, which is worth testing before choosing a default install.
 
 **Boundaries held in every arm.** All 120 comparison runs had no edit attempts,
 no test-run attempts, and no changed files. Both requests told the model not to
@@ -53,6 +81,9 @@ warned `90 skills, 24349 chars > 8000 budget`. Haiku 5.5 reported a 1,000,000
 token context here, and no warning appeared at the default. Forced overflow did
 not reduce routing in this test: 20 of 64 specialists against 17 of 64. Models
 with a smaller context may behave differently. We did not measure them.
+This test used the descriptions from before the change. The added sentence was not
+rerun under overflow or on the 64 specialist cases, so its effect there, including
+any displacement of specialist skills, is unknown.
 
 ## Method
 
@@ -75,7 +106,10 @@ effort. Effort made no clear difference.
 ## Limits and errors
 
 - Graders are deterministic text patterns. Finding a word does not prove the
-  reasoning around it is sound. We read samples, not every output.
+  reasoning around it is sound. We read samples, not every output. A later review
+  rechecked the raw outputs for the two main results. All 31 completed runs with
+  the stash wording quoted the stash contents, and all 54 completed long-request
+  runs placed the billing change with unrelated work.
 - A run counts as completed if its report mentions the jitter gap. About 9 percent
   of runs were blocked: Haiku tried a compound shell command, was denied, and
   reported it could not inspect the repository. This is our harness, though it
@@ -85,7 +119,12 @@ effort. Effort made no clear difference.
   on the same cases. Expect some regression on new prompts.
 - Repeated runs measure stability on one fixture, not independent tasks.
 - Usage-credit controls were not inspected. The $3.85 figure is a list-price
-  estimate reported by the client, not a bill.
+  estimate reported by the client, not a bill. The maintainer allowed Haiku
+  testing in the task request, but this run did not repeat the account check that
+  earlier bounded client tasks required.
+- Raw runs and the harness are not in this repository, because evaluation guidance
+  keeps raw traces out. They are retained locally by the maintainer, so outside
+  readers cannot rerun this yet.
 
 Four harness errors were caught and their results excluded: a one-turn limit that
 measured first actions instead of routing, a copy step that produced an empty

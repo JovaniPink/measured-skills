@@ -76,7 +76,45 @@
       "near_miss_any_skill": [
         3,
         31
-      ]
+      ],
+      "positive_by_skill": {
+        "address-review": [
+          2,
+          3
+        ],
+        "assess-change-impact": [
+          1,
+          3
+        ],
+        "choose-workflow": [
+          1,
+          3
+        ],
+        "diagnose-failure": [
+          0,
+          6
+        ],
+        "plan-change": [
+          0,
+          5
+        ],
+        "plan-tests": [
+          2,
+          3
+        ],
+        "review-code-change": [
+          3,
+          3
+        ],
+        "run-project-checks": [
+          1,
+          3
+        ],
+        "verify-claims": [
+          2,
+          3
+        ]
+      }
     },
     "full_catalog_after_generated_packages": {
       "positive": [
@@ -90,7 +128,50 @@
       "near_miss_any_skill": [
         3,
         31
-      ]
+      ],
+      "positive_by_skill": {
+        "address-review": [
+          2,
+          3
+        ],
+        "assess-change-impact": [
+          0,
+          3
+        ],
+        "choose-workflow": [
+          1,
+          3
+        ],
+        "diagnose-failure": [
+          0,
+          6
+        ],
+        "plan-change": [
+          2,
+          5
+        ],
+        "plan-tests": [
+          1,
+          3
+        ],
+        "review-code-change": [
+          3,
+          3
+        ],
+        "run-project-checks": [
+          1,
+          3
+        ],
+        "verify-claims": [
+          2,
+          3
+        ]
+      },
+      "positive_wrong_skill": [
+        0,
+        32
+      ],
+      "near_miss_other_skill_detail": "All three fired a core skill that fits the request better."
     },
     "forced_8000_character_listing_before": {
       "core_nine_positive": [
@@ -102,7 +183,19 @@
         64
       ]
     },
-    "listing_warning_observed": "90 skills, 24349 chars > 8000 budget"
+    "listing_warning_observed": "90 skills, 24349 chars > 8000 budget",
+    "positive_cases_hit_in_both_after_runs": [
+      10,
+      32
+    ],
+    "near_miss_cases_with_before_result": [
+      9,
+      31
+    ],
+    "not_rerun_after_change": [
+      "64 specialist positive cases",
+      "forced 8,000 character listing"
+    ]
   },
   "outcome_fixture": {
     "long_no_skill": {
@@ -135,7 +228,8 @@
       "edit_attempts": 0,
       "test_run_attempts": 0,
       "files_changed_runs": 0,
-      "mean_final_words": 432
+      "mean_final_words": 432,
+      "arm_note": "Empty-plugin run. Each request carried an unresolved /core:plan-change prefix, so this is a near repeat."
     },
     "long_skill_loaded": {
       "runs": 20,
@@ -151,7 +245,8 @@
       "edit_attempts": 0,
       "test_run_attempts": 0,
       "files_changed_runs": 0,
-      "mean_final_words": 450
+      "mean_final_words": 450,
+      "arm_note": "Loading was not recorded per run. A separate canary showed the slash command loads the body."
     },
     "short_no_skill": {
       "runs": 20,
@@ -183,7 +278,8 @@
       "edit_attempts": 0,
       "test_run_attempts": 0,
       "files_changed_runs": 0,
-      "mean_final_words": 346
+      "mean_final_words": 346,
+      "arm_note": "Empty-plugin run. Each request carried an unresolved /core:plan-change prefix, so this is a near repeat."
     },
     "short_skill_loaded": {
       "runs": 20,
@@ -199,7 +295,8 @@
       "edit_attempts": 0,
       "test_run_attempts": 0,
       "files_changed_runs": 0,
-      "mean_final_words": 339
+      "mean_final_words": 339,
+      "arm_note": "Loading was not recorded per run. A separate canary showed the slash command loads the body."
     },
     "long_with_stash_wording_no_skill": {
       "runs": 20,
@@ -262,5 +359,13 @@
     "First-action routing arms stopped after one turn.",
     "Nine-skill routing arms run against an empty test plugin.",
     "Pilot fixture and pilot skill arms."
-  ]
+  ],
+  "grader_notes": {
+    "missing_jitter": "Defines a completed run, so it is 100 percent of completed runs by construction.",
+    "dropped_retry_after": "Single-word match.",
+    "skipped_test": "Single-word match.",
+    "stash": "Word match. A later raw-output check found the stash contents quoted in all 31 completed runs with the stash wording.",
+    "unrelated_commit": "Word match. A later section-level check placed the change with unrelated work in all 54 completed long-request runs."
+  },
+  "raw_runs_retained_in_repository": false
 }
