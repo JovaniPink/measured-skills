@@ -11,18 +11,18 @@ behavior study cells stay `not_run`. Aggregates are in
 | Change | Measured reason | Limit |
 | --- | --- | --- |
 | Name uncommitted work and stashes in the assess prompt | Stash found in 18 of 54 completed runs before, 19 of 19 after, and 12 of 12 with the generated chooser prompt | One fixture |
-| Add one sentence to the nine core descriptions | Activation in the full catalog went from 1 of 32 to 12 of 32. No near-miss case fired its own skill (0 of 31) | Haiku only. `diagnose-failure` stayed at 0 of 6. `plan-change` was 0 of 5 on the prototype and 2 of 5 on the generated packages |
+| Add one third-person sentence to the nine core descriptions | Activation in the full catalog went from 1 of 32 to 8 of 32 in each of two runs. No near-miss case fired its own skill (0 of 31, twice) | Haiku only. `diagnose-failure` and `plan-change` stayed at 0 of 11. The gain did not hold under a forced 8,000 character listing |
 | Restate four trial-shaped lines in general terms | Review finding, not a model result | The meaning is intended to be unchanged |
 
-The added sentence moves `measured-workflows` to 6,275 description characters,
-past the 6,000 warning line and under the 8,000 limit.
+The sentence moves `measured-workflows` to 6,137 description characters, past
+the 6,000 warning line and under the 8,000 limit.
 
-The sentence is also an imperative. The [authoring guide](../authoring.md#task-focused-refinement)
+The first version was an imperative: `Load this skill first, before inspecting
+files, whenever the request matches.` The [authoring guide](../authoring.md#task-focused-refinement)
 and [skill guidance](../../skills/AGENTS.md) ask for third-person descriptions and
-no indiscriminate activation commands. The sentence applies only when a request
-matches, and it fired no near-miss case, but the same words sit on nine skills.
-The measured gain does not settle this. It is an open decision in
-[release status](../release-status.md).
+no indiscriminate activation commands, so it was replaced after review. Results
+below that mention 12 of 32 or 21 of 32 describe that first version. See the
+[retest](#third-person-retest).
 
 ## What we learned
 
@@ -82,8 +82,46 @@ token context here, and no warning appeared at the default. Forced overflow did
 not reduce routing in this test: 20 of 64 specialists against 17 of 64. Models
 with a smaller context may behave differently. We did not measure them.
 This test used the descriptions from before the change. The added sentence was not
-rerun under overflow or on the 64 specialist cases, so its effect there, including
-any displacement of specialist skills, is unknown.
+rerun under overflow or on the 64 specialist cases. The [retest](#third-person-retest)
+covers both for the third-person sentence.
+
+## Third-person retest
+
+The maintainer approved a second run with a $3 ceiling. It tested `Loads before file
+inspection when the request matches.` with the same harness, cases, model, and
+client version. The tested Claude packs are byte-identical to the generated ones.
+
+| Measure | No sentence | Imperative | Third person |
+| --- | --- | --- | --- |
+| Core cases, full catalog | 1 of 32 | 12 of 32, twice | 8 of 32, twice |
+| Core near-miss firing its own skill | 0 of 9 | 0 of 31, twice | 0 of 31, twice |
+| Core cases, nine skills alone | 3 of 32 | 21 of 32 | 13 of 32 |
+| Specialist cases, full catalog | 17 of 64 | Not run | 32 of 64 |
+| Core cases, 8,000 character listing | 0 of 32 | Not run | 1 of 32 |
+| Specialist cases, 8,000 character listing | 20 of 64 | Not run | 18 of 64 |
+
+**The imperative activated more often.** The third-person sentence gave up about a
+third of the gain and kept the rest. It was steadier across its two runs, with 7
+hits in common, and it is 23 characters shorter on each skill.
+
+**No specialist displacement appeared, and the rise is unexplained.** Specialist
+activation rose instead of falling: 18 cases hit only in the retest and 3 only in
+the earlier run. Only the nine core descriptions changed, so this sentence is
+unlikely to be the whole cause. The earlier baseline may simply have been low. Do
+not cite 32 of 64 as a gain. In the wider set of 210 specialist cases, 7 loaded
+the wrong skill, and 5 of those were stack prompts that loaded
+`run-project-checks`. Those prompts ask to select project gates, so the fit is
+arguable, and there is no earlier result for them.
+
+**Overflow removes the gain.** At a forced 8,000 character listing, core activation
+fell from 8 of 32 to 1 of 32, and specialists fell from 32 of 64 to 18 of 64. This
+replaces the earlier reading that overflow did not reduce routing. If a client gives
+the listing less room, this sentence should not be expected to help.
+
+This run cost $2.64 at list price. A full pass had 472 cases rather than the sampled
+169, so the second pass was stopped early and narrowed to the 63 core cases. The
+nine-skill arm then ran once. Usage-credit controls were again not inspected. The
+base URL was the first-party address, and authentication was first-party.
 
 ## Method
 
@@ -118,8 +156,8 @@ effort. Effort made no clear difference.
   a sample of real requests. The added description sentence was tuned and checked
   on the same cases. Expect some regression on new prompts.
 - Repeated runs measure stability on one fixture, not independent tasks.
-- Usage-credit controls were not inspected. The $3.85 figure is a list-price
-  estimate reported by the client, not a bill. The maintainer allowed Haiku
+- Usage-credit controls were not inspected. The $3.85 and $2.64 figures are list-price
+  estimates reported by the client, not bills. The maintainer allowed Haiku
   testing in the task request, but this run did not repeat the account check that
   earlier bounded client tasks required.
 - Raw runs and the harness are not in this repository, because evaluation guidance

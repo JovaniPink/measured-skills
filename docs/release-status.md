@@ -7,19 +7,19 @@ not merged, tagged, or released. The 0.19.0 preview still has 90 skills in four
 packs: 73 implicit and 17 explicit-only.
 
 The draft tunes the nine core descriptions and the assess prompt from a
-[one-model Haiku exploration](audits/haiku-exploration-2026-11-05.md). That record
+[one-model Haiku exploration and retest](audits/haiku-exploration-2026-11-05.md). That record
 is exploratory. It does not close any acceptance gate below.
 
 | Record | Revision |
 | --- | --- |
-| Chooser input in [the export](../dist/discovery/catalog.json) | `736699fd175e10b0dbbf903072835b8e867d767a` |
-| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `d22e6fabb840edf0f228be80c046cadd7e4ad008` |
+| Chooser input in [the export](../dist/discovery/catalog.json) | `e7750b2f1d8c8605817a34d8c89411a0861c6604` |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `f6fd73e1f2b4b96c7ced6bf96630bff81843f414` |
 
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
 | Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
-| Description wording | Open. The sentence added to nine core descriptions is an imperative. The [authoring guide](authoring.md#task-focused-refinement) asks for third-person descriptions and no indiscriminate activation commands. Reword and retest it, or change the rule. The specialist and overflow cases were not rerun with it | The maintainer |
-| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 is a list-price estimate | The maintainer, by reading the account's usage |
+| Description wording | Reworded in third person on this draft and retested: 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing | The maintainer accepts this wording in review |
+| Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates | The maintainer, by reading the account's usage |
 | Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
 | Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
 | Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded | The maintainer, on each claimed client |

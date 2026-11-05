@@ -195,7 +195,8 @@
     "not_rerun_after_change": [
       "64 specialist positive cases",
       "forced 8,000 character listing"
-    ]
+    ],
+    "after_sentence_note": "All routing results here use the first, imperative sentence. See third_person_retest for the shipped wording."
   },
   "outcome_fixture": {
     "long_no_skill": {
@@ -367,5 +368,117 @@
     "stash": "Word match. A later raw-output check found the stash contents quoted in all 31 completed runs with the stash wording.",
     "unrelated_commit": "Word match. A later section-level check placed the change with unrelated work in all 54 completed long-request runs."
   },
-  "raw_runs_retained_in_repository": false
+  "raw_runs_retained_in_repository": false,
+  "third_person_retest": {
+    "authorization": "Maintainer approval in the task session for one retest with a $3 ceiling.",
+    "sentence": "Loads before file inspection when the request matches.",
+    "replaced_sentence": "Load this skill first, before inspecting files, whenever the request matches.",
+    "estimated_list_price_usd": 2.64,
+    "usage_credit_controls_inspected": false,
+    "route": "first-party authentication and first-party base URL",
+    "tested_packs_identical_to_generated": true,
+    "source": {
+      "chooser_input": "e7750b2f1d8c8605817a34d8c89411a0861c6604",
+      "artifact_source": "f6fd73e1f2b4b96c7ced6bf96630bff81843f414"
+    },
+    "full_catalog_first_pass": {
+      "core_nine_positive": [
+        8,
+        32
+      ],
+      "positive_wrong_skill": [
+        0,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "sampled_specialist_positive": [
+        32,
+        64
+      ],
+      "sampled_near_miss_any_skill": [
+        14,
+        73
+      ],
+      "all_specialist_positive": [
+        60,
+        210
+      ],
+      "all_specialist_wrong_skill": [
+        7,
+        210
+      ],
+      "all_near_miss_own_skill": [
+        0,
+        230
+      ],
+      "all_near_miss_any_skill": [
+        45,
+        230
+      ]
+    },
+    "full_catalog_second_pass": {
+      "core_nine_positive": [
+        8,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ],
+      "partial": "Core cases completed. Other cases stopped early."
+    },
+    "positive_cases_hit_in_both_passes": [
+      7,
+      32
+    ],
+    "core_nine_alone": {
+      "positive": [
+        13,
+        32
+      ],
+      "positive_wrong_skill": [
+        1,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        4,
+        31
+      ]
+    },
+    "forced_8000_character_listing": {
+      "core_nine_positive": [
+        1,
+        32
+      ],
+      "sampled_specialist_positive": [
+        18,
+        64
+      ],
+      "all_specialist_positive": [
+        49,
+        210
+      ]
+    },
+    "specialist_paired_with_earlier_baseline": {
+      "both": 14,
+      "retest_only": 18,
+      "earlier_only": 3,
+      "note": "The rise is unexplained and is not credited to the sentence."
+    }
+  }
 }
