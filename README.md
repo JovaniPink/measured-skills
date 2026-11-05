@@ -56,7 +56,10 @@ surface's invocation control is verified. Packaging is not installation acceptan
 
 Use the [Codex](docs/clients/codex.md), [Claude](docs/clients/claude.md), or
 [Antigravity](docs/clients/antigravity.md) guide for the installed interface. Check
-actual selection, loading, reference reads, and results separately. Duplicate
+actual selection, loading, reference reads, and results separately.
+A copied request works without a skill. In a [one-model exploration](docs/audits/haiku-exploration-2026-11-05.md),
+the request's wording changed results more than loading a skill did, and ordinary
+requests often did not load one. Use the native command when you want a specific skill. Duplicate
 names and stale same-version caches can obscure which source ran.
 
 A skill is written guidance. It grants no permissions and supplies no executable

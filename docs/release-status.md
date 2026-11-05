@@ -1,5 +1,35 @@
 # Merged work and remaining release gates
 
+## Release candidate work on November 5
+
+This section describes draft work that builds on the PR 86 checkpoint below. It is
+not merged, tagged, or released. The 0.19.0 preview still has 90 skills in four
+packs: 73 implicit and 17 explicit-only.
+
+The draft tunes the nine core descriptions and the assess prompt from a
+[one-model Haiku exploration](audits/haiku-exploration-2026-11-05.md). That record
+is exploratory. It does not close any acceptance gate below.
+
+| Record | Revision |
+| --- | --- |
+| Chooser input in [the export](../dist/discovery/catalog.json) | `736699fd175e10b0dbbf903072835b8e867d767a` |
+| Artifact source in [the manifest](../releases/0.19.0/manifest.json) | `d22e6fabb840edf0f228be80c046cadd7e4ad008` |
+
+| Gate | State on November 5 | Who can close it |
+| --- | --- | --- |
+| Repository checks | Rerun on the draft head. See its pull request | Hosted CI on the exact head |
+| Online sources | Open. The [November 5 check](audits/upstream-freshness-2026-11-05.json) found 30 of 69 sources changed, including the Agent Skills specification. None are reviewed or repinned. The limits read that day still match the catalog validator, but the old page text is not stored, so this is not a change review | Review each change on the frozen candidate |
+| Human chooser usefulness | Open. Ten-card exercise unscored | A real participant |
+| Install lifecycle | Open. No install, upgrade, downgrade, uninstall, or reinstall of 0.19 is recorded | The maintainer, on each claimed client |
+| Claude Code acceptance | Open. Exploration ran generated packs by directory, not an installed plugin | A separately decided task |
+| Codex and Antigravity | Open. No new evidence | The maintainer, after their controls are verified |
+| Public chooser | Open. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
+| Release | Open. No tag or published Release | The maintainer's separate decision |
+
+Do not describe this work as a stable release or a benchmark result. Supported
+public wording: the copied requests are usable today without installing anything,
+and skills are an optional preview with published limits.
+
 ## Current checkpoint after PR 86
 
 Reviewed main at `ddd8c05890dd4d9fae18bbd98001faf1bef136dd` after the November 4,

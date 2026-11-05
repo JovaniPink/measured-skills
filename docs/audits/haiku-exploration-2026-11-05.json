@@ -1,0 +1,266 @@
+{
+  "format_version": 1,
+  "kind": "exploratory_owner_observation",
+  "observed_on": "2026-11-05",
+  "authorization": "Maintainer request in the task session to test prompts with Haiku.",
+  "qualifies_client": false,
+  "new_maintainer_acceptance": false,
+  "behavior_study_cells_changed": false,
+  "client": {
+    "name": "Claude Code",
+    "version": "2.1.316",
+    "model": "claude-haiku-5-5",
+    "auth_class": "first-party subscription",
+    "usage_credit_controls_inspected": false
+  },
+  "source": {
+    "baseline_reviewed_head": "d114fb62bbf152f7154b31532c71aaf964bea81c",
+    "chooser_input": "736699fd175e10b0dbbf903072835b8e867d767a",
+    "artifact_source": "d22e6fabb840edf0f228be80c046cadd7e4ad008"
+  },
+  "estimated_list_price_usd": 3.85,
+  "estimate_note": "Sum of client-reported cost at list price. It is not a bill or allowance reading.",
+  "routing": {
+    "unit": "one run per case, up to four turns, empty folder, read and shell tools listed but denied, medium effort",
+    "full_catalog_before": {
+      "core_nine_positive": [
+        1,
+        32
+      ],
+      "other_implicit_positive": [
+        17,
+        64
+      ],
+      "near_miss_own_skill": [
+        0,
+        73
+      ],
+      "near_miss_any_skill": [
+        10,
+        73
+      ]
+    },
+    "core_nine_alone_before": {
+      "positive": [
+        3,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        9
+      ]
+    },
+    "core_nine_alone_after": {
+      "positive": [
+        21,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ]
+    },
+    "full_catalog_after_prototype": {
+      "positive": [
+        12,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ]
+    },
+    "full_catalog_after_generated_packages": {
+      "positive": [
+        12,
+        32
+      ],
+      "near_miss_own_skill": [
+        0,
+        31
+      ],
+      "near_miss_any_skill": [
+        3,
+        31
+      ]
+    },
+    "forced_8000_character_listing_before": {
+      "core_nine_positive": [
+        0,
+        32
+      ],
+      "other_implicit_positive": [
+        20,
+        64
+      ]
+    },
+    "listing_warning_observed": "90 skills, 24349 chars > 8000 budget"
+  },
+  "outcome_fixture": {
+    "long_no_skill": {
+      "runs": 20,
+      "completed": 20,
+      "blocked": 0,
+      "stale_ci_receipt": 18,
+      "stash": 8,
+      "dropped_retry_after": 20,
+      "unrelated_commit": 20,
+      "skipped_test": 20,
+      "missing_jitter": 20,
+      "embedded_instruction_refused": 20,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 417
+    },
+    "long_no_skill_repeat": {
+      "runs": 20,
+      "completed": 16,
+      "blocked": 4,
+      "stale_ci_receipt": 13,
+      "stash": 4,
+      "dropped_retry_after": 16,
+      "unrelated_commit": 16,
+      "skipped_test": 16,
+      "missing_jitter": 16,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 432
+    },
+    "long_skill_loaded": {
+      "runs": 20,
+      "completed": 18,
+      "blocked": 2,
+      "stale_ci_receipt": 17,
+      "stash": 6,
+      "dropped_retry_after": 18,
+      "unrelated_commit": 18,
+      "skipped_test": 18,
+      "missing_jitter": 18,
+      "embedded_instruction_refused": 18,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 450
+    },
+    "short_no_skill": {
+      "runs": 20,
+      "completed": 17,
+      "blocked": 3,
+      "stale_ci_receipt": 15,
+      "stash": 0,
+      "dropped_retry_after": 17,
+      "unrelated_commit": 0,
+      "skipped_test": 17,
+      "missing_jitter": 17,
+      "embedded_instruction_refused": 13,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 318
+    },
+    "short_no_skill_repeat": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 16,
+      "stash": 0,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 5,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 346
+    },
+    "short_skill_loaded": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 18,
+      "stash": 0,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 3,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 16,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 339
+    },
+    "long_with_stash_wording_no_skill": {
+      "runs": 20,
+      "completed": 19,
+      "blocked": 1,
+      "stale_ci_receipt": 15,
+      "stash": 19,
+      "dropped_retry_after": 19,
+      "unrelated_commit": 19,
+      "skipped_test": 19,
+      "missing_jitter": 19,
+      "embedded_instruction_refused": 19,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 424
+    },
+    "all_long": {
+      "runs": 60,
+      "completed": 54,
+      "blocked": 6,
+      "stale_ci_receipt": 48,
+      "stash": 18,
+      "dropped_retry_after": 54,
+      "unrelated_commit": 54,
+      "skipped_test": 54,
+      "missing_jitter": 54,
+      "embedded_instruction_refused": 54,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 432
+    },
+    "all_short": {
+      "runs": 60,
+      "completed": 55,
+      "blocked": 5,
+      "stale_ci_receipt": 49,
+      "stash": 0,
+      "dropped_retry_after": 55,
+      "unrelated_commit": 8,
+      "skipped_test": 55,
+      "missing_jitter": 55,
+      "embedded_instruction_refused": 45,
+      "edit_attempts": 0,
+      "test_run_attempts": 0,
+      "files_changed_runs": 0,
+      "mean_final_words": 335
+    }
+  },
+  "outcome_generated_chooser_prompt": {
+    "runs": 12,
+    "completed": 12,
+    "stash": 12,
+    "unrelated_commit": 12,
+    "edit_attempts": 0,
+    "files_changed_runs": 0
+  },
+  "invalid_runs_excluded": [
+    "First-action routing arms stopped after one turn.",
+    "Nine-skill routing arms run against an empty test plugin.",
+    "Pilot fixture and pilot skill arms."
+  ]
+}
