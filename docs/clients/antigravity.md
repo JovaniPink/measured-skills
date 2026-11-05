@@ -76,7 +76,7 @@ If a check fails, run `agy plugin disable measured-antigravity-preview` for this
 
 ## Enable the preview after installing it
 
-`agy plugin install` reports success and lists the skills it processed. It does not enable the plugin. A preview that was disabled earlier stays disabled through a reinstall. In CLI 1.2.8, `agy plugin uninstall` removed the enabled-state entry as well as the folder, so a later install again started disabled. Run the enable step and check it:
+`agy plugin install` reports success and lists the skills it processed. In earlier versions it did not enable the plugin. On 1.4.7, `agy plugin list --json` showed each pack enabled right after install, so read the state back instead of assuming it. A preview that was disabled earlier stays disabled through a reinstall. In CLI 1.2.8, `agy plugin uninstall` removed the enabled-state entry as well as the folder, so a later install again started disabled. Run the enable step and check it:
 
 ```sh
 agy plugin install /absolute/path/to/antigravity-check/plugin
