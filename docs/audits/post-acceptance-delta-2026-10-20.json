@@ -35,20 +35,10 @@
       "after_sha256": "0a44be08ab4e2aa330cefbcf74f5c912f6f34590b9a456109a60d9afe4cb1074",
       "expression_and_license_review": "November 2 CI maintenance: Reviewed setup-python 7.1.0 immutable pin; Python 3.12, read-only permissions, gates and GitHub-owned default distribution route are unchanged. No mirror or token override is configured. MIT action code is not bundled."
     },
-    "AGENTS.md": {
-      "before_sha256": "f11175e1eeb80d6c6725628dfee7169497fd3c2bb4caabdbb5fbd9776a4edc50",
-      "after_sha256": "024304e2e06f14a44cdbd7b0d6e29c72c1a83f35162d01f9933e1e4279407a5f",
-      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
-    },
     "CHANGELOG.md": {
       "before_sha256": "549ef47491405482053cae179b40da0758b1b15c3dc90eff96067493f52ed735",
       "after_sha256": "abcc8e828dd1fff4a66a7d203db10d88a3254971cf69ae2ca1523cae3ba93772",
       "expression_and_license_review": "Original November 5, 2026 release candidate documentation or retained receipt from owned observations. No third-party text was imported. November 5 review correction: per-skill routing counts, arm descriptions, grader limits, and open gates restated against raw runs. No third-party text was imported. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
-    },
-    "CONTRIBUTING.md": {
-      "before_sha256": "92929862f911f9e1aec10e578da383d2deafb89b6eb0a06c2c897c1b06d9dd65",
-      "after_sha256": "e86b463e8be7a6f3882da1ecfe49ce3259cf07bca8b488bf08e1be29d1d6ee50",
-      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
     },
     "README.md": {
       "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
@@ -1210,11 +1200,6 @@
       "after_sha256": "79c909fa70c028c43bb00c97a2190b2b089de44fce896fca576863e0b378a29f",
       "expression_and_license_review": "Original Codex-assisted factual prose or sanitized native-control observations with primary-source links and scope limits. No copied publisher prose, raw sessions, private account identities, infrastructure contracts, or license changes. The retest plan remains prepared and unrun."
     },
-    "docs/audits/clean-install-2026-11-05.md": {
-      "before_sha256": null,
-      "after_sha256": "ae1afd391d1d9a9f35e183739f4a555841791e71927f1ec4f32c623cd84d3f76",
-      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 follow-up reviews source fingerprints and install evidence in original wording; imports no upstream body text."
-    },
     "docs/audits/cli-pilot-observations-2026-10-20.json": {
       "before_sha256": null,
       "after_sha256": "96446ac1d7e1e45d35506a8ab15b182c915fc207fca98d7022b5335330029a67",
@@ -1315,11 +1300,6 @@
       "after_sha256": "ce70ef7e8f6f2b4d09722dda9ddf4faf0cd3a47890cc4cca72251e6a276f156f",
       "expression_and_license_review": "Original November 5, 2026 release candidate documentation or retained receipt from owned observations. No third-party text was imported. November 5 review correction: per-skill routing counts, arm descriptions, grader limits, and open gates restated against raw runs. No third-party text was imported. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added."
     },
-    "docs/audits/lifecycle-0.19.0.md": {
-      "before_sha256": null,
-      "after_sha256": "7a78f5d5d51d70bf7997cd88fcf175e1eaba164b7657faa8bb3b5c866eb5bbd8",
-      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
-    },
     "docs/audits/openai-swift-source-closeout-2026-10-26.json": {
       "before_sha256": null,
       "after_sha256": "d3007296be34cb80606f1ad54fae097f2388f7c00697958123e8e2f16047c802",
@@ -1335,11 +1315,6 @@
       "after_sha256": "c7e7eaa3eacd7097d5dd8fc5c19e06523c317a31abf6492dcf1d920a9dc0748f",
       "expression_and_license_review": "October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. Second October 28 chooser follow-up: stable static/enhanced task anchors and revision-scoped clipboard completion;  original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed."
     },
-    "docs/audits/release-decision-0.19.0.md": {
-      "before_sha256": null,
-      "after_sha256": "d614b0f0dc158105910b19186019a11d0b4f436a1a3ac3fe3a30e2a1d0b30225",
-      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 maintainer acceptance of the 0.19.0 release decision: original project text. This is not originality acceptance. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
-    },
     "docs/audits/release-qualification-2026-11-02.json": {
       "before_sha256": null,
       "after_sha256": "b485eff368d3917357add65366178689d81e73e6894b283ce9d22a08967948ec",
@@ -1354,11 +1329,6 @@
       "before_sha256": null,
       "expression_and_license_review": " November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run.",
       "after_sha256": "67a507bd0191919df02216c28eb2eba1925995bd3371159272e8f882a0d322cf"
-    },
-    "docs/audits/skill-security-review-2026-11-05.md": {
-      "before_sha256": null,
-      "after_sha256": "6f3232899cd4b8bb3bc03ef153b5efbf47b2c4fd6464bbe6dfb456d7b6afcd95",
-      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     },
     "docs/audits/source-check-closeout-2026-10-26.json": {
       "before_sha256": null,
@@ -1379,16 +1349,6 @@
       "before_sha256": null,
       "after_sha256": "d66d0de599c344289bef10b28dd429a82ed0012355f849c81a5c66f35cdaf9f2",
       "expression_and_license_review": "November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance."
-    },
-    "docs/audits/source-check-final-2026-11-05.json": {
-      "before_sha256": null,
-      "after_sha256": "7cd134efda73a466e5f3172759a681ed0290ce1c56dd33b6b6d487a70c409f08",
-      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
-    },
-    "docs/audits/source-check-followup-2026-11-05.json": {
-      "before_sha256": null,
-      "after_sha256": "450fdc72bd4bf6056248d33ada24a1535a89039c05e2aad7807bfab6187054c6",
-      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
     },
     "docs/audits/source-check-initial-2026-10-26.json": {
       "before_sha256": null,
@@ -1445,11 +1405,6 @@
       "after_sha256": "2525fdcc0ec3dce4ff31d3859891da54e4d08eb91550e687451db46a897393fb",
       "expression_and_license_review": "November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 2 fresh owner review: checked all 27 source decisions against current bodies and affected contracts; corrected unsupported historical-equivalence attribution and model-target inference; retained observations, pins and frozen results. Restore clean-source then manifest-only delivery with ordinary commits, preserving existing ancestry. Original summaries only; no publisher text import, new maintainer acceptance, model run, billing change or release. November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution."
     },
-    "docs/audits/source-review-2026-11-05.json": {
-      "before_sha256": null,
-      "after_sha256": "f8ad369012e0d7ce2ea7534c6331a1651f9052a00cf9f0db7fb9649d87683db4",
-      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
-    },
     "docs/audits/source-review-addendum-2026-11-02.json": {
       "before_sha256": null,
       "expression_and_license_review": " November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution.",
@@ -1459,16 +1414,6 @@
       "before_sha256": null,
       "expression_and_license_review": " November 2 fresh owner review: checked all 27 source decisions against current bodies and affected contracts; corrected unsupported historical-equivalence attribution and model-target inference; retained observations, pins and frozen results. Restore clean-source then manifest-only delivery with ordinary commits, preserving existing ancestry. Original summaries only; no publisher text import, new maintainer acceptance, model run, billing change or release. November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution.",
       "after_sha256": "478c03c401f942447a5e468af2a2509fa91bef3c9de13cd146a928f3c2469cd7"
-    },
-    "docs/audits/source-review-followup-2026-11-05.json": {
-      "before_sha256": null,
-      "after_sha256": "542b8f2f18474d3dc3a88ada0ed0ffae00f6716ef50b33f2c0d73b3616a7a08d",
-      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
-    },
-    "docs/audits/upgrade-0.18-to-0.19.md": {
-      "before_sha256": null,
-      "after_sha256": "341eed957661fd70fdbadcaa86cc2d7e66d71ea1f4e18a1f3c736ab6a72758be",
-      "expression_and_license_review": "November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
     },
     "docs/audits/upstream-freshness-2026-10-29.json": {
       "before_sha256": null,
@@ -1489,11 +1434,6 @@
       "before_sha256": null,
       "after_sha256": "efcb07294df2b4e6d91d4305d5aef76afc049049743fa85e8e2e5231afe458f4",
       "expression_and_license_review": " November 2 post-publication qualification: original current-main gate audit, exact unchanged-checker freshness receipts and metadata-linked source holds, participant-only task sheet, and bounded unrun client admission. Preserve original acceptance, task inputs/results, prior preparations, source pins, generated packages and support claims. No imported implementation, new maintainer acceptance, paid run, installation or release."
-    },
-    "docs/audits/upstream-freshness-review-2026-11-05.json": {
-      "before_sha256": null,
-      "after_sha256": "effec75cdbb198f62ec757f6ca9a2ff198d60cb8bde63f403c00034053104da9",
-      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
     },
     "docs/audits/workflow-depth-2026-10-28.json": {
       "before_sha256": null,
@@ -1580,11 +1520,6 @@
       "after_sha256": "b776a2be82c05dd4de8924ae885d1786e1709eda9f02d349a9488f43a5c1735b",
       "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added."
     },
-    "docs/measured-migration.md": {
-      "before_sha256": "bc6c949f8f81d6a0d256c6947f59cfd95ba8f6ceb68b3c75dd92fc548c596d0d",
-      "after_sha256": "c68a4849ec6ca98469c3b59190f68d610699bc7ca8d61811dc53ad1dbabfdc38",
-      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added."
-    },
     "docs/migration-0.19.md": {
       "before_sha256": null,
       "after_sha256": "604fcd7b20bd8eb0215cfd0c52a139567b8b0346a1a527c5fce66847b80c0df2",
@@ -1637,7 +1572,7 @@
     },
     "docs/release-status.md": {
       "before_sha256": null,
-      "after_sha256": "f2fd8c2c30819745464ce474d5558070d13563e4ab116cc6016bd308eee157a5",
+      "after_sha256": "04ea5b8bb450eca230d1d061c22f33900131136de0a1d1248981d3ff7a128636",
       "expression_and_license_review": "October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. Second October 28 chooser follow-up: stable static/enhanced task anchors and revision-scoped clipboard completion;  original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29: original local qualification receipt and current status correction, with exact tested revision and platform limits. No imported expression, new maintainer acceptance or expanded release claim. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 post-79 merge reconciliation: owned status synthesis and machine-generated public source fingerprint observations. No copied source bodies, pin changes, new acceptance, or release qualification. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 release-qualification record: original owned observations of matching receiving-account controls and one authorized, stopped Haiku setup attempt, reference-access and read-size corrections prepared without another run, current runtime/update limits, and a failing 43-match/26-change online source snapshot. Preserve original trial inputs, earlier preparations, pins, policy and source ancestry; no new maintainer acceptance, general client acceptance, merge or release. November 2 release-qualification follow-up: original owner observations of matching-account controls and a stopped Haiku setup attempt; reference-root/read-size corrections prepared without another run; 43-match/26-change source snapshot with unchanged pins/policy. Review concurrent Gemini preparation as non-executable: preserve candidate cases, flag conflicting three/four-session proposals and missing host/fixture evidence without expanding authorization. Retain original trials, preparations, ancestry and accepted packet; no general acceptance, merge or release. November 2 post-publication qualification: original current-main gate audit, exact unchanged-checker freshness receipts and metadata-linked source holds, participant-only task sheet, and bounded unrun client admission. Preserve original acceptance, task inputs/results, prior preparations, source pins, generated packages and support claims. No imported implementation, new maintainer acceptance, paid run, installation or release. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 2 fresh owner review: checked all 27 source decisions against current bodies and affected contracts; corrected unsupported historical-equivalence attribution and model-target inference; retained observations, pins and frozen results. Restore clean-source then manifest-only delivery with ordinary commits, preserving existing ancestry. Original summaries only; no publisher text import, new maintainer acceptance, model run, billing change or release. November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 qualification handoff documents existing release evidence, updates onboarding, and prepares the next human observation. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5 review correction: per-skill routing counts, arm descriptions, grader limits, and open gates restated against raw runs. No third-party text was imported. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 maintainer acceptance of the 0.19.0 release decision: original project text. This is not originality acceptance. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 follow-up reviews source fingerprints and install evidence in original wording; imports no upstream body text."
     },
     "docs/skill-catalog-reader-guide.md": {
@@ -1675,11 +1610,6 @@
       "after_sha256": "05a96434d405e27e6212a2bb1d14997b2f0fe8fae820b0a8c33bb4e38dab4439",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance."
     },
-    "evals/AGENTS.md": {
-      "before_sha256": "135cd4b85eb861d0ad5258ca29c8d439df695272d3c26ab3e382011b5987feb7",
-      "after_sha256": "ca63ed9b5a0265aac9428e389d63de928ff663aee0bb6b22bbd1936ccfe6e2c8",
-      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
-    },
     "evals/cases.json": {
       "before_sha256": "5db02bc0bf883c1bf19b5bff66c24430b7149e2990828991a993a41edc837344",
       "after_sha256": "0da93dc6a4017361fa263dabce9201067b168bd56d783aa76e7c321cfaf0df39",
@@ -1694,86 +1624,6 @@
       "before_sha256": "bfc68e581395830a162297a9b04988d54452d6e2aa900fa7c7bb28dbbd40b6ca",
       "after_sha256": "bdfbb98df7eb16ba38c676824e2b087cc313d54600d29c3981c9ee939d69d90b",
       "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
-    },
-    "evals/plugin-eval/README.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "4d3f11878851c3263f05d91d30108fc4c7718146928d917a3cf3be71daebc72b"
-    },
-    "evals/plugin-eval/arms.json": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "4d768e9d6d383e8a05293ac5f4b6c021a219ccea3775c2e7d13e7c1a6414a212"
-    },
-    "evals/plugin-eval/fixture/build-half-finished-pr.sh": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "4c802ce853bd6b22c6063e3ea55dfad3b9862ad9f7fbd0899ef8f9254437212d"
-    },
-    "evals/plugin-eval/graders/boundary-no-edit.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "351adaeb8a1cf618f1e252fb1733f78d6e37a00c592603c52eaf9bd0485370af"
-    },
-    "evals/plugin-eval/graders/boundary-no-test-run.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "6d223931efa6bd7489793cf63b2a577a60e708c9211e4bd7803b7cf27af6c758"
-    },
-    "evals/plugin-eval/graders/boundary-no-write.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "24b9ad7b6186b01d213a2763037089b8c5edabb1ddfda932f7e3e00fb1d06944"
-    },
-    "evals/plugin-eval/graders/boundary-test-file-kept.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "403334276f3f2c4f9ac765eafe7967aa84ced8b93f8dfea53b83a2c90f0a59fb"
-    },
-    "evals/plugin-eval/graders/completion-cites-code.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "c99189ce2cfe017d8d27428f600fff68500a925965e30cf0ff057d7f402f30f4"
-    },
-    "evals/plugin-eval/graders/reasoning-holds-up.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "addfe700be37038c57fa896e51d9ef5388b5eb3fb2230013156778621a81b069"
-    },
-    "evals/plugin-eval/graders/report-dropped-retry-after.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "dcd38a30105e54ebc775c5f237b892233743802b7105385ccea0a425d9de8fba"
-    },
-    "evals/plugin-eval/graders/report-jitter-not-implemented.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "13d04421495f3b90cde1be60f1bc28ee27a8323bb70a34afbaee27350a2df932"
-    },
-    "evals/plugin-eval/graders/report-refuses-handoff-note.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "36dd62abc2aa156b5583f9b73b9ca7b18639f99b6365a0bc6db070828045b964"
-    },
-    "evals/plugin-eval/graders/report-skipped-jitter-test.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "8158b637f0a5c0177155e92d80ffd4e5bab82b6d5ff3a7ef92892b669cb96dcb"
-    },
-    "evals/plugin-eval/graders/report-stale-ci-receipt.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "fd21a775f398b661bc7ad0524cab79cc7c36666f076ab392853e0000cdd79561"
-    },
-    "evals/plugin-eval/graders/report-stash-contents.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "2becf1d799883121fbf847f5c3d04ba50a66546c9d98aa0e7006cb2c4695db7b"
-    },
-    "evals/plugin-eval/graders/report-unrelated-billing.md": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "708a2e7eda14afb29af8a7ba3c71af52976ffe75855e43c9cca36b69182b973a"
     },
     "evals/workflow-depth/README.md": {
       "before_sha256": null,
@@ -10390,11 +10240,6 @@
       "after_sha256": "a37beb6166e3f832f14be3b28af7301b51f28a7d945b0443d43f22c5495ec46f",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Collected standing-limit sentences only from valid action containers, preserving prompt and invocation behavior. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added."
     },
-    "scripts/export_plugin_evals.py": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "78a6f43f89408b459b2e28ce19c7f2632ecb97f07eb2c10d1f6d1f4eb13c7948"
-    },
     "scripts/export_selected.py": {
       "before_sha256": "e52ccd5aeb07450eb14a2c6eaf86e6e31656a5235ed37087c4d06807e87ce819",
       "after_sha256": "dc28b4702918e432b44f55f9df498d44356a8075180285637334fd9132fc7b24",
@@ -12990,11 +12835,6 @@
       "after_sha256": "60235ac68c4bf98c1079a1a939fcbb5ee2109a64c04221d24ea0154055e4e850",
       "expression_and_license_review": "October 26 Antigravity representation follow-up: Original pin-transition regression checks bind individual review decisions, retained historical checkpoints, repeated full-response evidence, and held pins. Mutations of unreviewed pins, observations, and historical markers are rejected; transport failures and meaningful decoded-byte changes remain blocking. October 26 OpenAI and Swift follow-up: Original exact-source transition, historical-checkpoint, and tamper regressions. The exact Markdown authority allowance was tested failing before the production edit; unreviewed neighbors remain rejected."
     },
-    "tests/test_behavior_study.py": {
-      "before_sha256": "a11ad11c2c6ed8d8400a8bc2fef735fab75e06defb3c3710bd0b5b3401712dbe",
-      "after_sha256": "1f7303a45efa4210c55ed9ba5bd45d341eb0b16b69b4fd5195f405c4f87fbd19",
-      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added."
-    },
     "tests/test_bounded_review_exports.py": {
       "before_sha256": null,
       "after_sha256": "537df13a5accf8960b5f3845147317a794fd1e4848710827745e7e0b7a0c953b",
@@ -13075,11 +12915,6 @@
       "after_sha256": "1366cbdd7eab7e587daa54249265933064da6cedba6a268c46c8afa8520c7875",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md."
     },
-    "tests/test_plugin_evals.py": {
-      "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "31b3dce1d92fbd040c0fdc45fd82658020752d0b63eea51f0f35693624b76f61"
-    },
     "tests/test_reference_links.py": {
       "before_sha256": "9f8946830786f0a916d125b07795b67bb891d6575a2a9f78619e7ed94da8467f",
       "after_sha256": "ac0776b903f7739e9964ee6f8572f41743e6b6a82ca02316f11dcfd8287a6fd7",
@@ -13095,11 +12930,6 @@
       "expression_and_license_review": " November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run.",
       "after_sha256": "59ca7e165ddb6fc87578305ef2353d754bac642a61a223450677e6470d7f9e1b"
     },
-    "tests/test_skill_safety_text.py": {
-      "before_sha256": null,
-      "after_sha256": "2e99217eb20b81e1e39ccb987c1da6495f8a0d6a76c26e60dfc93304433240db",
-      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
-    },
     "tests/test_source_review_checkpoint.py": {
       "before_sha256": null,
       "after_sha256": "98d1927f0ad032557ad54dc8ff7184152378fef9110c140a07d0bcb40753c3fa",
@@ -13114,11 +12944,6 @@
       "before_sha256": null,
       "expression_and_license_review": " November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added.",
       "after_sha256": "186e02ed2b0514fca2886b9fd57fa7fdeb05fcfaafdd33f0a0a697e4f36719ea"
-    },
-    "tests/test_source_review_november5.py": {
-      "before_sha256": null,
-      "after_sha256": "347887b74ad66b6f513177e9be02372865b657cbc236518f903e798f4a4dfee4",
-      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
     },
     "tests/test_source_review_october29.py": {
       "before_sha256": null,
@@ -13139,6 +12964,181 @@
       "before_sha256": null,
       "after_sha256": "6d1e807a1300b4900a2764db7bbd6075ab35f879ff058ff9fc6c1c62c1b09395",
       "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run."
+    },
+    "evals/plugin-eval/README.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "4d3f11878851c3263f05d91d30108fc4c7718146928d917a3cf3be71daebc72b"
+    },
+    "evals/plugin-eval/arms.json": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "4d768e9d6d383e8a05293ac5f4b6c021a219ccea3775c2e7d13e7c1a6414a212"
+    },
+    "evals/plugin-eval/fixture/build-half-finished-pr.sh": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "4c802ce853bd6b22c6063e3ea55dfad3b9862ad9f7fbd0899ef8f9254437212d"
+    },
+    "evals/plugin-eval/graders/boundary-no-edit.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "351adaeb8a1cf618f1e252fb1733f78d6e37a00c592603c52eaf9bd0485370af"
+    },
+    "evals/plugin-eval/graders/boundary-no-test-run.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "6d223931efa6bd7489793cf63b2a577a60e708c9211e4bd7803b7cf27af6c758"
+    },
+    "evals/plugin-eval/graders/boundary-no-write.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "24b9ad7b6186b01d213a2763037089b8c5edabb1ddfda932f7e3e00fb1d06944"
+    },
+    "evals/plugin-eval/graders/boundary-test-file-kept.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "403334276f3f2c4f9ac765eafe7967aa84ced8b93f8dfea53b83a2c90f0a59fb"
+    },
+    "evals/plugin-eval/graders/completion-cites-code.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "c99189ce2cfe017d8d27428f600fff68500a925965e30cf0ff057d7f402f30f4"
+    },
+    "evals/plugin-eval/graders/reasoning-holds-up.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "addfe700be37038c57fa896e51d9ef5388b5eb3fb2230013156778621a81b069"
+    },
+    "evals/plugin-eval/graders/report-dropped-retry-after.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "dcd38a30105e54ebc775c5f237b892233743802b7105385ccea0a425d9de8fba"
+    },
+    "evals/plugin-eval/graders/report-jitter-not-implemented.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "13d04421495f3b90cde1be60f1bc28ee27a8323bb70a34afbaee27350a2df932"
+    },
+    "evals/plugin-eval/graders/report-refuses-handoff-note.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "36dd62abc2aa156b5583f9b73b9ca7b18639f99b6365a0bc6db070828045b964"
+    },
+    "evals/plugin-eval/graders/report-skipped-jitter-test.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "8158b637f0a5c0177155e92d80ffd4e5bab82b6d5ff3a7ef92892b669cb96dcb"
+    },
+    "evals/plugin-eval/graders/report-stale-ci-receipt.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "fd21a775f398b661bc7ad0524cab79cc7c36666f076ab392853e0000cdd79561"
+    },
+    "evals/plugin-eval/graders/report-stash-contents.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "2becf1d799883121fbf847f5c3d04ba50a66546c9d98aa0e7006cb2c4695db7b"
+    },
+    "evals/plugin-eval/graders/report-unrelated-billing.md": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "708a2e7eda14afb29af8a7ba3c71af52976ffe75855e43c9cca36b69182b973a"
+    },
+    "scripts/export_plugin_evals.py": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "78a6f43f89408b459b2e28ce19c7f2632ecb97f07eb2c10d1f6d1f4eb13c7948"
+    },
+    "tests/test_plugin_evals.py": {
+      "before_sha256": null,
+      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
+      "after_sha256": "31b3dce1d92fbd040c0fdc45fd82658020752d0b63eea51f0f35693624b76f61"
+    },
+    "docs/audits/lifecycle-0.19.0.md": {
+      "before_sha256": null,
+      "after_sha256": "7a78f5d5d51d70bf7997cd88fcf175e1eaba164b7657faa8bb3b5c866eb5bbd8",
+      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "docs/audits/release-decision-0.19.0.md": {
+      "before_sha256": null,
+      "after_sha256": "d614b0f0dc158105910b19186019a11d0b4f436a1a3ac3fe3a30e2a1d0b30225",
+      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 maintainer acceptance of the 0.19.0 release decision: original project text. This is not originality acceptance. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "docs/measured-migration.md": {
+      "before_sha256": "bc6c949f8f81d6a0d256c6947f59cfd95ba8f6ceb68b3c75dd92fc548c596d0d",
+      "after_sha256": "c68a4849ec6ca98469c3b59190f68d610699bc7ca8d61811dc53ad1dbabfdc38",
+      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added."
+    },
+    "docs/audits/source-check-final-2026-11-05.json": {
+      "before_sha256": null,
+      "after_sha256": "7cd134efda73a466e5f3172759a681ed0290ce1c56dd33b6b6d487a70c409f08",
+      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
+    },
+    "docs/audits/source-review-2026-11-05.json": {
+      "before_sha256": null,
+      "after_sha256": "f8ad369012e0d7ce2ea7534c6331a1651f9052a00cf9f0db7fb9649d87683db4",
+      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
+    },
+    "docs/audits/upstream-freshness-review-2026-11-05.json": {
+      "before_sha256": null,
+      "after_sha256": "effec75cdbb198f62ec757f6ca9a2ff198d60cb8bde63f403c00034053104da9",
+      "expression_and_license_review": "November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added."
+    },
+    "tests/test_behavior_study.py": {
+      "before_sha256": "a11ad11c2c6ed8d8400a8bc2fef735fab75e06defb3c3710bd0b5b3401712dbe",
+      "after_sha256": "1f7303a45efa4210c55ed9ba5bd45d341eb0b16b69b4fd5195f405c4f87fbd19",
+      "expression_and_license_review": "November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added."
+    },
+    "tests/test_source_review_november5.py": {
+      "before_sha256": null,
+      "after_sha256": "347887b74ad66b6f513177e9be02372865b657cbc236518f903e798f4a4dfee4",
+      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
+    },
+    "AGENTS.md": {
+      "before_sha256": "f11175e1eeb80d6c6725628dfee7169497fd3c2bb4caabdbb5fbd9776a4edc50",
+      "after_sha256": "024304e2e06f14a44cdbd7b0d6e29c72c1a83f35162d01f9933e1e4279407a5f",
+      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
+    },
+    "CONTRIBUTING.md": {
+      "before_sha256": "92929862f911f9e1aec10e578da383d2deafb89b6eb0a06c2c897c1b06d9dd65",
+      "after_sha256": "e86b463e8be7a6f3882da1ecfe49ce3259cf07bca8b488bf08e1be29d1d6ee50",
+      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
+    },
+    "evals/AGENTS.md": {
+      "before_sha256": "135cd4b85eb861d0ad5258ca29c8d439df695272d3c26ab3e382011b5987feb7",
+      "after_sha256": "ca63ed9b5a0265aac9428e389d63de928ff663aee0bb6b22bbd1936ccfe6e2c8",
+      "expression_and_license_review": "November 5, 2026 docs update: original project text. No third-party text was added."
+    },
+    "docs/audits/upgrade-0.18-to-0.19.md": {
+      "before_sha256": null,
+      "after_sha256": "341eed957661fd70fdbadcaa86cc2d7e66d71ea1f4e18a1f3c736ab6a72758be",
+      "expression_and_license_review": "November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "docs/audits/skill-security-review-2026-11-05.md": {
+      "before_sha256": null,
+      "after_sha256": "6f3232899cd4b8bb3bc03ef153b5efbf47b2c4fd6464bbe6dfb456d7b6afcd95",
+      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "tests/test_skill_safety_text.py": {
+      "before_sha256": null,
+      "after_sha256": "2e99217eb20b81e1e39ccb987c1da6495f8a0d6a76c26e60dfc93304433240db",
+      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+    },
+    "docs/audits/clean-install-2026-11-05.md": {
+      "before_sha256": null,
+      "after_sha256": "ae1afd391d1d9a9f35e183739f4a555841791e71927f1ec4f32c623cd84d3f76",
+      "expression_and_license_review": "November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 follow-up reviews source fingerprints and install evidence in original wording; imports no upstream body text."
+    },
+    "docs/audits/source-check-followup-2026-11-05.json": {
+      "before_sha256": null,
+      "after_sha256": "450fdc72bd4bf6056248d33ada24a1535a89039c05e2aad7807bfab6187054c6",
+      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
+    },
+    "docs/audits/source-review-followup-2026-11-05.json": {
+      "before_sha256": null,
+      "after_sha256": "542b8f2f18474d3dc3a88ada0ed0ffae00f6716ef50b33f2c0d73b3616a7a08d",
+      "expression_and_license_review": "Original source-review receipt or regression coverage for historical and current pin transitions. No upstream body text imported."
     }
   },
   "additional_payload_exclusions": [
