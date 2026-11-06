@@ -26,7 +26,9 @@ class SourceReviewNovember5Tests(unittest.TestCase):
         raw = subprocess.check_output(['git', 'show', revision + ':catalog/upstream-pins.json'], cwd=ROOT)
         self.assertEqual(hashlib.sha256(raw).hexdigest(), self.ledger['pins_before_sha256'])
         self.before = json.loads(raw)
-        self.current = json.loads((ROOT / 'catalog/upstream-pins.json').read_text())
+        self.current_bytes = subprocess.check_output(
+            ['git', 'show', '15eae4ad90834867b1f65b009921211befc67c65:catalog/upstream-pins.json'], cwd=ROOT)
+        self.current = json.loads(self.current_bytes)
 
     def assert_transition(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
         expected = {r['source_url']: r for r in self.before['sources']}
@@ -68,13 +70,61 @@ class SourceReviewNovember5Tests(unittest.TestCase):
             self.assertEqual((marker, marker, 'pass'),
                              (result['expected_marker'], result['observed_marker'], result['result']))
 
-    def test_review_binds_live_pins_and_preserves_checker(self) -> None:
+    def test_review_binds_historical_pins_and_preserves_checker(self) -> None:
         self.assert_transition(self.ledger, self.current)
         self.assertEqual(self.ledger['pins_after_sha256'],
-                         hashlib.sha256((ROOT / 'catalog/upstream-pins.json').read_bytes()).hexdigest())
+                         hashlib.sha256(self.current_bytes).hexdigest())
         old = subprocess.check_output(['git', 'show', self.ledger['reviewed_revision'] +
                                        ':scripts/check_upstream_freshness.py'], cwd=ROOT)
         self.assertEqual(old, (ROOT / 'scripts/check_upstream_freshness.py').read_bytes())
+
+    def assert_followup(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
+        expected = {r['source_url']: r for r in self.current['sources']}
+        self.assertEqual(11, len(ledger['records']))
+        self.assertEqual(11, len({r['source_url'] for r in ledger['records']}))
+        for record in ledger['records']:
+            url = record['source_url']
+            self.assertEqual(expected[url], record['before_pin'])
+            self.assertTrue(record['finding'])
+            self.assertTrue(record['affected_skills'])
+            self.assertFalse(record['instruction_change_required'])
+            before, after = record['before_pin'], record['after_pin']
+            self.assertEqual(url, after['source_url'])
+            self.assertEqual(before['marker_kind'], after['marker_kind'])
+            if url == 'https://opentelemetry.io/docs/concepts/signals/':
+                self.assertEqual('hold-unstable-marker', record['decision'])
+                self.assertEqual(before, after)
+            else:
+                self.assertEqual('repin-after-review', record['decision'])
+                self.assertEqual(2, len(record['captures']))
+                for capture in record['captures']:
+                    self.assertEqual(after['marker_kind'] + ':' + after['marker_value'],
+                                     capture['capture_marker'])
+            expected[url] = after
+        self.assertEqual(expected, {r['source_url']: r for r in current['sources']})
+        self.assertEqual({k: v for k, v in self.current.items() if k != 'sources'},
+                         {k: v for k, v in current.items() if k != 'sources'})
+
+    def test_followup_binds_live_pins_and_rejects_unreviewed_changes(self) -> None:
+        ledger = json.loads((ROOT / 'docs/audits/source-review-followup-2026-11-05.json').read_text())
+        raw = (ROOT / 'catalog/upstream-pins.json').read_bytes()
+        current = json.loads(raw)
+        self.assert_followup(ledger, current)
+        receipt = json.loads((ROOT / 'docs/audits/source-check-followup-2026-11-05.json').read_text())
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), receipt['pins_sha256'])
+        for mutation in ('pin', 'capture', 'missing', 'held'):
+            changed, pins = deepcopy(ledger), deepcopy(current)
+            if mutation == 'pin':
+                pins['sources'][0]['marker_value'] = 'unreviewed'
+            elif mutation == 'capture':
+                changed['records'][0]['captures'][1]['capture_marker'] = 'disagreement'
+            elif mutation == 'missing':
+                changed['records'].pop()
+            else:
+                held = next(r for r in changed['records'] if r['decision'] == 'hold-unstable-marker')
+                held['after_pin']['marker_value'] = 'unreviewed'
+            with self.assertRaises(AssertionError):
+                self.assert_followup(changed, pins)
 
     def test_unreviewed_or_weakened_review_is_rejected(self) -> None:
         for mutation in ('extra_pin', 'age', 'url', 'method', 'missing', 'duplicate', 'observation', 'redirect'):

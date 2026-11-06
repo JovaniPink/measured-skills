@@ -1,0 +1,401 @@
+{
+  "reviewed_on": "2026-11-05",
+  "reviewed_revision": "15eae4ad90834867b1f65b009921211befc67c65",
+  "method": "Compared retained raw bodies and extracted text with two new captures, inspected affected skill instructions, and read the Swift index in a JavaScript-capable browser. Extraction is review evidence only and does not change fingerprint normalization.",
+  "limits": "Rendered text equivalence does not prove identical scripts, client behavior, or license terms. Bodies remain private. OpenTelemetry remains on hold. Final online checking is required on the proposed tag commit.",
+  "records": [
+    {
+      "source_url": "https://agentskills.io/specification",
+      "before_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf"
+      },
+      "after_pin": {
+        "source_url": "https://agentskills.io/specification",
+        "marker_kind": "content-sha256",
+        "marker_value": "547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7"
+      },
+      "decision": "repin-after-review",
+      "finding": "Specification prose matches the retained body. Embedded deployment IDs, client version, feature toggles, and chunk metadata changed. Required frontmatter and progressive disclosure guidance still agree with the catalog.",
+      "affected_skills": [
+        "track-acceptance",
+        "align-on-decisions",
+        "review-data-authority",
+        "plan-adoption",
+        "assess-change-impact",
+        "verify-claims",
+        "explain-codebase",
+        "map-capability-dependencies",
+        "run-project-checks",
+        "prepare-migration-decision",
+        "trace-decisions",
+        "record-decisions",
+        "investigate-design-rationale",
+        "model-domain-vocabulary",
+        "guide-configuration",
+        "edit-technical-writing",
+        "plan-change",
+        "learn-after-launch",
+        "measure-outcomes",
+        "design-module-interface",
+        "execute-plan",
+        "author-skill",
+        "check-launch-readiness",
+        "frame-problem",
+        "analyze-incident",
+        "build-spike",
+        "review-public-boundary",
+        "publish-change",
+        "synthesize-requirements",
+        "run-research-workflow",
+        "review-skill-import",
+        "review-skill-security",
+        "research-sources",
+        "explain-to-stakeholders",
+        "diagnose-failure",
+        "handoff-work",
+        "implement-test-first",
+        "plan-tests",
+        "review-value-evidence",
+        "plan-workshop"
+      ],
+      "prior_body_sha256": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf",
+      "captures": [
+        {
+          "body_sha256": "547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7",
+          "capture_marker": "content-sha256:547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7",
+          "final_url": "https://agentskills.io/specification"
+        },
+        {
+          "body_sha256": "547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7",
+          "capture_marker": "content-sha256:547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7",
+          "final_url": "https://agentskills.io/specification"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "before_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"1411b162d211332935f3b849931739c0\""
+      },
+      "after_pin": {
+        "source_url": "https://developer.hashicorp.com/terraform/language",
+        "marker_kind": "etag",
+        "marker_value": "\"ea4e2a195cba4edbd50c26c966a19d46\""
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted documentation text matches the retained body. Declarative configuration and repository-specific version discovery remain consistent with stack-terraform.",
+      "affected_skills": [
+        "stack-terraform"
+      ],
+      "prior_body_sha256": "4a3e91abea79ef619ab10c8f03292bf57f1b58862d5e3d02d2f78a22828cfc66",
+      "captures": [
+        {
+          "body_sha256": "fa2ae6849580f614d7d0673888dbe643f95b1732b0a01fdc4e33e6e7429f1934",
+          "capture_marker": "etag:\"ea4e2a195cba4edbd50c26c966a19d46\"",
+          "final_url": "https://developer.hashicorp.com/terraform/language"
+        },
+        {
+          "body_sha256": "fa2ae6849580f614d7d0673888dbe643f95b1732b0a01fdc4e33e6e7429f1934",
+          "capture_marker": "etag:\"ea4e2a195cba4edbd50c26c966a19d46\"",
+          "final_url": "https://developer.hashicorp.com/terraform/language"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "before_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Wed, 04 Nov 2026 21:52:20 GMT"
+      },
+      "after_pin": {
+        "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 05 Nov 2026 16:53:55 GMT"
+      },
+      "decision": "repin-after-review",
+      "finding": "The extracted text differs only in the last-updated date and its feedback metadata. Build, Scale, Govern, and Optimize remain the documented groups. Session and memory ownership guidance remains consistent.",
+      "affected_skills": [
+        "design-agent-memory",
+        "review-agent-security",
+        "stack-google-adk"
+      ],
+      "prior_body_sha256": "5371bb7d3536f75b41c964d7acd24e492386f9820cf296a5c3d1073447f896e3",
+      "captures": [
+        {
+          "body_sha256": "66035cd0b53399859d36a51c8da59da26e57fb5358c9bbe4710961a2d014efe5",
+          "capture_marker": "last-modified:Thu, 05 Nov 2026 16:53:55 GMT",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview"
+        },
+        {
+          "body_sha256": "fc73ffbae0abb8ff1dfcc605d27870447258764ff5851618f1b4b63d765f2ed9",
+          "capture_marker": "last-modified:Thu, 05 Nov 2026 16:53:55 GMT",
+          "final_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+      "before_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"29356880aff4bffb1bd5789db3a69be9\""
+      },
+      "after_pin": {
+        "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
+        "marker_kind": "etag",
+        "marker_value": "\"806b460dd63a22eb693c2bef0976d4e4\""
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted documentation text matches. Incremental conditions, unique keys, full refresh, and adapter-specific behavior still support the existing data profile.",
+      "affected_skills": [
+        "stack-gcp-data"
+      ],
+      "prior_body_sha256": "cf7586586a4d48ebebbbcbcdc2cfeba20d0c7d509071e899ed6984e98349c374",
+      "captures": [
+        {
+          "body_sha256": "f9d8b1641e7bbfb6d5715a5e961642dcb8c805acea28e4aca5cdc29d63e0475d",
+          "capture_marker": "etag:\"806b460dd63a22eb693c2bef0976d4e4\"",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models"
+        },
+        {
+          "body_sha256": "f9d8b1641e7bbfb6d5715a5e961642dcb8c805acea28e4aca5cdc29d63e0475d",
+          "capture_marker": "etag:\"806b460dd63a22eb693c2bef0976d4e4\"",
+          "final_url": "https://docs.getdbt.com/docs/build/incremental-models"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "before_pin": {
+        "source_url": "https://docs.swift.org/latest/documentation/",
+        "marker_kind": "etag",
+        "marker_value": "\"f63-65f89395fc580\""
+      },
+      "after_pin": {
+        "source_url": "https://docs.swift.org/latest/documentation/",
+        "marker_kind": "etag",
+        "marker_value": "\"f63-65f8e405b8b80\""
+      },
+      "decision": "repin-after-review",
+      "finding": "Raw body matches the retained application shell despite a changed ETag. A fresh rendered browser read showed Swift 6.4, Testing, SwiftPM, toolchains, platforms, compiler diagnostics, and Swift 6 migration. The profile continues to require repository-specific compiler and SDK evidence.",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "prior_body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+      "captures": [
+        {
+          "body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "capture_marker": "etag:\"f63-65f8e405b8b80\"",
+          "final_url": "https://docs.swift.org/latest/documentation/"
+        },
+        {
+          "body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "capture_marker": "etag:\"f63-65f8e405b8b80\"",
+          "final_url": "https://docs.swift.org/latest/documentation/"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "before_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 05 Nov 2026 04:35:21 GMT"
+      },
+      "after_pin": {
+        "source_url": "https://git-scm.com/docs/git-merge",
+        "marker_kind": "last-modified",
+        "marker_value": "Thu, 05 Nov 2026 04:35:22 GMT"
+      },
+      "decision": "repin-after-review",
+      "finding": "Raw body matches the retained documentation despite a changed Last-Modified header. Merge ancestry and dirty-work preservation guidance remains valid.",
+      "affected_skills": [
+        "resolve-merge-conflicts"
+      ],
+      "prior_body_sha256": "b55a3b78ae297f815ad23966dcd97c14bad3c98ad7a16677f60a176b9ae04cfa",
+      "captures": [
+        {
+          "body_sha256": "b55a3b78ae297f815ad23966dcd97c14bad3c98ad7a16677f60a176b9ae04cfa",
+          "capture_marker": "last-modified:Thu, 05 Nov 2026 04:35:22 GMT",
+          "final_url": "https://git-scm.com/docs/git-merge"
+        },
+        {
+          "body_sha256": "b55a3b78ae297f815ad23966dcd97c14bad3c98ad7a16677f60a176b9ae04cfa",
+          "capture_marker": "last-modified:Thu, 05 Nov 2026 04:35:22 GMT",
+          "final_url": "https://git-scm.com/docs/git-merge"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "before_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc"
+      },
+      "after_pin": {
+        "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+        "marker_kind": "content-sha256",
+        "marker_value": "8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c"
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted documentation text matches. The major-version guide still requires runtime and API compatibility review; its installer examples grant no execution authority.",
+      "affected_skills": [
+        "plan-change"
+      ],
+      "prior_body_sha256": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc",
+      "captures": [
+        {
+          "body_sha256": "8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c",
+          "capture_marker": "content-sha256:8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+        },
+        {
+          "body_sha256": "8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c",
+          "capture_marker": "content-sha256:8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c",
+          "final_url": "https://nextjs.org/docs/app/guides/upgrading/version-16"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "before_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\""
+      },
+      "after_pin": {
+        "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+        "marker_kind": "etag",
+        "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\""
+      },
+      "decision": "hold-unstable-marker",
+      "finding": "Extracted signal documentation matches across the retained body and two new captures. Raw bodies and ETags vary between new captures. No stable replacement fingerprint was established under the existing marker policy.",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "prior_body_sha256": "b2520aa8da2a6d0caf38f8d84ae677588dd4a7a243d3b3223b6562073db280e9",
+      "captures": [
+        {
+          "body_sha256": "e1a55184df31f10a0a65af782105b6af4bdac7baebce1936c85668bb2fd81739",
+          "capture_marker": "etag:\"3c50dd2eeabdeec7cba0423987117f24-ssl\"",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/"
+        },
+        {
+          "body_sha256": "bc275b8bee758a6e0154b7a4ac243f0bde2ebc087610651f553e00bf8ef5cbd7",
+          "capture_marker": "etag:\"b4495cf5115bf879763c064e63840e5e-ssl\"",
+          "final_url": "https://opentelemetry.io/docs/concepts/signals/"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "before_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "df5547901fa8c67250e92e6f9b144ef3dccc3d47fc16440fabb226b5a76c63ec"
+      },
+      "after_pin": {
+        "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "a56288f582218e5c0de5d04595a7722eb514e133ea2f484a5635d0a7ca0243dd"
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted tutorial text matches. Existing normalization yields a stable changed fingerprint across two captures. The profile retains governor-limit checks and separate live-org authority.",
+      "affected_skills": [
+        "stack-salesforce-apex"
+      ],
+      "prior_body_sha256": "c28eacf597bc8883c5e7b277f58daf01dbbb529e1130eaf834ba141c8a8a004c",
+      "captures": [
+        {
+          "body_sha256": "734ba38859ac42d6a69afa6085534dc2b5ff2e3fed4412296476728a97bc6b5e",
+          "capture_marker": "normalized-content-sha256:a56288f582218e5c0de5d04595a7722eb514e133ea2f484a5635d0a7ca0243dd",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro"
+        },
+        {
+          "body_sha256": "90deabde4f22e89272fd7ca9275cc5f09520a8453a0c63c1a723ce9ae166a421",
+          "capture_marker": "normalized-content-sha256:a56288f582218e5c0de5d04595a7722eb514e133ea2f484a5635d0a7ca0243dd",
+          "final_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "before_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "c444e0cb956c3de055fdfc72a07f3807235583afc8eb7945e6e3639c4d3dfb61"
+      },
+      "after_pin": {
+        "source_url": "https://www.drupal.org/docs/develop",
+        "marker_kind": "normalized-content-sha256",
+        "marker_value": "5ffe093602e90d443b289a8c94479ca7c2f024975a023c5cf1b2d4b149e4e6ee"
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted development index text matches. Existing normalization yields a stable changed fingerprint across two captures. Repository-specific version and test discovery remains appropriate.",
+      "affected_skills": [
+        "stack-php-drupal"
+      ],
+      "prior_body_sha256": "14ec38259b27a645e2ff838f4024204faa5ef56a3381d86a605f4964ea652fd3",
+      "captures": [
+        {
+          "body_sha256": "4d386a422a5ed4108a67e1884fa8e874644f2363e44b344a1400ea8f22af018a",
+          "capture_marker": "normalized-content-sha256:5ffe093602e90d443b289a8c94479ca7c2f024975a023c5cf1b2d4b149e4e6ee",
+          "final_url": "https://www.drupal.org/docs/develop"
+        },
+        {
+          "body_sha256": "9da0a3632355d145a92a6cf6d77638addd9bfb23a1f0f6882a6b149f097176f3",
+          "capture_marker": "normalized-content-sha256:5ffe093602e90d443b289a8c94479ca7c2f024975a023c5cf1b2d4b149e4e6ee",
+          "final_url": "https://www.drupal.org/docs/develop"
+        }
+      ],
+      "instruction_change_required": false
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "before_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "content-sha256",
+        "marker_value": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12"
+      },
+      "after_pin": {
+        "source_url": "https://www.typescriptlang.org/docs/",
+        "marker_kind": "content-sha256",
+        "marker_value": "acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15"
+      },
+      "decision": "repin-after-review",
+      "finding": "Extracted index text matches. Raw changes include JavaScript chunk names and a compilation hash. Compiler, runtime, and lockfile discovery still fit the documented scope.",
+      "affected_skills": [
+        "stack-typescript-javascript"
+      ],
+      "prior_body_sha256": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12",
+      "captures": [
+        {
+          "body_sha256": "acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15",
+          "capture_marker": "content-sha256:acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15",
+          "final_url": "https://www.typescriptlang.org/docs/"
+        },
+        {
+          "body_sha256": "acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15",
+          "capture_marker": "content-sha256:acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15",
+          "final_url": "https://www.typescriptlang.org/docs/"
+        }
+      ],
+      "instruction_change_required": false
+    }
+  ]
+}
