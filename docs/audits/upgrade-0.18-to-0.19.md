@@ -71,15 +71,16 @@ lists, not that a skill loads.
 | Claude desktop, Code tab | 4.16336.0 | One session's skill list showed the 4 packs with their new names |
 
 The IDE reported 21,101 of its 20,000 token budget for customizations. It excluded 6 entries, all
-Google skills, and none from these packs. The packs use roughly a third of that budget, so a client
-with more customizations could exclude some of them. How the IDE chooses what to exclude was not
-tested.
+Google skills, and none from these packs. The share of the budget used by these packs was not
+measured, and how the IDE chooses what to exclude was not tested. A client with more
+customizations could exclude some of them.
 
-Claude desktop Chat and Cowork were not read, because Computer Use cannot control Claude's own app.
+Claude desktop Chat and Cowork were not read. Computer Use could not control the Claude app in that
+session.
 
 ## Not covered
 
 - Skill loading or behavior in a fresh task.
 - Claude desktop Chat and Cowork, the ChatGPT app, web accounts, and a second Mac.
 - Account uploads. All 69 account skills from 0.18 were renamed, so they cannot be replaced
-  in place.
+  in place. Later uploads to one account are in the [cleanup record](clean-install-2026-11-05.md).

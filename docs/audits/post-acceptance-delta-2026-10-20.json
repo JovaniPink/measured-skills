@@ -13112,7 +13112,7 @@
     },
     "docs/audits/upgrade-0.18-to-0.19.md": {
       "before_sha256": null,
-      "after_sha256": "715e2e32dcd89184d61e5a195800c4e26473a69502731efd4700fe70d9ff4a59",
+      "after_sha256": "8519d3e5937fb75cf3ac3acd353542e2f1319155fa1cb481d6fc94d1748ca908",
       "expression_and_license_review": "November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 5, 2026 app read-back: original project text. No third-party text was added."
     },
     "docs/audits/skill-security-review-2026-11-05.md": {
