@@ -59,7 +59,7 @@ target stays `v0.16.0`.
 
 - Old account skills remain in the Claude accounts and the ChatGPT account until their owner
   deletes them. Permanent deletion needs confirmation at action time.
-- The 73 uploads are done for one Claude account (the work account, in Chrome). Its skill list then showed
+- The 73 uploads are done for one Claude account. Its skill list then showed
   142 skills created by the owner: the 69 old names plus the 73 new ones, with every new skill on. Until the old
   names are deleted, that account lists each job twice in Chat and Cowork. The personal Claude account and
   ChatGPT have no uploads yet.

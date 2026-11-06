@@ -5,9 +5,9 @@
 The November 5 safety fixes merged in [PR #97](https://github.com/JovaniPink/measured-skills/pull/97)
 at `1ba9787815733643e440c38ad6d6270b983edd60`, and [validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42107090587)
 passed. The 0.19.0 preview has 90 skills in four packs, with 73 implicit and 17 explicit-only.
-The cleanup record in
-[draft PR #98](https://github.com/JovaniPink/measured-skills/pull/98) passed hosted
-validation at `15eae4ad90834867b1f65b009921211befc67c65`.
+The cleanup record and follow-up source review in
+[PR #98](https://github.com/JovaniPink/measured-skills/pull/98) passed hosted
+validation at `d871b70ef40784df4c04bf26ab8f95d49ca0ae4a`.
 
 The merged work tunes the nine core descriptions and the assess prompt from a
 [one-model Haiku exploration and retest](audits/haiku-exploration-2026-11-05.md). That record
@@ -29,12 +29,12 @@ the earlier freeze. See
 
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
-| Repository checks | [Hosted validation passed](https://github.com/JovaniPink/measured-skills/actions/runs/42124789652) on draft PR #98. The eventual tag commit needs its own result | Hosted CI on the exact head |
+| Repository checks | [Hosted validation passed](https://github.com/JovaniPink/measured-skills/actions/runs/42135750310) on the PR #98 head `d871b70e`. The eventual tag commit needs its own result | Hosted CI on the exact head |
 | Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
 | Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates. A later usage readback showed extra usage off, but the maintainer has not confirmed it in Settings | The maintainer, by reading the account's usage |
 | Online sources | Open. The [earlier November 5 check](audits/source-check-final-2026-11-05.json) matched 69 of 69 after [review](audits/source-review-2026-11-05.json). A later check at `1ba97878` matched 58 of 69. [All eleven changes were reviewed](audits/source-review-followup-2026-11-05.json). Ten stable replacements were repinned. OpenTelemetry remains on hold because successive captures changed its body and ETag despite matching extracted text. The [follow-up check](audits/source-check-followup-2026-11-05.json) passed 67 of 69 sources, with a new OWASP page change also held for review | Review drift, then recheck on the exact commit proposed for the tag |
 | Human chooser usefulness | Open. Ten-card exercise unscored. [Results go here](acceptance-0.19.md#ten-card-results) | A real participant |
-| 0.18 upgrade | [Rehearsed and applied](audits/upgrade-0.18-to-0.19.md) on three CLIs on one Mac. All 12 enabled CLI pack trees match the safety-fix manifest. Work Claude lists 73 current account skills and 69 enabled legacy entries. Other account installs still need readback | Not a tag gate |
+| 0.18 upgrade | [Rehearsed and applied](audits/upgrade-0.18-to-0.19.md) on three CLIs on one Mac. All 12 enabled CLI pack trees match the safety-fix manifest. One Claude account lists 73 current account skills and 69 enabled legacy entries. Other account installs still need readback | Not a tag gate |
 | Install lifecycle | Passed on the frozen candidate, then [rerun](audits/lifecycle-0.19.0.md) on the safety fix candidate. [All four packs](audits/lifecycle-0.19.0.md) passed install, upgrade, downgrade, uninstall, and reinstall on Claude Code, Codex, and Antigravity CLIs, in throwaway configurations. This covers packaging only. No fresh task ran | Closed for these three CLIs |
 | Claude Code acceptance | Open. The packet is bound to `3df7e438` and its receipt records 51 passing static checks. The prepared packet has no run or authorization. Native permission enforcement, loading both packs together, and task behavior still need observation | A separately decided task |
 | Codex and Antigravity | Open. No new evidence. Unclaimed for 0.19.0 | The maintainer, after their controls are verified |
@@ -44,8 +44,8 @@ the earlier freeze. See
 | Skill security review | Closed for this candidate. Five warnings fixed in skill text, no errors. Static review only | Not applicable |
 | Candidate freeze | The safety fixes ended the freeze at `63156e05`. The replacement freeze took effect when PR #97 merged. The artifact freeze is `3df7e438`; the reviewed repin moves manifest source to `109942aa43ccae0aac505f8413789aae41fdb097`. PR #98 includes a reviewed repin of the two allowed catalog files. Plugin, ZIP, and discovery hashes retain the safety-fix freeze. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
 | Native eval suite | Exploratory, not a gate. One `routing-specialist` pass ran on the imperative wording. The other four arms are unrun, and each needs the maintainer's yes | Not applicable |
-| Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
-| Public chooser | Open. This is a website gate, not a tag gate. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
+| Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website was updated through Studio PR 143. The launch posts are drafted and not posted | Closed by the maintainer |
+| Public chooser | Open. This is a website gate, not a tag gate. Studio PR 143 merged on November 5 at `44fe7e6f121765b1290b8ef895c71525b8ebab5a`, and the live site pins `1ba9787815733643e440c38ad6d6270b983edd60`. Comprehension with a real participant is unscored | The maintainer, through website approval |
 | Release | Open. No tag or published Release | The maintainer's separate decision |
 
 Do not describe this work as a stable release or a benchmark result. Supported
