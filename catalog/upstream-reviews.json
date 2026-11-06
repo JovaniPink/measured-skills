@@ -59,8 +59,8 @@
         "review-value-evidence",
         "plan-workshop"
       ],
-      "finding": "Reviewed 2026-10-26: Agent Skills requires matching directory/name metadata, concrete descriptions, string-valued metadata, and progressive disclosure; allowed-tools remains experimental.",
-      "action": "Retain the stricter ASCII catalog and native adapters. This source supports format requirements, not the behavior of every workflow citing it. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Specification prose matches the retained body. Embedded deployment IDs, client version, feature toggles, and chunk metadata changed. Required frontmatter and progressive disclosure guidance still agree with the catalog.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://developer.hashicorp.com/terraform/language",
@@ -69,8 +69,8 @@
       "affected_skills": [
         "stack-terraform"
       ],
-      "finding": "Reviewed 2026-10-26: Terraform documentation describes declarative resources, dependency relationships, providers, and differing execution environments.",
-      "action": "Retain project-specific version and plan discovery. Source inspection does not authorize apply or remote state mutation. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Extracted documentation text matches the retained body. Declarative configuration and repository-specific version discovery remain consistent with stack-terraform.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -111,8 +111,8 @@
       "affected_skills": [
         "resolve-merge-conflicts"
       ],
-      "finding": "Reviewed 2026-10-26: Git merge documentation distinguishes fast-forward, merge-parent creation, squash behavior, and limits of abort recovery with pre-existing dirty work.",
-      "action": "Retain repository-specific ancestry and dirty-work preservation; no rebase, squash, or blanket abort assumption is introduced. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Raw body matches the retained documentation despite a changed Last-Modified header. Merge ancestry and dirty-work preservation guidance remains valid.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://git-scm.com/docs/git-worktree",
@@ -162,8 +162,8 @@
       "affected_skills": [
         "design-observability"
       ],
-      "finding": "Reviewed 2026-10-26: OpenTelemetry distinguishes traces, metrics, logs, and baggage from signals still under development or proposal.",
-      "action": "Retain exact instrumentation support and observed telemetry; available signal types do not establish operational readiness. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Extracted signal documentation matches across the retained body and two new captures. Raw bodies and ETags vary between new captures. No stable replacement fingerprint was established under the existing marker policy.",
+      "action": "Retain the existing pin until a stable fingerprint is reviewed. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
@@ -273,8 +273,8 @@
         "review-agent-security",
         "stack-google-adk"
       ],
-      "finding": "Reviewed 2026-10-26: The Agent Platform overview now groups capabilities as Build, Scale, Govern, and Optimize, with distinct runtime, sessions, memory, identity, and gateway services.",
-      "action": "Correct the retained review summary terminology; generic skill discovery remains valid. Product groupings do not establish client acceptance. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: The extracted text differs only in the last-updated date and its feedback metadata. Build, Scale, Govern, and Optimize remain the documented groups. Session and memory ownership guidance remains consistent.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://airc.nist.gov/",
@@ -304,8 +304,8 @@
       "affected_skills": [
         "stack-salesforce-apex"
       ],
-      "finding": "Reviewed 2026-10-26: Salesforce introduces hosted Apex, multitenant limits, database operations, and testing, with executable tutorial examples.",
-      "action": "Retain org/version discovery and separate live-org authority; reading a tutorial does not authorize anonymous Apex or data mutation. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Extracted tutorial text matches. Existing normalization yields a stable changed fingerprint across two captures. The profile retains governor-limit checks and separate live-org authority.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://www.drupal.org/docs/develop",
@@ -314,8 +314,8 @@
       "affected_skills": [
         "stack-php-drupal"
       ],
-      "finding": "Reviewed 2026-10-26: Drupal documentation distinguishes development tools, testing layers, security/performance guidance, and obsolete material.",
-      "action": "Retain framework/version discovery and actual repository gates; do not prescribe one command for all Drupal versions. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Extracted development index text matches. Existing normalization yields a stable changed fingerprint across two captures. Repository-specific version and test discovery remains appropriate.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://docs.swift.org/latest/data/documentation.json",
@@ -334,8 +334,8 @@
       "affected_skills": [
         "stack-typescript-javascript"
       ],
-      "finding": "Reviewed 2026-10-26: TypeScript documentation covers the handbook, modules, JSX, declarations, configuration, interoperability, and versioned release notes.",
-      "action": "Retain project compiler/runtime discovery and relevant checks; the current index does not identify an installed toolchain. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date. Bind this URL to its exact content hash, because reads on 2026-11-05 returned two entity tags for identical bytes."
+      "finding": "Reviewed 2026-11-05: Extracted index text matches. Raw changes include JavaScript chunk names and a compilation hash. Compiler, runtime, and lockfile discovery still fit the documented scope.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://docs.swift.org/latest/documentation/",
@@ -344,8 +344,8 @@
       "affected_skills": [
         "stack-swift-swiftui"
       ],
-      "finding": "Reviewed 2026-09-30: The rendered official Swift index identifies The Swift Programming Language 6.4 and links Testing, SwiftPM, toolchain management, platform guides, compiler diagnostics, and Swift 6 migration. Its raw HTTP body is an application shell.",
-      "action": "Retain the rendered-page requirement and repository-pinned language mode, SDK, isolation, and compiler evidence. Refresh only this reviewed fingerprint; preserve the older global review-age date."
+      "finding": "Reviewed 2026-11-05: Raw body matches the retained application shell despite a changed ETag. A fresh rendered browser read showed Swift 6.4, Testing, SwiftPM, toolchains, platforms, compiler diagnostics, and Swift 6 migration. The profile continues to require repository-specific compiler and SDK evidence.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
@@ -545,8 +545,8 @@
       "affected_skills": [
         "stack-gcp-data"
       ],
-      "finding": "Reviewed 2026-10-26: dbt incremental documentation distinguishes is_incremental conditions, initial/full-refresh runs, unique keys, and adapter-specific strategies.",
-      "action": "Retain strategy and grain discovery, null/duplicate tests, and correction/replay contracts. A unique_key declaration alone does not prove uniqueness or a particular SQL operation. Individual current-content decision and three observations: docs/audits/source-review-2026-10-26.json. Preserve the marker kind and global review-age date."
+      "finding": "Reviewed 2026-11-05: Extracted documentation text matches. Incremental conditions, unique keys, full refresh, and adapter-specific behavior still support the existing data profile.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
@@ -646,8 +646,8 @@
       "affected_skills": [
         "plan-change"
       ],
-      "finding": "Reviewed 2026-10-28: Official major-version guide includes runtime, API, bundler, and codemod changes. Its floating installer examples are not authorization to run them.",
-      "action": "Add an individually reviewed exact-content pin after two byte-identical retrievals. Original guidance synthesis only; no implementation imported. Existing pins and freshness policy unchanged."
+      "finding": "Reviewed 2026-11-05: Extracted documentation text matches. The major-version guide still requires runtime and API compatibility review; its installer examples grant no execution authority.",
+      "action": "Repin this reviewed source using its existing marker kind. Evidence is in docs/audits/source-review-followup-2026-11-05.json. Global review age and skill instructions are retained."
     },
     {
       "url": "https://www.postgresql.org/docs/18/sql-explain.html",

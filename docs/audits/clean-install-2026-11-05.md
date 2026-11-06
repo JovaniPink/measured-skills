@@ -12,7 +12,7 @@ claim to the [release decision](release-decision-0.19.0.md).
 | Claude Code, same-named account skills | Account skills download one way into `~/.claude/skills/synced/`. Set `syncClaudeAiSkills` to `false` to stop that | [Claude Code skills docs](https://code.claude.com/docs/en/skills) |
 | Claude Chat and Cowork | Upload a ZIP under Customize > Skills. Cowork reads account skills, not `~/.claude` | [Claude help article](https://support.claude.com/en/articles/12512180-using-skills-in-claude) |
 | Codex CLI and ChatGPT desktop Codex | Plugins. The IDE extension does not support plugins | [Codex plugins](https://learn.chatgpt.com/docs/plugins), [enterprise skills](https://learn.chatgpt.com/codex/enterprise/skills) |
-| ChatGPT web Chat and Work | Not confirmed. The official pages give no upload or delete path | [Build skills](https://learn.chatgpt.com/docs/build-skills) |
+| ChatGPT web Chat and Work | Eligible workspaces can use Plugins > Skills > Create > Upload from your computer. Account availability still needs readback | [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) |
 | Antigravity CLI and App | `agy plugin install`. Plugins live in `~/.gemini/config/plugins` | [Antigravity plugins](https://antigravity.google/docs/plugins), [skills](https://antigravity.google/docs/skills) |
 
 Not documented, so unknown: whether the ChatGPT app and the Codex CLI share a plugin cache, how
@@ -58,7 +58,7 @@ target stays `v0.16.0`.
 ## Still open
 
 - Old account skills remain in the Claude accounts and the ChatGPT account until their owner
-  deletes them. Permanent account deletions are not done by an assistant.
+  deletes them. Permanent deletion needs confirmation at action time.
 - The 73 uploads are done for one Claude account (the work account, in Chrome). Its skill list then showed
   142 skills created by the owner: the 69 old names plus the 73 new ones, with every new skill on. Until the old
   names are deleted, that account lists each job twice in Chat and Cowork. The personal Claude account and
@@ -66,3 +66,11 @@ target stays `v0.16.0`.
 - The Antigravity IDE is still over its 20,000 token customization budget, and the check did not
   separate Google's plugins from ours.
 - The second Mac was not checked.
+
+## Independent readback on November 5
+
+All 12 enabled CLI pack trees matched the frozen safety-fix manifest. Claude Code and Codex source folders also matched. The Claude account page showed 73 current and 69 legacy custom skills, all enabled, plus 15 Anthropic and partner skills. All 69 deletion-list mappings matched the migration map and pointed to current implicit skills. Personal Claude and ChatGPT account installation remain unverified.
+
+The packet receipt records 51 passing static checks. Independent file comparison confirmed its new binding, both staged pack hashes, and the three changed quality skills. Workflows, prompts, rubric, fixtures, settings, session ID, and ceilings matched the sealed packet. Native enforcement and behavior remain unrun.
+
+The local Codex inventory returned 16 other entries, while its remote catalog request failed. This readback cannot reproduce the earlier count of 29 other plugins. Historical deletion counts remain receipt evidence.

@@ -32,7 +32,7 @@
     {
       "source_url": "https://agentskills.io/specification",
       "marker_kind": "content-sha256",
-      "marker_value": "2136bc705763506f2c0b7b3a84b57f6bb32cc981895994426ace3a3bdddb94cf"
+      "marker_value": "547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7"
     },
     {
       "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
@@ -102,7 +102,7 @@
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
       "marker_kind": "etag",
-      "marker_value": "\"1411b162d211332935f3b849931739c0\""
+      "marker_value": "\"ea4e2a195cba4edbd50c26c966a19d46\""
     },
     {
       "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
@@ -142,7 +142,7 @@
     {
       "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
       "marker_kind": "last-modified",
-      "marker_value": "Wed, 04 Nov 2026 21:52:20 GMT"
+      "marker_value": "Thu, 05 Nov 2026 16:53:55 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
@@ -157,7 +157,7 @@
     {
       "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
       "marker_kind": "etag",
-      "marker_value": "\"29356880aff4bffb1bd5789db3a69be9\""
+      "marker_value": "\"806b460dd63a22eb693c2bef0976d4e4\""
     },
     {
       "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -182,7 +182,7 @@
     {
       "source_url": "https://docs.swift.org/latest/documentation/",
       "marker_kind": "etag",
-      "marker_value": "\"f63-65f89395fc580\""
+      "marker_value": "\"f63-65f8e405b8b80\""
     },
     {
       "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
@@ -202,7 +202,7 @@
     {
       "source_url": "https://git-scm.com/docs/git-merge",
       "marker_kind": "last-modified",
-      "marker_value": "Thu, 05 Nov 2026 04:35:21 GMT"
+      "marker_value": "Thu, 05 Nov 2026 04:35:22 GMT"
     },
     {
       "source_url": "https://git-scm.com/docs/git-worktree",
@@ -242,7 +242,7 @@
     {
       "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
       "marker_kind": "content-sha256",
-      "marker_value": "b0e6f2cd57fc8028fe2156d9d56e418540cd15be4f03d734fe83f6f609e5c0fc"
+      "marker_value": "8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c"
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
@@ -297,12 +297,12 @@
     {
       "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "df5547901fa8c67250e92e6f9b144ef3dccc3d47fc16440fabb226b5a76c63ec"
+      "marker_value": "a56288f582218e5c0de5d04595a7722eb514e133ea2f484a5635d0a7ca0243dd"
     },
     {
       "source_url": "https://www.drupal.org/docs/develop",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "c444e0cb956c3de055fdfc72a07f3807235583afc8eb7945e6e3639c4d3dfb61"
+      "marker_value": "5ffe093602e90d443b289a8c94479ca7c2f024975a023c5cf1b2d4b149e4e6ee"
     },
     {
       "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
@@ -327,7 +327,7 @@
     {
       "source_url": "https://www.typescriptlang.org/docs/",
       "marker_kind": "content-sha256",
-      "marker_value": "39831495ef50cc0914e2565fc9d18bda8520a6081c9d2e62b329a04138006d12"
+      "marker_value": "acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15"
     },
     {
       "source_url": "https://www.w3.org/TR/WCAG22/",

@@ -2,10 +2,12 @@
 
 ## Current state on November 5
 
-The November 5 work is merged. At this update, `main` was `d241ac8116ae8d638115890e7414c8fab7f84488`, and
-[validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42073899987)
-passed. Nothing is tagged or released. The 0.19.0 preview still has 90 skills in four
-packs: 73 implicit and 17 explicit-only.
+The November 5 safety fixes merged in [PR #97](https://github.com/JovaniPink/measured-skills/pull/97)
+at `1ba9787815733643e440c38ad6d6270b983edd60`, and [validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42107090587)
+passed. The 0.19.0 preview has 90 skills in four packs, with 73 implicit and 17 explicit-only.
+The cleanup record in
+[draft PR #98](https://github.com/JovaniPink/measured-skills/pull/98) passed hosted
+validation at `15eae4ad90834867b1f65b009921211befc67c65`.
 
 The merged work tunes the nine core descriptions and the assess prompt from a
 [one-model Haiku exploration and retest](audits/haiku-exploration-2026-11-05.md). That record
@@ -27,20 +29,20 @@ the earlier freeze. See
 
 | Gate | State on November 5 | Who can close it |
 | --- | --- | --- |
-| Repository checks | Passed on merged `main` (linked above). Each later head needs its own run | Hosted CI on the exact head |
+| Repository checks | [Hosted validation passed](https://github.com/JovaniPink/measured-skills/actions/runs/42124789652) on draft PR #98. The eventual tag commit needs its own result | Hosted CI on the exact head |
 | Description wording | Closed. The maintainer accepted the third-person wording on November 5. It scored 8 of 32 in the full catalog in each of two runs, against 12 of 32 for the imperative. The gain did not hold under a forced 8,000 character listing. This accepts the wording only, not client behavior or the originality record | Closed by the maintainer |
 | Exploration account check | Open. The November 5 runs did not inspect usage-credit controls, and $3.85 and $2.64 are list-price estimates. A later usage readback showed extra usage off, but the maintainer has not confirmed it in Settings | The maintainer, by reading the account's usage |
-| Online sources | Reviewed, final check still open. The [November 5 review](audits/source-review-2026-11-05.json) read all 31 changed sources and found no wrong skill instruction, so no skill text changed. The [online check](audits/source-check-final-2026-11-05.json) then matched 69 of 69. No old page text existed, so this reviews current content, not what changed. Two `ai.google.dev` sources now redirect to `aistudio.google.com`, as do the two matching links in `docs/google-agent-surfaces.md`. About an hour later, two sources had drifted again: TypeScript by build asset names only, and the Google agent platform overview, which is not yet reviewed | Recheck on the exact tagged commit |
+| Online sources | Open. The [earlier November 5 check](audits/source-check-final-2026-11-05.json) matched 69 of 69 after [review](audits/source-review-2026-11-05.json). A later check at `1ba97878` matched 58 of 69. [All eleven changes were reviewed](audits/source-review-followup-2026-11-05.json). Ten stable replacements were repinned. OpenTelemetry remains on hold because successive captures changed its body and ETag despite matching extracted text | Review drift, then recheck on the exact commit proposed for the tag |
 | Human chooser usefulness | Open. Ten-card exercise unscored. [Results go here](acceptance-0.19.md#ten-card-results) | A real participant |
-| 0.18 upgrade | [Rehearsed and applied](audits/upgrade-0.18-to-0.19.md) on three CLIs on one Mac. Packaging only. Apps and accounts are not updated | Not applicable |
+| 0.18 upgrade | [Rehearsed and applied](audits/upgrade-0.18-to-0.19.md) on three CLIs on one Mac. All 12 enabled CLI pack trees match the safety-fix manifest. Work Claude lists 73 current account skills and 69 enabled legacy entries. Other account installs still need readback | Not a tag gate |
 | Install lifecycle | Passed on the frozen candidate, then [rerun](audits/lifecycle-0.19.0.md) on the safety fix candidate. [All four packs](audits/lifecycle-0.19.0.md) passed install, upgrade, downgrade, uninstall, and reinstall on Claude Code, Codex, and Antigravity CLIs, in throwaway configurations. This covers packaging only. No fresh task ran | Closed for these three CLIs |
-| Claude Code acceptance | Open. The safety fixes changed `measured-quality`, so the task packet needs a new binding. Exploration ran generated packs by directory, not an installed plugin. The corrected packet is still unrun and must be rebound, because all nine staged `SKILL.md` files changed since `d85c7b59`. Its frozen evidence carries a small identity extract, so the larger current export does not reach it | A separately decided task |
+| Claude Code acceptance | Open. The packet is bound to `3df7e438` and its receipt records 51 passing static checks. The prepared packet has no run or authorization. Native permission enforcement, loading both packs together, and task behavior still need observation | A separately decided task |
 | Codex and Antigravity | Open. No new evidence. Unclaimed for 0.19.0 | The maintainer, after their controls are verified |
 | Gemini IDE packet | Open. Prepared and unrun. The exact host and model are unverified. Unclaimed for 0.19.0 | The maintainer, by separate authorization |
-| Apps and second Mac | Open. No new observations. Unclaimed for 0.19.0 | The maintainer, on each intended surface |
+| Apps and second Mac | Unclaimed for 0.19.0. [OpenAI documents a skills upload path](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) for eligible ChatGPT workspaces. Account availability and install results need their own readback | The maintainer, on each intended surface |
 | Dotfiles companion | Not a tag gate. PR 39 is still a draft at `bdc3c901df08b442ed39d9c18e60abaf424526b0`, and no release rule depends on it | The maintainer |
 | Skill security review | Closed for this candidate. Five warnings fixed in skill text, no errors. Static review only | Not applicable |
-| Candidate freeze | The freeze at `63156e05a9c7c5f25ed50920cc49b8c49bd00cfe` ended with the safety fixes. The new candidate is frozen when that PR merges. The manifest names `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
+| Candidate freeze | The safety fixes ended the freeze at `63156e05`. The replacement freeze took effect when PR #97 merged. The manifest names `3df7e438e24d8ae75f17ccb3c3f6671b1cb78018`. PR #98 includes a reviewed repin of the two allowed catalog files. Plugin, ZIP, and discovery hashes retain the safety-fix freeze. See the [freeze rules](audits/release-decision-0.19.0.md#freeze) | The maintainer |
 | Native eval suite | Exploratory, not a gate. One `routing-specialist` pass ran on the imperative wording. The other four arms are unrun, and each needs the maintainer's yes | Not applicable |
 | Public launch framing | Decided on November 5. Lead with copied requests and present skills as an optional preview. The website and launch post still need their own update and approval | Closed by the maintainer |
 | Public chooser | Open. This is a website gate, not a tag gate. The live site pins older input `cfc952d0735e6e87d5403e2434b776dd65916b74`, and Studio PR 143 is a draft | The maintainer, through website approval |
