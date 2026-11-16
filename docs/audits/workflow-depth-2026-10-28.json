@@ -222,8 +222,8 @@
     },
     "skills/execute-plan/SKILL.md": {
       "before_sha256": "83ec2482cb0f7d200b74e5a821bbb6b998b64ec299ab74bcf5471098a522e722",
-      "after_sha256": "7377e1c73c8bf08f2f07b02780ccde3b443f67655eb3843a8e35eea35a421a07",
-      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred. November 16: bounded completion, proportionate routing, and qualified evidence reuse; no new acceptance or observed behavior."
+      "after_sha256": "802a83f10af4e41679351f1aacac5b73a2ee4bdbe7055ab91228513b5ce09d8e",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred. November 16: bounded completion, proportionate routing, and qualified evidence reuse; no new acceptance or observed behavior. Direct bounded repair can supply the authorized outcome; investigate affected check failures before naming a blocker."
     },
     "skills/review-context-evidence/SKILL.md": {
       "before_sha256": "ec9daa80ee60f2ff9e0ce54bfdfb13e53377c67b100da18734d321eb428ef294",

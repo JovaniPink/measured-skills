@@ -11,7 +11,14 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 389 regression tests.
+Current test suite: 391 regression tests.
+
+## November 16 chooser follow-up
+
+The [chooser journey review](audits/chooser-journey-2026-11-16.md) records task-language
+search, explicit action scope, no-results recovery and proportionate completion.
+These edits supersede affected prior candidate bytes. Deterministic checks do not
+claim a new native model observation, human usability result or release acceptance.
 
 ## November 16 follow-through candidate
 

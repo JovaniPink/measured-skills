@@ -37,8 +37,10 @@ if (typeof document !== "undefined") (() => {
   status.setAttribute("role", "status");
   let viewVersion = 0;
   let copyVersion = 0;
+  let searchAnnouncement;
   const render = () => {
     const currentView = ++viewVersion;
+    clearTimeout(searchAnnouncement);
     // Keep the live region when replacing cards after a selection change.
     host.append(status);
     result.replaceChildren();
@@ -107,7 +109,13 @@ if (typeof document !== "undefined") (() => {
       });
     }
   };
-  search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
+  search.addEventListener("input", () => {
+    render();
+    const count = searchDiscovery(data, search.value).routes.length;
+    searchAnnouncement = setTimeout(() => {
+      status.textContent = count ? `${count} possible ${count === 1 ? "task" : "tasks"}. Choose the scope below.` : "No task matched. Recovery examples and a clear-search action follow.";
+    }, 250);
+  }); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
   const fallback = document.getElementById("static-guide");
   // The visible enhancement owns these IDs once the static guide is hidden.
   fallback.querySelectorAll("article[id]").forEach(article => article.removeAttribute("id"));

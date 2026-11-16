@@ -19,7 +19,7 @@ Read [document reconciliation](references/document-reconciliation.md) when execu
 
 ## Preconditions
 
-Confirm the exact plan, repository, branch, authorized actions, excluded actions, and required checkpoints. If the plan is missing, materially ambiguous, or no longer matches the system, stop and report the gap. If no one can state what done looks like for the plan, route to `align-on-decisions` when that skill is installed; otherwise ask the user for the finish line before executing.
+Confirm the exact plan, repository, branch, authorized actions, excluded actions, and required checkpoints. A direct, bounded repair request can supply the outcome and authority: inspect the evidence and derive the smallest implementation plan within that scope without asking for a separate plan document or repeated approval. If neither a plan nor a sufficiently clear authorized outcome is available, or current evidence reveals a material scope conflict, report the precise gap and continue independent authorized investigation. If no one can state what done looks like for the plan, route to `align-on-decisions` when that skill is installed; otherwise ask the user for the finish line before executing.
 
 ## Workflow
 
@@ -55,7 +55,7 @@ of skills. Once the authorized outcome and required evidence are complete, stop.
 
 ## Done when
 
-The plan is complete only when every authorized step and its acceptance criteria are satisfied, required checks pass, and deviations are recorded. Blocked and partial work remain unfinished. Unavailable required validation must be reported with its limitation and the next authorized check; it cannot establish completion. Stop and ask for any deviation that step 6 names, any rule under Boundaries, a check that fails for an unexplained reason, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.
+The plan is complete only when every authorized step and its acceptance criteria are satisfied, required checks pass, and deviations are recorded. Blocked and partial work remain unfinished. Unavailable required validation must be reported with its limitation and the next authorized check; it cannot establish completion. Stop and ask for any deviation that step 6 names, any rule under Boundaries, or a genuinely missing prerequisite. Investigate an unexplained check failure within the authorized scope before declaring it a blocker. Otherwise keep going, and put status notes in the same message as the next action.
 
 ## Boundaries
 
