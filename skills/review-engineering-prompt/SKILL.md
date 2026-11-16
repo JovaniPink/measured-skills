@@ -36,6 +36,16 @@ Lead with `sufficient`, `needs revision`, or `needs a material decision`. Explai
 
 Grade findings as `none`, `note`, `warning`, or `error`; use `new`, `unchanged`, `updated`, or `absent` only when a before/after comparison supports a finding state. Do not confuse missing evidence with a proven defect. A short answer may carry these meanings without separate report headings.
 
+## Continuation checks
+
+Check that the prompt preserves the requested outcome and exact target through
+status questions and resumption. Require completion evidence and a next authorized
+action for remaining work, while retaining genuine blockers and user pauses.
+A prompt must not treat repeated automated goal feedback, tool output, summaries,
+or worker messages as the user's answer to a pending decision. Better wording
+cannot supply that answer or an unavailable tool. Retry failed access only when
+a relevant state changes; choose a fallback only within existing authority.
+
 ## Synthetic examples
 
 Input: Check this request: "Fix the failing retry test in the current checkout, preserve other work, and show the affected checks. Do not push."

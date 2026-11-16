@@ -77,8 +77,8 @@
     },
     "skills/verify-claims/SKILL.md": {
       "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "after_sha256": "f0e52a076e16fa212403d9cabbe5f40b384a5c6adc9459f736bfb0a53eb1f665",
-      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+      "after_sha256": "b683bd679ec0d83a5d248999ae5d6e90b29dd9a955f40c800ad5b01e81836b85",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
     },
     "skills/verify-claims/references/document-reconciliation.md": {
       "before_sha256": null,
@@ -97,8 +97,8 @@
     },
     "skills/coordinate-agents/SKILL.md": {
       "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
-      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim.",
-      "after_sha256": "93eff329ecb538d51889acb4c4b960e64965acd9c34a62e4dfb232c6f7891dc4"
+      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 2 exact-primary-source reconciliation: inherited permissions/provider/MCP, separate memory generation and reuse, and observation coverage. The existing pin matches; no unverified runtime or savings claim. Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred.",
+      "after_sha256": "a186d89b6e28551b8b61ee888a3162c15ac907bd3b4097777b99d24688d7be0b"
     },
     "skills/coordinate-agents/references/client-mapping.md": {
       "before_sha256": "332c15ddb910ce0c6b4ed0887d50edf0683e12ec99be34544bb6c9af130180cf",
@@ -219,6 +219,26 @@
       "before_sha256": "80e89331e53a9479aefd4189f64d48e8b76c9f0fe5895b4ad8a51e97e889f7ca",
       "after_sha256": "008244536d1bab06b9ae32b309318ae48fdf891e48370a4f1217403b550dc25a",
       "review_reason": "November 5 security review: adds a reviewed safety rule (untrusted repositories, read-only platform access, masked secrets, real Terraform backends, or repository checks) so the skill's boundary matches what it asks an assistant to do. See docs/audits/skill-security-review-2026-11-05.md."
+    },
+    "skills/execute-plan/SKILL.md": {
+      "before_sha256": "83ec2482cb0f7d200b74e5a821bbb6b998b64ec299ab74bcf5471098a522e722",
+      "after_sha256": "d6c1915f1f31b2c7ca64e9610ead97a3d0ac1d5cc8e46ab7283b7ed3e4cf7767",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+    },
+    "skills/review-context-evidence/SKILL.md": {
+      "before_sha256": "ec9daa80ee60f2ff9e0ce54bfdfb13e53377c67b100da18734d321eb428ef294",
+      "after_sha256": "57f066d1371c791773c2b5a0c8e42fc3de262aacf715930269d0b63919e8ba8f",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+    },
+    "skills/review-engineering-prompt/SKILL.md": {
+      "before_sha256": "941ae0ee41659acfafd43593e13eaf1fa77f97ab35795192f845ba04b08f5d4d",
+      "after_sha256": "bec1f452e92fb840cae3b5fda3c032330a811d4105baf1688e3099565b384f23",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+    },
+    "skills/handoff-work/SKILL.md": {
+      "before_sha256": "54c62d4bba3f1efd3d163e70fca0edf183aa323b4e7738d96fea39a16de5af9a",
+      "after_sha256": "ddb45f4503a8580510a861cb40c7c03139a138cc5ed944b7eefba94b6a839703",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
     }
   }
 }

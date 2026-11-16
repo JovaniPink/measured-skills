@@ -11,7 +11,20 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 388 regression tests.
+Current test suite: 389 regression tests.
+
+## November 16 follow-through candidate
+
+Six existing skills have scoped continuation guidance and twelve prepared decision
+cases. The [dated smoke record](../evals/follow-through-observations-2026-11-16.json)
+records one explicit-text request per client, with twelve assessed decisions each;
+no native loading, tool execution, compaction recovery, or baseline comparison was
+performed. The [protocol](../evals/follow-through-protocol.md) keeps the ten-task
+ordinary-work observation pending. Changed pack bytes invalidate earlier lifecycle
+and acceptance evidence for this candidate; no installation or release is claimed.
+Pinned Ruff reports 39 findings on both the clean base and candidate, with no new
+signatures. The changed test file passes lint. Type checking passes. Manifest and
+full-suite results must be bound to the committed candidate before publication.
 
 ## November 5 lifecycle, sources, and eval suite
 

@@ -50,6 +50,15 @@ to state that evidence limit.
 - Similar names do not prove that two resources, branches, or environments are the same. Confirm identity by identifier, URL, or direct inspection.
 - When the user disputes a verdict and current evidence still supports it, state the evidence once and record the disagreement. The verdict changes only with new evidence, while the user's direction still decides the next action.
 
+## Partial work and continuation
+
+Compare the claimed result with the requested outcome and exact target. A corrected
+issue description is not a repaired implementation; a completed component is not
+a verified connected journey. Name actionable remaining work separately from an
+explicit user pause, unavailable access, or required human acceptance. A truthful
+partial report does not itself justify stopping an execution task. This review
+skill still reports the verdict without performing unrequested implementation.
+
 ## Output
 
 Lead with the supported verdict, then a claim table containing the claim,

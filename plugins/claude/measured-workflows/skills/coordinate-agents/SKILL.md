@@ -68,6 +68,14 @@ permitted owner work. If independent review is required, leave it blocked. Never
 silently fall back to another account, proxy, API, or billing route. Worker success
 is evidence to assess, not human approval or permission for another action.
 
+## Preserve obligations at integration
+
+Keep the original outcome and exact target with the integration owner. Carry each
+worker's reviewed revision, findings, limitations, and remaining validation into
+the existing parent record. Verify the integrated result before closing those
+obligations. Worker success or automated continuation cannot answer a pending
+user decision, restore a rejected option, or clear a user pause.
+
 ## Forbidden delegation
 
 - Do not delegate without user or host authorization.
