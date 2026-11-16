@@ -76,6 +76,7 @@ if (typeof document !== "undefined") (() => {
         const pre = make("pre", text, detail); pre.tabIndex = 0;
         const copy = make("button", "Copy request", detail); copy.type = "button";
         copy.addEventListener("click", async () => {
+          clearTimeout(searchAnnouncement);
           const currentCopy = ++copyVersion;
           copy.after(status);
           status.textContent = "";
@@ -105,17 +106,18 @@ if (typeof document !== "undefined") (() => {
       ["CI is red and the cause is unknown", "Explain the save path before changing it", ""].forEach(query => {
         const button = make("button", query || "Clear search and browse all tasks", result);
         button.type = "button";
-        button.addEventListener("click", () => { search.value = query; render(); search.focus(); });
+        button.addEventListener("click", () => { search.value = query; updateSearch(); search.focus(); });
       });
     }
   };
-  search.addEventListener("input", () => {
+  const updateSearch = () => {
     render();
     const count = searchDiscovery(data, search.value).routes.length;
     searchAnnouncement = setTimeout(() => {
       status.textContent = count ? `${count} possible ${count === 1 ? "task" : "tasks"}. Choose the scope below.` : "No task matched. Recovery examples and a clear-search action follow.";
     }, 250);
-  }); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
+  };
+  search.addEventListener("input", updateSearch); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
   const fallback = document.getElementById("static-guide");
   // The visible enhancement owns these IDs once the static guide is hidden.
   fallback.querySelectorAll("article[id]").forEach(article => article.removeAttribute("id"));
