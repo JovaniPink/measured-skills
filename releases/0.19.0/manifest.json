@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "80f8d058e026d55ce45e634049444f577f13fa93",
+  "source_commit": "b54131f9d0f40dd013d61c66a6292d8cf1b5ecfc",
   "created_on": "2026-11-16",
   "artifacts": [
     {
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "442705d742ac5d5d8ed559790d859c3542ee63e281172fa43687a8bd6edd281b"
+      "sha256": "02957f21470eed7a3f7a8db991d6128994006b5c5a47d37909891e1b9053be50"
     },
     {
       "kind": "file",
