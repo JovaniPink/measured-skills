@@ -1674,4 +1674,4 @@ In [REPOSITORY], inspect applicable instructions, the current branch, relevant s
 
 Package availability, invocation policy, and observed behavior are separate. Client support is recorded by date in docs/client-candidate-v0.19.0.md. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `9fd9519b2a02aa8ffe8e7a4c9b8e9bd3224a1cb1`. File hashes: `catalog.json` alongside this guide.
+Source revision: `d3d0a6a48cdec6c7eafcb50ab5d248fff23b9294`. File hashes: `catalog.json` alongside this guide.
