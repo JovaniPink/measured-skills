@@ -39,3 +39,26 @@ publish, or relabel this candidate as a qualified release from these cases alone
 The [November 16 decision smoke record](follow-through-observations-2026-11-16.json)
 records explicit-text observations only. The prepared cases retain their original
 status; the dated observation is separate and does not qualify installation.
+
+## Native loading checks
+
+Keep package lifecycle, native invocation, and behavioral grading separate. Compare
+the files the client actually reads with the candidate. For an explicit-only Claude
+command, submit its slash invocation as the command at the start of the request.
+Absence from the model-callable Skill tool is not proof that the plugin is absent:
+check native inventory and invocation policy before reporting a missing install.
+Record inline-plugin loading separately from installed-cache lifecycle results.
+For behavior checks, select the skills named by that case. A combined inventory-load
+check is separate; do not stack every skill output contract into an ordinary task.
+
+Ask for the complete continuation record the skill requires: requested outcome and
+target; retained completed work, decisions and evidence; remaining authorized work;
+blockers and decision owners; completion verdict and evidence limits. Do not impose
+a short-answer cap that omits fields the rubric grades. Keep the case prompts and
+expected criteria unchanged, and do not supply answer keys to the receiving client.
+
+Preserve failed or incomplete observations. If the harness changes, name the change
+and re-exercise only the affected cases. A corrected run does not retroactively turn
+the earlier result into a pass or establish a causal improvement from the skill.
+The [native observation](../docs/audits/follow-through-native-2026-11-16.md) records
+the candidate's bounded checks and their limits.

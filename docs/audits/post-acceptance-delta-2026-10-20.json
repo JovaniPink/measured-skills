@@ -13147,8 +13147,8 @@
     },
     "evals/follow-through-protocol.md": {
       "before_sha256": null,
-      "after_sha256": "09212527557235dd427f69acc3642eed9f9cb2c3ea7212d7b54570494d1d5ac0",
-      "expression_and_license_review": " November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority."
+      "after_sha256": "0263f50c2de06f0e2ae1b8b771c6d9a4866813b5e93ccbce59f5ffa85934fee5",
+      "expression_and_license_review": "Original technical acceptance procedure and dated observations; generic cases, public source identities and explicit limits only. No private account identifiers, session transcripts, customer data or release authority. Historical findings remain unchanged."
     },
     "evals/follow-through-scenarios.json": {
       "before_sha256": null,
@@ -13159,6 +13159,11 @@
       "before_sha256": null,
       "after_sha256": "b2db14e727e979fee65cc094c9f8971e1441c350666da4847c749c4b0889cc48",
       "expression_and_license_review": " November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority."
+    },
+    "docs/audits/follow-through-native-2026-11-16.md": {
+      "before_sha256": null,
+      "after_sha256": "e390c417a7733a02966179cda1e4a2e2c07c9bad92916e04dc549cc9aeafd5ce",
+      "expression_and_license_review": "Original technical acceptance procedure and dated observations; generic cases, public source identities and explicit limits only. No private account identifiers, session transcripts, customer data or release authority. Historical findings remain unchanged."
     }
   },
   "additional_payload_exclusions": [
