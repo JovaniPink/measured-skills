@@ -59,6 +59,14 @@ explicit user pause, unavailable access, or required human acceptance. A truthfu
 partial report does not itself justify stopping an execution task. This review
 skill still reports the verdict without performing unrequested implementation.
 
+## Sufficient evidence
+
+A new revision does not invalidate every receipt. Compare the inputs that matter
+to each claim, retain valid historical evidence, and identify only the additional
+checks the claim requires. A verification request is not authority to repair or
+build a new validation system. An accurate passing verdict needs no invented
+next task. Count unnecessary reruns and scope expansion as failures too.
+
 ## Output
 
 Lead with the supported verdict, then a claim table containing the claim,
