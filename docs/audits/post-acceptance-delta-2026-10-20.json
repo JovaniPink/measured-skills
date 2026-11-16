@@ -13179,6 +13179,11 @@
       "before_sha256": null,
       "after_sha256": "4f75981b2afd239571cc993101e5e7a31a11aeeac50b57e412ce34e9d5d20780",
       "expression_and_license_review": " November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority."
+    },
+    "dist/discovery/search.js": {
+      "before_sha256": null,
+      "after_sha256": "2696204b7c8eb71e2e93c51a2835a3d1bc3ef9314a5379aba5a7f0ee1fd555ea",
+      "expression_and_license_review": " November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority."
     }
   },
   "additional_payload_exclusions": [
