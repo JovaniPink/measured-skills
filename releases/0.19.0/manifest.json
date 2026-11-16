@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "109942aa43ccae0aac505f8413789aae41fdb097",
-  "created_on": "2026-11-05",
+  "source_commit": "80f8d058e026d55ce45e634049444f577f13fa93",
+  "created_on": "2026-11-16",
   "artifacts": [
     {
       "kind": "file",
@@ -137,7 +137,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/coordinate-agents-0.19.0.zip",
-      "sha256": "4103e5bd10e25d62460ff995ed2a9311069da8b0e7b78cc3b617c05f42f3e883"
+      "sha256": "22f7ec47aa59fb2cae4dfa8e65f0c023a4fd194ae2fc022df04010ea395ed207"
     },
     {
       "kind": "zip",
@@ -202,7 +202,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/execute-plan-0.19.0.zip",
-      "sha256": "69839c2668bff51172d3db515c1aa47d3365bb0d80d472fed909f0e26fd30210"
+      "sha256": "02c22928fd3bb5a88e9fbdfdd4cd3986fbc4d37f18fdf65f6e28b5174d8a2259"
     },
     {
       "kind": "zip",
@@ -232,7 +232,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/handoff-work-0.19.0.zip",
-      "sha256": "5e39965caf787d87e795672abbc659ac8cc8fdff258f5116c2e3f9b5a27c86ba"
+      "sha256": "2c66976287a9f7bfd2dfe05a38b13ba298c6401058acccd6444419b2b1c3f2de"
     },
     {
       "kind": "zip",
@@ -352,7 +352,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-context-evidence-0.19.0.zip",
-      "sha256": "8801d98f5f79b5c979fe1258b8bbdca7c5a00f3bd01c4e063423f92c559770ff"
+      "sha256": "735ce8db9b9aa472ce0106f1c30d614edeb24a8f5269f6a94ae2e3b3ad921eb4"
     },
     {
       "kind": "zip",
@@ -372,7 +372,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-engineering-prompt-0.19.0.zip",
-      "sha256": "c7740ea6851210793b1945f516b2a2504bb3234836ccf06bfc43ec6dce1f1789"
+      "sha256": "27824e6141379c20be65f548703d8acb0a461776c9a893a35ff1750eeb1be371"
     },
     {
       "kind": "zip",
@@ -522,7 +522,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/verify-claims-0.19.0.zip",
-      "sha256": "96d6be80ec70ad07f77be87ce91d09a39fbe6d492d9bd1055527b82fccf0f58e"
+      "sha256": "73ed9803b7cc37cb3ca13d5d23f810f9a395505b8747e213cfd6fd1095aef4ea"
     },
     {
       "kind": "zip",
@@ -562,7 +562,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "8f7046b1c5b77d20fa0ed3bf2c26d9683ec2b67505affc8c7fdd7aecca4fe279"
+      "sha256": "a05809dcbb7c4a06f301d74a619e8df710ccf4551f4963b08e6579085fb2b768"
     },
     {
       "kind": "tree",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "87edac39df5b9064e3dbe14f4ba2a1c3f584453401836d7a98cec4594f938b7b"
+      "sha256": "0c3c885426d5c7eab357fb36f5d924ff4a6eb3f867e6524a25517eb83598a986"
     },
     {
       "kind": "tree",
@@ -582,7 +582,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "377ddbb516aa389cbc46abdb679ee2718307933561d84956f0191d0bede9ec55"
+      "sha256": "efe58876c4a5a0c3bc58067074a10df7bc54ef460532b6a6f8e403f0a2a3c729"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "8d94d7564d612fc6ab142c7c00559f70b9fa2cf428decf2acf06d4db9b98d396"
+      "sha256": "adc91d1ca900b0cb6773e558bae635d5f7692386a094327e568c46a3719ae993"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "c3cf3160d96376574d91e5249cacae382b7f292b5f753502836e13c4e184a0e0"
+      "sha256": "d78ba831e5bc959a15a7deb23cf821665ef75dd95e8a76e06efc4a9f3bf897dd"
     },
     {
       "kind": "tree",
@@ -612,12 +612,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "ca2463c9b998fdf5727e65d5457efdc5949956bb19ee65ace423313c3ebecf32"
+      "sha256": "8c5db81958576a90bbe61baefcb50dde6242a32764d60c93b3f0e61eb2584f44"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "1e7ef9a067d707bcfdb2e2c7c32018d12673552e4f2a384adb56d78c4c20016c"
+      "sha256": "42516ca49dde14e960dae49b6a5c5e3838f1a1f6173b826f5b0b4eb398d5a7f6"
     }
   ]
 }
