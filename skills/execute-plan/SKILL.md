@@ -45,6 +45,14 @@ pause, or enlarge authority. Preserve who must decide and which action depends
 on that decision; continue only independent work already authorized. A stale
 summary cannot restore a target or option the user superseded.
 
+## Sufficient work
+
+Completion is bounded by the requested outcome, not by every improvement discovered.
+Use existing validation and reuse receipts after comparing relevant inputs. Add a
+check only for an uncovered requirement or changed risk; name that reason. Do not
+turn a repair into new test infrastructure, unrelated cleanup, or a mandatory chain
+of skills. Once the authorized outcome and required evidence are complete, stop.
+
 ## Done when
 
 The plan is complete only when every authorized step and its acceptance criteria are satisfied, required checks pass, and deviations are recorded. Blocked and partial work remain unfinished. Unavailable required validation must be reported with its limitation and the next authorized check; it cannot establish completion. Stop and ask for any deviation that step 6 names, any rule under Boundaries, a check that fails for an unexplained reason, or a missing precondition. Otherwise keep going, and put status notes in the same message as the next action.

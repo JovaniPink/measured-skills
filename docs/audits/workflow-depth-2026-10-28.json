@@ -77,8 +77,8 @@
     },
     "skills/verify-claims/SKILL.md": {
       "before_sha256": "f3064bebcbc6b20dc9f628300bb0eb311ba5c9e16e6a6fa40ed445d27fb7703a",
-      "after_sha256": "b683bd679ec0d83a5d248999ae5d6e90b29dd9a955f40c800ad5b01e81836b85",
-      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+      "after_sha256": "f4ec29cf0ce691f74e16e7a2772079e8aea8e3339df67138dbda147004cc7eeb",
+      "review_reason": "Reviewed document-authority and evidence classifications; code is not presumed correct and historical observations remain historical. Owned-adaptation lineage retained. October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred. November 16: bounded completion, proportionate routing, and qualified evidence reuse; no new acceptance or observed behavior."
     },
     "skills/verify-claims/references/document-reconciliation.md": {
       "before_sha256": null,
@@ -147,8 +147,8 @@
     },
     "skills/choose-workflow/SKILL.md": {
       "before_sha256": "0aa46cfdc992c0a3bbaecd0ed6602c35047068b7665f1369262172da3a2e7c18",
-      "after_sha256": "0a9cad028af59d6a69c02fcb0c74ddaf1a3f9892386e33a7e1c510bf653f7ed1",
-      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+      "after_sha256": "05e0d192471743ce6596d1c9fe5bcb968459ccb87c58ac3ff354627fb69be22d",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. November 16: bounded completion, proportionate routing, and qualified evidence reuse; no new acceptance or observed behavior."
     },
     "skills/plan-tests/SKILL.md": {
       "before_sha256": "458593539d11dec2f76654699921e289409f0b36b69cef4d5ad6c76064236bec",
@@ -222,8 +222,8 @@
     },
     "skills/execute-plan/SKILL.md": {
       "before_sha256": "83ec2482cb0f7d200b74e5a821bbb6b998b64ec299ab74bcf5471098a522e722",
-      "after_sha256": "d6c1915f1f31b2c7ca64e9610ead97a3d0ac1d5cc8e46ab7283b7ed3e4cf7767",
-      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+      "after_sha256": "7377e1c73c8bf08f2f07b02780ccde3b443f67655eb3843a8e35eea35a421a07",
+      "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred. November 16: bounded completion, proportionate routing, and qualified evidence reuse; no new acceptance or observed behavior."
     },
     "skills/review-context-evidence/SKILL.md": {
       "before_sha256": "ec9daa80ee60f2ff9e0ce54bfdfb13e53377c67b100da18734d321eb428ef294",

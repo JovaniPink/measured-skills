@@ -25,6 +25,11 @@ client/configuration, scope and relevant guidance in the existing task record.
 Do not create a shared queue, change board status automatically, or schedule runs.
 If only one client appears in the cohort, report the other as unobserved.
 
+Also count avoidable approval requests, unrequested changes, unnecessary delegation,
+and verification added without a changed input or unmet requirement. Preserve the
+actual requested scope when distinguishing these from useful investigation. A task
+can fail by stopping early or by continuing beyond sufficient completion.
+
 Count avoidable continuation corrections (exclude new scope and explicit pauses),
 omitted required outcomes, unsupported completion/authority claims, identical
 access retries without changed state, check reruns without changed inputs or a

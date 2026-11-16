@@ -1,27 +1,5 @@
-/* Pure local lookup shared by the page and regression checks. */
-function searchDiscovery(data, query) {
-  const normalize = value => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-  const term = normalize(query);
-  if (!term) return {matching: [], routes: query.trim() ? [] : data.routes};
-  const contains = (text, phrase) => (` ${text} `).includes(` ${phrase} `);
-  // Only reviewed multiword phrases and names match inside longer requests.
-  // This is literal lookup, not intent detection or authorization analysis.
-  const mentioned = phrases => phrases.some(value => {
-    const phrase = normalize(value);
-    return phrase.includes(" ") && contains(term, phrase);
-  });
-  // Preserve partial typing for task and skill lookup. Reverse matching of
-  // phrases inside sentences still requires complete words.
-  const matching = data.skills.filter(s => {
-    const names = [s.id, s.label, ...s.historical_names];
-    return normalize([...names, s.description].join(" ")).includes(term) || mentioned(names);
-  });
-  const routes = data.routes.filter(r => !term ||
-    normalize([r.label, r.why, ...r.search_phrases].join(" ")).includes(term) ||
-    mentioned([r.label, ...r.search_phrases]) || matching.some(s => r.search_skills.includes(s.id)));
-  return {matching, routes};
-}
-if (typeof module !== "undefined" && module.exports) module.exports = {searchDiscovery};
+/* Search is shared with the website and embedded before this enhancement. */
+if (typeof module !== "undefined" && module.exports) module.exports = require("./discovery-search.js");
 
 /* Local enhancement. The complete task guide remains readable without this script. */
 if (typeof document !== "undefined") (() => {
@@ -33,7 +11,7 @@ if (typeof document !== "undefined") (() => {
     parent.append(node);
     return node;
   };
-  make("h2", "Find a route", host);
+  make("h2", "Choose a task, then its scope", host);
   const label = make("label", "Search a task or skill name ", host);
   const search = make("input", "", label);
   search.type = "search";
@@ -85,7 +63,7 @@ if (typeof document !== "undefined") (() => {
       r.modes.forEach(m => {
         const detail = make("details", "", article);
         detail.dataset.actionScope = m.id;
-        detail.open = r.id === data.default_route && m.id === "assess";
+        detail.open = r.modes.length === 1;
         const summary = make("summary", m.label, detail);
         summary.addEventListener("click", () => { copyVersion += 1; status.textContent = ""; });
         make("p", m.scope, detail);
@@ -119,7 +97,15 @@ if (typeof document !== "undefined") (() => {
         make("p", `Package: ${s.availability[client.value]}; ${s.invocation}; behavior unobserved. Verify the installed source before invoking it.`, d);
       });
     }
-    if (!routes.length && !matching.length) make("p", "No match. Try a shorter task phrase or browse the complete catalog below.", result);
+    if (!routes.length) {
+      make("h3", "No task matched that search", result);
+      make("p", "Try a task below, or clear the search to browse every task. Search suggestions do not choose an action scope.", result);
+      ["CI is red and the cause is unknown", "Explain the save path before changing it", ""].forEach(query => {
+        const button = make("button", query || "Clear search and browse all tasks", result);
+        button.type = "button";
+        button.addEventListener("click", () => { search.value = query; render(); search.focus(); });
+      });
+    }
   };
   search.addEventListener("input", render); client.addEventListener("change", render); stack.addEventListener("change", render); style.addEventListener("change", render);
   const fallback = document.getElementById("static-guide");
