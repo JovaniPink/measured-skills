@@ -39,6 +39,15 @@ This is routing advice, not execution of the proposed prompt.
    authorizes implementation, hand the route back to that authorized workflow
    without manufacturing another permission checkpoint.
 
+## Keep the route proportionate
+
+Match ordinary task language as well as catalog names. Search results suggest a
+task, not permission to edit. Explain the expected result and action boundary;
+keep a direct repair request direct instead of requiring a separate assessment.
+Select only the guidance the task needs, not an entire pack or a compulsory skill
+chain. If no route fits, preserve the request and suggest a narrower search or
+catalog browse without fabricating an intent match.
+
 ## Output
 
 Start here; why it fits; what to provide; expected result; next prompt; finish line.

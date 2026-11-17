@@ -26,6 +26,16 @@ Create a compact, verifiable continuation record without transferring hidden rea
 6. State authorized actions, actions requiring new approval, sensitive context that is deliberately omitted, and stopping conditions.
 7. Provide the smallest ordered next-step list that lets the recipient verify before acting.
 
+## Continuation receipt
+
+Use the existing task record. Preserve target identifiers, current user direction,
+superseded choices, exact revisions, evidence locations, and the next authorized
+action. Recheck volatile facts needed for that action and keep qualified prior
+evidence; resumption alone is not a reason to repeat a check. Carry each independent
+review's scope, revision, findings, unresolved limitations, and integration
+verification. Worker completion does not close the parent task. An automated
+reminder cannot answer a pending user decision or clear a user pause.
+
 ## Boundaries
 
 - Do not describe local work as pushed, a PR as merged, a preview as deployed, or a deployment as live without current evidence.

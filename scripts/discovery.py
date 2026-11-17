@@ -192,7 +192,7 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
 
 def input_hashes(root: Path = ROOT) -> dict[str, str]:
     paths = [REGISTRY, MIGRATION, canonical_deltas.RECORD, 'scripts/canonical_deltas.py', 'catalog/skills.json', 'catalog/profiles.json', 'catalog/evidence.json',
-             'catalog/compatibility.json', 'scripts/discovery.py', 'scripts/discovery-ui.js', 'scripts/cataloglib.py']
+             'catalog/compatibility.json', 'scripts/discovery.py', 'scripts/discovery-ui.js', 'scripts/discovery-search.js', 'scripts/cataloglib.py']
     paths += [p.relative_to(root).as_posix() for p in sorted((root / 'skills').rglob('*'))
               if p.is_file() and p.relative_to(root).as_posix() != GENERATED_INDEX]
     return {p: sha((root / p).read_bytes()) for p in sorted(paths)}
@@ -357,13 +357,13 @@ def offline_html(data: dict[str, Any], root: Path = ROOT) -> str:
     nav = ''.join('<a href="#' + e(r['id']) + '">' + e(r['label']) + '</a> ' for r in data['routes'][:7])
     catalog = ''.join('<li><strong>' + e(s['label']) + '</strong>: ' + e(s['id']) + ' (formerly ' + e(', '.join(s['historical_names']) or 'new') + '). ' + e(s['description']) + ' Invocation: ' + e(s['invocation']) + '.</li>' for s in data['skills'])
     payload = json.dumps(data, ensure_ascii=True).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    script = (root / 'scripts/discovery-ui.js').read_text()
+    script = (root / 'scripts/discovery-search.js').read_text() + '\n' + (root / 'scripts/discovery-ui.js').read_text()
     document: str = '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src \'none\'; script-src \'unsafe-inline\'; style-src \'unsafe-inline\'; connect-src \'none\'; base-uri \'none\'; form-action \'none\'"><title>Find your next workflow - Measured Skills</title><style>body{font:1.1rem/1.65 system-ui;margin:auto;padding:2rem;max-width:68rem;color:#172c27;background:#faf8f3}a{color:#125d48}nav{display:flex;gap:1rem;flex-wrap:wrap}article{border-top:1px solid #b6c9c0;margin-top:2rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;background:#e9eee9;padding:1rem}input,select,button{font:inherit;max-width:100%;padding:.5rem;margin:.4rem}summary,button{cursor:pointer}:focus-visible{outline:3px solid #14694f;outline-offset:3px}h1,h2{line-height:1.2}li{margin:.7rem 0}[hidden]{display:none}</style><main><h1>Finish the next piece of work</h1><p>Measured Skills 0.19.0. Nothing executes when you choose a route. No login, network calls, saved search text or installation.</p><p>Available source: ' + e(data['available_version']) + '. Installed names may differ; verify source and loading before using a command.</p><nav aria-label="Tasks">' + nav + '</nav><section id="interactive" hidden></section><section aria-label="Finish-work sequence"><h2>A small, complete repair</h2><p>Recover -> Plan -> Repair -> Check -> Review -> Verify. Findings return to Repair; blocked work stays visible.</p></section><section aria-label="Evidence ladder"><h2>What each result tells you</h2><ol><li>Source inspection: what the code says.</li><li>Local checks: what ran in this checkout.</li><li>Client behavior: what this installed client actually loaded and did.</li><li>Remote CI: what the host checked at its recorded revision.</li><li>Deployed behavior: what was observed in the receiving environment.</li></ol><p>No rung automatically establishes the next.</p></section><section id="static-guide">' + ''.join(cards) + '</section><details id="catalog"><summary>Browse all ' + str(len(data['skills'])) + ' skills</summary><ul>' + catalog + '</ul></details><p>Source revision: ' + e(data['source_revision']) + '. Client support is recorded by date in docs/client-candidate-v0.19.0.md.</p></main><script type="application/json" id="catalog-data">' + payload + '</script><script>' + script + '</script></html>\n'
     return document
 
 
 def generated_files(data: dict[str, Any], root: Path = ROOT) -> dict[str, bytes]:
-    files = {EXPORT: encoded(data), 'dist/discovery/guide.md': markdown(data).encode(),
+    files = {'dist/discovery/search.js': (root / 'scripts/discovery-search.js').read_bytes(), EXPORT: encoded(data), 'dist/discovery/guide.md': markdown(data).encode(),
              'dist/discovery/index.html': offline_html(data, root).encode(), GENERATED_INDEX: markdown(data, bundled=True).encode(),
              'docs/skill-catalog-reader-guide.md': reader_guide(data).encode()}
     files['dist/discovery/hashes.json'] = encoded({p: sha(v) for p, v in files.items()})

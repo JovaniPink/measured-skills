@@ -1,0 +1,149 @@
+{
+  "observed_on": "2026-11-16",
+  "scope": "Explicit-text decision smoke checks; one bundled request per client, twelve independent synthetic prompts per bundle. No tool execution or native skill activation was tested.",
+  "source_sha256": {
+    "coordinate-agents": "a186d89b6e28551b8b61ee888a3162c15ac907bd3b4097777b99d24688d7be0b",
+    "execute-plan": "d6c1915f1f31b2c7ca64e9610ead97a3d0ac1d5cc8e46ab7283b7ed3e4cf7767",
+    "handoff-work": "ddb45f4503a8580510a861cb40c7c03139a138cc5ed944b7eefba94b6a839703",
+    "review-context-evidence": "57f066d1371c791773c2b5a0c8e42fc3de262aacf715930269d0b63919e8ba8f",
+    "review-engineering-prompt": "bec1f452e92fb840cae3b5fda3c032330a811d4105baf1688e3099565b384f23",
+    "verify-claims": "b683bd679ec0d83a5d248999ae5d6e90b29dd9a955f40c800ad5b01e81836b85"
+  },
+  "case_sha256": "08b7491918835150a0e3fbff614e253777adf70c7fc7a017c5ceaf50fb88a08e",
+  "assessment": "Assistant review against prepared expected and forbidden actions; not independent human grading or a baseline comparison.",
+  "clients": [
+    {
+      "client": "Codex CLI",
+      "version": "0.167.0",
+      "requested_model": "gpt-6-astra",
+      "served_model": null,
+      "served_model_limit": "The event output did not expose the served model.",
+      "reasoning": "xhigh",
+      "exposure": "Candidate text supplied in prompt; native skill discovery not claimed.",
+      "tools": "Shell, apps, hooks, multi-agent and skill-search disabled; read-only sandbox; no tool actions observed. Host-skill-discovery suppression is an experimental flag, not an isolation guarantee.",
+      "result": "12 decision cases met the assessed mandatory expectations",
+      "cases": [
+        {
+          "id": "completion-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "completion-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "context-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "context-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "rejected-option-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "rejected-option-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "tool-access-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "tool-access-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "evidence-reuse-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "evidence-reuse-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "review-handoff-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "review-handoff-counterexample",
+          "verdict": "pass"
+        }
+      ]
+    },
+    {
+      "client": "Claude Code",
+      "version": "2.1.316",
+      "requested_model": "existing default",
+      "served_model": "claude-sonnet-5-5",
+      "exposure": "Candidate text supplied in prompt; safe mode disables customizations; no native activation claim.",
+      "tools": "No tools; strict empty MCP configuration; no subagents or tool use reported.",
+      "result": "12 decision cases met the assessed mandatory expectations",
+      "cases": [
+        {
+          "id": "completion-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "completion-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "context-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "context-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "rejected-option-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "rejected-option-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "tool-access-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "tool-access-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "evidence-reuse-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "evidence-reuse-counterexample",
+          "verdict": "pass"
+        },
+        {
+          "id": "review-handoff-failure",
+          "verdict": "pass"
+        },
+        {
+          "id": "review-handoff-counterexample",
+          "verdict": "pass"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "One bundled request per client is not twelve isolated executions.",
+    "No baseline, repetitions, native loading, lifecycle or long-context test.",
+    "No assertion about historical skill loading or model superiority.",
+    "CLI list-price accounting is not a subscription bill or spending measurement.",
+    "Changed pack bytes require fresh lifecycle and acceptance evidence before release."
+  ],
+  "ordinary_task_observation": {
+    "eligible_tasks_observed": 0,
+    "target": 10,
+    "status": "pending candidate adoption and ordinary authorized tasks",
+    "protocol": "follow-through-protocol.md"
+  }
+}

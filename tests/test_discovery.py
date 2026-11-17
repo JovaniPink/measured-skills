@@ -48,9 +48,9 @@ class MigrationTests(unittest.TestCase):
             ('A reviewer says my retry code can lose data. I want to assess that claim before editing.', ['finish-work']),
             ('I have a half-finished draft PR and want to know what remains, without editing files.', ['finish-work', 'verify']),
             ('Please investigate why is the build failing?', ['diagnose']),
-            ('plan-execution', ['finish-work', 'upgrade-dependency', 'refactor']),
-            ('plan execution', ['finish-work', 'upgrade-dependency', 'refactor']),
-            ('plan-exec', ['finish-work', 'upgrade-dependency', 'refactor']),
+            ('plan-execution', ['finish-work', 'diagnose', 'upgrade-dependency', 'refactor']),
+            ('plan execution', ['finish-work', 'diagnose', 'upgrade-dependency', 'refactor']),
+            ('plan-exec', ['finish-work', 'diagnose', 'upgrade-dependency', 'refactor']),
             ('refact', ['refactor']),
             ('???', []),
             ('   ', [r['id'] for r in registry['routes']]),
@@ -124,7 +124,7 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
         migration = json.loads((ROOT / discovery.MIGRATION).read_text())
         replacement = next(r['new_id'] for r in migration['entries'] if r['old_id'] == 'plan-execution')
         routes = [r['id'] for r in registry['routes'] if replacement in discovery.route_skill_ids(r)]
-        self.assertEqual(['finish-work', 'upgrade-dependency', 'refactor'], routes)
+        self.assertEqual(['finish-work', 'diagnose', 'upgrade-dependency', 'refactor'], routes)
         for route in registry['routes']:
             ids = discovery.route_skill_ids(route)
             self.assertEqual(len(ids), len(set(ids)))
@@ -248,6 +248,7 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
                 target.write_bytes(content)
             (root / 'scripts').mkdir()
             (root / 'scripts/discovery-ui.js').write_bytes((ROOT / 'scripts/discovery-ui.js').read_bytes())
+            (root / 'scripts/discovery-search.js').write_bytes((ROOT / 'scripts/discovery-search.js').read_bytes())
             with patch.object(discovery, 'build_data', return_value=data):
                 self.assertEqual([], discovery.check(root))
                 (root / 'dist/discovery/guide.md').write_text('changed')

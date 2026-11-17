@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "109942aa43ccae0aac505f8413789aae41fdb097",
-  "created_on": "2026-11-05",
+  "source_commit": "9a8ede03fad267d6fc1caa2f8a4638d53cb3a63b",
+  "created_on": "2026-11-16",
   "artifacts": [
     {
       "kind": "file",
@@ -82,7 +82,7 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "946282e5b97873c1815133bd4ccf4f8dcb6150ced6d089930f8b4191444761c8"
+      "sha256": "4ec16ca643427d87063d5880e8ff54ce728cb6c77fba3309193fd53f377c23e8"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "71245ed9a2a4025771bb306b12aafd00a083867bc202b17a4180e1fed0e76189"
+      "sha256": "0d8501ed39eb4a46195a30cc2b8a7dd106c6b472c5e135b87281a76e44375913"
     },
     {
       "kind": "zip",
@@ -137,7 +137,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/coordinate-agents-0.19.0.zip",
-      "sha256": "4103e5bd10e25d62460ff995ed2a9311069da8b0e7b78cc3b617c05f42f3e883"
+      "sha256": "22f7ec47aa59fb2cae4dfa8e65f0c023a4fd194ae2fc022df04010ea395ed207"
     },
     {
       "kind": "zip",
@@ -202,7 +202,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/execute-plan-0.19.0.zip",
-      "sha256": "69839c2668bff51172d3db515c1aa47d3365bb0d80d472fed909f0e26fd30210"
+      "sha256": "9cd34645410baba1a86033e6877149d5d8273b49cbb38b38e952d86f7f599ee7"
     },
     {
       "kind": "zip",
@@ -232,7 +232,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/handoff-work-0.19.0.zip",
-      "sha256": "5e39965caf787d87e795672abbc659ac8cc8fdff258f5116c2e3f9b5a27c86ba"
+      "sha256": "2c66976287a9f7bfd2dfe05a38b13ba298c6401058acccd6444419b2b1c3f2de"
     },
     {
       "kind": "zip",
@@ -352,7 +352,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-context-evidence-0.19.0.zip",
-      "sha256": "8801d98f5f79b5c979fe1258b8bbdca7c5a00f3bd01c4e063423f92c559770ff"
+      "sha256": "735ce8db9b9aa472ce0106f1c30d614edeb24a8f5269f6a94ae2e3b3ad921eb4"
     },
     {
       "kind": "zip",
@@ -372,7 +372,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-engineering-prompt-0.19.0.zip",
-      "sha256": "c7740ea6851210793b1945f516b2a2504bb3234836ccf06bfc43ec6dce1f1789"
+      "sha256": "27824e6141379c20be65f548703d8acb0a461776c9a893a35ff1750eeb1be371"
     },
     {
       "kind": "zip",
@@ -522,7 +522,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/verify-claims-0.19.0.zip",
-      "sha256": "96d6be80ec70ad07f77be87ce91d09a39fbe6d492d9bd1055527b82fccf0f58e"
+      "sha256": "e646503972875306d32def71521c4ada884e5d88ddf5560171861037a7375af5"
     },
     {
       "kind": "zip",
@@ -537,7 +537,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "442705d742ac5d5d8ed559790d859c3542ee63e281172fa43687a8bd6edd281b"
+      "sha256": "202f78f91b8c899145825b3f51218574e6c3541a5aacc2acbbdc9d9d683d446d"
     },
     {
       "kind": "file",
@@ -562,7 +562,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "8f7046b1c5b77d20fa0ed3bf2c26d9683ec2b67505affc8c7fdd7aecca4fe279"
+      "sha256": "549839d630bfee56a689a6c804cd1ca35b86b8dd337a3ce0d045124ae5a58eb9"
     },
     {
       "kind": "tree",
@@ -572,7 +572,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "87edac39df5b9064e3dbe14f4ba2a1c3f584453401836d7a98cec4594f938b7b"
+      "sha256": "6b616127b0ba5163894b4f113b008a0645bfddc00661abb591eb91fb300d8627"
     },
     {
       "kind": "tree",
@@ -582,7 +582,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "377ddbb516aa389cbc46abdb679ee2718307933561d84956f0191d0bede9ec55"
+      "sha256": "bbb2a27bc831adbe75fbd416feec0531cc54d49179b6f5c25cf65b7b04d969ad"
     },
     {
       "kind": "tree",
@@ -592,7 +592,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "8d94d7564d612fc6ab142c7c00559f70b9fa2cf428decf2acf06d4db9b98d396"
+      "sha256": "99b6bbcaedaa782ffab71b7f11dfbe68b502ec3002add39f2fe4fef5ff4ce66e"
     },
     {
       "kind": "tree",
@@ -602,7 +602,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "c3cf3160d96376574d91e5249cacae382b7f292b5f753502836e13c4e184a0e0"
+      "sha256": "8c8c00d2e689a2c5c2836f194ff3e4a2b154472c5d3a6a99a137f6613d3c9609"
     },
     {
       "kind": "tree",
@@ -612,12 +612,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "ca2463c9b998fdf5727e65d5457efdc5949956bb19ee65ace423313c3ebecf32"
+      "sha256": "5ca79ef27f4fdb7022768192cf6ee3a78c70555db4b9e72bd53f1af7e24ab49b"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "1e7ef9a067d707bcfdb2e2c7c32018d12673552e4f2a384adb56d78c4c20016c"
+      "sha256": "42516ca49dde14e960dae49b6a5c5e3838f1a1f6173b826f5b0b4eb398d5a7f6"
     }
   ]
 }
