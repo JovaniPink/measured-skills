@@ -67,6 +67,16 @@ authorization path. A predicted assertion failure is still not an executed resul
 7. Separate findings from questions, optional improvements, and unsupported concerns.
 8. Report validation performed, unavailable evidence, and the remaining review boundary.
 
+For prompt, rubric, tool, or agent-loop changes, inspect the behavior contract as
+well as the code diff. Check retry and resource bounds, failure diagnostics,
+side effects, and the versions of the cases and graders supporting the result.
+Route evaluation design to `design-agent-evaluations`. A higher aggregate score
+does not clear a broken critical contract or an untested affected group.
+
+Preserve the owner's ability to explain the change: identify its governing
+requirement, important system assumptions, and unresolved tradeoffs. A readable
+diff and passing checks do not establish that those decisions are correct.
+
 ## Boundaries
 
 - A changed line is not automatically defective, and an unchanged line can still be affected.

@@ -142,7 +142,7 @@ Historical name: finding-consolidation.
 
 [`design-agent-evaluations`](../skills/design-agent-evaluations/SKILL.md)
 
-Designs AI evaluations when asked how to test an agent, compare prompts, or measure answer quality; requires representative cases and a baseline rather than one favorable response.
+Designs AI evaluations when asked to test an agent, compare prompts, measure answer quality, or audit prompt and judge drift; requires representative cases, a calibrated grader, and a baseline rather than one favorable response.
 
 Invocation: implicit. Risk class: read-only.
 
