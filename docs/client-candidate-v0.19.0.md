@@ -1,6 +1,8 @@
 # 0.19.0 preview acceptance
 
-Catalog version: 0.19.0. Status checkpoint: November 17, 2026.
+Catalog version: 0.19.0
+
+Status checkpoint: November 17, 2026.
 
 This is preview source. Package generation, repository checks, installation,
 successful loading, useful behavior, and deployment are separate observations.
