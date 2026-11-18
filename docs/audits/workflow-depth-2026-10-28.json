@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "baseline_revision": "62af7d15431c9b3e653523888cd574b7319d7171",
-  "reviewed_on": "2026-10-28",
+  "reviewed_on": "2026-11-18",
   "status": "scoped_technical_delta_review",
   "new_maintainer_acceptance": false,
   "changes": {
@@ -107,8 +107,8 @@
     },
     "skills/design-agent-evaluations/SKILL.md": {
       "before_sha256": "6fd4bd20e3730db436a11ef615a2abb248c899c9fc3834497c9bebea683c67f4",
-      "review_reason": " October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md.",
-      "after_sha256": "2b7bfe3618281d3e3c0a58faf71f33fb1754683799b5e418bbb77710ea9e9f3d"
+      "review_reason": "October 30 original usage-evidence refinement: bounded work is not complete inference accounting; retain unknowns and separate instrumentation authority. See client-runtime-observation-2026-10-30.md. November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "after_sha256": "2fb42334d7934b1349c3b0613d8d43df660bfd226d41d31af20ec3c073bf5657"
     },
     "skills/diagnose-failure/SKILL.md": {
       "before_sha256": "c3d5934ebb5f558d4c2fcf830c9e8292398428260f30d914b8c2b3574b4170b9",
@@ -132,8 +132,8 @@
     },
     "skills/review-code-change/SKILL.md": {
       "before_sha256": "2b74249c46f7d6ceb52c32dddf554697fab550edae481c23e5c34673aace03d8",
-      "review_reason": " November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill.",
-      "after_sha256": "13ac07ee1a8cf6cf74ae21342bb2b77baaa51395f95ddf741084db9091b90042"
+      "review_reason": "November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7"
     },
     "skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -142,8 +142,8 @@
     },
     "skills/assess-change-impact/SKILL.md": {
       "before_sha256": "3988ac1bca81770e7cc0c8350a485ecf38435b9a1836d0a7dc7a9fd8370c42b5",
-      "after_sha256": "dea43e28856ea2b079ed9500493f8f80660b7365498d1dbb0e58750d1f32ef0d",
-      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill."
+      "after_sha256": "81cb2c881e4ec299d45b5d88ec90a1f911277e60e340e107b80f9f1e41b85104",
+      "review_reason": "November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior."
     },
     "skills/choose-workflow/SKILL.md": {
       "before_sha256": "0aa46cfdc992c0a3bbaecd0ed6602c35047068b7665f1369262172da3a2e7c18",
@@ -239,6 +239,31 @@
       "before_sha256": "54c62d4bba3f1efd3d163e70fca0edf183aa323b4e7738d96fea39a16de5af9a",
       "after_sha256": "ddb45f4503a8580510a861cb40c7c03139a138cc5ed944b7eefba94b6a839703",
       "review_reason": " Original November 16 continuation refinement keeps decision authority, target identity and evidence limits explicit; no model result or acceptance is inferred."
+    },
+    "skills/design-agent-evaluations/agents/openai.yaml": {
+      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "before_sha256": "1df7777565093eb7d82f05ef0bfbb3bee97b4ab1d93a7bc85ee0ff2fb4f3f46d",
+      "after_sha256": "64df0722da50bfd30de43c75ea25aa165e03ad77bb664d86253648e3b3927dd8"
+    },
+    "skills/design-agent-evaluations/references/evaluation-contract.md": {
+      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "before_sha256": "996cb9b72129d68e3134a4b90b032be293355a4433c95331ccebf9d830d8614d",
+      "after_sha256": "24957fbf852d434a1ac41bc178bff8e9c2640bfc764101d05cd1416c5e2273f5"
+    },
+    "skills/learn-after-launch/SKILL.md": {
+      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "before_sha256": "d3593c96eb5d90840a39c0b900ab0d81cff4330852e2ca28d7f5b36377690f65",
+      "after_sha256": "1b29bb396253fed94385848bf4e7c6ab28b7be1458f501c8d358eb75c99b15bf"
+    },
+    "skills/request-review/SKILL.md": {
+      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "before_sha256": "244e50add51495fc1ca4ca6f1d0e068c3ae8ee70c603fca8b39a47135e942e69",
+      "after_sha256": "45a933b483611517936206aa053f575264aa65a13ad839b7cb5489635634dc17"
+    },
+    "skills/review-code-change/references/bounded-review.md": {
+      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
+      "before_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
+      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1"
     }
   }
 }

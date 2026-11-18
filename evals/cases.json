@@ -194,11 +194,12 @@
       "output_rubric": [
         "Output pins the exact change and traces direct and indirect consumers across runtime and operations.",
         "Every impact is classified as confirmed, possible, or cleared with evidence.",
-        "Mixed-version, rollout, rollback, and untraced surfaces are explicit."
+        "Mixed-version, rollout, rollback, and untraced surfaces are explicit.",
+        "For automation changes, traces receiving queues, review capacity, rework, feedback delay, and knowledge ownership; distinguishes observed constraints from competing explanations."
       ],
       "baseline_comparison": {
         "status": "blocked",
-        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked until the v0.5 package is installed in that client."
+        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked until the v0.5 package is installed in that client. November 18 review and feedback-loop refinements add prepared cases; no new installed-versus-baseline observation is claimed."
       }
     },
     {
@@ -715,11 +716,12 @@
         "The contract pins the decision, population, cases, baseline, configurations, graders, error classes, metrics, thresholds, cost, and latency.",
         "Objective oracles and judgment-based graders are distinguished, with calibration, disagreement, uncertainty, and human review defined.",
         "Execution authority and limitations are explicit; aggregate results cannot conceal safety-critical or subgroup failures.",
-        "Declare planned case, arm, and repetition coverage before collection. Bind every result to a unique study, case, arm, repetition, client, source, instructions, and execution envelope; reject duplicate or mismatched identities rather than overwriting. Check coverage and evidence integrity before outcome scoring. Keep failed execution, missing evidence, deterministic diagnostics, and pending human review distinct. Isolate treatment setup from task grading and protect the test contract independently."
+        "Declare planned case, arm, and repetition coverage before collection. Bind every result to a unique study, case, arm, repetition, client, source, instructions, and execution envelope; reject duplicate or mismatched identities rather than overwriting. Check coverage and evidence integrity before outcome scoring. Keep failed execution, missing evidence, deterministic diagnostics, and pending human review distinct. Isolate treatment setup from task grading and protect the test contract independently.",
+        "Separates runtime recovery from offline promotion, records version dependencies, qualifies changed graders independently on held-out evidence, retains order-sensitive disagreements and insufficient precision, and treats implicit signals as triage leads rather than labels."
       ],
       "baseline_comparison": {
         "status": "blocked",
-        "note": "The 0.11.0 continuity candidate has no observed installed-versus-baseline result."
+        "note": "The 0.11.0 continuity candidate has no observed installed-versus-baseline result. November 18 review and feedback-loop refinements add prepared cases; no new installed-versus-baseline observation is claimed."
       }
     },
     {
@@ -1710,11 +1712,12 @@
       "output_rubric": [
         "Output labels observed facts, proposals, ratified or rejected decisions, unresolved questions, measurements, estimates, and causal claims correctly.",
         "Output preserves source, owner, authority, uncertainty, and public-private boundaries.",
-        "Output names decisions, evidence gaps, and next actions without performing unauthorized external or production changes."
+        "Output names decisions, evidence gaps, and next actions without performing unauthorized external or production changes.",
+        "Distinguishes accepted work and user outcomes from generation and interaction volume. Proposes regression cases only for confirmed failures, otherwise names the missing evidence; considers separate grader calibration without default telemetry or private-data export."
       ],
       "baseline_comparison": {
         "status": "blocked",
-        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked in this non-interactive release session."
+        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked in this non-interactive release session. November 18 review and feedback-loop refinements add prepared cases; no new installed-versus-baseline observation is claimed."
       }
     },
     {
@@ -2297,11 +2300,12 @@
       "output_rubric": [
         "Output separates observed evidence, assumptions, proposals, and authorized decisions.",
         "Output names scope, stopping boundaries, unresolved risk, and the next justified action.",
-        "Output does not claim unobserved client behavior, external state, or validation success."
+        "Output does not claim unobserved client behavior, external state, or validation success.",
+        "Makes intent, reuse, system assumptions, and owner decisions understandable without requiring unnecessary ceremony or equating reviewer agreement with comprehension."
       ],
       "baseline_comparison": {
         "status": "blocked",
-        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked in this non-interactive release session."
+        "note": "Installed-versus-baseline activation comparison requires an observed client run and is blocked in this non-interactive release session. November 18 review and feedback-loop refinements add prepared cases; no new installed-versus-baseline observation is claimed."
       }
     },
     {
@@ -2752,11 +2756,12 @@
         "Each finding carries a severity of none, note, warning, or error, and a finding state when a pinned change is under review.",
         "A supplied snippet can support a scoped static review without a checkout. Unrun tests are not reported as absent or failing coverage; a conditional risk is labeled with its missing contract.",
         "Headings, severity explanations, verdicts, and follow-ups preserve each missing-contract condition. A proposed test is not an observed failure, and a prior assistant claim does not establish test absence.",
-        "Separates the desired assertion, implementation response predicted under explicit assumptions, predicted assertion outcome and observed run result. Continuation corrects prior conflation rather than repeating it as evidence."
+        "Separates the desired assertion, implementation response predicted under explicit assumptions, predicted assertion outcome and observed run result. Continuation corrects prior conflation rather than repeating it as evidence.",
+        "Reviews prompt, tool, rubric, and loop contracts with bounded attempts, diagnostics, side effects, evaluation identities, critical invariants, and maintained system understanding; stops repeated critique without new evidence."
       ],
       "baseline_comparison": {
         "status": "blocked",
-        "note": "The 0.15.0 package adopts the shared finding vocabulary; no observed installed-versus-baseline result exists for it."
+        "note": "The 0.15.0 package adopts the shared finding vocabulary; no observed installed-versus-baseline result exists for it. November 18 review and feedback-loop refinements add prepared cases; no new installed-versus-baseline observation is claimed."
       }
     },
     {

@@ -12,6 +12,9 @@ interfaces, generated artifacts, or rollout dependencies when relevant.
 Record the commands, results, and revision they support. Distinguish checks that
 ran from proposed assertions, static predictions, and checks still unavailable.
 Link observed client or human results only when they apply to these exact bytes.
+For prompt, rubric, or agent-loop changes, identify runtime bounds, evaluation
+versions, and any separate grader-calibration evidence; keep confirmed failure
+cases and missing evidence visible.
 
 ## Review focus and delivery
 

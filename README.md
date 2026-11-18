@@ -18,6 +18,12 @@ installing a skill. Choose **Finish existing work** for an unfinished change, a
 failing check, or an authorized repair. Its scopes let you assess, repair locally,
 or maintain one identified draft PR.
 
+For the wider engineering process, read [code review as a system](docs/review-systems-thinking.md)
+and [auditing prompt feedback loops](docs/prompt-feedback-loops.md). They connect
+review capacity, shared understanding, bounded retries, and regression evidence.
+The [research note](docs/research/review-and-feedback-evidence-2026-11-18.md)
+separates supporting evidence from product claims that still need testing.
+
 **0.19.0 preview:** 90 skills in four packs. This is an unreleased redesign, separate
 from the preserved [0.18 candidate](docs/client-candidate-v0.18.0.md). New names and
 packages have no inherited client acceptance. No installation or model call is

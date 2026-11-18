@@ -13,6 +13,15 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 395 regression tests.
 
+## November 18 review systems and feedback loops
+
+The [review and feedback record](audits/review-feedback-loops-2026-11-18.md)
+adds guidance and prepared trigger and safety cases for runtime bounds, evaluator
+integrity, review capacity, and human understanding. It changes five existing
+skills and regenerates their client projections. The prepared cases are not
+executed native-client results; the PR records integrated checks for its actual
+source and artifact revisions.
+
 ## November 17 code review journey
 
 The [review journey record](audits/review-journey-2026-11-17.md) connects scoped PR
