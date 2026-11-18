@@ -1,8 +1,8 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "d96022744d7bfaf4d1f17432cf0ffa3b0cd388be",
-  "created_on": "2026-11-17",
+  "source_commit": "91dfa7b9835e6019cc5cc4226301f021291e9f63",
+  "created_on": "2026-11-18",
   "artifacts": [
     {
       "kind": "file",
@@ -47,7 +47,7 @@
     {
       "kind": "file",
       "path": "catalog/packs.json",
-      "sha256": "246be48e4235a161db295b1a6b43a18076529242064cfdae0fbdbbf685859aa5"
+      "sha256": "ddb19b73cf2e1d96b6ededfcfda78129f81ddeb7d6daecc3a0366cc838a76495"
     },
     {
       "kind": "file",
@@ -102,7 +102,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/assess-change-impact-0.19.0.zip",
-      "sha256": "a617a24d357a9af79d1569657be8d526e047b09da243786860b3326750c8eacd"
+      "sha256": "a8ee107e5b9e19cc0d3dee2d0e18139e19f30d1c7be3254151594125585ea1f9"
     },
     {
       "kind": "zip",
@@ -152,7 +152,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/design-agent-evaluations-0.19.0.zip",
-      "sha256": "3d7c4932ec85adc48c59a04dfec598fa15a9d4cb72136f4b0fa84bb76ad095ea"
+      "sha256": "8c69b2ce2648a5809ca5773216181c2db05d9bede5c1ee89834e1b2e4bb4573a"
     },
     {
       "kind": "zip",
@@ -247,7 +247,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/learn-after-launch-0.19.0.zip",
-      "sha256": "120363911c91d776238a7763f3c68b675bda0fe7b5cbc61b7f586c279f61fb66"
+      "sha256": "500e0dc30ddc06a077e26380b67a09185f64841e75153e712a2450d9cb69caff"
     },
     {
       "kind": "zip",
@@ -302,7 +302,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/request-review-0.19.0.zip",
-      "sha256": "15cb0adc89ac999aad2ceb614dfe81893f09c1de800ec919a01ed6a42e96b8f8"
+      "sha256": "fdeed3188abc5a374e7c6d81f780b36ee31b15e72fe6ba5105999476a12569a5"
     },
     {
       "kind": "zip",
@@ -347,7 +347,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/review-code-change-0.19.0.zip",
-      "sha256": "db7400b8faf41673a995a732c337874276e9c036d96b1f0ecd667340f5fe782e"
+      "sha256": "c0d783c2acd404cbf110b2151f09a019424b0e1d78ace59bea5330b03e15b997"
     },
     {
       "kind": "zip",
@@ -537,12 +537,12 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "bd7da55f88befabd7aa02523474401d52ea56db97758c333eddca4864be1ef4a"
+      "sha256": "d85ecc92dfe0f9e4ea19b3efa9ae146d073085522911103fb0f01522627ef9fa"
     },
     {
       "kind": "file",
       "path": "evals/cases.json",
-      "sha256": "0da93dc6a4017361fa263dabce9201067b168bd56d783aa76e7c321cfaf0df39"
+      "sha256": "9fca5b2a1defec1c2de6bfb68176f8a9ff692b3d80155e925b9c1fb08745e043"
     },
     {
       "kind": "file",
@@ -557,12 +557,12 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-operations",
-      "sha256": "9032660fcd6179c46f4cf0bf7b2bdbea8b42075c1bc43b7313b9cc097981fdc8"
+      "sha256": "433aa66c806ea111eaf82f1198ca8236e00931632a40846812c087f2693b09da"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "549839d630bfee56a689a6c804cd1ca35b86b8dd337a3ce0d045124ae5a58eb9"
+      "sha256": "6f42f7adb942db1d1a37a1829057c3f503b4988f0dadffbc72222844ddff568a"
     },
     {
       "kind": "tree",
@@ -572,17 +572,17 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "773e52c4bd29933821a5e57d890859a9f3086084c6f94494c09ce4b8227987a3"
+      "sha256": "5f43c90b30fd74af2222072bb5ed264c7210520675bea91664d982cf54918c79"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-operations",
-      "sha256": "60cb36edd65346bd558a49b473c07edc270704eb0f506ecfd15d3915d38ce086"
+      "sha256": "05e673eefc56d6074776a2c1439621ec1e1ea26b585f6fa9960dfe6eeb050659"
     },
     {
       "kind": "tree",
       "path": "plugins/claude/measured-quality",
-      "sha256": "bbb2a27bc831adbe75fbd416feec0531cc54d49179b6f5c25cf65b7b04d969ad"
+      "sha256": "e6d63bb2b1ae45a8a8d0691b0650537847068cea926d1e3aa2de2c2882206130"
     },
     {
       "kind": "tree",
@@ -592,17 +592,17 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "1e3caeef2ebf4673d89ebf4fade582471c8b8b48c757487b93f3bf54fdee9b0c"
+      "sha256": "6f8ade7d8eab71594f971d42968bad386ef690263ba0a5246c7fc26fa47efcd5"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-operations",
-      "sha256": "2d57492c544b9b218e6c7d395f35fd98ea675ad25a2053b237c1b78ab0c171a1"
+      "sha256": "47d7f86005f65b6c8f2c1a51364450dcdfdd65b589e0e956ba0d935a752ace0e"
     },
     {
       "kind": "tree",
       "path": "plugins/codex/measured-quality",
-      "sha256": "8c8c00d2e689a2c5c2836f194ff3e4a2b154472c5d3a6a99a137f6613d3c9609"
+      "sha256": "890e4c752b1d7ae053ef1f8be92c27bee1bc1aabe5be915526c29692de9d4f73"
     },
     {
       "kind": "tree",
@@ -612,12 +612,12 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "97e39ffd005eaf0610355cab80e7c1b0ed73047957a4d18ce21a679100e87347"
+      "sha256": "dfaec3532a5c7933b77aabc817cc6c2fee0b094a996b55c5b64c1a7a3316ef36"
     },
     {
       "kind": "file",
       "path": "provenance/catalog.json",
-      "sha256": "42516ca49dde14e960dae49b6a5c5e3838f1a1f6173b826f5b0b4eb398d5a7f6"
+      "sha256": "722798c1817bf4c4107a47dcbceca2839f0c3cb14bcaa195705a0f93499b0426"
     }
   ]
 }
