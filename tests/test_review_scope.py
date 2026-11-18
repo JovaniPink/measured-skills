@@ -13,6 +13,20 @@ import discovery  # noqa: E402
 
 
 class ReviewScopeTests(unittest.TestCase):
+    def test_all_review_requests_bind_uncommitted_content_only_for_working_tree_scope(self) -> None:
+        registry = json.loads((ROOT / discovery.REGISTRY).read_text())
+        route = next(r for r in registry['routes'] if r['id'] == 'review')
+        self.assertIn('working-tree scope only when requested', route['required_inputs'])
+        self.assertIn('Confirm committed or working-tree scope', route['steps'])
+        for mode in route['modes']:
+            for client, prompt in mode['prompts'].items():
+                with self.subTest(mode=mode['id'], client=client):
+                    self.assertIn('only when the requested scope includes the working tree', prompt)
+                    self.assertNotIn('including relevant staged, unstaged and untracked content hashes', prompt)
+                    self.assertNotIn('the current branch, relevant dirty/untracked files', prompt)
+                    self.assertIn('Pin PR base and head when available.', prompt)
+                    self.assertIn('For a pasted diff, review the supplied snapshot and report unavailable context.', prompt)
+
     def test_registry_accepts_explanation_only_on_review_route(self) -> None:
         data = json.loads((ROOT / discovery.REGISTRY).read_text())
         known = {s['skill'] for s in json.loads((ROOT / 'catalog/skills.json').read_text())['skills']}
@@ -30,25 +44,23 @@ class ReviewScopeTests(unittest.TestCase):
         mode['id'] = 'execute-unbounded'
         self.assertTrue(discovery.registry_errors(data, known))
 
-    def test_new_action_preserves_existing_requests_and_client_identity(self) -> None:
-        import subprocess
-
-        baseline = json.loads(subprocess.check_output(
-            ['git', 'show', '0a972d7b:catalog/workflows.json'], cwd=ROOT))
+    def test_review_actions_preserve_client_identity_and_read_only_scope(self) -> None:
         current = json.loads((ROOT / discovery.REGISTRY).read_text())
-        old = next(r for r in baseline['routes'] if r['id'] == 'review')
         new = next(r for r in current['routes'] if r['id'] == 'review')
-        self.assertEqual(old['modes'][0], new['modes'][0])
         self.assertEqual(['assess', 'explain-scope'], [m['id'] for m in new['modes']])
+        self.assertEqual('Inspection and recommendations; no edits or external writes.', new['modes'][0]['scope'])
+        for prompt in new['modes'][0]['prompts'].values():
+            self.assertIn('Findings only: no edits, replies, approvals or publication.', prompt)
         data = discovery.build_data('0' * 40, verify_source=False)
         route = next(r for r in data['routes'] if r['id'] == 'review')
-        mode = route['modes'][1]
-        for client in data['clients']:
-            self.assertEqual('review-code-change', mode['action']['skill'])
-            self.assertEqual('implicit', mode['action']['invocation'])
-            self.assertEqual(discovery.ordinary_prompt(mode['prompts'][client], client),
-                             mode['ordinary_prompts'][client])
-            self.assertIn(mode['ordinary_prompts'][client], discovery.markdown(data))
+        for mode in route['modes']:
+            for client in data['clients']:
+                with self.subTest(mode=mode['id'], client=client):
+                    self.assertEqual('review-code-change', mode['action']['skill'])
+                    self.assertEqual('implicit', mode['action']['invocation'])
+                    self.assertEqual(discovery.ordinary_prompt(mode['prompts'][client], client),
+                                     mode['ordinary_prompts'][client])
+                    self.assertIn(mode['ordinary_prompts'][client], discovery.markdown(data))
         self.assertIn('data-action-scope="explain-scope"', discovery.offline_html(data))
 
 

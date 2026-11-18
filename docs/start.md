@@ -5,6 +5,20 @@ Start with [the offline chooser](../dist/discovery/index.html) or its
 locally; GitHub shows its source. It needs no server, login, network or installation.
 The Studio's `/skills` page pins its own export, which can be older. Compare the source revision shown there.
 
+## Start with your part of a code review
+
+Choose **Prepare a change for review** when you need to explain your change to a
+reviewer. Choose **Review a change** to find defects in a specific diff. Choose
+**Address review feedback** to decide which comments apply to the current code.
+These requests inspect and prepare a result without editing or sending it.
+
+The [review lifecycle guide](code-review-workflow.md) has a ready-to-copy request
+for each role and a worked retry example. It also explains when to trace system
+impact and how observations after release can inform the next change. Use only
+the guidance the task needs; completing a review does not require a chain of skills.
+For a repair you are ready to make, use **Finish existing work** below and select
+the scope you intend.
+
 ## Check which source you opened
 
 An old checkout can show old names and omit routes that are already merged.
@@ -126,7 +140,7 @@ own acceptance and release work; 0.19 inherits none of those observations as a p
 
 Use [the migration guide](migration-0.19.md) before any later installation change.
 For deeper help, see [finish existing work](finish-existing-work.md),
-[feature development](feature-development-workflow.md), and
+[code review](code-review-workflow.md), [feature development](feature-development-workflow.md), and
 [the complete catalog](skill-catalog-reader-guide.md). The chooser is the single
 beginner entry point; these documents explain a selected route in more depth.
 

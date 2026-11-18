@@ -8,6 +8,31 @@ separate decision.
 Earlier records say that a smaller result or narrower claim needs its own reviewed
 decision, not a passing label. This is that decision for 0.19.0.
 
+## Qualification status on November 17, 2026
+
+The accepted decision above remains the November 5 decision. Later source changes
+do not extend its candidate freeze. The November 16 follow-through and chooser
+work changed covered plugin and discovery bytes, so the November 5 artifact freeze
+is historical under the [existing rule](#freeze).
+
+The [November 16 native checks](follow-through-native-2026-11-16.md) apply to tested
+source `ad3028c28795d82ed3d966c4df2c298cf4d48b8f` and artifact source
+`b54131f9d0f40dd013d61c66a6292d8cf1b5ecfc`. They cover the recorded Codex and Claude
+Code setup for the changed `measured-quality` and `measured-workflows` packs, with
+the retained incomplete observations. They support technical merge preparation,
+not a replacement release acceptance. The [later chooser work](chooser-journey-2026-11-16.md)
+does not inherit qualification from those checks.
+
+The maintainer authorized the November 17 audit fixes and refinement of the preview
+journey. This records source-work scope, not approval of a new freeze, release,
+installation, paid client evaluation, or deployment. Applicable lifecycle and
+acceptance work must bind to the changed candidate bytes before any release claim.
+Human results remain unscored. No claim or gate in this decision is waived.
+The sections below retain the November 5 decision and the reasons recorded then;
+their candidate and client states do not replace the later dated observations.
+See [current release status](../release-status.md) for the source identities and
+[client evidence](../client-candidate-v0.19.0.md) for the dated observations.
+
 ## What a stable 0.19.0 would claim
 
 - Copied requests work with nothing installed.

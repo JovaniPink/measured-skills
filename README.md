@@ -6,10 +6,17 @@ installed. Skills are an optional preview with published limits.
 
 **[Start here: find your next workflow](docs/start.md)**
 
-Choose **Finish existing work** for an unfinished change, a failing check, or review
-feedback. The chooser gives you a request to copy for your client, the context to
-provide, an example result, and the skill that supports it. Choose whether to
-assess, repair locally, or maintain one identified draft PR.
+For code review, start with the work in front of you:
+
+- [Prepare a change for review](docs/code-review-workflow.md#prepare-a-change-for-review): explain the purpose, revision, checks, and open risks.
+- [Review a change](docs/code-review-workflow.md#review-a-change): inspect the diff and its effects on callers, data, and failure paths.
+- [Address review feedback](docs/code-review-workflow.md#address-review-feedback): check each claim against the current code and decide what needs to change.
+
+The [review lifecycle guide](docs/code-review-workflow.md) connects these tasks to
+system impact, verification, and learning after release. Copy one request without
+installing a skill. Choose **Finish existing work** for an unfinished change, a
+failing check, or an authorized repair. Its scopes let you assess, repair locally,
+or maintain one identified draft PR.
 
 **0.19.0 preview:** 90 skills in four packs. This is an unreleased redesign, separate
 from the preserved [0.18 candidate](docs/client-candidate-v0.18.0.md). New names and
@@ -25,6 +32,7 @@ Release. Human usability and receiving-client acceptance remain separate work.
 - [Open the offline chooser](dist/discovery/index.html) after saving the file locally.
 - [Read the same guide in Markdown](dist/discovery/guide.md).
 - [Browse all skills](docs/skill-catalog-reader-guide.md), including their former names.
+- [Follow a change through review](docs/code-review-workflow.md), from the author's packet to evidence after release.
 - [Continue unfinished work](docs/finish-existing-work.md) or [develop a feature](docs/feature-development-workflow.md).
 - [Upgrade or roll back deliberately](docs/migration-0.19.md); old and new names must not become duplicate installations.
 
@@ -53,9 +61,14 @@ daily and finish-work profiles retain their history with mapped 0.19 identifiers
 Codex and Claude Code projections contain 90 skills. Antigravity contains the 73
 implicit skills; all 17 explicit-only workflows remain excluded. Account archives
 are prepared separately, and explicit-only uploads remain held until the receiving
-surface's invocation control is verified. Packaging is not installation acceptance:
-the four packs [passed install, upgrade, downgrade, uninstall, and reinstall](docs/audits/lifecycle-0.19.0.md)
-on three CLIs, which says nothing yet about how they behave in a task.
+surface's invocation control is verified. The [November 5 lifecycle record](docs/audits/lifecycle-0.19.0.md)
+covers the candidate identified there on three CLIs. Later
+[November 16 native checks](docs/audits/follow-through-native-2026-11-16.md) observed
+lifecycle and bounded loading and behavior on Codex and Claude Code for two changed
+packs. Those checks retain incomplete results and apply only to their recorded
+source, clients, and setup. They do not qualify later package changes or every
+client. [Current evidence and remaining gates](docs/client-candidate-v0.19.0.md)
+keep these observations separate from release acceptance.
 
 Use the [Codex](docs/clients/codex.md), [Claude](docs/clients/claude.md), or
 [Antigravity](docs/clients/antigravity.md) guide for the installed interface. Check

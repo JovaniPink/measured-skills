@@ -17,7 +17,7 @@ from cataloglib import read_skill_metadata  # noqa: E402
 class WorkflowDepthTests(unittest.TestCase):
     def test_native_modes_resolve_and_antigravity_excludes_explicit_commands(self) -> None:
         data = json.loads((ROOT / 'catalog/workflows.json').read_text())
-        self.assertEqual(17, len(data['routes']))
+        self.assertEqual(21, len(data['routes']))
         for route in data['routes']:
             for mode in route['modes']:
                 name = mode.get('command_skill', route['primary_skill'])

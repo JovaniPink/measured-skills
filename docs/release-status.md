@@ -1,6 +1,52 @@
 # Merged work and remaining release gates
 
-## Current state on November 5
+## Current checkpoint on November 17
+
+The source checkpoint for this audit is [PR #99](https://github.com/JovaniPink/measured-skills/pull/99),
+merged at `fd3c088efca83c6cf09d499aa6e94393931ba0aa`.
+[Hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/43990444257)
+passed on that merged source. The November 17 follow-up refines code review
+discovery, the review lifecycle, and the website journey. It remains a 0.19.0
+preview with 90 skills in four packs, not a tagged or published release.
+
+The maintainer authorized the audit fixes and preview refinements. That work does
+not authorize a release, paid client evaluation, installation change, or deployment.
+Source checks, native observations, human usefulness, and public website state
+must each retain their own revision and evidence.
+
+| Record | Identity and scope |
+| --- | --- |
+| Audit baseline | Merged source `fd3c088efca83c6cf09d499aa6e94393931ba0aa`; its validation does not qualify later edits |
+| Artifact source at that baseline | `9a8ede03fad267d6fc1caa2f8a4638d53cb3a63b`, from the November 16 manifest |
+| Chooser source at that baseline | `d3d0a6a48cdec6c7eafcb50ab5d248fff23b9294`, from the checked-in discovery export |
+| Current candidate artifacts | Read `source_commit` in [the manifest](../releases/0.19.0/manifest.json) and `source_revision` in [the export](../dist/discovery/catalog.json); neither is interchangeable with a merge commit |
+| November 16 native observation | Tested source `ad3028c28795d82ed3d966c4df2c298cf4d48b8f`, artifact source `b54131f9d0f40dd013d61c66a6292d8cf1b5ecfc`; limited to the [recorded clients, packs, and setup](audits/follow-through-native-2026-11-16.md) |
+
+The [November 16 native record](audits/follow-through-native-2026-11-16.md) adds
+Codex and Claude Code lifecycle, loading, and bounded synthetic observations for
+the changed `measured-quality` and `measured-workflows` packs. It preserves initial
+misses and a remaining Claude context case. Its disposition supports technical
+merge preparation, not universal behavior or release acceptance. The later
+[chooser change record](audits/chooser-journey-2026-11-16.md) explicitly leaves its
+new bytes unqualified by those earlier observations.
+
+| Boundary | State at this checkpoint |
+| --- | --- |
+| Repository checks | The baseline has a passing hosted result. Revised source and generated outputs need checks on their own exact revision; older CI is not a pass for the follow-up. |
+| Candidate freeze | The November 5 freeze is historical. Later plugin and discovery changes ended its continuity. The [qualification note](audits/release-decision-0.19.0.md#qualification-status-on-november-17-2026) records the remaining work without declaring a replacement freeze. |
+| Codex and Claude Code | November 16 evidence is bounded to the tested source, versions, model evidence, and setup. It does not establish the prepared release acceptance task or reliable completion of ordinary work. See [client evidence](client-candidate-v0.19.0.md). |
+| Other clients and machines | November 16 adds no Antigravity, desktop/web app, or second-Mac qualification. Earlier packaging and app readbacks retain their original source limits. |
+| Human usefulness | The ten-card chooser exercise remains unscored. The ten eligible ordinary-task observations remain prospective. Automated checks and synthetic cases cannot supply either result. |
+| Source freshness and release gates | Retained source receipts and the November 5 decision remain dated evidence. The final candidate still needs the applicable source review, online check, lifecycle, acceptance, and separate release decision. No gate is waived here. |
+| Website | The website has its own committed export and deployed revision. Source changes and local browser checks do not establish deployment or human comprehension. |
+| Publication | No tag, published Release, or launch post follows from this refinement. |
+
+Start with the [review lifecycle guide](code-review-workflow.md) for author,
+reviewer, and feedback-resolution requests. Copied requests need no installation;
+skills remain an optional preview with published limits. The sections below are
+historical checkpoints, not current freeze or client-status instructions.
+
+## Historical November 5 checkpoint
 
 The November 5 safety fixes merged in [PR #97](https://github.com/JovaniPink/measured-skills/pull/97)
 at `1ba9787815733643e440c38ad6d6270b983edd60`, and [validation on that commit](https://github.com/JovaniPink/measured-skills/actions/runs/42107090587)
