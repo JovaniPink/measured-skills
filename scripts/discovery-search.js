@@ -21,11 +21,18 @@ function searchDiscovery(data, query) {
     const normalized = normalize(name);
     return normalized.includes(term) || (normalized.includes(" ") && contains(term, normalized));
   }) || normalize(s.description).includes(term));
-  const ranked = data.routes.map((route, index) => ({route, index,
-    score: Math.max(...[route.label, ...route.search_phrases].map(score),
-      matching.some(s => route.search_skills.includes(s.id)) ? 10 : 0)
-  })).filter(item => item.score > 0);
-  ranked.sort((a,b) => b.score - a.score || a.index - b.index);
+  const ranked = data.routes.map((route, index) => {
+    const phrases = [route.label, ...route.search_phrases];
+    const scores = phrases.map(score);
+    const best = Math.max(...scores, matching.some(s => route.search_skills.includes(s.id)) ? 10 : 0);
+    // A specific task inside a sentence outranks its generic phrase, such as
+    // "prepare my change for code review" before "code review". Keep the
+    // existing thresholds and registry order for equally specific matches.
+    const specificity = best === 80 ? Math.max(...phrases.map((phrase, i) =>
+      scores[i] === best ? tokens(phrase).size : 0)) : 0;
+    return {route, index, score: best, specificity};
+  }).filter(item => item.score > 0);
+  ranked.sort((a,b) => b.score - a.score || b.specificity - a.specificity || a.index - b.index);
   const confident = ranked.some(item => item.score >= 60);
   const named = matching.length > 0;
   return {matching, routes: ranked.filter(item => confident ? item.score >= 60 : (!named || matching.some(s => item.route.search_skills.includes(s.id)))).map(item => item.route)};

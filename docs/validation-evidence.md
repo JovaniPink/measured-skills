@@ -11,7 +11,15 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 391 regression tests.
+Current test suite: 395 regression tests.
+
+## November 17 code review journey
+
+The [review journey record](audits/review-journey-2026-11-17.md) connects scoped PR
+review, task vocabulary, preparation, feedback assessment, system impact, and
+learning after release. New deterministic regressions cover routing specificity
+and read-only boundaries. Final checks are recorded against the submitted PR
+head; these cases do not establish model behavior or human usefulness.
 
 ## November 16 chooser follow-up
 

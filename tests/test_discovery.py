@@ -45,7 +45,7 @@ class MigrationTests(unittest.TestCase):
             route['search_skills'] = discovery.route_skill_ids(route)
         data['routes'] = registry['routes']
         cases = [
-            ('A reviewer says my retry code can lose data. I want to assess that claim before editing.', ['finish-work']),
+            ('A reviewer says my retry code can lose data. I want to assess that claim before editing.', ['resolve-feedback']),
             ('I have a half-finished draft PR and want to know what remains, without editing files.', ['finish-work', 'verify']),
             ('Please investigate why is the build failing?', ['diagnose']),
             ('plan-execution', ['finish-work', 'diagnose', 'upgrade-dependency', 'refactor']),
