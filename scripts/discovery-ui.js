@@ -12,22 +12,32 @@ if (typeof document !== "undefined") (() => {
     return node;
   };
   make("h2", "Choose a task, then its scope", host);
-  const label = make("label", "Search a task or skill name ", host);
-  const search = make("input", "", label);
+  const controls = make("div", "", host);
+  controls.className = "controls";
+  const addField = (id, text, tag, extraClass) => {
+    const field = make("div", "", controls);
+    field.className = extraClass ? `field ${extraClass}` : "field";
+    const lbl = make("label", text, field);
+    lbl.htmlFor = id;
+    const ctrl = make(tag, "", field);
+    ctrl.id = id;
+    return ctrl;
+  };
+  const search = addField("discovery-search", "Search a task or skill name", "input", "search-field");
   search.type = "search";
   search.autocomplete = "off";
-  const cl = make("label", "Client ", host);
-  const client = make("select", "", cl);
+  search.spellcheck = false;
+  search.setAttribute("autocorrect", "off");
+  search.setAttribute("autocapitalize", "none");
+  const client = addField("discovery-client", "Client", "select");
   Object.entries(data.clients).forEach(([id, title]) => {
     const o = make("option", title, client); o.value = id;
   });
-  const sl = make("label", "Stack ", host);
-  const stack = make("select", "", sl);
+  const stack = addField("discovery-stack", "Stack", "select");
   Object.entries(data.stack_options).forEach(([id, value]) => {
     const o = make("option", value.label, stack); o.value = id;
   });
-  const styleLabel = make("label", "Request style ", host);
-  const style = make("select", "", styleLabel);
+  const style = addField("discovery-style", "Request style", "select");
   [["ordinary", "Ordinary request"], ["native", "Verified installed skill"]].forEach(([id, title]) => {
     const o = make("option", title, style); o.value = id;
   });
@@ -35,6 +45,7 @@ if (typeof document !== "undefined") (() => {
   const result = make("div", "", host);
   const status = make("p", "", host);
   status.setAttribute("role", "status");
+  const openScopes = new Set(data.routes.filter(r => r.modes.length === 1).map(r => `${r.id}:${r.modes[0].id}`));
   let viewVersion = 0;
   let copyVersion = 0;
   let searchAnnouncement;
@@ -63,9 +74,14 @@ if (typeof document !== "undefined") (() => {
       make("p", `Synthetic output: ${r.output_example}`, article);
       make("p", "Availability follows the action below. Verify its source and loading separately.", article);
       r.modes.forEach(m => {
+        const scopeKey = `${r.id}:${m.id}`;
         const detail = make("details", "", article);
         detail.dataset.actionScope = m.id;
-        detail.open = r.modes.length === 1;
+        detail.open = openScopes.has(scopeKey);
+        detail.addEventListener("toggle", () => {
+          if (detail.open) openScopes.add(scopeKey);
+          else openScopes.delete(scopeKey);
+        });
         const summary = make("summary", m.label, detail);
         summary.addEventListener("click", () => { copyVersion += 1; status.textContent = ""; });
         make("p", m.scope, detail);
@@ -103,8 +119,10 @@ if (typeof document !== "undefined") (() => {
     if (!routes.length) {
       make("h3", "No task matched that search", result);
       make("p", "Try a task below, or clear the search to browse every task. Search suggestions do not choose an action scope.", result);
+      const recovery = make("div", "", result);
+      recovery.className = "recovery-actions";
       ["CI is red and the cause is unknown", "Explain the save path before changing it", ""].forEach(query => {
-        const button = make("button", query || "Clear search and browse all tasks", result);
+        const button = make("button", query || "Clear search and browse all tasks", recovery);
         button.type = "button";
         button.addEventListener("click", () => { search.value = query; updateSearch(); search.focus(); });
       });

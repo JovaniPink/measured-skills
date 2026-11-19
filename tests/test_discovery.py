@@ -318,6 +318,124 @@ process.stdout.write(JSON.stringify(cases.map(([query]) =>
                     export(destination, 'codex', ['choose-workflow'])
             self.assertFalse(destination.exists())
 
+    def test_offline_html_stacks_control_fields_and_preserves_open_scopes(self) -> None:
+        import shutil
+        import subprocess
+
+        data = json.loads((ROOT / discovery.EXPORT).read_text())
+        rendered = discovery.offline_html(data)
+        for token in ('.controls{', '.field{', '.recovery-actions{', 'accent-color:#125d48'):
+            self.assertIn(token, rendered)
+
+        node = shutil.which('node')
+        if node is None:
+            self.skipTest('Node unavailable: discovery-ui DOM behavior was not checked')
+        program = """
+const fs = require('node:fs');
+const vm = require('node:vm');
+const data = JSON.parse(fs.readFileSync(0, 'utf8'));
+function makeEl(tag) {
+  const el = {
+    tagName: tag.toUpperCase(),
+    children: [],
+    listeners: {},
+    dataset: {},
+    attributes: {},
+    className: '',
+    id: '',
+    htmlFor: '',
+    textContent: '',
+    _value: '',
+    get value() { return this.tagName === 'SELECT' && !this._value && this.children[0] ? this.children[0].value : this._value; },
+    set value(v) { this._value = v; },
+    hidden: false,
+    disabled: false,
+    _open: false,
+    get open() { return this._open; },
+    set open(v) { this._open = Boolean(v); },
+    append(...nodes) {
+      for (const n of nodes) {
+        if (typeof n !== 'string') this.children.push(n);
+      }
+    },
+    replaceChildren(...nodes) { this.children = []; this.append(...nodes); },
+    after() {},
+    focus() {},
+    scrollIntoView() {},
+    setAttribute(k, v) { this.attributes[k] = String(v); },
+    removeAttribute(k) { delete this.attributes[k]; },
+    addEventListener(type, fn) { (this.listeners[type] ||= []).push(fn); },
+    dispatch(type) { for (const fn of (this.listeners[type] || [])) fn({ target: this }); },
+    querySelectorAll(sel) {
+      const out = [];
+      const walk = (n) => {
+        for (const c of n.children || []) {
+          if (sel === 'article[id]' && c.tagName === 'ARTICLE' && c.id) out.push(c);
+          walk(c);
+        }
+      };
+      walk(this);
+      return out;
+    },
+  };
+  return el;
+}
+function find(node, pred) {
+  if (pred(node)) return node;
+  for (const c of node.children || []) {
+    const hit = find(c, pred);
+    if (hit) return hit;
+  }
+  return null;
+}
+const root = makeEl('body');
+const interactive = makeEl('section'); interactive.id = 'interactive'; interactive.hidden = true;
+const fallback = makeEl('section'); fallback.id = 'static-guide';
+const catalogData = makeEl('script'); catalogData.id = 'catalog-data'; catalogData.textContent = JSON.stringify(data);
+root.append(interactive, fallback, catalogData);
+const document = {
+  createElement: makeEl,
+  getElementById: (id) => find(root, (n) => n.id === id),
+  querySelectorAll: () => [],
+};
+const window = { addEventListener() {}, location: { hash: '' } };
+const ctx = {
+  document,
+  window,
+  location: window.location,
+  navigator: { clipboard: { writeText: async () => {} } },
+  setTimeout,
+  clearTimeout,
+  searchDiscovery: require(process.argv[2]).searchDiscovery,
+};
+vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), ctx);
+const controls = find(interactive, (n) => n.className === 'controls');
+if (!controls) throw new Error('missing .controls wrapper');
+const labels = controls.children.map((f) => [f.className, f.children[0].htmlFor, f.children[1].id]);
+const reviewArticle = find(interactive, (n) => n.id === 'choice-review');
+const reviewScope = find(reviewArticle, (n) => n.tagName === 'DETAILS' && n.dataset.actionScope === 'assess');
+reviewScope.open = true;
+reviewScope.dispatch('toggle');
+const clientSelect = find(controls, (n) => n.id === 'discovery-client');
+clientSelect.value = 'claude';
+clientSelect.dispatch('change');
+const afterReviewArticle = find(interactive, (n) => n.id === 'choice-review');
+const afterScope = find(afterReviewArticle, (n) => n.tagName === 'DETAILS' && n.dataset.actionScope === 'assess');
+process.stdout.write(JSON.stringify({ labels, preservedOpen: afterScope.open }));
+"""
+        result = subprocess.run(
+            [node, '-e', program, str(ROOT / 'scripts/discovery-ui.js'), str(ROOT / 'scripts/discovery-search.js')],
+            input=json.dumps(data), text=True, capture_output=True, check=True,
+        )
+        observed = json.loads(result.stdout)
+        self.assertEqual([
+            ['field search-field', 'discovery-search', 'discovery-search'],
+            ['field', 'discovery-client', 'discovery-client'],
+            ['field', 'discovery-stack', 'discovery-stack'],
+            ['field', 'discovery-style', 'discovery-style'],
+        ], observed['labels'])
+        self.assertTrue(observed['preservedOpen'])
+
 
 if __name__ == '__main__':
     unittest.main()
