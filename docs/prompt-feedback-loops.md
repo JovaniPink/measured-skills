@@ -132,6 +132,12 @@ tool receipts, outputs, and criterion results under appropriate access controls.
 Record unavailable evidence. A hash supports identity; it cannot reconstruct data
 that was never retained. Retention and deletion rules still govern reconstruction.
 
+Declare the planned cases, comparison arms, repetitions, and client coverage
+before collection. Bind each observation to its case, arm, repetition, and execution
+identity. Reconcile planned coverage with observed results before scoring; reject
+duplicates and mismatched revisions. Missing, failed, or unusable observations
+remain distinct from completed grading. A favorable subset is not a completed study.
+
 Use the provider's documented version semantics. Do not invent a dated suffix or
 assume every dateless identifier is mutable. [Claude's versioning documentation](https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions)
 identifies `claude-sonnet-4-6` as a pinned model, while noting that serving
@@ -194,6 +200,10 @@ decision's risk and required precision. A two-percent margin, a particular kappa
 score, fixed dataset percentages, or a 200-to-300-case anchor set is not a universal
 standard. Insufficient precision means insufficient evidence, not parity. Zero
 observed critical failures does not establish zero production risk.
+
+When a rolling baseline advances, also retain an accepted anchor. Otherwise a
+sequence of individually tolerated regressions can accumulate into a material
+decline. Review both the local change and cumulative movement under a stated policy.
 
 ## Turn production evidence into reviewed changes
 

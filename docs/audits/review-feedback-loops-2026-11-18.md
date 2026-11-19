@@ -60,11 +60,40 @@ case list changed the selected native-arm counts. The new cases were placed in
 the explicit supplemental lane, preserving the existing study design. Review
 also corrected an expectation that could demand a confirmed failure from
 ambiguous interaction counts, and made CI guidance account for truncated file
-lists. A separate fresh-context desk exercise identified the supplied evaluator
-and retry flaws; it did not load an installed client or execute a model benchmark.
+lists. The inherited continuation record reports a separate fresh-context desk
+exercise that identified the supplied evaluator and retry flaws. The full exercise
+input and output were not recovered as a separate receipt during consolidation.
+Retain this as a reported source-text observation, not an independently reproduced
+result. It does not establish native client loading, CI execution, or a model
+benchmark. No new exercise was run for this consolidation.
 
-The PR records exact-revision local and hosted results. Source review and prepared
-scenarios do not establish native
-loading, judge reliability, faster review, preserved expertise, human usability,
-or production outcomes. Earlier acceptance and source-review dates remain
-historical, with no implied new maintainer acceptance or replacement freeze.
+An earlier source review found three companion-site guide links pinned to an
+export that did not contain their targets. The retained prepared candidate
+corrected that pin. The companion site must advance its export and documentation
+pin together and verify every target in that exact Git tree. An internal-link
+check does not verify GitHub destinations.
+
+An earlier integration validator rejected stale description lengths and
+discovery-size estimates after the evaluation skill description changed. The
+retained candidate includes the recalculated pack and affected recipe totals.
+No limit or validation rule changed. The research note retains the reviewed
+working-paper revision, states the uncertain resolved-issue estimate, and treats
+unavailable Hacker News comments only as a discovery lead.
+
+## Consolidation on November 18
+
+This consolidation preserves the prepared source candidate
+`a0ae66a09e6c47a1976f4f910fbfdcab5daa54bc` and its ancestors. It adds the retained
+study-design safeguards: reconcile planned coverage with identified observations,
+and keep an accepted anchor when advancing a rolling baseline. It clarifies
+research and exercise evidence without changing canonical skills, scenario
+selections, invocation policy, client acceptance, or the release decision.
+
+The delivery receipt must bind each local command result to its tested commit and
+tree. Those receipts are separate from the inherited exercise report. New hosted
+checks and interactive preview evidence are not established by these local
+results; earlier hosted outcomes retain their original revision and scope.
+Source review and prepared scenarios do not establish native loading, judge
+reliability, faster review, preserved expertise, human usability, or production
+outcomes. Earlier acceptance and source-review dates remain historical, with no
+implied new maintainer acceptance or replacement freeze.

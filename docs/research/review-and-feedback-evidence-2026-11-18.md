@@ -9,9 +9,11 @@ these workflows; it does not establish Measured Skills performance.
 
 Chen and Stratton's [current working paper](https://fion.ac/jellyfish.pdf), dated
 November 14, 2026, covers 655 firms and 720,542 workers through August 2026. Its
-12-month agent estimates include 35.7% more pull requests, 13.7% more resolved
-issues (borderline significant), and 56.1% longer submission-to-merge time. The
-latter is elapsed time, not reviewer labor. Adoption comparisons depend on
+12-month agent estimates include 35.7% more pull requests, an imprecisely estimated
+13.7% increase in resolved issues, and 56.1% longer submission-to-merge time. The
+paper's discussion describes the issue estimate as marginally insignificant;
+neither a point estimate nor failure to reject zero establishes the true effect.
+The review interval is elapsed time, not reviewer labor. Adoption comparisons depend on
 counterfactual-trend assumptions; the sample comprises consenting Jellyfish
 clients. Review activity is not a direct shipped-defect measure. This revision
 does not support a categorical claim of no increase in completed work.
@@ -21,9 +23,10 @@ discusses an earlier revision. The PDF URL is mutable; recheck its date before
 reusing numerical claims. Do not combine estimates from different revisions.
 
 The supplied [Hacker News discussion](https://news.ycombinator.com/item?id=50538303)
-raises useful questions about retaining codebase understanding and choosing the
-right design. It contains competing personal experiences, not a representative
-survey, causal estimate, or evidence of this product's benefits.
+is retained as a discovery lead. Its comments could not be retrieved in the
+November 18 verification pass, so this note attributes no argument or consensus
+to them. Discussion alone would not establish a representative survey, causal
+estimate, or evidence of this product's benefits.
 
 ## Primary evidence and bounded conclusions
 
