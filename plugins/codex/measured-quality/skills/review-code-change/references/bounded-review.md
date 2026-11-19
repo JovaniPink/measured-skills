@@ -42,6 +42,9 @@ An unchanged line can carry the consequence of a changed assumption.
   Decline unsupported or out-of-scope suggestions with evidence, not by category.
 - A new revision, new comment, interruption, or resumed session does not reset
   the allowance. Carry used and remaining rounds in the continuation record.
+- Stop earlier when the same material failure recurs without new evidence or a
+  changed remedy. Record the violated rule, observed condition, required condition,
+  and next evidence needed; another critique is not progress by itself.
 - Extend only with explicit additional authority. Risk alone does not permit
   extra rounds. On exhaustion, retain open findings and unreviewed repairs;
   do not claim that a final repair passed review without another available round.
@@ -67,6 +70,12 @@ or another task's workers as a way to satisfy this budget.
 Continue authorized owner work when this optional lane is unavailable and say so.
 If the task requires independent review, its absence remains a blocker. A separate
 model is not independent human approval and does not remove correlated blind spots.
+
+Give an authorized reviewer the pinned artifact, requirements, and relevant
+evidence. Keep the author's preferred verdict and prior critique out of the first
+pass unless the task is specifically to assess that feedback. Record any shared
+context or model configuration that limits independence. Isolation can reduce
+anchoring; it cannot establish correctness or eliminate shared failure modes.
 
 ## Preserve findings and limits
 

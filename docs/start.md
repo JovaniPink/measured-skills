@@ -19,6 +19,11 @@ the guidance the task needs; completing a review does not require a chain of ski
 For a repair you are ready to make, use **Finish existing work** below and select
 the scope you intend.
 
+If the problem is a growing review queue or lost system context, start with
+[review as part of the delivery system](review-systems-thinking.md). For a prompt,
+judge, tool, or retry change, use [the feedback-loop audit](prompt-feedback-loops.md).
+It separates recovery within one task from learning across versions.
+
 ## Check which source you opened
 
 An old checkout can show old names and omit routes that are already merged.

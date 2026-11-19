@@ -1950,4 +1950,4 @@ In [REPOSITORY], review postlaunch learning for [RELEASE and EVIDENCE]. Read app
 
 Package availability, invocation policy, and observed behavior are separate. Client support is recorded by date in docs/client-candidate-v0.19.0.md. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `ff65049366d695365ef4059a834baff632736833`. File hashes: `catalog.json` alongside this guide.
+Source revision: `65342f7040f1d0a5dac03263a1d0eb4443e515a2`. File hashes: `catalog.json` alongside this guide.

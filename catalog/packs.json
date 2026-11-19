@@ -59,11 +59,11 @@
         "verify-claims",
         "verify-source-output"
       ],
-      "description_characters": 5100,
+      "description_characters": 5148,
       "budget_status": "within-budget",
       "discovery_estimates": {
-        "codex": 7556,
-        "claude": 7583
+        "codex": 7604,
+        "claude": 7631
       }
     },
     {
@@ -164,7 +164,7 @@
         "design-agent-evaluations",
         "review-agent-security"
       ],
-      "description_characters": 561,
+      "description_characters": 609,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },
@@ -222,7 +222,7 @@
         "review-context-evidence",
         "verify-source-output"
       ],
-      "description_characters": 545,
+      "description_characters": 593,
       "budget_status": "within-budget",
       "installation_claim": "composition-only"
     },

@@ -1,13 +1,18 @@
 # Merged work and remaining release gates
 
-## Current checkpoint on November 17
+## Current checkpoint on November 18
 
 The source checkpoint for this audit is [PR #99](https://github.com/JovaniPink/measured-skills/pull/99),
 merged at `fd3c088efca83c6cf09d499aa6e94393931ba0aa`.
 [Hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/43990444257)
 passed on that merged source. The November 17 follow-up refines code review
 discovery, the review lifecycle, and the website journey. It remains a 0.19.0
-preview with 90 skills in four packs, not a tagged or published release.
+preview with 90 skills in four packs, not a tagged or published release. The
+[November 18 continuation](audits/review-feedback-loops-2026-11-18.md) in
+[PR #100](https://github.com/JovaniPink/measured-skills/pull/100) adds review-system
+and feedback-loop guidance. Its starting head was
+`c40f1e05817c96e325bc5fea183fd57d911f91b5`; that head's passing checks do not
+qualify subsequent edits. Neither continuation is a merged or released result.
 
 The maintainer authorized the audit fixes and preview refinements. That work does
 not authorize a release, paid client evaluation, installation change, or deployment.

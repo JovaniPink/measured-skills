@@ -25,6 +25,16 @@ Trace what a change can affect beyond its immediate diff.
 6. Prove the highest-risk facts with focused tests, static queries, or safe read-only inspection when available.
 7. Report untraced surfaces and the owner or evidence needed to clear them.
 
+## Follow effects through the delivery system
+
+When a change affects work volume or automation, trace the receiving queues,
+review capacity, rework, and delay before outcomes can be observed. Name the
+constraint supported by evidence and any competing explanation. Faster generation
+at one step does not establish faster accepted or deployed work. Check who retains
+the knowledge and authority to maintain the result. For agent workflows, distinguish
+retries within one task from changes to prompts, rubrics, or cases across versions;
+each has different owners, delays, and failure paths.
+
 ## Boundaries
 
 - A textual match is a lead, not proof of a runtime dependency.

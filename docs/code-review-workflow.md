@@ -9,6 +9,11 @@ Use the [chooser](../dist/discovery/guide.md) for these tasks and their scopes.
 Choose only the guidance needed for the question. The skills linked here are
 optional support, not a sequence every change must follow.
 
+Use [code review as part of the delivery system](review-systems-thinking.md) for
+review capacity, shared understanding, and outcome measures. For changes to
+prompts, rubrics, tools, or retries, use [the feedback-loop audit](prompt-feedback-loops.md)
+to examine runtime recovery and learning across versions separately.
+
 ## Prepare a change for review
 
 Choose **Prepare a change for review** when you are the author. Give the reviewer
