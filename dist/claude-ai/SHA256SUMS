@@ -1,7 +1,7 @@
 404c1c0f8e41f8805d10271ee01b347dde4dccf3c9eebbaebde8c72f686d417c  address-review-0.19.0.zip
 751344efa2bac3818de678bc270ece6408becc1fb18c35b0e05aace51b380996  align-on-decisions-0.19.0.zip
 b0b0b57175941666476cf25a75b6d37d9cee21c5b991d04f9392a7e22e228a43  analyze-incident-0.19.0.zip
-a617a24d357a9af79d1569657be8d526e047b09da243786860b3326750c8eacd  assess-change-impact-0.19.0.zip
+a8ee107e5b9e19cc0d3dee2d0e18139e19f30d1c7be3254151594125585ea1f9  assess-change-impact-0.19.0.zip
 2d1e030db02c882a88a24f86043e92b5fe54c27f41d8cc1264951e27af1addca  assess-worktree-isolation-0.19.0.zip
 0578bfabb536a7d79c942142f0dec89d555f014301e74c5761d65e0d3e9c6a42  author-skill-0.19.0.zip
 ef034d925727486142f19cafd56e8ef88c4e2e3889abcf8e504a052282976b6c  build-spike-0.19.0.zip
@@ -11,7 +11,7 @@ ab88ba77ba49792ec23e2741e7fc1935db809161993f22d9691a3b2f8a5572d0  choose-workflo
 22f7ec47aa59fb2cae4dfa8e65f0c023a4fd194ae2fc022df04010ea395ed207  coordinate-agents-0.19.0.zip
 130e588c593cf664567995ce2774ec8a6872aa5c264a6b26ec168f70a31a336a  deliver-nextjs-feature-0.19.0.zip
 3e115636c8ce7cbbee233f3580eb06a88f3e652ea5ac1a2f8b0d0369ac0b8c10  deliver-swiftui-feature-0.19.0.zip
-3d7c4932ec85adc48c59a04dfec598fa15a9d4cb72136f4b0fa84bb76ad095ea  design-agent-evaluations-0.19.0.zip
+8c69b2ce2648a5809ca5773216181c2db05d9bede5c1ee89834e1b2e4bb4573a  design-agent-evaluations-0.19.0.zip
 5a0fce9846744897a0e94208a46893650e05e895ac1f628dd0f48eb22376f7b4  design-agent-memory-0.19.0.zip
 481cc04039c96d006e381bc5264d81ce0ba36e1cf63562733884a6db5ff31ca0  design-module-interface-0.19.0.zip
 87fc1fc7cd761cbf6cb4af7810a7585aed25885d27ad3effacf547b19cdd7112  design-observability-0.19.0.zip
@@ -30,7 +30,7 @@ aeb04d665cc43eab8426c91abfd2e19d3f68d82fd47e7e5cd351ced6b679c541  guide-configur
 2c66976287a9f7bfd2dfe05a38b13ba298c6401058acccd6444419b2b1c3f2de  handoff-work-0.19.0.zip
 5b410bc71f9dac4adef0a6ab709c3ab8387cbda255864a44a24b63b6c606ee86  implement-test-first-0.19.0.zip
 4e3e33075e4def35f9fa8b17d6192b0cf60b8e0efa1c501ae0102ab20be4d719  investigate-design-rationale-0.19.0.zip
-120363911c91d776238a7763f3c68b675bda0fe7b5cbc61b7f586c279f61fb66  learn-after-launch-0.19.0.zip
+500e0dc30ddc06a077e26380b67a09185f64841e75153e712a2450d9cb69caff  learn-after-launch-0.19.0.zip
 42e9d6328f8653a6ee4707b943df2792fe729ae49511f89e1b2ec5b89494855f  map-capability-dependencies-0.19.0.zip
 d447812cce952d33c1c8addf03648d168329a456dc61aeba1aa1de27b5200a1a  measure-outcomes-0.19.0.zip
 945b15bfa8ef8d781453eefd3817544010867a97a0ed2b6fd3230f503f8c2190  model-domain-vocabulary-0.19.0.zip
@@ -41,7 +41,7 @@ d447812cce952d33c1c8addf03648d168329a456dc61aeba1aa1de27b5200a1a  measure-outcom
 c1542968ee994638de2e83ac3ee1ec9f9c39ef6936628153ebb346caf53d914d  prepare-migration-decision-0.19.0.zip
 0bcc0a1927cdb097577d5e0694cae044f3f48ba1e47f791a2128659b1e94e766  publish-change-0.19.0.zip
 0b2bb58e7573ed66e1f397b8919d979fa4f86b05eee0c774feb068593b876545  record-decisions-0.19.0.zip
-15cb0adc89ac999aad2ceb614dfe81893f09c1de800ec919a01ed6a42e96b8f8  request-review-0.19.0.zip
+fdeed3188abc5a374e7c6d81f780b36ee31b15e72fe6ba5105999476a12569a5  request-review-0.19.0.zip
 0071b879db182864ff47febd1e869a348ba2340b803246c1e6923261b44076a6  research-sources-0.19.0.zip
 51b8e5e580963c796a0f51d9eb52c692d35a4f5f0d7b70d0a7519e5d780e854c  resolve-merge-conflicts-0.19.0.zip
 0f092e261eacc105a0e2facdfd1e3e5571dacc967c0c8c7291e7266a8c7fc41a  review-accessibility-0.19.0.zip
@@ -50,7 +50,7 @@ ae8500ce2c83ece60ed54b4e8030c192e40bfd7a12b625b3c5da35b3229ab75a  review-agent-p
 a70b8cf3e35f86e39e9ebd8a6f0dfa28ea23b03654ea7aa730c13e1fb0d697db  review-agent-tools-0.19.0.zip
 d24fee22e75726c909dbe67ce312ff51d92bc39c1ab4bd671955f3ced80f3ac5  review-api-compatibility-0.19.0.zip
 d7182f17b44298a6aa05d67377ba127dd0e5c034b776497157117cca6327f32b  review-app-security-0.19.0.zip
-db7400b8faf41673a995a732c337874276e9c036d96b1f0ecd667340f5fe782e  review-code-change-0.19.0.zip
+c0d783c2acd404cbf110b2151f09a019424b0e1d78ace59bea5330b03e15b997  review-code-change-0.19.0.zip
 735ce8db9b9aa472ce0106f1c30d614edeb24a8f5269f6a94ae2e3b3ad921eb4  review-context-evidence-0.19.0.zip
 9171dc64fa11f7ea68d0ad35c4610926a2c23745cafe44d2e769e187be67b456  review-data-authority-0.19.0.zip
 6895e1dc3c7731da6987a2d73aed169a95d56a69fac2f23e716128565f96674a  review-data-migration-0.19.0.zip

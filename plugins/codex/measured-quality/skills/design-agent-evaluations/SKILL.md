@@ -1,6 +1,6 @@
 ---
 name: design-agent-evaluations
-description: "Designs AI evaluations when asked how to test an agent, compare prompts, or measure answer quality; requires representative cases and a baseline rather than one favorable response."
+description: "Designs AI evaluations when asked to test an agent, compare prompts, measure answer quality, or audit prompt and judge drift; requires representative cases, a calibrated grader, and a baseline rather than one favorable response."
 license: MIT
 metadata:
   author: "Measured Studios"
@@ -31,6 +31,14 @@ Identify the system version, decision owner, intended users, operating environme
 8. Set thresholds and stopping rules before observing candidate results. State which failures are release blockers and which require human review.
 9. Document sampling limits, grader limitations, contamination risks, nonindependence, and what the evaluation cannot establish.
 10. Produce the evaluation contract. Do not run a paid or external evaluation without separate authority for the provider, data, budget, and network action.
+
+Separate the runtime loop that retries a task from the offline loop that changes
+the system after reviewing outcomes. Define runtime limits and progress signals;
+define offline case promotion, grader calibration, and change ownership. Keep
+prompt, rubric, dataset, tool, and model configuration revisions linked in each
+result. Calibrate a changed judge separately before comparing baseline and
+candidate under the same accepted grader. Do not revise a rubric just to pass the
+candidate. The contract reference covers these controls and their limits.
 
 For usage measurements, distinguish user task requests, delegated work, and
 client-managed inference. Record the observation window, request categories,

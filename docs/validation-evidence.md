@@ -11,7 +11,25 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 395 regression tests.
+Current test suite: 396 regression tests.
+
+## November 19 offline chooser layout and scope preservation
+
+The offline chooser (`dist/discovery/index.html`) now stacks control labels above
+their fields, styles secondary search-recovery buttons consistently, and keeps
+manually opened multi-scope disclosures open across client, stack, or style changes.
+A deterministic Node DOM regression test covers this behavior in `tests/test_discovery.py`.
+This checks generated offline HTML/JS structure only; it does not claim installed-client
+behavior or human comprehension.
+
+## November 18 review systems and feedback loops
+
+The [review and feedback record](audits/review-feedback-loops-2026-11-18.md)
+adds guidance and prepared trigger and safety cases for runtime bounds, evaluator
+integrity, review capacity, and human understanding. It changes five existing
+skills and regenerates their client projections. The prepared cases are not
+executed native-client results; the PR records integrated checks for its actual
+source and artifact revisions.
 
 ## November 17 code review journey
 

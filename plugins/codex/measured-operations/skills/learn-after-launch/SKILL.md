@@ -25,6 +25,19 @@ Use generic terminology and preserve the status of every material statement: obs
 6. Prioritize iterations by user impact, risk, confidence, effort, reversibility, and learning value.
 7. Define the next experiment or change with success, failure, rollback, and review conditions.
 
+## Turn observations into checked changes
+
+For AI-assisted work, separate generation volume from accepted work, review waiting
+time, active review effort, rework, and the outcome users receive. Preserve each
+measure's unit and observation window. An edit, retry, rephrasing, or abandoned task
+is an investigation lead with competing explanations, not a failure label by itself.
+
+For confirmed failures, propose a minimized regression case and its expected behavior,
+then identify the owner and gate that would prevent recurrence. Check whether the
+grader also needs calibration; changing a prompt does not authorize changing the
+rubric to pass it. Keep runtime recovery separate from this learning across versions.
+Use only authorized evidence and protect private inputs when preparing examples.
+
 ## Boundaries
 
 - Do not call a release successful from deployment, traffic, or anecdotes alone.

@@ -2,7 +2,7 @@
 
 Catalog version: 0.19.0
 
-Status checkpoint: November 17, 2026.
+Status checkpoint: November 18, 2026.
 
 This is preview source. Package generation, repository checks, installation,
 successful loading, useful behavior, and deployment are separate observations.
@@ -10,7 +10,9 @@ The [current release status](release-status.md) identifies the merged baseline a
 remaining gates. Read the exact candidate source from [the manifest](../releases/0.19.0/manifest.json)
 and chooser source from [the export](../dist/discovery/catalog.json).
 
-The November 17 audit fixes and journey refinements are authorized source work.
+The November 17 audit fixes and November 18 review and feedback-loop refinements
+are authorized source work. The [new change record](audits/review-feedback-loops-2026-11-18.md)
+identifies the changed canonical guidance and prepared cases.
 They do not establish a release, a new client acceptance, or permission for a paid
 evaluation or deployment. The human chooser exercise in
 [the acceptance protocol](acceptance-0.19.md) remains unscored; the ten eligible

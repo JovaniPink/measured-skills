@@ -25,6 +25,15 @@ Give reviewers a precise packet that separates proposed code from checks, decisi
 6. Confirm whether the user authorized only preparing the packet or also sending it through a named external channel.
 7. After an authorized send, read back the created request, URL, revision, reviewer state, and checks.
 
+## Make the change reviewable
+
+Explain why the change belongs, which existing behavior it reuses, and what the
+maintaining owner must understand to change or recover it later. Identify decisions
+that need that owner's judgment. Suggest a smaller coherent change when unrelated
+purposes or missing context prevent useful review; keep required compatibility and
+recovery behavior together. Code volume and the number of generated review comments
+do not establish review quality or completed user value.
+
 ## Review identity and coverage
 
 A packet for uncommitted work includes relevant staged, unstaged, and untracked
