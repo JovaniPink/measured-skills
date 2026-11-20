@@ -1,0 +1,19 @@
+{
+  "id": "rc-03-idempotent-retry",
+  "category": "cleared_false_alarm",
+  "requirement": "Retrying create_export after a transient timeout must not create duplicate export rows for the same tenant and request_id.",
+  "diff": "--- a/app/exports.py\n+++ b/app/exports.py\n@@ -1,5 +1,11 @@\n def create_export(db, tenant_id, request_id, payload):\n-    return db.insert_export(tenant_id, request_id, payload)\n+    for attempt in range(2):\n+        try:\n+            return db.insert_export(tenant_id, request_id, payload)\n+        except TimeoutError:\n+            if attempt == 1:\n+                raise\n",
+  "head_files": {
+    "app/exports.py": "def create_export(db, tenant_id, request_id, payload):\n    for attempt in range(2):\n        try:\n            return db.insert_export(tenant_id, request_id, payload)\n        except TimeoutError:\n            if attempt == 1:\n                raise\n",
+    "app/schema.sql": "CREATE TABLE exports (\n  id TEXT PRIMARY KEY,\n  tenant_id TEXT NOT NULL,\n  request_id TEXT NOT NULL,\n  payload TEXT NOT NULL,\n  UNIQUE (tenant_id, request_id)\n);\n",
+    "app/db.py": "def insert_export(conn, tenant_id, request_id, payload):\n    return conn.execute(\n        \"INSERT INTO exports (tenant_id, request_id, payload) VALUES (?, ?, ?) \"\n        \"ON CONFLICT (tenant_id, request_id) DO NOTHING RETURNING *\"\n    )\n"
+  },
+  "oracle": {
+    "has_planted_defect": false,
+    "expected_claim_assessment": "cleared",
+    "expected_location": "app/schema.sql:6",
+    "summary": "Duplicate row creation is cleared under the schema unique constraint (tenant_id, request_id) and ON CONFLICT handling; deployed schema migration status remains a separate rollout question.",
+    "reproduction": "Same (tenant_id, request_id) reused across retries hits UNIQUE (tenant_id, request_id)."
+  },
+  "disconfirmation_notes": "Good reviews clear the source duplicate-insert concern while noting whether ON CONFLICT DO NOTHING RETURNING * returns None on conflict or needs a follow-up SELECT."
+}

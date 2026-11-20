@@ -1,9 +1,17 @@
 # Follow a change through review
 
-Start with your role in the change: prepare it, review it, or address its feedback.
-Copy one request below, replace the bracketed details, and paste it into your
-assistant. These requests need no skill installation. Each asks for an inspection
-and a prepared result; it does not edit code or send a message.
+You have a pull request or local change and need to know what changed, which
+concerns are real, and what remains unverified. Start with your role: prepare the
+change, review it, or address its feedback. Copy one request below, replace the
+bracketed details, and paste it into your assistant. These requests need no skill
+installation. Each asks for an inspection and a prepared result; it does not edit
+code or send a message.
+
+A concise review packet separates six items: intended behavior, exact comparison,
+supported findings, cleared concerns, unresolved evidence or coverage gaps, and
+the recommended next step. See a real revision-bound example in the
+[captured review case](review-cases/captured-review-case-2026-11-19.md) and the
+full [review casebook](review-cases/README.md).
 
 Use the [chooser](../dist/discovery/guide.md) for these tasks and their scopes.
 Choose only the guidance needed for the question. The skills linked here are
@@ -112,10 +120,32 @@ Separate confirmed effects, possible effects, and concerns cleared by inspection
 An untraced consumer remains a gap. It need not become a speculative defect or a
 reason to expand a bounded review indefinitely.
 
+## Keep five review dimensions separate
+
+"No actionable findings" only helps when the reader can tell an examined, cleared
+path from an uninspected or blocked one. Track five dimensions separately so a
+review can finish cleanly without turning uncertainty into a reassuring status:
+
+| Dimension | Question it answers | Allowed values or content |
+| --- | --- | --- |
+| Investigation coverage | Was this behavior examined? | `examined`, `skipped`, `blocked`, or `excluded` |
+| Claim assessment | What does the evidence support? | `supported`, `cleared`, or `unresolved` |
+| Disposition | What will the owner do with it? | `accept`, `reject`, `defer`, `clarify`, or `already addressed` |
+| Verification | What actually ran and matched? | Observed command or artifact, exact revision, and setup |
+| Completion | Did the review meet its stopping rules? | Stopping condition met, budget exhausted, or blocked |
+
+Checking that a packet includes a revision ID, evidence link, or required heading
+is structural lint; it does not verify that the evidence supports the claim.
+Historical review notes can guide what to inspect first, but their original scope
+and age must travel with them: a skipped path stays `skipped`, and a prior finding
+stays previously observed until revalidated on the current revision.
+
 ## Worked example: a retry that might duplicate work
 
 This example is synthetic. The files, contracts, and observations below illustrate
 a review; they are not results from this repository or an executed client task.
+For a real revision-bound review from this repository, read the
+[captured review case](review-cases/captured-review-case-2026-11-19.md).
 
 Suppose a patch retries `create_export(request_id)` after a timeout. The function
 inserts an export request into a database. A timeout can leave the caller unsure

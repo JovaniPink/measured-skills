@@ -1,0 +1,18 @@
+{
+  "id": "rc-04-tautological-test",
+  "category": "test_quality_defect",
+  "requirement": "Webhook verification must reject timestamps older than 300 seconds, and the new unit test must exercise that check.",
+  "diff": "--- a/app/webhooks.py\n+++ b/app/webhooks.py\n@@ -1,4 +1,6 @@\n def verify_webhook(now_ts, header_ts, signature_ok):\n+    if now_ts - header_ts > 300:\n+        return False\n     return bool(signature_ok)\n--- a/tests/test_webhooks.py\n+++ b/tests/test_webhooks.py\n@@ -1,3 +1,11 @@\n+from unittest.mock import patch\n+import app.webhooks as webhooks\n+\n+def test_rejects_expired_webhook():\n+    with patch.object(webhooks, \"verify_webhook\", return_value=False):\n+        assert webhooks.verify_webhook(1000, 100, True) is False\n",
+  "head_files": {
+    "app/webhooks.py": "def verify_webhook(now_ts, header_ts, signature_ok):\n    if now_ts - header_ts > 300:\n        return False\n    return bool(signature_ok)\n",
+    "tests/test_webhooks.py": "from unittest.mock import patch\nimport app.webhooks as webhooks\n\ndef test_rejects_expired_webhook():\n    with patch.object(webhooks, \"verify_webhook\", return_value=False):\n        assert webhooks.verify_webhook(1000, 100, True) is False\n"
+  },
+  "oracle": {
+    "has_planted_defect": true,
+    "expected_claim_assessment": "supported",
+    "expected_location": "tests/test_webhooks.py:5",
+    "summary": "test_rejects_expired_webhook patches verify_webhook itself, so the test passes even if the timestamp guard is deleted or inverted; also future-skew negative timestamps are untested.",
+    "reproduction": "Delete lines 2-3 of app/webhooks.py; test_rejects_expired_webhook still passes."
+  },
+  "disconfirmation_notes": "Green test status alone does not establish that the production function ran."
+}

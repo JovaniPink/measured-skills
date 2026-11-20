@@ -13,11 +13,12 @@ reviewer. Choose **Review a change** to find defects in a specific diff. Choose
 These requests inspect and prepare a result without editing or sending it.
 
 The [review lifecycle guide](code-review-workflow.md) has a ready-to-copy request
-for each role and a worked retry example. It also explains when to trace system
-impact and how observations after release can inform the next change. Use only
-the guidance the task needs; completing a review does not require a chain of skills.
-For a repair you are ready to make, use **Finish existing work** below and select
-the scope you intend.
+for each role, a 5-dimension coverage table, and a synthetic retry example. For a
+real revision-bound review from this repository, read the
+[captured review case](review-cases/captured-review-case-2026-11-19.md) and the
+[review casebook](review-cases/README.md). Use only the guidance the task needs;
+completing a review does not require a chain of skills. For a repair you are ready
+to make, use **Finish existing work** below and select the scope you intend.
 
 If the problem is a growing review queue or lost system context, start with
 [review as part of the delivery system](review-systems-thinking.md). For a prompt,

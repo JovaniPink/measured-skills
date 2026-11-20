@@ -81,9 +81,33 @@ anchoring; it cannot establish correctness or eliminate shared failure modes.
 
 Keep stable finding IDs, location and reviewed snapshot, the claim and conditions,
 severity and finding state, disposition, evidence, repair revision, and verification.
-Use the existing severity/state vocabulary. Track disposition separately as
-accept, reject, defer, clarify, or already addressed. A rejected finding can reopen
-when new evidence changes its premise; preserve the earlier decision and reason.
+Use the existing severity/state vocabulary. Track five distinct state dimensions so
+uncertainty never collapses into a reassuring status:
+
+| Dimension | Allowed values or content | Invariant |
+| --- | --- | --- |
+| Investigation coverage | `examined`, `skipped`, `blocked`, or `excluded` | A skipped, blocked, or excluded path never becomes clean or covered. |
+| Claim assessment | `supported`, `cleared`, or `unresolved` | An inconclusive counter-evidence or validation check stays `unresolved` and surfaces as a gap. |
+| Disposition | `accept`, `reject`, `defer`, `clarify`, or `already addressed` | Owner decision; tracked independently of severity and claim assessment. |
+| Verification | Observed command or artifact, exact revision, and setup conditions | Distinct from proposed assertions, static predictions, and prior-revision receipts. |
+| Completion | Stopping condition met, budget exhausted, or blocked | A review can finish cleanly while preserving unresolved questions and coverage limits. |
+
+A rejected finding can reopen when new evidence changes its premise; preserve the
+earlier decision and reason.
+
+Keep three assurance boundaries explicit when reviewing or automating handoffs:
+
+- **Structural lint vs. evidence verification:** Checking that a revision ID,
+  artifact link, command status, or required field exists checks document structure;
+  it does not verify that the cited evidence establishes the claim.
+- **Historical memory as priority only:** Prior findings or prior clean passes can
+  inform inspection order, but their original scope, revision, and age must travel
+  with them (see `design-agent-memory`). A skipped check stays `skipped`; a
+  previously observed finding remains historical until revalidated on the current
+  revision.
+- **Control layers:** Keep a written instruction, a preflight check, an action-time
+  restriction, and a post-hoc audit distinct. None automatically supplies the
+  guarantee of another.
 
 Report reviewed revision or snapshot, self/independent review mode, actual reviewer
 identity when known, rounds used/remaining, unresolved findings, and coverage

@@ -412,6 +412,9 @@ vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), ctx);
 const controls = find(interactive, (n) => n.className === 'controls');
 if (!controls) throw new Error('missing .controls wrapper');
 const labels = controls.children.map((f) => [f.className, f.children[0].htmlFor, f.children[1].id]);
+const defaultArticle = find(interactive, (n) => n.id === 'choice-' + data.default_route);
+const defaultAssess = find(defaultArticle, (n) => n.tagName === 'DETAILS' && n.dataset.actionScope === 'assess');
+const defaultInitiallyOpen = Boolean(defaultAssess && defaultAssess.open);
 const reviewArticle = find(interactive, (n) => n.id === 'choice-review');
 const reviewScope = find(reviewArticle, (n) => n.tagName === 'DETAILS' && n.dataset.actionScope === 'assess');
 reviewScope.open = true;
@@ -421,7 +424,7 @@ clientSelect.value = 'claude';
 clientSelect.dispatch('change');
 const afterReviewArticle = find(interactive, (n) => n.id === 'choice-review');
 const afterScope = find(afterReviewArticle, (n) => n.tagName === 'DETAILS' && n.dataset.actionScope === 'assess');
-process.stdout.write(JSON.stringify({ labels, preservedOpen: afterScope.open }));
+process.stdout.write(JSON.stringify({ labels, defaultInitiallyOpen, preservedOpen: afterScope.open }));
 """
         result = subprocess.run(
             [node, '-e', program, str(ROOT / 'scripts/discovery-ui.js'), str(ROOT / 'scripts/discovery-search.js')],
@@ -434,6 +437,7 @@ process.stdout.write(JSON.stringify({ labels, preservedOpen: afterScope.open }))
             ['field', 'discovery-stack', 'discovery-stack'],
             ['field', 'discovery-style', 'discovery-style'],
         ], observed['labels'])
+        self.assertTrue(observed['defaultInitiallyOpen'])
         self.assertTrue(observed['preservedOpen'])
 
 

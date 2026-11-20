@@ -92,8 +92,8 @@
     },
     "skills/address-review/SKILL.md": {
       "before_sha256": "755dfa95a1bf73d17550d4350f9c3f315d0fafb5358cad29845bb61539f2c9c4",
-      "review_reason": "October 29 owned trial follow-up: bounded evidence-root discovery, required reference reads, whole-edit readback, and actor/checkpoint-specific completion claims. Preserve observed failures; no behavioral retest or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 review: restate a trial-shaped rule in general terms for public readers, keeping its meaning. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill.",
-      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d"
+      "after_sha256": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
+      "review_reason": "Preserve five separate review state dimensions (investigation coverage, claim assessment, disposition, verification, completion) in findings ledger without collapsing skipped or blocked checks into cleared."
     },
     "skills/coordinate-agents/SKILL.md": {
       "before_sha256": "24cf3b6ad6dbae2f56d0cd2f8467f6860a8f617efddec1f747103769a5a60424",
@@ -132,8 +132,8 @@
     },
     "skills/review-code-change/SKILL.md": {
       "before_sha256": "2b74249c46f7d6ceb52c32dddf554697fab550edae481c23e5c34673aace03d8",
-      "review_reason": "November 4 original optional facts-first PR explanation and scope review; no automatic deletion, delegation, test execution or approval. See review-scope-2026-11-04.md; no model trial or new acceptance. November 5 Haiku routing exploration: the added sentence raised activation in the full catalog from 1 of 32 to 12 of 32 with 0 of 31 near-miss cases firing their own skill. See docs/audits/haiku-exploration-2026-11-05.md. November 5 retest: reworded the sentence in third person to meet the authoring rule. Activation was 8 of 32 in each of two full-catalog runs, and no near-miss case fired its own skill. November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
-      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7"
+      "after_sha256": "1fdc099d1dcf15f33bb6a5b06494df9b7013efadd4babbd9648207e4de20f798",
+      "review_reason": "Require explicit competing-explanation disconfirmation checks and separate examined/cleared, blocked, excluded, unresolved, and proposed-unrun states in output."
     },
     "skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -261,9 +261,9 @@
       "after_sha256": "45a933b483611517936206aa053f575264aa65a13ad839b7cb5489635634dc17"
     },
     "skills/review-code-change/references/bounded-review.md": {
-      "review_reason": "November 18 review-system and feedback-loop refinement: bounded recovery, maintained system understanding, versioned evaluation dependencies, separately calibrated graders, and privacy-bounded failure promotion as applicable; prepared evidence does not establish native behavior.",
       "before_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
-      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1"
+      "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
+      "review_reason": "Codify five separate review state dimensions and three assurance boundaries (structural lint vs truth verification, historical memory as priority hint only, and control-layer separation)."
     }
   }
 }

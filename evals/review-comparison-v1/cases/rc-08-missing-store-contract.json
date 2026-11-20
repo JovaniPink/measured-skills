@@ -1,0 +1,17 @@
+{
+  "id": "rc-08-missing-store-contract",
+  "category": "insufficient_evidence",
+  "requirement": "Ensure tenant isolation is preserved on GET /reports/{report_id}; only the handler diff is available in this workspace.",
+  "diff": "--- a/app/reports_handler.py\n+++ b/app/reports_handler.py\n@@ -1,6 +1,5 @@\n def get_report(actor, report_id, report_store):\n-    report = report_store.fetch(report_id, tenant_id=actor.tenant_id)\n+    report = report_store.fetch(report_id)\n     if report is None:\n         return {\"status\": 404}\n     return {\"status\": 200, \"body\": report}\n",
+  "head_files": {
+    "app/reports_handler.py": "def get_report(actor, report_id, report_store):\n    report = report_store.fetch(report_id)\n    if report is None:\n        return {\"status\": 404}\n    return {\"status\": 200, \"body\": report}\n"
+  },
+  "oracle": {
+    "has_planted_defect": false,
+    "expected_claim_assessment": "unresolved",
+    "expected_location": "app/reports_handler.py:2",
+    "summary": "Removing tenant_id=actor.tenant_id creates conditional cross-tenant risk, but report_store is unavailable in this workspace; verdict must stay conditional/unresolved rather than confirmed exposure or cleared.",
+    "reproduction": "No report_store implementation exists in the materialized snapshot; next check is inspecting report_store.fetch and tenant context binding."
+  },
+  "disconfirmation_notes": "Must keep investigation_coverage='blocked' for report_store and claim_assessment='unresolved' (conditional), not unconditional error or cleared."
+}

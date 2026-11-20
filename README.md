@@ -1,16 +1,23 @@
 # Measured Skills
 
-Copy a scoped request, paste it into your assistant, and finish the next piece of
-work without rebuilding your instructions. Copied requests work today with nothing
-installed. Skills are an optional preview with published limits.
+Make your next code review easier to reason about. Copy a scoped request, paste
+it into your assistant, and inspect what changed, which concerns are real, and
+what remains unverified. Copied requests work today with nothing installed.
+Skills are an optional preview with published limits.
 
 **[Start here: find your next workflow](docs/start.md)**
 
 For code review, start with the work in front of you:
 
 - [Prepare a change for review](docs/code-review-workflow.md#prepare-a-change-for-review): explain the purpose, revision, checks, and open risks.
-- [Review a change](docs/code-review-workflow.md#review-a-change): inspect the diff and its effects on callers, data, and failure paths.
+- [Review a change](docs/code-review-workflow.md#review-a-change): inspect the diff, clear false alarms with counter-evidence, and report coverage gaps.
 - [Address review feedback](docs/code-review-workflow.md#address-review-feedback): check each claim against the current code and decide what needs to change.
+
+See what that judgment looks like before installing anything:
+
+- [Captured review case (real repository diff)](docs/review-cases/captured-review-case-2026-11-19.md): one supported finding, one concern cleared by counter-evidence, and one unresolved coverage gap bound to exact Git revisions.
+- [Review casebook and preserved corrections](docs/review-cases/README.md): concrete disconfirmation patterns and real corrections from this repository.
+- [3-arm review comparison kit (prepared, not run)](evals/review-comparison-v1/README.md): compares an ordinary review request, a structured Measured request, and selected skills on the same snapshots.
 
 The [review lifecycle guide](docs/code-review-workflow.md) connects these tasks to
 system impact, verification, and learning after release. Copy one request without

@@ -1,0 +1,66 @@
+{
+  "format_version": 1,
+  "study_id": "review-comparison-2026-11-v1",
+  "status": "prepared_not_run",
+  "execution_authorized": false,
+  "arms": [
+    "ordinary_baseline",
+    "structured_request",
+    "structured_plus_skills"
+  ],
+  "arm_prompts": {
+    "ordinary_baseline": "Review CHANGE.diff against REQUIREMENT.md in this workspace for bugs, regressions, and risks. Do not edit files or run external commands.",
+    "structured_request": "Review CHANGE.diff against REQUIREMENT.md in this workspace. Pin the supplied comparison. Inspect relevant callers, contracts, authorization, retry paths, and existing tests in the workspace. Separate supported findings, concerns cleared by counter-evidence, and uninspected or unresolved coverage gaps. Keep unresolved assumptions conditional in the headline and verdict. Separate observed test results from proposed assertions and static predictions. State the inspected boundary and remaining gaps. Do not edit files, run checks, launch reviewers, post comments, approve, or merge.",
+    "structured_plus_skills": "Use review-code-change if available and report whether it loaded. Review CHANGE.diff against REQUIREMENT.md in this workspace. Pin the supplied comparison. Inspect relevant callers, contracts, authorization, retry paths, and existing tests in the workspace. Separate supported findings, concerns cleared by counter-evidence, and uninspected or unresolved coverage gaps. Keep unresolved assumptions conditional in the headline and verdict. Separate observed test results from proposed assertions and static predictions. State the inspected boundary and remaining gaps. Do not edit files, run checks, launch reviewers, post comments, approve, or merge."
+  },
+  "cases": [
+    {
+      "id": "rc-01-missing-tenant-scope",
+      "category": "real_defect",
+      "case_sha256": "28e51fc9eb00ddd5be9471da829125fc1ac80b192421f084be9a72569687a1a9",
+      "workspace_sha256": "1225633eb3cac5e165b6e08511218f2cb21b7d8ccde780b116f28da715953c21"
+    },
+    {
+      "id": "rc-02-auth-enforced-below",
+      "category": "cleared_false_alarm",
+      "case_sha256": "00e4bc37aa6ac6c5921eb9571eaa7d35ac324c31498396889390d532dca84eca",
+      "workspace_sha256": "79e214b16613642bdf576ab3331048f80a593df2ba9c49c472293d4f45fc3103"
+    },
+    {
+      "id": "rc-03-idempotent-retry",
+      "category": "cleared_false_alarm",
+      "case_sha256": "4b1c21938792d81aa2049aa28a992950e0a6f8bc68ba641db537d8bd0d06b201",
+      "workspace_sha256": "311f8cffa2d8001fc59ced44518c9a2dea22f6318a6a37f0796fbf99f64511ac"
+    },
+    {
+      "id": "rc-04-tautological-test",
+      "category": "test_quality_defect",
+      "case_sha256": "422cbc2d8292c51c6a751146bf2e92c51e9c8b028d96e6bc295750481fba6804",
+      "workspace_sha256": "3d13f37dc45619cef583e8039c398d79e2e6e598b8c05cf16d43d572312f7db5"
+    },
+    {
+      "id": "rc-05-mixed-version-rollout",
+      "category": "rollout_defect",
+      "case_sha256": "d78adb95dc3641daa355afbe6f2ae8a0848a329f45fb6d20978ac2dbc3f9a3f7",
+      "workspace_sha256": "3d1680b6fe55b1ecb4d937b4157de6fa70c3cec7e01fdb96540406f056228aaf"
+    },
+    {
+      "id": "rc-06-caller-outside-diff",
+      "category": "cross_boundary_defect",
+      "case_sha256": "dcad7fdd9986261f1c9fd9db35870bb97a06a0b3d0055b5e7f383d9638f9bb35",
+      "workspace_sha256": "0826441153c9428fe0d5f92ab4f0366f52931af3681deb6db01f8a4ff74bce32"
+    },
+    {
+      "id": "rc-07-clean-refactor",
+      "category": "clean_control",
+      "case_sha256": "25386db0ea692dd74029c032576f129cb046601e14674ee8b81fd04a409e016f",
+      "workspace_sha256": "5219ae4fdf9b1ce728a6e65b142f02aab9f02d114296fccdfebaddd44d11fc0c"
+    },
+    {
+      "id": "rc-08-missing-store-contract",
+      "category": "insufficient_evidence",
+      "case_sha256": "3911fb9731acd14f19c378b4c7cf9e278f6c6227a2b269e07f8b28bde98b9853",
+      "workspace_sha256": "070be21792d5de9c8ed0331619ad0de71437799d433f24416da5128ff9f3700a"
+    }
+  ]
+}

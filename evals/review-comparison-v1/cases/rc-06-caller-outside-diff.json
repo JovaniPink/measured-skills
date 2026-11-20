@@ -1,0 +1,18 @@
+{
+  "id": "rc-06-caller-outside-diff",
+  "category": "cross_boundary_defect",
+  "requirement": "Return subtotal and tax separately from compute_total without breaking existing billing callers.",
+  "diff": "--- a/app/pricing.py\n+++ b/app/pricing.py\n@@ -1,2 +1,3 @@\n def compute_total(subtotal_cents, tax_cents):\n-    return subtotal_cents + tax_cents\n+    return {\"subtotal\": subtotal_cents, \"tax\": tax_cents, \"total\": subtotal_cents + tax_cents}\n",
+  "head_files": {
+    "app/pricing.py": "def compute_total(subtotal_cents, tax_cents):\n    return {\"subtotal\": subtotal_cents, \"tax\": tax_cents, \"total\": subtotal_cents + tax_cents}\n",
+    "app/invoice_renderer.py": "from app.pricing import compute_total\n\ndef render_charge_line(subtotal_cents, tax_cents):\n    total = compute_total(subtotal_cents, tax_cents)\n    return f\"Total due: ${total / 100:.2f}\"\n"
+  },
+  "oracle": {
+    "has_planted_defect": true,
+    "expected_claim_assessment": "supported",
+    "expected_location": "app/invoice_renderer.py:5",
+    "summary": "Unchanged caller app/invoice_renderer.py divides the return value of compute_total by 100 and raises TypeError now that compute_total returns a dict.",
+    "reproduction": "Call render_charge_line(1000, 80) -> TypeError: unsupported operand type(s) for /: 'dict' and 'int'."
+  },
+  "disconfirmation_notes": "The broken line is outside the diff; inspecting callers of compute_total reveals it immediately."
+}

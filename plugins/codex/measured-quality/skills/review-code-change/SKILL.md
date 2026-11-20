@@ -61,7 +61,7 @@ authorization path. A predicted assertion failure is still not an executed resul
 1. Pin the repository, base revision, head revision, diff scope, intended behavior, and relevant authority when supplied. A pasted diff or snippet is enough for a scoped static review; label unavailable repository context instead of inventing it or requiring access unrelated to the request.
 2. Include relevant staged, unstaged, and untracked files when the scope is a working tree; a committed diff omits them. Bind relevant uncommitted contents with path, representation (index, working-tree, or untracked), and SHA-256; retain both versions when staged and working-tree bytes differ, plus deletions and file modes. Do not collect unrelated or sensitive files. Reconcile concurrent changes before calling the review current.
 3. Read the changed code in context, including callers, consumers, contracts, tests, configuration, and generated boundaries.
-4. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions.
+4. Test each suspected issue against actual control flow, data flow, upgrade order, failure handling, and repository conventions. For every suspected defect, ask what competing explanation could produce the same observation and what evidence distinguishes it from the claimed defect.
 5. Rank only actionable findings by user impact and likelihood. Attach exact locations and a concrete failure scenario.
 6. Inspect available coverage and compatibility. Separate the desired assertion from the implementation's predicted response and the predicted pass/fail outcome. None is an observed result before execution. Do not claim it fails against a patch while required store, authorization, or test semantics remain unknown. Label a complete static proof separately; it still does not establish test execution.
 7. Separate findings from questions, optional improvements, and unsupported concerns.
@@ -109,7 +109,7 @@ Lead with the answer. Use the shortest format that retains the required evidence
 
 For the optional explanation-and-scope mode, present the factual inventory first,
 then use the finding fields below for supported scope findings. Otherwise lead
-with findings ordered by severity, most severe first. For each finding provide `Severity`, `State`, `Location`, `Failure`, `Evidence`, `Impact`, and `Suggested direction`. Grade `Severity` as `none`, `note`, `warning`, or `error`. Set `State` to `new`, `unchanged`, `updated`, or `absent` against the pinned base revision. `error` means the finding would block the reviewed action; keep reporting findings of every severity. Then report `Questions`, `Validation`, and `Review boundary`. If no actionable finding survives verification, say so and name remaining risks or untested surfaces.
+with findings ordered by severity, most severe first. For each finding provide `Severity`, `State`, `Location`, `Failure`, `Evidence`, `Impact`, and `Suggested direction`. Grade `Severity` as `none`, `note`, `warning`, or `error`. Set `State` to `new`, `unchanged`, `updated`, or `absent` against the pinned base revision. `error` means the finding would block the reviewed action; keep reporting findings of every severity. Then report `Questions`, `Validation`, and `Review boundary`. When reporting cleared concerns or "no actionable findings", keep five statuses distinct: paths examined and cleared, relevant paths blocked or uninspected, scenarios intentionally excluded, unresolved candidates, and checks proposed but not executed.
 
 ## Example
 

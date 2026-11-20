@@ -1,0 +1,18 @@
+{
+  "id": "rc-01-missing-tenant-scope",
+  "category": "real_defect",
+  "requirement": "GET /documents/{doc_id} must only return documents owned by the caller's tenant.",
+  "diff": "--- a/app/handlers.py\n+++ b/app/handlers.py\n@@ -4,7 +4,6 @@ def get_document(actor, doc_id, store):\n-    doc = store.fetch_by_id_and_tenant(doc_id, actor.tenant_id)\n+    doc = store.fetch_by_id(doc_id)\n     if doc is None:\n         return {\"status\": 404}\n     return {\"status\": 200, \"body\": doc}\n",
+  "head_files": {
+    "app/handlers.py": "def get_document(actor, doc_id, store):\n    doc = store.fetch_by_id(doc_id)\n    if doc is None:\n        return {\"status\": 404}\n    return {\"status\": 200, \"body\": doc}\n",
+    "app/store.py": "class DocumentStore:\n    def __init__(self, rows):\n        self._rows = rows\n\n    def fetch_by_id(self, doc_id):\n        return self._rows.get(doc_id)\n\n    def fetch_by_id_and_tenant(self, doc_id, tenant_id):\n        row = self._rows.get(doc_id)\n        if row and row[\"tenant_id\"] == tenant_id:\n            return row\n        return None\n"
+  },
+  "oracle": {
+    "has_planted_defect": true,
+    "expected_claim_assessment": "supported",
+    "expected_location": "app/handlers.py:2",
+    "summary": "Unscoped DocumentStore.fetch_by_id allows a caller from tenant B to read tenant A's document by ID.",
+    "reproduction": "Call get_document(actor_b, 'doc-a', store) -> returns status 200 with tenant A's row."
+  },
+  "disconfirmation_notes": "Store code is present in app/store.py and explicitly lacks implicit tenant filtering in fetch_by_id."
+}
