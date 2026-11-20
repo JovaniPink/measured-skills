@@ -29,8 +29,8 @@
     {
       "id": "rc-03-idempotent-retry",
       "category": "cleared_false_alarm",
-      "case_sha256": "4b1c21938792d81aa2049aa28a992950e0a6f8bc68ba641db537d8bd0d06b201",
-      "workspace_sha256": "311f8cffa2d8001fc59ced44518c9a2dea22f6318a6a37f0796fbf99f64511ac"
+      "case_sha256": "5cec36cb2f77060cf40a4946e349bd79e05ca6b5ab3db101925ef75b307885cb",
+      "workspace_sha256": "b86381e7012701d049901ae49b37781a18fcf38d9258f8aa9471ad11a4bc662e"
     },
     {
       "id": "rc-04-tautological-test",
