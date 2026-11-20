@@ -10,8 +10,12 @@ substitute for adjudication.
 - Strip `arm`, `skill_loaded`, model/client metadata, and prompt headers before
   presenting review outputs to the adjudicator.
 - Randomize arm order independently per case.
-- Record the adjudicator identifier and adjudication date in each receipt's
-  `adjudication` object.
+- Record who graded each receipt and when in its `adjudication` object:
+  `adjudicators` lists distinct identifiers, and `adjudicated_on` is the
+  calendar date in `YYYY-MM-DD` form. Use role or pseudonymous identifiers, not
+  personal names or email addresses. The linter requires both on `adjudicated`
+  and `disputed` records, and a `disputed` record names at least two
+  adjudicators. `pending` records need neither.
 
 ## 2. Oracle-anchored correctness
 

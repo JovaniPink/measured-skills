@@ -8,10 +8,12 @@ state invariants only; it never claims to verify finding truth or review quality
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import hashlib
 import json
 import math
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -49,6 +51,41 @@ def is_measure(value: object) -> bool:
     )
 
 
+ISO_DATE = re.compile(r'\d{4}-\d{2}-\d{2}')
+
+
+def is_iso_date(value: object) -> bool:
+    if not isinstance(value, str) or not ISO_DATE.fullmatch(value):
+        return False
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        return False
+    return True
+
+
+def lint_adjudicators(prefix: str, status: str, adjudication: dict[str, Any]) -> list[str]:
+    """Graded records name who graded them and when, as the rubric requires."""
+    errors: list[str] = []
+    names = adjudication.get('adjudicators')
+    if 'adjudicators' not in adjudication:
+        errors.append(f'{prefix}: {status} record requires adjudication.adjudicators')
+    elif (
+        not isinstance(names, list)
+        or not names
+        or not all(isinstance(n, str) and n.strip() for n in names)
+        or len({n.strip() for n in names}) != len(names)
+    ):
+        errors.append(f'{prefix}: adjudication.adjudicators must be a list of distinct non-empty identifiers')
+    elif status == 'disputed' and len(names) < 2:
+        errors.append(f'{prefix}: disputed record needs at least two adjudication.adjudicators')
+    if 'adjudicated_on' not in adjudication:
+        errors.append(f'{prefix}: {status} record requires adjudication.adjudicated_on')
+    elif not is_iso_date(adjudication['adjudicated_on']):
+        errors.append(f'{prefix}: adjudication.adjudicated_on must be a calendar date in YYYY-MM-DD form')
+    return errors
+
+
 def lint_adjudication(prefix: str, adjudication: object) -> list[str]:
     """Check grade shapes only. An absent object means the record awaits adjudication."""
     if adjudication is None:
@@ -60,6 +97,8 @@ def lint_adjudication(prefix: str, adjudication: object) -> list[str]:
         return [f'{prefix}: invalid adjudication.status {status!r}']
     required = status == 'adjudicated'
     errors: list[str] = []
+    if status in ('adjudicated', 'disputed'):
+        errors.extend(lint_adjudicators(prefix, status, adjudication))
     for field in ADJUDICATION_COUNT_FIELDS:
         if field not in adjudication:
             if required:

@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "d6dbf5a44e266d2c0678c608d488b45f8b08688cb186da7ac230d81139b3e220",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added."
+      "after_sha256": "5f68e01b8acc22adc33903f66a5798d231db269de0067c011ac243674a74cfd1",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -13302,8 +13302,8 @@
     },
     "evals/review-comparison-v1/rubric.md": {
       "before_sha256": null,
-      "after_sha256": "f05893b48f1172b480d555e2ba203cfa187cc36d80f2fc489220b76336e15ea6",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "a69bcea8691086e0113ed9897e89eba24c1891cae3d7a07fc8f626e6cf79cf9d",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added."
     },
     "evals/review-comparison-v1/study.json": {
       "before_sha256": null,
@@ -13312,8 +13312,8 @@
     },
     "scripts/review_comparison.py": {
       "before_sha256": null,
-      "after_sha256": "a187019d413e1dc64e3864687fa47eaa5c21e1d9034cac8de78b2035edbf7c8e",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added."
+      "after_sha256": "df09609c753f595d9590d0f9a478681292f4af62b0b07af6473b90d725572b24",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added."
     },
     "tests/test_review_cases.py": {
       "before_sha256": null,
@@ -13322,8 +13322,8 @@
     },
     "tests/test_review_comparison.py": {
       "before_sha256": null,
-      "after_sha256": "5bf4164ee207506754a05e225eab92e667967a1bf589002b8fe97bbd6ab2d673",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added."
+      "after_sha256": "a01ea79b48d00299697229ede92075f7ded26947713fcff004dcc9229363f024",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added."
     }
   },
   "additional_payload_exclusions": [

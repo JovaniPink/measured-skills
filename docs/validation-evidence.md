@@ -11,7 +11,7 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 414 regression tests.
+Current test suite: 417 regression tests.
 
 ## November 19 comparison kit receipt and fixture repairs
 
@@ -33,6 +33,10 @@ covered by a regression test in `tests/test_review_comparison.py`:
   survives a retry, and that the conflicting retry returns no row, which is the
   open question the case keeps. No comparison arm had run, so no result was
   inspected before this fixture changed.
+
+- Adjudicated and disputed records must name their `adjudicators` and an
+  `adjudicated_on` calendar date, as the rubric asks. A disputed record needs at
+  least two adjudicators.
 
 These are structural checks. They do not verify finding truth or review quality.
 

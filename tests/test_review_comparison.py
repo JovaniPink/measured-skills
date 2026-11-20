@@ -55,6 +55,8 @@ def sample_receipt(
         ],
         'adjudication': {
             'status': adjudication_status,
+            'adjudicators': ['reviewer-a', 'reviewer-b'] if adjudication_status == 'disputed' else ['reviewer-a'],
+            'adjudicated_on': '2026-11-19',
             'valid_material_findings': 1 if claim == 'supported' else 0,
             'false_positives': 0,
             'missed_known_defects': 0,
@@ -239,6 +241,33 @@ class ReviewComparisonTests(unittest.TestCase):
             # One row survives the retry; the conflicting retry returns no row,
             # which is the open question the case preserves.
             self.assertEqual('True True 1', result.stdout.strip())
+
+    def test_graded_records_name_adjudicators_and_date(self) -> None:
+        for status in ('adjudicated', 'disputed'):
+            for field in ('adjudicators', 'adjudicated_on'):
+                receipt = sample_receipt(adjudication_status=status)
+                del receipt['adjudication'][field]
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(f'adjudication.{field}' in e for e in errors), (status, field, errors))
+
+    def test_adjudicator_and_date_values_are_checked(self) -> None:
+        bad_values: dict[str, list[object]] = {
+            'adjudicators': [[], 'reviewer-a', [''], ['  '], ['reviewer-a', 'reviewer-a'], [7]],
+            'adjudicated_on': ['2026-02-30', '11/19/2026', '2026-11-19T10:00:00', 20261119, ''],
+        }
+        for field, values in bad_values.items():
+            for value in values:
+                receipt = sample_receipt()
+                receipt['adjudication'][field] = value
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(f'adjudication.{field}' in e for e in errors), (field, value, errors))
+
+    def test_disputed_record_needs_two_adjudicators(self) -> None:
+        disputed = sample_receipt(adjudication_status='disputed')
+        disputed['adjudication']['adjudicators'] = ['reviewer-a']
+        self.assertTrue(any('at least two' in e for e in rc.lint_receipts([disputed])))
+        disputed['adjudication']['adjudicators'] = ['reviewer-a', 'reviewer-b']
+        self.assertEqual([], rc.lint_receipts([disputed]))
 
 
 if __name__ == '__main__':
