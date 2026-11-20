@@ -11,7 +11,21 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 396 regression tests.
+Current test suite: 406 regression tests.
+
+## November 19 review evidence, casebook, and 3-arm comparison kit
+
+This update adds five-dimension review state tracking (`Investigation coverage`,
+`Claim assessment`, `Disposition`, `Verification`, and `Completion`) and explicit
+assurance boundaries to `review-code-change` and `address-review`, repairs the
+offline chooser's initial open state for `finish-work:assess`, publishes one
+real revision-bound captured review case (`92d24711..42950f2d`) alongside
+synthetic disconfirmation cases and preserved historical corrections under
+`docs/review-cases/`, and prepares the offline 3-arm comparison kit under
+`evals/review-comparison-v1/` (`execution_authorized: false`). Deterministic
+unit tests in `tests/test_review_cases.py` and `tests/test_review_comparison.py`
+check casebook integrity, workspace isolation, and structural receipt linting;
+they do not claim live model execution or semantic correctness.
 
 ## November 19 offline chooser layout and scope preservation
 

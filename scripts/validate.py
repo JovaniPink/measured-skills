@@ -11,6 +11,7 @@ from behavior_study import STUDY_KITS, check_manifest, load_manifest
 from cataloglib import ROOT
 from evaluate_gate_fixtures import evaluate as evaluate_gate_fixtures
 from check_upstream_freshness import check as check_upstream_freshness
+from review_comparison import check_kit as check_review_comparison
 from sync_private_overlay import sync as check_private_overlay
 from validate_catalog import validate_all
 from discovery import check as check_discovery
@@ -26,6 +27,7 @@ def run() -> list[str]:
     errors.extend(evaluate_gate_fixtures())
     for kit in STUDY_KITS.values():
         errors.extend(check_manifest(load_manifest(kit / "study.json")))
+    errors.extend(check_review_comparison())
     freshness_errors, _ = check_upstream_freshness(online=False)
     errors.extend(freshness_errors)
     errors.extend(

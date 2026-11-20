@@ -1,0 +1,19 @@
+{
+  "id": "rc-02-auth-enforced-below",
+  "category": "cleared_false_alarm",
+  "requirement": "GET /projects/{project_id} must only return projects belonging to actor.org_id.",
+  "diff": "--- a/app/handlers.py\n+++ b/app/handlers.py\n@@ -1,8 +1,5 @@\n def get_project(actor, project_id, repo):\n-    project = repo.get_for_actor(actor, project_id)\n-    if project is None or project[\"org_id\"] != actor.org_id:\n+    project = repo.get_for_actor(actor, project_id)\n+    if project is None:\n         return {\"status\": 404}\n     return {\"status\": 200, \"body\": project}\n",
+  "head_files": {
+    "app/handlers.py": "def get_project(actor, project_id, repo):\n    project = repo.get_for_actor(actor, project_id)\n    if project is None:\n        return {\"status\": 404}\n    return {\"status\": 200, \"body\": project}\n",
+    "app/repo.py": "class ProjectRepo:\n    def __init__(self, rows):\n        self._rows = rows\n\n    def get_for_actor(self, actor, project_id):\n        if not actor or not actor.org_id:\n            raise ValueError(\"missing actor org_id\")\n        row = self._rows.get(project_id)\n        if row is None or row[\"org_id\"] != actor.org_id:\n            return None\n        return row\n",
+    "tests/test_projects.py": "def test_cross_org_denied(repo, actor_b):\n    assert repo.get_for_actor(actor_b, \"proj-a\") is None\n"
+  },
+  "oracle": {
+    "has_planted_defect": false,
+    "expected_claim_assessment": "cleared",
+    "expected_location": "app/repo.py:5",
+    "summary": "Removing the redundant handler check does not expose cross-org projects because ProjectRepo.get_for_actor enforces non-empty actor.org_id and row['org_id'] == actor.org_id.",
+    "reproduction": "Cross-org lookup returns None in ProjectRepo.get_for_actor and 404 in get_project."
+  },
+  "disconfirmation_notes": "A reviewer who only inspects the diff without reading app/repo.py will emit a false positive."
+}

@@ -45,7 +45,10 @@ if (typeof document !== "undefined") (() => {
   const result = make("div", "", host);
   const status = make("p", "", host);
   status.setAttribute("role", "status");
-  const openScopes = new Set(data.routes.filter(r => r.modes.length === 1).map(r => `${r.id}:${r.modes[0].id}`));
+  const openScopes = new Set([
+    ...data.routes.filter(r => r.modes.length === 1).map(r => `${r.id}:${r.modes[0].id}`),
+    `${data.default_route}:assess`,
+  ]);
   let viewVersion = 0;
   let copyVersion = 0;
   let searchAnnouncement;

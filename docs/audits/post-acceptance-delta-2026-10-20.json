@@ -42,8 +42,8 @@
     },
     "README.md": {
       "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
-      "after_sha256": "708c40e71c288409f838bb23f0decc9edc7452907c86ec96c31bbd6bfec4112f",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 source-review follow-up: Update the current release-ledger entry point; retain candidate status and exact scoped acceptance limits. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5 review correction: per-skill routing counts, arm descriptions, grader limits, and open gates restated against raw runs. No third-party text was imported. November 5, 2026: original opening restated to lead with copied requests, on the maintainer decision. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "9ee4bd99f0fee6548d0d6996ff90b221ce2bdc2fe79702d6cd10d1d085642d2e",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "SECURITY.md": {
       "before_sha256": "9ee9b189398527cd1a2a3444c46229fc337bb73e5df668172e3ed0f47ba04dcb",
@@ -157,13 +157,13 @@
     },
     "catalog/workflows.json": {
       "before_sha256": null,
-      "after_sha256": "74e25e4604bfbf7fc3b71a040c5033f950ef9d73723a25af005dcd827bc39ed5",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 review-journey refinement: Reviewed ordinary review comparison scope, bounded read-only lifecycle routes, client invocation controls, and task synonyms. Existing notices and historical evidence retained."
+      "after_sha256": "9799660b5ef2312bb1c7d5c11937723d7e1c8ab97579c3676f716bf1980e8082",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "fcad61dd14de6e5c9aa96a16f32af2de93d84fabee66bce5affa12fc50204aea",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 original client usage and permission documentation: repair local sandbox/provider/MCP inheritance wording against matching primary bytes, name background memory generation, separate public guidance from private observations, and preserve unknown accounting and instrumentation authority. No imported patch, pin change, installed setting, model trial or new maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: generated output changed only to remove release state from chooser and pack text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 review-journey export: reviewed deterministic correspondence to committed workflow and matcher inputs, preserved client invocation controls, and retained MIT notices. Generated chooser documentation and archives do not establish new client qualification. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "5aad1cf6de00c948e7faebfb54834370ca0dd3b52cef08b8d8f945239c826c9e",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "dist/claude-ai/acceptance-evidence-ledger-0.18.0.zip": {
       "before_sha256": "245859664d7c070e72520343ef479c559d7ecd81fc2a36c07eacdca394bcc4c3",
@@ -177,8 +177,8 @@
     },
     "dist/claude-ai/address-review-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "404c1c0f8e41f8805d10271ee01b347dde4dccf3c9eebbaebde8c72f686d417c",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added."
+      "after_sha256": "bf0c6f029de3b4ce9bfa053ff6ccc2b2b3c52a92b5c5e2c91b17e1f445b93266",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "dist/claude-ai/adobe-aem-engineering-profile-0.18.0.zip": {
       "before_sha256": "4d8ba3d0e921c16e4069914c1200bf1ca21929768ecafb24e01db213c4481803",
@@ -757,8 +757,8 @@
     },
     "dist/claude-ai/review-code-change-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "c0d783c2acd404cbf110b2151f09a019424b0e1d78ace59bea5330b03e15b997",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "f2c95afc47a301b26375bf3cf802ce4c355831331686cb054361b855c4bfb58e",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "dist/claude-ai/review-context-evidence-0.19.0.zip": {
       "before_sha256": null,
@@ -1072,8 +1072,8 @@
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
-      "after_sha256": "7d7bcd88acdf7a1f7eeb29d6776409f59e9a534f35dc63e79536b6037b13928f",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added."
+      "after_sha256": "3704e729d96582df45fd5b557b86388e9692e79ddaf568979e57f1221393f2e9",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "docs/acceptance-0.19-participant.md": {
       "before_sha256": null,
@@ -1437,8 +1437,8 @@
     },
     "docs/audits/workflow-depth-2026-10-28.json": {
       "before_sha256": null,
-      "after_sha256": "c1288ff6561bb08748b576f6f384d39337e9bdb30ede919567b0a88767b63a67",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 2 original client usage and permission documentation: repair local sandbox/provider/MCP inheritance wording against matching primary bytes, name background memory generation, separate public guidance from private observations, and preserve unknown accounting and instrumentation authority. No imported patch, pin change, installed setting, model trial or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "d597ac7c7cb0a9c1625306db6d67f22d22b613846cb97a11d242c195e4541ef0",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "docs/audits/workflow-depth-sources-2026-10-28.json": {
       "before_sha256": null,
@@ -1587,8 +1587,8 @@
     },
     "docs/start.md": {
       "before_sha256": null,
-      "after_sha256": "40603e0c64ded68d13df367dffdccbaeeee148d582614f4e107732b22720db3a",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 4 qualification handoff documents existing release evidence, updates onboarding, and prepares the next human observation. November 5, 2026 docs update: original project text. No third-party text was added. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "7daaecc7dadb998df49a35a28c94508a391d211585915c2ea69b3c0bf18e53d2",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "docs/taxonomy.md": {
       "before_sha256": "b291f0acac8f4b376850a7d357241d7448247e617752804fbf6468c4ba025073",
@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "af752e249567a76724543d8cabcf4ff4e26b968b271d55063afadc18fbe44158",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29: original local qualification receipt and current status correction, with exact tested revision and platform limits. No imported expression, new maintainer acceptance or expanded release claim. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 current suite-size inventory and exact prepared-trial regression scope; historical counts and client results remain unchanged. Current suite inventory advances to 323 for the workflow/provenance correspondence regression; earlier dated results are retained. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 2 closeout addendum: retain the intermediate two-source failure, review exact hosting-only byte changes with two agreeing observations each, and bind only those two same-method repins. Preserve the original 27-source checkpoint and add mutation-sensitive live-transition coverage. Checker, URLs, age policy, canonical/generated skills, original trial results and accepted packet unchanged. Original analysis only; no new maintainer acceptance or model execution. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Corrected the current test count for the added validator regression. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 5, 2026 upgrade record: original project text. No third-party text was added. November 5 safety fixes: the security review warnings were fixed in skill text and every derived artifact and record was regenerated or updated. Reviewed as original project text; no third-party text added. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 integration: reconciled the actual 395-test inventory and linked scoped review-journey evidence without claiming a model trial, human outcome, or release. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 19 offline chooser UI/UX record: updated test-suite count (396) and documented deterministic offline DOM layout/state regression without changing canonical skills or acceptance."
+      "after_sha256": "a616406b3230296965ae887662daf1f25674a6498597e5df465a62cf705cd246",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -2442,13 +2442,13 @@
     },
     "plugins/antigravity/measured-quality/skills/review-code-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1fdc099d1dcf15f33bb6a5b06494df9b7013efadd4babbd9648207e4de20f798",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/antigravity/measured-quality/skills/review-code-change/references/bounded-review.md": {
       "before_sha256": null,
-      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/antigravity/measured-quality/skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -3547,8 +3547,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/address-review/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added."
+      "after_sha256": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/antigravity/measured-workflows/skills/align-on-decisions/LICENSE": {
       "before_sha256": null,
@@ -4777,13 +4777,13 @@
     },
     "plugins/claude/measured-quality/skills/review-code-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1fdc099d1dcf15f33bb6a5b06494df9b7013efadd4babbd9648207e4de20f798",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/claude/measured-quality/skills/review-code-change/references/bounded-review.md": {
       "before_sha256": null,
-      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/claude/measured-quality/skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -6122,8 +6122,8 @@
     },
     "plugins/claude/measured-workflows/skills/address-review/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added."
+      "after_sha256": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/claude/measured-workflows/skills/align-on-decisions/LICENSE": {
       "before_sha256": null,
@@ -7867,8 +7867,8 @@
     },
     "plugins/codex/measured-quality/skills/review-code-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1fdc099d1dcf15f33bb6a5b06494df9b7013efadd4babbd9648207e4de20f798",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/codex/measured-quality/skills/review-code-change/agents/openai.yaml": {
       "before_sha256": null,
@@ -7877,8 +7877,8 @@
     },
     "plugins/codex/measured-quality/skills/review-code-change/references/bounded-review.md": {
       "before_sha256": null,
-      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/codex/measured-quality/skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -9552,8 +9552,8 @@
     },
     "plugins/codex/measured-workflows/skills/address-review/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added."
+      "after_sha256": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "plugins/codex/measured-workflows/skills/address-review/agents/openai.yaml": {
       "before_sha256": null,
@@ -10232,8 +10232,8 @@
     },
     "scripts/discovery-ui.js": {
       "before_sha256": null,
-      "after_sha256": "2fb78bda58183e549cec0ce8e864ec87473573e130ca2ab72455e915609b2b06",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. Second October 28 chooser follow-up: stable static/enhanced task anchors and revision-scoped clipboard completion;  original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 fresh review of draft 79: original adjacent clipboard feedback and explicit local-verification scope, reviewed prompt examples and deterministic derivatives. No third-party implementation imported, invocation policy changed or new maintainer acceptance claimed. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 19 UI/UX offline chooser repair: stacked field controls, secondary recovery button styling, and open-scope state preservation across client/stack/style changes; no external code imported or new client acceptance claimed."
+      "after_sha256": "9ef6474da3313fcd51e6ad8ad3d209b31f09d9efa2b24cad1b83094b7926fcc7",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "scripts/discovery.py": {
       "before_sha256": null,
@@ -10247,8 +10247,8 @@
     },
     "scripts/validate.py": {
       "before_sha256": "a06f479dc1207bc91feda11e7fa2fee6f5f9d52e5e20ddcb501ac60b08cb5464",
-      "after_sha256": "c3b33b920d63200c0cc59c9abea12a5d5279a0ee314b8febf6f8f42444498da9",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "e546094b85931f06cf857ab333a625a407d0b03a44fff24431def893fac19d14",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "scripts/validate_catalog.py": {
       "before_sha256": "e71824666ac6463b5d479eab5525d33ae42c93b317f9608adc0739202cdd673f",
@@ -10287,8 +10287,8 @@
     },
     "skills/address-review/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "8bcb20e8a4506b4043c035076c946caeb493ddbb7a8a1d796c5ebaf9238d223d",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added."
+      "after_sha256": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "skills/address-review/agents/openai.yaml": {
       "before_sha256": null,
@@ -11827,8 +11827,8 @@
     },
     "skills/review-code-change/SKILL.md": {
       "before_sha256": null,
-      "after_sha256": "84e0ec0e209cd705f94a59117125ae4bdef1fb00849153e78c76c3fc034248f7",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1fdc099d1dcf15f33bb6a5b06494df9b7013efadd4babbd9648207e4de20f798",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "skills/review-code-change/agents/openai.yaml": {
       "before_sha256": null,
@@ -11837,8 +11837,8 @@
     },
     "skills/review-code-change/references/bounded-review.md": {
       "before_sha256": null,
-      "after_sha256": "86e1332de71215ee4fc975b0bd63749d8bef2893eacf4362d7158f4dcdfc49b1",
-      "expression_and_license_review": "0.19 canonical identity and reference migration or original chooser/motion synthesis. Existing Markdown bodies retain their contract under identifier substitution; the two additions are scoped read-only with owned MIT provenance. Prior acceptance is not extended. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "skills/review-code-change/references/explain-and-check-scope.md": {
       "before_sha256": null,
@@ -12867,8 +12867,8 @@
     },
     "tests/test_discovery.py": {
       "before_sha256": null,
-      "after_sha256": "3862d0fc4b822a921ce0abd535372ab333c18a26f9cef0d891c390c4ac81bec1",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 post-merge usability follow-up: original local phrase lookup, scope-preserving regression coverage, generated discovery export and factual merge/client-preparation records. No external implementation, new skill, invocation change, model trial, installation or maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained. November 19 UI/UX offline chooser repair: stacked field controls, secondary recovery button styling, and open-scope state preservation across client/stack/style changes; no external code imported or new client acceptance claimed."
+      "after_sha256": "2c539b3d4166e71db199f99ddb5958d42ac0c19bbe68c2ddf9c7660ced323776",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     "tests/test_discovery_usability.py": {
       "before_sha256": null,
@@ -13197,8 +13197,8 @@
     },
     "docs/code-review-workflow.md": {
       "before_sha256": null,
-      "after_sha256": "d62367dd2124a118b44a817450d7e02fafb691535e64468a478a7a1d8e35768c",
-      "expression_and_license_review": "November 17 review-journey refinement: Original no-install role-based requests and synthetic retry example, with conditional findings, counter-evidence, and no executed-result claim. Existing notices and historical evidence retained. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "94543b6f49ec852a2805e8254cb52a0a0e00614cbe6fba3c122c8345fffa23df",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     },
     ".github/main-branch-protection.json": {
       "before_sha256": null,
@@ -13234,6 +13234,96 @@
       "before_sha256": null,
       "expression_and_license_review": "November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported.",
       "after_sha256": "f49c70bde09e1909d55dd60d9ad3e5ca7b3306824713b9b148f5923ef5f9f595"
+    },
+    "docs/review-cases/README.md": {
+      "before_sha256": null,
+      "after_sha256": "a761d3940967c62ce7bbb800b012cf7feb8fa88e2c2e0a0783097483e5b09bd3",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "docs/review-cases/captured-review-case-2026-11-19.md": {
+      "before_sha256": null,
+      "after_sha256": "63841e49e3513e9b2e763a6c731881f6fb18aedea6fab837d1a342852c9c9636",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "docs/review-cases/disconfirmation-and-failure-cases.md": {
+      "before_sha256": null,
+      "after_sha256": "12ebd7a9c30aef904450c9b64669c6f87f943380ba2697c44c25dbfa658f83e0",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "docs/review-cases/preserved-corrections.md": {
+      "before_sha256": null,
+      "after_sha256": "e92c99524e24323c31ae3eb2d3d764547fff7177a43e2bf7711bb027f1d5513f",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/README.md": {
+      "before_sha256": null,
+      "after_sha256": "ba2bda245cba80402657f6fb0ab73a8ac41eb935bfef91d09836dbb1e7f844ef",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-01-missing-tenant-scope.json": {
+      "before_sha256": null,
+      "after_sha256": "28e51fc9eb00ddd5be9471da829125fc1ac80b192421f084be9a72569687a1a9",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-02-auth-enforced-below.json": {
+      "before_sha256": null,
+      "after_sha256": "00e4bc37aa6ac6c5921eb9571eaa7d35ac324c31498396889390d532dca84eca",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-03-idempotent-retry.json": {
+      "before_sha256": null,
+      "after_sha256": "4b1c21938792d81aa2049aa28a992950e0a6f8bc68ba641db537d8bd0d06b201",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-04-tautological-test.json": {
+      "before_sha256": null,
+      "after_sha256": "422cbc2d8292c51c6a751146bf2e92c51e9c8b028d96e6bc295750481fba6804",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-05-mixed-version-rollout.json": {
+      "before_sha256": null,
+      "after_sha256": "d78adb95dc3641daa355afbe6f2ae8a0848a329f45fb6d20978ac2dbc3f9a3f7",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-06-caller-outside-diff.json": {
+      "before_sha256": null,
+      "after_sha256": "dcad7fdd9986261f1c9fd9db35870bb97a06a0b3d0055b5e7f383d9638f9bb35",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-07-clean-refactor.json": {
+      "before_sha256": null,
+      "after_sha256": "25386db0ea692dd74029c032576f129cb046601e14674ee8b81fd04a409e016f",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/cases/rc-08-missing-store-contract.json": {
+      "before_sha256": null,
+      "after_sha256": "3911fb9731acd14f19c378b4c7cf9e278f6c6227a2b269e07f8b28bde98b9853",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/rubric.md": {
+      "before_sha256": null,
+      "after_sha256": "f05893b48f1172b480d555e2ba203cfa187cc36d80f2fc489220b76336e15ea6",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "evals/review-comparison-v1/study.json": {
+      "before_sha256": null,
+      "after_sha256": "5d8677a0191d92e0d56d1a970718f1b010a75e8e59912d6b91c3e70fe53d896d",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "scripts/review_comparison.py": {
+      "before_sha256": null,
+      "after_sha256": "fa33bc5e82f532f0f91576bb6366be4201e7501137b7f5171fdf0610c9e0c275",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "tests/test_review_cases.py": {
+      "before_sha256": null,
+      "after_sha256": "09c51c095fff467c44cab1bc4065220f455a287325522c39889caae8bb3eea3a",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "tests/test_review_comparison.py": {
+      "before_sha256": null,
+      "after_sha256": "bf7c1cf0854b3de58e05ce871e6b8dc69ba4f5b0a8cacf804786b5500861b4f5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
     }
   },
   "additional_payload_exclusions": [

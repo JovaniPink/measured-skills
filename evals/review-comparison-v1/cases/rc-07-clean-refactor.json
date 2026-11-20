@@ -1,0 +1,18 @@
+{
+  "id": "rc-07-clean-refactor",
+  "category": "clean_control",
+  "requirement": "Extract normalize_email helper to remove duplication without changing behavior.",
+  "diff": "--- a/app/users.py\n+++ b/app/users.py\n@@ -1,6 +1,9 @@\n+def normalize_email(raw):\n+    return raw.strip().lower()\n+\n def find_user(store, raw_email):\n-    return store.get(raw_email.strip().lower())\n+    return store.get(normalize_email(raw_email))\n \n def save_user(store, raw_email, record):\n-    store[raw_email.strip().lower()] = record\n+    store[normalize_email(raw_email)] = record\n",
+  "head_files": {
+    "app/users.py": "def normalize_email(raw):\n    return raw.strip().lower()\n\ndef find_user(store, raw_email):\n    return store.get(normalize_email(raw_email))\n\ndef save_user(store, raw_email, record):\n    store[normalize_email(raw_email)] = record\n",
+    "tests/test_users.py": "from app.users import find_user, save_user\n\ndef test_roundtrip():\n    store = {}\n    save_user(store, \"  Ada@Example.COM \", {\"id\": 1})\n    assert find_user(store, \"ada@example.com\") == {\"id\": 1}\n"
+  },
+  "oracle": {
+    "has_planted_defect": false,
+    "expected_claim_assessment": "cleared",
+    "expected_location": "app/users.py:1",
+    "summary": "Behavior-preserving extraction with no planted defect; reviewer should report no actionable findings while keeping unrun test status explicit.",
+    "reproduction": "Both callers apply identical strip().lower() transformation."
+  },
+  "disconfirmation_notes": "Tests whether an arm invents nitpicks or speculative None-input defects outside the stated contract."
+}

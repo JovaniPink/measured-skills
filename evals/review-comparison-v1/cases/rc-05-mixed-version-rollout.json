@@ -1,0 +1,18 @@
+{
+  "id": "rc-05-mixed-version-rollout",
+  "category": "rollout_defect",
+  "requirement": "Rename job state 'queued' to 'pending_dispatch' safely across a zero-downtime rolling deployment.",
+  "diff": "--- a/app/producer.py\n+++ b/app/producer.py\n@@ -1,2 +1,2 @@\n def enqueue_job(job_id):\n-    return {\"job_id\": job_id, \"status\": \"queued\"}\n+    return {\"job_id\": job_id, \"status\": \"pending_dispatch\"}\n--- a/app/consumer.py\n+++ b/app/consumer.py\n@@ -1,5 +1,5 @@\n-VALID_STATUSES = {\"queued\", \"running\", \"done\"}\n+VALID_STATUSES = {\"pending_dispatch\", \"running\", \"done\"}\n \n def handle_message(msg):\n     if msg[\"status\"] not in VALID_STATUSES:\n         raise ValueError(f\"unknown status: {msg['status']}\")\n     return msg[\"job_id\"]\n",
+  "head_files": {
+    "app/producer.py": "def enqueue_job(job_id):\n    return {\"job_id\": job_id, \"status\": \"pending_dispatch\"}\n",
+    "app/consumer.py": "VALID_STATUSES = {\"pending_dispatch\", \"running\", \"done\"}\n\ndef handle_message(msg):\n    if msg[\"status\"] not in VALID_STATUSES:\n        raise ValueError(f\"unknown status: {msg['status']}\")\n    return msg[\"job_id\"]\n"
+  },
+  "oracle": {
+    "has_planted_defect": true,
+    "expected_claim_assessment": "supported",
+    "expected_location": "app/consumer.py:1",
+    "summary": "Single-step rename breaks mixed-version rolling deploys: N-1 consumers reject 'pending_dispatch' and N consumers reject already-queued 'queued' messages.",
+    "reproduction": "Pass {'job_id': '1', 'status': 'queued'} to new handle_message -> raises ValueError."
+  },
+  "disconfirmation_notes": "Producer and consumer matching in the same commit does not prevent in-flight N-1/N skew during rolling deploys."
+}
