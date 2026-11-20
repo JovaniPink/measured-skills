@@ -1,8 +1,8 @@
 {
   "dist/discovery/search.js": "61f275d2890bc9e33541c918742ebaf6f8da990a510ceb696bbc109b56cc7d9f",
-  "dist/discovery/catalog.json": "5bff7936d45bb5797af4876f44d19636b8031b06c308cc97982135674be7b1e3",
-  "dist/discovery/guide.md": "40b8457f97cdada03cc9a3e3749aac721eac958a49071a94941e5821ece7c92a",
-  "dist/discovery/index.html": "c4384ca1eebffb70467b6e7c331777f62d3494890cd8a2cfa71d6b3184a37a0e",
-  "skills/choose-workflow/references/workflow-index.md": "fc1c011f58b92e270cfade12a3c88f41304d3748654f598ad5105cfa9f3f8702",
+  "dist/discovery/catalog.json": "435c1d616771a995de012a7d466be63492a83939320014f202be59d3fb8af155",
+  "dist/discovery/guide.md": "bfdbd440522fa91a89455bf2b586c151a2649fc72af5e08272ea583fbeeca689",
+  "dist/discovery/index.html": "c8809cdbfa5766bea1f25d5023cb3fe88752816f8b9378f7f0fe58dc421b9a53",
+  "skills/choose-workflow/references/workflow-index.md": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
   "docs/skill-catalog-reader-guide.md": "bdc763ed25c32b087e757ac4ffae8decf152774671ae6fd057ba52f88b8379a1"
 }
