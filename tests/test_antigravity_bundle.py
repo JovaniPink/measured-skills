@@ -41,7 +41,8 @@ class AntigravityBundleTests(unittest.TestCase):
             self.assertEqual(included, {path.name for path in (target / "plugin" / "skills").iterdir()})
             self.assertEqual({"LICENSE", "plugin.json", "skills"}, {path.name for path in (target / "plugin").iterdir()})
             manifest = json.loads((target / "plugin" / "plugin.json").read_text(encoding="utf-8"))
-            self.assertEqual({"name", "description"}, set(manifest))
+            self.assertEqual({"name", "version", "description"}, set(manifest))
+            self.assertEqual(receipt["source_catalog_version"], manifest["version"])
 
     def test_focused_bundle_and_deterministic_output(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

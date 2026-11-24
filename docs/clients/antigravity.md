@@ -29,7 +29,7 @@ agy plugin enable measured-quality
 agy plugin list --json
 ```
 
-Repeat with another folder under `plugins/antigravity/` for each pack you want: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. Read the enabled state back. On 1.4.7, a pack already showed as enabled before the `enable` command ran. Each generated `plugin.json` holds only `name` and `description`, the fields in Google's documented schema. It has no version field, so use file hashes to identify a pack.
+Repeat with another folder under `plugins/antigravity/` for each pack you want: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. Read the enabled state back. On 1.4.7, a pack already showed as enabled before the `enable` command ran. Each generated `plugin.json` declares the catalog version alongside the pack name and description. Use the release manifest's hashes to identify the exact pack contents.
 
 To turn a pack off, or remove it, use:
 

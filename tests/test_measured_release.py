@@ -9,7 +9,9 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from cataloglib import CATALOG_NAME, ROOT, SKILLS, directory_hashes, skills_by_plugin  # noqa: E402
+from build_distributions import antigravity_groups, build  # noqa: E402
+from cataloglib import CATALOG_NAME, ROOT, SKILLS, VERSION, directory_hashes, skills_by_plugin  # noqa: E402
+import validate_catalog  # noqa: E402
 
 
 class MeasuredReleaseTests(unittest.TestCase):
@@ -51,11 +53,33 @@ class MeasuredReleaseTests(unittest.TestCase):
         self.assertEqual(91, len(SKILLS))
         self.assertEqual(91, len({s for skills in packs.values() for s in skills}))
 
-    def test_antigravity_manifests_use_documented_fields_only(self) -> None:
-        for plugin in skills_by_plugin():
+    def test_antigravity_pack_manifests_declare_the_catalog_version(self) -> None:
+        for plugin in antigravity_groups():
             manifest = ROOT / "plugins" / "antigravity" / plugin / "plugin.json"
             data = json.loads(manifest.read_text(encoding="utf-8"))
-            self.assertEqual({"name", "description"}, set(data), plugin)
+            self.assertEqual({"name", "version", "description"}, set(data), plugin)
+            self.assertEqual(VERSION, data["version"], plugin)
+
+    def test_adapter_validation_rejects_missing_and_stale_antigravity_versions(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            (root / "skills").symlink_to(ROOT / "skills", target_is_directory=True)
+            _, _, packs = build(root / "plugins")
+            manifest = packs["measured-quality"] / "plugin.json"
+            original = json.loads(manifest.read_text())
+            with patch.object(validate_catalog, "ROOT", root):
+                for version in (VERSION, None, "0.0.1"):
+                    with self.subTest(version=version):
+                        data = original.copy()
+                        if version is None:
+                            del data["version"]
+                        else:
+                            data["version"] = version
+                        manifest.write_text(json.dumps(data))
+                        errors: list[str] = []
+                        validate_catalog.validate_generated_adapters(errors)
+                        expected = f"{manifest.relative_to(root)}: version must be {VERSION!r}"
+                        self.assertEqual([] if version == VERSION else [expected], errors)
 
     def test_selected_exports(self) -> None:
         from export_selected import export
