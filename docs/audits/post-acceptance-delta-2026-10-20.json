@@ -162,8 +162,8 @@
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "bb7f70c28373a723b8f621bbd07cf0ee2a464dad094cd66cba9daf1bb72c7182",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "a39358648987ded712497d94da6ad3b4cd81d5555d08b1198d3ac70377143c29",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/claude-ai/acceptance-evidence-ledger-0.18.0.zip": {
       "before_sha256": "245859664d7c070e72520343ef479c559d7ecd81fc2a36c07eacdca394bcc4c3",
@@ -277,8 +277,8 @@
     },
     "dist/claude-ai/choose-workflow-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "77ba74cadb74a8f1f369bf29c38c199845b796a80bd7dd3eece72fd8fcb1e165",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "106f94182231d99ff62d980b9cda0cd85739073b0b88b7d6e39e86881f8402bb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/claude-ai/claim-verification-0.18.0.zip": {
       "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
@@ -1052,23 +1052,23 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "f52a11bbb9a536ecc997190eb5da00c0e2a762c08df45b05df03fc46e6c875f0",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "bb58fc89e2df66b8fa83d28891af0050164bd48c55028ccc9580d2e4abff6cca",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "ab54f1de550685f5ddd6617a12e896e9fdbc1ffd98ad80c1f6c12e6961a42a62",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "0283dba3f2077211f8a1dc34057ba734f26922e6fb4dfeb9d7b36ac76c4d50d8",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "bba558a2b378cd7b0399cfe93690366a4c2b6d0d2cf301f11e75b9d0d8c53d5a",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "dc55d2f0a11c6946264738332fc3bc1afee69af037b3852854984f1e06964d07",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "c5e7f0720dabac7b6829390888337698cfad91ec5bdf3d3d9626be951119435e",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "ec9eb9dddf91a650c175766d7bf848807800ead5eeb72c2f7599c35c07c36e1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
@@ -3622,8 +3622,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/antigravity/measured-workflows/skills/design-module-interface/LICENSE": {
       "before_sha256": null,
@@ -6207,8 +6207,8 @@
     },
     "plugins/claude/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/claude/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -9672,8 +9672,8 @@
     },
     "plugins/codex/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/codex/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -10542,8 +10542,8 @@
     },
     "skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "skills/claim-verification/SKILL.md": {
       "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",

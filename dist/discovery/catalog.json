@@ -2227,6 +2227,131 @@
       ]
     },
     {
+      "id": "draft-prompt",
+      "label": "Draft a prompt",
+      "primary_skill": "draft-prompt",
+      "why": "Turn a task description into wording for the assistant that will receive it.",
+      "search_phrases": [
+        "write a prompt",
+        "draft a prompt",
+        "write me a prompt",
+        "draft a request for a coding assistant",
+        "what should I ask a chat assistant"
+      ],
+      "required_inputs": [
+        "task description"
+      ],
+      "inputs": [
+        {
+          "token": "TASK",
+          "label": "Task description",
+          "hint": "What the recipient should do, with any known inputs and limits"
+        }
+      ],
+      "steps": [
+        "Identify the deliverable",
+        "Resolve material ambiguities",
+        "Draft the request"
+      ],
+      "output_example": "Compare the supplied schedules by session ID. Flag duplicate IDs for review.",
+      "optional_skills": [],
+      "modes": [
+        {
+          "id": "prepare",
+          "label": "Draft the request",
+          "scope": "Read-only prompt drafting. Return the text for the requester to use.",
+          "command_skill": "draft-prompt",
+          "prompts": {
+            "codex": "$measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude": "/measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "antigravity": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "chatgpt": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude-web": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted."
+          },
+          "action_guidance": {
+            "codex": "Action skill: measured-workflows:draft-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.",
+            "claude": "Action skill: measured-workflows:draft-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Native command when installed; verify the selected entry and successful loading. If missing, use ordinary task wording and report that no skill loaded. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.",
+            "antigravity": "Action skill: measured-workflows:draft-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.",
+            "chatgpt": "Action skill: measured-workflows:draft-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope.",
+            "claude-web": "Action skill: measured-workflows:draft-prompt. Package for this client: packaged. Invocation policy: implicit. Outside finish-work-core; verify this additional source separately. Ordinary request: this prompt can request the stated work without invoking the action skill. Packaging does not establish upload, loading, or permission. Client support is recorded by date in docs/client-candidate-v0.19.0.md; check it before relying on a client. Sending the request authorizes only its stated scope."
+          },
+          "ordinary_prompts": {
+            "codex": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "antigravity": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "chatgpt": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude-web": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted."
+          },
+          "action": {
+            "skill": "draft-prompt",
+            "pack": "measured-workflows",
+            "invocation": "implicit",
+            "in_core_profile": false,
+            "availability": {
+              "codex": "packaged",
+              "claude": "packaged",
+              "chatgpt": "packaged",
+              "claude-web": "packaged",
+              "antigravity": "packaged"
+            },
+            "command": {
+              "codex": "$measured-workflows:draft-prompt",
+              "claude": "/measured-workflows:draft-prompt"
+            }
+          },
+          "request_parts": {
+            "native": {
+              "codex": {
+                "task": "$measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "claude": {
+                "task": "/measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "antigravity": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "chatgpt": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "claude-web": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              }
+            },
+            "ordinary": {
+              "codex": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "claude": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "antigravity": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "chatgpt": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              },
+              "claude-web": {
+                "task": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+                "limits": []
+              }
+            }
+          }
+        }
+      ],
+      "search_skills": [
+        "draft-prompt"
+      ]
+    },
+    {
       "id": "prompt-review",
       "label": "Review an engineering prompt",
       "primary_skill": "review-engineering-prompt",
@@ -5337,20 +5462,20 @@
       ]
     }
   ],
-  "source_revision": "065f443d35e885edde95058f5a9252dbbc37a911",
+  "source_revision": "fe7220127bb9fd026629572ec052a84f988f48f4",
   "input_files": {
     "catalog/compatibility.json": "35baacc18602df237e387f166ced5b5af88dc63dc0f23faa05db8aaa9f06c2ab",
     "catalog/evidence.json": "950396cf3290d42bbc7e0d39d63f4fcf4b0a85913932ba44b4e5b08b7d6e92d6",
     "catalog/migrations/0.18-to-0.19.json": "1c5520349ae4481f8cf86890da334a72fe8ff0cd3114e543c51fafafbdefff9c",
     "catalog/profiles.json": "7b9ace6d9a2773444d594169538d71d5a2561cc435a1b4b7151c3f0038eb2521",
     "catalog/skills.json": "1912cfdf1c011a9a6460c9fee0ae750d8647e12b62a5ec46ea3235fc8a2d84a8",
-    "catalog/workflows.json": "9799660b5ef2312bb1c7d5c11937723d7e1c8ab97579c3676f716bf1980e8082",
+    "catalog/workflows.json": "3ffe23cc2b8198d446c0b08c1b0d736355978758db918a37076ab03ac09a5b31",
     "docs/audits/workflow-depth-2026-10-28.json": "5a7940a17c480301ed9a5acf955c88428d0fbc244c82dc5aa24fc5b532d8e73c",
     "scripts/canonical_deltas.py": "2b2a451f60f5fe9ef5b9609a6f6a4cb671bf648dcf6967cc3b4152e3653b6287",
     "scripts/cataloglib.py": "a6e1376b2b2b345a6033a4c36c9db02619ce0bec40145f12b103116819cc9ef8",
     "scripts/discovery-search.js": "61f275d2890bc9e33541c918742ebaf6f8da990a510ceb696bbc109b56cc7d9f",
     "scripts/discovery-ui.js": "9ef6474da3313fcd51e6ad8ad3d209b31f09d9efa2b24cad1b83094b7926fcc7",
-    "scripts/discovery.py": "1844eb3f5861478872b664bb53ab307cf9059aaf150538f11560fa788bd3638f",
+    "scripts/discovery.py": "f6907d0fa26a78fcf8a92debf91535f61f6e5eb374629b29f53ade7eeb024994",
     "skills/AGENTS.md": "8f95b31d79420e93e53b891b00812085c51bd3cc28a88a0a6e955c2e0e43e377",
     "skills/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
     "skills/address-review/SKILL.md": "3682027f1c5e77d7faad221a30d1b7079da45d6c6f416d0a2430fa1caae58aa5",
