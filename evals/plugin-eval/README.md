@@ -31,8 +31,8 @@ judge calls per run.
 | Arm | Cases | Runs each | Agent runs | Estimate | Ceiling |
 | --- | --- | --- | --- | --- | --- |
 | `routing-core` | 63 | 1 | 63 | $0.19 | $0.50 |
-| `routing-specialist` | 128 | 1 | 128 | $0.40 | $1.00 |
-| `routing-listing-8000` | 96 | 1 | 96 | $0.21 | $0.50 |
+| `routing-specialist` | 130 | 1 | 130 | $0.41 | $1.00 |
+| `routing-listing-8000` | 97 | 1 | 97 | $0.21 | $0.50 |
 | `behavior-plain` | 2 | 10 | 40 | $0.31 | $1.25 |
 | `behavior-forced` | 2 | 10 | 20 | $0.15 | $0.75 |
 
@@ -40,10 +40,10 @@ One pass of every arm stops at $4.00. The ceiling is checked before each run
 starts, so runs already in flight can finish and overrun it slightly. A second
 pass needs its own approval and its own ceiling.
 
-- `routing-specialist` covers the 64 specialist positive cases and each
+- `routing-specialist` covers the 65 specialist positive cases and each
   specialist's first near miss.
-- `routing-listing-8000` forces an 8,000 character listing. It uses the same 96
-  positive cases as the November 5 overflow run.
+- `routing-listing-8000` forces an 8,000 character listing. Its 97 positives include
+  the 96 from the November 5 overflow run and the new draft-prompt case.
 - `routing-core` uses all 63 core cases in the full catalog.
 - `behavior-plain` adds the native no-plugin baseline. `behavior-forced` loads
   `plan-change` by slash command. Compare it with the without arm of

@@ -56,10 +56,12 @@ class RoutingExport(unittest.TestCase):
 
     def test_arms_cover_the_cases_the_audit_says_were_not_rerun(self) -> None:
         groups = exporter.routing_selection(ROOT, self.document)
-        self.assertEqual(len(groups['specialist-positive']), 64)
-        self.assertEqual(len(case_names(self.specialist)), 128)
+        self.assertEqual(len(groups['specialist-positive']), 65)
+        self.assertEqual(len(case_names(self.specialist)), 130)
+        self.assertIn('draft-prompt-positive-1', case_names(self.specialist))
+        self.assertIn('draft-prompt-near-miss-1', case_names(self.specialist))
         self.assertEqual(len(case_names(self.core)), 63)
-        self.assertEqual(len(case_names(self.listing)), 96)
+        self.assertEqual(len(case_names(self.listing)), 97)
         self.assertTrue(set(row[1]['id'] for row in groups['specialist-positive']) <= set(case_names(self.listing)))
 
     def test_forced_listing_changes_only_the_environment(self) -> None:
