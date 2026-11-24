@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "75f5b12cd9bb1ae7e644829cc0b274a0f91a74dadad36855d1ae798deee68df6",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
+      "after_sha256": "5be101a33beb61799d511b8457b1eca9e0c3fcac97d32d2781c36bc6a295e3db",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results. November 24 PR review. Checked original adapter validation, version regression cases, and the strict CLI observation."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -10252,8 +10252,8 @@
     },
     "scripts/validate_catalog.py": {
       "before_sha256": "e71824666ac6463b5d479eab5525d33ae42c93b317f9608adc0739202cdd673f",
-      "after_sha256": "71d1d09e91fdfad17bd902f46dfdf104044195d228f5536b251f58b240a92f41",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "f2c48deb696ca48af8ed62878b077b69b6b25040d615c44150cc0c985238bf0a",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 PR review. Checked original adapter validation, version regression cases, and the strict CLI observation."
     },
     "skills/acceptance-evidence-ledger/SKILL.md": {
       "before_sha256": "10bd58fb0ed4f115b3e8c244be83a0053b34e214072b1e3eb3473b2c6eb68134",
@@ -12902,8 +12902,8 @@
     },
     "tests/test_measured_release.py": {
       "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
-      "after_sha256": "15cb89a527463b228fd9c1d4e54043eb6bdf03831dba10ecfd52fb9ea2121979",
-      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
+      "after_sha256": "a85f4383f178a6123ab3041b4db6bce33357a3721cc535899a684291c49fb42c",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results. November 24 PR review. Checked original adapter validation, version regression cases, and the strict CLI observation."
     },
     "tests/test_noncanonical_disposition.py": {
       "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",

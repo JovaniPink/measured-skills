@@ -11,6 +11,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path, PurePosixPath
 
+from build_distributions import antigravity_groups
 from cataloglib import (
     ALL_SKILLS,
     CATALOG_NAME,
@@ -947,6 +948,12 @@ def validate_generated_adapters(errors: list[str]) -> None:
             prompts = interface.get("defaultPrompt") if isinstance(interface, dict) else None
             if not isinstance(prompts, list) or not 1 <= len(prompts) <= 3 or not all(isinstance(item, str) for item in prompts):
                 errors.append(f"{manifests[0].relative_to(ROOT)}: interface.defaultPrompt must contain one to three strings")
+
+    for plugin in antigravity_groups():
+        manifest = ROOT / "plugins" / "antigravity" / plugin / "plugin.json"
+        value = _load_json(manifest, errors)
+        if not isinstance(value, dict) or value.get("version") != VERSION:
+            errors.append(f"{manifest.relative_to(ROOT)}: version must be {VERSION!r}")
 
 
 def validate_marketplaces(errors: list[str]) -> None:

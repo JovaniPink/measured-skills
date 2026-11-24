@@ -11,7 +11,7 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 408 regression tests.
+Current test suite: 409 regression tests.
 
 ## November 24 Antigravity pack version check
 
@@ -21,6 +21,10 @@ four packs because its manifest omitted the version. With the regenerated
 for operations (11 skills), quality (26), stacks (17), and workflows (20).
 Each result contained one informational note about the generic icon and zero
 warnings or errors. A separately generated one-skill preview also passed.
+
+The CLI also accepted a preview labeled `0.18.0`. The catalog's adapter
+validator now checks each generated Antigravity pack against the catalog
+version. A regression test covers the current, missing, and stale versions.
 
 ## November 24 prompt drafting package checks
 
