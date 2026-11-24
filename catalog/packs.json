@@ -113,6 +113,7 @@
         "design-module-interface",
         "design-web-motion",
         "diagnose-failure",
+        "draft-prompt",
         "edit-technical-writing",
         "execute-plan",
         "explain-codebase",
@@ -135,11 +136,11 @@
         "trace-decisions",
         "track-acceptance"
       ],
-      "description_characters": 6137,
+      "description_characters": 6378,
       "budget_status": "warning",
       "discovery_estimates": {
-        "codex": 8893,
-        "claude": 8925
+        "codex": 9210,
+        "claude": 9243
       }
     }
   ],

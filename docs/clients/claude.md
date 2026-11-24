@@ -82,7 +82,7 @@ for observed limits and [official environment controls](https://code.claude.com/
 
 Claude desktop Code mode, Claude.ai, and Cowork each need their own record. Note whether the task runs locally or remotely. Check loading, linked files, result files, and resume behavior in each mode you use.
 
-For an account upload, build the separate one-skill ZIP with `python3 scripts/package_claude_ai.py`. Review it before uploading. The command prepares all 90 skills; it does not approve every ZIP for every app. Keep a separate upload checklist. The current candidate target is 73 skills that allow automatic selection, with 17 explicit-only workflows held. Do not upload an explicit-only skill until the receiving mode has a verified control that prevents automatic selection. A metadata field or working slash command alone does not prove that control.
+For an account upload, build the separate one-skill ZIP with `python3 scripts/package_claude_ai.py`. Review it before uploading. The command prepares all 91 skills; it does not approve every ZIP for every app. Keep a separate upload checklist. The current candidate target is 74 skills that allow automatic selection, with 17 explicit-only workflows held. Do not upload an explicit-only skill until the receiving mode has a verified control that prevents automatic selection. A metadata field or working slash command alone does not prove that control.
 
 To update an existing account skill:
 

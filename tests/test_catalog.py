@@ -1059,7 +1059,7 @@ class CatalogTests(unittest.TestCase):
             "stack-google-adk": "adk-version-boundaries.md",
             "review-retrieval-grounding": "retrieval-evidence-matrix.md",
         }
-        self.assertEqual(90, len(SKILLS))
+        self.assertEqual(91, len(SKILLS))
         self.assertEqual(4, len(skills_by_plugin()))
         self.assertTrue((set(new_skills) - {"stack-google-adk"}).issubset(skills_by_plugin()["measured-quality"]))
         self.assertIn("stack-google-adk", skills_by_plugin()["measured-stacks"])

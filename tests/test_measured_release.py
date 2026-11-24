@@ -47,9 +47,9 @@ class MeasuredReleaseTests(unittest.TestCase):
     def test_pack_partition(self) -> None:
         packs = skills_by_plugin()
         self.assertEqual("measured-skills", CATALOG_NAME)
-        self.assertEqual({'measured-workflows': 32, 'measured-quality': 27, 'measured-stacks': 20, 'measured-operations': 11}, {p: len(s) for p, s in packs.items()})
-        self.assertEqual(90, len(SKILLS))
-        self.assertEqual(90, len({s for skills in packs.values() for s in skills}))
+        self.assertEqual({'measured-workflows': 33, 'measured-quality': 27, 'measured-stacks': 20, 'measured-operations': 11}, {p: len(s) for p, s in packs.items()})
+        self.assertEqual(91, len(SKILLS))
+        self.assertEqual(91, len({s for skills in packs.values() for s in skills}))
 
     def test_antigravity_manifests_use_documented_fields_only(self) -> None:
         for plugin in skills_by_plugin():

@@ -276,6 +276,17 @@
       "runtime_eligibility": "not_applicable"
     },
     {
+      "skill": "draft-prompt",
+      "workflow_maturity": "candidate",
+      "workflow_maturity_evidence": "evals/cases.json",
+      "behavioral_evidence": {
+        "status": "none",
+        "verified_against_version": null,
+        "observed_at": null
+      },
+      "runtime_eligibility": "not_applicable"
+    },
+    {
       "skill": "edit-technical-writing",
       "workflow_maturity": "candidate",
       "workflow_maturity_evidence": "evals/cases.json",

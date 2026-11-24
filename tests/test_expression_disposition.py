@@ -135,7 +135,7 @@ class ExpressionDispositionTests(unittest.TestCase):
         current = {r['skill']: r for r in json.loads((ROOT / 'provenance/catalog.json').read_text())['entries']}
         mapping = {r['old_id']: r['new_id'] for r in json.loads((ROOT / 'catalog/migrations/0.18-to-0.19.json').read_text())['entries']}
         additions = set(current) - {mapping[n] for n in historical}
-        self.assertEqual({'review-engineering-prompt', 'choose-workflow', 'design-web-motion'}, additions)
+        self.assertEqual({'review-engineering-prompt', 'choose-workflow', 'design-web-motion', 'draft-prompt'}, additions)
         delta = json.loads((ROOT / 'docs/audits/post-acceptance-delta-2026-10-20.json').read_text())
         self.assertFalse(delta['new_maintainer_acceptance'])
         for name in additions:
