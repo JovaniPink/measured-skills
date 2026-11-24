@@ -573,6 +573,51 @@
       ]
     },
     {
+      "id": "draft-prompt",
+      "label": "Draft a prompt",
+      "primary_skill": "draft-prompt",
+      "why": "Turn a task description into wording for the assistant that will receive it.",
+      "search_phrases": [
+        "write a prompt",
+        "draft a prompt",
+        "write me a prompt",
+        "draft a request for a coding assistant",
+        "what should I ask a chat assistant"
+      ],
+      "required_inputs": [
+        "task description"
+      ],
+      "inputs": [
+        {
+          "token": "TASK",
+          "label": "Task description",
+          "hint": "What the recipient should do, with any known inputs and limits"
+        }
+      ],
+      "steps": [
+        "Identify the deliverable",
+        "Resolve material ambiguities",
+        "Draft the request"
+      ],
+      "output_example": "Compare the supplied schedules by session ID. Flag duplicate IDs for review.",
+      "optional_skills": [],
+      "modes": [
+        {
+          "id": "prepare",
+          "label": "Draft the request",
+          "scope": "Read-only prompt drafting. Return the text for the requester to use.",
+          "command_skill": "draft-prompt",
+          "prompts": {
+            "codex": "$measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude": "/measured-workflows:draft-prompt Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "antigravity": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "chatgpt": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted.",
+            "claude-web": "Write one copyable prompt for [TASK]. Use the audience, inputs, and constraints in my description. Preserve the actions I authorized. Mark missing facts or decision rules that could change the answer. Include a small example with its expected result when useful. Return the wording here and leave the described task unexecuted."
+          }
+        }
+      ]
+    },
+    {
       "id": "prompt-review",
       "label": "Review an engineering prompt",
       "primary_skill": "review-engineering-prompt",

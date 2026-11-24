@@ -71,6 +71,8 @@ with hand-written expectations. A parser checks the shape. Comparing the fields
 against the expected values checks the decision. Supply a separate contract if
 your application must also accept incomplete times, full schedules, or cancellations.
 
+Select **Draft a prompt** in the [offline chooser](../dist/discovery/index.html#draft-prompt) for a copyable request for your client.
+
 ## Decide what to reuse
 
 Keep a one-time preference in the request. Put a durable project convention in

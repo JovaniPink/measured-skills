@@ -218,11 +218,14 @@ def run_command(arm: dict[str, Any], document: dict[str, Any], output: str) -> s
     return ' '.join([f'{key}={value}' for key, value in sorted(environment.items())] + [shlex.join(words)])
 
 
-def render(arm_id: str, source: Path = ROOT, suite: Path = SUITE) -> dict[str, bytes]:
-    """Return the suite as bytes. The result depends only on the two input trees."""
+def render(arm_id: str, source: Path = ROOT, suite: Path = SUITE, *,
+           packs_from: Path | None = None) -> dict[str, bytes]:
+    """Render case files and generated packs from the selected input trees."""
     document = load_arms(suite)
     arm = find_arm(document, arm_id)
-    packs, files = pack_files(source)
+    if packs_from is not None and arm['kind'] != 'routing':
+        raise ValueError('a separate pack checkout is supported only for routing comparisons')
+    packs, files = pack_files(packs_from if packs_from is not None else source)
     if arm['kind'] == 'routing':
         cases = routing_cases(source, arm, document, packs)
     else:
@@ -240,7 +243,7 @@ def render(arm_id: str, source: Path = ROOT, suite: Path = SUITE) -> dict[str, b
 
 
 def receipt(files: dict[str, bytes], arm_id: str, source_commit: str, suite_commit: str,
-            suite: Path = SUITE) -> bytes:
+            suite: Path = SUITE, *, pack_commit: str | None = None) -> bytes:
     document = load_arms(suite)
     arm = find_arm(document, arm_id)
     return (json.dumps({
@@ -249,6 +252,7 @@ def receipt(files: dict[str, bytes], arm_id: str, source_commit: str, suite_comm
         'arm': arm_id,
         'source_commit': source_commit,
         'suite_commit': suite_commit,
+        'pack_commit': pack_commit if pack_commit is not None else source_commit,
         'model': document['model'],
         'cases': arm['expected_cases'],
         'runs_per_case': arm['runs'],
@@ -264,16 +268,19 @@ def require_clean(checkout: Path) -> str:
     return git(checkout, 'rev-parse', 'HEAD').strip()
 
 
-def export(arm_id: str, output: Path, source: Path = ROOT, suite: Path = SUITE) -> str:
+def export(arm_id: str, output: Path, source: Path = ROOT, suite: Path = SUITE, *,
+           packs_from: Path | None = None) -> str:
     check_destination(output)
     source = source.resolve()
     suite_root = Path(git(suite, 'rev-parse', '--show-toplevel').strip()).resolve()
-    if any(output.resolve().is_relative_to(checkout) for checkout in (source, suite_root)):
+    pack_root = packs_from.resolve() if packs_from is not None else source
+    if any(output.resolve().is_relative_to(checkout) for checkout in (source, suite_root, pack_root)):
         raise ValueError('evaluation output must be outside the source checkout')
     source_commit = require_clean(source)
     suite_commit = require_clean(suite_root)
-    files = render(arm_id, source, suite)
-    files['receipt.json'] = receipt(files, arm_id, source_commit, suite_commit, suite)
+    pack_commit = source_commit if pack_root == source else require_clean(pack_root)
+    files = render(arm_id, source, suite, packs_from=packs_from)
+    files['receipt.json'] = receipt(files, arm_id, source_commit, suite_commit, suite, pack_commit=pack_commit)
     output.mkdir()
     for relative, payload in sorted(files.items()):
         path = output / relative
@@ -289,9 +296,11 @@ def main() -> int:
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--source', type=Path, default=ROOT,
                         help='clean checkout that supplies cases, catalog, and generated packs')
+    parser.add_argument('--packs-from', type=Path,
+                        help='use a separate clean checkout for generated packs in a routing comparison')
     args = parser.parse_args()
     try:
-        command = export(args.arm, args.output, args.source)
+        command = export(args.arm, args.output, args.source, packs_from=args.packs_from)
     except (ValueError, OSError) as error:
         parser.error(str(error))
     print('Prepared without running a client. A run costs money and needs its own approval:')

@@ -380,6 +380,24 @@ class ExportBoundary(unittest.TestCase):
             prompt = 'evals/plan-change-positive-1/prompt.md'
             self.assertEqual(receipt['files'][prompt], hashlib.sha256((output / prompt).read_bytes()).hexdigest())
 
+    def test_baseline_packs_keep_candidate_routing_cases_and_graders(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp).resolve()
+            baseline = self.source(base / 'baseline')
+            skill = 'plugins/claude/measured-workflows/skills/draft-prompt'
+            subprocess.run(['git', '-C', str(baseline), 'rm', '-qr', skill], check=True)
+            subprocess.run(['git', '-C', str(baseline), '-c', 'user.name=Test',
+                            '-c', 'user.email=test@example.test', '-c', 'commit.gpgsign=false',
+                            'commit', '-qm', 'baseline without prompt drafting'], check=True)
+            for arm in ('routing-specialist', 'routing-listing-8000'):
+                candidate = exporter.render(arm)
+                result = exporter.render(arm, packs_from=baseline)
+                self.assertEqual({k: v for k, v in candidate.items() if k.startswith('evals/')},
+                                 {k: v for k, v in result.items() if k.startswith('evals/')})
+                entry = 'packs/measured-workflows/skills/draft-prompt/SKILL.md'
+                self.assertIn(entry, candidate)
+                self.assertNotIn(entry, result)
+
     def test_output_inside_a_checkout_is_refused(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             base = Path(tmp).resolve()

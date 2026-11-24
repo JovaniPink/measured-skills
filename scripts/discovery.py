@@ -160,8 +160,9 @@ def registry_errors(data: dict[str, Any], known: set[str]) -> list[str]:
             command_skill = mode.get('command_skill')
             if command_skill is not None and (not isinstance(command_skill, str) or command_skill not in known):
                 errors.append(f'{identity}: unknown native command skill')
+            context_token = '[TASK]' if identity == 'draft-prompt' else '[REPOSITORY]'
             for prompt in mode.get('prompts', {}).values():
-                if not isinstance(prompt, str) or '[REPOSITORY]' not in prompt or not prompt.isascii():
+                if not isinstance(prompt, str) or context_token not in prompt or not prompt.isascii():
                     errors.append(f'{identity}: invalid portable prompt')
                 if isinstance(prompt, str):
                     used_tokens.update(re.findall(r'\[([^\]]+)\]', prompt))
@@ -311,8 +312,9 @@ def markdown(data: dict[str, Any], bundled: bool = False) -> str:
         lines += ['## ' + route['label'], '', f"Start here: `{route['primary_skill']}`. {route['why']}", '',
                   'Provide: ' + ', '.join(route['required_inputs']) + '.', '',
                   'Steps: ' + ' -> '.join(route['steps']) + '.', '',
-                  'Synthetic result: ' + route['output_example'], '',
-                  'Optional specialists: ' + ', '.join(route['optional_skills']) + '.', '']
+                  'Synthetic result: ' + route['output_example'], '']
+        if route['optional_skills']:
+            lines += ['Optional specialists: ' + ', '.join(route['optional_skills']) + '.', '']
         for mode in route['modes']:
             lines += ['### ' + mode['label'], '', 'Finish line: ' + mode['scope'], '']
             if mode.get('command_skill'):

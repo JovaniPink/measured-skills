@@ -3,7 +3,7 @@
 Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
 
 
-Current preview inventory: 90 canonical skills in four packs. The 0.19 discovery
+Current preview inventory: 91 canonical skills in four packs. The 0.19 discovery
 and identity migration retains the 0.18 candidate as historical source. Validation
 results for this change are recorded separately; earlier counts below are historical.
 
@@ -11,7 +11,7 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 406 regression tests.
+Current test suite: 408 regression tests.
 
 ## November 24 prompt drafting package checks
 
