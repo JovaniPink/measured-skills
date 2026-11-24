@@ -713,7 +713,8 @@
   ],
   "additions": [
     "choose-workflow",
-    "design-web-motion"
+    "design-web-motion",
+    "draft-prompt"
   ],
   "upgrade_guide": "docs/migration-0.19.md"
 }

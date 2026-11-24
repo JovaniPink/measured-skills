@@ -39,6 +39,9 @@ def search_routes(queries: list[str], catalog: dict[str, Any] | None = None) -> 
 class JourneySearchTests(unittest.TestCase):
     def test_task_sentences_rank_relevant_routes_without_selecting_authority(self) -> None:
         cases = [
+            ("write a prompt to compare schedules", "draft-prompt"),
+            ("draft-prompt", "draft-prompt"),
+            ("check this prompt", "prompt-review"),
             ("CI is red and the cause is unknown", "diagnose"),
             ("Why did CI fail on this branch?", "diagnose"),
             ("Explain the save path before changing it", "understand"),

@@ -42,8 +42,8 @@
     },
     "README.md": {
       "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
-      "after_sha256": "9ee4bd99f0fee6548d0d6996ff90b221ce2bdc2fe79702d6cd10d1d085642d2e",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "adb8166e8b8dab3ea5727ab528ae8028e282082212ca27e22a3bd4308d1139f7",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "SECURITY.md": {
       "before_sha256": "9ee9b189398527cd1a2a3444c46229fc337bb73e5df668172e3ed0f47ba04dcb",
@@ -77,8 +77,8 @@
     },
     "catalog/evidence.json": {
       "before_sha256": "7f63f6aabbbd6a6369b86bf0c750dfc66b6cc2f7c1a7e9007fa05b38f39c0ab9",
-      "after_sha256": "e19fba6c6e3d73cf151ef699a616ea4db20dd4cf70eeb3dc4ea32d6916846264",
-      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "950396cf3290d42bbc7e0d39d63f4fcf4b0a85913932ba44b4e5b08b7d6e92d6",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "catalog/google-surfaces-schema.json": {
       "before_sha256": "e77887f04fc49b2deb0de1fbefbad80ae5f70629b2cfb48af3b2224e728dc03c",
@@ -92,8 +92,8 @@
     },
     "catalog/migrations/0.18-to-0.19.json": {
       "before_sha256": null,
-      "after_sha256": "b11f13c7ba4a6cd811386e3586a3452aee43b94334d702adafc1c6c80d4918c5",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "1c5520349ae4481f8cf86890da334a72fe8ff0cd3114e543c51fafafbdefff9c",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "catalog/packs-schema.json": {
       "before_sha256": "5f0ca64ff10977fea08cdcf45118c923c02d4b4af7798b425bb96474545910c2",
@@ -102,8 +102,8 @@
     },
     "catalog/packs.json": {
       "before_sha256": "da1913d9b56893d25430fb8236a4b1798c2bbf20fe9e03e0be3ff6ad7f4f3966",
-      "after_sha256": "ddb19b73cf2e1d96b6ededfcfda78129f81ddeb7d6daecc3a0366cc838a76495",
-      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Recompute pack/recipe/profile discovery measurements after the orchestration description update. No selections, invocation classes, or behavioral evidence change. October 26 GCP routing repair: Recompute description measurements only; no profile, pack, recipe selection or behavioral evidence changes. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "63bfdf45d724c3009e02086333b1d1bbee94c64328e80d99a0d2821ebdf652c5",
+      "expression_and_license_review": "Recompute listing-size estimates from the revised review description. No skill selection, invocation, maturity, observed state, behavioral evidence, or qualification change. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 26 bounded-maintenance increment: Recompute pack/recipe/profile discovery measurements after the orchestration description update. No selections, invocation classes, or behavioral evidence change. October 26 GCP routing repair: Recompute description measurements only; no profile, pack, recipe selection or behavioral evidence changes. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "catalog/profiles-schema.json": {
       "before_sha256": "609d4c79c650f44aedf9362e3e067ecf8234c27d8d3b367aea09a6a4a76cc891",
@@ -137,8 +137,8 @@
     },
     "catalog/skills.json": {
       "before_sha256": "56fbdcf0fd1817da8e69f0657db8b7289ee5205105316f90ac0abd9d7df97a25",
-      "after_sha256": "199c0c51fc45bbda27277e1664d5f55646aa0b24ecfe0f2dbae299d4469941a2",
-      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "1912cfdf1c011a9a6460c9fee0ae750d8647e12b62a5ec46ea3235fc8a2d84a8",
+      "expression_and_license_review": "Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "catalog/upstream-pins.json": {
       "before_sha256": "1dfb2856d3a7cbedcce3f68ffcc2d0c347afa82c250a9ba5ceca5bae85c5e746",
@@ -152,18 +152,18 @@
     },
     "catalog/upstream-reviews.json": {
       "before_sha256": "3b837ec11614e30daa3c409936efe156ab97de2a18fd7a77d24c833c8b298a53",
-      "after_sha256": "cab6c9aa7f0b628e5ff64d08f509961ef1d3850cfe0fe59e6b04b55067b707bf",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5 follow-up reviews source fingerprints and install evidence in original wording; imports no upstream body text."
+      "after_sha256": "9d21b5d32ec75e7144b2b99adf3d9656801ddf58ee4edc31be3516d590c32a4d",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5 follow-up reviews source fingerprints and install evidence in original wording; imports no upstream body text. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "catalog/workflows.json": {
       "before_sha256": null,
-      "after_sha256": "9799660b5ef2312bb1c7d5c11937723d7e1c8ab97579c3676f716bf1980e8082",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "3ffe23cc2b8198d446c0b08c1b0d736355978758db918a37076ab03ac09a5b31",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "e3ec6a39e75e1346b94e7aa84923307e1881e6f912f8eee45e289355910499d8",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "a39358648987ded712497d94da6ad3b4cd81d5555d08b1198d3ac70377143c29",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/claude-ai/acceptance-evidence-ledger-0.18.0.zip": {
       "before_sha256": "245859664d7c070e72520343ef479c559d7ecd81fc2a36c07eacdca394bcc4c3",
@@ -277,8 +277,8 @@
     },
     "dist/claude-ai/choose-workflow-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "9c412d9d2c607c398c49ef8ba202e2a488f03dab2c68453790210f79dcd1a693",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "106f94182231d99ff62d980b9cda0cd85739073b0b88b7d6e39e86881f8402bb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/claude-ai/claim-verification-0.18.0.zip": {
       "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
@@ -1052,28 +1052,28 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "435c1d616771a995de012a7d466be63492a83939320014f202be59d3fb8af155",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "bb58fc89e2df66b8fa83d28891af0050164bd48c55028ccc9580d2e4abff6cca",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "bfdbd440522fa91a89455bf2b586c151a2649fc72af5e08272ea583fbeeca689",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "0283dba3f2077211f8a1dc34057ba734f26922e6fb4dfeb9d7b36ac76c4d50d8",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "9b026e62df1b6bf8c71bd9f5c956ec2ca012de5d084680f38aebbbc45c98ccce",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "dc55d2f0a11c6946264738332fc3bc1afee69af037b3852854984f1e06964d07",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "c8809cdbfa5766bea1f25d5023cb3fe88752816f8b9378f7f0fe58dc421b9a53",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "ec9eb9dddf91a650c175766d7bf848807800ead5eeb72c2f7599c35c07c36e1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
-      "after_sha256": "3704e729d96582df45fd5b557b86388e9692e79ddaf568979e57f1221393f2e9",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "1b76bfe5b926552eb798ff21556e0393fad06d6bdd955f80f45e690e06e4a664",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24, 2026. Added an original navigation line for the prompting guide. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/acceptance-0.19-participant.md": {
       "before_sha256": null,
@@ -1437,8 +1437,8 @@
     },
     "docs/audits/workflow-depth-2026-10-28.json": {
       "before_sha256": null,
-      "after_sha256": "d597ac7c7cb0a9c1625306db6d67f22d22b613846cb97a11d242c195e4541ef0",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "5a7940a17c480301ed9a5acf955c88428d0fbc244c82dc5aa24fc5b532d8e73c",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/audits/workflow-depth-sources-2026-10-28.json": {
       "before_sha256": null,
@@ -1467,8 +1467,8 @@
     },
     "docs/client-support.md": {
       "before_sha256": "83bf82c86d4426033718ec0c5a74c7f788428a59270e033058eb83c52325bbdc",
-      "after_sha256": "977853c937fa4553e739af308c9ffd53ca382d3676ecb13d97086276790024b3",
-      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. November 5, 2026 docs update: original project text. No third-party text was added."
+      "after_sha256": "3dae330432b7149ce0ffd9437be7a45cad7183aadde1334b4806aa643b165608",
+      "expression_and_license_review": "October 26 source-review follow-up: Original dated source-review summaries and observations, consolidated gate ledger, and historical/current clarification. No third-party implementation or raw publisher body imported; no new maintainer acceptance or client qualification claimed. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. November 5, 2026 docs update: original project text. No third-party text was added. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/client-usage-and-permissions.md": {
       "before_sha256": null,
@@ -1477,13 +1477,13 @@
     },
     "docs/clients/antigravity.md": {
       "before_sha256": "15a779160f21f2b01a5e5ff40459dc30eb7b037ecabf06737ce67dc6bd2df45e",
-      "after_sha256": "46a0f525747b5300c1f06fe2ba59884c184ef0ffa599d9e254e9ea3e5d5b5360",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added."
+      "after_sha256": "9c7586926279820d0f2793cec3374f0b329708e82a0b83dc4c014eae0c229daf",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/clients/claude.md": {
       "before_sha256": "1aa304f29251e41f8e5f4c18590c10938a8e1c70cfe1c9d2e3ac4dbd1411ea33",
-      "after_sha256": "28f634078eacfb5f7740241d18ebbf0eb0faadb923101320cdf8a374b6ec4e6c",
-      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. November 2 release-qualification record: original owned observations of matching receiving-account controls and one authorized, stopped Haiku setup attempt, reference-access and read-size corrections prepared without another run, current runtime/update limits, and a failing 43-match/26-change online source snapshot. Preserve original trial inputs, earlier preparations, pins, policy and source ancestry; no new maintainer acceptance, general client acceptance, merge or release. November 2 release-qualification follow-up: original owner observations of matching-account controls and a stopped Haiku setup attempt; reference-root/read-size corrections prepared without another run; 43-match/26-change source snapshot with unchanged pins/policy. Review concurrent Gemini preparation as non-executable: preserve candidate cases, flag conflicting three/four-session proposals and missing host/fixture evidence without expanding authorization. Retain original trials, preparations, ancestry and accepted packet; no general acceptance, merge or release. November 5, 2026 docs update: original project text. No third-party text was added."
+      "after_sha256": "81204a8869883aff81c9466fc4310bd000ae9d228ead6f479c8b98eab432cd92",
+      "expression_and_license_review": "Original Codex-assisted documentation: feature workflow prompts, navigation, client invocation distinctions, or corrected current-facing summaries. Official sources are linked and paraphrased, not imported as workflow implementations. No canonical skill, generated artifact, source pin, frozen case, historical observation, approval packet, license, or permission changes. Authored prompts do not establish successful invocation, behavior, benefit, or new maintainer acceptance. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. October 28 post-merge documentation audit: reconcile exact merged candidate identities and dated acceptance limits; correct current client counts and release links; clarify missing native command fallback and preservation of user constraints. Original owned synthesis; no third-party implementation, canonical skill change, new acceptance, model trial or test rerun. November 2 release-qualification record: original owned observations of matching receiving-account controls and one authorized, stopped Haiku setup attempt, reference-access and read-size corrections prepared without another run, current runtime/update limits, and a failing 43-match/26-change online source snapshot. Preserve original trial inputs, earlier preparations, pins, policy and source ancestry; no new maintainer acceptance, general client acceptance, merge or release. November 2 release-qualification follow-up: original owner observations of matching-account controls and a stopped Haiku setup attempt; reference-root/read-size corrections prepared without another run; 43-match/26-change source snapshot with unchanged pins/policy. Review concurrent Gemini preparation as non-executable: preserve candidate cases, flag conflicting three/four-session proposals and missing host/fixture evidence without expanding authorization. Retain original trials, preparations, ancestry and accepted packet; no general acceptance, merge or release. November 5, 2026 docs update: original project text. No third-party text was added. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/clients/codex.md": {
       "before_sha256": "84602dec8a77a675286d1d96196fc426690a0088a292e567d0788ec5d463a069",
@@ -1577,8 +1577,8 @@
     },
     "docs/skill-catalog-reader-guide.md": {
       "before_sha256": "01739e2d857116314c972d257099e816a63f295f642a2cc03d10df854dd3ff88",
-      "after_sha256": "bdc763ed25c32b087e757ac4ffae8decf152774671ae6fd057ba52f88b8379a1",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: generated output changed only to remove release state from chooser and pack text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1dd104e84080f6f83c6eec861d0fbf3f49d189b9d541e043d2a05037cfd88074",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: generated output changed only to remove release state from chooser and pack text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "docs/skill-cheatsheet.md": {
       "before_sha256": "95336348d147f690075815f0f6597e5ea1aa7efd16e1f4492c5213159ee4e215",
@@ -1587,8 +1587,8 @@
     },
     "docs/start.md": {
       "before_sha256": null,
-      "after_sha256": "7daaecc7dadb998df49a35a28c94508a391d211585915c2ea69b3c0bf18e53d2",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "6cf25d9715daadfde0254544d6b5326aff8e633f2a022725278b99f4a8e687b4",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "docs/taxonomy.md": {
       "before_sha256": "b291f0acac8f4b376850a7d357241d7448247e617752804fbf6468c4ba025073",
@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "a616406b3230296965ae887662daf1f25674a6498597e5df465a62cf705cd246",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "bae2dd8f4c120eff70b3b76a0724e9ecdd4dbb6383c01ea67ab8797323b6f017",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -1612,8 +1612,8 @@
     },
     "evals/cases.json": {
       "before_sha256": "5db02bc0bf883c1bf19b5bff66c24430b7149e2990828991a993a41edc837344",
-      "after_sha256": "9fca5b2a1defec1c2de6bfb68176f8a9ff692b3d80155e925b9c1fb08745e043",
-      "expression_and_license_review": "Append four independently written public synthetic safety cases and two output rubrics for review/GCP evidence and contract limits. Existing case records, frozen daily/CLI inputs, and historical studies are preserved. Added cases remain unrun. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 27 GCP/review contract repair: Two original safety cases and output criteria cover example leakage and assertion/prediction confusion. Existing daily fixtures and prior observations remain frozen; no new model execution or benefit result. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "f8714383fa4f18cc19d492ca772966da0012cba5d5e5189c2dd875f991745c19",
+      "expression_and_license_review": "Append four independently written public synthetic safety cases and two output rubrics for review/GCP evidence and contract limits. Existing case records, frozen daily/CLI inputs, and historical studies are preserved. Added cases remain unrun. October 26 finish-work increment: Register the original prompt-review skill, synthetic unrun cases, fourteen-skill experimental profile, and three composition recipes; recompute measurements. Individually reviewed prompt sources use full-byte pins; Claude uses its stable official Markdown representation. Existing daily selection and frozen evidence remain unchanged. October 27 GCP/review contract repair: Two original safety cases and output criteria cover example leakage and assertion/prediction confusion. Existing daily fixtures and prior observations remain frozen; no new model execution or benefit result. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "evals/completion-contract-scenarios.json": {
       "before_sha256": "5d98b98ba7defab3c359136cd8d892830d5173d654d1eb570d167ff781d1d1ef",
@@ -3622,8 +3622,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/antigravity/measured-workflows/skills/design-module-interface/LICENSE": {
       "before_sha256": null,
@@ -6207,8 +6207,8 @@
     },
     "plugins/claude/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/claude/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -9672,8 +9672,8 @@
     },
     "plugins/codex/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "plugins/codex/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -10182,8 +10182,8 @@
     },
     "provenance/catalog.json": {
       "before_sha256": "24faeb3e66d1950b112e0d47734246a6a58d5c96dd7f217585b4c0eea0e4c9fa",
-      "after_sha256": "722798c1817bf4c4107a47dcbceca2839f0c3cb14bcaa195705a0f93499b0426",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "12d788dda92194df44ab71b3e1ada3225f4b31d3fe3e12a737059dc765ed78c5",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 16 original generic continuation wording, prepared cases, bounded explicit-text observations or deterministic projections reviewed; MIT notice retained. No private records, native acceptance, or release authority inferred. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "provenance/ci-actions.json": {
       "before_sha256": "c94204275694ce4f303033e0742ff987b1ca8d90299bb6e669a076d73a577fec",
@@ -10237,8 +10237,8 @@
     },
     "scripts/discovery.py": {
       "before_sha256": null,
-      "after_sha256": "1844eb3f5861478872b664bb53ab307cf9059aaf150538f11560fa788bd3638f",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Collected standing-limit sentences only from valid action containers, preserving prompt and invocation behavior. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 19 UI/UX offline chooser repair: stacked field controls, secondary recovery button styling, and open-scope state preservation across client/stack/style changes; no external code imported or new client acceptance claimed."
+      "after_sha256": "f6907d0fa26a78fcf8a92debf91535f61f6e5eb374629b29f53ade7eeb024994",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 28 action-availability repair: original per-action/client presentation and regression coverage; clarify observed use, repeatable acceptance and comparative benefit without promoting maturity. Generated bytes match reviewed sources. No imported implementation, permission change, model trial, new acceptance or release qualification. October 28 chooser follow-up: original action-entry search and ordinary-request fallback implementation, focused regression definitions, and corresponding generated data/reference/archive bytes. Reviewed scopes and native selector removal; no external implementation imported, invocation classification changed, local test rerun or client acceptance claimed. October 29 finish-work usability repair: original scoped prompt and disclosure changes, two regression cases, and deterministic derived copies. Read-only assessment, local repair, and existing draft-maintenance authority remain separate; no imported implementation or new maintainer acceptance. October 29 original owned-trial follow-up: reviewed bounded evidence discovery and execution reporting, retained original private receipts, prepared unrun retest, and deterministic generated correspondence. No authority expansion, source repinning, new acceptance, or release. October 30 original runtime-observation refinement: separate task budgets, host inference, estimates and billing; preserve instrumentation authority and private evidence. Primary-source review in client-runtime-observation-2026-10-30.md. No imported patch, new model trial, source repin or maintainer acceptance. November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Collected standing-limit sentences only from valid action containers, preserving prompt and invocation behavior. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 5, 2026 freeze preparation: original project text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 19 UI/UX offline chooser repair: stacked field controls, secondary recovery button styling, and open-scope state preservation across client/stack/style changes; no external code imported or new client acceptance claimed. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "scripts/export_selected.py": {
       "before_sha256": "e52ccd5aeb07450eb14a2c6eaf86e6e31656a5235ed37087c4d06807e87ce819",
@@ -10542,8 +10542,8 @@
     },
     "skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "1966e6f055a6e5d2785c3d88c0a42be471cb245acb8bdd92385bbd95601c45eb",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 routing fix. Regenerated the offline chooser, bundled client indexes, and chooser archive from the committed prompt drafting route."
     },
     "skills/claim-verification/SKILL.md": {
       "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
@@ -12847,8 +12847,8 @@
     },
     "tests/test_catalog.py": {
       "before_sha256": "a6bc0c40605ae1fd2f389c5aabdee6ca380dfc81fe6415d0f325a27ad9f95cde",
-      "after_sha256": "9a5a908ec8a704351f04bab9b700cc79e3132fa1b163b40224b7ad4f41316c72",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance."
+      "after_sha256": "5c3fbb4d1100cda01d611066e16850704e487387c88ffff040e12e3d81f5c80d",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. November 2 source review: individual decisions for 27 changed authorities, retained raw and final receipts, unchanged checker and policy, two reviewed official-Markdown rebindings. Original summaries and observed hashes only; no imported publisher text, canonical instruction change, model trial, billing change or new maintainer acceptance. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. Verified the acceptance-ledger test still checks the full workflows pack with its new member."
     },
     "tests/test_completion_contracts.py": {
       "before_sha256": "9ac97b8222e2fc4a043654458bfefebeb432067a9aedc4e402052ce0dda8b10a",
@@ -12872,8 +12872,8 @@
     },
     "tests/test_discovery_usability.py": {
       "before_sha256": null,
-      "after_sha256": "61782dcf844f2490109dbe4b0638f73385b12b1a8ef97de8eb818837ef85409c",
-      "expression_and_license_review": "November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Added a regression for malformed action and prompt containers with standing limits. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run."
+      "after_sha256": "f08c09c5e4f9aab0d0c59c520ba6acad8a8d379beecf5be99e895fbefbe6ea71",
+      "expression_and_license_review": "November 2 chooser usability: requests ask only for fields a person can fill, with placeholders and sentence wording pinned to the reviewed predecessor by test; standing limits named once as data; short assistant labels with the original caveats kept as notes. Original expression only; no imported text, invocation or authority change, model trial, billing change or new maintainer acceptance. November 4 technical review: Added a regression for malformed action and prompt containers with standing limits. No external implementation or new maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "tests/test_distribution_licensing.py": {
       "before_sha256": "ec67144681f1709596ede554f633f401e75712bb17a10d3e4a57f8e3b026590f",
@@ -12882,8 +12882,8 @@
     },
     "tests/test_expression_disposition.py": {
       "before_sha256": "75f02904eec8a7242acfff6b5f819589b444efe4ed007dd86eb157cc81cdb547",
-      "after_sha256": "fd1b12cc9b62aaa8abae974c9efb415aac69e938952cf8504158fb526620823a",
-      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "54cf9c56f275325d55ef3fc49760cb7d76403d14340b47297652af4b0cc802cb",
+      "expression_and_license_review": "Original local test adaptation after reproduced frozen-inventory failures. Historical correction bytes now bind the exact accepted ancestor; the separate current delta still checks every current payload byte. No historical receipt, license, or acceptance text was edited. October 26 finish-work increment: Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "tests/test_finish_work.py": {
       "before_sha256": null,
@@ -12902,8 +12902,8 @@
     },
     "tests/test_measured_release.py": {
       "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
-      "after_sha256": "b30f9e412f7ff431c561495b077aa788088af5fb64c3ed7ebadceb22628c7e9d",
-      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "4339f60c66a47376c2b0d189c40395f6edeab72aaffc1c2fb857aefb8b3eb806",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
     },
     "tests/test_noncanonical_disposition.py": {
       "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",
@@ -12962,18 +12962,18 @@
     },
     "tests/test_workflow_depth.py": {
       "before_sha256": null,
-      "after_sha256": "82eecf45901219662db820fe1bdd559a133ea832b5badc17aec8a55f4efdd04a",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained."
+      "after_sha256": "40791248bbd69fe558caf3410eed97e427d9bc5f11816b9833ee19704192f372",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. October 29 source review: individual current-content decisions for 29 initial and three supplementary authorities, retained failed/closed fingerprint receipts and unchanged methods/age policy. Original summaries and observed hashes only; no imported publisher implementation, canonical instruction change, model trial or new maintainer acceptance. November 2 original focused operational workflow increment: bounded intermittent diagnosis, evidence-based review trade-offs, task/client routing, current-checkout guidance, synthetic cases and deterministic derivatives. Reviewed permissions, finite evidence, notice retention and source correspondence. No external implementation, new skill, profile or invocation change, model trial, source repin or maintainer acceptance. November 4 original optional PR explanation/scope mode, current-name repair, generated exports and regressions. See review-scope-2026-11-04.md. No external implementation imported, new acceptance or model run. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "evals/plugin-eval/README.md": {
       "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "4d3f11878851c3263f05d91d30108fc4c7718146928d917a3cf3be71daebc72b"
+      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. Expanded prepared routing arms for the new skill and checked that both its first positive and first near miss reach the specialist export. Historical trial outcomes and spending ceilings are retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. Restored the explicit unexecuted status of all five current arms alongside the separate historical run.",
+      "after_sha256": "45e820ed7613d2301cff934aabf92368ad0bdd35256ac6590e04f1e4d6417535"
     },
     "evals/plugin-eval/arms.json": {
       "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "4d768e9d6d383e8a05293ac5f4b6c021a219ccea3775c2e7d13e7c1a6414a212"
+      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. Expanded prepared routing arms for the new skill and checked that both its first positive and first near miss reach the specialist export. Historical trial outcomes and spending ceilings are retained.",
+      "after_sha256": "815464a37c97280fab6dffceaaf6d969f3a0f863e15e235f7f6a78a2ddae5065"
     },
     "evals/plugin-eval/fixture/build-half-finished-pr.sh": {
       "before_sha256": null,
@@ -13047,13 +13047,13 @@
     },
     "scripts/export_plugin_evals.py": {
       "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "78a6f43f89408b459b2e28ce19c7f2632ecb97f07eb2c10d1f6d1f4eb13c7948"
+      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases.",
+      "after_sha256": "05200e47fb6990c30f3dfff54707cb798cba60812db61d13594aacea1fa81540"
     },
     "tests/test_plugin_evals.py": {
       "before_sha256": null,
-      "expression_and_license_review": " November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run.",
-      "after_sha256": "31b3dce1d92fbd040c0fdc45fd82658020752d0b63eea51f0f35693624b76f61"
+      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. Expanded prepared routing arms for the new skill and checked that both its first positive and first near miss reach the specialist export. Historical trial outcomes and spending ceilings are retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases.",
+      "after_sha256": "69905fafa35fef58e14cc39512b072651b4bbf5faccf4bc383e14cc3982dd539"
     },
     "docs/audits/lifecycle-0.19.0.md": {
       "before_sha256": null,
@@ -13177,8 +13177,8 @@
     },
     "tests/test_chooser_journey.py": {
       "before_sha256": null,
-      "after_sha256": "4ce28fddd82628715f5a5f3d884467288343bffa69b15a68ccfe76992691ed27",
-      "expression_and_license_review": "November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained."
+      "after_sha256": "9ed5b42586565d0d49abef6334b69464726850f9a59fa4867ffe2b558114e7c5",
+      "expression_and_license_review": "November 16 original continuation refinement or deterministic derived artifact; generic cases and explicit-text observations do not establish native acceptance or release authority. November 17 review-journey refinement: Reviewed original review-journey guidance and focused regression coverage; no third-party implementation or private evidence added. Existing notices and historical evidence retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
     },
     "dist/discovery/search.js": {
       "before_sha256": null,
@@ -13324,6 +13324,66 @@
       "before_sha256": null,
       "after_sha256": "bf7c1cf0854b3de58e05ce871e6b8dc69ba4f5b0a8cacf804786b5500861b4f5",
       "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+    },
+    "docs/prompting.md": {
+      "before_sha256": null,
+      "after_sha256": "5151fa6f425f9419cd56f1c8b3bed39fddf1ba7d7d8aaebc258ece27d727a39e",
+      "expression_and_license_review": "November 24, 2026. Original teaching text, synthetic workshop records, and hand-written expectations. The prompts and fixture were written for this guide. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
+    },
+    "docs/research/prompting-2026-11-24.md": {
+      "before_sha256": null,
+      "after_sha256": "9826932a8ab8f8b27c34c75303129c19108a75ca98e2ded71a443bbd9c58217a",
+      "expression_and_license_review": "November 24, 2026. Original comparison of nine cited publisher guides and two cited primary studies. Reviewed paraphrases, scope limits, and proposed evaluation cases. Provider prompt examples were not reproduced. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+    },
+    "skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+    },
+    "skills/draft-prompt/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "24fd3fb7dc1d7ac467c2f50ca0cf1a0c51a2fd7a3d4c7f1ed64cbc97f33eacca",
+      "expression_and_license_review": "November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+    },
+    "dist/claude-ai/draft-prompt-0.19.0.zip": {
+      "before_sha256": null,
+      "after_sha256": "1ef2c278d889b6c85d0b2e6cb8fa6979b2b9cd9ff56c242d7f99b446283581f1",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/antigravity/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/antigravity/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/claude/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/claude/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "bc68e872bb00ac1704bbe5bbf1bac6bc7c26c0dbcfb0cdee04775eca68b04177",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     }
   },
   "additional_payload_exclusions": [

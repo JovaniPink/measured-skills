@@ -1,8 +1,8 @@
 # Native plugin eval suite
 
-Status: prepared. One pass of `routing-specialist` has run, as recorded in
-[First run](#first-run). The other four arms have not been executed. Every paid
-run needs the maintainer's own yes.
+The current 130-case specialist arm is prepared. The [first run](#first-run)
+covered the earlier 128-case arm. The five arms for the current catalog
+have not been executed. Every paid run needs the maintainer's own yes.
 
 This is the repeatable form of the November 5 Haiku exploration. It uses
 `claude plugin eval` from Claude Code 2.1.316, so outside readers can rerun the
@@ -31,8 +31,8 @@ judge calls per run.
 | Arm | Cases | Runs each | Agent runs | Estimate | Ceiling |
 | --- | --- | --- | --- | --- | --- |
 | `routing-core` | 63 | 1 | 63 | $0.19 | $0.50 |
-| `routing-specialist` | 128 | 1 | 128 | $0.40 | $1.00 |
-| `routing-listing-8000` | 96 | 1 | 96 | $0.21 | $0.50 |
+| `routing-specialist` | 130 | 1 | 130 | $0.41 | $1.00 |
+| `routing-listing-8000` | 97 | 1 | 97 | $0.21 | $0.50 |
 | `behavior-plain` | 2 | 10 | 40 | $0.31 | $1.25 |
 | `behavior-forced` | 2 | 10 | 20 | $0.15 | $0.75 |
 
@@ -40,10 +40,10 @@ One pass of every arm stops at $4.00. The ceiling is checked before each run
 starts, so runs already in flight can finish and overrun it slightly. A second
 pass needs its own approval and its own ceiling.
 
-- `routing-specialist` covers the 64 specialist positive cases and each
+- `routing-specialist` covers the 65 specialist positive cases and each
   specialist's first near miss.
-- `routing-listing-8000` forces an 8,000 character listing. It uses the same 96
-  positive cases as the November 5 overflow run.
+- `routing-listing-8000` forces an 8,000 character listing. Its 97 positives include
+  the 96 from the November 5 overflow run and the new draft-prompt case.
 - `routing-core` uses all 63 core cases in the full catalog.
 - `behavior-plain` adds the native no-plugin baseline. `behavior-forced` loads
   `plan-change` by slash command. Compare it with the without arm of
@@ -70,11 +70,18 @@ Keep `--no-publish`: without it the report goes to claude.ai when the account
 supports that. `--threshold 0` keeps exit 1 from reading as a failed measurement.
 Exit 2 means the ceiling stopped the run and results are partial.
 
-To compare wording, export the same arm from each clean checkout and run both.
-Compare only runs of this suite. November 5 numbers are not a baseline for it.
+To compare how two pack revisions route the same requests, export the same arm twice
+from one clean checkout. For the second export, point `--packs-from` at the
+other clean checkout. Both receipts should have matching case and grader
+hashes when the pack names match. Each receipt records the pack commit and the
+source of the cases. A skill absent from the baseline pack cannot load there.
+Report its cases separately from the comparison of shared skills.
+
+Use `--source` when the case set, catalog, and packs should all come from the
+selected checkout. Its case count must match the chosen arm.
 
 ```sh
-python3 scripts/export_plugin_evals.py --arm routing-specialist --source /path/to/other/checkout --output /private/tmp/measured-eval-specialist-other
+python3 scripts/export_plugin_evals.py --arm routing-specialist --packs-from /path/to/other/checkout --output /private/tmp/measured-eval-specialist-other
 ```
 
 ## What repeated runs mean

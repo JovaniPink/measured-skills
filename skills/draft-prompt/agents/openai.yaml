@@ -1,0 +1,6 @@
+interface:
+  display_name: "Draft a prompt"
+  short_description: "Turn a task description into a copyable prompt"
+  default_prompt: "Use $draft-prompt to write a prompt for my task. Preserve the intended inputs, output, and action limits, and give a small check when useful."
+policy:
+  allow_implicit_invocation: true

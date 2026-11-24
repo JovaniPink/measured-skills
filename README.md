@@ -31,7 +31,7 @@ review capacity, shared understanding, bounded retries, and regression evidence.
 The [research note](docs/research/review-and-feedback-evidence-2026-11-18.md)
 separates supporting evidence from product claims that still need testing.
 
-**0.19.0 preview:** 90 skills in four packs. This is an unreleased redesign, separate
+**0.19.0 preview:** 91 skills in four packs. This is an unreleased redesign, separate
 from the preserved [0.18 candidate](docs/client-candidate-v0.18.0.md). New names and
 packages have no inherited client acceptance. No installation or model call is
 needed to read the guide. [Preview status](docs/client-candidate-v0.19.0.md).
@@ -58,7 +58,7 @@ asks the assistant to perform the scope written in that prompt.
 
 | Pack | Capabilities | Count |
 | --- | --- | --- |
-| `measured-workflows` | Understand, frame, plan, diagnose, execute, research, write, hand off and deliver | 32 |
+| `measured-workflows` | Understand, frame, plan, diagnose, execute, research, write, hand off and deliver | 33 |
 | `measured-quality` | Check, review, verify evidence, security and agent-system quality | 27 |
 | `measured-stacks` | Language/platform guidance and focused application workflows | 20 |
 | `measured-operations` | Requirements, decisions, adoption, measurement and incidents | 11 |
@@ -71,7 +71,7 @@ daily and finish-work profiles retain their history with mapped 0.19 identifiers
 
 ## What is available, and what is known
 
-Codex and Claude Code projections contain 90 skills. Antigravity contains the 73
+Codex and Claude Code projections contain 91 skills. Antigravity contains the 74
 implicit skills; all 17 explicit-only workflows remain excluded. Account archives
 are prepared separately, and explicit-only uploads remain held until the receiving
 surface's invocation control is verified. The [November 5 lifecycle record](docs/audits/lifecycle-0.19.0.md)
