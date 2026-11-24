@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "ccf37b80f321bab9daf2a41b16dce9eba3dc27c7",
+  "source_commit": "cea6104288476fbb94a36bb843943b59b17c689e",
   "created_on": "2026-11-24",
   "artifacts": [
     {
@@ -562,22 +562,22 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-operations",
-      "sha256": "433aa66c806ea111eaf82f1198ca8236e00931632a40846812c087f2693b09da"
+      "sha256": "d4b93fc27c41a31557bb29e6610c0d56dac23d4846e4754b569cf73b7418f59b"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-quality",
-      "sha256": "c0377ebe43387e482c71d0e3202a7b4d3465f06035ac56729b7cefb08ad5b0a2"
+      "sha256": "049801049b5b7913d234e1ff0c49858d0a66f09421361d08c49e52080abd1f13"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-stacks",
-      "sha256": "37a68758f8d0e448090b35fce501a02ef84b8a17c871a79c66865c54c62ba2a9"
+      "sha256": "10443659f86c6e3294a117cece300313c28454f9bef027819209971cc3063e68"
     },
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "21b6dab09072524abda361567e36e098303cc54f0417e5730db180706e37da92"
+      "sha256": "55885cbfc4a39d355d8c98101f33321832007039d948068ba5669a3e0bfcfed6"
     },
     {
       "kind": "tree",
