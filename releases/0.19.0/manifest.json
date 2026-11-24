@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "58f9cf2f60d4263e5a6a76d3ad230780f47b75bc",
+  "source_commit": "ccf37b80f321bab9daf2a41b16dce9eba3dc27c7",
   "created_on": "2026-11-24",
   "artifacts": [
     {
@@ -82,7 +82,7 @@
     {
       "kind": "file",
       "path": "catalog/workflows.json",
-      "sha256": "9799660b5ef2312bb1c7d5c11937723d7e1c8ab97579c3676f716bf1980e8082"
+      "sha256": "3ffe23cc2b8198d446c0b08c1b0d736355978758db918a37076ab03ac09a5b31"
     },
     {
       "kind": "zip",
@@ -127,7 +127,7 @@
     {
       "kind": "zip",
       "path": "dist/claude-ai/choose-workflow-0.19.0.zip",
-      "sha256": "77ba74cadb74a8f1f369bf29c38c199845b796a80bd7dd3eece72fd8fcb1e165"
+      "sha256": "106f94182231d99ff62d980b9cda0cd85739073b0b88b7d6e39e86881f8402bb"
     },
     {
       "kind": "zip",
@@ -542,7 +542,7 @@
     {
       "kind": "tree",
       "path": "dist/discovery",
-      "sha256": "ec0843211b47e75712594cb879df210940f846e5d523073db3d9538bba07fe9d"
+      "sha256": "2336123f3ebb52dc5b52a5d13ba8e6b59f8958470cb7cf843e771b24c725b996"
     },
     {
       "kind": "file",
@@ -577,7 +577,7 @@
     {
       "kind": "tree",
       "path": "plugins/antigravity/measured-workflows",
-      "sha256": "f6b7b48f76b1ce8b6e789c6855b13d86bbf0906accb039acfb5ac9db896eac17"
+      "sha256": "21b6dab09072524abda361567e36e098303cc54f0417e5730db180706e37da92"
     },
     {
       "kind": "tree",
@@ -597,7 +597,7 @@
     {
       "kind": "tree",
       "path": "plugins/claude/measured-workflows",
-      "sha256": "86d425504900198eced7ce98c100742cbc21c6380b31f622df25082a795de49c"
+      "sha256": "552a423663c00c0fa6b66975334ca81c07bdad0e54b15f966017a87953c38266"
     },
     {
       "kind": "tree",
@@ -617,7 +617,7 @@
     {
       "kind": "tree",
       "path": "plugins/codex/measured-workflows",
-      "sha256": "df4c570d00e15edf7f497f08f41e89658fc833554cf7513dad1c63f87275251e"
+      "sha256": "f5e3d4b91000757ed38db48766b041331727f71261e3f05fea78ffd1254d2c21"
     },
     {
       "kind": "file",
