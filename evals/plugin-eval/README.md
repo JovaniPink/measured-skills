@@ -1,7 +1,8 @@
 # Native plugin eval suite
 
 The current 130-case specialist arm is prepared. The [first run](#first-run)
-covered the earlier 128-case arm. Every paid run needs the maintainer's own yes.
+covered the earlier 128-case arm. The five arms for the current catalog
+have not been executed. Every paid run needs the maintainer's own yes.
 
 This is the repeatable form of the November 5 Haiku exploration. It uses
 `claude plugin eval` from Claude Code 2.1.316, so outside readers can rerun the

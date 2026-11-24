@@ -12967,8 +12967,8 @@
     },
     "evals/plugin-eval/README.md": {
       "before_sha256": null,
-      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. Expanded prepared routing arms for the new skill and checked that both its first positive and first near miss reach the specialist export. Historical trial outcomes and spending ceilings are retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases.",
-      "after_sha256": "ee1f7085ae29a1ba3590f93c1e377b78c02b1c3c8e61118772bfc1efc759561e"
+      "expression_and_license_review": "November 5 original native plugin eval suite: Claude-assisted review of a deterministic exporter, a script-built synthetic fixture, owned graders, unrun arms and regressions. See evals/plugin-eval/README.md. No external implementation imported, new acceptance or model run. Expanded prepared routing arms for the new skill and checked that both its first positive and first near miss reach the specialist export. Historical trial outcomes and spending ceilings are retained. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. Restored the explicit unexecuted status of all five current arms alongside the separate historical run.",
+      "after_sha256": "45e820ed7613d2301cff934aabf92368ad0bdd35256ac6590e04f1e4d6417535"
     },
     "evals/plugin-eval/arms.json": {
       "before_sha256": null,
