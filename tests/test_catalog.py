@@ -936,7 +936,7 @@ class CatalogTests(unittest.TestCase):
         )
 
     def test_v07_acceptance_ledger_contract(self) -> None:
-        self.assertEqual(32, len(skills_by_plugin()["measured-workflows"]))
+        self.assertEqual(33, len(skills_by_plugin()["measured-workflows"]))
         self.assertIn("track-acceptance", EXPLICIT_SKILLS)
 
         expanded_profiles = {
