@@ -162,8 +162,8 @@
     },
     "dist/claude-ai/SHA256SUMS": {
       "before_sha256": "ab1da4a59a65686d0081508f9256febe8762eb5cce5626c0bcd1ebe7b4ee58a1",
-      "after_sha256": "e3ec6a39e75e1346b94e7aa84923307e1881e6f912f8eee45e289355910499d8",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "bb7f70c28373a723b8f621bbd07cf0ee2a464dad094cd66cba9daf1bb72c7182",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "dist/claude-ai/acceptance-evidence-ledger-0.18.0.zip": {
       "before_sha256": "245859664d7c070e72520343ef479c559d7ecd81fc2a36c07eacdca394bcc4c3",
@@ -277,8 +277,8 @@
     },
     "dist/claude-ai/choose-workflow-0.19.0.zip": {
       "before_sha256": null,
-      "after_sha256": "9c412d9d2c607c398c49ef8ba202e2a488f03dab2c68453790210f79dcd1a693",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "77ba74cadb74a8f1f369bf29c38c199845b796a80bd7dd3eece72fd8fcb1e165",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "dist/claude-ai/claim-verification-0.18.0.zip": {
       "before_sha256": "2ee7df904b0d8c205f6f4887a205f6cdc29136b166a7864644738cc30062e2a4",
@@ -1052,23 +1052,23 @@
     },
     "dist/discovery/catalog.json": {
       "before_sha256": null,
-      "after_sha256": "435c1d616771a995de012a7d466be63492a83939320014f202be59d3fb8af155",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "f52a11bbb9a536ecc997190eb5da00c0e2a762c08df45b05df03fc46e6c875f0",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "dist/discovery/guide.md": {
       "before_sha256": null,
-      "after_sha256": "bfdbd440522fa91a89455bf2b586c151a2649fc72af5e08272ea583fbeeca689",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "ab54f1de550685f5ddd6617a12e896e9fdbc1ffd98ad80c1f6c12e6961a42a62",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "dist/discovery/hashes.json": {
       "before_sha256": null,
-      "after_sha256": "9b026e62df1b6bf8c71bd9f5c956ec2ca012de5d084680f38aebbbc45c98ccce",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "bba558a2b378cd7b0399cfe93690366a4c2b6d0d2cf301f11e75b9d0d8c53d5a",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "dist/discovery/index.html": {
       "before_sha256": null,
-      "after_sha256": "c8809cdbfa5766bea1f25d5023cb3fe88752816f8b9378f7f0fe58dc421b9a53",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "c5e7f0720dabac7b6829390888337698cfad91ec5bdf3d3d9626be951119435e",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "docs/README.md": {
       "before_sha256": "b6ca8c42b28dc8334de281948eb1821721f7b8b2d3d9e45ae1d2fcc72a980d15",
@@ -1577,8 +1577,8 @@
     },
     "docs/skill-catalog-reader-guide.md": {
       "before_sha256": "01739e2d857116314c972d257099e816a63f295f642a2cc03d10df854dd3ff88",
-      "after_sha256": "bdc763ed25c32b087e757ac4ffae8decf152774671ae6fd057ba52f88b8379a1",
-      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: generated output changed only to remove release state from chooser and pack text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported."
+      "after_sha256": "1dd104e84080f6f83c6eec861d0fbf3f49d189b9d541e043d2a05037cfd88074",
+      "expression_and_license_review": "Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. October 26 finish-work increment: Original Codex-assisted workflow documentation, synthetic worked cases, source ledger, and navigation. Reviewed task, permission, missing-evidence, and client-selection boundaries. No publisher prose or private identifiers imported; technical review is not new acceptance or observed behavior. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 5, 2026: original project wording added or restated from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 retest: original third-person wording from owned Haiku observations; see docs/audits/haiku-exploration-2026-11-05.md. No third-party text was added. November 5, 2026 freeze preparation: generated output changed only to remove release state from chooser and pack text. No third-party text was added. November 5, 2026 freeze preparation: original project text or generated output. No third-party text was added. November 18 technical delta reviewed: original review-system and feedback-loop guidance, synthetic prepared cases, source-bound client/discovery projections, and dated evidence limits as applicable. No third-party implementation, raw private trace, or unobserved client acceptance is imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "docs/skill-cheatsheet.md": {
       "before_sha256": "95336348d147f690075815f0f6597e5ea1aa7efd16e1f4492c5213159ee4e215",
@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "a616406b3230296965ae887662daf1f25674a6498597e5df465a62cf705cd246",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "379a64fd645d5fca2e042b33b84ba2312f90846ef65f9b4ba5dc12d712370b70",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -3622,8 +3622,8 @@
     },
     "plugins/antigravity/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "plugins/antigravity/measured-workflows/skills/design-module-interface/LICENSE": {
       "before_sha256": null,
@@ -6207,8 +6207,8 @@
     },
     "plugins/claude/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "plugins/claude/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -9672,8 +9672,8 @@
     },
     "plugins/codex/measured-workflows/skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "plugins/codex/measured-workflows/skills/coordinate-agents/LICENSE": {
       "before_sha256": null,
@@ -10542,8 +10542,8 @@
     },
     "skills/choose-workflow/references/workflow-index.md": {
       "before_sha256": null,
-      "after_sha256": "632e357075433cfbcdec2df22e1a1e55cc932e5010d02c6a4dcc526e60741a5d",
-      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source."
+      "after_sha256": "cca8df8391197bbb997992a5f14fd95f50b92c727d08f14d0fbbc6f698a55d1d",
+      "expression_and_license_review": "Deterministically regenerated discovery export, bundled workflow index, and Claude.ai archive from committed canonical source. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     },
     "skills/claim-verification/SKILL.md": {
       "before_sha256": "e94ce53dca62b416faee6f7c335a6b0d2f3663460324582700b9678f21fa16a4",
@@ -13344,6 +13344,46 @@
       "before_sha256": null,
       "after_sha256": "24fd3fb7dc1d7ac467c2f50ca0cf1a0c51a2fd7a3d4c7f1ed64cbc97f33eacca",
       "expression_and_license_review": "November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+    },
+    "dist/claude-ai/draft-prompt-0.19.0.zip": {
+      "before_sha256": null,
+      "after_sha256": "1ef2c278d889b6c85d0b2e6cb8fa6979b2b9cd9ff56c242d7f99b446283581f1",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/antigravity/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/antigravity/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/claude/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/claude/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/LICENSE": {
+      "before_sha256": null,
+      "after_sha256": "d1dbd8adba395ebb7a49cf8c39ca9f2167de076335a30abd86a8ed2c33bac60b",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
+    },
+    "plugins/codex/measured-workflows/skills/draft-prompt/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "bc68e872bb00ac1704bbe5bbf1bac6bc7c26c0dbcfb0cdee04775eca68b04177",
+      "expression_and_license_review": "November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits."
     }
   },
   "additional_payload_exclusions": [

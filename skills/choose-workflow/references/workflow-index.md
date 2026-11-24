@@ -759,6 +759,7 @@ In [REPOSITORY], review postlaunch learning for [RELEASE and EVIDENCE]. Read app
 | Diagnose performance problems (`diagnose-performance`) | performance-scalability-diagnosis | implicit |
 | Diagnose React rendering (`diagnose-react-rendering`) | react-rendering-performance-diagnosis | implicit |
 | Diagnose Swift concurrency (`diagnose-swift-concurrency`) | swift-concurrency-diagnosis | implicit |
+| Draft a prompt (`draft-prompt`) | New | implicit |
 | Edit technical writing (`edit-technical-writing`) | high-signal-technical-writing | implicit |
 | Implement an agreed plan (`execute-plan`) | plan-execution | explicit |
 | Understand a codebase (`explain-codebase`) | codebase-explanation | implicit |

@@ -13,6 +13,22 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 406 regression tests.
 
+## November 24 prompt drafting package checks
+
+The new read-only workflow has four positive cases, four near misses, two safety
+cases, and a prepared output rubric. Installed selection and downstream task
+quality have no trial result. The bundled Codex skill validator accepted all 91
+canonical entries. Claude Code 2.1.316 passed strict local validation for the
+generated workflows pack. Standalone `skills-ref` was unavailable on PATH, and
+Codex CLI 0.169.0 exposes no standalone plugin validation command.
+
+Antigravity CLI 1.5.16 recognized 20 skills in the generated workflows pack,
+including the new entry by inventory comparison. Its normal validator passed
+with a warning about the missing plugin version. Strict validation failed on
+that warning both here and on the 19-skill pack from `610bc7ea`. The CLI reports
+that its marketplace requires a version to list a plugin. Marketplace listing
+and installed behavior remain unverified.
+
 ## November 19 review evidence, casebook, and 3-arm comparison kit
 
 This update adds five-dimension review state tracking (`Investigation coverage`,

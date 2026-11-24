@@ -1879,6 +1879,7 @@ In [REPOSITORY], review postlaunch learning for [RELEASE and EVIDENCE]. Read app
 | Diagnose performance problems (`diagnose-performance`) | performance-scalability-diagnosis | implicit |
 | Diagnose React rendering (`diagnose-react-rendering`) | react-rendering-performance-diagnosis | implicit |
 | Diagnose Swift concurrency (`diagnose-swift-concurrency`) | swift-concurrency-diagnosis | implicit |
+| Draft a prompt (`draft-prompt`) | New | implicit |
 | Edit technical writing (`edit-technical-writing`) | high-signal-technical-writing | implicit |
 | Implement an agreed plan (`execute-plan`) | plan-execution | explicit |
 | Understand a codebase (`explain-codebase`) | codebase-explanation | implicit |
@@ -1950,4 +1951,4 @@ In [REPOSITORY], review postlaunch learning for [RELEASE and EVIDENCE]. Read app
 
 Package availability, invocation policy, and observed behavior are separate. Client support is recorded by date in docs/client-candidate-v0.19.0.md. Historical names are lookup terms, never extra installed copies.
 
-Source revision: `2a2b22609a132151f77b15a714a3f3945836a74e`. File hashes: `catalog.json` alongside this guide.
+Source revision: `065f443d35e885edde95058f5a9252dbbc37a911`. File hashes: `catalog.json` alongside this guide.
