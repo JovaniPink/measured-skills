@@ -49,6 +49,7 @@ def build(output: Path, selected: list[str] | None = None) -> Path:
                 shutil.copy2(item, target / item.name)
     (plugin / "plugin.json").write_text(json.dumps({
         "name": "measured-antigravity-preview",
+        "version": VERSION,
         "description": "Selected workflow skills for an Antigravity loading check.",
     }, indent=2) + "\n", encoding="utf-8")
     receipt = {

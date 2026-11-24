@@ -1477,8 +1477,8 @@
     },
     "docs/clients/antigravity.md": {
       "before_sha256": "15a779160f21f2b01a5e5ff40459dc30eb7b037ecabf06737ce67dc6bd2df45e",
-      "after_sha256": "9c7586926279820d0f2793cec3374f0b329708e82a0b83dc4c014eae0c229daf",
-      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+      "after_sha256": "2e598490baeaacc7f34b79dfed3776e89fde40e9b8633cc1051e5a50702ba092",
+      "expression_and_license_review": "2026-10-28 workflow-depth technical review: original scoped guidance, public synthetic fixtures, deterministic validation or generated projection of reviewed canonical sources. Preserve owned lineage and accepted historical records; no new maintainer acceptance or imported implementation. See docs/workflow-depth-0.19.md. November 5, 2026 source review: original summaries and retained receipts from owned observations. No publisher text was added. November 5, 2026 lifecycle record: original project text from owned observations. No third-party text was added. November 5, 2026 docs update: original project text. No third-party text was added. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "docs/clients/claude.md": {
       "before_sha256": "1aa304f29251e41f8e5f4c18590c10938a8e1c70cfe1c9d2e3ac4dbd1411ea33",
@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "bae2dd8f4c120eff70b3b76a0724e9ecdd4dbb6383c01ea67ab8797323b6f017",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases."
+      "after_sha256": "75f5b12cd9bb1ae7e644829cc0b274a0f91a74dadad36855d1ae798deee68df6",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -2052,8 +2052,8 @@
     },
     "plugins/antigravity/measured-operations/plugin.json": {
       "before_sha256": "2b75d40449dff68df67b5d0d9a19873e6ed637892415e551c984deb17d96d29f",
-      "after_sha256": "1a11a8c739a503b95d215ed2d694b8b7cf47de78689fb37cf34217bb90a5db7a",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "48823fb8ba6948bb94b2aeeff39f97234d8ade7fc10b85d6ea76b44aea4bc337",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "plugins/antigravity/measured-operations/skills/analyze-incident/LICENSE": {
       "before_sha256": null,
@@ -2297,8 +2297,8 @@
     },
     "plugins/antigravity/measured-quality/plugin.json": {
       "before_sha256": null,
-      "after_sha256": "af5ee7e4cb4f6d14afc143ccb9224de554f9efe9f9cdf75064b0a35bdb656d49",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "d940b37de44c8951b29e4779c507b790e7cf607710b97495e3606a6e68cc5eba",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "plugins/antigravity/measured-quality/skills/check-launch-readiness/LICENSE": {
       "before_sha256": null,
@@ -3132,8 +3132,8 @@
     },
     "plugins/antigravity/measured-stacks/plugin.json": {
       "before_sha256": null,
-      "after_sha256": "f8b57c550a00253a57d32991c9c1f5f798b8fb557cf9f872f5306a3d994e4c2c",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "ad0e95fe9ffd59fae86833eae5d49ca0d0aa16fca9c01eae7233d8267429296f",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "plugins/antigravity/measured-stacks/skills/diagnose-react-rendering/LICENSE": {
       "before_sha256": null,
@@ -3537,8 +3537,8 @@
     },
     "plugins/antigravity/measured-workflows/plugin.json": {
       "before_sha256": null,
-      "after_sha256": "89bc86f0608692b820697af784fad670f5d0e2d3b4fe80ad3cc798c29e564d30",
-      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance."
+      "after_sha256": "cc5c20d5a23ef308743e777d6b5bb90f1448bdafd707dff8de8de822692f3dcf",
+      "expression_and_license_review": "0.19 generated projection or deterministic discovery artifact reviewed against canonical input, invocation controls and retained MIT notice. No independently authored third-party implementation or receiving-client acceptance. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "plugins/antigravity/measured-workflows/skills/address-review/LICENSE": {
       "before_sha256": null,
@@ -10197,13 +10197,13 @@
     },
     "scripts/build_antigravity.py": {
       "before_sha256": "dcd771f375212eb9d370f4d39e50e6baf976a151c2b6063ac1dc08d4fb3d85f7",
-      "after_sha256": "7cf2ff42209be7f9292699f576df8666f1fe31bfafb1ee6ec557f747397b90ce",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "bf61cbf7f2a1b43cdc692443c35dceab81ab9958a31640b718b65b00170c737c",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "scripts/build_distributions.py": {
       "before_sha256": "15c7428912bf01cce36e5dfc0e17bdd71032760a7db7803347b1de8dd41a0ec7",
-      "after_sha256": "478039ae4740c706b238d3b0940c57206d42bb1caa224ee3210efb59e5e1771b",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "f009440bf9d3dc1c22b179ef0c6c53475f1211e49d253de72c14820328a51b28",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "scripts/build_release_manifest.py": {
       "before_sha256": "2053d76ed6344377c2732d5df725071421da4334f191df3e24b0ada507b1c993",
@@ -12827,8 +12827,8 @@
     },
     "tests/test_antigravity_bundle.py": {
       "before_sha256": "38271b170d0a6d851f40b15be4202d20a8d9615299d5d4a8f989eaa73076e62c",
-      "after_sha256": "068828a85613a16b88d37541b18b0a3ec5814c09dcaf487cfcfed4fc89db5b29",
-      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported."
+      "after_sha256": "93d31d423e9c6d84fee0a90366c5d44a5e7f69bd1bfef3c90026de5828c7edc2",
+      "expression_and_license_review": "0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "tests/test_antigravity_source_resolution.py": {
       "before_sha256": null,
@@ -12902,8 +12902,8 @@
     },
     "tests/test_measured_release.py": {
       "before_sha256": "e20d5269dffea985ebf5eee752dc297850c1f66163c77b60ed397b654a83b645",
-      "after_sha256": "4339f60c66a47376c2b0d189c40395f6edeab72aaffc1c2fb857aefb8b3eb806",
-      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope."
+      "after_sha256": "15cb89a527463b228fd9c1d4e54043eb6bdf03831dba10ecfd52fb9ea2121979",
+      "expression_and_license_review": "Owned code and regression coverage for exact prompt-authority URLs, portable profile exports, and historical snapshot binding. Failing tests preceded validator allowances and the historical test repair. Historical accepted records remain unchanged; additions require separate delta coverage. 0.19 original engineering documentation, registry, migration data, exporter or regression change. Reviewed scope, evidence, public boundary, preserved history and license limits; no external skill implementation imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results."
     },
     "tests/test_noncanonical_disposition.py": {
       "before_sha256": "3fd2bddfc72e5ca765b5eb48e9d7cb1256baa80e20dab28908f9ad5910291484",

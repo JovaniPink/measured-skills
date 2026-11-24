@@ -305,7 +305,7 @@ def build(output_root: Path, write_marketplaces: bool = False) -> tuple[dict[str
         if antigravity_plugin is not None:
             _write_json(
                 antigravity_plugin / "plugin.json",
-                {"name": plugin, "description": spec["description"]},
+                {"name": plugin, "version": VERSION, "description": spec["description"]},
             )
 
     if write_marketplaces:

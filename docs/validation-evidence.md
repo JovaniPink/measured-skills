@@ -13,6 +13,15 @@ Start with the [September 8 Claude account repair](claude-account-repair-2026-09
 
 Current test suite: 408 regression tests.
 
+## November 24 Antigravity pack version check
+
+On `9b4e391a`, Antigravity CLI 1.5.16 failed strict validation for each of the
+four packs because its manifest omitted the version. With the regenerated
+`0.19.0` manifests, `agy plugin validate <pack> --strict --json` exited zero
+for operations (11 skills), quality (26), stacks (17), and workflows (20).
+Each result contained one informational note about the generic icon and zero
+warnings or errors. A separately generated one-skill preview also passed.
+
 ## November 24 prompt drafting package checks
 
 The new read-only workflow has four positive cases, four near misses, two safety

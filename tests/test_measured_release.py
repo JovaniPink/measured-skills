@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from cataloglib import CATALOG_NAME, ROOT, SKILLS, directory_hashes, skills_by_plugin  # noqa: E402
+from cataloglib import CATALOG_NAME, ROOT, SKILLS, VERSION, directory_hashes, skills_by_plugin  # noqa: E402
 
 
 class MeasuredReleaseTests(unittest.TestCase):
@@ -51,11 +51,12 @@ class MeasuredReleaseTests(unittest.TestCase):
         self.assertEqual(91, len(SKILLS))
         self.assertEqual(91, len({s for skills in packs.values() for s in skills}))
 
-    def test_antigravity_manifests_use_documented_fields_only(self) -> None:
+    def test_antigravity_pack_manifests_declare_the_catalog_version(self) -> None:
         for plugin in skills_by_plugin():
             manifest = ROOT / "plugins" / "antigravity" / plugin / "plugin.json"
             data = json.loads(manifest.read_text(encoding="utf-8"))
-            self.assertEqual({"name", "description"}, set(data), plugin)
+            self.assertEqual({"name", "version", "description"}, set(data), plugin)
+            self.assertEqual(VERSION, data["version"], plugin)
 
     def test_selected_exports(self) -> None:
         from export_selected import export
