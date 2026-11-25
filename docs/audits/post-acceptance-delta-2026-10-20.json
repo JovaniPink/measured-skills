@@ -1602,8 +1602,8 @@
     },
     "docs/validation-evidence.md": {
       "before_sha256": "c410df4d79d0c16fdee1e45db0ee3c1c5f67e44976cd3be30804f84ef6fb7d1c",
-      "after_sha256": "5be101a33beb61799d511b8457b1eca9e0c3fcac97d32d2781c36bc6a295e3db",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results. November 24 PR review. Checked original adapter validation, version regression cases, and the strict CLI observation."
+      "after_sha256": "90c63236392310974b7367a12903011784e543f2826a0c730e57e115e120b91c",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added. Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 package review. Checked client projections, archive contents and discovery exports against the canonical source, and recorded local validation limits. November 24 PR review. Verified a task-only draft route against the existing review route and kept routing stimuli fixed when comparing a separate baseline pack. Reviewed evidence counts, documentation, and regression cases. November 24 manifest version fix. Reviewed the generated Antigravity pack and preview versions, regression assertions, and observed strict validator results. November 24 PR review. Checked original adapter validation, version regression cases, and the strict CLI observation. November 25 input-shape repair: original structural-validation code, synthetic regression cases, and observed test evidence; no third-party implementation or private data added."
     },
     "docs/workflow-depth-0.19.md": {
       "before_sha256": null,
@@ -13272,8 +13272,8 @@
     },
     "evals/review-comparison-v1/cases/rc-03-idempotent-retry.json": {
       "before_sha256": null,
-      "after_sha256": "4b1c21938792d81aa2049aa28a992950e0a6f8bc68ba641db537d8bd0d06b201",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "5cec36cb2f77060cf40a4946e349bd79e05ca6b5ab3db101925ef75b307885cb",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added."
     },
     "evals/review-comparison-v1/cases/rc-04-tautological-test.json": {
       "before_sha256": null,
@@ -13302,18 +13302,18 @@
     },
     "evals/review-comparison-v1/rubric.md": {
       "before_sha256": null,
-      "after_sha256": "f05893b48f1172b480d555e2ba203cfa187cc36d80f2fc489220b76336e15ea6",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "a69bcea8691086e0113ed9897e89eba24c1891cae3d7a07fc8f626e6cf79cf9d",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added."
     },
     "evals/review-comparison-v1/study.json": {
       "before_sha256": null,
-      "after_sha256": "5d8677a0191d92e0d56d1a970718f1b010a75e8e59912d6b91c3e70fe53d896d",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "5a6571d69b88709c867268fdbd428ed3fbc6ca7b51a5034466146b20a014726b",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added."
     },
     "scripts/review_comparison.py": {
       "before_sha256": null,
-      "after_sha256": "fa33bc5e82f532f0f91576bb6366be4201e7501137b7f5171fdf0610c9e0c275",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "bf17fc10bb201ce16ec411fb4b56d55210fd26fa98c14c3033dc349e477f295b",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added. November 25 input-shape repair: original structural-validation code, synthetic regression cases, and observed test evidence; no third-party implementation or private data added."
     },
     "tests/test_review_cases.py": {
       "before_sha256": null,
@@ -13322,8 +13322,8 @@
     },
     "tests/test_review_comparison.py": {
       "before_sha256": null,
-      "after_sha256": "bf7c1cf0854b3de58e05ce871e6b8dc69ba4f5b0a8cacf804786b5500861b4f5",
-      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported."
+      "after_sha256": "12d3636d79ffeccadaf82a0723eb6fd9ac7a2067400e4c740924be0a7a46eef5",
+      "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 19, 2026 comparison kit receipt and fixture repairs: original project text and synthetic fixture code. No third-party text was added. November 19, 2026 adjudicator and date requirement: original project text. No third-party text was added. November 25 input-shape repair: original structural-validation code, synthetic regression cases, and observed test evidence; no third-party implementation or private data added."
     },
     "docs/prompting.md": {
       "before_sha256": null,

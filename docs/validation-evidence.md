@@ -11,7 +11,16 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 409 regression tests.
+Current test suite: 422 regression tests.
+
+## November 25 comparison receipt input checks
+
+The follow-up review reproduced two exceptions from malformed receipt data:
+container-valued adjudication statuses raised `TypeError`, and numeric measures
+too large for the float-based summary raised `OverflowError`. The linter now
+reports field-specific errors for both inputs. Two regression tests cover the
+status shapes and each affected measure field. They failed before the repair
+and passed afterward. No comparison arm or paid client evaluation was run.
 
 ## November 24 Antigravity pack version check
 
@@ -41,6 +50,33 @@ with a warning about the missing plugin version. Strict validation failed on
 that warning both here and on the 19-skill pack from `610bc7ea`. The CLI reports
 that its marketplace requires a version to list a plugin. Marketplace listing
 and installed behavior remain unverified.
+
+## November 19 comparison kit receipt and fixture repairs
+
+A follow-up review of `scripts/review_comparison.py` found three gaps, each now
+covered by a regression test in `tests/test_review_comparison.py`:
+
+- The receipt linter now checks the `adjudication` object. Adjudicated records
+  need non-negative integer counts, finite non-negative verification minutes,
+  and a real boolean for `uncertainty_reported_accurately`. Pending and disputed
+  records still need no grades. Before this, missing counts crashed the summary
+  and the string `"false"` counted as true.
+- Token, turn, and count metrics must be non-negative integers, and the summary
+  now reports `total_input_tokens` and `total_output_tokens` per arm, separate
+  from reported cost.
+- `rc-03-idempotent-retry` now states its contract (a standard `sqlite3`
+  connection on SQLite 3.35 or later). Its insert binds its parameters, its
+  caller passes the connection, and its primary key is an integer. A test runs
+  the materialized case against an in-memory database. It confirms one row
+  survives a retry, and that the conflicting retry returns no row, which is the
+  open question the case keeps. No comparison arm had run, so no result was
+  inspected before this fixture changed.
+
+- Adjudicated and disputed records must name their `adjudicators` and an
+  `adjudicated_on` calendar date, as the rubric asks. A disputed record needs at
+  least two adjudicators.
+
+These are structural checks. They do not verify finding truth or review quality.
 
 ## November 19 review evidence, casebook, and 3-arm comparison kit
 

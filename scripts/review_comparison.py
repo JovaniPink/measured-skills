@@ -8,9 +8,12 @@ state invariants only; it never claims to verify finding truth or review quality
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import hashlib
 import json
+import math
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -25,6 +28,97 @@ DISPOSITION_VALUES = frozenset({'accept', 'reject', 'defer', 'clarify', 'already
 COMPLETION_VALUES = frozenset({'complete', 'complete_with_gaps', 'budget_exhausted', 'blocked'})
 ADJUDICATION_STATUSES = frozenset({'adjudicated', 'disputed', 'pending'})
 RUN_STATUSES = frozenset({'completed', 'blocked', 'failed'})
+ADJUDICATION_COUNT_FIELDS = (
+    'valid_material_findings',
+    'false_positives',
+    'missed_known_defects',
+    'scope_violations',
+)
+INTEGER_METRICS = ('turns', 'input_tokens', 'output_tokens')
+DECIMAL_METRICS = ('elapsed_seconds', 'reported_cost_usd')
+
+
+def is_count(value: object) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def is_measure(value: object) -> bool:
+    """Accept non-negative measures representable by the float-based summary."""
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return False
+    try:
+        return math.isfinite(value) and value >= 0
+    except OverflowError:
+        return False
+
+
+ISO_DATE = re.compile(r'\d{4}-\d{2}-\d{2}')
+
+
+def is_iso_date(value: object) -> bool:
+    if not isinstance(value, str) or not ISO_DATE.fullmatch(value):
+        return False
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        return False
+    return True
+
+
+def lint_adjudicators(prefix: str, status: str, adjudication: dict[str, Any]) -> list[str]:
+    """Graded records name who graded them and when, as the rubric requires."""
+    errors: list[str] = []
+    names = adjudication.get('adjudicators')
+    if 'adjudicators' not in adjudication:
+        errors.append(f'{prefix}: {status} record requires adjudication.adjudicators')
+    elif (
+        not isinstance(names, list)
+        or not names
+        or not all(isinstance(n, str) and n.strip() for n in names)
+        or len({n.strip() for n in names}) != len(names)
+    ):
+        errors.append(f'{prefix}: adjudication.adjudicators must be a list of distinct non-empty identifiers')
+    elif status == 'disputed' and len(names) < 2:
+        errors.append(f'{prefix}: disputed record needs at least two adjudication.adjudicators')
+    if 'adjudicated_on' not in adjudication:
+        errors.append(f'{prefix}: {status} record requires adjudication.adjudicated_on')
+    elif not is_iso_date(adjudication['adjudicated_on']):
+        errors.append(f'{prefix}: adjudication.adjudicated_on must be a calendar date in YYYY-MM-DD form')
+    return errors
+
+
+def lint_adjudication(prefix: str, adjudication: object) -> list[str]:
+    """Check grade shapes only. An absent object means the record awaits adjudication."""
+    if adjudication is None:
+        return []
+    if not isinstance(adjudication, dict):
+        return [f'{prefix}: adjudication must be an object when present']
+    status = adjudication.get('status')
+    if not isinstance(status, str) or status not in ADJUDICATION_STATUSES:
+        return [f'{prefix}: invalid adjudication.status {status!r}']
+    required = status == 'adjudicated'
+    errors: list[str] = []
+    if status in ('adjudicated', 'disputed'):
+        errors.extend(lint_adjudicators(prefix, status, adjudication))
+    for field in ADJUDICATION_COUNT_FIELDS:
+        if field not in adjudication:
+            if required:
+                errors.append(f'{prefix}: adjudicated record requires adjudication.{field}')
+        elif not is_count(adjudication[field]):
+            errors.append(f'{prefix}: adjudication.{field} must be a non-negative integer')
+    minutes = 'human_verification_minutes'
+    if minutes not in adjudication:
+        if required:
+            errors.append(f'{prefix}: adjudicated record requires adjudication.{minutes}')
+    elif not is_measure(adjudication[minutes]):
+        errors.append(f'{prefix}: adjudication.{minutes} must be a finite non-negative number')
+    flag = 'uncertainty_reported_accurately'
+    if flag not in adjudication:
+        if required:
+            errors.append(f'{prefix}: adjudicated record requires adjudication.{flag}')
+    elif not isinstance(adjudication[flag], bool):
+        errors.append(f'{prefix}: adjudication.{flag} must be a boolean')
+    return errors
 
 
 def sha256_bytes(payload: bytes) -> str:
@@ -204,10 +298,13 @@ def lint_receipts(receipts: list[dict[str, Any]], kit: Path = KIT) -> list[str]:
             errors.append(f'{prefix}: boolean skill_loaded attestation is required')
         elif arm in ('ordinary_baseline', 'structured_request') and rec['skill_loaded'] is True:
             errors.append(f'{prefix}: contaminated no-skill arm {arm} reported skill_loaded=true')
-        for metric in ('elapsed_seconds', 'turns', 'input_tokens', 'output_tokens', 'reported_cost_usd'):
-            val = rec.get(metric)
-            if not isinstance(val, (int, float)) or isinstance(val, bool) or val < 0:
-                errors.append(f'{prefix}: non-negative numeric {metric} is required')
+        for metric in INTEGER_METRICS:
+            if not is_count(rec.get(metric)):
+                errors.append(f'{prefix}: non-negative integer {metric} is required')
+        for metric in DECIMAL_METRICS:
+            if not is_measure(rec.get(metric)):
+                errors.append(f'{prefix}: finite non-negative numeric {metric} is required')
+        errors.extend(lint_adjudication(prefix, rec.get('adjudication')))
         items = rec.get('items')
         if not isinstance(items, list):
             errors.append(f'{prefix}: items list is required')
@@ -277,7 +374,7 @@ def summarize_receipts(receipts: list[dict[str, Any]], kit: Path = KIT) -> dict[
         human_minutes = round(sum(float(r['adjudication']['human_verification_minutes']) for r in adjudicated), 2)
         scope_violations = sum(int(r['adjudication']['scope_violations']) for r in adjudicated)
         uncertainty_preserved = sum(
-            1 for r in adjudicated if bool(r['adjudication'].get('uncertainty_reported_accurately'))
+            1 for r in adjudicated if r['adjudication']['uncertainty_reported_accurately'] is True
         )
         summary['arms'][arm] = {
             'runs_total': len(rows),
@@ -296,6 +393,8 @@ def summarize_receipts(receipts: list[dict[str, Any]], kit: Path = KIT) -> dict[
             'scope_violations': scope_violations,
             'total_elapsed_seconds': round(sum(float(r['elapsed_seconds']) for r in rows), 2),
             'total_turns': sum(int(r['turns']) for r in rows),
+            'total_input_tokens': sum(int(r['input_tokens']) for r in rows),
+            'total_output_tokens': sum(int(r['output_tokens']) for r in rows),
             'total_reported_cost_usd': round(sum(float(r['reported_cost_usd']) for r in rows), 4),
         }
     return summary

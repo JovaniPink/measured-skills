@@ -55,6 +55,8 @@ def sample_receipt(
         ],
         'adjudication': {
             'status': adjudication_status,
+            'adjudicators': ['reviewer-a', 'reviewer-b'] if adjudication_status == 'disputed' else ['reviewer-a'],
+            'adjudicated_on': '2026-11-19',
             'valid_material_findings': 1 if claim == 'supported' else 0,
             'false_positives': 0,
             'missed_known_defects': 0,
@@ -146,6 +148,148 @@ class ReviewComparisonTests(unittest.TestCase):
         self.assertEqual(1, skill_arm['skill_loaded_count'])
         self.assertEqual(1, skill_arm['adjudicated_count'])
         self.assertEqual(1, skill_arm['disputed_count'])
+
+    def test_linter_requires_complete_adjudicated_grades(self) -> None:
+        missing = sample_receipt()
+        del missing['adjudication']['valid_material_findings']
+        errors = rc.lint_receipts([missing])
+        self.assertTrue(any('adjudication.valid_material_findings' in e for e in errors), errors)
+        with self.assertRaises(ValueError):
+            rc.summarize_receipts([missing])
+
+    def test_linter_rejects_negative_or_mistyped_adjudication_values(self) -> None:
+        cases = {
+            'false_positives': -1,
+            'scope_violations': 1.5,
+            'missed_known_defects': True,
+            'human_verification_minutes': -2.0,
+            'uncertainty_reported_accurately': 'false',
+        }
+        for field, value in cases.items():
+            receipt = sample_receipt()
+            receipt['adjudication'][field] = value
+            errors = rc.lint_receipts([receipt])
+            self.assertTrue(any(f'adjudication.{field}' in e for e in errors), (field, errors))
+        infinite = sample_receipt()
+        infinite['adjudication']['human_verification_minutes'] = float('inf')
+        self.assertTrue(any('human_verification_minutes' in e for e in rc.lint_receipts([infinite])))
+
+    def test_linter_rejects_unknown_adjudication_status_or_shape(self) -> None:
+        unknown = sample_receipt(adjudication_status='graded')
+        self.assertTrue(any('adjudication.status' in e for e in rc.lint_receipts([unknown])))
+        not_object = sample_receipt()
+        not_object['adjudication'] = 'adjudicated'
+        self.assertTrue(any('adjudication must be' in e for e in rc.lint_receipts([not_object])))
+
+    def test_linter_reports_container_adjudication_status_without_crashing(self) -> None:
+        statuses: tuple[object, ...] = ([], {}, ['adjudicated'])
+        for status in statuses:
+            with self.subTest(status=status):
+                receipt = sample_receipt()
+                receipt['adjudication']['status'] = status
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any('adjudication.status' in e for e in errors), errors)
+                with self.assertRaises(ValueError):
+                    rc.summarize_receipts([receipt])
+
+    def test_linter_reports_measures_too_large_for_summary_without_crashing(self) -> None:
+        for field in ('elapsed_seconds', 'reported_cost_usd', 'human_verification_minutes'):
+            with self.subTest(field=field):
+                receipt = sample_receipt()
+                target = receipt['adjudication'] if field == 'human_verification_minutes' else receipt
+                target[field] = 10 ** 400
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(field in e for e in errors), errors)
+                with self.assertRaises(ValueError):
+                    rc.summarize_receipts([receipt])
+
+    def test_pending_and_disputed_records_need_no_grades(self) -> None:
+        absent = sample_receipt(arm='ordinary_baseline')
+        del absent['adjudication']
+        pending = sample_receipt(arm='structured_request', adjudication_status='pending')
+        disputed = sample_receipt(arm='structured_plus_skills', adjudication_status='disputed')
+        for record in (pending, disputed):
+            for field in rc.ADJUDICATION_COUNT_FIELDS + ('human_verification_minutes', 'uncertainty_reported_accurately'):
+                del record['adjudication'][field]
+        self.assertEqual([], rc.lint_receipts([absent, pending, disputed]))
+        summary = rc.summarize_receipts([absent, pending, disputed])
+        self.assertEqual(1, summary['arms']['ordinary_baseline']['pending_adjudication_count'])
+        self.assertEqual(1, summary['arms']['structured_request']['pending_adjudication_count'])
+        self.assertEqual(1, summary['arms']['structured_plus_skills']['disputed_count'])
+
+    def test_false_uncertainty_flag_is_not_counted(self) -> None:
+        receipt = sample_receipt()
+        receipt['adjudication']['uncertainty_reported_accurately'] = False
+        summary = rc.summarize_receipts([receipt])
+        self.assertEqual(0, summary['arms']['structured_request']['uncertainty_reported_accurately_count'])
+
+    def test_summary_keeps_token_usage_separate_from_cost(self) -> None:
+        first = sample_receipt(case_id='rc-01-missing-tenant-scope')
+        second = sample_receipt(case_id='rc-02-auth-enforced-below')
+        second['input_tokens'] = 800
+        second['output_tokens'] = 150
+        arm = rc.summarize_receipts([first, second])['arms']['structured_request']
+        self.assertEqual(2000, arm['total_input_tokens'])
+        self.assertEqual(500, arm['total_output_tokens'])
+        self.assertEqual(0.03, arm['total_reported_cost_usd'])
+
+    def test_linter_requires_integer_token_and_turn_counts(self) -> None:
+        for metric in ('input_tokens', 'output_tokens', 'turns'):
+            receipt = sample_receipt()
+            receipt[metric] = 12.5
+            self.assertTrue(any(metric in e for e in rc.lint_receipts([receipt])), metric)
+
+    def test_cleared_retry_case_runs_under_its_stated_sqlite_contract(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'rc-03'
+            rc.materialize_case('rc-03-idempotent-retry', out)
+            script = (
+                'import sqlite3, sys\n'
+                'sys.path.insert(0, sys.argv[1])\n'
+                'from app.exports import create_export\n'
+                'conn = sqlite3.connect(":memory:")\n'
+                'conn.executescript(open(sys.argv[1] + "/app/schema.sql").read())\n'
+                'first = create_export(conn, "t1", "r1", "{}")\n'
+                'retry = create_export(conn, "t1", "r1", "{}")\n'
+                'rows = conn.execute("SELECT COUNT(*) FROM exports").fetchone()[0]\n'
+                'print(first is not None, retry is None, rows)\n'
+            )
+            result = subprocess.run(
+                [sys.executable, '-I', '-c', script, str(out)],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            # One row survives the retry; the conflicting retry returns no row,
+            # which is the open question the case preserves.
+            self.assertEqual('True True 1', result.stdout.strip())
+
+    def test_graded_records_name_adjudicators_and_date(self) -> None:
+        for status in ('adjudicated', 'disputed'):
+            for field in ('adjudicators', 'adjudicated_on'):
+                receipt = sample_receipt(adjudication_status=status)
+                del receipt['adjudication'][field]
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(f'adjudication.{field}' in e for e in errors), (status, field, errors))
+
+    def test_adjudicator_and_date_values_are_checked(self) -> None:
+        bad_values: dict[str, list[object]] = {
+            'adjudicators': [[], 'reviewer-a', [''], ['  '], ['reviewer-a', 'reviewer-a'], [7]],
+            'adjudicated_on': ['2026-02-30', '11/19/2026', '2026-11-19T10:00:00', 20261119, ''],
+        }
+        for field, values in bad_values.items():
+            for value in values:
+                receipt = sample_receipt()
+                receipt['adjudication'][field] = value
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(f'adjudication.{field}' in e for e in errors), (field, value, errors))
+
+    def test_disputed_record_needs_two_adjudicators(self) -> None:
+        disputed = sample_receipt(adjudication_status='disputed')
+        disputed['adjudication']['adjudicators'] = ['reviewer-a']
+        self.assertTrue(any('at least two' in e for e in rc.lint_receipts([disputed])))
+        disputed['adjudication']['adjudicators'] = ['reviewer-a', 'reviewer-b']
+        self.assertEqual([], rc.lint_receipts([disputed]))
 
 
 if __name__ == '__main__':
