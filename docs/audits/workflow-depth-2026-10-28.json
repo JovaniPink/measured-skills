@@ -264,6 +264,16 @@
       "before_sha256": "0b182056768370ad7dd18e96b62a1c1f51381932c04133ee6da6d4ca63384ff4",
       "after_sha256": "8f7ece1435cb7ece36a4587611c894f2f8a611e070fd0da9a3f6d7cf3604e7af",
       "review_reason": "Codify five separate review state dimensions and three assurance boundaries (structural lint vs truth verification, historical memory as priority hint only, and control-layer separation)."
+    },
+    "skills/draft-prompt/SKILL.md": {
+      "before_sha256": null,
+      "after_sha256": "f73406a7acf53268aee77986400de510de14fae98c6a4faaeb9a3a283a033e5c",
+      "review_reason": "November 24 addition. Original read-only prompt drafting workflow and matching implicit interface. Reviewed task boundaries and synthetic example."
+    },
+    "skills/draft-prompt/agents/openai.yaml": {
+      "before_sha256": null,
+      "after_sha256": "24fd3fb7dc1d7ac467c2f50ca0cf1a0c51a2fd7a3d4c7f1ed64cbc97f33eacca",
+      "review_reason": "November 24 addition. Original read-only prompt drafting workflow and matching implicit interface. Reviewed task boundaries and synthetic example."
     }
   }
 }

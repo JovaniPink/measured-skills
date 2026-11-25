@@ -111,6 +111,17 @@ class InputTests(unittest.TestCase):
                     self.assertTrue(field['label'].strip() and field['hint'].strip())
                     self.assertTrue((field['label'] + field['hint']).isascii())
 
+    def test_prompt_drafting_uses_the_task_as_its_input(self) -> None:
+        data = registry()
+        route = next(row for row in data['routes'] if row['id'] == 'draft-prompt')
+        known = {entry['skill'] for entry in json.loads((ROOT / 'catalog/skills.json').read_text())['skills']}
+        self.assertEqual([], discovery.registry_errors(data, known))
+        for prompt in route['modes'][0]['prompts'].values():
+            self.assertIn('[TASK]', prompt)
+            self.assertNotIn('[REPOSITORY]', prompt)
+        route['modes'][0]['prompts']['chatgpt'] = 'Draft something.'
+        self.assertIn('draft-prompt: invalid portable prompt', discovery.registry_errors(data, known))
+
     def test_registry_rejects_missing_unknown_and_blank_fields(self) -> None:
         known = {s['skill'] for s in json.loads((ROOT / 'catalog/skills.json').read_text())['skills']}
         self.assertEqual([], discovery.registry_errors(registry(), known))

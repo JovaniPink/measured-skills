@@ -56,10 +56,12 @@ class RoutingExport(unittest.TestCase):
 
     def test_arms_cover_the_cases_the_audit_says_were_not_rerun(self) -> None:
         groups = exporter.routing_selection(ROOT, self.document)
-        self.assertEqual(len(groups['specialist-positive']), 64)
-        self.assertEqual(len(case_names(self.specialist)), 128)
+        self.assertEqual(len(groups['specialist-positive']), 65)
+        self.assertEqual(len(case_names(self.specialist)), 130)
+        self.assertIn('draft-prompt-positive-1', case_names(self.specialist))
+        self.assertIn('draft-prompt-near-miss-1', case_names(self.specialist))
         self.assertEqual(len(case_names(self.core)), 63)
-        self.assertEqual(len(case_names(self.listing)), 96)
+        self.assertEqual(len(case_names(self.listing)), 97)
         self.assertTrue(set(row[1]['id'] for row in groups['specialist-positive']) <= set(case_names(self.listing)))
 
     def test_forced_listing_changes_only_the_environment(self) -> None:
@@ -377,6 +379,24 @@ class ExportBoundary(unittest.TestCase):
             self.assertEqual(json.loads((output / '.claude-plugin/plugin.json').read_text())['name'], 'measured-eval-suite')
             prompt = 'evals/plan-change-positive-1/prompt.md'
             self.assertEqual(receipt['files'][prompt], hashlib.sha256((output / prompt).read_bytes()).hexdigest())
+
+    def test_baseline_packs_keep_candidate_routing_cases_and_graders(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp).resolve()
+            baseline = self.source(base / 'baseline')
+            skill = 'plugins/claude/measured-workflows/skills/draft-prompt'
+            subprocess.run(['git', '-C', str(baseline), 'rm', '-qr', skill], check=True)
+            subprocess.run(['git', '-C', str(baseline), '-c', 'user.name=Test',
+                            '-c', 'user.email=test@example.test', '-c', 'commit.gpgsign=false',
+                            'commit', '-qm', 'baseline without prompt drafting'], check=True)
+            for arm in ('routing-specialist', 'routing-listing-8000'):
+                candidate = exporter.render(arm)
+                result = exporter.render(arm, packs_from=baseline)
+                self.assertEqual({k: v for k, v in candidate.items() if k.startswith('evals/')},
+                                 {k: v for k, v in result.items() if k.startswith('evals/')})
+                entry = 'packs/measured-workflows/skills/draft-prompt/SKILL.md'
+                self.assertIn(entry, candidate)
+                self.assertNotIn(entry, result)
 
     def test_output_inside_a_checkout_is_refused(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

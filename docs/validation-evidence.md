@@ -3,7 +3,7 @@
 Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
 
 
-Current preview inventory: 90 canonical skills in four packs. The 0.19 discovery
+Current preview inventory: 91 canonical skills in four packs. The 0.19 discovery
 and identity migration retains the 0.18 candidate as historical source. Validation
 results for this change are recorded separately; earlier counts below are historical.
 
@@ -11,7 +11,45 @@ See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older 
 
 Start with the [September 8 Claude account repair](claude-account-repair-2026-09-08.md) for the historical 0.11 account and CLI checks. The [client support checklist](client-support.md) tracks checks still open. Earlier sections retain their named versions, dates, and failures. They do not prove that a current install works.
 
-Current test suite: 417 regression tests.
+Current test suite: 422 regression tests.
+
+## November 25 comparison receipt input checks
+
+The follow-up review reproduced two exceptions from malformed receipt data:
+container-valued adjudication statuses raised `TypeError`, and numeric measures
+too large for the float-based summary raised `OverflowError`. The linter now
+reports field-specific errors for both inputs. Two regression tests cover the
+status shapes and each affected measure field. They failed before the repair
+and passed afterward. No comparison arm or paid client evaluation was run.
+
+## November 24 Antigravity pack version check
+
+On `9b4e391a`, Antigravity CLI 1.5.16 failed strict validation for each of the
+four packs because its manifest omitted the version. With the regenerated
+`0.19.0` manifests, `agy plugin validate <pack> --strict --json` exited zero
+for operations (11 skills), quality (26), stacks (17), and workflows (20).
+Each result contained one informational note about the generic icon and zero
+warnings or errors. A separately generated one-skill preview also passed.
+
+The CLI also accepted a preview labeled `0.18.0`. The catalog's adapter
+validator now checks each generated Antigravity pack against the catalog
+version. A regression test covers the current, missing, and stale versions.
+
+## November 24 prompt drafting package checks
+
+The new read-only workflow has four positive cases, four near misses, two safety
+cases, and a prepared output rubric. Installed selection and downstream task
+quality have no trial result. The bundled Codex skill validator accepted all 91
+canonical entries. Claude Code 2.1.316 passed strict local validation for the
+generated workflows pack. Standalone `skills-ref` was unavailable on PATH, and
+Codex CLI 0.169.0 exposes no standalone plugin validation command.
+
+Antigravity CLI 1.5.16 recognized 20 skills in the generated workflows pack,
+including the new entry by inventory comparison. Its normal validator passed
+with a warning about the missing plugin version. Strict validation failed on
+that warning both here and on the 19-skill pack from `610bc7ea`. The CLI reports
+that its marketplace requires a version to list a plugin. Marketplace listing
+and installed behavior remain unverified.
 
 ## November 19 comparison kit receipt and fixture repairs
 

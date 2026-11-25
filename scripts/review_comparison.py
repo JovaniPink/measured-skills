@@ -43,12 +43,13 @@ def is_count(value: object) -> bool:
 
 
 def is_measure(value: object) -> bool:
-    return (
-        isinstance(value, (int, float))
-        and not isinstance(value, bool)
-        and math.isfinite(value)
-        and value >= 0
-    )
+    """Accept non-negative measures representable by the float-based summary."""
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return False
+    try:
+        return math.isfinite(value) and value >= 0
+    except OverflowError:
+        return False
 
 
 ISO_DATE = re.compile(r'\d{4}-\d{2}-\d{2}')
@@ -93,7 +94,7 @@ def lint_adjudication(prefix: str, adjudication: object) -> list[str]:
     if not isinstance(adjudication, dict):
         return [f'{prefix}: adjudication must be an object when present']
     status = adjudication.get('status')
-    if status not in ADJUDICATION_STATUSES:
+    if not isinstance(status, str) or status not in ADJUDICATION_STATUSES:
         return [f'{prefix}: invalid adjudication.status {status!r}']
     required = status == 'adjudicated'
     errors: list[str] = []

@@ -476,6 +476,27 @@
       "revocation": "Remove owned projections and marketplace eligibility if policy, compatibility or authority boundaries become invalid."
     },
     {
+      "skill": "draft-prompt",
+      "disposition": "covered",
+      "implementation_method": "original",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "upstream_license": "Original catalog instructions and examples use the repository MIT notice. The publisher guide informs correctness.",
+      "pinned_revision": "retrieved-2026-11-24",
+      "reviewed_on": "2026-11-24",
+      "reviewed_material": [
+        "Claude guidance on goals, context, and examples",
+        "Owned prompting guide and source comparison in docs/research/prompting-2026-11-24.md"
+      ],
+      "local_changes": "Original Codex-assisted authoring workflow, interface, and synthetic cases based on the documented research. Behavioral comparison is pending.",
+      "security_review": "APPROVE: read-only drafting. Quoted tasks and records are inputs. No tools, provider calls, or external writes are required.",
+      "rereview_triggers": [
+        "source guidance changes",
+        "routing or authorization boundaries change",
+        "credible expression or licensing conflict"
+      ],
+      "revocation": "Withdraw through reviewed ordinary commits if source authority, authorship, or safety boundaries cannot be supported."
+    },
+    {
       "skill": "edit-technical-writing",
       "disposition": "covered",
       "implementation_method": "original",

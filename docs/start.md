@@ -139,7 +139,7 @@ if checks must not be rerun, replace a copied instruction to run checks with
 "Inspect existing check evidence and source only; do not rerun tests. Report the
 untested scope." A generic repair prompt must not override that constraint.
 
-The **0.19.0 preview** has 90 skills in four distribution packs. Start with the
+The **0.19.0 preview** has 91 skills in four distribution packs. Start with the
 nine-skill `finish-work-core` profile, adding a stack only when needed. Do not
 activate all packs merely to find one task. The preserved 0.18 candidate has its
 own acceptance and release work; 0.19 inherits none of those observations as a pass.

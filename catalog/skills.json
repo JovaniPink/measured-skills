@@ -523,6 +523,31 @@
       "maturity_evidence": "evals/cases.json"
     },
     {
+      "skill": "draft-prompt",
+      "plugin": "measured-workflows",
+      "capability_family": "communication",
+      "lifecycle_stages": [
+        "design"
+      ],
+      "targets": [
+        "agent",
+        "model"
+      ],
+      "risk_class": "read-only",
+      "invocation": "implicit",
+      "maturity": "candidate",
+      "composes_with": [
+        "review-engineering-prompt",
+        "design-agent-evaluations"
+      ],
+      "conflicts_with": [
+        "review-engineering-prompt",
+        "design-agent-evaluations",
+        "author-skill"
+      ],
+      "maturity_evidence": "evals/cases.json"
+    },
+    {
       "skill": "edit-technical-writing",
       "plugin": "measured-workflows",
       "capability_family": "communication",

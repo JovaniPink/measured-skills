@@ -5,6 +5,7 @@ point for the 0.19 preview, with an offline chooser and Markdown view generated 
 pins its own export, which can be older.
 
 - [Quickstart](quickstart.md): choose a task and copy one scoped request.
+- [Write a prompt you can check](prompting.md) gives worked examples for chat, coding assistants, and applications.
 - [Follow a change through review](code-review-workflow.md): prepare, review, and resolve feedback with explicit coverage limits.
 - [Review casebook](review-cases/README.md): captured review output, cleared false alarms, and preserved corrections.
 - [Finish existing work](finish-existing-work.md): recover, repair, verify and maintain a draft.

@@ -53,19 +53,19 @@
     {
       "id": "routing-specialist",
       "kind": "routing",
-      "purpose": "Run the 64 specialist cases, which were not rerun with the added sentence, plus each specialist's first near miss.",
+      "purpose": "Check the first positive and first near miss for each implicit specialist, including draft-prompt.",
       "selection": [
         "specialist-positive",
         "specialist-near-miss"
       ],
-      "expected_cases": 128,
+      "expected_cases": 130,
       "runs": 1,
       "max_turns": 4,
       "timeout_seconds": 120,
       "ablation": "none",
       "concurrency": 5,
       "environment": {},
-      "estimated_cost_usd": 0.4,
+      "estimated_cost_usd": 0.41,
       "max_cost_usd": 1.0
     },
     {
@@ -76,7 +76,7 @@
         "core-positive",
         "specialist-positive"
       ],
-      "expected_cases": 96,
+      "expected_cases": 97,
       "runs": 1,
       "max_turns": 4,
       "timeout_seconds": 120,

@@ -2,7 +2,7 @@
 
 Generated from canonical metadata. Start with [the task chooser](start.md).
 
-This catalog contains 90 portable agent skills. Packs are distribution units, not recommended activation sets.
+This catalog contains 91 portable agent skills. Packs are distribution units, not recommended activation sets.
 
 ## measured-operations
 
@@ -701,6 +701,16 @@ Diagnoses failures when asked \"why is the build failing\", \"why did this regre
 Invocation: implicit. Risk class: bounded-execution.
 
 Historical name: systematic-diagnosis.
+
+### Draft a prompt
+
+[`draft-prompt`](../skills/draft-prompt/SKILL.md)
+
+Drafts a prompt when someone asks what to ask an assistant or wants a copyable instruction for chat, a coding agent, or an API. Turns the task description into a usable request with the inputs, decision rules, and output the recipient needs.
+
+Invocation: implicit. Risk class: read-only.
+
+Historical name: new in 0.19.
 
 ### Edit technical writing
 

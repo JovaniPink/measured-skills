@@ -181,6 +181,28 @@ class ReviewComparisonTests(unittest.TestCase):
         not_object['adjudication'] = 'adjudicated'
         self.assertTrue(any('adjudication must be' in e for e in rc.lint_receipts([not_object])))
 
+    def test_linter_reports_container_adjudication_status_without_crashing(self) -> None:
+        statuses: tuple[object, ...] = ([], {}, ['adjudicated'])
+        for status in statuses:
+            with self.subTest(status=status):
+                receipt = sample_receipt()
+                receipt['adjudication']['status'] = status
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any('adjudication.status' in e for e in errors), errors)
+                with self.assertRaises(ValueError):
+                    rc.summarize_receipts([receipt])
+
+    def test_linter_reports_measures_too_large_for_summary_without_crashing(self) -> None:
+        for field in ('elapsed_seconds', 'reported_cost_usd', 'human_verification_minutes'):
+            with self.subTest(field=field):
+                receipt = sample_receipt()
+                target = receipt['adjudication'] if field == 'human_verification_minutes' else receipt
+                target[field] = 10 ** 400
+                errors = rc.lint_receipts([receipt])
+                self.assertTrue(any(field in e for e in errors), errors)
+                with self.assertRaises(ValueError):
+                    rc.summarize_receipts([receipt])
+
     def test_pending_and_disputed_records_need_no_grades(self) -> None:
         absent = sample_receipt(arm='ordinary_baseline')
         del absent['adjudication']
