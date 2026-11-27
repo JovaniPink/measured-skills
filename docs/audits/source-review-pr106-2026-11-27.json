@@ -5,8 +5,8 @@
   "hosted_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
   "m2_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
   "pins_before_sha256": "3a6c70206c0f903a3d629f0db3a594b9b703c8db9ebd82cc7085b97f5ea420d0",
-  "pins_after_sha256": "190a35f7a78c187d44589b20fcafa6f2ee879773a836bf8ccd5bf5edda799506",
-  "method": "Compare retained publisher bodies with two fresh captures per URL. Match both live markers to the M2 and hosted failure reports before repinning. Keep the existing marker kinds, checker, review-age policy, and skill instructions.",
+  "pins_after_sha256": "f822b055f87fb8e6bf4eb68face4d1364763a99e2c4efade2ace7465dd4ab3e5",
+  "method": "Compare retained publisher bodies with two fresh captures per URL. Match the four original differences to the M2 and hosted failure reports. The OWASP record explains the additional hosted observation and its ordering rule. The marker kinds, review-age policy, and skill instructions are preserved.",
   "records": [
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
@@ -89,25 +89,57 @@
       ],
       "marker_kind": "normalized-content-sha256",
       "previous_value": "15c1d6ed3613fc4d09c0d22b270a0b3c2f1e29e8ca519a052f3925df8c44646d",
-      "reviewed_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900",
+      "reviewed_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328",
       "previous_body_sha256": "6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
       "observations": [
         {
-          "observed_at": "2026-11-27T18:58:17.185013+00:00",
-          "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "observed_at": "2026-11-27T19:07:09.749200+00:00",
+          "raw_sha256": "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
           "body_bytes": 601686,
           "marker_kind": "normalized-content-sha256",
-          "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          "marker_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328"
         },
         {
-          "observed_at": "2026-11-27T18:58:17.710980+00:00",
-          "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "observed_at": "2026-11-27T19:07:09.964182+00:00",
+          "raw_sha256": "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
           "body_bytes": 601686,
           "marker_kind": "normalized-content-sha256",
-          "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          "marker_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328"
         }
       ],
-      "finding": "Only the rendered content field changed. Comparing audience label and link pairs and CSS class membership without their order yields identical HTML. The resource listings and the guidance used by review-agent-security are unchanged."
+      "finding": "Only the rendered content field changed. Comparing audience label and link pairs and CSS class membership without their order yields identical HTML. The resource listings and the guidance used by review-agent-security are unchanged. A later hosted variant also reordered team-area classes. The endpoint-specific check now sorts complete audience label/link pairs within their terms lists and team-area class groups on resource cards; it still hashes their membership and all other response bytes.",
+      "intermediate_check": {
+        "commit": "41188da3723d704629d41eaffca98a3b3642f2b5",
+        "hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46053789812",
+        "hosted_report_sha256": "f661a39cb069d2fffa0cc412d55705d1392d9db87da32df445c8aed9f498a3d2",
+        "m2_report_sha256": "201bcd905b60768d2787897ee74de54fbf534df5c966e5a693c45aa1e287b907",
+        "hosted_observed_marker": "normalized-content-sha256:cffbc27cd82a1a43352bbf2379a32e62d65274a32cd2cf6a8ed8102666e742f9",
+        "original_observations": [
+          {
+            "observed_at": "2026-11-27T18:58:17.185013+00:00",
+            "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+            "body_bytes": 601686,
+            "marker_kind": "normalized-content-sha256",
+            "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          },
+          {
+            "observed_at": "2026-11-27T18:58:17.710980+00:00",
+            "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+            "body_bytes": 601686,
+            "marker_kind": "normalized-content-sha256",
+            "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          }
+        ],
+        "comparison": "Reordering one audience label/link list and one team-area class list in a retained M2 body reproduced the intermediate GitHub fingerprint exactly under the prior checker. The reconstructed response is comparison evidence, not a downloaded GitHub body.",
+        "compared_publisher_body_sha256": [
+          "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
+          "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
+          "8395b37f6ce9ddf04754c56b244e20346464c4570af54ade31556d58d1c8dedc",
+          "ea93e43a583aff92a6700d0cbe058a5f9390cc0a9ad4ae349d7136ed1b5b9425"
+        ],
+        "reconstructed_body_sha256": "722d891576c196109cab5da1c78db4d12f1545e44e62527e5f62f80365e00d6b"
+      }
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",

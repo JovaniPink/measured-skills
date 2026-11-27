@@ -42,6 +42,29 @@ class FreshnessTransportTests(unittest.TestCase):
         other_page = url.replace('50812', '123')
         self.assertNotEqual(marker(markup, other_page), marker(reordered, other_page))
 
+    def test_owasp_audience_and_team_order_preserves_links_labels_and_other_markup(self) -> None:
+        url = 'https://genai.owasp.org/wp-json/wp/v2/pages/50812'
+        item = ('<a href="https://genai.owasp.org/learning_persona/{}/" '
+                'class="elementor-post-info__terms-list-item">{}</a>')
+        first, second = item.format('alpha', 'Alpha'), item.format('beta', 'Beta')
+        wrapper = '<span class="elementor-post-info__terms-list">\n\t{}\t</span>'
+        card = '<div data-elementor-type="loop-item" data-elementor-id="42" class="team_area-a team_area-b">'
+
+        def marker(markup: str, address: str = url) -> str:
+            body = json.dumps({'content': {'rendered': markup}}).replace('/', r'\/').encode()
+            return freshness._normalized_marker(address, body)
+
+        original = card + wrapper.format(first + ', ' + second) + '</div>'
+        reorder = card.replace('team_area-a team_area-b', 'team_area-b team_area-a')
+        reordered = reorder + wrapper.format(second + ', ' + first) + '</div>'
+        self.assertEqual(marker(original), marker(reordered))
+        for old, new in [('team_area-a', 'team_area-c'), ('/alpha/', '/gamma/'), ('Alpha', 'Gamma'),
+                         (second, first), (', ' + second, '')]:
+            self.assertNotEqual(marker(original), marker(original.replace(old, new)))
+        self.assertNotEqual(marker(first + ', ' + second), marker(second + ', ' + first))
+        other = url.replace('50812', '123')
+        self.assertNotEqual(marker(original, other), marker(reordered, other))
+
     def marker(self, payload: bytes, encoding: str | None, kind: str = 'content-sha256') -> tuple[str, str]:
         with patch('check_upstream_freshness.urllib.request.urlopen', return_value=Response(payload, encoding)):
             return freshness._fetch_marker('https://antigravity.google/docs/skills.md', kind)

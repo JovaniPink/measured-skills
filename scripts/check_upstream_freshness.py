@@ -89,11 +89,10 @@ def _normalized_content_sha256(payload: bytes, strip_trailing: bool = False) -> 
 
 def _normalized_marker(url: str, payload: bytes) -> str:
     if url == "https://genai.owasp.org/wp-json/wp/v2/pages/50812":
-        # WordPress reorders taxonomy classes within its serialized resource cards.
-        # Hash every other byte of the publisher's JSON response as received.
+        # This WordPress page reorders taxonomy classes and audience links on its cards.
         def order_classes(match: re.Match[bytes]) -> bytes:
             classes = re.sub(
-                rb"(?<!\S)(category-|tag-|learning_persona-)[\w-]+(?: \1[\w-]+)+",
+                rb"(?<!\S)(category-|tag-|learning_persona-|team_area-)[\w-]+(?: \1[\w-]+)+",
                 lambda group: b" ".join(sorted(group[0].split(b" "))),
                 match[2],
             )
@@ -104,6 +103,19 @@ def _normalized_marker(url: str, payload: bytes) -> str:
             rb'([A-Za-z0-9_ -]+)(\\")',
             order_classes,
             payload,
+        )
+        # Sort complete label/URL pairs only inside an audience terms list. Keep all
+        # other bytes, including the order of cards and links in their main content.
+        audience_link = (
+            rb'<a href=\\"https:\\/\\/genai\.owasp\.org\\/learning_persona\\/[a-z0-9-]+\\/\\" '
+            rb'class=\\"elementor-post-info__terms-list-item\\">[^<>,]+<\\/a>'
+        )
+        spacing = rb'(?:\\[nrt]| )*'
+        ordered = re.sub(
+            rb'(<span class=\\"elementor-post-info__terms-list\\">' + spacing + rb')('
+            + audience_link + rb'(?:, ' + audience_link + rb')+)(' + spacing + rb'<\\/span>)',
+            lambda m: m[1] + b', '.join(sorted(m[2].split(b', '))) + m[3],
+            ordered,
         )
         return hashlib.sha256(ordered).hexdigest()
     return _normalized_content_sha256(payload, strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS)
