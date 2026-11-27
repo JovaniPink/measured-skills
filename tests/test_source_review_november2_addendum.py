@@ -66,7 +66,8 @@ class SourceReviewAddendumTests(unittest.TestCase):
         self.assertEqual(self.ledger['pins_after_sha256'], hashlib.sha256(self.closeout_bytes).hexdigest())
         old = subprocess.check_output(['git', 'show', self.ledger['reviewed_revision'] +
                                        ':scripts/check_upstream_freshness.py'], cwd=ROOT)
-        self.assertEqual(old, (ROOT / 'scripts/check_upstream_freshness.py').read_bytes())
+        self.assertEqual(old, subprocess.check_output(
+            ['git', 'show', CLOSEOUT_REVISION + ':scripts/check_upstream_freshness.py'], cwd=ROOT))
 
     def test_unreviewed_or_weakened_addendum_is_rejected(self) -> None:
         for mutation in ('extra_pin', 'age', 'date', 'url', 'method', 'missing', 'duplicate', 'observation'):

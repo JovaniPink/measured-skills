@@ -1,0 +1,425 @@
+{
+  "catalog_version": "0.19.0",
+  "checked_on": "2026-11-27",
+  "online": true,
+  "result": "fail",
+  "records": [
+    {
+      "source_url": "https://a2a-protocol.org/v1.0.0/specification/",
+      "expected_marker": "content-sha256:f5d15f00006b7e25b8a3a2766b309b661fff36dbd4330933ed61bfc8d435f05b",
+      "observed_marker": "content-sha256:f5d15f00006b7e25b8a3a2766b309b661fff36dbd4330933ed61bfc8d435f05b",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/",
+      "expected_marker": "content-sha256:6ff8fbbc53cffff74b285eab19f9d0ad0b1114fad13832e855dc3cab7819334d",
+      "observed_marker": "content-sha256:6ff8fbbc53cffff74b285eab19f9d0ad0b1114fad13832e855dc3cab7819334d",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/safety/",
+      "expected_marker": "content-sha256:cd09fd8d948e870dab6e41bbc4685566f0b226e97d3bd447cb2c531b1c2087c2",
+      "observed_marker": "content-sha256:cd09fd8d948e870dab6e41bbc4685566f0b226e97d3bd447cb2c531b1c2087c2",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
+      "expected_marker": "content-sha256:ac1e141f8123bd1a3eda68c876f1e3d77a12df48c97cd84d6bf65534de3edd1c",
+      "observed_marker": "content-sha256:ac1e141f8123bd1a3eda68c876f1e3d77a12df48c97cd84d6bf65534de3edd1c",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://agent-plugins.org/specification",
+      "expected_marker": "etag:\"11838183e656f67c5343e7c4128600f2\"",
+      "observed_marker": "etag:\"11838183e656f67c5343e7c4128600f2\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "expected_marker": "content-sha256:8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "observed_marker": "content-sha256:8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
+      "expected_marker": "content-sha256:8e0417439cf7313c81f4b5652047adbf9d8fba6f89275bcb52b8fc7af64f6f35",
+      "observed_marker": "content-sha256:8e0417439cf7313c81f4b5652047adbf9d8fba6f89275bcb52b8fc7af64f6f35",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
+      "expected_marker": "content-sha256:29747bc7f75ac709525539f5c97c4e4c3e559f81ffd75d4b84ba363918e6f776",
+      "observed_marker": "content-sha256:29747bc7f75ac709525539f5c97c4e4c3e559f81ffd75d4b84ba363918e6f776",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://airc.nist.gov/",
+      "expected_marker": "normalized-content-sha256:a10065ab3cecf5e2e23824105b61913546f4121ea5bbdd77d027320bf79bf23e",
+      "observed_marker": "normalized-content-sha256:a10065ab3cecf5e2e23824105b61913546f4121ea5bbdd77d027320bf79bf23e",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+      "expected_marker": "etag:\"17496a7be7c5ebef88e9dc80c952f35a\"",
+      "observed_marker": "etag:\"17496a7be7c5ebef88e9dc80c952f35a\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/cli/headless.md",
+      "expected_marker": "content-sha256:6e07596ffb50fb4b475380bf016fb719500467196972746061b841979febecbe",
+      "observed_marker": "content-sha256:6e07596ffb50fb4b475380bf016fb719500467196972746061b841979febecbe",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/plugins.md",
+      "expected_marker": "content-sha256:a6ce5caa3bdaae7627b10221f7b464a0f81f3e1cdd0ecc283878afe715298d96",
+      "observed_marker": "content-sha256:a6ce5caa3bdaae7627b10221f7b464a0f81f3e1cdd0ecc283878afe715298d96",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/sdk/overview.md",
+      "expected_marker": "content-sha256:6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+      "observed_marker": "content-sha256:6fb4afa9b3fb938f7fa38ecdb0a436a41dcf48e177c6601c98bf462eb3479b38",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://antigravity.google/docs/skills.md",
+      "expected_marker": "content-sha256:db3d1d4f7e01a1f33cd53e3fc9027527a2123ae81b5bf63efcf533e305b9cfdc",
+      "observed_marker": "content-sha256:db3d1d4f7e01a1f33cd53e3fc9027527a2123ae81b5bf63efcf533e305b9cfdc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
+      "expected_marker": "content-sha256:85f785f00741d67f386a4fc70056f5e1c2f0ba5ee8ad7bd4e4270272a604e421",
+      "observed_marker": "content-sha256:85f785f00741d67f386a4fc70056f5e1c2f0ba5ee8ad7bd4e4270272a604e421",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/documentation/xcode/understanding-and-improving-swiftui-performance.md",
+      "expected_marker": "content-sha256:10c91224352ebdb11060e1029c7d03c6c9dc14257138678ebe55e6cace96f7b3",
+      "observed_marker": "content-sha256:10c91224352ebdb11060e1029c7d03c6c9dc14257138678ebe55e6cace96f7b3",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftdata/modelactor.json",
+      "expected_marker": "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+      "observed_marker": "content-sha256:c7e203eeacfd855c82e403e2f322f32e1119b127bf708dbe899641b1bc141a6f",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/swiftui/managing-model-data-in-your-app.json",
+      "expected_marker": "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+      "observed_marker": "content-sha256:68c4a1c0c07da76b234eba7a2ca9683aa2c2bc70b714864f3f78efb743f098dc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.apple.com/tutorials/data/documentation/testing/migratingfromxctest.json",
+      "expected_marker": "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+      "observed_marker": "content-sha256:f5d35aa467fc1affb984b2799e3a59d020172417e992d144ab797c488a1ae347",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "expected_marker": "etag:\"680aefc8d90400d3f97b5a7abc3f9279\"",
+      "observed_marker": "etag:\"680aefc8d90400d3f97b5a7abc3f9279\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
+      "expected_marker": "normalized-content-sha256:ed5ab698e5444ae46d5506e805b75b970d483bce3aa16c18ae9f565166bb62a9",
+      "observed_marker": "normalized-content-sha256:ed5ab698e5444ae46d5506e805b75b970d483bce3aa16c18ae9f565166bb62a9",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "expected_marker": "normalized-content-sha256:3467433ccf11b942e38bf73bea6febdf97ca416f551009eb1aebc3791884a7e0",
+      "observed_marker": "normalized-content-sha256:3467433ccf11b942e38bf73bea6febdf97ca416f551009eb1aebc3791884a7e0",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+      "expected_marker": "content-sha256:ed60eff7670e1c2a1b111843eacac730e696f78713c85e7ea9f9573b5dee3c2f",
+      "observed_marker": "content-sha256:ed60eff7670e1c2a1b111843eacac730e696f78713c85e7ea9f9573b5dee3c2f",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
+      "expected_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "observed_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
+      "expected_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "observed_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
+      "expected_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "observed_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
+      "expected_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "observed_marker": "last-modified:Tue, 10 Nov 2026 21:02:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+      "expected_marker": "last-modified:Fri, 20 Nov 2026 00:22:04 GMT",
+      "observed_marker": "last-modified:Fri, 20 Nov 2026 00:22:04 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
+      "expected_marker": "last-modified:Tue, 24 Nov 2026 05:39:10 GMT",
+      "observed_marker": "last-modified:Tue, 24 Nov 2026 05:39:10 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
+      "expected_marker": "last-modified:Tue, 17 Nov 2026 20:11:09 GMT",
+      "observed_marker": "last-modified:Tue, 17 Nov 2026 20:11:09 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models.md",
+      "expected_marker": "content-sha256:ca78829394c5bb0752771a0ff3f304056f0653c1f1304638d2750520d72e56bb",
+      "observed_marker": "content-sha256:ca78829394c5bb0752771a0ff3f304056f0653c1f1304638d2750520d72e56bb",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
+      "expected_marker": "content-sha256:96ec4e47ff85e07eaa79d6776a05d31102338b7c9b5b3b0f27c26852783a2dc3",
+      "observed_marker": "content-sha256:96ec4e47ff85e07eaa79d6776a05d31102338b7c9b5b3b0f27c26852783a2dc3",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+      "expected_marker": "last-modified:Sun, 05 Apr 2026 14:01:15 GMT",
+      "observed_marker": "last-modified:Sun, 05 Apr 2026 14:01:15 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.spring.io/spring-boot/",
+      "expected_marker": "last-modified:Fri, 27 Nov 2026 10:18:22 GMT",
+      "observed_marker": "last-modified:Fri, 27 Nov 2026 10:18:22 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/data/documentation.json",
+      "expected_marker": "content-sha256:3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+      "observed_marker": "content-sha256:3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "expected_marker": "etag:\"f63-661435372cec0\"",
+      "observed_marker": "etag:\"f63-661435372cec0\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
+      "expected_marker": "last-modified:Wed, 18 Nov 2026 14:22:53 GMT",
+      "observed_marker": "last-modified:Wed, 18 Nov 2026 14:22:53 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
+      "expected_marker": "content-sha256:9d4c62198e38f9f6426568ba43c8f36d7f800769c222cb6fdfc042937f3cc86b",
+      "observed_marker": "content-sha256:9d4c62198e38f9f6426568ba43c8f36d7f800769c222cb6fdfc042937f3cc86b",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "expected_marker": "content-sha256:6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
+      "observed_marker": "content-sha256:d3c34545806beb9b1841bb528d7a7c5caa2c12bb272bcff1d78c5ae0e8e508eb",
+      "result": "changed"
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-merge",
+      "expected_marker": "last-modified:Thu, 26 Nov 2026 04:34:49 GMT",
+      "observed_marker": "last-modified:Thu, 26 Nov 2026 04:34:49 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://git-scm.com/docs/git-worktree",
+      "expected_marker": "content-sha256:068bf150dcb4b6a138a039b6978999e1df4d04f892c34c90c3334152dcf4d292",
+      "observed_marker": "content-sha256:068bf150dcb4b6a138a039b6978999e1df4d04f892c34c90c3334152dcf4d292",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://go.dev/doc/",
+      "expected_marker": "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+      "observed_marker": "content-sha256:63b6d9acdfd3759cbd0ed7547f1c44fd62a5aeb8fd70ad9cf7ea0c70c1d0a509",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
+      "expected_marker": "content-sha256:cd2b9d3a74eff357c4bc58dd6c58498c6b8f1291200309292b4e34d2c74dfa39",
+      "observed_marker": "content-sha256:cd2b9d3a74eff357c4bc58dd6c58498c6b8f1291200309292b4e34d2c74dfa39",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://learn.microsoft.com/en-us/dotnet/",
+      "expected_marker": "etag:\"cGtD0UT5dESPOlkT2j+Lx/L4wpw=\"",
+      "observed_marker": "etag:\"cGtD0UT5dESPOlkT2j+Lx/L4wpw=\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
+      "expected_marker": "content-sha256:6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+      "observed_marker": "content-sha256:6a7c69baf0f86febf7114a26fd2504cb362a796f1402a159e3320df4d2eda0a4",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/ai-agents.md",
+      "expected_marker": "content-sha256:b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22",
+      "observed_marker": "content-sha256:b0586577009083e7ad24bdbb9e6c7570c6a05b9af92be43dd220ac315bda7b22",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/authentication.md",
+      "expected_marker": "content-sha256:f4608252c172e3e104a8c5339b06abba629945afc16184f7b749fdc688e17e3a",
+      "observed_marker": "content-sha256:f4608252c172e3e104a8c5339b06abba629945afc16184f7b749fdc688e17e3a",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
+      "expected_marker": "content-sha256:03bacca672adf7bf1a96ed8d3eeea9ded09b0e581425fd5e54ef58b0dbbdc3cc",
+      "observed_marker": "content-sha256:03bacca672adf7bf1a96ed8d3eeea9ded09b0e581425fd5e54ef58b0dbbdc3cc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "expected_marker": "etag:\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\"",
+      "observed_marker": "etag:\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+      "expected_marker": "content-sha256:f10184ae3290220ecbb2463bb484332da856ef725123b5e4819b3e32339cccf3",
+      "observed_marker": "content-sha256:f10184ae3290220ecbb2463bb484332da856ef725123b5e4819b3e32339cccf3",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
+      "expected_marker": "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+      "observed_marker": "content-sha256:bcdbec214d70abcfad9284a31d4f9e5134305831d628aad3aa85d7e26626cb35",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/contents.rst",
+      "expected_marker": "content-sha256:6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc",
+      "observed_marker": "content-sha256:6d973f2c8d0ce0be153f0bcc88aea8018e30e06e0de044e52c6d9abf32c11adc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/python/cpython/3.15/Doc/library/unittest.rst",
+      "expected_marker": "content-sha256:4ee87268dff189a34a57536b7133fd841fee511ef66480ff5021ea593c8e155b",
+      "observed_marker": "content-sha256:4ee87268dff189a34a57536b7133fd841fee511ef66480ff5021ea593c8e155b",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
+      "expected_marker": "content-sha256:f8a777fb647f2d7b50f80d7a0f0cae86addb2cf7804258fed2c2fb30c724b543",
+      "observed_marker": "content-sha256:f8a777fb647f2d7b50f80d7a0f0cae86addb2cf7804258fed2c2fb30c724b543",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://slsa.dev/spec/v1.2/provenance",
+      "expected_marker": "etag:\"404df5e45085af8c862d3388dd7f8529-ssl\"",
+      "observed_marker": "etag:\"404df5e45085af8c862d3388dd7f8529-ssl\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
+      "expected_marker": "etag:\"11ccb-65f10a0e6ceae\"",
+      "observed_marker": "etag:\"11ccb-65f10a0e6ceae\"",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "expected_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://sre.google/sre-book/postmortem-culture/",
+      "expected_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "observed_marker": "last-modified:Thu, 08 Oct 2026 04:48:00 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
+      "expected_marker": "normalized-content-sha256:f7640e4cb9674bdaa665f38c12ae4342945f4b74682c688be3e0a2d928a777f8",
+      "observed_marker": "normalized-content-sha256:f7640e4cb9674bdaa665f38c12ae4342945f4b74682c688be3e0a2d928a777f8",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.drupal.org/docs/develop",
+      "expected_marker": "normalized-content-sha256:910434d31cb07771a11da75b2f51e78f66b3131391ea4f356e08d7af084a9d33",
+      "observed_marker": "normalized-content-sha256:910434d31cb07771a11da75b2f51e78f66b3131391ea4f356e08d7af084a9d33",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
+      "expected_marker": "content-sha256:1d3ebccdf539c320a932deb65c54136f295dd1fc256f538fd0f230651dedf516",
+      "observed_marker": "content-sha256:1d3ebccdf539c320a932deb65c54136f295dd1fc256f538fd0f230651dedf516",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.postgresql.org/docs/current/",
+      "expected_marker": "content-sha256:e37d3d655b704389087f789a2c6bace0f99619c960ef432cbfe5859ba32aafbc",
+      "observed_marker": "content-sha256:e37d3d655b704389087f789a2c6bace0f99619c960ef432cbfe5859ba32aafbc",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.txt",
+      "expected_marker": "content-sha256:21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a",
+      "observed_marker": "content-sha256:21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.swift.org/swift-evolution/",
+      "expected_marker": "content-sha256:0fe0b43d54b2840d4b431baea9c9ea066c04ba56a4136f64dc06e3b45f3b7e86",
+      "observed_marker": "content-sha256:0fe0b43d54b2840d4b431baea9c9ea066c04ba56a4136f64dc06e3b45f3b7e86",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.typescriptlang.org/docs/",
+      "expected_marker": "content-sha256:0cf5d39dbda3cd48f105f76a9c77880c178fb4a6cbdddc8bcf433deb4fb0cf3a",
+      "observed_marker": "content-sha256:0cf5d39dbda3cd48f105f76a9c77880c178fb4a6cbdddc8bcf433deb4fb0cf3a",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/TR/WCAG22/",
+      "expected_marker": "last-modified:Thu, 12 Dec 2024 10:36:22 GMT",
+      "observed_marker": "last-modified:Thu, 12 Dec 2024 10:36:22 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/TR/prov-n/",
+      "expected_marker": "last-modified:Mon, 02 Oct 2017 10:47:12 GMT",
+      "observed_marker": "last-modified:Mon, 02 Oct 2017 10:47:12 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "expected_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "observed_marker": "last-modified:Thu, 03 Sep 2026 15:17:59 GMT",
+      "result": "pass"
+    },
+    {
+      "source_url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+      "expected_marker": "last-modified:Fri, 06 Nov 2026 08:56:14 GMT",
+      "observed_marker": "last-modified:Fri, 06 Nov 2026 08:56:14 GMT",
+      "result": "pass"
+    }
+  ],
+  "errors": [
+    "upstream content changed: https://genai.owasp.org/wp-json/wp/v2/pages/50812"
+  ]
+}

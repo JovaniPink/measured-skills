@@ -87,6 +87,28 @@ def _normalized_content_sha256(payload: bytes, strip_trailing: bool = False) -> 
     return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
 
+def _normalized_marker(url: str, payload: bytes) -> str:
+    if url == "https://genai.owasp.org/wp-json/wp/v2/pages/50812":
+        # WordPress reorders taxonomy classes within its serialized resource cards.
+        # Hash every other byte of the publisher's JSON response as received.
+        def order_classes(match: re.Match[bytes]) -> bytes:
+            classes = re.sub(
+                rb"(?<!\S)(category-|tag-|learning_persona-)[\w-]+(?: \1[\w-]+)+",
+                lambda group: b" ".join(sorted(group[0].split(b" "))),
+                match[2],
+            )
+            return match[1] + classes + match[3]
+
+        ordered = re.sub(
+            rb'(<div data-elementor-type=\\"loop-item\\" data-elementor-id=\\"\d+\\" class=\\")'
+            rb'([A-Za-z0-9_ -]+)(\\")',
+            order_classes,
+            payload,
+        )
+        return hashlib.sha256(ordered).hexdigest()
+    return _normalized_content_sha256(payload, strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS)
+
+
 def _load(path: Path) -> dict[str, object]:
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
@@ -117,9 +139,7 @@ def _fetch_marker(url: str, preferred_kind: str | None = None) -> tuple[str, str
         last_modified = response.headers.get("Last-Modified")
         host = (urlparse(url).hostname or "").casefold()
         if preferred_kind == "normalized-content-sha256":
-            return "normalized-content-sha256", _normalized_content_sha256(
-                read_content(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
-            )
+            return "normalized-content-sha256", _normalized_marker(url, read_content())
         if preferred_kind == "content-sha256":
             return "content-sha256", hashlib.sha256(read_content()).hexdigest()
         if preferred_kind == "etag" and etag and not etag.startswith("W/"):
@@ -129,9 +149,7 @@ def _fetch_marker(url: str, preferred_kind: str | None = None) -> tuple[str, str
         if preferred_kind is not None:
             return "content-sha256", hashlib.sha256(read_content()).hexdigest()
         if host in NORMALIZED_HTML_HOSTS:
-            return "normalized-content-sha256", _normalized_content_sha256(
-                read_content(), strip_trailing=url in TRAILING_WHITESPACE_NORMALIZED_URLS
-            )
+            return "normalized-content-sha256", _normalized_marker(url, read_content())
         if etag and not etag.startswith("W/"):
             return "etag", etag
         if last_modified:

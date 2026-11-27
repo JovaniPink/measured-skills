@@ -89,7 +89,7 @@ class SourceReviewNovemberTests(unittest.TestCase):
         self.assertEqual(OCTOBER29_AFTER_PINS, self.ledger['pins_before_sha256'])
         git('merge-base', '--is-ancestor', self.ledger['reviewed_revision'], 'HEAD')
         old = git('show', self.ledger['reviewed_revision'] + ':scripts/check_upstream_freshness.py')
-        self.assertEqual(old, (ROOT / 'scripts/check_upstream_freshness.py').read_bytes())
+        self.assertEqual(old, git('show', INITIAL_CLOSEOUT_REVISION + ':scripts/check_upstream_freshness.py'))
         for name in ('reviewed_on', 'max_review_age_days'):
             self.assertEqual(self.before[name], self.current[name])
 

@@ -16,8 +16,8 @@ source revision `fe7220127bb9fd026629572ec052a84f988f48f4`. Its SHA-256 is
 | --- | --- |
 | Package reproduction | Two builds reproduced the 91 Claude.ai ZIPs and checksum list byte for byte. Their bytes match the tracked files. |
 | CLI lifecycle and rollback | Disposable Claude Code 2.1.316, Codex CLI 0.169.0, and Antigravity CLI 1.5.16 passed all 30 checkpoints across 225 package commands. The rehearsal crossed the `v0.16.0` pack rename and used the offline preview for Antigravity rollback. Pack contents matched the tested source. |
-| Codex desktop discovery | A fresh desktop runtime listed `measured-workflows:draft-prompt` from the installed cache. This covers discovery on one Mac. |
-| Source freshness | The online preflight matched 22 of 69 pinned sources. The other 47 fingerprints changed and need individual review before a freeze or repin. |
+| Installed packs and discovery | On one Mac, all 12 installed pack trees matched the tested package hashes. Fresh Codex CLI and desktop sessions, Claude Code, and Antigravity CLI listed `draft-prompt`. The installed `plan-change` reference matched its source on all three CLIs. |
+| Source freshness | The [initial check](audits/source-check-initial-2026-11-27.json) flagged 47 of 69 sources. The [individual findings](audits/source-review-2026-11-27.json) identify the guidance and evidence for each repin. See the [final online check](audits/source-check-final-2026-11-27.json) for the result on these pins. |
 | Human chooser and account controls | The ten-card exercise has no scored participant. The exploration account-controls check still needs confirmation. |
 | Candidate freeze and hosted checks | [Hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/45685629944) passed on the merged preflight source. The final tag candidate needs a freeze and its own hosted check. |
 | Studio and standalone chooser | Track each site's catalog pin, preview, and served revision separately. Production publication has its own decision. |
