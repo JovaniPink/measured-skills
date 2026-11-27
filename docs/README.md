@@ -1,7 +1,7 @@
 # Use Measured Skills
 
 Start at **[Find your next workflow](start.md)**. It is the single beginner entry
-point for the 0.19 preview, with an offline chooser and Markdown view generated from one registry. The website
+point for catalog 0.19.0, with an offline chooser and Markdown view generated from one registry. The website
 pins its own export, which can be older.
 
 - [Quickstart](quickstart.md): choose a task and copy one scoped request.

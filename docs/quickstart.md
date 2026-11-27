@@ -1,7 +1,7 @@
 # Start with one useful request
 
-This is the unreleased **0.19.0 preview**. The preserved 0.18 candidate and its
-acceptance work remain separate.
+Use this guide with catalog **0.19.0**. For a pinned install, select Git tag
+`v0.19.0` in the [client setup instructions](client-support.md).
 
 1. Open [Find your next workflow](start.md). Pick a task, client, and optional stack.
    Start with **Finish existing work** if a change or review is unfinished.

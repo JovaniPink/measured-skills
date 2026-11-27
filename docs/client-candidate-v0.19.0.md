@@ -1,10 +1,14 @@
-# 0.19.0 preview acceptance
+# 0.19.0 client observations
+
+Use the [November 27 release record](release-status.md#current-checkpoint-on-november-27)
+for verified CLI packaging and the deferred human study. The earlier candidate
+observations below describe their own revisions.
 
 Catalog version: 0.19.0
 
 Status checkpoint: November 18, 2026.
 
-This is preview source. Package generation, repository checks, installation,
+At that checkpoint the source was a preview. Package generation, repository checks, installation,
 successful loading, useful behavior, and deployment are separate observations.
 The [current release status](release-status.md) identifies the merged baseline and
 remaining gates. Read the exact candidate source from [the manifest](../releases/0.19.0/manifest.json)

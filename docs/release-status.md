@@ -2,9 +2,13 @@
 
 ## Current checkpoint on November 27
 
-**0.19.0 preview. Stable release is blocked.** The planned release covers copied
-requests and packaging on the three CLIs, as set out in the
-[November 27 claim decision](audits/release-decision-0.19.0.md#november-27-2026-claim-decision).
+The 0.19.0 scope covers copied requests and the install lifecycle of four packs
+on Codex CLI, Claude Code and Antigravity CLI. The maintainer deferred the
+human chooser study. Human usability and productivity are unmeasured.
+See the [claim decision and amendment](audits/release-decision-0.19.0.md#november-27-amendment-defer-the-human-chooser-study).
+
+The [GitHub Releases page](https://github.com/JovaniPink/measured-skills/releases)
+is the publication record. A passing candidate still needs an owner tag decision.
 
 The release preflight used merged source
 `7b092d916c83a83b1dd74549e7760e9d45bb0191`. The
@@ -18,8 +22,8 @@ source revision `fe7220127bb9fd026629572ec052a84f988f48f4`. Its SHA-256 is
 | CLI lifecycle and rollback | Disposable Claude Code 2.1.316, Codex CLI 0.169.0, and Antigravity CLI 1.5.16 passed all 30 checkpoints across 225 package commands. The rehearsal crossed the `v0.16.0` pack rename and used the offline preview for Antigravity rollback. Pack contents matched the tested source. |
 | Installed packs and discovery | On one Mac, all 12 installed pack trees matched the tested package hashes. Fresh Codex CLI and desktop sessions, Claude Code, and Antigravity CLI listed `draft-prompt`. The installed `plan-change` reference matched its source on all three CLIs. |
 | Source freshness | The [initial review](audits/source-review-2026-11-27.json) covered 47 changed sources. A later [hosted check](https://github.com/JovaniPink/measured-skills/actions/runs/46052190195) and a local repeat flagged four of the 69 pins. The [PR 106 follow-up](audits/source-review-pr106-2026-11-27.json) records those four body comparisons and the later Agent Skills specification change. The final tag commit requires fresh online checks. |
-| Human chooser and account controls | The ten-card exercise has no scored participant. The exploration account-controls check still needs confirmation. |
-| Candidate freeze and hosted checks | [Hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/45685629944) passed on the merged preflight source. The final tag candidate needs a freeze and its own hosted check. |
+| Human chooser and account controls | The human chooser study is deferred and unscored. The maintainer delegated the November 27 account-controls check. Current settings were observed privately; the historical charges remain unknown. |
+| Candidate freeze and hosted checks | [PR 106](https://github.com/JovaniPink/measured-skills/pull/106) merged at `df3abf5c`. All 124 artifact hashes matched the freeze, and 428 tests and 69 source checks passed on both the M2 and GitHub. See [hosted CI](https://github.com/JovaniPink/measured-skills/actions/runs/46060272990) and [hosted freshness](https://github.com/JovaniPink/measured-skills/actions/runs/46060318299). Repeat the final checks on the commit to be tagged. |
 | Studio and standalone chooser | Track each site's catalog pin, preview, and served revision separately. Production publication has its own decision. |
 
 The CLI rehearsal used package commands and compared files. The documented

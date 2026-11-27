@@ -3,7 +3,7 @@
 Make your next code review easier to reason about. Copy a scoped request, paste
 it into your assistant, and inspect what changed, which concerns are real, and
 what remains unverified. Copied requests work today with nothing installed.
-Skills are an optional preview with published limits.
+The four optional packs supply reusable instructions and reference notes.
 
 **[Start here: find your next workflow](docs/start.md)**
 
@@ -31,14 +31,13 @@ review capacity, shared understanding, bounded retries, and regression evidence.
 The [research note](docs/research/review-and-feedback-evidence-2026-11-18.md)
 separates supporting evidence from product claims that still need testing.
 
-**0.19.0 preview:** 91 skills in four packs. This is an unreleased redesign, separate
-from the preserved [0.18 candidate](docs/client-candidate-v0.18.0.md). New names and
-packages have no inherited client acceptance. No installation or model call is
-needed to read the guide. [Preview status](docs/client-candidate-v0.19.0.md).
+**Version 0.19.0** includes 91 skills in four packs. The offline chooser has
+22 tasks. You can copy a request without installing a pack or signing in.
 
-**[Merged work and remaining release gates](docs/release-status.md):** the 0.18
-preparation and 0.19 redesign are merged. Neither version has a published GitHub
-Release. Human usability and receiving-client acceptance remain separate work.
+We verified install, upgrade, downgrade, uninstall and reinstall on Codex CLI,
+Claude Code and Antigravity CLI. Human chooser usability is unmeasured.
+[Release evidence](docs/release-status.md) and [migration instructions](docs/migration-0.19.md)
+cover the tested versions and the change from the old pack names.
 
 ## Choose work, not a catalog
 
@@ -76,14 +75,8 @@ daily and finish-work profiles retain their history with mapped 0.19 identifiers
 Codex and Claude Code projections contain 91 skills. Antigravity contains the 74
 implicit skills; all 17 explicit-only workflows remain excluded. Account archives
 are prepared separately, and explicit-only uploads remain held until the receiving
-surface's invocation control is verified. The [November 5 lifecycle record](docs/audits/lifecycle-0.19.0.md)
-covers the candidate identified there on three CLIs. Later
-[November 16 native checks](docs/audits/follow-through-native-2026-11-16.md) observed
-lifecycle and bounded loading and behavior on Codex and Claude Code for two changed
-packs. Those checks retain incomplete results and apply only to their recorded
-source, clients, and setup. They do not qualify later package changes or every
-client. [Current evidence and remaining gates](docs/client-candidate-v0.19.0.md)
-keep these observations separate from release acceptance.
+surface's invocation control is verified. The [release record](docs/release-status.md) identifies the
+frozen packages, tested CLI versions, lifecycle checks and rollback rehearsal.
 
 Use the [Codex](docs/clients/codex.md), [Claude](docs/clients/claude.md), or
 [Antigravity](docs/clients/antigravity.md) guide for the installed interface. Check

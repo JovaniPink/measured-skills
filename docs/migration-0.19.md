@@ -1,4 +1,4 @@
-# Moving to the 0.19 preview
+# Moving to Measured Skills 0.19.0
 
 This is a breaking identity migration, not an automatic update. Nothing updates
 on its own. The exact map is [0.18 to 0.19](../catalog/migrations/0.18-to-0.19.json).
@@ -6,7 +6,7 @@ The older [0.16 to 0.17 map](../catalog/plugin-migrations.json) remains intact.
 
 ## Which path you are on
 
-- **From `v0.16.0`:** this is the only public tag, and it is the tested path. Its names are `jovanipink-*`, in marketplace
+- **From `v0.16.0`:** this is the tested rollback and upgrade path. Its names are `jovanipink-*`, in marketplace
   `jovanipink-skills`. Apply the [0.16 to 0.17 map](../catalog/plugin-migrations.json), then the 0.18 to 0.19 map to
   find a skill's current name. On Antigravity, `v0.16.0` has only an offline preview, which you build from that tag.
   The [lifecycle record](audits/lifecycle-0.19.0.md) shows this upgrade and downgrade passing for packaging.

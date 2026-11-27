@@ -16,10 +16,26 @@ and reinstall for the four packs on Codex CLI, Claude Code, and Antigravity CLI.
 Each claim needs results bound to the release artifact. Model behavior,
 productivity, desktop, web, API, and Zed are outside this release claim.
 
-The required gates below still apply to the selected scope. The Claude Code
+The gate table below includes the later November 27 amendment. The Claude Code
 behavior task was a gate for the former optional behavior claim. The
 maintainer's tag and publication decisions stay separate. See
 [release status](../release-status.md) for the current qualification record.
+
+## November 27 amendment: defer the human chooser study
+
+The maintainer deferred the ten-card study for 0.19.0. Readers can choose a
+scope and copy a request without installing a pack. Verification covers the
+copied text and the install lifecycle on the three named CLIs. Human usability,
+unassisted selection time and later rediscovery are unmeasured. Keep the
+[study protocol](../acceptance-0.19.md) and its original targets for a future
+participant. Browser checks and agent walkthroughs do not earn a score.
+
+The maintainer delegated a read-only check of the exploration account's usage
+settings. The November 27 check recorded the visible credit and auto-reload
+controls privately. It establishes their state on that date. The November 5
+exploration's actual charges remain unknown. No paid task was run during this
+check. A new evaluation, tag, Release and website publication each require
+their own authorization.
 
 ## Qualification status on November 17, 2026
 
@@ -80,8 +96,8 @@ claimed", not "fails". Dated observations stay in
 | Reviewed sources and final online check | Blocks the tag |
 | Freeze | Blocks the tag |
 | Install lifecycle on all three CLIs | Blocks the tag for each CLI claimed |
-| Ten-card exercise | Blocks the tag. It must be scored against its targets, with a miss reported as a miss |
-| Exploration account check | Blocks the tag |
+| Ten-card exercise | Deferred for 0.19.0 under the November 27 amendment. Human usability is unmeasured |
+| Exploration account check | Completed November 27 for current settings. Historical charges remain unverified |
 | Claude Code acceptance task | Blocks the behavior claim. If it fails or does not run, that claim is removed |
 | Public chooser and Studio PR 143 | Gates the website, not the tag |
 | Dotfiles PR 39 | Not a tag gate. No release rule depends on it |
@@ -117,7 +133,7 @@ can compare against them.
 
 ## Rollback target
 
-Roll back to `v0.16.0`, the only public tag. It is reproducible, but it has no
+Roll back to the previously published `v0.16.0` tag. It is reproducible, but it has no
 accepted client behavior, so it is a known package and not a qualified one. It uses
 `jovanipink-*` names, so rollback crosses the rename in
 [the migration guide](../measured-migration.md).

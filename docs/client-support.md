@@ -6,9 +6,9 @@ Equal priority does not mean every feature already works everywhere. We record w
 
 ## Start with your client
 
-These are 0.19 preview package counts, not installed-client acceptance. Start
-with [the task chooser](start.md); verify the installed version and entry before
-using a command.
+The install lifecycle passed on all three CLIs for the frozen packages.
+Start with [the task chooser](start.md) and verify the installed entry in a
+fresh session before using its command.
 
 | Client | What we prepare | Where to start |
 | --- | --- | --- |
@@ -23,11 +23,9 @@ covers copied requests and the install lifecycle on the three CLIs. Model
 behavior, desktop, web, API, and Zed remain outside the release claim. The
 [release status](release-status.md) shows which checks still need evidence.
 
-The [0.19 preview record](client-candidate-v0.19.0.md) has no receiving-client
-acceptance. The [preserved 0.18 record](client-candidate-v0.18.0.md) retains its
-dated observations; [release status](release-status.md) separates the versions
-and remaining gates. A prepared package is not a recommendation to enable it
-before its checks pass.
+The [client observations](client-candidate-v0.19.0.md) identify the versions used
+in earlier checks. Account uploads, desktop behavior and model outcomes each
+have their own evidence requirements.
 
 ## What each client must pass
 
