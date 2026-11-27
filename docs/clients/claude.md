@@ -1,6 +1,8 @@
 # Claude setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Claude Code 2.1.316. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+The 0.19.0 packaging check covered install, upgrade, downgrade, uninstall and
+reinstall on Claude Code 2.1.316. Start with the [chooser](../start.md),
+[migration guide](../migration-0.19.md) and [release evidence](../release-status.md).
 
 Before copying a command, follow [installed-name and missing-entry guidance](../start.md#use-the-guide-with-the-skills-you-actually-have). Remove an unavailable native command before sending an ordinary request; do not rely on fallback text after an unknown slash command.
 
@@ -14,7 +16,7 @@ A **Code plugin** is a package installed for Claude Code. An **account upload** 
 
 See the [September account repair check](../claude-account-repair-2026-09-08.md) for dated results and remaining app checks.
 
-Read the [0.19 preview record](../client-candidate-v0.19.0.md) before enabling an update. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps the 0.16.0 packages and the lifted Code hold on the former engineering pack. That history does not carry over to the three packs that replaced it. The 0.13.0 command-line observation keeps its own record. The 0.12.0 account replacements and the older checks below keep their original dates and versions.
+Read the [0.19 client record](../client-candidate-v0.19.0.md) before enabling an update. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps the 0.16.0 packages and the lifted Code hold on the former engineering pack. That history does not carry over to the three packs that replaced it. The 0.13.0 command-line observation keeps its own record. The 0.12.0 account replacements and the older checks below keep their original dates and versions.
 
 ## Check what is there
 
@@ -29,8 +31,7 @@ Check personal, project, plugin, managed, account-synced and bundled skills for 
 
 Claude Code 2.1.316 installed Workflows from the GitHub repository in a fresh
 client home. Adding the repository without a ref follows its default branch.
-For the current preview, add a local checkout of the reviewed commit. Once
-the stable tag is published, register the tagged repository:
+Select the release tag for a pinned install:
 
 ```sh
 claude plugin marketplace add 'JovaniPink/measured-skills#v0.19.0' --scope user

@@ -1,6 +1,8 @@
 # 0.19 acceptance: finding and finishing work
 
-Status: prepared, not run. These are chosen product targets, not measured benefits.
+The maintainer deferred this study for 0.19.0 on November 27. No participant
+has been scored. The targets and recording procedure below are available for a
+future study. See the [release decision](audits/release-decision-0.19.0.md#november-27-amendment-defer-the-human-chooser-study).
 The first exercise has no model calls. This file is the facilitator record and contains
 the answer key. Give the participant the [separate task sheet](acceptance-0.19-participant.md),
 not this answer table. Give the user one initial orientation, then

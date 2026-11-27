@@ -1,6 +1,8 @@
 # Codex setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Codex CLI 0.161.0. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+The 0.19.0 packaging check covered install, upgrade, downgrade, uninstall and
+reinstall on Codex CLI 0.169.0. Start with the [chooser](../start.md),
+[migration guide](../migration-0.19.md) and [release evidence](../release-status.md).
 
 Before copying a command, follow [installed-name and missing-entry guidance](../start.md#use-the-guide-with-the-skills-you-actually-have). An older installed pack does not supply a renamed 0.19 entry.
 
@@ -10,7 +12,7 @@ apply to their recorded versions, not every current installation.
 
 Use the generated Codex plugin for terminal or desktop code work. Check ChatGPT Work and web separately. They may have different loading and file access.
 
-Check the [0.19 preview record](../client-candidate-v0.19.0.md) before enabling an update. The former engineering pack was held from 0.12.0, when an original motion safety case failed. That hold was lifted on 2026-09-10 after all ten original cases met their expectation on CLI 0.153.2 at 0.14.0. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps that history. It does not carry over to the three packs that replaced the former pack. Codex CLI 0.154.0 copies each added plugin into `plugins/cache/<marketplace>/<plugin>/<version>/` under its home folder, and `codex plugin remove` deletes that copy. A changed checkout is therefore not the installed version until the plugin is added again. Compare the cached files, not the checkout.
+Check the [0.19 client record](../client-candidate-v0.19.0.md) before enabling an update. The former engineering pack was held from 0.12.0, when an original motion safety case failed. That hold was lifted on 2026-09-10 after all ten original cases met their expectation on CLI 0.153.2 at 0.14.0. The [0.16.0 record](../client-candidate-v0.16.0.md) keeps that history. It does not carry over to the three packs that replaced the former pack. Codex CLI 0.154.0 copies each added plugin into `plugins/cache/<marketplace>/<plugin>/<version>/` under its home folder, and `codex plugin remove` deletes that copy. A changed checkout is therefore not the installed version until the plugin is added again. Compare the cached files, not the checkout.
 
 ## Check what is there
 
@@ -26,14 +28,14 @@ Look for old copies in personal or project skill folders as well as the plugin c
 ## Install one reviewed pack
 
 Codex CLI 0.169.0 installed Workflows from the GitHub marketplace at the
-reviewed preview commit in a fresh client home:
+reviewed commit in a fresh client home. Select the release tag for a pinned install:
 
 ```sh
-codex plugin marketplace add https://github.com/JovaniPink/measured-skills.git --ref 7b092d916c83a83b1dd74549e7760e9d45bb0191
+codex plugin marketplace add https://github.com/JovaniPink/measured-skills.git --ref v0.19.0
 codex plugin add measured-workflows@measured-skills
 ```
 
-Once the stable tag is published, use `--ref v0.19.0` to select it.
+The marketplace ref selects the source for all four packs.
 
 Replace the example path with your local checkout. These commands change your install:
 

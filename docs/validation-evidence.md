@@ -1,9 +1,9 @@
 # Validation Evidence
 
-Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
+See the [0.19.0 packaging checks and limits](release-status.md#current-checkpoint-on-november-27). The [client observations](client-candidate-v0.19.0.md) below retain their original scope.
 
 
-Current preview inventory: 91 canonical skills in four packs. The 0.19 discovery
+Catalog 0.19.0 contains 91 canonical skills in four packs. The 0.19 discovery
 and identity migration retains the 0.18 candidate as historical source. Validation
 results for this change are recorded separately; earlier counts below are historical.
 

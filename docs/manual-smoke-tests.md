@@ -1,6 +1,6 @@
 # Manual Cross-Client Smoke Tests
 
-Current preview: [0.19 evidence and limits](client-candidate-v0.19.0.md). Earlier records below retain their original scope.
+See the [0.19.0 packaging checks and limits](release-status.md#current-checkpoint-on-november-27). The [client observations](client-candidate-v0.19.0.md) below retain their original scope.
 
 
 For 0.19, see the [install lifecycle record](audits/lifecycle-0.19.0.md). See the [preserved 0.18.0 candidate checks](client-candidate-v0.18.0.md). Older observations below retain their original package versions.

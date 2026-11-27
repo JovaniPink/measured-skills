@@ -1,6 +1,8 @@
 # Antigravity setup
 
-**0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Antigravity CLI 1.4.7. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
+The 0.19.0 packaging check covered install, upgrade, downgrade, uninstall and
+reinstall on Antigravity CLI 1.5.16. Start with the [chooser](../start.md),
+[migration guide](../migration-0.19.md) and [release evidence](../release-status.md).
 
 Antigravity CLI 1.5.16 validated all four 0.19.0 pack directories under
 `plugins/antigravity/`. Install each reviewed directory with
@@ -9,7 +11,7 @@ Antigravity CLI 1.5.16 validated all four 0.19.0 pack directories under
 skills were present and a fresh session listed `draft-prompt`. This CLI
 rejected all four entries in the preview `.gemini/plugins/marketplace.json`
 because each source lacks a URL. Use the directory install on this version.
-See the [preview record](../client-candidate-v0.19.0.md) for qualification scope.
+See the [client record](../client-candidate-v0.19.0.md) for qualification scope.
 
 For future headless evaluations, select the intended permission mode explicitly.
 From 1.5.7 onward, an unset `agentMode` can select `auto` where available.
@@ -32,10 +34,11 @@ In the desktop app, open **Settings > Customizations** and inspect the skill lis
 
 ## Install modular packs
 
-Google's [combined plugin guide](https://www.antigravity.google/docs/plugins?tab=cli) documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It also describes an interactive marketplace and inline `/plugin` commands. Clone and review the repository, then install one pack from its folder:
+Google's [combined plugin guide](https://www.antigravity.google/docs/plugins?tab=cli) documents `agy plugin install` for a local plugin folder, plus `list`, `enable`, `disable`, and `uninstall`. It also describes an interactive marketplace and inline `/plugin` commands. For a fresh tagged checkout, run the following commands. Review the pack directory before installing it.
 
 ```sh
-agy plugin install /absolute/path/to/measured-skills/plugins/antigravity/measured-quality
+git clone --branch v0.19.0 --depth 1 https://github.com/JovaniPink/measured-skills.git
+agy plugin install ./measured-skills/plugins/antigravity/measured-quality
 agy plugin enable measured-quality
 agy plugin list --json
 ```
