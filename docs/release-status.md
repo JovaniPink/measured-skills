@@ -1,6 +1,32 @@
 # Merged work and remaining release gates
 
-## Current checkpoint on November 18
+## Current checkpoint on November 27
+
+**0.19.0 preview. Stable release is blocked.** The planned release covers copied
+requests and packaging on the three CLIs, as set out in the
+[November 27 claim decision](audits/release-decision-0.19.0.md#november-27-2026-claim-decision).
+
+The release preflight used merged source
+`7b092d916c83a83b1dd74549e7760e9d45bb0191`. The
+[discovery export](../dist/discovery/catalog.json) contains 91 skills and uses
+source revision `fe7220127bb9fd026629572ec052a84f988f48f4`. Its SHA-256 is
+`bb58fc89e2df66b8fa83d28891af0050164bd48c55028ccc9580d2e4abff6cca`.
+
+| Gate | November 27 evidence |
+| --- | --- |
+| Package reproduction | Two builds reproduced the 91 Claude.ai ZIPs and checksum list byte for byte. Their bytes match the tracked files. |
+| CLI lifecycle and rollback | Disposable Claude Code 2.1.316, Codex CLI 0.169.0, and Antigravity CLI 1.5.16 passed all 30 checkpoints across 225 package commands. The rehearsal crossed the `v0.16.0` pack rename and used the offline preview for Antigravity rollback. Pack contents matched the tested source. |
+| Codex desktop discovery | A fresh desktop runtime listed `measured-workflows:draft-prompt` from the installed cache. This covers discovery on one Mac. |
+| Source freshness | The online preflight matched 22 of 69 pinned sources. The other 47 fingerprints changed and need individual review before a freeze or repin. |
+| Human chooser and account controls | The ten-card exercise has no scored participant. The exploration account-controls check still needs confirmation. |
+| Candidate freeze and hosted checks | [Hosted validation](https://github.com/JovaniPink/measured-skills/actions/runs/45685629944) passed on the merged preflight source. The final tag candidate needs a freeze and its own hosted check. |
+| Studio and standalone chooser | Track each site's catalog pin, preview, and served revision separately. Production publication has its own decision. |
+
+The CLI rehearsal used package commands and compared files. The documented
+scope excludes model behavior and productivity claims. Historical records below
+retain their original dates and revisions.
+
+## Historical November 18 checkpoint
 
 The source checkpoint for this audit is [PR #99](https://github.com/JovaniPink/measured-skills/pull/99),
 merged at `fd3c088efca83c6cf09d499aa6e94393931ba0aa`.

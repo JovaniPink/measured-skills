@@ -8,6 +8,19 @@ separate decision.
 Earlier records say that a smaller result or narrower claim needs its own reviewed
 decision, not a passing label. This is that decision for 0.19.0.
 
+## November 27, 2026 claim decision
+
+The maintainer selected copied requests and CLI packaging for the first stable
+release. The packaging claim covers install, upgrade, downgrade, uninstall,
+and reinstall for the four packs on Codex CLI, Claude Code, and Antigravity CLI.
+Each claim needs results bound to the release artifact. Model behavior,
+productivity, desktop, web, API, and Zed are outside this release claim.
+
+The required gates below still apply to the selected scope. The Claude Code
+behavior task was a gate for the former optional behavior claim. The
+maintainer's tag and publication decisions stay separate. See
+[release status](../release-status.md) for the current qualification record.
+
 ## Qualification status on November 17, 2026
 
 The accepted decision above remains the November 5 decision. Later source changes
@@ -33,7 +46,7 @@ their candidate and client states do not replace the later dated observations.
 See [current release status](../release-status.md) for the source identities and
 [client evidence](../client-candidate-v0.19.0.md) for the dated observations.
 
-## What a stable 0.19.0 would claim
+## Claims considered in the November 5 decision
 
 - Copied requests work with nothing installed.
 - The four packs install, upgrade, downgrade, uninstall, and reinstall on Claude Code
