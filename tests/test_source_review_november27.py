@@ -1,4 +1,4 @@
-"""Bind the live pins to the individual November 27 reviews and their receipts."""
+"""Bind both November 27 pin transitions to their individual source reviews."""
 from __future__ import annotations
 
 import hashlib
@@ -8,6 +8,7 @@ import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+PR106_BASE = '6b6022ce53cedbba1614e96c44a9db8e8cb1ecfd'
 
 
 class NovemberSourceCloseoutTests(unittest.TestCase):
@@ -41,7 +42,8 @@ class NovemberSourceCloseoutTests(unittest.TestCase):
             for obs in record['observations']:
                 self.assertEqual((new['marker_kind'], new['marker_value']), (obs['marker_kind'], obs['marker_value']))
             expected[new['source_url']] = new
-        current_bytes = (ROOT / 'catalog/upstream-pins.json').read_bytes()
+        current_bytes = subprocess.check_output(
+            ['git', 'show', PR106_BASE + ':catalog/upstream-pins.json'], cwd=ROOT)
         self.assertEqual(hashlib.sha256(current_bytes).hexdigest(), ledger['pins_after_sha256'])
         current = json.loads(current_bytes)
         self.assertEqual(original['reviewed_on'], current['reviewed_on'])
@@ -56,3 +58,31 @@ class NovemberSourceCloseoutTests(unittest.TestCase):
             marker = pin['marker_kind'] + ':' + pin['marker_value']
             self.assertEqual((marker, marker, 'pass'),
                              (observation['expected_marker'], observation['observed_marker'], observation['result']))
+
+    def test_pr106_repins_only_the_four_reviewed_markers(self) -> None:
+        ledger = json.loads((ROOT / 'docs/audits/source-review-pr106-2026-11-27.json').read_bytes())
+        self.assertEqual(PR106_BASE, ledger['reviewed_revision'])
+        baseline = subprocess.check_output(['git', 'show', PR106_BASE + ':catalog/upstream-pins.json'], cwd=ROOT)
+        self.assertEqual(hashlib.sha256(baseline).hexdigest(), ledger['pins_before_sha256'])
+        expected = json.loads(baseline)
+        pins = {r['source_url']: r for r in expected['sources']}
+        reviews = {r['url']: r for r in json.loads((ROOT / 'catalog/upstream-reviews.json').read_bytes())['reviews']}
+        records = ledger['records']
+        self.assertEqual(4, len(records))
+        self.assertEqual(4, len({r['source_url'] for r in records}))
+        for row in records:
+            url = row['source_url']
+            pin = pins[url]
+            self.assertEqual((pin['marker_kind'], pin['marker_value']), (row['marker_kind'], row['previous_value']))
+            self.assertNotEqual(row['previous_value'], row['reviewed_value'])
+            self.assertEqual(row['affected_skills'], reviews[url]['affected_skills'])
+            self.assertIn(row['finding'], reviews[url]['finding'])
+            observations = row['observations']
+            self.assertGreaterEqual(len({o['observed_at'] for o in observations}), 2)
+            for observation in observations:
+                self.assertEqual((pin['marker_kind'], row['reviewed_value']),
+                                 (observation['marker_kind'], observation['marker_value']))
+            pin['marker_value'] = row['reviewed_value']
+        live = (ROOT / 'catalog/upstream-pins.json').read_bytes()
+        self.assertEqual(expected, json.loads(live))
+        self.assertEqual(hashlib.sha256(live).hexdigest(), ledger['pins_after_sha256'])

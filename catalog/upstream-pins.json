@@ -102,7 +102,7 @@
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
       "marker_kind": "etag",
-      "marker_value": "\"680aefc8d90400d3f97b5a7abc3f9279\""
+      "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
     },
     {
       "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
@@ -182,7 +182,7 @@
     {
       "source_url": "https://docs.swift.org/latest/documentation/",
       "marker_kind": "etag",
-      "marker_value": "\"f63-661435372cec0\""
+      "marker_value": "\"f63-66145d47f1580\""
     },
     {
       "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
@@ -197,7 +197,7 @@
     {
       "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "15c1d6ed3613fc4d09c0d22b270a0b3c2f1e29e8ca519a052f3925df8c44646d"
+      "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
     },
     {
       "source_url": "https://git-scm.com/docs/git-merge",
@@ -247,7 +247,7 @@
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
       "marker_kind": "etag",
-      "marker_value": "\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\""
+      "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
     },
     {
       "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",

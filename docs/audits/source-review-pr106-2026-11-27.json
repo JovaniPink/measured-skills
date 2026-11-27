@@ -1,0 +1,140 @@
+{
+  "reviewed_on": "2026-11-27",
+  "reviewed_revision": "6b6022ce53cedbba1614e96c44a9db8e8cb1ecfd",
+  "failed_hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46052190195",
+  "hosted_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
+  "m2_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
+  "pins_before_sha256": "3a6c70206c0f903a3d629f0db3a594b9b703c8db9ebd82cc7085b97f5ea420d0",
+  "pins_after_sha256": "190a35f7a78c187d44589b20fcafa6f2ee879773a836bf8ccd5bf5edda799506",
+  "method": "Compare retained publisher bodies with two fresh captures per URL. Match both live markers to the M2 and hosted failure reports before repinning. Keep the existing marker kinds, checker, review-age policy, and skill instructions.",
+  "records": [
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "affected_skills": [
+        "stack-terraform"
+      ],
+      "marker_kind": "etag",
+      "previous_value": "\"680aefc8d90400d3f97b5a7abc3f9279\"",
+      "reviewed_value": "\"4778062552b0be0dc6bb2f64646b698f\"",
+      "previous_body_sha256": "8178a68e43096707c2700181f501d73b0760ef92c05ffc5e4b0123efaec47a81",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.614393+00:00",
+          "raw_sha256": "6aa833495d0f5a5d4a097728471af8e5761a36c3c195094db3d7331a618dd36c",
+          "body_bytes": 222620,
+          "marker_kind": "etag",
+          "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:18.126481+00:00",
+          "raw_sha256": "6aa833495d0f5a5d4a097728471af8e5761a36c3c195094db3d7331a618dd36c",
+          "body_bytes": 222620,
+          "marker_kind": "etag",
+          "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
+        }
+      ],
+      "finding": "The extracted text and all 104 anchor destinations match. Deployment and asset identifiers changed. The embedded page data differs only in its response date and request ID. The language guidance used by stack-terraform is unchanged."
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "marker_kind": "etag",
+      "previous_value": "\"f63-661435372cec0\"",
+      "reviewed_value": "\"f63-66145d47f1580\"",
+      "previous_body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.255012+00:00",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "body_bytes": 3939,
+          "marker_kind": "etag",
+          "marker_value": "\"f63-66145d47f1580\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:17.642035+00:00",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "body_bytes": 3939,
+          "marker_kind": "etag",
+          "marker_value": "\"f63-66145d47f1580\""
+        }
+      ],
+      "finding": "The landing page has a new ETag. Its body and the separate documentation topic index are byte-identical to the retained copies. The stack profile still requires repository-specific compiler and SDK evidence.",
+      "companion": {
+        "source_url": "https://docs.swift.org/latest/data/documentation.json",
+        "previous_body_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+        "observations": [
+          {
+            "observed_at": "2026-11-27T18:58:17.539820+00:00",
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "body_bytes": 12417,
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          },
+          {
+            "observed_at": "2026-11-27T18:58:17.659020+00:00",
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "body_bytes": 12417,
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          }
+        ]
+      }
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "affected_skills": [
+        "review-agent-security"
+      ],
+      "marker_kind": "normalized-content-sha256",
+      "previous_value": "15c1d6ed3613fc4d09c0d22b270a0b3c2f1e29e8ca519a052f3925df8c44646d",
+      "reviewed_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900",
+      "previous_body_sha256": "6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.185013+00:00",
+          "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "body_bytes": 601686,
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+        },
+        {
+          "observed_at": "2026-11-27T18:58:17.710980+00:00",
+          "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "body_bytes": 601686,
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+        }
+      ],
+      "finding": "Only the rendered content field changed. Comparing audience label and link pairs and CSS class membership without their order yields identical HTML. The resource listings and the guidance used by review-agent-security are unchanged."
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "marker_kind": "etag",
+      "previous_value": "\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\"",
+      "reviewed_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\"",
+      "previous_body_sha256": "327a0d48f1b3d1f80e90e1d8507c37aea64d397a8dfa0e778d261266d9542290",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.719862+00:00",
+          "raw_sha256": "d6223498de1ef0fae81b32c8d10db3b9542fd97df3d6d892c64a9e25de93a174",
+          "body_bytes": 406519,
+          "marker_kind": "etag",
+          "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:18.634718+00:00",
+          "raw_sha256": "d6223498de1ef0fae81b32c8d10db3b9542fd97df3d6d892c64a9e25de93a174",
+          "body_bytes": 406519,
+          "marker_kind": "etag",
+          "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
+        }
+      ],
+      "finding": "The only changed bytes are in the hosting telemetry script attribute. The signal documentation text and all 889 anchor destinations match. The signal model used by design-observability is unchanged."
+    }
+  ]
+}
