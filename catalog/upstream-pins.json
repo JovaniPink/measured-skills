@@ -32,7 +32,7 @@
     {
       "source_url": "https://agentskills.io/specification",
       "marker_kind": "content-sha256",
-      "marker_value": "8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa"
+      "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
     },
     {
       "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
@@ -181,8 +181,8 @@
     },
     {
       "source_url": "https://docs.swift.org/latest/documentation/",
-      "marker_kind": "etag",
-      "marker_value": "\"f63-66145d47f1580\""
+      "marker_kind": "content-sha256",
+      "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
     },
     {
       "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
@@ -246,8 +246,8 @@
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
-      "marker_kind": "etag",
-      "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
+      "marker_kind": "normalized-content-sha256",
+      "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
     },
     {
       "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",

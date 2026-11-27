@@ -59,7 +59,7 @@ class NovemberSourceCloseoutTests(unittest.TestCase):
             self.assertEqual((marker, marker, 'pass'),
                              (observation['expected_marker'], observation['observed_marker'], observation['result']))
 
-    def test_pr106_repins_only_the_four_reviewed_markers(self) -> None:
+    def test_pr106_repins_only_the_reviewed_markers(self) -> None:
         ledger = json.loads((ROOT / 'docs/audits/source-review-pr106-2026-11-27.json').read_bytes())
         self.assertEqual(PR106_BASE, ledger['reviewed_revision'])
         baseline = subprocess.check_output(['git', 'show', PR106_BASE + ':catalog/upstream-pins.json'], cwd=ROOT)
@@ -68,21 +68,25 @@ class NovemberSourceCloseoutTests(unittest.TestCase):
         pins = {r['source_url']: r for r in expected['sources']}
         reviews = {r['url']: r for r in json.loads((ROOT / 'catalog/upstream-reviews.json').read_bytes())['reviews']}
         records = ledger['records']
-        self.assertEqual(4, len(records))
-        self.assertEqual(4, len({r['source_url'] for r in records}))
+        self.assertEqual(5, len(records))
+        self.assertEqual(5, len({r['source_url'] for r in records}))
+        kind_changes = {'https://docs.swift.org/latest/documentation/': 'content-sha256',
+                        'https://opentelemetry.io/docs/concepts/signals/': 'normalized-content-sha256'}
         for row in records:
             url = row['source_url']
             pin = pins[url]
-            self.assertEqual((pin['marker_kind'], pin['marker_value']), (row['marker_kind'], row['previous_value']))
+            self.assertEqual(pin['marker_kind'], row.get('previous_kind', row['marker_kind']))
+            self.assertEqual(pin['marker_value'], row['previous_value'])
+            self.assertEqual(kind_changes.get(url, pin['marker_kind']), row['marker_kind'])
             self.assertNotEqual(row['previous_value'], row['reviewed_value'])
             self.assertEqual(row['affected_skills'], reviews[url]['affected_skills'])
             self.assertIn(row['finding'], reviews[url]['finding'])
             observations = row['observations']
             self.assertGreaterEqual(len({o['observed_at'] for o in observations}), 2)
             for observation in observations:
-                self.assertEqual((pin['marker_kind'], row['reviewed_value']),
+                self.assertEqual((row['marker_kind'], row['reviewed_value']),
                                  (observation['marker_kind'], observation['marker_value']))
-            pin['marker_value'] = row['reviewed_value']
+            pin.update(marker_kind=row['marker_kind'], marker_value=row['reviewed_value'])
         live = (ROOT / 'catalog/upstream-pins.json').read_bytes()
         self.assertEqual(expected, json.loads(live))
         self.assertEqual(hashlib.sha256(live).hexdigest(), ledger['pins_after_sha256'])

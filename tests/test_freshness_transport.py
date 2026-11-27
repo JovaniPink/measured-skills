@@ -69,6 +69,36 @@ class FreshnessTransportTests(unittest.TestCase):
         with patch('check_upstream_freshness.urllib.request.urlopen', return_value=Response(payload, encoding)):
             return freshness._fetch_marker('https://antigravity.google/docs/skills.md', kind)
 
+    def test_swift_landing_fingerprint_tracks_body_despite_deployment_etags(self) -> None:
+        url = 'https://docs.swift.org/latest/documentation/'
+        def fetch(body: bytes, etag: str) -> tuple[str, str]:
+            response = Response(body, None)
+            response.headers['ETag'] = etag
+            with patch('check_upstream_freshness.urllib.request.urlopen', return_value=response):
+                return freshness._fetch_marker(url)
+        marker = fetch(b'Swift index', '"one"')
+        self.assertEqual(('content-sha256', hashlib.sha256(b'Swift index').hexdigest()), marker)
+        self.assertEqual(marker, fetch(b'Swift index', '"two"'))
+        self.assertNotEqual(marker, fetch(b'Changed index', '"one"'))
+
+    def test_signal_fingerprint_preserves_document_and_telemetry_script_identity(self) -> None:
+        url = 'https://opentelemetry.io/docs/concepts/signals/'
+        body = (b'<p>Traces</p><script async id="netlify-rum-container" src="/.netlify/scripts/rum" '
+                b'data-netlify-deploy-context="production" data-netlify-cwv-token="abc.def.ghi"></script>')
+        def fetch(payload: bytes, address: str = url) -> tuple[str, str]:
+            with patch('check_upstream_freshness.urllib.request.urlopen', return_value=Response(payload, None)):
+                return freshness._fetch_marker(address)
+        marker = fetch(body)
+        self.assertEqual('normalized-content-sha256', marker[0])
+        changed_token = body.replace(b'abc.def.ghi', b'abc.new.sig')
+        self.assertEqual(marker, fetch(changed_token))
+        for old, new in [(b'Traces', b'Metrics'), (b'/rum"', b'/other"'), (b'production', b'preview'),
+                         (b'netlify-rum-container', b'other'), (b'abc.def.ghi', b'unrecognized')]:
+            self.assertNotEqual(marker, fetch(body.replace(old, new)))
+        other_url = url + 'traces/'
+        self.assertNotEqual(freshness._normalized_marker(other_url, body),
+                            freshness._normalized_marker(other_url, changed_token))
+
     def test_gzip_and_identity_bind_the_same_complete_document(self) -> None:
         body = b'# Source\r\nKeep permission checks.\n\n'
         expected = ('content-sha256', hashlib.sha256(body).hexdigest())

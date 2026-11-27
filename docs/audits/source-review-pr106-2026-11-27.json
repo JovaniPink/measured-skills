@@ -5,8 +5,8 @@
   "hosted_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
   "m2_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
   "pins_before_sha256": "3a6c70206c0f903a3d629f0db3a594b9b703c8db9ebd82cc7085b97f5ea420d0",
-  "pins_after_sha256": "f822b055f87fb8e6bf4eb68face4d1364763a99e2c4efade2ace7465dd4ab3e5",
-  "method": "Compare retained publisher bodies with two fresh captures per URL. Match the four original differences to the M2 and hosted failure reports. The OWASP record explains the additional hosted observation and its ordering rule. The marker kinds, review-age policy, and skill instructions are preserved.",
+  "pins_after_sha256": "685f49e90e23631b3225cf53829c39d7c766c7ca38b3bcb50e0eaf8e1ea55890",
+  "method": "Compare retained publisher bodies with repeat captures per source and preserve prior failed receipts. Four changes triggered the first review. The Agent Skills specification changed during reruns. Record endpoint-specific marker decisions separately. The global review-age policy and skill instructions are preserved.",
   "records": [
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
@@ -40,11 +40,49 @@
       "affected_skills": [
         "stack-swift-swiftui"
       ],
-      "marker_kind": "etag",
+      "marker_kind": "content-sha256",
       "previous_value": "\"f63-661435372cec0\"",
-      "reviewed_value": "\"f63-66145d47f1580\"",
+      "reviewed_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
       "previous_body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
       "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:16.948850+00:00",
+          "body_bytes": 3939,
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "content-sha256",
+          "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.049456+00:00",
+          "body_bytes": 3939,
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "content-sha256",
+          "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
+        }
+      ],
+      "finding": "New deployment ETags accompanied identical landing-page bytes. Pin the full response body with SHA-256. The separately pinned documentation topic index is also byte-identical. The stack profile still requires repository-specific SDK and compiler evidence.",
+      "companion": {
+        "source_url": "https://docs.swift.org/latest/data/documentation.json",
+        "previous_body_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+        "observations": [
+          {
+            "observed_at": "2026-11-27T19:12:16.949076+00:00",
+            "body_bytes": 12417,
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          },
+          {
+            "observed_at": "2026-11-27T19:12:17.057582+00:00",
+            "body_bytes": 12417,
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          }
+        ]
+      },
+      "previous_kind": "etag",
+      "intermediate_etag_observations": [
         {
           "observed_at": "2026-11-27T18:58:17.255012+00:00",
           "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
@@ -59,28 +97,7 @@
           "marker_kind": "etag",
           "marker_value": "\"f63-66145d47f1580\""
         }
-      ],
-      "finding": "The landing page has a new ETag. Its body and the separate documentation topic index are byte-identical to the retained copies. The stack profile still requires repository-specific compiler and SDK evidence.",
-      "companion": {
-        "source_url": "https://docs.swift.org/latest/data/documentation.json",
-        "previous_body_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
-        "observations": [
-          {
-            "observed_at": "2026-11-27T18:58:17.539820+00:00",
-            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
-            "body_bytes": 12417,
-            "marker_kind": "content-sha256",
-            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
-          },
-          {
-            "observed_at": "2026-11-27T18:58:17.659020+00:00",
-            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
-            "body_bytes": 12417,
-            "marker_kind": "content-sha256",
-            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
-          }
-        ]
-      }
+      ]
     },
     {
       "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
@@ -146,11 +163,29 @@
       "affected_skills": [
         "design-observability"
       ],
-      "marker_kind": "etag",
+      "marker_kind": "normalized-content-sha256",
       "previous_value": "\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\"",
-      "reviewed_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\"",
+      "reviewed_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae",
       "previous_body_sha256": "327a0d48f1b3d1f80e90e1d8507c37aea64d397a8dfa0e778d261266d9542290",
       "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:17.150695+00:00",
+          "body_bytes": 406519,
+          "raw_sha256": "c02c71a69b431c4f032da24c103293324411626c1e9a063f160925777a3f0c2d",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.968503+00:00",
+          "body_bytes": 406519,
+          "raw_sha256": "c02c71a69b431c4f032da24c103293324411626c1e9a063f160925777a3f0c2d",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
+        }
+      ],
+      "finding": "Three successive deployment bodies produce the same digest after replacing only the rotating telemetry value in the identified Netlify RUM script on the signals page. All other bytes remain covered, including signal documentation, link destinations, and script identity.",
+      "previous_kind": "etag",
+      "intermediate_etag_observations": [
         {
           "observed_at": "2026-11-27T18:58:17.719862+00:00",
           "raw_sha256": "d6223498de1ef0fae81b32c8d10db3b9542fd97df3d6d892c64a9e25de93a174",
@@ -165,8 +200,81 @@
           "marker_kind": "etag",
           "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
         }
+      ]
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "affected_skills": [
+        "track-acceptance",
+        "align-on-decisions",
+        "review-data-authority",
+        "plan-adoption",
+        "assess-change-impact",
+        "verify-claims",
+        "explain-codebase",
+        "map-capability-dependencies",
+        "run-project-checks",
+        "prepare-migration-decision",
+        "trace-decisions",
+        "record-decisions",
+        "investigate-design-rationale",
+        "model-domain-vocabulary",
+        "guide-configuration",
+        "edit-technical-writing",
+        "plan-change",
+        "learn-after-launch",
+        "measure-outcomes",
+        "design-module-interface",
+        "execute-plan",
+        "author-skill",
+        "check-launch-readiness",
+        "frame-problem",
+        "analyze-incident",
+        "build-spike",
+        "review-public-boundary",
+        "publish-change",
+        "synthesize-requirements",
+        "run-research-workflow",
+        "review-skill-import",
+        "review-skill-security",
+        "research-sources",
+        "explain-to-stakeholders",
+        "diagnose-failure",
+        "handoff-work",
+        "implement-test-first",
+        "plan-tests",
+        "review-value-evidence",
+        "plan-workshop"
       ],
-      "finding": "The only changed bytes are in the hosting telemetry script attribute. The signal documentation text and all 889 anchor destinations match. The signal model used by design-observability is unchanged."
+      "previous_value": "8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "previous_body_sha256": "8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "main_element_sha256": "0d066ef23deba6ce9674ec6b955a46d8018d5084994634203f55ccd0738b21c0",
+      "marker_kind": "content-sha256",
+      "reviewed_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:17.006347+00:00",
+          "body_bytes": 247594,
+          "raw_sha256": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+          "marker_kind": "content-sha256",
+          "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.749785+00:00",
+          "body_bytes": 247594,
+          "raw_sha256": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+          "marker_kind": "content-sha256",
+          "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
+        }
+      ],
+      "finding": "The complete main element containing the format specification is byte-identical to the retained copy. Anchor destinations match. Asset bundle and deployment references changed outside the main element. The full-page SHA-256 still covers the complete response."
     }
-  ]
+  ],
+  "later_run": {
+    "candidate": "24d917e2863ef6c320488687f2b40a55412ca0b8",
+    "hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46054599495",
+    "hosted_report_sha256": "b2bd7325fc233ff8751e0cc3b66b7a2bd7fe206d601ff9ff74e1c8bdfea69cb4",
+    "m2_report_sha256": "7708f0344b24ff7a37884add1b6ad867627dd00d083693a9b43e6ff8c134a735",
+    "finding": "GitHub detected ETag changes on Swift and OpenTelemetry and a new Agent Skills specification hash. The M2 detected the latter two changes. Both hosts passed the corrected OWASP pin."
+  }
 }
