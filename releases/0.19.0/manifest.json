@@ -1,7 +1,7 @@
 {
   "$schema": "../manifest-schema.json",
   "catalog_version": "0.19.0",
-  "source_commit": "bda1588e029676a39b2ea82125a94d3b03174c03",
+  "source_commit": "9b0e46e02eadcc7885ee72ca6d2d6febac3d042b",
   "created_on": "2026-11-27",
   "artifacts": [
     {
@@ -72,12 +72,12 @@
     {
       "kind": "file",
       "path": "catalog/upstream-pins.json",
-      "sha256": "190a35f7a78c187d44589b20fcafa6f2ee879773a836bf8ccd5bf5edda799506"
+      "sha256": "f822b055f87fb8e6bf4eb68face4d1364763a99e2c4efade2ace7465dd4ab3e5"
     },
     {
       "kind": "file",
       "path": "catalog/upstream-reviews.json",
-      "sha256": "302f62ebda99dc84af67843c20a1c831ea458dc8f75a43ab17fc7c16f65e16c0"
+      "sha256": "bf82c20afda34a32104dfd69d002e4d7d527aa4db16be5ce495b7f98faec9f43"
     },
     {
       "kind": "file",
