@@ -667,7 +667,7 @@ class CatalogTests(unittest.TestCase):
             'https://docs.cloud.google.com/dataform/docs/create-tables',
             'https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists',
             'https://docs.cloud.google.com/storage/docs/metadata',
-            'https://docs.getdbt.com/docs/build/incremental-models',
+            'https://docs.getdbt.com/docs/build/incremental-models.md',
             'https://spark.apache.org/docs/latest/sql-performance-tuning.html',
         })
         expected.update({

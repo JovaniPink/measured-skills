@@ -27,6 +27,22 @@ Check personal, project, plugin, managed, account-synced and bundled skills for 
 
 ## Install one reviewed pack
 
+Claude Code 2.1.316 installed Workflows from the GitHub repository in a fresh
+client home. Adding the repository without a ref follows its default branch.
+For the current preview, add a local checkout of the reviewed commit. Once
+the stable tag is published, register the tagged repository:
+
+```sh
+claude plugin marketplace add 'JovaniPink/measured-skills#v0.19.0' --scope user
+claude plugin install measured-workflows@measured-skills --scope user
+```
+
+For a same-version replacement, inspect both the installed cache and
+`readFromFolder`. A native update can report success while the old cache
+still exists. Back it up, uninstall the affected pack with `--keep-data`,
+move its remaining cache directory aside, and reinstall from the reviewed
+marketplace. In a fresh session, look for `measured-workflows:draft-prompt`.
+
 Replace the example path with your local checkout. These commands change your install:
 
 ```sh

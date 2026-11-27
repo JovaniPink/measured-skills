@@ -76,7 +76,9 @@ class SourceReviewNovember5Tests(unittest.TestCase):
                          hashlib.sha256(self.current_bytes).hexdigest())
         old = subprocess.check_output(['git', 'show', self.ledger['reviewed_revision'] +
                                        ':scripts/check_upstream_freshness.py'], cwd=ROOT)
-        self.assertEqual(old, (ROOT / 'scripts/check_upstream_freshness.py').read_bytes())
+        self.assertEqual(old, subprocess.check_output(
+            ['git', 'show', '15eae4ad90834867b1f65b009921211befc67c65:scripts/check_upstream_freshness.py'],
+            cwd=ROOT))
 
     def assert_followup(self, ledger: dict[str, Any], current: dict[str, Any]) -> None:
         expected = {r['source_url']: r for r in self.current['sources']}
@@ -105,9 +107,10 @@ class SourceReviewNovember5Tests(unittest.TestCase):
         self.assertEqual({k: v for k, v in self.current.items() if k != 'sources'},
                          {k: v for k, v in current.items() if k != 'sources'})
 
-    def test_followup_binds_live_pins_and_rejects_unreviewed_changes(self) -> None:
+    def test_followup_binds_november5_pins_and_rejects_unreviewed_changes(self) -> None:
         ledger = json.loads((ROOT / 'docs/audits/source-review-followup-2026-11-05.json').read_text())
-        raw = (ROOT / 'catalog/upstream-pins.json').read_bytes()
+        raw = subprocess.check_output(
+            ['git', 'show', '109942aa43ccae0aac505f8413789aae41fdb097:catalog/upstream-pins.json'], cwd=ROOT)
         current = json.loads(raw)
         self.assert_followup(ledger, current)
         receipt = json.loads((ROOT / 'docs/audits/source-check-followup-2026-11-05.json').read_text())

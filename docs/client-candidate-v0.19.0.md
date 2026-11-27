@@ -18,6 +18,10 @@ evaluation or deployment. The human chooser exercise in
 [the acceptance protocol](acceptance-0.19.md) remains unscored; the ten eligible
 ordinary-task observations remain prospective.
 
+On November 27, the maintainer set the planned stable release scope to copied
+requests and CLI packaging. The [current release record](release-status.md#current-checkpoint-on-november-27)
+tracks the new preflight separately from the observations below.
+
 ## November 16 observations and their limits
 
 The [native follow-through record](audits/follow-through-native-2026-11-16.md)

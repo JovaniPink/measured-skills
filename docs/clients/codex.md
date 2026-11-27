@@ -25,6 +25,16 @@ Look for old copies in personal or project skill folders as well as the plugin c
 
 ## Install one reviewed pack
 
+Codex CLI 0.169.0 installed Workflows from the GitHub marketplace at the
+reviewed preview commit in a fresh client home:
+
+```sh
+codex plugin marketplace add https://github.com/JovaniPink/measured-skills.git --ref 7b092d916c83a83b1dd74549e7760e9d45bb0191
+codex plugin add measured-workflows@measured-skills
+```
+
+Once the stable tag is published, use `--ref v0.19.0` to select it.
+
 Replace the example path with your local checkout. These commands change your install:
 
 ```sh

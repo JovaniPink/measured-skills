@@ -9,9 +9,10 @@ All notable changes use this file. The project follows semantic versioning after
 0.19.0 is an unreleased preview. Skill names and packs changed, so read the [migration guide](docs/migration-0.19.md) before upgrading. Old and new names must not stay installed together.
 
 - Rename skills around the task, so names now read as actions such as `plan-change` and `verify-claims`.
-- Reduce 11 packs to four: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. The catalog has 90 skills.
+- Reduce 11 packs to four: `measured-workflows`, `measured-quality`, `measured-stacks`, and `measured-operations`. The catalog has 91 skills.
 - Add safety rules from a [November 5 security review](docs/audits/skill-security-review-2026-11-05.md): ask before running checks in a repository the user has not said they trust, keep platform checks read-only, edit only on a redaction request, mask secrets in findings, and treat real Terraform backends as provider access.
 - Add a task-first chooser, offline guide, and in-client `choose-workflow` reference built from one versioned registry.
+- Add `draft-prompt` for turning rough input into a reusable request with a clear goal, scope, and expected result.
 - Add `finish-work-core`, a nine-skill starting profile, and copyable requests with a stated finish line.
 - Add a read-only scope review, focused operational workflows, and guidance on client usage and delegated permissions.
 - Ask the assess request to include uncommitted work and stashes. In one synthetic November 5 task on Claude Haiku 5.5, stash detection rose from 18 of 54 runs to 19 of 19.

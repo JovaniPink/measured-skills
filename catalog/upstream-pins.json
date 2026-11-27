@@ -12,57 +12,57 @@
     {
       "source_url": "https://adk-labs.github.io/adk-docs/",
       "marker_kind": "content-sha256",
-      "marker_value": "d7d411239ca7bd7099969177dcc73d3541fc9dd771db52550d7c69f35b2dce47"
+      "marker_value": "6ff8fbbc53cffff74b285eab19f9d0ad0b1114fad13832e855dc3cab7819334d"
     },
     {
       "source_url": "https://adk-labs.github.io/adk-docs/safety/",
       "marker_kind": "content-sha256",
-      "marker_value": "91ff08060bcfd2f36f06c691c0bdf4f0a88ae5e531aacaee5824531cac5f4a08"
+      "marker_value": "cd09fd8d948e870dab6e41bbc4685566f0b226e97d3bd447cb2c531b1c2087c2"
     },
     {
       "source_url": "https://adk-labs.github.io/adk-docs/sessions/",
       "marker_kind": "content-sha256",
-      "marker_value": "b5da52effa87a94fc0591e12e36823327d7f2ee9f17cde51b8fa930944b57c51"
+      "marker_value": "ac1e141f8123bd1a3eda68c876f1e3d77a12df48c97cd84d6bf65534de3edd1c"
     },
     {
       "source_url": "https://agent-plugins.org/specification",
       "marker_kind": "etag",
-      "marker_value": "\"41ca9ccdb6744debb6f1f1b1a70146a5\""
+      "marker_value": "\"11838183e656f67c5343e7c4128600f2\""
     },
     {
       "source_url": "https://agentskills.io/specification",
       "marker_kind": "content-sha256",
-      "marker_value": "547bce36eb2e23518efb504945d862c3e9a4b6019f64779433a1939c4021b0b7"
+      "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
     },
     {
       "source_url": "https://ai.google.dev/gemini-api/docs/agents.md.txt",
       "marker_kind": "content-sha256",
-      "marker_value": "0c34aecdad3ffb55b5c778bed4b73ce6889ed5531e80519558793767e0fec871"
+      "marker_value": "8e0417439cf7313c81f4b5652047adbf9d8fba6f89275bcb52b8fc7af64f6f35"
     },
     {
       "source_url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
       "marker_kind": "content-sha256",
-      "marker_value": "d1d878395db3926e24cc3e26568d6cc5c4a273cfd1fd879230afebfffd73a522"
+      "marker_value": "29747bc7f75ac709525539f5c97c4e4c3e559f81ffd75d4b84ba363918e6f776"
     },
     {
       "source_url": "https://airc.nist.gov/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "1031f2ad6d75f1acdf05b154bb405e03e63a63059cc0523d5add6197da5c34c3"
+      "marker_value": "a10065ab3cecf5e2e23824105b61913546f4121ea5bbdd77d027320bf79bf23e"
     },
     {
       "source_url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
       "marker_kind": "etag",
-      "marker_value": "\"331bcba1c60861647bddb4fdba75e1f3\""
+      "marker_value": "\"17496a7be7c5ebef88e9dc80c952f35a\""
     },
     {
       "source_url": "https://antigravity.google/docs/cli/headless.md",
       "marker_kind": "content-sha256",
-      "marker_value": "238e4282518932e56f3ab9835b0569868cbc55cdd51df959f766e18234d9937c"
+      "marker_value": "6e07596ffb50fb4b475380bf016fb719500467196972746061b841979febecbe"
     },
     {
       "source_url": "https://antigravity.google/docs/plugins.md",
       "marker_kind": "content-sha256",
-      "marker_value": "4882d2c60c789215674ec15da47abaf88066132b8235e5f6de8df3167c12a56e"
+      "marker_value": "a6ce5caa3bdaae7627b10221f7b464a0f81f3e1cdd0ecc283878afe715298d96"
     },
     {
       "source_url": "https://antigravity.google/docs/sdk/overview.md",
@@ -72,7 +72,7 @@
     {
       "source_url": "https://antigravity.google/docs/skills.md",
       "marker_kind": "content-sha256",
-      "marker_value": "c9062d3683bfffaa144736ce3330fe96989d412d80b73b5c47f0d48467793dbf"
+      "marker_value": "db3d1d4f7e01a1f33cd53e3fc9027527a2123ae81b5bf63efcf533e305b9cfdc"
     },
     {
       "source_url": "https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use.md",
@@ -102,62 +102,62 @@
     {
       "source_url": "https://developer.hashicorp.com/terraform/language",
       "marker_kind": "etag",
-      "marker_value": "\"ea4e2a195cba4edbd50c26c966a19d46\""
+      "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
     },
     {
       "source_url": "https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "78ae0c997f5339123aa42720ed5d596feaeb9cd8e58f8ed7f03f73c5e3f5809e"
+      "marker_value": "ed5ab698e5444ae46d5506e805b75b970d483bce3aa16c18ae9f565166bb62a9"
     },
     {
       "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "cc355562d6c7c8eac8759a6be0e44aa147d686b3e56eb01e44b3646ce5a2ad02"
+      "marker_value": "3467433ccf11b942e38bf73bea6febdf97ca416f551009eb1aebc3791884a7e0"
     },
     {
       "source_url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
       "marker_kind": "content-sha256",
-      "marker_value": "79c72a47f0b129a3b5408f37890e455eeb9bafaff523b4b79b8829c8d318d28d"
+      "marker_value": "ed60eff7670e1c2a1b111843eacac730e696f78713c85e7ea9f9573b5dee3c2f"
     },
     {
       "source_url": "https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute",
       "marker_kind": "last-modified",
-      "marker_value": "Tue, 03 Nov 2026 03:22:08 GMT"
+      "marker_value": "Tue, 10 Nov 2026 21:02:15 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/data-agent-kit/overview",
       "marker_kind": "last-modified",
-      "marker_value": "Tue, 27 Oct 2026 14:10:35 GMT"
+      "marker_value": "Tue, 10 Nov 2026 21:02:15 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/dataflow/docs/concepts/exactly-once",
       "marker_kind": "last-modified",
-      "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      "marker_value": "Tue, 10 Nov 2026 21:02:15 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/dataform/docs/create-tables",
       "marker_kind": "last-modified",
-      "marker_value": "Wed, 04 Nov 2026 14:28:16 GMT"
+      "marker_value": "Tue, 10 Nov 2026 21:02:15 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
       "marker_kind": "last-modified",
-      "marker_value": "Thu, 05 Nov 2026 16:53:55 GMT"
+      "marker_value": "Fri, 20 Nov 2026 00:22:04 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/managed-spark/docs/concepts/versioning/image-version-lists",
       "marker_kind": "last-modified",
-      "marker_value": "Mon, 26 Oct 2026 17:58:28 GMT"
+      "marker_value": "Tue, 24 Nov 2026 05:39:10 GMT"
     },
     {
       "source_url": "https://docs.cloud.google.com/storage/docs/metadata",
       "marker_kind": "last-modified",
-      "marker_value": "Fri, 30 Oct 2026 12:04:37 GMT"
+      "marker_value": "Tue, 17 Nov 2026 20:11:09 GMT"
     },
     {
-      "source_url": "https://docs.getdbt.com/docs/build/incremental-models",
-      "marker_kind": "etag",
-      "marker_value": "\"806b460dd63a22eb693c2bef0976d4e4\""
+      "source_url": "https://docs.getdbt.com/docs/build/incremental-models.md",
+      "marker_kind": "content-sha256",
+      "marker_value": "ca78829394c5bb0752771a0ff3f304056f0653c1f1304638d2750520d72e56bb"
     },
     {
       "source_url": "https://docs.github.com/en/pull-requests/reference/pull-request-reviews.md",
@@ -172,42 +172,42 @@
     {
       "source_url": "https://docs.spring.io/spring-boot/",
       "marker_kind": "last-modified",
-      "marker_value": "Thu, 05 Nov 2026 13:26:23 GMT"
+      "marker_value": "Fri, 27 Nov 2026 10:18:22 GMT"
     },
     {
       "source_url": "https://docs.swift.org/latest/data/documentation.json",
       "marker_kind": "content-sha256",
-      "marker_value": "35ecfb871ee1364886a3514d0c25670fb9a15f025dcd9a52669ca3c4bcd7ae06"
+      "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
     },
     {
       "source_url": "https://docs.swift.org/latest/documentation/",
-      "marker_kind": "etag",
-      "marker_value": "\"f63-65f8e405b8b80\""
+      "marker_kind": "content-sha256",
+      "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
     },
     {
       "source_url": "https://experienceleague.adobe.com/en/docs/experience-manager",
       "marker_kind": "last-modified",
-      "marker_value": "Wed, 04 Nov 2026 14:10:00 GMT"
+      "marker_value": "Wed, 18 Nov 2026 14:22:53 GMT"
     },
     {
       "source_url": "https://genai.owasp.org/wp-json/wp/v2/llmrisk/254",
       "marker_kind": "content-sha256",
-      "marker_value": "2afd594232eec05c39a541d18f740516646d2e6426d42a3dbd6b20fca6fca371"
+      "marker_value": "9d4c62198e38f9f6426568ba43c8f36d7f800769c222cb6fdfc042937f3cc86b"
     },
     {
       "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
-      "marker_kind": "content-sha256",
-      "marker_value": "4a50ade40a6cef43cd6be69cded33c7356fc2a2f43f302b55436c2eef835c807"
+      "marker_kind": "normalized-content-sha256",
+      "marker_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328"
     },
     {
       "source_url": "https://git-scm.com/docs/git-merge",
       "marker_kind": "last-modified",
-      "marker_value": "Thu, 05 Nov 2026 04:35:22 GMT"
+      "marker_value": "Thu, 26 Nov 2026 04:34:49 GMT"
     },
     {
       "source_url": "https://git-scm.com/docs/git-worktree",
       "marker_kind": "content-sha256",
-      "marker_value": "82844667c66ab73fb682755622f82c4ea71866bba0f76f9c66569c3394a0f3d5"
+      "marker_value": "068bf150dcb4b6a138a039b6978999e1df4d04f892c34c90c3334152dcf4d292"
     },
     {
       "source_url": "https://go.dev/doc/",
@@ -217,12 +217,12 @@
     {
       "source_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents.md",
       "marker_kind": "content-sha256",
-      "marker_value": "e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f"
+      "marker_value": "cd2b9d3a74eff357c4bc58dd6c58498c6b8f1291200309292b4e34d2c74dfa39"
     },
     {
       "source_url": "https://learn.microsoft.com/en-us/dotnet/",
       "marker_kind": "etag",
-      "marker_value": "\"WLfSi4h4+0Q74dUwc1F93zwDE8A=\""
+      "marker_value": "\"cGtD0UT5dESPOlkT2j+Lx/L4wpw=\""
     },
     {
       "source_url": "https://martinfowler.com/bliki/DefinitionOfRefactoring.html",
@@ -237,22 +237,22 @@
     {
       "source_url": "https://nextjs.org/docs/app/guides/authentication.md",
       "marker_kind": "content-sha256",
-      "marker_value": "96c25720d84caed16c677b6cdd1d73be60c4a1513b319eef973bc9e33219a07c"
+      "marker_value": "f4608252c172e3e104a8c5339b06abba629945afc16184f7b749fdc688e17e3a"
     },
     {
       "source_url": "https://nextjs.org/docs/app/guides/upgrading/version-16",
       "marker_kind": "content-sha256",
-      "marker_value": "8cb9baea660952ef9b699921756a2bdf286e9074c83dcc97a06f53fd0c974b5c"
+      "marker_value": "03bacca672adf7bf1a96ed8d3eeea9ded09b0e581425fd5e54ef58b0dbbdc3cc"
     },
     {
       "source_url": "https://opentelemetry.io/docs/concepts/signals/",
-      "marker_kind": "etag",
-      "marker_value": "\"d317a3da828e135f9ed47d14d4f0bfd5-ssl\""
+      "marker_kind": "normalized-content-sha256",
+      "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
     },
     {
       "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
       "marker_kind": "content-sha256",
-      "marker_value": "fb1ad4a72da8e53178816660d42e7740bc6c3d351d2523341f4bb672bcbb2996"
+      "marker_value": "f10184ae3290220ecbb2463bb484332da856ef725123b5e4819b3e32339cccf3"
     },
     {
       "source_url": "https://raw.githubusercontent.com/OWASP/ASVS/master/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.json",
@@ -272,12 +272,12 @@
     {
       "source_url": "https://react.dev/learn/you-might-not-need-an-effect",
       "marker_kind": "content-sha256",
-      "marker_value": "92d36b46ab6c9d2ec16c90bcabeee71d8be467837040481c1d2e9e0ab037dfa7"
+      "marker_value": "f8a777fb647f2d7b50f80d7a0f0cae86addb2cf7804258fed2c2fb30c724b543"
     },
     {
       "source_url": "https://slsa.dev/spec/v1.2/provenance",
       "marker_kind": "etag",
-      "marker_value": "\"98144ff492ccb06c814febf3ff7f385f-ssl\""
+      "marker_value": "\"404df5e45085af8c862d3388dd7f8529-ssl\""
     },
     {
       "source_url": "https://spark.apache.org/docs/latest/sql-performance-tuning.html",
@@ -297,22 +297,22 @@
     {
       "source_url": "https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_intro",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "a56288f582218e5c0de5d04595a7722eb514e133ea2f484a5635d0a7ca0243dd"
+      "marker_value": "f7640e4cb9674bdaa665f38c12ae4342945f4b74682c688be3e0a2d928a777f8"
     },
     {
       "source_url": "https://www.drupal.org/docs/develop",
       "marker_kind": "normalized-content-sha256",
-      "marker_value": "5ffe093602e90d443b289a8c94479ca7c2f024975a023c5cf1b2d4b149e4e6ee"
+      "marker_value": "910434d31cb07771a11da75b2f51e78f66b3131391ea4f356e08d7af084a9d33"
     },
     {
       "source_url": "https://www.postgresql.org/docs/18/sql-explain.html",
       "marker_kind": "content-sha256",
-      "marker_value": "6f2de554f59b6d9216ecc837d03c4fb29aeac7e782bc0e6d101bb98cc0666f36"
+      "marker_value": "1d3ebccdf539c320a932deb65c54136f295dd1fc256f538fd0f230651dedf516"
     },
     {
       "source_url": "https://www.postgresql.org/docs/current/",
       "marker_kind": "content-sha256",
-      "marker_value": "342fc572cd681c7381af98fd21c6c3346bd834c0f29efed2d74dad3964bab133"
+      "marker_value": "e37d3d655b704389087f789a2c6bace0f99619c960ef432cbfe5859ba32aafbc"
     },
     {
       "source_url": "https://www.rfc-editor.org/rfc/rfc9110.txt",
@@ -322,12 +322,12 @@
     {
       "source_url": "https://www.swift.org/swift-evolution/",
       "marker_kind": "content-sha256",
-      "marker_value": "287902281a6584119d2a65e33ba9ef85ba32d00fc1cc47c7d57c810e0ddbc3c4"
+      "marker_value": "0fe0b43d54b2840d4b431baea9c9ea066c04ba56a4136f64dc06e3b45f3b7e86"
     },
     {
       "source_url": "https://www.typescriptlang.org/docs/",
       "marker_kind": "content-sha256",
-      "marker_value": "acdffbf448c7d04270ab1c15ab0fefa92b422f112ea2ab43b26d511da5e1fd15"
+      "marker_value": "0cf5d39dbda3cd48f105f76a9c77880c178fb4a6cbdddc8bcf433deb4fb0cf3a"
     },
     {
       "source_url": "https://www.w3.org/TR/WCAG22/",
@@ -347,7 +347,7 @@
     {
       "source_url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
       "marker_kind": "last-modified",
-      "marker_value": "Thu, 03 Sep 2026 15:17:59 GMT"
+      "marker_value": "Fri, 06 Nov 2026 08:56:14 GMT"
     }
   ]
 }

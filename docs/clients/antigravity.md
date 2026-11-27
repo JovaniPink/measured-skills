@@ -2,7 +2,18 @@
 
 **0.19 preview:** start with [the chooser](../start.md) and [migration guidance](../migration-0.19.md). Packaging [passed on November 5](../audits/lifecycle-0.19.0.md) for Antigravity CLI 1.4.7. No installed-client acceptance is recorded yet. The setup examples below are preparation guidance, not instructions to change an existing installation without authorization. Dated observations retain their original identities and do not qualify this preview.
 
-Antigravity setup and testing have equal priority with Codex and Claude. Preview 0.19.0 generates four modular packs under `plugins/antigravity/`. Its installed-client behavior remains unqualified; see the [preview record](../client-candidate-v0.19.0.md). The generated `.gemini/plugins/marketplace.json` remains an unverified preview format. The native local-folder installation route was checked for the nine 0.17.1 packs on CLI 1.2.9; Google's current marketplace UI and inline commands do not establish support for this generated file. An offline preview builder is also provided via `scripts/build_antigravity.py`.
+Antigravity CLI 1.5.16 validated all four 0.19.0 pack directories under
+`plugins/antigravity/`. Install each reviewed directory with
+`agy plugin install <pack-directory>` and check its enabled state with
+`agy plugin list --json`. In the November 27 installation, all 74 eligible
+skills were present and a fresh session listed `draft-prompt`. This CLI
+rejected all four entries in the preview `.gemini/plugins/marketplace.json`
+because each source lacks a URL. Use the directory install on this version.
+See the [preview record](../client-candidate-v0.19.0.md) for qualification scope.
+
+For future headless evaluations, select the intended permission mode explicitly.
+From 1.5.7 onward, an unset `agentMode` can select `auto` where available.
+Check the action result even if the process exits successfully.
 
 A one-skill package passed native install and skill-menu checks in CLI 1.1.26; package and menu checks were repeated on 1.1.27. The [0.12.0 candidate record](../client-candidate-v0.12.0.md) adds a two-skill check on CLI 1.1.27. The motion reference and fixture loaded, but the answer invented evidence. The [0.14.0 record](../client-candidate-v0.14.0.md) adds a four-skill check on CLI 1.1.28. Nine of ten cases met their expectation and no reply invented evidence. That is one partial run on a different version, so the expansion, then 64 skills, remained held. The [0.15.0 candidate record](../client-candidate-v0.15.0.md) adds a five-skill check on CLI 1.2.0 (`accessibility-review`, `code-change-review`, `functional-motion-review`, `performance-scalability-diagnosis`, and `finding-consolidation`). Near-miss case 3 was re-examined under diagnostic bypass flags (`--dangerously-skip-permissions`), confirming routing to `performance-scalability-diagnosis` when commands are permitted, while standard headless permission denial remains a documented non-interactive boundary. The 0.15.0 SARIF finding vocabulary was observed live on `code-change-review`, and `finding-consolidation` passed both multi-review merging and single-review refusal.
 

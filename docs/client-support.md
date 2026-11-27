@@ -18,9 +18,10 @@ using a command.
 
 A plugin is a group of skills. A skill is a set of instructions for a kind of task. A CLI is an app you use by typing commands in a terminal.
 
-The [accepted release decision](audits/release-decision-0.19.0.md) limits what 0.19.0 can claim:
-copied requests, packaging on the three CLIs, and behavior on Claude Code CLI only if its task
-passes. Equal priority stays the goal. The other clients and apps are unclaimed for 0.19.0, not failed.
+The [0.19.0 release decision](audits/release-decision-0.19.0.md#november-27-2026-claim-decision)
+covers copied requests and the install lifecycle on the three CLIs. Model
+behavior, desktop, web, API, and Zed remain outside the release claim. The
+[release status](release-status.md) shows which checks still need evidence.
 
 The [0.19 preview record](client-candidate-v0.19.0.md) has no receiving-client
 acceptance. The [preserved 0.18 record](client-candidate-v0.18.0.md) retains its

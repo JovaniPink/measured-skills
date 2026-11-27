@@ -1,0 +1,280 @@
+{
+  "reviewed_on": "2026-11-27",
+  "reviewed_revision": "6b6022ce53cedbba1614e96c44a9db8e8cb1ecfd",
+  "failed_hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46052190195",
+  "hosted_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
+  "m2_report_sha256": "f3e2534d81f817ed06cc5f5ede73d6bf9a7e4ed6423ed51794e87fb92a098cb8",
+  "pins_before_sha256": "3a6c70206c0f903a3d629f0db3a594b9b703c8db9ebd82cc7085b97f5ea420d0",
+  "pins_after_sha256": "685f49e90e23631b3225cf53829c39d7c766c7ca38b3bcb50e0eaf8e1ea55890",
+  "method": "Compare retained publisher bodies with repeat captures per source and preserve prior failed receipts. Four changes triggered the first review. The Agent Skills specification changed during reruns. Record endpoint-specific marker decisions separately. The global review-age policy and skill instructions are preserved.",
+  "records": [
+    {
+      "source_url": "https://developer.hashicorp.com/terraform/language",
+      "affected_skills": [
+        "stack-terraform"
+      ],
+      "marker_kind": "etag",
+      "previous_value": "\"680aefc8d90400d3f97b5a7abc3f9279\"",
+      "reviewed_value": "\"4778062552b0be0dc6bb2f64646b698f\"",
+      "previous_body_sha256": "8178a68e43096707c2700181f501d73b0760ef92c05ffc5e4b0123efaec47a81",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.614393+00:00",
+          "raw_sha256": "6aa833495d0f5a5d4a097728471af8e5761a36c3c195094db3d7331a618dd36c",
+          "body_bytes": 222620,
+          "marker_kind": "etag",
+          "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:18.126481+00:00",
+          "raw_sha256": "6aa833495d0f5a5d4a097728471af8e5761a36c3c195094db3d7331a618dd36c",
+          "body_bytes": 222620,
+          "marker_kind": "etag",
+          "marker_value": "\"4778062552b0be0dc6bb2f64646b698f\""
+        }
+      ],
+      "finding": "The extracted text and all 104 anchor destinations match. Deployment and asset identifiers changed. The embedded page data differs only in its response date and request ID. The language guidance used by stack-terraform is unchanged."
+    },
+    {
+      "source_url": "https://docs.swift.org/latest/documentation/",
+      "affected_skills": [
+        "stack-swift-swiftui"
+      ],
+      "marker_kind": "content-sha256",
+      "previous_value": "\"f63-661435372cec0\"",
+      "reviewed_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+      "previous_body_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:16.948850+00:00",
+          "body_bytes": 3939,
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "content-sha256",
+          "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.049456+00:00",
+          "body_bytes": 3939,
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "marker_kind": "content-sha256",
+          "marker_value": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd"
+        }
+      ],
+      "finding": "New deployment ETags accompanied identical landing-page bytes. Pin the full response body with SHA-256. The separately pinned documentation topic index is also byte-identical. The stack profile still requires repository-specific SDK and compiler evidence.",
+      "companion": {
+        "source_url": "https://docs.swift.org/latest/data/documentation.json",
+        "previous_body_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+        "observations": [
+          {
+            "observed_at": "2026-11-27T19:12:16.949076+00:00",
+            "body_bytes": 12417,
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          },
+          {
+            "observed_at": "2026-11-27T19:12:17.057582+00:00",
+            "body_bytes": 12417,
+            "raw_sha256": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7",
+            "marker_kind": "content-sha256",
+            "marker_value": "3d33ee89ce68cfed0894801a83c7937802f8705f4061aaec29a49a479fd71ee7"
+          }
+        ]
+      },
+      "previous_kind": "etag",
+      "intermediate_etag_observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.255012+00:00",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "body_bytes": 3939,
+          "marker_kind": "etag",
+          "marker_value": "\"f63-66145d47f1580\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:17.642035+00:00",
+          "raw_sha256": "9acbe722f571acba4b5b9a5063cd297f4186a17a4de316d1d5657a345fe2c9dd",
+          "body_bytes": 3939,
+          "marker_kind": "etag",
+          "marker_value": "\"f63-66145d47f1580\""
+        }
+      ]
+    },
+    {
+      "source_url": "https://genai.owasp.org/wp-json/wp/v2/pages/50812",
+      "affected_skills": [
+        "review-agent-security"
+      ],
+      "marker_kind": "normalized-content-sha256",
+      "previous_value": "15c1d6ed3613fc4d09c0d22b270a0b3c2f1e29e8ca519a052f3925df8c44646d",
+      "reviewed_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328",
+      "previous_body_sha256": "6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T19:07:09.749200+00:00",
+          "raw_sha256": "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
+          "body_bytes": 601686,
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328"
+        },
+        {
+          "observed_at": "2026-11-27T19:07:09.964182+00:00",
+          "raw_sha256": "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
+          "body_bytes": 601686,
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "5cc780080a660b60c9bf5b5f59adf0a16c8e61ba8ba8ba6fbbac967ccbac1328"
+        }
+      ],
+      "finding": "Only the rendered content field changed. Comparing audience label and link pairs and CSS class membership without their order yields identical HTML. The resource listings and the guidance used by review-agent-security are unchanged. A later hosted variant also reordered team-area classes. The endpoint-specific check now sorts complete audience label/link pairs within their terms lists and team-area class groups on resource cards; it still hashes their membership and all other response bytes.",
+      "intermediate_check": {
+        "commit": "41188da3723d704629d41eaffca98a3b3642f2b5",
+        "hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46053789812",
+        "hosted_report_sha256": "f661a39cb069d2fffa0cc412d55705d1392d9db87da32df445c8aed9f498a3d2",
+        "m2_report_sha256": "201bcd905b60768d2787897ee74de54fbf534df5c966e5a693c45aa1e287b907",
+        "hosted_observed_marker": "normalized-content-sha256:cffbc27cd82a1a43352bbf2379a32e62d65274a32cd2cf6a8ed8102666e742f9",
+        "original_observations": [
+          {
+            "observed_at": "2026-11-27T18:58:17.185013+00:00",
+            "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+            "body_bytes": 601686,
+            "marker_kind": "normalized-content-sha256",
+            "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          },
+          {
+            "observed_at": "2026-11-27T18:58:17.710980+00:00",
+            "raw_sha256": "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+            "body_bytes": 601686,
+            "marker_kind": "normalized-content-sha256",
+            "marker_value": "8ec94bade9884f31a52ba40b64e481e8a4f4ecba081a9b5bdbef178c0ac47900"
+          }
+        ],
+        "comparison": "Reordering one audience label/link list and one team-area class list in a retained M2 body reproduced the intermediate GitHub fingerprint exactly under the prior checker. The reconstructed response is comparison evidence, not a downloaded GitHub body.",
+        "compared_publisher_body_sha256": [
+          "0cee852040f315522333558e250c24d4ff6a0ac1d36af5db1e96f8e3708d3492",
+          "232350f2f5471b2571cb20784b42bc1b395c90d6bcf3952e0860594f46928d35",
+          "6e698f999a7f9dda7caf5e6a7599ed7f3ee8499f0d78436ca8fc910106b71834",
+          "8395b37f6ce9ddf04754c56b244e20346464c4570af54ade31556d58d1c8dedc",
+          "ea93e43a583aff92a6700d0cbe058a5f9390cc0a9ad4ae349d7136ed1b5b9425"
+        ],
+        "reconstructed_body_sha256": "722d891576c196109cab5da1c78db4d12f1545e44e62527e5f62f80365e00d6b"
+      }
+    },
+    {
+      "source_url": "https://opentelemetry.io/docs/concepts/signals/",
+      "affected_skills": [
+        "design-observability"
+      ],
+      "marker_kind": "normalized-content-sha256",
+      "previous_value": "\"7deadafa6d7ad8dde0c2c97c43d3b8da-ssl\"",
+      "reviewed_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae",
+      "previous_body_sha256": "327a0d48f1b3d1f80e90e1d8507c37aea64d397a8dfa0e778d261266d9542290",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:17.150695+00:00",
+          "body_bytes": 406519,
+          "raw_sha256": "c02c71a69b431c4f032da24c103293324411626c1e9a063f160925777a3f0c2d",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.968503+00:00",
+          "body_bytes": 406519,
+          "raw_sha256": "c02c71a69b431c4f032da24c103293324411626c1e9a063f160925777a3f0c2d",
+          "marker_kind": "normalized-content-sha256",
+          "marker_value": "c8e91faa8163ab8b93e175614ea7507d92bf19df7c1985ce9026b35f803184ae"
+        }
+      ],
+      "finding": "Three successive deployment bodies produce the same digest after replacing only the rotating telemetry value in the identified Netlify RUM script on the signals page. All other bytes remain covered, including signal documentation, link destinations, and script identity.",
+      "previous_kind": "etag",
+      "intermediate_etag_observations": [
+        {
+          "observed_at": "2026-11-27T18:58:17.719862+00:00",
+          "raw_sha256": "d6223498de1ef0fae81b32c8d10db3b9542fd97df3d6d892c64a9e25de93a174",
+          "body_bytes": 406519,
+          "marker_kind": "etag",
+          "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
+        },
+        {
+          "observed_at": "2026-11-27T18:58:18.634718+00:00",
+          "raw_sha256": "d6223498de1ef0fae81b32c8d10db3b9542fd97df3d6d892c64a9e25de93a174",
+          "body_bytes": 406519,
+          "marker_kind": "etag",
+          "marker_value": "\"4761d101a84768b83cfcbe864f02a4cf-ssl\""
+        }
+      ]
+    },
+    {
+      "source_url": "https://agentskills.io/specification",
+      "affected_skills": [
+        "track-acceptance",
+        "align-on-decisions",
+        "review-data-authority",
+        "plan-adoption",
+        "assess-change-impact",
+        "verify-claims",
+        "explain-codebase",
+        "map-capability-dependencies",
+        "run-project-checks",
+        "prepare-migration-decision",
+        "trace-decisions",
+        "record-decisions",
+        "investigate-design-rationale",
+        "model-domain-vocabulary",
+        "guide-configuration",
+        "edit-technical-writing",
+        "plan-change",
+        "learn-after-launch",
+        "measure-outcomes",
+        "design-module-interface",
+        "execute-plan",
+        "author-skill",
+        "check-launch-readiness",
+        "frame-problem",
+        "analyze-incident",
+        "build-spike",
+        "review-public-boundary",
+        "publish-change",
+        "synthesize-requirements",
+        "run-research-workflow",
+        "review-skill-import",
+        "review-skill-security",
+        "research-sources",
+        "explain-to-stakeholders",
+        "diagnose-failure",
+        "handoff-work",
+        "implement-test-first",
+        "plan-tests",
+        "review-value-evidence",
+        "plan-workshop"
+      ],
+      "previous_value": "8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "previous_body_sha256": "8b97b878f7fa5852d899cef2b62fdb255787f0df5a5305848784770ba5ebf4aa",
+      "main_element_sha256": "0d066ef23deba6ce9674ec6b955a46d8018d5084994634203f55ccd0738b21c0",
+      "marker_kind": "content-sha256",
+      "reviewed_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+      "observations": [
+        {
+          "observed_at": "2026-11-27T19:12:17.006347+00:00",
+          "body_bytes": 247594,
+          "raw_sha256": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+          "marker_kind": "content-sha256",
+          "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
+        },
+        {
+          "observed_at": "2026-11-27T19:12:17.749785+00:00",
+          "body_bytes": 247594,
+          "raw_sha256": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432",
+          "marker_kind": "content-sha256",
+          "marker_value": "4cd22e9cd58ca852ce77cd94ceafcce92ad477544b3b13c446096187e60f2432"
+        }
+      ],
+      "finding": "The complete main element containing the format specification is byte-identical to the retained copy. Anchor destinations match. Asset bundle and deployment references changed outside the main element. The full-page SHA-256 still covers the complete response."
+    }
+  ],
+  "later_run": {
+    "candidate": "24d917e2863ef6c320488687f2b40a55412ca0b8",
+    "hosted_run": "https://github.com/JovaniPink/measured-skills/actions/runs/46054599495",
+    "hosted_report_sha256": "b2bd7325fc233ff8751e0cc3b66b7a2bd7fe206d601ff9ff74e1c8bdfea69cb4",
+    "m2_report_sha256": "7708f0344b24ff7a37884add1b6ad867627dd00d083693a9b43e6ff8c134a735",
+    "finding": "GitHub detected ETag changes on Swift and OpenTelemetry and a new Agent Skills specification hash. The M2 detected the latter two changes. Both hosts passed the corrected OWASP pin."
+  }
+}
