@@ -42,7 +42,7 @@
     },
     "README.md": {
       "before_sha256": "6233d5768ba135c91b07a93bfb11a07bd46495646c2000b36918146dcdc59038",
-      "after_sha256": "ae4ad17ffb12e28fab9d4b64b184de07f14560472f27f2b2e58035f1f6bcb041",
+      "after_sha256": "3d5ecb84cf660953e6a23c1398a77ffd91b7b2aaa26081c7e02551475a52bcb4",
       "expression_and_license_review": "Original repository-authored guidance, casebook, evaluation fixture, deterministic script, or regenerated output; ASCII-checked, MIT-licensed, no third-party implementation or private data imported. November 24 prompt drafting addition. Reviewed original skill text and synthetic cases, catalog membership, routing boundaries, documentation, and inventory assertions. Existing license and client behavior evidence retain their scope. November 27: Added an original description and link for the Draft Prompt workflow. Original project wording."
     },
     "SECURITY.md": {

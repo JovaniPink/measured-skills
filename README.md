@@ -49,7 +49,7 @@ Release. Human usability and receiving-client acceptance remain separate work.
 - [Continue unfinished work](docs/finish-existing-work.md) or [develop a feature](docs/feature-development-workflow.md).
 - [Upgrade or roll back deliberately](docs/migration-0.19.md); old and new names must not become duplicate installations.
 
-Use [`draft-prompt`](skills/measured-workflows/draft-prompt/SKILL.md) when the work
+Use [`draft-prompt`](skills/draft-prompt/SKILL.md) when the work
 starts with a rough request and you need an instruction another assistant can
 follow. The offline guide and in-client `choose-workflow` reference use one
 versioned registry. The website consumes its own committed export, which can be older; it does
